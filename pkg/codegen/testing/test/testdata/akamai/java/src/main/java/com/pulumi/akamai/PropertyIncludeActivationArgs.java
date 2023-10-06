@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.PropertyIncludeActivationComplianceRecordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -386,12 +387,24 @@ public final class PropertyIncludeActivationArgs extends com.pulumi.resources.Re
         }
 
         public PropertyIncludeActivationArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.includeId = Objects.requireNonNull($.includeId, "expected parameter 'includeId' to be non-null");
-            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
-            $.notifyEmails = Objects.requireNonNull($.notifyEmails, "expected parameter 'notifyEmails' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeActivationArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeActivationArgs", "groupId");
+            }
+            if ($.includeId == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeActivationArgs", "includeId");
+            }
+            if ($.network == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeActivationArgs", "network");
+            }
+            if ($.notifyEmails == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeActivationArgs", "notifyEmails");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeActivationArgs", "version");
+            }
             return $;
         }
     }

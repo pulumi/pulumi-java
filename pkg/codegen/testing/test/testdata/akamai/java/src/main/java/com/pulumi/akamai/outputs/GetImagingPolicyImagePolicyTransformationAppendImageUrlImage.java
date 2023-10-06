@@ -49,16 +49,19 @@ public final class GetImagingPolicyImagePolicyTransformationAppendImageUrlImage 
 
         @CustomType.Setter
         public Builder transformation(@Nullable GetImagingPolicyImagePolicyTransformation transformation) {
+
             this.transformation = transformation;
             return this;
         }
         @CustomType.Setter
         public Builder url(@Nullable String url) {
+
             this.url = url;
             return this;
         }
         @CustomType.Setter
         public Builder urlVar(@Nullable String urlVar) {
+
             this.urlVar = urlVar;
             return this;
         }

@@ -79,41 +79,49 @@ public final class GetImagingPolicyImagePolicyTransformationIfDimension {
 
         @CustomType.Setter("default")
         public Builder default_(@Nullable GetImagingPolicyImagePolicyTransformation default_) {
+
             this.default_ = default_;
             return this;
         }
         @CustomType.Setter
         public Builder dimension(@Nullable String dimension) {
+
             this.dimension = dimension;
             return this;
         }
         @CustomType.Setter
         public Builder dimensionVar(@Nullable String dimensionVar) {
+
             this.dimensionVar = dimensionVar;
             return this;
         }
         @CustomType.Setter
         public Builder equal(@Nullable GetImagingPolicyImagePolicyTransformation equal) {
+
             this.equal = equal;
             return this;
         }
         @CustomType.Setter
         public Builder greaterThan(@Nullable GetImagingPolicyImagePolicyTransformation greaterThan) {
+
             this.greaterThan = greaterThan;
             return this;
         }
         @CustomType.Setter
         public Builder lessThan(@Nullable GetImagingPolicyImagePolicyTransformation lessThan) {
+
             this.lessThan = lessThan;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable String value) {
+
             this.value = value;
             return this;
         }
         @CustomType.Setter
         public Builder valueVar(@Nullable String valueVar) {
+
             this.valueVar = valueVar;
             return this;
         }

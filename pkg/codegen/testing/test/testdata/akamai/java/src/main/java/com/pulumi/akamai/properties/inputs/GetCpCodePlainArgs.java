@@ -4,6 +4,7 @@
 package com.pulumi.akamai.properties.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,9 +76,15 @@ public final class GetCpCodePlainArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         public GetCpCodePlainArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetCpCodePlainArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("GetCpCodePlainArgs", "groupId");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("GetCpCodePlainArgs", "name");
+            }
             return $;
         }
     }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -48,7 +49,10 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsDataStreams {
 
         @CustomType.Setter
         public Builder dataStreamIds(List<Integer> dataStreamIds) {
-            this.dataStreamIds = Objects.requireNonNull(dataStreamIds);
+            if (dataStreamIds == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsDataStreams", "dataStreamIds");
+            }
+            this.dataStreamIds = dataStreamIds;
             return this;
         }
         public Builder dataStreamIds(Integer... dataStreamIds) {
@@ -56,12 +60,18 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsDataStreams {
         }
         @CustomType.Setter
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            if (enabled == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsDataStreams", "enabled");
+            }
+            this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder samplingRate(Integer samplingRate) {
-            this.samplingRate = Objects.requireNonNull(samplingRate);
+            if (samplingRate == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsDataStreams", "samplingRate");
+            }
+            this.samplingRate = samplingRate;
             return this;
         }
         public GetCloudwrapperConfigurationMultiCdnSettingsDataStreams build() {

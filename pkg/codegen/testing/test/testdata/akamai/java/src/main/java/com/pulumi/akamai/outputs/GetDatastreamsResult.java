@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetDatastreamsStreamsDetail;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -59,17 +60,24 @@ public final class GetDatastreamsResult {
 
         @CustomType.Setter
         public Builder groupId(@Nullable Integer groupId) {
+
             this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder streamsDetails(List<GetDatastreamsStreamsDetail> streamsDetails) {
-            this.streamsDetails = Objects.requireNonNull(streamsDetails);
+            if (streamsDetails == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsResult", "streamsDetails");
+            }
+            this.streamsDetails = streamsDetails;
             return this;
         }
         public Builder streamsDetails(GetDatastreamsStreamsDetail... streamsDetails) {

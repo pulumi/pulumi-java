@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationsConfiguration;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,6 +56,7 @@ public final class GetCloudwrapperConfigurationsResult {
 
         @CustomType.Setter
         public Builder configurations(@Nullable List<GetCloudwrapperConfigurationsConfiguration> configurations) {
+
             this.configurations = configurations;
             return this;
         }
@@ -63,7 +65,10 @@ public final class GetCloudwrapperConfigurationsResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetCloudwrapperConfigurationsResult build() {

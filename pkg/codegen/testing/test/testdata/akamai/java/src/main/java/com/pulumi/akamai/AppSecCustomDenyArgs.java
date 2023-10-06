@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -112,8 +113,12 @@ public final class AppSecCustomDenyArgs extends com.pulumi.resources.ResourceArg
         }
 
         public AppSecCustomDenyArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.customDeny = Objects.requireNonNull($.customDeny, "expected parameter 'customDeny' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecCustomDenyArgs", "configId");
+            }
+            if ($.customDeny == null) {
+                throw new MissingRequiredPropertyException("AppSecCustomDenyArgs", "customDeny");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetPropertiesSearchProperty;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,17 +63,26 @@ public final class GetPropertiesSearchResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            if (key == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchResult", "key");
+            }
+            this.key = key;
             return this;
         }
         @CustomType.Setter
         public Builder properties(List<GetPropertiesSearchProperty> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            if (properties == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchResult", "properties");
+            }
+            this.properties = properties;
             return this;
         }
         public Builder properties(GetPropertiesSearchProperty... properties) {
@@ -80,7 +90,10 @@ public final class GetPropertiesSearchResult {
         }
         @CustomType.Setter
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            if (value == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchResult", "value");
+            }
+            this.value = value;
             return this;
         }
         public GetPropertiesSearchResult build() {

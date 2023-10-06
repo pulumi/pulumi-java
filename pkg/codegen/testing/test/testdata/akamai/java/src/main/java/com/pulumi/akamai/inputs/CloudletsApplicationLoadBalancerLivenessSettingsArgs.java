@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -264,9 +265,15 @@ public final class CloudletsApplicationLoadBalancerLivenessSettingsArgs extends 
         }
 
         public CloudletsApplicationLoadBalancerLivenessSettingsArgs build() {
-            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
-            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
-            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            if ($.path == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerLivenessSettingsArgs", "path");
+            }
+            if ($.port == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerLivenessSettingsArgs", "port");
+            }
+            if ($.protocol == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerLivenessSettingsArgs", "protocol");
+            }
             return $;
         }
     }

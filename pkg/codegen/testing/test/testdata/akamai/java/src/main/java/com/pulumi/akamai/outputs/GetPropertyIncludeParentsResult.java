@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetPropertyIncludeParentsParent;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,27 +69,42 @@ public final class GetPropertyIncludeParentsResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder includeId(String includeId) {
-            this.includeId = Objects.requireNonNull(includeId);
+            if (includeId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsResult", "includeId");
+            }
+            this.includeId = includeId;
             return this;
         }
         @CustomType.Setter
         public Builder parents(List<GetPropertyIncludeParentsParent> parents) {
-            this.parents = Objects.requireNonNull(parents);
+            if (parents == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsResult", "parents");
+            }
+            this.parents = parents;
             return this;
         }
         public Builder parents(GetPropertyIncludeParentsParent... parents) {

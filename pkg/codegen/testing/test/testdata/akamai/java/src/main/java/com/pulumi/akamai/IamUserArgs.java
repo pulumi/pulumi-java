@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -744,13 +745,27 @@ public final class IamUserArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public IamUserArgs build() {
-            $.authGrantsJson = Objects.requireNonNull($.authGrantsJson, "expected parameter 'authGrantsJson' to be non-null");
-            $.country = Objects.requireNonNull($.country, "expected parameter 'country' to be non-null");
-            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
-            $.enableTfa = Objects.requireNonNull($.enableTfa, "expected parameter 'enableTfa' to be non-null");
-            $.firstName = Objects.requireNonNull($.firstName, "expected parameter 'firstName' to be non-null");
-            $.lastName = Objects.requireNonNull($.lastName, "expected parameter 'lastName' to be non-null");
-            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            if ($.authGrantsJson == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "authGrantsJson");
+            }
+            if ($.country == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "country");
+            }
+            if ($.email == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "email");
+            }
+            if ($.enableTfa == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "enableTfa");
+            }
+            if ($.firstName == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "firstName");
+            }
+            if ($.lastName == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "lastName");
+            }
+            if ($.phone == null) {
+                throw new MissingRequiredPropertyException("IamUserArgs", "phone");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -187,10 +188,18 @@ public final class AppSecEvalPenaltyBoxArgs extends com.pulumi.resources.Resourc
         }
 
         public AppSecEvalPenaltyBoxArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.penaltyBoxAction = Objects.requireNonNull($.penaltyBoxAction, "expected parameter 'penaltyBoxAction' to be non-null");
-            $.penaltyBoxProtection = Objects.requireNonNull($.penaltyBoxProtection, "expected parameter 'penaltyBoxProtection' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecEvalPenaltyBoxArgs", "configId");
+            }
+            if ($.penaltyBoxAction == null) {
+                throw new MissingRequiredPropertyException("AppSecEvalPenaltyBoxArgs", "penaltyBoxAction");
+            }
+            if ($.penaltyBoxProtection == null) {
+                throw new MissingRequiredPropertyException("AppSecEvalPenaltyBoxArgs", "penaltyBoxProtection");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecEvalPenaltyBoxArgs", "securityPolicyId");
+            }
             return $;
         }
     }

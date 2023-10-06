@@ -99,56 +99,67 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorImageAndVideoMan
 
         @CustomType.Setter
         public Builder applyBestFileType(@Nullable Boolean applyBestFileType) {
+
             this.applyBestFileType = applyBestFileType;
             return this;
         }
         @CustomType.Setter
         public Builder cpCodeOriginal(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorImageAndVideoManagerCpCodeOriginal cpCodeOriginal) {
+
             this.cpCodeOriginal = cpCodeOriginal;
             return this;
         }
         @CustomType.Setter
         public Builder cpCodeTransformed(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorImageAndVideoManagerCpCodeTransformed cpCodeTransformed) {
+
             this.cpCodeTransformed = cpCodeTransformed;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder imageSet(@Nullable String imageSet) {
+
             this.imageSet = imageSet;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder policySetType(@Nullable String policySetType) {
+
             this.policySetType = policySetType;
             return this;
         }
         @CustomType.Setter
         public Builder resize(@Nullable Boolean resize) {
+
             this.resize = resize;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder videoSet(@Nullable String videoSet) {
+
             this.videoSet = videoSet;
             return this;
         }

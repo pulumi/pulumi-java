@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -175,13 +176,27 @@ public final class CpsThirdPartyEnrollmentOrganizationArgs extends com.pulumi.re
         }
 
         public CpsThirdPartyEnrollmentOrganizationArgs build() {
-            $.addressLineOne = Objects.requireNonNull($.addressLineOne, "expected parameter 'addressLineOne' to be non-null");
-            $.city = Objects.requireNonNull($.city, "expected parameter 'city' to be non-null");
-            $.countryCode = Objects.requireNonNull($.countryCode, "expected parameter 'countryCode' to be non-null");
-            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
-            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
-            $.postalCode = Objects.requireNonNull($.postalCode, "expected parameter 'postalCode' to be non-null");
-            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            if ($.addressLineOne == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "addressLineOne");
+            }
+            if ($.city == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "city");
+            }
+            if ($.countryCode == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "countryCode");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "name");
+            }
+            if ($.phone == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "phone");
+            }
+            if ($.postalCode == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "postalCode");
+            }
+            if ($.region == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentOrganizationArgs", "region");
+            }
             return $;
         }
     }

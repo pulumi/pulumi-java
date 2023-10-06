@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,8 +64,12 @@ public final class GetBotmanJavascriptInjectionPlainArgs extends com.pulumi.reso
         }
 
         public GetBotmanJavascriptInjectionPlainArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("GetBotmanJavascriptInjectionPlainArgs", "configId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("GetBotmanJavascriptInjectionPlainArgs", "securityPolicyId");
+            }
             return $;
         }
     }

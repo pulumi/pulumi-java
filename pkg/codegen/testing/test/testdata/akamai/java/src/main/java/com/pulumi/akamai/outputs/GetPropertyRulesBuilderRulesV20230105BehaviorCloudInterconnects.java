@@ -62,6 +62,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCloudInterconnec
 
         @CustomType.Setter
         public Builder cloudLocations(@Nullable List<String> cloudLocations) {
+
             this.cloudLocations = cloudLocations;
             return this;
         }
@@ -70,21 +71,25 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCloudInterconnec
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

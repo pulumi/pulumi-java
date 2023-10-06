@@ -66,31 +66,37 @@ public final class GetImagingPolicyImagePolicyTransformationRemoveColor {
 
         @CustomType.Setter
         public Builder color(@Nullable String color) {
+
             this.color = color;
             return this;
         }
         @CustomType.Setter
         public Builder colorVar(@Nullable String colorVar) {
+
             this.colorVar = colorVar;
             return this;
         }
         @CustomType.Setter
         public Builder feather(@Nullable String feather) {
+
             this.feather = feather;
             return this;
         }
         @CustomType.Setter
         public Builder featherVar(@Nullable String featherVar) {
+
             this.featherVar = featherVar;
             return this;
         }
         @CustomType.Setter
         public Builder tolerance(@Nullable String tolerance) {
+
             this.tolerance = tolerance;
             return this;
         }
         @CustomType.Setter
         public Builder toleranceVar(@Nullable String toleranceVar) {
+
             this.toleranceVar = toleranceVar;
             return this;
         }

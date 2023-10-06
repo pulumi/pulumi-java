@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKey;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -114,10 +115,18 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsCdn extends com.p
         }
 
         public GetCloudwrapperConfigurationMultiCdnSettingsCdn build() {
-            $.cdnCode = Objects.requireNonNull($.cdnCode, "expected parameter 'cdnCode' to be non-null");
-            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
-            $.httpsOnly = Objects.requireNonNull($.httpsOnly, "expected parameter 'httpsOnly' to be non-null");
-            $.ipAclCidrs = Objects.requireNonNull($.ipAclCidrs, "expected parameter 'ipAclCidrs' to be non-null");
+            if ($.cdnCode == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "cdnCode");
+            }
+            if ($.enabled == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "enabled");
+            }
+            if ($.httpsOnly == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "httpsOnly");
+            }
+            if ($.ipAclCidrs == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "ipAclCidrs");
+            }
             return $;
         }
     }

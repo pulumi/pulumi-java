@@ -4,6 +4,7 @@
 package com.pulumi.akamai.edgedns.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,7 +50,9 @@ public final class GetAuthoritiesSetPlainArgs extends com.pulumi.resources.Invok
         }
 
         public GetAuthoritiesSetPlainArgs build() {
-            $.contract = Objects.requireNonNull($.contract, "expected parameter 'contract' to be non-null");
+            if ($.contract == null) {
+                throw new MissingRequiredPropertyException("GetAuthoritiesSetPlainArgs", "contract");
+            }
             return $;
         }
     }

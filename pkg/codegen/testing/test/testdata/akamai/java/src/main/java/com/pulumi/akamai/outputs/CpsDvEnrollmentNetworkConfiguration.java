@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.CpsDvEnrollmentNetworkConfigurationClientMutualAuthentication;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -81,16 +82,19 @@ public final class CpsDvEnrollmentNetworkConfiguration {
 
         @CustomType.Setter
         public Builder clientMutualAuthentication(@Nullable CpsDvEnrollmentNetworkConfigurationClientMutualAuthentication clientMutualAuthentication) {
+
             this.clientMutualAuthentication = clientMutualAuthentication;
             return this;
         }
         @CustomType.Setter
         public Builder cloneDnsNames(@Nullable Boolean cloneDnsNames) {
+
             this.cloneDnsNames = cloneDnsNames;
             return this;
         }
         @CustomType.Setter
         public Builder disallowedTlsVersions(@Nullable List<String> disallowedTlsVersions) {
+
             this.disallowedTlsVersions = disallowedTlsVersions;
             return this;
         }
@@ -99,26 +103,33 @@ public final class CpsDvEnrollmentNetworkConfiguration {
         }
         @CustomType.Setter
         public Builder geography(String geography) {
-            this.geography = Objects.requireNonNull(geography);
+            if (geography == null) {
+              throw new MissingRequiredPropertyException("CpsDvEnrollmentNetworkConfiguration", "geography");
+            }
+            this.geography = geography;
             return this;
         }
         @CustomType.Setter
         public Builder mustHaveCiphers(@Nullable String mustHaveCiphers) {
+
             this.mustHaveCiphers = mustHaveCiphers;
             return this;
         }
         @CustomType.Setter
         public Builder ocspStapling(@Nullable String ocspStapling) {
+
             this.ocspStapling = ocspStapling;
             return this;
         }
         @CustomType.Setter
         public Builder preferredCiphers(@Nullable String preferredCiphers) {
+
             this.preferredCiphers = preferredCiphers;
             return this;
         }
         @CustomType.Setter
         public Builder quicEnabled(@Nullable Boolean quicEnabled) {
+
             this.quicEnabled = quicEnabled;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetImagingPolicyImagePolicyPostBreakpointTransformationCompositeImage;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -208,7 +209,9 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationCompos
         }
 
         public GetImagingPolicyImagePolicyPostBreakpointTransformationComposite build() {
-            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            if ($.image == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyPostBreakpointTransformationComposite", "image");
+            }
             return $;
         }
     }

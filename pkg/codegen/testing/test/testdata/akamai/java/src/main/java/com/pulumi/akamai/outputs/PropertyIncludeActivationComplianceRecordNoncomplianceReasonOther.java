@@ -42,11 +42,13 @@ public final class PropertyIncludeActivationComplianceRecordNoncomplianceReasonO
 
         @CustomType.Setter
         public Builder otherNoncomplianceReason(@Nullable String otherNoncomplianceReason) {
+
             this.otherNoncomplianceReason = otherNoncomplianceReason;
             return this;
         }
         @CustomType.Setter
         public Builder ticketId(@Nullable String ticketId) {
+
             this.ticketId = ticketId;
             return this;
         }

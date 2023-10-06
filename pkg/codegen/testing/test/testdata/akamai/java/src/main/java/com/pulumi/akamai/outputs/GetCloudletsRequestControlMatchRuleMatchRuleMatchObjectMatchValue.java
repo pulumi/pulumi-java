@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudletsRequestControlMatchRuleMatchRuleMatchObjectMatchValueOptions;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -69,31 +70,39 @@ public final class GetCloudletsRequestControlMatchRuleMatchRuleMatchObjectMatchV
 
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder nameCaseSensitive(@Nullable Boolean nameCaseSensitive) {
+
             this.nameCaseSensitive = nameCaseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder nameHasWildcard(@Nullable Boolean nameHasWildcard) {
+
             this.nameHasWildcard = nameHasWildcard;
             return this;
         }
         @CustomType.Setter
         public Builder options(@Nullable GetCloudletsRequestControlMatchRuleMatchRuleMatchObjectMatchValueOptions options) {
+
             this.options = options;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsRequestControlMatchRuleMatchRuleMatchObjectMatchValue", "type");
+            }
+            this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder values(@Nullable List<String> values) {
+
             this.values = values;
             return this;
         }

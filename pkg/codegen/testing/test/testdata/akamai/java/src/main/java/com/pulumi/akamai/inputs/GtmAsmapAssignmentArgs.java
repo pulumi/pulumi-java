@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -94,9 +95,15 @@ public final class GtmAsmapAssignmentArgs extends com.pulumi.resources.ResourceA
         }
 
         public GtmAsmapAssignmentArgs build() {
-            $.asNumbers = Objects.requireNonNull($.asNumbers, "expected parameter 'asNumbers' to be non-null");
-            $.datacenterId = Objects.requireNonNull($.datacenterId, "expected parameter 'datacenterId' to be non-null");
-            $.nickname = Objects.requireNonNull($.nickname, "expected parameter 'nickname' to be non-null");
+            if ($.asNumbers == null) {
+                throw new MissingRequiredPropertyException("GtmAsmapAssignmentArgs", "asNumbers");
+            }
+            if ($.datacenterId == null) {
+                throw new MissingRequiredPropertyException("GtmAsmapAssignmentArgs", "datacenterId");
+            }
+            if ($.nickname == null) {
+                throw new MissingRequiredPropertyException("GtmAsmapAssignmentArgs", "nickname");
+            }
             return $;
         }
     }

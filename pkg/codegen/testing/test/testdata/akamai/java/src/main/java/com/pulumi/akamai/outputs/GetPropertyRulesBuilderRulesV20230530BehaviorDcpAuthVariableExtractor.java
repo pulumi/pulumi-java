@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorDcpAuthVariableE
 
         @CustomType.Setter
         public Builder certificateField(@Nullable String certificateField) {
+
             this.certificateField = certificateField;
             return this;
         }
         @CustomType.Setter
         public Builder dcpMutualAuthProcessingVariableId(@Nullable String dcpMutualAuthProcessingVariableId) {
+
             this.dcpMutualAuthProcessingVariableId = dcpMutualAuthProcessingVariableId;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

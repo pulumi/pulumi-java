@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetClientlistListsList;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -82,17 +83,26 @@ public final class GetClientlistListsResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder listIds(List<String> listIds) {
-            this.listIds = Objects.requireNonNull(listIds);
+            if (listIds == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsResult", "listIds");
+            }
+            this.listIds = listIds;
             return this;
         }
         public Builder listIds(String... listIds) {
@@ -100,7 +110,10 @@ public final class GetClientlistListsResult {
         }
         @CustomType.Setter
         public Builder lists(List<GetClientlistListsList> lists) {
-            this.lists = Objects.requireNonNull(lists);
+            if (lists == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsResult", "lists");
+            }
+            this.lists = lists;
             return this;
         }
         public Builder lists(GetClientlistListsList... lists) {
@@ -108,16 +121,21 @@ public final class GetClientlistListsResult {
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder types(@Nullable List<String> types) {
+
             this.types = types;
             return this;
         }

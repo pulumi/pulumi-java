@@ -42,11 +42,13 @@ public final class GetImagingPolicyImagePolicyTransformationBackgroundColor {
 
         @CustomType.Setter
         public Builder color(@Nullable String color) {
+
             this.color = color;
             return this;
         }
         @CustomType.Setter
         public Builder colorVar(@Nullable String colorVar) {
+
             this.colorVar = colorVar;
             return this;
         }

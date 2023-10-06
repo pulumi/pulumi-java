@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -197,10 +198,18 @@ public final class CloudletsPolicyActivationArgs extends com.pulumi.resources.Re
         }
 
         public CloudletsPolicyActivationArgs build() {
-            $.associatedProperties = Objects.requireNonNull($.associatedProperties, "expected parameter 'associatedProperties' to be non-null");
-            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
-            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.associatedProperties == null) {
+                throw new MissingRequiredPropertyException("CloudletsPolicyActivationArgs", "associatedProperties");
+            }
+            if ($.network == null) {
+                throw new MissingRequiredPropertyException("CloudletsPolicyActivationArgs", "network");
+            }
+            if ($.policyId == null) {
+                throw new MissingRequiredPropertyException("CloudletsPolicyActivationArgs", "policyId");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("CloudletsPolicyActivationArgs", "version");
+            }
             return $;
         }
     }

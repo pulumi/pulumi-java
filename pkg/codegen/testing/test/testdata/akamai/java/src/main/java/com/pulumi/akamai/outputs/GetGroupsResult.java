@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetGroupsGroup;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +51,10 @@ public final class GetGroupsResult {
 
         @CustomType.Setter
         public Builder groups(List<GetGroupsGroup> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            if (groups == null) {
+              throw new MissingRequiredPropertyException("GetGroupsResult", "groups");
+            }
+            this.groups = groups;
             return this;
         }
         public Builder groups(GetGroupsGroup... groups) {
@@ -58,7 +62,10 @@ public final class GetGroupsResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetGroupsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetGroupsResult build() {

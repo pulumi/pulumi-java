@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -142,10 +143,18 @@ public final class ProviderConfigArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         public ProviderConfigArgs build() {
-            $.accessToken = Objects.requireNonNull($.accessToken, "expected parameter 'accessToken' to be non-null");
-            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
-            $.clientToken = Objects.requireNonNull($.clientToken, "expected parameter 'clientToken' to be non-null");
-            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            if ($.accessToken == null) {
+                throw new MissingRequiredPropertyException("ProviderConfigArgs", "accessToken");
+            }
+            if ($.clientSecret == null) {
+                throw new MissingRequiredPropertyException("ProviderConfigArgs", "clientSecret");
+            }
+            if ($.clientToken == null) {
+                throw new MissingRequiredPropertyException("ProviderConfigArgs", "clientToken");
+            }
+            if ($.host == null) {
+                throw new MissingRequiredPropertyException("ProviderConfigArgs", "host");
+            }
             return $;
         }
     }

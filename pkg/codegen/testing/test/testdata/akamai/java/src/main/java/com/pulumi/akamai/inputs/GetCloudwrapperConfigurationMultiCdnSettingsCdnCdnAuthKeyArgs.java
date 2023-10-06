@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -105,10 +106,18 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKeyArgs
         }
 
         public GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKeyArgs build() {
-            $.authKeyName = Objects.requireNonNull($.authKeyName, "expected parameter 'authKeyName' to be non-null");
-            $.expiryDate = Objects.requireNonNull($.expiryDate, "expected parameter 'expiryDate' to be non-null");
-            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
-            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            if ($.authKeyName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKeyArgs", "authKeyName");
+            }
+            if ($.expiryDate == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKeyArgs", "expiryDate");
+            }
+            if ($.headerName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKeyArgs", "headerName");
+            }
+            if ($.secret == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKeyArgs", "secret");
+            }
             return $;
         }
     }

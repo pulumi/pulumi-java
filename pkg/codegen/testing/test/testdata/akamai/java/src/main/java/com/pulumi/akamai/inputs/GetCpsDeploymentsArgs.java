@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -54,7 +55,9 @@ public final class GetCpsDeploymentsArgs extends com.pulumi.resources.InvokeArgs
         }
 
         public GetCpsDeploymentsArgs build() {
-            $.enrollmentId = Objects.requireNonNull($.enrollmentId, "expected parameter 'enrollmentId' to be non-null");
+            if ($.enrollmentId == null) {
+                throw new MissingRequiredPropertyException("GetCpsDeploymentsArgs", "enrollmentId");
+            }
             return $;
         }
     }

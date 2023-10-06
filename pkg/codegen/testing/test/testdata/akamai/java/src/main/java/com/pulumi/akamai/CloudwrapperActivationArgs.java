@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.CloudwrapperActivationTimeoutsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -132,8 +133,12 @@ public final class CloudwrapperActivationArgs extends com.pulumi.resources.Resou
         }
 
         public CloudwrapperActivationArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperActivationArgs", "configId");
+            }
+            if ($.revision == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperActivationArgs", "revision");
+            }
             return $;
         }
     }

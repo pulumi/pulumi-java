@@ -146,96 +146,115 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorAdaptiveImageCom
 
         @CustomType.Setter
         public Builder compressMobile(@Nullable Boolean compressMobile) {
+
             this.compressMobile = compressMobile;
             return this;
         }
         @CustomType.Setter
         public Builder compressStandard(@Nullable Boolean compressStandard) {
+
             this.compressStandard = compressStandard;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder tier1MobileCompressionMethod(@Nullable String tier1MobileCompressionMethod) {
+
             this.tier1MobileCompressionMethod = tier1MobileCompressionMethod;
             return this;
         }
         @CustomType.Setter
         public Builder tier1MobileCompressionValue(@Nullable Integer tier1MobileCompressionValue) {
+
             this.tier1MobileCompressionValue = tier1MobileCompressionValue;
             return this;
         }
         @CustomType.Setter
         public Builder tier1StandardCompressionMethod(@Nullable String tier1StandardCompressionMethod) {
+
             this.tier1StandardCompressionMethod = tier1StandardCompressionMethod;
             return this;
         }
         @CustomType.Setter
         public Builder tier1StandardCompressionValue(@Nullable Integer tier1StandardCompressionValue) {
+
             this.tier1StandardCompressionValue = tier1StandardCompressionValue;
             return this;
         }
         @CustomType.Setter
         public Builder tier2MobileCompressionMethod(@Nullable String tier2MobileCompressionMethod) {
+
             this.tier2MobileCompressionMethod = tier2MobileCompressionMethod;
             return this;
         }
         @CustomType.Setter
         public Builder tier2MobileCompressionValue(@Nullable Integer tier2MobileCompressionValue) {
+
             this.tier2MobileCompressionValue = tier2MobileCompressionValue;
             return this;
         }
         @CustomType.Setter
         public Builder tier2StandardCompressionMethod(@Nullable String tier2StandardCompressionMethod) {
+
             this.tier2StandardCompressionMethod = tier2StandardCompressionMethod;
             return this;
         }
         @CustomType.Setter
         public Builder tier2StandardCompressionValue(@Nullable Integer tier2StandardCompressionValue) {
+
             this.tier2StandardCompressionValue = tier2StandardCompressionValue;
             return this;
         }
         @CustomType.Setter
         public Builder tier3MobileCompressionMethod(@Nullable String tier3MobileCompressionMethod) {
+
             this.tier3MobileCompressionMethod = tier3MobileCompressionMethod;
             return this;
         }
         @CustomType.Setter
         public Builder tier3MobileCompressionValue(@Nullable Integer tier3MobileCompressionValue) {
+
             this.tier3MobileCompressionValue = tier3MobileCompressionValue;
             return this;
         }
         @CustomType.Setter
         public Builder tier3StandardCompressionMethod(@Nullable String tier3StandardCompressionMethod) {
+
             this.tier3StandardCompressionMethod = tier3StandardCompressionMethod;
             return this;
         }
         @CustomType.Setter
         public Builder tier3StandardCompressionValue(@Nullable Integer tier3StandardCompressionValue) {
+
             this.tier3StandardCompressionValue = tier3StandardCompressionValue;
             return this;
         }
         @CustomType.Setter
         public Builder titleAicMobile(@Nullable String titleAicMobile) {
+
             this.titleAicMobile = titleAicMobile;
             return this;
         }
         @CustomType.Setter
         public Builder titleAicNonmobile(@Nullable String titleAicNonmobile) {
+
             this.titleAicNonmobile = titleAicNonmobile;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

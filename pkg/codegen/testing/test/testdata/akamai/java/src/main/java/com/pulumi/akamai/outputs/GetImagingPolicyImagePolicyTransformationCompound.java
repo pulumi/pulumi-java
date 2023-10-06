@@ -36,6 +36,7 @@ public final class GetImagingPolicyImagePolicyTransformationCompound {
 
         @CustomType.Setter
         public Builder transformations(@Nullable List<GetImagingPolicyImagePolicyTransformation> transformations) {
+
             this.transformations = transformations;
             return this;
         }

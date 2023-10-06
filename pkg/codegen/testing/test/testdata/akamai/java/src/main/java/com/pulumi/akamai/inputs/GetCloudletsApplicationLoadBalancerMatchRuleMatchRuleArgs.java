@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.GetCloudletsApplicationLoadBalancerMatchRuleMatc
 import com.pulumi.akamai.inputs.GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -222,8 +223,12 @@ public final class GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleArgs ext
         }
 
         public GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleArgs build() {
-            $.forwardSettings = Objects.requireNonNull($.forwardSettings, "expected parameter 'forwardSettings' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.forwardSettings == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleArgs", "forwardSettings");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleArgs", "type");
+            }
             return $;
         }
     }

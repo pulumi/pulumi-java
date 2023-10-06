@@ -165,111 +165,133 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorAudienceSegmenta
 
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAudienceSegmentationCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletSharedPolicy(@Nullable Integer cloudletSharedPolicy) {
+
             this.cloudletSharedPolicy = cloudletSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder isSharedPolicy(@Nullable Boolean isSharedPolicy) {
+
             this.isSharedPolicy = isSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder label(@Nullable String label) {
+
             this.label = label;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder populationCookieAutomaticSalt(@Nullable Boolean populationCookieAutomaticSalt) {
+
             this.populationCookieAutomaticSalt = populationCookieAutomaticSalt;
             return this;
         }
         @CustomType.Setter
         public Builder populationCookieDomain(@Nullable String populationCookieDomain) {
+
             this.populationCookieDomain = populationCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder populationCookieIncludeRuleName(@Nullable Boolean populationCookieIncludeRuleName) {
+
             this.populationCookieIncludeRuleName = populationCookieIncludeRuleName;
             return this;
         }
         @CustomType.Setter
         public Builder populationCookieSalt(@Nullable String populationCookieSalt) {
+
             this.populationCookieSalt = populationCookieSalt;
             return this;
         }
         @CustomType.Setter
         public Builder populationCookieType(@Nullable String populationCookieType) {
+
             this.populationCookieType = populationCookieType;
             return this;
         }
         @CustomType.Setter
         public Builder populationDuration(@Nullable String populationDuration) {
+
             this.populationDuration = populationDuration;
             return this;
         }
         @CustomType.Setter
         public Builder populationRefresh(@Nullable Boolean populationRefresh) {
+
             this.populationRefresh = populationRefresh;
             return this;
         }
         @CustomType.Setter
         public Builder populationTitle(@Nullable String populationTitle) {
+
             this.populationTitle = populationTitle;
             return this;
         }
         @CustomType.Setter
         public Builder segmentTrackingCookieName(@Nullable String segmentTrackingCookieName) {
+
             this.segmentTrackingCookieName = segmentTrackingCookieName;
             return this;
         }
         @CustomType.Setter
         public Builder segmentTrackingCustomHeader(@Nullable String segmentTrackingCustomHeader) {
+
             this.segmentTrackingCustomHeader = segmentTrackingCustomHeader;
             return this;
         }
         @CustomType.Setter
         public Builder segmentTrackingMethod(@Nullable String segmentTrackingMethod) {
+
             this.segmentTrackingMethod = segmentTrackingMethod;
             return this;
         }
         @CustomType.Setter
         public Builder segmentTrackingQueryParam(@Nullable String segmentTrackingQueryParam) {
+
             this.segmentTrackingQueryParam = segmentTrackingQueryParam;
             return this;
         }
         @CustomType.Setter
         public Builder segmentTrackingTitle(@Nullable String segmentTrackingTitle) {
+
             this.segmentTrackingTitle = segmentTrackingTitle;
             return this;
         }
         @CustomType.Setter
         public Builder specifyPopulationCookieDomain(@Nullable Boolean specifyPopulationCookieDomain) {
+
             this.specifyPopulationCookieDomain = specifyPopulationCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

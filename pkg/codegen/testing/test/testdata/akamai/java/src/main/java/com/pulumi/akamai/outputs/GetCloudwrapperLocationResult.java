@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -71,27 +72,42 @@ public final class GetCloudwrapperLocationResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder locationId(String locationId) {
-            this.locationId = Objects.requireNonNull(locationId);
+            if (locationId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationResult", "locationId");
+            }
+            this.locationId = locationId;
             return this;
         }
         @CustomType.Setter
         public Builder locationName(String locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            if (locationName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationResult", "locationName");
+            }
+            this.locationName = locationName;
             return this;
         }
         @CustomType.Setter
         public Builder trafficType(String trafficType) {
-            this.trafficType = Objects.requireNonNull(trafficType);
+            if (trafficType == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationResult", "trafficType");
+            }
+            this.trafficType = trafficType;
             return this;
         }
         @CustomType.Setter
         public Builder trafficTypeId(Integer trafficTypeId) {
-            this.trafficTypeId = Objects.requireNonNull(trafficTypeId);
+            if (trafficTypeId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationResult", "trafficTypeId");
+            }
+            this.trafficTypeId = trafficTypeId;
             return this;
         }
         public GetCloudwrapperLocationResult build() {

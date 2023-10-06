@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudletsRequestControlMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -82,21 +83,27 @@ public final class GetCloudletsRequestControlMatchRuleMatchRule {
 
         @CustomType.Setter
         public Builder allowDeny(String allowDeny) {
-            this.allowDeny = Objects.requireNonNull(allowDeny);
+            if (allowDeny == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsRequestControlMatchRuleMatchRule", "allowDeny");
+            }
+            this.allowDeny = allowDeny;
             return this;
         }
         @CustomType.Setter
         public Builder disabled(@Nullable Boolean disabled) {
+
             this.disabled = disabled;
             return this;
         }
         @CustomType.Setter
         public Builder end(@Nullable Integer end) {
+
             this.end = end;
             return this;
         }
         @CustomType.Setter
         public Builder matches(@Nullable List<GetCloudletsRequestControlMatchRuleMatchRuleMatch> matches) {
+
             this.matches = matches;
             return this;
         }
@@ -105,22 +112,28 @@ public final class GetCloudletsRequestControlMatchRuleMatchRule {
         }
         @CustomType.Setter
         public Builder matchesAlways(@Nullable Boolean matchesAlways) {
+
             this.matchesAlways = matchesAlways;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder start(@Nullable Integer start) {
+
             this.start = start;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsRequestControlMatchRuleMatchRule", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetCloudletsRequestControlMatchRuleMatchRule build() {

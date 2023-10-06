@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +75,9 @@ public final class GetEdgeWorkerArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         public GetEdgeWorkerArgs build() {
-            $.edgeworkerId = Objects.requireNonNull($.edgeworkerId, "expected parameter 'edgeworkerId' to be non-null");
+            if ($.edgeworkerId == null) {
+                throw new MissingRequiredPropertyException("GetEdgeWorkerArgs", "edgeworkerId");
+            }
             return $;
         }
     }

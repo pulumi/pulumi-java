@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetCloudletsApiPrioritizationMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -151,8 +152,12 @@ public final class GetCloudletsApiPrioritizationMatchRuleMatchRule extends com.p
         }
 
         public GetCloudletsApiPrioritizationMatchRuleMatchRule build() {
-            $.passThroughPercent = Objects.requireNonNull($.passThroughPercent, "expected parameter 'passThroughPercent' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.passThroughPercent == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsApiPrioritizationMatchRuleMatchRule", "passThroughPercent");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsApiPrioritizationMatchRuleMatchRule", "type");
+            }
             return $;
         }
     }

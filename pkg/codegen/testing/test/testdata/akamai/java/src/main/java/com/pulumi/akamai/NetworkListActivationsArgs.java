@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -236,9 +237,15 @@ public final class NetworkListActivationsArgs extends com.pulumi.resources.Resou
         }
 
         public NetworkListActivationsArgs build() {
-            $.networkListId = Objects.requireNonNull($.networkListId, "expected parameter 'networkListId' to be non-null");
-            $.notificationEmails = Objects.requireNonNull($.notificationEmails, "expected parameter 'notificationEmails' to be non-null");
-            $.syncPoint = Objects.requireNonNull($.syncPoint, "expected parameter 'syncPoint' to be non-null");
+            if ($.networkListId == null) {
+                throw new MissingRequiredPropertyException("NetworkListActivationsArgs", "networkListId");
+            }
+            if ($.notificationEmails == null) {
+                throw new MissingRequiredPropertyException("NetworkListActivationsArgs", "notificationEmails");
+            }
+            if ($.syncPoint == null) {
+                throw new MissingRequiredPropertyException("NetworkListActivationsArgs", "syncPoint");
+            }
             return $;
         }
     }

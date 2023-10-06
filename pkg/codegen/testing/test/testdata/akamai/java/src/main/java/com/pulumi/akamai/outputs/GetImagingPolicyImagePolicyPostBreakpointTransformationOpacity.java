@@ -42,11 +42,13 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationOpacit
 
         @CustomType.Setter
         public Builder opacity(@Nullable String opacity) {
+
             this.opacity = opacity;
             return this;
         }
         @CustomType.Setter
         public Builder opacityVar(@Nullable String opacityVar) {
+
             this.opacityVar = opacityVar;
             return this;
         }

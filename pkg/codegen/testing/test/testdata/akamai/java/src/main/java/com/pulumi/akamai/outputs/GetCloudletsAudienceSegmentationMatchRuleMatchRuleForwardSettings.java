@@ -49,16 +49,19 @@ public final class GetCloudletsAudienceSegmentationMatchRuleMatchRuleForwardSett
 
         @CustomType.Setter
         public Builder originId(@Nullable String originId) {
+
             this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder pathAndQs(@Nullable String pathAndQs) {
+
             this.pathAndQs = pathAndQs;
             return this;
         }
         @CustomType.Setter
         public Builder useIncomingQueryString(@Nullable Boolean useIncomingQueryString) {
+
             this.useIncomingQueryString = useIncomingQueryString;
             return this;
         }

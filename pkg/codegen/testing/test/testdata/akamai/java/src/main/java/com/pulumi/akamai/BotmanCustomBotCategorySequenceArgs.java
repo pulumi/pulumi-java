@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -77,8 +78,12 @@ public final class BotmanCustomBotCategorySequenceArgs extends com.pulumi.resour
         }
 
         public BotmanCustomBotCategorySequenceArgs build() {
-            $.categoryIds = Objects.requireNonNull($.categoryIds, "expected parameter 'categoryIds' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.categoryIds == null) {
+                throw new MissingRequiredPropertyException("BotmanCustomBotCategorySequenceArgs", "categoryIds");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanCustomBotCategorySequenceArgs", "configId");
+            }
             return $;
         }
     }

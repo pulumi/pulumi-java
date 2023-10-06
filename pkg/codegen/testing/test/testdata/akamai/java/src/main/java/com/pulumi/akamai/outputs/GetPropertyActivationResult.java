@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -100,12 +101,18 @@ public final class GetPropertyActivationResult {
 
         @CustomType.Setter
         public Builder activationId(String activationId) {
-            this.activationId = Objects.requireNonNull(activationId);
+            if (activationId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "activationId");
+            }
+            this.activationId = activationId;
             return this;
         }
         @CustomType.Setter
         public Builder contacts(List<String> contacts) {
-            this.contacts = Objects.requireNonNull(contacts);
+            if (contacts == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "contacts");
+            }
+            this.contacts = contacts;
             return this;
         }
         public Builder contacts(String... contacts) {
@@ -113,42 +120,64 @@ public final class GetPropertyActivationResult {
         }
         @CustomType.Setter
         public Builder errors(String errors) {
-            this.errors = Objects.requireNonNull(errors);
+            if (errors == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "errors");
+            }
+            this.errors = errors;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder network(@Nullable String network) {
+
             this.network = network;
             return this;
         }
         @CustomType.Setter
         public Builder note(String note) {
-            this.note = Objects.requireNonNull(note);
+            if (note == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "note");
+            }
+            this.note = note;
             return this;
         }
         @CustomType.Setter
         public Builder propertyId(String propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         @CustomType.Setter
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            if (status == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "status");
+            }
+            this.status = status;
             return this;
         }
         @CustomType.Setter
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "version");
+            }
+            this.version = version;
             return this;
         }
         @CustomType.Setter
         public Builder warnings(String warnings) {
-            this.warnings = Objects.requireNonNull(warnings);
+            if (warnings == null) {
+              throw new MissingRequiredPropertyException("GetPropertyActivationResult", "warnings");
+            }
+            this.warnings = warnings;
             return this;
         }
         public GetPropertyActivationResult build() {

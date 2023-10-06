@@ -209,106 +209,127 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorInputValidation 
 
         @CustomType.Setter
         public Builder allowLargePostBody(@Nullable Boolean allowLargePostBody) {
+
             this.allowLargePostBody = allowLargePostBody;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorInputValidationCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder failure302Uri(@Nullable String failure302Uri) {
+
             this.failure302Uri = failure302Uri;
             return this;
         }
         @CustomType.Setter
         public Builder label(@Nullable String label) {
+
             this.label = label;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder penalty302Uri(@Nullable String penalty302Uri) {
+
             this.penalty302Uri = penalty302Uri;
             return this;
         }
         @CustomType.Setter
         public Builder penalty403NetStoragePath(@Nullable String penalty403NetStoragePath) {
+
             this.penalty403NetStoragePath = penalty403NetStoragePath;
             return this;
         }
         @CustomType.Setter
         public Builder penaltyAction(@Nullable String penaltyAction) {
+
             this.penaltyAction = penaltyAction;
             return this;
         }
         @CustomType.Setter
         public Builder penaltyBrandedDenyCacheTtl(@Nullable Integer penaltyBrandedDenyCacheTtl) {
+
             this.penaltyBrandedDenyCacheTtl = penaltyBrandedDenyCacheTtl;
             return this;
         }
         @CustomType.Setter
         public Builder penaltyNetStorage(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorInputValidationPenaltyNetStorage penaltyNetStorage) {
+
             this.penaltyNetStorage = penaltyNetStorage;
             return this;
         }
         @CustomType.Setter
         public Builder penaltyThreshold(@Nullable Integer penaltyThreshold) {
+
             this.penaltyThreshold = penaltyThreshold;
             return this;
         }
         @CustomType.Setter
         public Builder penaltyTitle(@Nullable String penaltyTitle) {
+
             this.penaltyTitle = penaltyTitle;
             return this;
         }
         @CustomType.Setter
         public Builder resetOnValid(@Nullable Boolean resetOnValid) {
+
             this.resetOnValid = resetOnValid;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByCookie(@Nullable Boolean userIdentificationByCookie) {
+
             this.userIdentificationByCookie = userIdentificationByCookie;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByHeaders(@Nullable Boolean userIdentificationByHeaders) {
+
             this.userIdentificationByHeaders = userIdentificationByHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByIp(@Nullable Boolean userIdentificationByIp) {
+
             this.userIdentificationByIp = userIdentificationByIp;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByParams(@Nullable Boolean userIdentificationByParams) {
+
             this.userIdentificationByParams = userIdentificationByParams;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationKeyCookie(@Nullable String userIdentificationKeyCookie) {
+
             this.userIdentificationKeyCookie = userIdentificationKeyCookie;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationKeyHeaders(@Nullable List<String> userIdentificationKeyHeaders) {
+
             this.userIdentificationKeyHeaders = userIdentificationKeyHeaders;
             return this;
         }
@@ -317,6 +338,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorInputValidation 
         }
         @CustomType.Setter
         public Builder userIdentificationKeyParams(@Nullable List<String> userIdentificationKeyParams) {
+
             this.userIdentificationKeyParams = userIdentificationKeyParams;
             return this;
         }
@@ -325,36 +347,43 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorInputValidation 
         }
         @CustomType.Setter
         public Builder userIdentificationTitle(@Nullable String userIdentificationTitle) {
+
             this.userIdentificationTitle = userIdentificationTitle;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder validateOnOriginHeaderName(@Nullable String validateOnOriginHeaderName) {
+
             this.validateOnOriginHeaderName = validateOnOriginHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder validateOnOriginHeaderValue(@Nullable String validateOnOriginHeaderValue) {
+
             this.validateOnOriginHeaderValue = validateOnOriginHeaderValue;
             return this;
         }
         @CustomType.Setter
         public Builder validateOnOriginResponseCode(@Nullable Integer validateOnOriginResponseCode) {
+
             this.validateOnOriginResponseCode = validateOnOriginResponseCode;
             return this;
         }
         @CustomType.Setter
         public Builder validateOnOriginWith(@Nullable String validateOnOriginWith) {
+
             this.validateOnOriginWith = validateOnOriginWith;
             return this;
         }
         @CustomType.Setter
         public Builder validationTitle(@Nullable String validationTitle) {
+
             this.validationTitle = validationTitle;
             return this;
         }

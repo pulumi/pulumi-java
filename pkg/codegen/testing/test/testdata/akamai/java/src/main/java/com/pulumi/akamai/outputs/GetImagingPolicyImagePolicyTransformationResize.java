@@ -78,41 +78,49 @@ public final class GetImagingPolicyImagePolicyTransformationResize {
 
         @CustomType.Setter
         public Builder aspect(@Nullable String aspect) {
+
             this.aspect = aspect;
             return this;
         }
         @CustomType.Setter
         public Builder aspectVar(@Nullable String aspectVar) {
+
             this.aspectVar = aspectVar;
             return this;
         }
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder type(@Nullable String type) {
+
             this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder typeVar(@Nullable String typeVar) {
+
             this.typeVar = typeVar;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }

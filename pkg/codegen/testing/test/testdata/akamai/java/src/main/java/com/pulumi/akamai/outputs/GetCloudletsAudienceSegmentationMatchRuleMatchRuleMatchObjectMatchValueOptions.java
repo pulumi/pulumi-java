@@ -56,21 +56,25 @@ public final class GetCloudletsAudienceSegmentationMatchRuleMatchRuleMatchObject
 
         @CustomType.Setter
         public Builder valueCaseSensitive(@Nullable Boolean valueCaseSensitive) {
+
             this.valueCaseSensitive = valueCaseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder valueEscaped(@Nullable Boolean valueEscaped) {
+
             this.valueEscaped = valueEscaped;
             return this;
         }
         @CustomType.Setter
         public Builder valueHasWildcard(@Nullable Boolean valueHasWildcard) {
+
             this.valueHasWildcard = valueHasWildcard;
             return this;
         }
         @CustomType.Setter
         public Builder values(@Nullable List<String> values) {
+
             this.values = values;
             return this;
         }

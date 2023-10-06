@@ -92,21 +92,25 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorEdgeSideIncludes
 
         @CustomType.Setter
         public Builder detectInjection(@Nullable Boolean detectInjection) {
+
             this.detectInjection = detectInjection;
             return this;
         }
         @CustomType.Setter
         public Builder enableViaHttp(@Nullable Boolean enableViaHttp) {
+
             this.enableViaHttp = enableViaHttp;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder i18nCharsets(@Nullable List<String> i18nCharsets) {
+
             this.i18nCharsets = i18nCharsets;
             return this;
         }
@@ -115,31 +119,37 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorEdgeSideIncludes
         }
         @CustomType.Setter
         public Builder i18nStatus(@Nullable Boolean i18nStatus) {
+
             this.i18nStatus = i18nStatus;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder passClientIp(@Nullable Boolean passClientIp) {
+
             this.passClientIp = passClientIp;
             return this;
         }
         @CustomType.Setter
         public Builder passSetCookie(@Nullable Boolean passSetCookie) {
+
             this.passSetCookie = passSetCookie;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

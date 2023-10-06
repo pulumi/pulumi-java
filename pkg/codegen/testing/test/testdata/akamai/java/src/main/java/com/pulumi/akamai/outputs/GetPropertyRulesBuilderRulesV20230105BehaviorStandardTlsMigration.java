@@ -116,71 +116,85 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorStandardTlsMigra
 
         @CustomType.Setter
         public Builder allowHttpsDowngrade(@Nullable Boolean allowHttpsDowngrade) {
+
             this.allowHttpsDowngrade = allowHttpsDowngrade;
             return this;
         }
         @CustomType.Setter
         public Builder allowHttpsUpgrade(@Nullable Boolean allowHttpsUpgrade) {
+
             this.allowHttpsUpgrade = allowHttpsUpgrade;
             return this;
         }
         @CustomType.Setter
         public Builder cacheSharingDuration(@Nullable Integer cacheSharingDuration) {
+
             this.cacheSharingDuration = cacheSharingDuration;
             return this;
         }
         @CustomType.Setter
         public Builder cacheSharingStartTime(@Nullable String cacheSharingStartTime) {
+
             this.cacheSharingStartTime = cacheSharingStartTime;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder isCertificateSniOnly(@Nullable Boolean isCertificateSniOnly) {
+
             this.isCertificateSniOnly = isCertificateSniOnly;
             return this;
         }
         @CustomType.Setter
         public Builder isTieredDistributionUsed(@Nullable Boolean isTieredDistributionUsed) {
+
             this.isTieredDistributionUsed = isTieredDistributionUsed;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder migrationDuration(@Nullable Integer migrationDuration) {
+
             this.migrationDuration = migrationDuration;
             return this;
         }
         @CustomType.Setter
         public Builder migrationFrom(@Nullable String migrationFrom) {
+
             this.migrationFrom = migrationFrom;
             return this;
         }
         @CustomType.Setter
         public Builder migrationStartTime(@Nullable String migrationStartTime) {
+
             this.migrationStartTime = migrationStartTime;
             return this;
         }
         @CustomType.Setter
         public Builder tdLocation(@Nullable String tdLocation) {
+
             this.tdLocation = tdLocation;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

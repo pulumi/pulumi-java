@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,8 +63,12 @@ public final class GetImagingPolicyVideoPolicyVariableEnumOption extends com.pul
         }
 
         public GetImagingPolicyVideoPolicyVariableEnumOption build() {
-            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
-            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            if ($.id == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariableEnumOption", "id");
+            }
+            if ($.value == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariableEnumOption", "value");
+            }
             return $;
         }
     }

@@ -54,21 +54,25 @@ public final class PropertyHostnameCertStatus {
 
         @CustomType.Setter
         public Builder hostname(@Nullable String hostname) {
+
             this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder productionStatus(@Nullable String productionStatus) {
+
             this.productionStatus = productionStatus;
             return this;
         }
         @CustomType.Setter
         public Builder stagingStatus(@Nullable String stagingStatus) {
+
             this.stagingStatus = stagingStatus;
             return this;
         }
         @CustomType.Setter
         public Builder target(@Nullable String target) {
+
             this.target = target;
             return this;
         }

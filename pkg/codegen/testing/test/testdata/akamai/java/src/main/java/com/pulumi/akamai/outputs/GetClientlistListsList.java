@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -135,67 +136,104 @@ public final class GetClientlistListsList {
 
         @CustomType.Setter
         public Builder createDate(String createDate) {
-            this.createDate = Objects.requireNonNull(createDate);
+            if (createDate == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "createDate");
+            }
+            this.createDate = createDate;
             return this;
         }
         @CustomType.Setter
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            if (createdBy == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "createdBy");
+            }
+            this.createdBy = createdBy;
             return this;
         }
         @CustomType.Setter
         public Builder deprecated(Boolean deprecated) {
-            this.deprecated = Objects.requireNonNull(deprecated);
+            if (deprecated == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "deprecated");
+            }
+            this.deprecated = deprecated;
             return this;
         }
         @CustomType.Setter
         public Builder itemsCount(Integer itemsCount) {
-            this.itemsCount = Objects.requireNonNull(itemsCount);
+            if (itemsCount == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "itemsCount");
+            }
+            this.itemsCount = itemsCount;
             return this;
         }
         @CustomType.Setter
         public Builder listId(String listId) {
-            this.listId = Objects.requireNonNull(listId);
+            if (listId == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "listId");
+            }
+            this.listId = listId;
             return this;
         }
         @CustomType.Setter
         public Builder listType(String listType) {
-            this.listType = Objects.requireNonNull(listType);
+            if (listType == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "listType");
+            }
+            this.listType = listType;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder notes(String notes) {
-            this.notes = Objects.requireNonNull(notes);
+            if (notes == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "notes");
+            }
+            this.notes = notes;
             return this;
         }
         @CustomType.Setter
         public Builder productionActivationStatus(String productionActivationStatus) {
-            this.productionActivationStatus = Objects.requireNonNull(productionActivationStatus);
+            if (productionActivationStatus == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "productionActivationStatus");
+            }
+            this.productionActivationStatus = productionActivationStatus;
             return this;
         }
         @CustomType.Setter
         public Builder readOnly(Boolean readOnly) {
-            this.readOnly = Objects.requireNonNull(readOnly);
+            if (readOnly == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "readOnly");
+            }
+            this.readOnly = readOnly;
             return this;
         }
         @CustomType.Setter
         public Builder shared(Boolean shared) {
-            this.shared = Objects.requireNonNull(shared);
+            if (shared == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "shared");
+            }
+            this.shared = shared;
             return this;
         }
         @CustomType.Setter
         public Builder stagingActivationStatus(String stagingActivationStatus) {
-            this.stagingActivationStatus = Objects.requireNonNull(stagingActivationStatus);
+            if (stagingActivationStatus == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "stagingActivationStatus");
+            }
+            this.stagingActivationStatus = stagingActivationStatus;
             return this;
         }
         @CustomType.Setter
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            if (tags == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "tags");
+            }
+            this.tags = tags;
             return this;
         }
         public Builder tags(String... tags) {
@@ -203,22 +241,32 @@ public final class GetClientlistListsList {
         }
         @CustomType.Setter
         public Builder type(@Nullable String type) {
+
             this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder updateDate(String updateDate) {
-            this.updateDate = Objects.requireNonNull(updateDate);
+            if (updateDate == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "updateDate");
+            }
+            this.updateDate = updateDate;
             return this;
         }
         @CustomType.Setter
         public Builder updatedBy(String updatedBy) {
-            this.updatedBy = Objects.requireNonNull(updatedBy);
+            if (updatedBy == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "updatedBy");
+            }
+            this.updatedBy = updatedBy;
             return this;
         }
         @CustomType.Setter
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetClientlistListsList", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetClientlistListsList build() {

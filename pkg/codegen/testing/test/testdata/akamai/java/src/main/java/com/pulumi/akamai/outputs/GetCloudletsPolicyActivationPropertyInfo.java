@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -65,32 +66,50 @@ public final class GetCloudletsPolicyActivationPropertyInfo {
 
         @CustomType.Setter
         public Builder activatedBy(String activatedBy) {
-            this.activatedBy = Objects.requireNonNull(activatedBy);
+            if (activatedBy == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivationPropertyInfo", "activatedBy");
+            }
+            this.activatedBy = activatedBy;
             return this;
         }
         @CustomType.Setter
         public Builder activationDate(Integer activationDate) {
-            this.activationDate = Objects.requireNonNull(activationDate);
+            if (activationDate == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivationPropertyInfo", "activationDate");
+            }
+            this.activationDate = activationDate;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(Integer groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivationPropertyInfo", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivationPropertyInfo", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            if (status == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivationPropertyInfo", "status");
+            }
+            this.status = status;
             return this;
         }
         @CustomType.Setter
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivationPropertyInfo", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetCloudletsPolicyActivationPropertyInfo build() {

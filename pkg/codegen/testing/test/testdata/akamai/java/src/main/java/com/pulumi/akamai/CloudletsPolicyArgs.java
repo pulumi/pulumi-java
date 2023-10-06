@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -261,8 +262,12 @@ public final class CloudletsPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         public CloudletsPolicyArgs build() {
-            $.cloudletCode = Objects.requireNonNull($.cloudletCode, "expected parameter 'cloudletCode' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            if ($.cloudletCode == null) {
+                throw new MissingRequiredPropertyException("CloudletsPolicyArgs", "cloudletCode");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("CloudletsPolicyArgs", "groupId");
+            }
             return $;
         }
     }

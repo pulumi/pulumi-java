@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -49,7 +50,9 @@ public final class GetBotmanCustomBotCategorySequencePlainArgs extends com.pulum
         }
 
         public GetBotmanCustomBotCategorySequencePlainArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("GetBotmanCustomBotCategorySequencePlainArgs", "configId");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -227,9 +228,15 @@ public final class DatastreamSplunkConnectorArgs extends com.pulumi.resources.Re
         }
 
         public DatastreamSplunkConnectorArgs build() {
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
-            $.eventCollectorToken = Objects.requireNonNull($.eventCollectorToken, "expected parameter 'eventCollectorToken' to be non-null");
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamSplunkConnectorArgs", "displayName");
+            }
+            if ($.endpoint == null) {
+                throw new MissingRequiredPropertyException("DatastreamSplunkConnectorArgs", "endpoint");
+            }
+            if ($.eventCollectorToken == null) {
+                throw new MissingRequiredPropertyException("DatastreamSplunkConnectorArgs", "eventCollectorToken");
+            }
             return $;
         }
     }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,7 +65,9 @@ public final class GetCloudletsPolicyPlainArgs extends com.pulumi.resources.Invo
         }
 
         public GetCloudletsPolicyPlainArgs build() {
-            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            if ($.policyId == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsPolicyPlainArgs", "policyId");
+            }
             return $;
         }
     }

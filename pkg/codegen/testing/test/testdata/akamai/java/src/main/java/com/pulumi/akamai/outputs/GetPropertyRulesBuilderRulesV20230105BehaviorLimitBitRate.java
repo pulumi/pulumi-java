@@ -70,6 +70,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorLimitBitRate {
 
         @CustomType.Setter
         public Builder bitrateTables(@Nullable List<GetPropertyRulesBuilderRulesV20230105BehaviorLimitBitRateBitrateTable> bitrateTables) {
+
             this.bitrateTables = bitrateTables;
             return this;
         }
@@ -78,21 +79,25 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorLimitBitRate {
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder thresholdTables(@Nullable List<GetPropertyRulesBuilderRulesV20230105BehaviorLimitBitRateThresholdTable> thresholdTables) {
+
             this.thresholdTables = thresholdTables;
             return this;
         }
@@ -101,6 +106,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorLimitBitRate {
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudwrapperLocationsLocationTrafficType;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,21 +57,31 @@ public final class GetCloudwrapperLocationsLocation {
 
         @CustomType.Setter
         public Builder locationId(Integer locationId) {
-            this.locationId = Objects.requireNonNull(locationId);
+            if (locationId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationsLocation", "locationId");
+            }
+            this.locationId = locationId;
             return this;
         }
         @CustomType.Setter
         public Builder locationName(String locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            if (locationName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationsLocation", "locationName");
+            }
+            this.locationName = locationName;
             return this;
         }
         @CustomType.Setter
         public Builder multiCdnLocationId(String multiCdnLocationId) {
-            this.multiCdnLocationId = Objects.requireNonNull(multiCdnLocationId);
+            if (multiCdnLocationId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperLocationsLocation", "multiCdnLocationId");
+            }
+            this.multiCdnLocationId = multiCdnLocationId;
             return this;
         }
         @CustomType.Setter
         public Builder trafficTypes(@Nullable List<GetCloudwrapperLocationsLocationTrafficType> trafficTypes) {
+
             this.trafficTypes = trafficTypes;
             return this;
         }

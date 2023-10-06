@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -59,27 +60,42 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsBocc {
 
         @CustomType.Setter
         public Builder conditionalSamplingFrequency(String conditionalSamplingFrequency) {
-            this.conditionalSamplingFrequency = Objects.requireNonNull(conditionalSamplingFrequency);
+            if (conditionalSamplingFrequency == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "conditionalSamplingFrequency");
+            }
+            this.conditionalSamplingFrequency = conditionalSamplingFrequency;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            if (enabled == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "enabled");
+            }
+            this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder forwardType(String forwardType) {
-            this.forwardType = Objects.requireNonNull(forwardType);
+            if (forwardType == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "forwardType");
+            }
+            this.forwardType = forwardType;
             return this;
         }
         @CustomType.Setter
         public Builder requestType(String requestType) {
-            this.requestType = Objects.requireNonNull(requestType);
+            if (requestType == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "requestType");
+            }
+            this.requestType = requestType;
             return this;
         }
         @CustomType.Setter
         public Builder samplingFrequency(String samplingFrequency) {
-            this.samplingFrequency = Objects.requireNonNull(samplingFrequency);
+            if (samplingFrequency == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "samplingFrequency");
+            }
+            this.samplingFrequency = samplingFrequency;
             return this;
         }
         public GetCloudwrapperConfigurationMultiCdnSettingsBocc build() {

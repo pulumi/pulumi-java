@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -82,22 +83,32 @@ public final class GetAppSecApiEndpointsResult {
 
         @CustomType.Setter
         public Builder apiName(@Nullable String apiName) {
+
             this.apiName = apiName;
             return this;
         }
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiEndpointsResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiEndpointsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder idLists(List<Integer> idLists) {
-            this.idLists = Objects.requireNonNull(idLists);
+            if (idLists == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiEndpointsResult", "idLists");
+            }
+            this.idLists = idLists;
             return this;
         }
         public Builder idLists(Integer... idLists) {
@@ -105,16 +116,23 @@ public final class GetAppSecApiEndpointsResult {
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiEndpointsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiEndpointsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(@Nullable String securityPolicyId) {
+
             this.securityPolicyId = securityPolicyId;
             return this;
         }

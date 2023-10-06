@@ -1548,1086 +1548,1303 @@ public final class GetPropertyRulesBuilderRulesV20230530Behavior {
 
         @CustomType.Setter
         public Builder adScalerCircuitBreaker(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAdScalerCircuitBreaker adScalerCircuitBreaker) {
+
             this.adScalerCircuitBreaker = adScalerCircuitBreaker;
             return this;
         }
         @CustomType.Setter
         public Builder adaptiveAcceleration(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAdaptiveAcceleration adaptiveAcceleration) {
+
             this.adaptiveAcceleration = adaptiveAcceleration;
             return this;
         }
         @CustomType.Setter
         public Builder adaptiveImageCompression(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAdaptiveImageCompression adaptiveImageCompression) {
+
             this.adaptiveImageCompression = adaptiveImageCompression;
             return this;
         }
         @CustomType.Setter
         public Builder advanced(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAdvanced advanced) {
+
             this.advanced = advanced;
             return this;
         }
         @CustomType.Setter
         public Builder aggregatedReporting(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAggregatedReporting aggregatedReporting) {
+
             this.aggregatedReporting = aggregatedReporting;
             return this;
         }
         @CustomType.Setter
         public Builder akamaizer(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAkamaizer akamaizer) {
+
             this.akamaizer = akamaizer;
             return this;
         }
         @CustomType.Setter
         public Builder akamaizerTag(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAkamaizerTag akamaizerTag) {
+
             this.akamaizerTag = akamaizerTag;
             return this;
         }
         @CustomType.Setter
         public Builder allHttpInCacheHierarchy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllHttpInCacheHierarchy allHttpInCacheHierarchy) {
+
             this.allHttpInCacheHierarchy = allHttpInCacheHierarchy;
             return this;
         }
         @CustomType.Setter
         public Builder allowCloudletsOrigins(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowCloudletsOrigins allowCloudletsOrigins) {
+
             this.allowCloudletsOrigins = allowCloudletsOrigins;
             return this;
         }
         @CustomType.Setter
         public Builder allowDelete(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowDelete allowDelete) {
+
             this.allowDelete = allowDelete;
             return this;
         }
         @CustomType.Setter
         public Builder allowHttpsCacheKeySharing(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowHttpsCacheKeySharing allowHttpsCacheKeySharing) {
+
             this.allowHttpsCacheKeySharing = allowHttpsCacheKeySharing;
             return this;
         }
         @CustomType.Setter
         public Builder allowHttpsDowngrade(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowHttpsDowngrade allowHttpsDowngrade) {
+
             this.allowHttpsDowngrade = allowHttpsDowngrade;
             return this;
         }
         @CustomType.Setter
         public Builder allowOptions(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowOptions allowOptions) {
+
             this.allowOptions = allowOptions;
             return this;
         }
         @CustomType.Setter
         public Builder allowPatch(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowPatch allowPatch) {
+
             this.allowPatch = allowPatch;
             return this;
         }
         @CustomType.Setter
         public Builder allowPost(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowPost allowPost) {
+
             this.allowPost = allowPost;
             return this;
         }
         @CustomType.Setter
         public Builder allowPut(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowPut allowPut) {
+
             this.allowPut = allowPut;
             return this;
         }
         @CustomType.Setter
         public Builder allowTransferEncoding(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAllowTransferEncoding allowTransferEncoding) {
+
             this.allowTransferEncoding = allowTransferEncoding;
             return this;
         }
         @CustomType.Setter
         public Builder altSvcHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAltSvcHeader altSvcHeader) {
+
             this.altSvcHeader = altSvcHeader;
             return this;
         }
         @CustomType.Setter
         public Builder apiPrioritization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorApiPrioritization apiPrioritization) {
+
             this.apiPrioritization = apiPrioritization;
             return this;
         }
         @CustomType.Setter
         public Builder applicationLoadBalancer(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorApplicationLoadBalancer applicationLoadBalancer) {
+
             this.applicationLoadBalancer = applicationLoadBalancer;
             return this;
         }
         @CustomType.Setter
         public Builder audienceSegmentation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAudienceSegmentation audienceSegmentation) {
+
             this.audienceSegmentation = audienceSegmentation;
             return this;
         }
         @CustomType.Setter
         public Builder autoDomainValidation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorAutoDomainValidation autoDomainValidation) {
+
             this.autoDomainValidation = autoDomainValidation;
             return this;
         }
         @CustomType.Setter
         public Builder baseDirectory(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorBaseDirectory baseDirectory) {
+
             this.baseDirectory = baseDirectory;
             return this;
         }
         @CustomType.Setter
         public Builder bossBeaconing(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorBossBeaconing bossBeaconing) {
+
             this.bossBeaconing = bossBeaconing;
             return this;
         }
         @CustomType.Setter
         public Builder breadcrumbs(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorBreadcrumbs breadcrumbs) {
+
             this.breadcrumbs = breadcrumbs;
             return this;
         }
         @CustomType.Setter
         public Builder breakConnection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorBreakConnection breakConnection) {
+
             this.breakConnection = breakConnection;
             return this;
         }
         @CustomType.Setter
         public Builder brotli(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorBrotli brotli) {
+
             this.brotli = brotli;
             return this;
         }
         @CustomType.Setter
         public Builder cacheError(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheError cacheError) {
+
             this.cacheError = cacheError;
             return this;
         }
         @CustomType.Setter
         public Builder cacheId(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheId cacheId) {
+
             this.cacheId = cacheId;
             return this;
         }
         @CustomType.Setter
         public Builder cacheKeyIgnoreCase(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheKeyIgnoreCase cacheKeyIgnoreCase) {
+
             this.cacheKeyIgnoreCase = cacheKeyIgnoreCase;
             return this;
         }
         @CustomType.Setter
         public Builder cacheKeyQueryParams(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheKeyQueryParams cacheKeyQueryParams) {
+
             this.cacheKeyQueryParams = cacheKeyQueryParams;
             return this;
         }
         @CustomType.Setter
         public Builder cacheKeyRewrite(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheKeyRewrite cacheKeyRewrite) {
+
             this.cacheKeyRewrite = cacheKeyRewrite;
             return this;
         }
         @CustomType.Setter
         public Builder cachePost(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCachePost cachePost) {
+
             this.cachePost = cachePost;
             return this;
         }
         @CustomType.Setter
         public Builder cacheRedirect(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheRedirect cacheRedirect) {
+
             this.cacheRedirect = cacheRedirect;
             return this;
         }
         @CustomType.Setter
         public Builder cacheTag(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheTag cacheTag) {
+
             this.cacheTag = cacheTag;
             return this;
         }
         @CustomType.Setter
         public Builder cacheTagVisible(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCacheTagVisible cacheTagVisible) {
+
             this.cacheTagVisible = cacheTagVisible;
             return this;
         }
         @CustomType.Setter
         public Builder caching(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCaching caching) {
+
             this.caching = caching;
             return this;
         }
         @CustomType.Setter
         public Builder centralAuthorization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCentralAuthorization centralAuthorization) {
+
             this.centralAuthorization = centralAuthorization;
             return this;
         }
         @CustomType.Setter
         public Builder chaseRedirects(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorChaseRedirects chaseRedirects) {
+
             this.chaseRedirects = chaseRedirects;
             return this;
         }
         @CustomType.Setter
         public Builder clientCharacteristics(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorClientCharacteristics clientCharacteristics) {
+
             this.clientCharacteristics = clientCharacteristics;
             return this;
         }
         @CustomType.Setter
         public Builder cloudInterconnects(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCloudInterconnects cloudInterconnects) {
+
             this.cloudInterconnects = cloudInterconnects;
             return this;
         }
         @CustomType.Setter
         public Builder cloudWrapper(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCloudWrapper cloudWrapper) {
+
             this.cloudWrapper = cloudWrapper;
             return this;
         }
         @CustomType.Setter
         public Builder cloudWrapperAdvanced(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCloudWrapperAdvanced cloudWrapperAdvanced) {
+
             this.cloudWrapperAdvanced = cloudWrapperAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder commonMediaClientData(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCommonMediaClientData commonMediaClientData) {
+
             this.commonMediaClientData = commonMediaClientData;
             return this;
         }
         @CustomType.Setter
         public Builder conditionalOrigin(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorConditionalOrigin conditionalOrigin) {
+
             this.conditionalOrigin = conditionalOrigin;
             return this;
         }
         @CustomType.Setter
         public Builder constructResponse(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorConstructResponse constructResponse) {
+
             this.constructResponse = constructResponse;
             return this;
         }
         @CustomType.Setter
         public Builder contentCharacteristics(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacteristics contentCharacteristics) {
+
             this.contentCharacteristics = contentCharacteristics;
             return this;
         }
         @CustomType.Setter
         public Builder contentCharacteristicsAmd(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacteristicsAmd contentCharacteristicsAmd) {
+
             this.contentCharacteristicsAmd = contentCharacteristicsAmd;
             return this;
         }
         @CustomType.Setter
         public Builder contentCharacteristicsDd(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacteristicsDd contentCharacteristicsDd) {
+
             this.contentCharacteristicsDd = contentCharacteristicsDd;
             return this;
         }
         @CustomType.Setter
         public Builder contentCharacteristicsWsdLargeFile(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacteristicsWsdLargeFile contentCharacteristicsWsdLargeFile) {
+
             this.contentCharacteristicsWsdLargeFile = contentCharacteristicsWsdLargeFile;
             return this;
         }
         @CustomType.Setter
         public Builder contentCharacteristicsWsdLive(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacteristicsWsdLive contentCharacteristicsWsdLive) {
+
             this.contentCharacteristicsWsdLive = contentCharacteristicsWsdLive;
             return this;
         }
         @CustomType.Setter
         public Builder contentCharacteristicsWsdVod(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacteristicsWsdVod contentCharacteristicsWsdVod) {
+
             this.contentCharacteristicsWsdVod = contentCharacteristicsWsdVod;
             return this;
         }
         @CustomType.Setter
         public Builder contentPrePosition(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentPrePosition contentPrePosition) {
+
             this.contentPrePosition = contentPrePosition;
             return this;
         }
         @CustomType.Setter
         public Builder contentTargetingProtection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorContentTargetingProtection contentTargetingProtection) {
+
             this.contentTargetingProtection = contentTargetingProtection;
             return this;
         }
         @CustomType.Setter
         public Builder corsSupport(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCorsSupport corsSupport) {
+
             this.corsSupport = corsSupport;
             return this;
         }
         @CustomType.Setter
         public Builder cpCode(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCpCode cpCode) {
+
             this.cpCode = cpCode;
             return this;
         }
         @CustomType.Setter
         public Builder customBehavior(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorCustomBehavior customBehavior) {
+
             this.customBehavior = customBehavior;
             return this;
         }
         @CustomType.Setter
         public Builder datastream(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDatastream datastream) {
+
             this.datastream = datastream;
             return this;
         }
         @CustomType.Setter
         public Builder dcp(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcp dcp) {
+
             this.dcp = dcp;
             return this;
         }
         @CustomType.Setter
         public Builder dcpAuthHmacTransformation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpAuthHmacTransformation dcpAuthHmacTransformation) {
+
             this.dcpAuthHmacTransformation = dcpAuthHmacTransformation;
             return this;
         }
         @CustomType.Setter
         public Builder dcpAuthRegexTransformation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpAuthRegexTransformation dcpAuthRegexTransformation) {
+
             this.dcpAuthRegexTransformation = dcpAuthRegexTransformation;
             return this;
         }
         @CustomType.Setter
         public Builder dcpAuthSubstringTransformation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpAuthSubstringTransformation dcpAuthSubstringTransformation) {
+
             this.dcpAuthSubstringTransformation = dcpAuthSubstringTransformation;
             return this;
         }
         @CustomType.Setter
         public Builder dcpAuthVariableExtractor(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpAuthVariableExtractor dcpAuthVariableExtractor) {
+
             this.dcpAuthVariableExtractor = dcpAuthVariableExtractor;
             return this;
         }
         @CustomType.Setter
         public Builder dcpDefaultAuthzGroups(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpDefaultAuthzGroups dcpDefaultAuthzGroups) {
+
             this.dcpDefaultAuthzGroups = dcpDefaultAuthzGroups;
             return this;
         }
         @CustomType.Setter
         public Builder dcpDevRelations(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpDevRelations dcpDevRelations) {
+
             this.dcpDevRelations = dcpDevRelations;
             return this;
         }
         @CustomType.Setter
         public Builder dcpRealTimeAuth(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDcpRealTimeAuth dcpRealTimeAuth) {
+
             this.dcpRealTimeAuth = dcpRealTimeAuth;
             return this;
         }
         @CustomType.Setter
         public Builder deliveryReceipt(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDeliveryReceipt deliveryReceipt) {
+
             this.deliveryReceipt = deliveryReceipt;
             return this;
         }
         @CustomType.Setter
         public Builder denyAccess(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDenyAccess denyAccess) {
+
             this.denyAccess = denyAccess;
             return this;
         }
         @CustomType.Setter
         public Builder denyDirectFailoverAccess(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDenyDirectFailoverAccess denyDirectFailoverAccess) {
+
             this.denyDirectFailoverAccess = denyDirectFailoverAccess;
             return this;
         }
         @CustomType.Setter
         public Builder deviceCharacteristicCacheId(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDeviceCharacteristicCacheId deviceCharacteristicCacheId) {
+
             this.deviceCharacteristicCacheId = deviceCharacteristicCacheId;
             return this;
         }
         @CustomType.Setter
         public Builder deviceCharacteristicHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDeviceCharacteristicHeader deviceCharacteristicHeader) {
+
             this.deviceCharacteristicHeader = deviceCharacteristicHeader;
             return this;
         }
         @CustomType.Setter
         public Builder dnsAsyncRefresh(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDnsAsyncRefresh dnsAsyncRefresh) {
+
             this.dnsAsyncRefresh = dnsAsyncRefresh;
             return this;
         }
         @CustomType.Setter
         public Builder dnsPrefresh(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDnsPrefresh dnsPrefresh) {
+
             this.dnsPrefresh = dnsPrefresh;
             return this;
         }
         @CustomType.Setter
         public Builder downgradeProtocol(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDowngradeProtocol downgradeProtocol) {
+
             this.downgradeProtocol = downgradeProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder downloadCompleteMarker(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDownloadCompleteMarker downloadCompleteMarker) {
+
             this.downloadCompleteMarker = downloadCompleteMarker;
             return this;
         }
         @CustomType.Setter
         public Builder downloadNotification(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDownloadNotification downloadNotification) {
+
             this.downloadNotification = downloadNotification;
             return this;
         }
         @CustomType.Setter
         public Builder downstreamCache(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDownstreamCache downstreamCache) {
+
             this.downstreamCache = downstreamCache;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicThroughtputOptimization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDynamicThroughtputOptimization dynamicThroughtputOptimization) {
+
             this.dynamicThroughtputOptimization = dynamicThroughtputOptimization;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicThroughtputOptimizationOverride(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDynamicThroughtputOptimizationOverride dynamicThroughtputOptimizationOverride) {
+
             this.dynamicThroughtputOptimizationOverride = dynamicThroughtputOptimizationOverride;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicWebContent(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorDynamicWebContent dynamicWebContent) {
+
             this.dynamicWebContent = dynamicWebContent;
             return this;
         }
         @CustomType.Setter
         public Builder ecmsBulkUpload(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEcmsBulkUpload ecmsBulkUpload) {
+
             this.ecmsBulkUpload = ecmsBulkUpload;
             return this;
         }
         @CustomType.Setter
         public Builder ecmsDatabase(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEcmsDatabase ecmsDatabase) {
+
             this.ecmsDatabase = ecmsDatabase;
             return this;
         }
         @CustomType.Setter
         public Builder ecmsDataset(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEcmsDataset ecmsDataset) {
+
             this.ecmsDataset = ecmsDataset;
             return this;
         }
         @CustomType.Setter
         public Builder ecmsObjectKey(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEcmsObjectKey ecmsObjectKey) {
+
             this.ecmsObjectKey = ecmsObjectKey;
             return this;
         }
         @CustomType.Setter
         public Builder edgeConnect(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeConnect edgeConnect) {
+
             this.edgeConnect = edgeConnect;
             return this;
         }
         @CustomType.Setter
         public Builder edgeLoadBalancingAdvanced(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancingAdvanced edgeLoadBalancingAdvanced) {
+
             this.edgeLoadBalancingAdvanced = edgeLoadBalancingAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder edgeLoadBalancingDataCenter(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancingDataCenter edgeLoadBalancingDataCenter) {
+
             this.edgeLoadBalancingDataCenter = edgeLoadBalancingDataCenter;
             return this;
         }
         @CustomType.Setter
         public Builder edgeLoadBalancingOrigin(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancingOrigin edgeLoadBalancingOrigin) {
+
             this.edgeLoadBalancingOrigin = edgeLoadBalancingOrigin;
             return this;
         }
         @CustomType.Setter
         public Builder edgeOriginAuthorization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeOriginAuthorization edgeOriginAuthorization) {
+
             this.edgeOriginAuthorization = edgeOriginAuthorization;
             return this;
         }
         @CustomType.Setter
         public Builder edgeRedirector(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeRedirector edgeRedirector) {
+
             this.edgeRedirector = edgeRedirector;
             return this;
         }
         @CustomType.Setter
         public Builder edgeScape(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeScape edgeScape) {
+
             this.edgeScape = edgeScape;
             return this;
         }
         @CustomType.Setter
         public Builder edgeSideIncludes(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeSideIncludes edgeSideIncludes) {
+
             this.edgeSideIncludes = edgeSideIncludes;
             return this;
         }
         @CustomType.Setter
         public Builder edgeWorker(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEdgeWorker edgeWorker) {
+
             this.edgeWorker = edgeWorker;
             return this;
         }
         @CustomType.Setter
         public Builder enhancedAkamaiProtocol(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEnhancedAkamaiProtocol enhancedAkamaiProtocol) {
+
             this.enhancedAkamaiProtocol = enhancedAkamaiProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder enhancedProxyDetection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEnhancedProxyDetection enhancedProxyDetection) {
+
             this.enhancedProxyDetection = enhancedProxyDetection;
             return this;
         }
         @CustomType.Setter
         public Builder epdForwardHeaderEnrichment(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorEpdForwardHeaderEnrichment epdForwardHeaderEnrichment) {
+
             this.epdForwardHeaderEnrichment = epdForwardHeaderEnrichment;
             return this;
         }
         @CustomType.Setter
         public Builder failAction(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFailAction failAction) {
+
             this.failAction = failAction;
             return this;
         }
         @CustomType.Setter
         public Builder failoverBotManagerFeatureCompatibility(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFailoverBotManagerFeatureCompatibility failoverBotManagerFeatureCompatibility) {
+
             this.failoverBotManagerFeatureCompatibility = failoverBotManagerFeatureCompatibility;
             return this;
         }
         @CustomType.Setter
         public Builder fastInvalidate(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFastInvalidate fastInvalidate) {
+
             this.fastInvalidate = fastInvalidate;
             return this;
         }
         @CustomType.Setter
         public Builder firstPartyMarketing(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFirstPartyMarketing firstPartyMarketing) {
+
             this.firstPartyMarketing = firstPartyMarketing;
             return this;
         }
         @CustomType.Setter
         public Builder firstPartyMarketingPlus(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFirstPartyMarketingPlus firstPartyMarketingPlus) {
+
             this.firstPartyMarketingPlus = firstPartyMarketingPlus;
             return this;
         }
         @CustomType.Setter
         public Builder forwardRewrite(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorForwardRewrite forwardRewrite) {
+
             this.forwardRewrite = forwardRewrite;
             return this;
         }
         @CustomType.Setter
         public Builder g2oheader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorG2oheader g2oheader) {
+
             this.g2oheader = g2oheader;
             return this;
         }
         @CustomType.Setter
         public Builder globalRequestNumber(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorGlobalRequestNumber globalRequestNumber) {
+
             this.globalRequestNumber = globalRequestNumber;
             return this;
         }
         @CustomType.Setter
         public Builder graphqlCaching(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorGraphqlCaching graphqlCaching) {
+
             this.graphqlCaching = graphqlCaching;
             return this;
         }
         @CustomType.Setter
         public Builder gzipResponse(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorGzipResponse gzipResponse) {
+
             this.gzipResponse = gzipResponse;
             return this;
         }
         @CustomType.Setter
         public Builder hdDataAdvanced(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHdDataAdvanced hdDataAdvanced) {
+
             this.hdDataAdvanced = hdDataAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder healthDetection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHealthDetection healthDetection) {
+
             this.healthDetection = healthDetection;
             return this;
         }
         @CustomType.Setter
         public Builder hsafEipBinding(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHsafEipBinding hsafEipBinding) {
+
             this.hsafEipBinding = hsafEipBinding;
             return this;
         }
         @CustomType.Setter
         public Builder http2(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHttp2 http2) {
+
             this.http2 = http2;
             return this;
         }
         @CustomType.Setter
         public Builder http3(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHttp3 http3) {
+
             this.http3 = http3;
             return this;
         }
         @CustomType.Setter
         public Builder httpStrictTransportSecurity(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHttpStrictTransportSecurity httpStrictTransportSecurity) {
+
             this.httpStrictTransportSecurity = httpStrictTransportSecurity;
             return this;
         }
         @CustomType.Setter
         public Builder httpToHttpsUpgrade(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorHttpToHttpsUpgrade httpToHttpsUpgrade) {
+
             this.httpToHttpsUpgrade = httpToHttpsUpgrade;
             return this;
         }
         @CustomType.Setter
         public Builder imOverride(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorImOverride imOverride) {
+
             this.imOverride = imOverride;
             return this;
         }
         @CustomType.Setter
         public Builder imageAndVideoManager(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorImageAndVideoManager imageAndVideoManager) {
+
             this.imageAndVideoManager = imageAndVideoManager;
             return this;
         }
         @CustomType.Setter
         public Builder imageManager(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorImageManager imageManager) {
+
             this.imageManager = imageManager;
             return this;
         }
         @CustomType.Setter
         public Builder imageManagerVideo(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorImageManagerVideo imageManagerVideo) {
+
             this.imageManagerVideo = imageManagerVideo;
             return this;
         }
         @CustomType.Setter
         public Builder include(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorInclude include) {
+
             this.include = include;
             return this;
         }
         @CustomType.Setter
         public Builder instant(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorInstant instant) {
+
             this.instant = instant;
             return this;
         }
         @CustomType.Setter
         public Builder instantConfig(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorInstantConfig instantConfig) {
+
             this.instantConfig = instantConfig;
             return this;
         }
         @CustomType.Setter
         public Builder largeFileOptimization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorLargeFileOptimization largeFileOptimization) {
+
             this.largeFileOptimization = largeFileOptimization;
             return this;
         }
         @CustomType.Setter
         public Builder largeFileOptimizationAdvanced(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorLargeFileOptimizationAdvanced largeFileOptimizationAdvanced) {
+
             this.largeFileOptimizationAdvanced = largeFileOptimizationAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder limitBitRate(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorLimitBitRate limitBitRate) {
+
             this.limitBitRate = limitBitRate;
             return this;
         }
         @CustomType.Setter
         public Builder logCustom(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorLogCustom logCustom) {
+
             this.logCustom = logCustom;
             return this;
         }
         @CustomType.Setter
         public Builder mPulse(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMPulse mPulse) {
+
             this.mPulse = mPulse;
             return this;
         }
         @CustomType.Setter
         public Builder manifestPersonalization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorManifestPersonalization manifestPersonalization) {
+
             this.manifestPersonalization = manifestPersonalization;
             return this;
         }
         @CustomType.Setter
         public Builder manifestRerouting(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorManifestRerouting manifestRerouting) {
+
             this.manifestRerouting = manifestRerouting;
             return this;
         }
         @CustomType.Setter
         public Builder manualServerPush(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorManualServerPush manualServerPush) {
+
             this.manualServerPush = manualServerPush;
             return this;
         }
         @CustomType.Setter
         public Builder mediaAcceleration(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMediaAcceleration mediaAcceleration) {
+
             this.mediaAcceleration = mediaAcceleration;
             return this;
         }
         @CustomType.Setter
         public Builder mediaAccelerationQuicOptout(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMediaAccelerationQuicOptout mediaAccelerationQuicOptout) {
+
             this.mediaAccelerationQuicOptout = mediaAccelerationQuicOptout;
             return this;
         }
         @CustomType.Setter
         public Builder mediaClient(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMediaClient mediaClient) {
+
             this.mediaClient = mediaClient;
             return this;
         }
         @CustomType.Setter
         public Builder mediaFileRetrievalOptimization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMediaFileRetrievalOptimization mediaFileRetrievalOptimization) {
+
             this.mediaFileRetrievalOptimization = mediaFileRetrievalOptimization;
             return this;
         }
         @CustomType.Setter
         public Builder mediaOriginFailover(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMediaOriginFailover mediaOriginFailover) {
+
             this.mediaOriginFailover = mediaOriginFailover;
             return this;
         }
         @CustomType.Setter
         public Builder metadataCaching(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMetadataCaching metadataCaching) {
+
             this.metadataCaching = metadataCaching;
             return this;
         }
         @CustomType.Setter
         public Builder mobileSdkPerformance(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorMobileSdkPerformance mobileSdkPerformance) {
+
             this.mobileSdkPerformance = mobileSdkPerformance;
             return this;
         }
         @CustomType.Setter
         public Builder modifyIncomingRequestHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorModifyIncomingRequestHeader modifyIncomingRequestHeader) {
+
             this.modifyIncomingRequestHeader = modifyIncomingRequestHeader;
             return this;
         }
         @CustomType.Setter
         public Builder modifyIncomingResponseHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorModifyIncomingResponseHeader modifyIncomingResponseHeader) {
+
             this.modifyIncomingResponseHeader = modifyIncomingResponseHeader;
             return this;
         }
         @CustomType.Setter
         public Builder modifyOutgoingRequestHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorModifyOutgoingRequestHeader modifyOutgoingRequestHeader) {
+
             this.modifyOutgoingRequestHeader = modifyOutgoingRequestHeader;
             return this;
         }
         @CustomType.Setter
         public Builder modifyOutgoingResponseHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorModifyOutgoingResponseHeader modifyOutgoingResponseHeader) {
+
             this.modifyOutgoingResponseHeader = modifyOutgoingResponseHeader;
             return this;
         }
         @CustomType.Setter
         public Builder modifyViaHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorModifyViaHeader modifyViaHeader) {
+
             this.modifyViaHeader = modifyViaHeader;
             return this;
         }
         @CustomType.Setter
         public Builder origin(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOrigin origin) {
+
             this.origin = origin;
             return this;
         }
         @CustomType.Setter
         public Builder originCharacteristics(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOriginCharacteristics originCharacteristics) {
+
             this.originCharacteristics = originCharacteristics;
             return this;
         }
         @CustomType.Setter
         public Builder originCharacteristicsWsd(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOriginCharacteristicsWsd originCharacteristicsWsd) {
+
             this.originCharacteristicsWsd = originCharacteristicsWsd;
             return this;
         }
         @CustomType.Setter
         public Builder originFailureRecoveryMethod(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOriginFailureRecoveryMethod originFailureRecoveryMethod) {
+
             this.originFailureRecoveryMethod = originFailureRecoveryMethod;
             return this;
         }
         @CustomType.Setter
         public Builder originFailureRecoveryPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOriginFailureRecoveryPolicy originFailureRecoveryPolicy) {
+
             this.originFailureRecoveryPolicy = originFailureRecoveryPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder originIpAcl(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOriginIpAcl originIpAcl) {
+
             this.originIpAcl = originIpAcl;
             return this;
         }
         @CustomType.Setter
         public Builder persistentClientConnection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPersistentClientConnection persistentClientConnection) {
+
             this.persistentClientConnection = persistentClientConnection;
             return this;
         }
         @CustomType.Setter
         public Builder persistentConnection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPersistentConnection persistentConnection) {
+
             this.persistentConnection = persistentConnection;
             return this;
         }
         @CustomType.Setter
         public Builder personallyIdentifiableInformation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPersonallyIdentifiableInformation personallyIdentifiableInformation) {
+
             this.personallyIdentifiableInformation = personallyIdentifiableInformation;
             return this;
         }
         @CustomType.Setter
         public Builder phasedRelease(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPhasedRelease phasedRelease) {
+
             this.phasedRelease = phasedRelease;
             return this;
         }
         @CustomType.Setter
         public Builder preconnect(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPreconnect preconnect) {
+
             this.preconnect = preconnect;
             return this;
         }
         @CustomType.Setter
         public Builder predictiveContentDelivery(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPredictiveContentDelivery predictiveContentDelivery) {
+
             this.predictiveContentDelivery = predictiveContentDelivery;
             return this;
         }
         @CustomType.Setter
         public Builder predictivePrefetching(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPredictivePrefetching predictivePrefetching) {
+
             this.predictivePrefetching = predictivePrefetching;
             return this;
         }
         @CustomType.Setter
         public Builder prefetch(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPrefetch prefetch) {
+
             this.prefetch = prefetch;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchable(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPrefetchable prefetchable) {
+
             this.prefetchable = prefetchable;
             return this;
         }
         @CustomType.Setter
         public Builder prefreshCache(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorPrefreshCache prefreshCache) {
+
             this.prefreshCache = prefreshCache;
             return this;
         }
         @CustomType.Setter
         public Builder quality(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorQuality quality) {
+
             this.quality = quality;
             return this;
         }
         @CustomType.Setter
         public Builder quicBeta(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorQuicBeta quicBeta) {
+
             this.quicBeta = quicBeta;
             return this;
         }
         @CustomType.Setter
         public Builder randomSeek(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRandomSeek randomSeek) {
+
             this.randomSeek = randomSeek;
             return this;
         }
         @CustomType.Setter
         public Builder rapid(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRapid rapid) {
+
             this.rapid = rapid;
             return this;
         }
         @CustomType.Setter
         public Builder readTimeout(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorReadTimeout readTimeout) {
+
             this.readTimeout = readTimeout;
             return this;
         }
         @CustomType.Setter
         public Builder realTimeReporting(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRealTimeReporting realTimeReporting) {
+
             this.realTimeReporting = realTimeReporting;
             return this;
         }
         @CustomType.Setter
         public Builder realUserMonitoring(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRealUserMonitoring realUserMonitoring) {
+
             this.realUserMonitoring = realUserMonitoring;
             return this;
         }
         @CustomType.Setter
         public Builder redirect(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRedirect redirect) {
+
             this.redirect = redirect;
             return this;
         }
         @CustomType.Setter
         public Builder redirectplus(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRedirectplus redirectplus) {
+
             this.redirectplus = redirectplus;
             return this;
         }
         @CustomType.Setter
         public Builder refererChecking(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRefererChecking refererChecking) {
+
             this.refererChecking = refererChecking;
             return this;
         }
         @CustomType.Setter
         public Builder removeQueryParameter(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRemoveQueryParameter removeQueryParameter) {
+
             this.removeQueryParameter = removeQueryParameter;
             return this;
         }
         @CustomType.Setter
         public Builder removeVary(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRemoveVary removeVary) {
+
             this.removeVary = removeVary;
             return this;
         }
         @CustomType.Setter
         public Builder report(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorReport report) {
+
             this.report = report;
             return this;
         }
         @CustomType.Setter
         public Builder requestControl(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRequestControl requestControl) {
+
             this.requestControl = requestControl;
             return this;
         }
         @CustomType.Setter
         public Builder requestTypeMarker(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRequestTypeMarker requestTypeMarker) {
+
             this.requestTypeMarker = requestTypeMarker;
             return this;
         }
         @CustomType.Setter
         public Builder resourceOptimizer(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorResourceOptimizer resourceOptimizer) {
+
             this.resourceOptimizer = resourceOptimizer;
             return this;
         }
         @CustomType.Setter
         public Builder resourceOptimizerExtendedCompatibility(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorResourceOptimizerExtendedCompatibility resourceOptimizerExtendedCompatibility) {
+
             this.resourceOptimizerExtendedCompatibility = resourceOptimizerExtendedCompatibility;
             return this;
         }
         @CustomType.Setter
         public Builder responseCode(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorResponseCode responseCode) {
+
             this.responseCode = responseCode;
             return this;
         }
         @CustomType.Setter
         public Builder responseCookie(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorResponseCookie responseCookie) {
+
             this.responseCookie = responseCookie;
             return this;
         }
         @CustomType.Setter
         public Builder restrictObjectCaching(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRestrictObjectCaching restrictObjectCaching) {
+
             this.restrictObjectCaching = restrictObjectCaching;
             return this;
         }
         @CustomType.Setter
         public Builder returnCacheStatus(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorReturnCacheStatus returnCacheStatus) {
+
             this.returnCacheStatus = returnCacheStatus;
             return this;
         }
         @CustomType.Setter
         public Builder rewriteUrl(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRewriteUrl rewriteUrl) {
+
             this.rewriteUrl = rewriteUrl;
             return this;
         }
         @CustomType.Setter
         public Builder rumCustom(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRumCustom rumCustom) {
+
             this.rumCustom = rumCustom;
             return this;
         }
         @CustomType.Setter
         public Builder saasDefinitions(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSaasDefinitions saasDefinitions) {
+
             this.saasDefinitions = saasDefinitions;
             return this;
         }
         @CustomType.Setter
         public Builder salesForceCommerceCloudClient(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSalesForceCommerceCloudClient salesForceCommerceCloudClient) {
+
             this.salesForceCommerceCloudClient = salesForceCommerceCloudClient;
             return this;
         }
         @CustomType.Setter
         public Builder salesForceCommerceCloudProvider(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSalesForceCommerceCloudProvider salesForceCommerceCloudProvider) {
+
             this.salesForceCommerceCloudProvider = salesForceCommerceCloudProvider;
             return this;
         }
         @CustomType.Setter
         public Builder salesForceCommerceCloudProviderHostHeader(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSalesForceCommerceCloudProviderHostHeader salesForceCommerceCloudProviderHostHeader) {
+
             this.salesForceCommerceCloudProviderHostHeader = salesForceCommerceCloudProviderHostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder savePostDcaProcessing(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSavePostDcaProcessing savePostDcaProcessing) {
+
             this.savePostDcaProcessing = savePostDcaProcessing;
             return this;
         }
         @CustomType.Setter
         public Builder scheduleInvalidation(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorScheduleInvalidation scheduleInvalidation) {
+
             this.scheduleInvalidation = scheduleInvalidation;
             return this;
         }
         @CustomType.Setter
         public Builder scriptManagement(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorScriptManagement scriptManagement) {
+
             this.scriptManagement = scriptManagement;
             return this;
         }
         @CustomType.Setter
         public Builder segmentedContentProtection(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSegmentedContentProtection segmentedContentProtection) {
+
             this.segmentedContentProtection = segmentedContentProtection;
             return this;
         }
         @CustomType.Setter
         public Builder segmentedMediaOptimization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSegmentedMediaOptimization segmentedMediaOptimization) {
+
             this.segmentedMediaOptimization = segmentedMediaOptimization;
             return this;
         }
         @CustomType.Setter
         public Builder segmentedMediaStreamingPrefetch(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSegmentedMediaStreamingPrefetch segmentedMediaStreamingPrefetch) {
+
             this.segmentedMediaStreamingPrefetch = segmentedMediaStreamingPrefetch;
             return this;
         }
         @CustomType.Setter
         public Builder setVariable(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSetVariable setVariable) {
+
             this.setVariable = setVariable;
             return this;
         }
         @CustomType.Setter
         public Builder simulateErrorCode(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSimulateErrorCode simulateErrorCode) {
+
             this.simulateErrorCode = simulateErrorCode;
             return this;
         }
         @CustomType.Setter
         public Builder siteShield(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSiteShield siteShield) {
+
             this.siteShield = siteShield;
             return this;
         }
         @CustomType.Setter
         public Builder standardTlsMigration(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorStandardTlsMigration standardTlsMigration) {
+
             this.standardTlsMigration = standardTlsMigration;
             return this;
         }
         @CustomType.Setter
         public Builder standardTlsMigrationOverride(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorStandardTlsMigrationOverride standardTlsMigrationOverride) {
+
             this.standardTlsMigrationOverride = standardTlsMigrationOverride;
             return this;
         }
         @CustomType.Setter
         public Builder strictHeaderParsing(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorStrictHeaderParsing strictHeaderParsing) {
+
             this.strictHeaderParsing = strictHeaderParsing;
             return this;
         }
         @CustomType.Setter
         public Builder subCustomer(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSubCustomer subCustomer) {
+
             this.subCustomer = subCustomer;
             return this;
         }
         @CustomType.Setter
         public Builder sureRoute(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorSureRoute sureRoute) {
+
             this.sureRoute = sureRoute;
             return this;
         }
         @CustomType.Setter
         public Builder tcpOptimization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorTcpOptimization tcpOptimization) {
+
             this.tcpOptimization = tcpOptimization;
             return this;
         }
         @CustomType.Setter
         public Builder teaLeaf(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorTeaLeaf teaLeaf) {
+
             this.teaLeaf = teaLeaf;
             return this;
         }
         @CustomType.Setter
         public Builder tieredDistribution(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorTieredDistribution tieredDistribution) {
+
             this.tieredDistribution = tieredDistribution;
             return this;
         }
         @CustomType.Setter
         public Builder tieredDistributionAdvanced(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorTieredDistributionAdvanced tieredDistributionAdvanced) {
+
             this.tieredDistributionAdvanced = tieredDistributionAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder tieredDistributionCustomization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorTieredDistributionCustomization tieredDistributionCustomization) {
+
             this.tieredDistributionCustomization = tieredDistributionCustomization;
             return this;
         }
         @CustomType.Setter
         public Builder timeout(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorTimeout timeout) {
+
             this.timeout = timeout;
             return this;
         }
         @CustomType.Setter
         public Builder uidConfiguration(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorUidConfiguration uidConfiguration) {
+
             this.uidConfiguration = uidConfiguration;
             return this;
         }
         @CustomType.Setter
         public Builder validateEntityTag(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorValidateEntityTag validateEntityTag) {
+
             this.validateEntityTag = validateEntityTag;
             return this;
         }
         @CustomType.Setter
         public Builder verifyJsonWebToken(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVerifyJsonWebToken verifyJsonWebToken) {
+
             this.verifyJsonWebToken = verifyJsonWebToken;
             return this;
         }
         @CustomType.Setter
         public Builder verifyJsonWebTokenForDcp(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVerifyJsonWebTokenForDcp verifyJsonWebTokenForDcp) {
+
             this.verifyJsonWebTokenForDcp = verifyJsonWebTokenForDcp;
             return this;
         }
         @CustomType.Setter
         public Builder verifyTokenAuthorization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVerifyTokenAuthorization verifyTokenAuthorization) {
+
             this.verifyTokenAuthorization = verifyTokenAuthorization;
             return this;
         }
         @CustomType.Setter
         public Builder virtualWaitingRoom(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVirtualWaitingRoom virtualWaitingRoom) {
+
             this.virtualWaitingRoom = virtualWaitingRoom;
             return this;
         }
         @CustomType.Setter
         public Builder virtualWaitingRoomWithEdgeWorkers(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVirtualWaitingRoomWithEdgeWorkers virtualWaitingRoomWithEdgeWorkers) {
+
             this.virtualWaitingRoomWithEdgeWorkers = virtualWaitingRoomWithEdgeWorkers;
             return this;
         }
         @CustomType.Setter
         public Builder visitorPrioritization(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritization visitorPrioritization) {
+
             this.visitorPrioritization = visitorPrioritization;
             return this;
         }
         @CustomType.Setter
         public Builder visitorPrioritizationFifo(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritizationFifo visitorPrioritizationFifo) {
+
             this.visitorPrioritizationFifo = visitorPrioritizationFifo;
             return this;
         }
         @CustomType.Setter
         public Builder visitorPrioritizationFifoStandalone(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritizationFifoStandalone visitorPrioritizationFifoStandalone) {
+
             this.visitorPrioritizationFifoStandalone = visitorPrioritizationFifoStandalone;
             return this;
         }
         @CustomType.Setter
         public Builder watermarking(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorWatermarking watermarking) {
+
             this.watermarking = watermarking;
             return this;
         }
         @CustomType.Setter
         public Builder webApplicationFirewall(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorWebApplicationFirewall webApplicationFirewall) {
+
             this.webApplicationFirewall = webApplicationFirewall;
             return this;
         }
         @CustomType.Setter
         public Builder webSockets(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorWebSockets webSockets) {
+
             this.webSockets = webSockets;
             return this;
         }
         @CustomType.Setter
         public Builder webdav(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorWebdav webdav) {
+
             this.webdav = webdav;
             return this;
         }

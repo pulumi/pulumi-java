@@ -4,6 +4,7 @@
 package com.pulumi.akamai.properties.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -104,7 +105,9 @@ public final class GetPropertyRulesPlainArgs extends com.pulumi.resources.Invoke
         }
 
         public GetPropertyRulesPlainArgs build() {
-            $.propertyId = Objects.requireNonNull($.propertyId, "expected parameter 'propertyId' to be non-null");
+            if ($.propertyId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesPlainArgs", "propertyId");
+            }
             return $;
         }
     }

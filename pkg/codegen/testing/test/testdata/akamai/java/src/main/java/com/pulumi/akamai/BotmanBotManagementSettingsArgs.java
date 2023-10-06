@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -89,9 +90,15 @@ public final class BotmanBotManagementSettingsArgs extends com.pulumi.resources.
         }
 
         public BotmanBotManagementSettingsArgs build() {
-            $.botManagementSettings = Objects.requireNonNull($.botManagementSettings, "expected parameter 'botManagementSettings' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.botManagementSettings == null) {
+                throw new MissingRequiredPropertyException("BotmanBotManagementSettingsArgs", "botManagementSettings");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanBotManagementSettingsArgs", "configId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("BotmanBotManagementSettingsArgs", "securityPolicyId");
+            }
             return $;
         }
     }

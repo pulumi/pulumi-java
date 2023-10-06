@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,27 +60,42 @@ public final class GetDatastreamDatasetFieldsDatasetField {
 
         @CustomType.Setter
         public Builder datasetFieldDescription(String datasetFieldDescription) {
-            this.datasetFieldDescription = Objects.requireNonNull(datasetFieldDescription);
+            if (datasetFieldDescription == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsDatasetField", "datasetFieldDescription");
+            }
+            this.datasetFieldDescription = datasetFieldDescription;
             return this;
         }
         @CustomType.Setter
         public Builder datasetFieldGroup(String datasetFieldGroup) {
-            this.datasetFieldGroup = Objects.requireNonNull(datasetFieldGroup);
+            if (datasetFieldGroup == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsDatasetField", "datasetFieldGroup");
+            }
+            this.datasetFieldGroup = datasetFieldGroup;
             return this;
         }
         @CustomType.Setter
         public Builder datasetFieldId(Integer datasetFieldId) {
-            this.datasetFieldId = Objects.requireNonNull(datasetFieldId);
+            if (datasetFieldId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsDatasetField", "datasetFieldId");
+            }
+            this.datasetFieldId = datasetFieldId;
             return this;
         }
         @CustomType.Setter
         public Builder datasetFieldJsonKey(String datasetFieldJsonKey) {
-            this.datasetFieldJsonKey = Objects.requireNonNull(datasetFieldJsonKey);
+            if (datasetFieldJsonKey == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsDatasetField", "datasetFieldJsonKey");
+            }
+            this.datasetFieldJsonKey = datasetFieldJsonKey;
             return this;
         }
         @CustomType.Setter
         public Builder datasetFieldName(String datasetFieldName) {
-            this.datasetFieldName = Objects.requireNonNull(datasetFieldName);
+            if (datasetFieldName == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsDatasetField", "datasetFieldName");
+            }
+            this.datasetFieldName = datasetFieldName;
             return this;
         }
         public GetDatastreamDatasetFieldsDatasetField build() {

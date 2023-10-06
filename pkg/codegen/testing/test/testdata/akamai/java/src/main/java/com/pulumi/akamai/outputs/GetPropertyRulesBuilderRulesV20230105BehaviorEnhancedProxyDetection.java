@@ -247,181 +247,217 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorEnhancedProxyDet
 
         @CustomType.Setter
         public Builder anonymousVpn(@Nullable String anonymousVpn) {
+
             this.anonymousVpn = anonymousVpn;
             return this;
         }
         @CustomType.Setter
         public Builder bestPracticeAction(@Nullable String bestPracticeAction) {
+
             this.bestPracticeAction = bestPracticeAction;
             return this;
         }
         @CustomType.Setter
         public Builder bestPracticeRedirecturl(@Nullable String bestPracticeRedirecturl) {
+
             this.bestPracticeRedirecturl = bestPracticeRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectAnonymousVpn(@Nullable Boolean detectAnonymousVpn) {
+
             this.detectAnonymousVpn = detectAnonymousVpn;
             return this;
         }
         @CustomType.Setter
         public Builder detectAnonymousVpnAction(@Nullable String detectAnonymousVpnAction) {
+
             this.detectAnonymousVpnAction = detectAnonymousVpnAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectAnonymousVpnRedirecturl(@Nullable String detectAnonymousVpnRedirecturl) {
+
             this.detectAnonymousVpnRedirecturl = detectAnonymousVpnRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectHostingProvider(@Nullable Boolean detectHostingProvider) {
+
             this.detectHostingProvider = detectHostingProvider;
             return this;
         }
         @CustomType.Setter
         public Builder detectHostingProviderAction(@Nullable String detectHostingProviderAction) {
+
             this.detectHostingProviderAction = detectHostingProviderAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectHostingProviderRedirecturl(@Nullable String detectHostingProviderRedirecturl) {
+
             this.detectHostingProviderRedirecturl = detectHostingProviderRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectPublicProxy(@Nullable Boolean detectPublicProxy) {
+
             this.detectPublicProxy = detectPublicProxy;
             return this;
         }
         @CustomType.Setter
         public Builder detectPublicProxyAction(@Nullable String detectPublicProxyAction) {
+
             this.detectPublicProxyAction = detectPublicProxyAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectPublicProxyRedirecturl(@Nullable String detectPublicProxyRedirecturl) {
+
             this.detectPublicProxyRedirecturl = detectPublicProxyRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectResidentialProxy(@Nullable Boolean detectResidentialProxy) {
+
             this.detectResidentialProxy = detectResidentialProxy;
             return this;
         }
         @CustomType.Setter
         public Builder detectResidentialProxyAction(@Nullable String detectResidentialProxyAction) {
+
             this.detectResidentialProxyAction = detectResidentialProxyAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectResidentialProxyRedirecturl(@Nullable String detectResidentialProxyRedirecturl) {
+
             this.detectResidentialProxyRedirecturl = detectResidentialProxyRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectSmartDnsProxy(@Nullable Boolean detectSmartDnsProxy) {
+
             this.detectSmartDnsProxy = detectSmartDnsProxy;
             return this;
         }
         @CustomType.Setter
         public Builder detectSmartDnsProxyAction(@Nullable String detectSmartDnsProxyAction) {
+
             this.detectSmartDnsProxyAction = detectSmartDnsProxyAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectSmartDnsProxyRedirecturl(@Nullable String detectSmartDnsProxyRedirecturl) {
+
             this.detectSmartDnsProxyRedirecturl = detectSmartDnsProxyRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectTorExitNode(@Nullable Boolean detectTorExitNode) {
+
             this.detectTorExitNode = detectTorExitNode;
             return this;
         }
         @CustomType.Setter
         public Builder detectTorExitNodeAction(@Nullable String detectTorExitNodeAction) {
+
             this.detectTorExitNodeAction = detectTorExitNodeAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectTorExitNodeRedirecturl(@Nullable String detectTorExitNodeRedirecturl) {
+
             this.detectTorExitNodeRedirecturl = detectTorExitNodeRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder detectVpnDataCenter(@Nullable Boolean detectVpnDataCenter) {
+
             this.detectVpnDataCenter = detectVpnDataCenter;
             return this;
         }
         @CustomType.Setter
         public Builder detectVpnDataCenterAction(@Nullable String detectVpnDataCenterAction) {
+
             this.detectVpnDataCenterAction = detectVpnDataCenterAction;
             return this;
         }
         @CustomType.Setter
         public Builder detectVpnDataCenterRedirecturl(@Nullable String detectVpnDataCenterRedirecturl) {
+
             this.detectVpnDataCenterRedirecturl = detectVpnDataCenterRedirecturl;
             return this;
         }
         @CustomType.Setter
         public Builder enableConfigurationMode(@Nullable String enableConfigurationMode) {
+
             this.enableConfigurationMode = enableConfigurationMode;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder forwardHeaderEnrichment(@Nullable Boolean forwardHeaderEnrichment) {
+
             this.forwardHeaderEnrichment = forwardHeaderEnrichment;
             return this;
         }
         @CustomType.Setter
         public Builder hostingProvider(@Nullable String hostingProvider) {
+
             this.hostingProvider = hostingProvider;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder publicProxy(@Nullable String publicProxy) {
+
             this.publicProxy = publicProxy;
             return this;
         }
         @CustomType.Setter
         public Builder residentialProxy(@Nullable String residentialProxy) {
+
             this.residentialProxy = residentialProxy;
             return this;
         }
         @CustomType.Setter
         public Builder smartDnsProxy(@Nullable String smartDnsProxy) {
+
             this.smartDnsProxy = smartDnsProxy;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder torExitNode(@Nullable String torExitNode) {
+
             this.torExitNode = torExitNode;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder vpnDataCenter(@Nullable String vpnDataCenter) {
+
             this.vpnDataCenter = vpnDataCenter;
             return this;
         }

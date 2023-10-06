@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -106,10 +107,18 @@ public final class BotmanBotDetectionActionArgs extends com.pulumi.resources.Res
         }
 
         public BotmanBotDetectionActionArgs build() {
-            $.botDetectionAction = Objects.requireNonNull($.botDetectionAction, "expected parameter 'botDetectionAction' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.detectionId = Objects.requireNonNull($.detectionId, "expected parameter 'detectionId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.botDetectionAction == null) {
+                throw new MissingRequiredPropertyException("BotmanBotDetectionActionArgs", "botDetectionAction");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanBotDetectionActionArgs", "configId");
+            }
+            if ($.detectionId == null) {
+                throw new MissingRequiredPropertyException("BotmanBotDetectionActionArgs", "detectionId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("BotmanBotDetectionActionArgs", "securityPolicyId");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationsConfigurationLocationCapacity;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -54,22 +55,34 @@ public final class GetCloudwrapperConfigurationsConfigurationLocation {
 
         @CustomType.Setter
         public Builder capacity(GetCloudwrapperConfigurationsConfigurationLocationCapacity capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            if (capacity == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "capacity");
+            }
+            this.capacity = capacity;
             return this;
         }
         @CustomType.Setter
         public Builder comments(String comments) {
-            this.comments = Objects.requireNonNull(comments);
+            if (comments == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "comments");
+            }
+            this.comments = comments;
             return this;
         }
         @CustomType.Setter
         public Builder mapName(String mapName) {
-            this.mapName = Objects.requireNonNull(mapName);
+            if (mapName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "mapName");
+            }
+            this.mapName = mapName;
             return this;
         }
         @CustomType.Setter
         public Builder trafficTypeId(Integer trafficTypeId) {
-            this.trafficTypeId = Objects.requireNonNull(trafficTypeId);
+            if (trafficTypeId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "trafficTypeId");
+            }
+            this.trafficTypeId = trafficTypeId;
             return this;
         }
         public GetCloudwrapperConfigurationsConfigurationLocation build() {

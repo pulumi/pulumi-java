@@ -78,41 +78,49 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationGoop {
 
         @CustomType.Setter
         public Builder chaos(@Nullable String chaos) {
+
             this.chaos = chaos;
             return this;
         }
         @CustomType.Setter
         public Builder chaosVar(@Nullable String chaosVar) {
+
             this.chaosVar = chaosVar;
             return this;
         }
         @CustomType.Setter
         public Builder density(@Nullable String density) {
+
             this.density = density;
             return this;
         }
         @CustomType.Setter
         public Builder densityVar(@Nullable String densityVar) {
+
             this.densityVar = densityVar;
             return this;
         }
         @CustomType.Setter
         public Builder power(@Nullable String power) {
+
             this.power = power;
             return this;
         }
         @CustomType.Setter
         public Builder powerVar(@Nullable String powerVar) {
+
             this.powerVar = powerVar;
             return this;
         }
         @CustomType.Setter
         public Builder seed(@Nullable String seed) {
+
             this.seed = seed;
             return this;
         }
         @CustomType.Setter
         public Builder seedVar(@Nullable String seedVar) {
+
             this.seedVar = seedVar;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -273,9 +274,15 @@ public final class ClientlistActivationArgs extends com.pulumi.resources.Resourc
         }
 
         public ClientlistActivationArgs build() {
-            $.listId = Objects.requireNonNull($.listId, "expected parameter 'listId' to be non-null");
-            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.listId == null) {
+                throw new MissingRequiredPropertyException("ClientlistActivationArgs", "listId");
+            }
+            if ($.network == null) {
+                throw new MissingRequiredPropertyException("ClientlistActivationArgs", "network");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("ClientlistActivationArgs", "version");
+            }
             return $;
         }
     }

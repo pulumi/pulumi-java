@@ -4,6 +4,7 @@
 package com.pulumi.akamai.edgedns.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,7 +56,10 @@ public final class GetAuthoritiesSetResult {
 
         @CustomType.Setter
         public Builder authorities(List<String> authorities) {
-            this.authorities = Objects.requireNonNull(authorities);
+            if (authorities == null) {
+              throw new MissingRequiredPropertyException("GetAuthoritiesSetResult", "authorities");
+            }
+            this.authorities = authorities;
             return this;
         }
         public Builder authorities(String... authorities) {
@@ -63,12 +67,18 @@ public final class GetAuthoritiesSetResult {
         }
         @CustomType.Setter
         public Builder contract(String contract) {
-            this.contract = Objects.requireNonNull(contract);
+            if (contract == null) {
+              throw new MissingRequiredPropertyException("GetAuthoritiesSetResult", "contract");
+            }
+            this.contract = contract;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAuthoritiesSetResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetAuthoritiesSetResult build() {

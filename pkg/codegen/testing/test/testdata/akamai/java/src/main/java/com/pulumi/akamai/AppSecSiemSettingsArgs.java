@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -274,11 +275,21 @@ public final class AppSecSiemSettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         public AppSecSiemSettingsArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.enableBotmanSiem = Objects.requireNonNull($.enableBotmanSiem, "expected parameter 'enableBotmanSiem' to be non-null");
-            $.enableForAllPolicies = Objects.requireNonNull($.enableForAllPolicies, "expected parameter 'enableForAllPolicies' to be non-null");
-            $.enableSiem = Objects.requireNonNull($.enableSiem, "expected parameter 'enableSiem' to be non-null");
-            $.siemId = Objects.requireNonNull($.siemId, "expected parameter 'siemId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecSiemSettingsArgs", "configId");
+            }
+            if ($.enableBotmanSiem == null) {
+                throw new MissingRequiredPropertyException("AppSecSiemSettingsArgs", "enableBotmanSiem");
+            }
+            if ($.enableForAllPolicies == null) {
+                throw new MissingRequiredPropertyException("AppSecSiemSettingsArgs", "enableForAllPolicies");
+            }
+            if ($.enableSiem == null) {
+                throw new MissingRequiredPropertyException("AppSecSiemSettingsArgs", "enableSiem");
+            }
+            if ($.siemId == null) {
+                throw new MissingRequiredPropertyException("AppSecSiemSettingsArgs", "siemId");
+            }
             return $;
         }
     }

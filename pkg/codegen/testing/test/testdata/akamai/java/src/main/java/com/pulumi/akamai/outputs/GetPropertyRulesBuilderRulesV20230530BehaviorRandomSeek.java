@@ -67,31 +67,37 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorRandomSeek {
 
         @CustomType.Setter
         public Builder flv(@Nullable Boolean flv) {
+
             this.flv = flv;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder maximumSize(@Nullable String maximumSize) {
+
             this.maximumSize = maximumSize;
             return this;
         }
         @CustomType.Setter
         public Builder mp4(@Nullable Boolean mp4) {
+
             this.mp4 = mp4;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

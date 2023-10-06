@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,12 +41,18 @@ public final class GetPropertyRulesTemplateTemplate {
 
         @CustomType.Setter
         public Builder templateData(String templateData) {
-            this.templateData = Objects.requireNonNull(templateData);
+            if (templateData == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesTemplateTemplate", "templateData");
+            }
+            this.templateData = templateData;
             return this;
         }
         @CustomType.Setter
         public Builder templateDir(String templateDir) {
-            this.templateDir = Objects.requireNonNull(templateDir);
+            if (templateDir == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesTemplateTemplate", "templateDir");
+            }
+            this.templateDir = templateDir;
             return this;
         }
         public GetPropertyRulesTemplateTemplate build() {

@@ -105,36 +105,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorDatastream {
 
         @CustomType.Setter
         public Builder beaconStreamTitle(@Nullable String beaconStreamTitle) {
+
             this.beaconStreamTitle = beaconStreamTitle;
             return this;
         }
         @CustomType.Setter
         public Builder collectMidgressTraffic(@Nullable Boolean collectMidgressTraffic) {
+
             this.collectMidgressTraffic = collectMidgressTraffic;
             return this;
         }
         @CustomType.Setter
         public Builder datastreamIds(@Nullable String datastreamIds) {
+
             this.datastreamIds = datastreamIds;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder logEnabled(@Nullable Boolean logEnabled) {
+
             this.logEnabled = logEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder logStreamNames(@Nullable List<String> logStreamNames) {
+
             this.logStreamNames = logStreamNames;
             return this;
         }
@@ -143,26 +150,31 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorDatastream {
         }
         @CustomType.Setter
         public Builder logStreamTitle(@Nullable String logStreamTitle) {
+
             this.logStreamTitle = logStreamTitle;
             return this;
         }
         @CustomType.Setter
         public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
+
             this.samplingPercentage = samplingPercentage;
             return this;
         }
         @CustomType.Setter
         public Builder streamType(@Nullable String streamType) {
+
             this.streamType = streamType;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

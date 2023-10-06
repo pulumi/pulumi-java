@@ -79,41 +79,49 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorDownstreamCache 
 
         @CustomType.Setter
         public Builder allowBehavior(@Nullable String allowBehavior) {
+
             this.allowBehavior = allowBehavior;
             return this;
         }
         @CustomType.Setter
         public Builder behavior(@Nullable String behavior) {
+
             this.behavior = behavior;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder sendHeaders(@Nullable String sendHeaders) {
+
             this.sendHeaders = sendHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder sendPrivate(@Nullable Boolean sendPrivate) {
+
             this.sendPrivate = sendPrivate;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder ttl(@Nullable String ttl) {
+
             this.ttl = ttl;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

@@ -79,11 +79,13 @@ public final class GetImagingPolicyImagePolicyOutput {
 
         @CustomType.Setter
         public Builder adaptiveQuality(@Nullable String adaptiveQuality) {
+
             this.adaptiveQuality = adaptiveQuality;
             return this;
         }
         @CustomType.Setter
         public Builder allowedFormats(@Nullable List<String> allowedFormats) {
+
             this.allowedFormats = allowedFormats;
             return this;
         }
@@ -92,6 +94,7 @@ public final class GetImagingPolicyImagePolicyOutput {
         }
         @CustomType.Setter
         public Builder forcedFormats(@Nullable List<String> forcedFormats) {
+
             this.forcedFormats = forcedFormats;
             return this;
         }
@@ -100,26 +103,31 @@ public final class GetImagingPolicyImagePolicyOutput {
         }
         @CustomType.Setter
         public Builder perceptualQuality(@Nullable String perceptualQuality) {
+
             this.perceptualQuality = perceptualQuality;
             return this;
         }
         @CustomType.Setter
         public Builder perceptualQualityFloor(@Nullable String perceptualQualityFloor) {
+
             this.perceptualQualityFloor = perceptualQualityFloor;
             return this;
         }
         @CustomType.Setter
         public Builder perceptualQualityVar(@Nullable String perceptualQualityVar) {
+
             this.perceptualQualityVar = perceptualQualityVar;
             return this;
         }
         @CustomType.Setter
         public Builder quality(@Nullable String quality) {
+
             this.quality = quality;
             return this;
         }
         @CustomType.Setter
         public Builder qualityVar(@Nullable String qualityVar) {
+
             this.qualityVar = qualityVar;
             return this;
         }

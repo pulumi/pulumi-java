@@ -163,111 +163,133 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSubCustomer {
 
         @CustomType.Setter
         public Builder accessControl(@Nullable Boolean accessControl) {
+
             this.accessControl = accessControl;
             return this;
         }
         @CustomType.Setter
         public Builder cacheKey(@Nullable Boolean cacheKey) {
+
             this.cacheKey = cacheKey;
             return this;
         }
         @CustomType.Setter
         public Builder caching(@Nullable Boolean caching) {
+
             this.caching = caching;
             return this;
         }
         @CustomType.Setter
         public Builder contentCompressor(@Nullable Boolean contentCompressor) {
+
             this.contentCompressor = contentCompressor;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicWebContent(@Nullable Boolean dynamicWebContent) {
+
             this.dynamicWebContent = dynamicWebContent;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder geoLocation(@Nullable Boolean geoLocation) {
+
             this.geoLocation = geoLocation;
             return this;
         }
         @CustomType.Setter
         public Builder ip(@Nullable Boolean ip) {
+
             this.ip = ip;
             return this;
         }
         @CustomType.Setter
         public Builder largeFileDelivery(@Nullable Boolean largeFileDelivery) {
+
             this.largeFileDelivery = largeFileDelivery;
             return this;
         }
         @CustomType.Setter
         public Builder liveVideoDelivery(@Nullable Boolean liveVideoDelivery) {
+
             this.liveVideoDelivery = liveVideoDelivery;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder modifyPath(@Nullable Boolean modifyPath) {
+
             this.modifyPath = modifyPath;
             return this;
         }
         @CustomType.Setter
         public Builder onDemandVideoDelivery(@Nullable Boolean onDemandVideoDelivery) {
+
             this.onDemandVideoDelivery = onDemandVideoDelivery;
             return this;
         }
         @CustomType.Setter
         public Builder origin(@Nullable Boolean origin) {
+
             this.origin = origin;
             return this;
         }
         @CustomType.Setter
         public Builder partnerDomainSuffix(@Nullable String partnerDomainSuffix) {
+
             this.partnerDomainSuffix = partnerDomainSuffix;
             return this;
         }
         @CustomType.Setter
         public Builder referrer(@Nullable Boolean referrer) {
+
             this.referrer = referrer;
             return this;
         }
         @CustomType.Setter
         public Builder refreshContent(@Nullable Boolean refreshContent) {
+
             this.refreshContent = refreshContent;
             return this;
         }
         @CustomType.Setter
         public Builder siteFailover(@Nullable Boolean siteFailover) {
+
             this.siteFailover = siteFailover;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder tokenAuthorization(@Nullable Boolean tokenAuthorization) {
+
             this.tokenAuthorization = tokenAuthorization;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder webApplicationFirewall(@Nullable Boolean webApplicationFirewall) {
+
             this.webApplicationFirewall = webApplicationFirewall;
             return this;
         }

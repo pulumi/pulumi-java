@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.GtmResourceResourceInstanceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -303,9 +304,15 @@ public final class GtmResourceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public GtmResourceArgs build() {
-            $.aggregationType = Objects.requireNonNull($.aggregationType, "expected parameter 'aggregationType' to be non-null");
-            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.aggregationType == null) {
+                throw new MissingRequiredPropertyException("GtmResourceArgs", "aggregationType");
+            }
+            if ($.domain == null) {
+                throw new MissingRequiredPropertyException("GtmResourceArgs", "domain");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GtmResourceArgs", "type");
+            }
             return $;
         }
     }

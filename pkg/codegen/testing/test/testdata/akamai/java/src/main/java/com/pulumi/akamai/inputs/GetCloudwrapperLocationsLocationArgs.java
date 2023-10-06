@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.GetCloudwrapperLocationsLocationTrafficTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -114,9 +115,15 @@ public final class GetCloudwrapperLocationsLocationArgs extends com.pulumi.resou
         }
 
         public GetCloudwrapperLocationsLocationArgs build() {
-            $.locationId = Objects.requireNonNull($.locationId, "expected parameter 'locationId' to be non-null");
-            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
-            $.multiCdnLocationId = Objects.requireNonNull($.multiCdnLocationId, "expected parameter 'multiCdnLocationId' to be non-null");
+            if ($.locationId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperLocationsLocationArgs", "locationId");
+            }
+            if ($.locationName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperLocationsLocationArgs", "locationName");
+            }
+            if ($.multiCdnLocationId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperLocationsLocationArgs", "multiCdnLocationId");
+            }
             return $;
         }
     }

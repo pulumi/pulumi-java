@@ -73,36 +73,43 @@ public final class PropertyActivationRuleError {
 
         @CustomType.Setter
         public Builder behaviorName(@Nullable String behaviorName) {
+
             this.behaviorName = behaviorName;
             return this;
         }
         @CustomType.Setter
         public Builder detail(@Nullable String detail) {
+
             this.detail = detail;
             return this;
         }
         @CustomType.Setter
         public Builder errorLocation(@Nullable String errorLocation) {
+
             this.errorLocation = errorLocation;
             return this;
         }
         @CustomType.Setter
         public Builder instance(@Nullable String instance) {
+
             this.instance = instance;
             return this;
         }
         @CustomType.Setter
         public Builder statusCode(@Nullable Integer statusCode) {
+
             this.statusCode = statusCode;
             return this;
         }
         @CustomType.Setter
         public Builder title(@Nullable String title) {
+
             this.title = title;
             return this;
         }
         @CustomType.Setter
         public Builder type(@Nullable String type) {
+
             this.type = type;
             return this;
         }

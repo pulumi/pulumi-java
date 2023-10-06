@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -97,52 +98,82 @@ public final class GetAppSecWafModeResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder currentRuleset(String currentRuleset) {
-            this.currentRuleset = Objects.requireNonNull(currentRuleset);
+            if (currentRuleset == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "currentRuleset");
+            }
+            this.currentRuleset = currentRuleset;
             return this;
         }
         @CustomType.Setter
         public Builder evalExpirationDate(String evalExpirationDate) {
-            this.evalExpirationDate = Objects.requireNonNull(evalExpirationDate);
+            if (evalExpirationDate == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "evalExpirationDate");
+            }
+            this.evalExpirationDate = evalExpirationDate;
             return this;
         }
         @CustomType.Setter
         public Builder evalRuleset(String evalRuleset) {
-            this.evalRuleset = Objects.requireNonNull(evalRuleset);
+            if (evalRuleset == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "evalRuleset");
+            }
+            this.evalRuleset = evalRuleset;
             return this;
         }
         @CustomType.Setter
         public Builder evalStatus(String evalStatus) {
-            this.evalStatus = Objects.requireNonNull(evalStatus);
+            if (evalStatus == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "evalStatus");
+            }
+            this.evalStatus = evalStatus;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            if (mode == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "mode");
+            }
+            this.mode = mode;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWafModeResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         public GetAppSecWafModeResult build() {

@@ -80,41 +80,49 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorLargeFileOptimiz
 
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder fragmentSize(@Nullable String fragmentSize) {
+
             this.fragmentSize = fragmentSize;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder objectSize(@Nullable String objectSize) {
+
             this.objectSize = objectSize;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchAfterRequest(@Nullable Integer prefetchAfterRequest) {
+
             this.prefetchAfterRequest = prefetchAfterRequest;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchDuringRequest(@Nullable Integer prefetchDuringRequest) {
+
             this.prefetchDuringRequest = prefetchDuringRequest;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

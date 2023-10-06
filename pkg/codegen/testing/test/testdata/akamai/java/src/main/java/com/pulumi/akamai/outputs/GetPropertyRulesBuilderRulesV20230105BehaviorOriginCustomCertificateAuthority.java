@@ -137,71 +137,85 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginCustomCert
 
         @CustomType.Setter
         public Builder canBeCa(@Nullable Boolean canBeCa) {
+
             this.canBeCa = canBeCa;
             return this;
         }
         @CustomType.Setter
         public Builder canBeLeaf(@Nullable Boolean canBeLeaf) {
+
             this.canBeLeaf = canBeLeaf;
             return this;
         }
         @CustomType.Setter
         public Builder issuerRdns(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorOriginCustomCertificateAuthorityIssuerRdns issuerRdns) {
+
             this.issuerRdns = issuerRdns;
             return this;
         }
         @CustomType.Setter
         public Builder notAfter(@Nullable Integer notAfter) {
+
             this.notAfter = notAfter;
             return this;
         }
         @CustomType.Setter
         public Builder notBefore(@Nullable Integer notBefore) {
+
             this.notBefore = notBefore;
             return this;
         }
         @CustomType.Setter
         public Builder pemEncodedCert(@Nullable String pemEncodedCert) {
+
             this.pemEncodedCert = pemEncodedCert;
             return this;
         }
         @CustomType.Setter
         public Builder publicKey(@Nullable String publicKey) {
+
             this.publicKey = publicKey;
             return this;
         }
         @CustomType.Setter
         public Builder publicKeyAlgorithm(@Nullable String publicKeyAlgorithm) {
+
             this.publicKeyAlgorithm = publicKeyAlgorithm;
             return this;
         }
         @CustomType.Setter
         public Builder publicKeyFormat(@Nullable String publicKeyFormat) {
+
             this.publicKeyFormat = publicKeyFormat;
             return this;
         }
         @CustomType.Setter
         public Builder selfSigned(@Nullable Boolean selfSigned) {
+
             this.selfSigned = selfSigned;
             return this;
         }
         @CustomType.Setter
         public Builder serialNumber(@Nullable String serialNumber) {
+
             this.serialNumber = serialNumber;
             return this;
         }
         @CustomType.Setter
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
+
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
         @CustomType.Setter
         public Builder sigAlgName(@Nullable String sigAlgName) {
+
             this.sigAlgName = sigAlgName;
             return this;
         }
         @CustomType.Setter
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
+
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
@@ -210,16 +224,19 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginCustomCert
         }
         @CustomType.Setter
         public Builder subjectCn(@Nullable String subjectCn) {
+
             this.subjectCn = subjectCn;
             return this;
         }
         @CustomType.Setter
         public Builder subjectRdns(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorOriginCustomCertificateAuthoritySubjectRdns subjectRdns) {
+
             this.subjectRdns = subjectRdns;
             return this;
         }
         @CustomType.Setter
         public Builder version(@Nullable Integer version) {
+
             this.version = version;
             return this;
         }

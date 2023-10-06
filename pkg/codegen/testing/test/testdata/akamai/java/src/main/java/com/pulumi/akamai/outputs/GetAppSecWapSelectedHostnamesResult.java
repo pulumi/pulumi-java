@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -92,12 +93,18 @@ public final class GetAppSecWapSelectedHostnamesResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder evaluatedHosts(List<String> evaluatedHosts) {
-            this.evaluatedHosts = Objects.requireNonNull(evaluatedHosts);
+            if (evaluatedHosts == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "evaluatedHosts");
+            }
+            this.evaluatedHosts = evaluatedHosts;
             return this;
         }
         public Builder evaluatedHosts(String... evaluatedHosts) {
@@ -105,27 +112,42 @@ public final class GetAppSecWapSelectedHostnamesResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder matchTargets(String matchTargets) {
-            this.matchTargets = Objects.requireNonNull(matchTargets);
+            if (matchTargets == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "matchTargets");
+            }
+            this.matchTargets = matchTargets;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder protectedHosts(List<String> protectedHosts) {
-            this.protectedHosts = Objects.requireNonNull(protectedHosts);
+            if (protectedHosts == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "protectedHosts");
+            }
+            this.protectedHosts = protectedHosts;
             return this;
         }
         public Builder protectedHosts(String... protectedHosts) {
@@ -133,12 +155,18 @@ public final class GetAppSecWapSelectedHostnamesResult {
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         @CustomType.Setter
         public Builder selectedHosts(List<String> selectedHosts) {
-            this.selectedHosts = Objects.requireNonNull(selectedHosts);
+            if (selectedHosts == null) {
+              throw new MissingRequiredPropertyException("GetAppSecWapSelectedHostnamesResult", "selectedHosts");
+            }
+            this.selectedHosts = selectedHosts;
             return this;
         }
         public Builder selectedHosts(String... selectedHosts) {

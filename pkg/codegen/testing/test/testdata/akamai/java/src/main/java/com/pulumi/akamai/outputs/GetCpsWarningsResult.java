@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -49,12 +50,18 @@ public final class GetCpsWarningsResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCpsWarningsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder warnings(Map<String,String> warnings) {
-            this.warnings = Objects.requireNonNull(warnings);
+            if (warnings == null) {
+              throw new MissingRequiredPropertyException("GetCpsWarningsResult", "warnings");
+            }
+            this.warnings = warnings;
             return this;
         }
         public GetCpsWarningsResult build() {

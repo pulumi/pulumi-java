@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -110,67 +111,106 @@ public final class GetCloudletsApplicationLoadBalancerLivenessSetting {
 
         @CustomType.Setter
         public Builder additionalHeaders(Map<String,String> additionalHeaders) {
-            this.additionalHeaders = Objects.requireNonNull(additionalHeaders);
+            if (additionalHeaders == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "additionalHeaders");
+            }
+            this.additionalHeaders = additionalHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder hostHeader(String hostHeader) {
-            this.hostHeader = Objects.requireNonNull(hostHeader);
+            if (hostHeader == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "hostHeader");
+            }
+            this.hostHeader = hostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder interval(Integer interval) {
-            this.interval = Objects.requireNonNull(interval);
+            if (interval == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "interval");
+            }
+            this.interval = interval;
             return this;
         }
         @CustomType.Setter
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            if (path == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "path");
+            }
+            this.path = path;
             return this;
         }
         @CustomType.Setter
         public Builder peerCertificateVerification(Boolean peerCertificateVerification) {
-            this.peerCertificateVerification = Objects.requireNonNull(peerCertificateVerification);
+            if (peerCertificateVerification == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "peerCertificateVerification");
+            }
+            this.peerCertificateVerification = peerCertificateVerification;
             return this;
         }
         @CustomType.Setter
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            if (port == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "port");
+            }
+            this.port = port;
             return this;
         }
         @CustomType.Setter
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            if (protocol == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "protocol");
+            }
+            this.protocol = protocol;
             return this;
         }
         @CustomType.Setter
         public Builder requestString(String requestString) {
-            this.requestString = Objects.requireNonNull(requestString);
+            if (requestString == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "requestString");
+            }
+            this.requestString = requestString;
             return this;
         }
         @CustomType.Setter
         public Builder responseString(String responseString) {
-            this.responseString = Objects.requireNonNull(responseString);
+            if (responseString == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "responseString");
+            }
+            this.responseString = responseString;
             return this;
         }
         @CustomType.Setter
         public Builder status3xxFailure(Boolean status3xxFailure) {
-            this.status3xxFailure = Objects.requireNonNull(status3xxFailure);
+            if (status3xxFailure == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "status3xxFailure");
+            }
+            this.status3xxFailure = status3xxFailure;
             return this;
         }
         @CustomType.Setter
         public Builder status4xxFailure(Boolean status4xxFailure) {
-            this.status4xxFailure = Objects.requireNonNull(status4xxFailure);
+            if (status4xxFailure == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "status4xxFailure");
+            }
+            this.status4xxFailure = status4xxFailure;
             return this;
         }
         @CustomType.Setter
         public Builder status5xxFailure(Boolean status5xxFailure) {
-            this.status5xxFailure = Objects.requireNonNull(status5xxFailure);
+            if (status5xxFailure == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "status5xxFailure");
+            }
+            this.status5xxFailure = status5xxFailure;
             return this;
         }
         @CustomType.Setter
         public Builder timeout(Double timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            if (timeout == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerLivenessSetting", "timeout");
+            }
+            this.timeout = timeout;
             return this;
         }
         public GetCloudletsApplicationLoadBalancerLivenessSetting build() {

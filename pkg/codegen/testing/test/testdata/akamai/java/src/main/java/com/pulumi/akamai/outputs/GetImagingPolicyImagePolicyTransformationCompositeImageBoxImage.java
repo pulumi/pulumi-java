@@ -73,36 +73,43 @@ public final class GetImagingPolicyImagePolicyTransformationCompositeImageBoxIma
 
         @CustomType.Setter
         public Builder color(@Nullable String color) {
+
             this.color = color;
             return this;
         }
         @CustomType.Setter
         public Builder colorVar(@Nullable String colorVar) {
+
             this.colorVar = colorVar;
             return this;
         }
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder transformation(@Nullable GetImagingPolicyImagePolicyTransformation transformation) {
+
             this.transformation = transformation;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }

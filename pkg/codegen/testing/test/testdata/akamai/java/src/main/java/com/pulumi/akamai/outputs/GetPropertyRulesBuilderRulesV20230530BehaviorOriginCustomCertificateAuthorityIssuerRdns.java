@@ -54,21 +54,25 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOriginCustomCert
 
         @CustomType.Setter
         public Builder c(@Nullable String c) {
+
             this.c = c;
             return this;
         }
         @CustomType.Setter
         public Builder cn(@Nullable String cn) {
+
             this.cn = cn;
             return this;
         }
         @CustomType.Setter
         public Builder o(@Nullable String o) {
+
             this.o = o;
             return this;
         }
         @CustomType.Setter
         public Builder ou(@Nullable String ou) {
+
             this.ou = ou;
             return this;
         }

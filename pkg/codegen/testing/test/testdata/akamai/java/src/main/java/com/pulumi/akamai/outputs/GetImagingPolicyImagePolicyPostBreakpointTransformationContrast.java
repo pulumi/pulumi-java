@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationContra
 
         @CustomType.Setter
         public Builder brightness(@Nullable String brightness) {
+
             this.brightness = brightness;
             return this;
         }
         @CustomType.Setter
         public Builder brightnessVar(@Nullable String brightnessVar) {
+
             this.brightnessVar = brightnessVar;
             return this;
         }
         @CustomType.Setter
         public Builder contrast(@Nullable String contrast) {
+
             this.contrast = contrast;
             return this;
         }
         @CustomType.Setter
         public Builder contrastVar(@Nullable String contrastVar) {
+
             this.contrastVar = contrastVar;
             return this;
         }

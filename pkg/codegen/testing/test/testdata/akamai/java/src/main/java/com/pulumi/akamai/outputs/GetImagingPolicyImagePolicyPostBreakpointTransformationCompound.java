@@ -36,6 +36,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationCompou
 
         @CustomType.Setter
         public Builder transformations(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformation> transformations) {
+
             this.transformations = transformations;
             return this;
         }

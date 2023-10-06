@@ -55,21 +55,25 @@ public final class PropertyIncludeActivationComplianceRecordNoncomplianceReasonN
 
         @CustomType.Setter
         public Builder customerEmail(@Nullable String customerEmail) {
+
             this.customerEmail = customerEmail;
             return this;
         }
         @CustomType.Setter
         public Builder peerReviewedBy(@Nullable String peerReviewedBy) {
+
             this.peerReviewedBy = peerReviewedBy;
             return this;
         }
         @CustomType.Setter
         public Builder ticketId(@Nullable String ticketId) {
+
             this.ticketId = ticketId;
             return this;
         }
         @CustomType.Setter
         public Builder unitTested(@Nullable Boolean unitTested) {
+
             this.unitTested = unitTested;
             return this;
         }

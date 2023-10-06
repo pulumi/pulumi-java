@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationIfOrie
 
         @CustomType.Setter("default")
         public Builder default_(@Nullable GetImagingPolicyImagePolicyPostBreakpointTransformation default_) {
+
             this.default_ = default_;
             return this;
         }
         @CustomType.Setter
         public Builder landscape(@Nullable GetImagingPolicyImagePolicyPostBreakpointTransformation landscape) {
+
             this.landscape = landscape;
             return this;
         }
         @CustomType.Setter
         public Builder portrait(@Nullable GetImagingPolicyImagePolicyPostBreakpointTransformation portrait) {
+
             this.portrait = portrait;
             return this;
         }
         @CustomType.Setter
         public Builder square(@Nullable GetImagingPolicyImagePolicyPostBreakpointTransformation square) {
+
             this.square = square;
             return this;
         }

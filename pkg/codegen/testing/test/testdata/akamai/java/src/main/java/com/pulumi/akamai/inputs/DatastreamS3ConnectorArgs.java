@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -159,12 +160,24 @@ public final class DatastreamS3ConnectorArgs extends com.pulumi.resources.Resour
         }
 
         public DatastreamS3ConnectorArgs build() {
-            $.accessKey = Objects.requireNonNull($.accessKey, "expected parameter 'accessKey' to be non-null");
-            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
-            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
-            $.secretAccessKey = Objects.requireNonNull($.secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
+            if ($.accessKey == null) {
+                throw new MissingRequiredPropertyException("DatastreamS3ConnectorArgs", "accessKey");
+            }
+            if ($.bucket == null) {
+                throw new MissingRequiredPropertyException("DatastreamS3ConnectorArgs", "bucket");
+            }
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamS3ConnectorArgs", "displayName");
+            }
+            if ($.path == null) {
+                throw new MissingRequiredPropertyException("DatastreamS3ConnectorArgs", "path");
+            }
+            if ($.region == null) {
+                throw new MissingRequiredPropertyException("DatastreamS3ConnectorArgs", "region");
+            }
+            if ($.secretAccessKey == null) {
+                throw new MissingRequiredPropertyException("DatastreamS3ConnectorArgs", "secretAccessKey");
+            }
             return $;
         }
     }

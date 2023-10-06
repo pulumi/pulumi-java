@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -81,9 +82,15 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsDataStreams exten
         }
 
         public GetCloudwrapperConfigurationMultiCdnSettingsDataStreams build() {
-            $.dataStreamIds = Objects.requireNonNull($.dataStreamIds, "expected parameter 'dataStreamIds' to be non-null");
-            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
-            $.samplingRate = Objects.requireNonNull($.samplingRate, "expected parameter 'samplingRate' to be non-null");
+            if ($.dataStreamIds == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsDataStreams", "dataStreamIds");
+            }
+            if ($.enabled == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsDataStreams", "enabled");
+            }
+            if ($.samplingRate == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsDataStreams", "samplingRate");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetCloudletsEdgeRedirectorMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -189,9 +190,15 @@ public final class GetCloudletsEdgeRedirectorMatchRuleMatchRule extends com.pulu
         }
 
         public GetCloudletsEdgeRedirectorMatchRuleMatchRule build() {
-            $.redirectUrl = Objects.requireNonNull($.redirectUrl, "expected parameter 'redirectUrl' to be non-null");
-            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.redirectUrl == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsEdgeRedirectorMatchRuleMatchRule", "redirectUrl");
+            }
+            if ($.statusCode == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsEdgeRedirectorMatchRuleMatchRule", "statusCode");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsEdgeRedirectorMatchRuleMatchRule", "type");
+            }
             return $;
         }
     }

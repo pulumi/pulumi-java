@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -149,9 +150,15 @@ public final class AppSecWafModeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public AppSecWafModeArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecWafModeArgs", "configId");
+            }
+            if ($.mode == null) {
+                throw new MissingRequiredPropertyException("AppSecWafModeArgs", "mode");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecWafModeArgs", "securityPolicyId");
+            }
             return $;
         }
     }

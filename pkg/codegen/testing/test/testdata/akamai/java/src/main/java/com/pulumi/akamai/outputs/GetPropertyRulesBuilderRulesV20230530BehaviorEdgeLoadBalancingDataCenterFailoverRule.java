@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancin
 
         @CustomType.Setter
         public Builder absolutePath(@Nullable Boolean absolutePath) {
+
             this.absolutePath = absolutePath;
             return this;
         }
         @CustomType.Setter
         public Builder contextRoot(@Nullable String contextRoot) {
+
             this.contextRoot = contextRoot;
             return this;
         }
         @CustomType.Setter
         public Builder failoverHostname(@Nullable String failoverHostname) {
+
             this.failoverHostname = failoverHostname;
             return this;
         }
         @CustomType.Setter
         public Builder modifyRequest(@Nullable Boolean modifyRequest) {
+
             this.modifyRequest = modifyRequest;
             return this;
         }
         @CustomType.Setter
         public Builder overrideHostname(@Nullable Boolean overrideHostname) {
+
             this.overrideHostname = overrideHostname;
             return this;
         }

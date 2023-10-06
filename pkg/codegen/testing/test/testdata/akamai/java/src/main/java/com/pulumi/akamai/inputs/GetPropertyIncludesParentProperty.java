@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,8 +64,12 @@ public final class GetPropertyIncludesParentProperty extends com.pulumi.resource
         }
 
         public GetPropertyIncludesParentProperty build() {
-            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.id == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludesParentProperty", "id");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludesParentProperty", "version");
+            }
             return $;
         }
     }

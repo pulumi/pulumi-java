@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.CloudwrapperConfigurationLocationArgs;
 import com.pulumi.akamai.inputs.CloudwrapperConfigurationTimeoutsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -387,10 +388,18 @@ public final class CloudwrapperConfigurationArgs extends com.pulumi.resources.Re
         }
 
         public CloudwrapperConfigurationArgs build() {
-            $.comments = Objects.requireNonNull($.comments, "expected parameter 'comments' to be non-null");
-            $.configName = Objects.requireNonNull($.configName, "expected parameter 'configName' to be non-null");
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.propertyIds = Objects.requireNonNull($.propertyIds, "expected parameter 'propertyIds' to be non-null");
+            if ($.comments == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperConfigurationArgs", "comments");
+            }
+            if ($.configName == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperConfigurationArgs", "configName");
+            }
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperConfigurationArgs", "contractId");
+            }
+            if ($.propertyIds == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperConfigurationArgs", "propertyIds");
+            }
             return $;
         }
     }

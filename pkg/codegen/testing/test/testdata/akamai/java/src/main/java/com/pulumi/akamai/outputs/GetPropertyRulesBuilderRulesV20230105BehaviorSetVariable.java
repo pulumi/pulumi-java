@@ -314,236 +314,283 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorSetVariable {
 
         @CustomType.Setter
         public Builder algorithm(@Nullable String algorithm) {
+
             this.algorithm = algorithm;
             return this;
         }
         @CustomType.Setter
         public Builder caseSensitive(@Nullable Boolean caseSensitive) {
+
             this.caseSensitive = caseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder certificateFieldName(@Nullable String certificateFieldName) {
+
             this.certificateFieldName = certificateFieldName;
             return this;
         }
         @CustomType.Setter
         public Builder cookieName(@Nullable String cookieName) {
+
             this.cookieName = cookieName;
             return this;
         }
         @CustomType.Setter
         public Builder deviceProfile(@Nullable String deviceProfile) {
+
             this.deviceProfile = deviceProfile;
             return this;
         }
         @CustomType.Setter
         public Builder encryptionKey(@Nullable String encryptionKey) {
+
             this.encryptionKey = encryptionKey;
             return this;
         }
         @CustomType.Setter
         public Builder encryptionMode(@Nullable String encryptionMode) {
+
             this.encryptionMode = encryptionMode;
             return this;
         }
         @CustomType.Setter
         public Builder endIndex(@Nullable String endIndex) {
+
             this.endIndex = endIndex;
             return this;
         }
         @CustomType.Setter
         public Builder exceptChars(@Nullable String exceptChars) {
+
             this.exceptChars = exceptChars;
             return this;
         }
         @CustomType.Setter
         public Builder extractLocation(@Nullable String extractLocation) {
+
             this.extractLocation = extractLocation;
             return this;
         }
         @CustomType.Setter
         public Builder forceChars(@Nullable String forceChars) {
+
             this.forceChars = forceChars;
             return this;
         }
         @CustomType.Setter
         public Builder formatString(@Nullable String formatString) {
+
             this.formatString = formatString;
             return this;
         }
         @CustomType.Setter
         public Builder generator(@Nullable String generator) {
+
             this.generator = generator;
             return this;
         }
         @CustomType.Setter
         public Builder globalSubstitution(@Nullable Boolean globalSubstitution) {
+
             this.globalSubstitution = globalSubstitution;
             return this;
         }
         @CustomType.Setter
         public Builder headerName(@Nullable String headerName) {
+
             this.headerName = headerName;
             return this;
         }
         @CustomType.Setter
         public Builder hmacAlgorithm(@Nullable String hmacAlgorithm) {
+
             this.hmacAlgorithm = hmacAlgorithm;
             return this;
         }
         @CustomType.Setter
         public Builder hmacKey(@Nullable String hmacKey) {
+
             this.hmacKey = hmacKey;
             return this;
         }
         @CustomType.Setter
         public Builder initializationVector(@Nullable String initializationVector) {
+
             this.initializationVector = initializationVector;
             return this;
         }
         @CustomType.Setter
         public Builder ipVersion(@Nullable String ipVersion) {
+
             this.ipVersion = ipVersion;
             return this;
         }
         @CustomType.Setter
         public Builder ipv4Prefix(@Nullable Integer ipv4Prefix) {
+
             this.ipv4Prefix = ipv4Prefix;
             return this;
         }
         @CustomType.Setter
         public Builder ipv6Prefix(@Nullable Integer ipv6Prefix) {
+
             this.ipv6Prefix = ipv6Prefix;
             return this;
         }
         @CustomType.Setter
         public Builder locationId(@Nullable String locationId) {
+
             this.locationId = locationId;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder max(@Nullable Integer max) {
+
             this.max = max;
             return this;
         }
         @CustomType.Setter
         public Builder maxRandomNumber(@Nullable String maxRandomNumber) {
+
             this.maxRandomNumber = maxRandomNumber;
             return this;
         }
         @CustomType.Setter
         public Builder min(@Nullable Integer min) {
+
             this.min = min;
             return this;
         }
         @CustomType.Setter
         public Builder minRandomNumber(@Nullable String minRandomNumber) {
+
             this.minRandomNumber = minRandomNumber;
             return this;
         }
         @CustomType.Setter
         public Builder nonce(@Nullable String nonce) {
+
             this.nonce = nonce;
             return this;
         }
         @CustomType.Setter
         public Builder numberOfBytes(@Nullable Integer numberOfBytes) {
+
             this.numberOfBytes = numberOfBytes;
             return this;
         }
         @CustomType.Setter
         public Builder operandOne(@Nullable String operandOne) {
+
             this.operandOne = operandOne;
             return this;
         }
         @CustomType.Setter
         public Builder paramName(@Nullable String paramName) {
+
             this.paramName = paramName;
             return this;
         }
         @CustomType.Setter
         public Builder pathComponentOffset(@Nullable String pathComponentOffset) {
+
             this.pathComponentOffset = pathComponentOffset;
             return this;
         }
         @CustomType.Setter
         public Builder prependBytes(@Nullable Boolean prependBytes) {
+
             this.prependBytes = prependBytes;
             return this;
         }
         @CustomType.Setter
         public Builder queryParameterName(@Nullable String queryParameterName) {
+
             this.queryParameterName = queryParameterName;
             return this;
         }
         @CustomType.Setter
         public Builder regex(@Nullable String regex) {
+
             this.regex = regex;
             return this;
         }
         @CustomType.Setter
         public Builder replacement(@Nullable String replacement) {
+
             this.replacement = replacement;
             return this;
         }
         @CustomType.Setter
         public Builder responseHeaderName(@Nullable String responseHeaderName) {
+
             this.responseHeaderName = responseHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder separator(@Nullable String separator) {
+
             this.separator = separator;
             return this;
         }
         @CustomType.Setter
         public Builder setCookieName(@Nullable String setCookieName) {
+
             this.setCookieName = setCookieName;
             return this;
         }
         @CustomType.Setter
         public Builder startIndex(@Nullable String startIndex) {
+
             this.startIndex = startIndex;
             return this;
         }
         @CustomType.Setter
         public Builder subString(@Nullable String subString) {
+
             this.subString = subString;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder transform(@Nullable String transform) {
+
             this.transform = transform;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder valueSource(@Nullable String valueSource) {
+
             this.valueSource = valueSource;
             return this;
         }
         @CustomType.Setter
         public Builder variableName(@Nullable String variableName) {
+
             this.variableName = variableName;
             return this;
         }
         @CustomType.Setter
         public Builder variableValue(@Nullable String variableValue) {
+
             this.variableValue = variableValue;
             return this;
         }

@@ -50,6 +50,7 @@ public final class GtmPropertyStaticRrSet {
 
         @CustomType.Setter
         public Builder rdatas(@Nullable List<String> rdatas) {
+
             this.rdatas = rdatas;
             return this;
         }
@@ -58,11 +59,13 @@ public final class GtmPropertyStaticRrSet {
         }
         @CustomType.Setter
         public Builder ttl(@Nullable Integer ttl) {
+
             this.ttl = ttl;
             return this;
         }
         @CustomType.Setter
         public Builder type(@Nullable String type) {
+
             this.type = type;
             return this;
         }

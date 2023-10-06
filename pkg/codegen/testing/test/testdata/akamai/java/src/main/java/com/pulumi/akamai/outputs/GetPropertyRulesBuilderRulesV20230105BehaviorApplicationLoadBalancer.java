@@ -204,56 +204,67 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorApplicationLoadB
 
         @CustomType.Setter
         public Builder allDownNetStorage(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorApplicationLoadBalancerAllDownNetStorage allDownNetStorage) {
+
             this.allDownNetStorage = allDownNetStorage;
             return this;
         }
         @CustomType.Setter
         public Builder allDownNetStorageFile(@Nullable String allDownNetStorageFile) {
+
             this.allDownNetStorageFile = allDownNetStorageFile;
             return this;
         }
         @CustomType.Setter
         public Builder allDownStatusCode(@Nullable String allDownStatusCode) {
+
             this.allDownStatusCode = allDownStatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder allDownTitle(@Nullable String allDownTitle) {
+
             this.allDownTitle = allDownTitle;
             return this;
         }
         @CustomType.Setter
         public Builder allowCachePrefresh(@Nullable Boolean allowCachePrefresh) {
+
             this.allowCachePrefresh = allowCachePrefresh;
             return this;
         }
         @CustomType.Setter
         public Builder cachedContentTitle(@Nullable String cachedContentTitle) {
+
             this.cachedContentTitle = cachedContentTitle;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorApplicationLoadBalancerCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder failoverAttemptsThreshold(@Nullable Integer failoverAttemptsThreshold) {
+
             this.failoverAttemptsThreshold = failoverAttemptsThreshold;
             return this;
         }
         @CustomType.Setter
         public Builder failoverMode(@Nullable String failoverMode) {
+
             this.failoverMode = failoverMode;
             return this;
         }
         @CustomType.Setter
         public Builder failoverOriginMaps(@Nullable List<GetPropertyRulesBuilderRulesV20230105BehaviorApplicationLoadBalancerFailoverOriginMap> failoverOriginMaps) {
+
             this.failoverOriginMaps = failoverOriginMaps;
             return this;
         }
@@ -262,6 +273,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorApplicationLoadB
         }
         @CustomType.Setter
         public Builder failoverStatusCodes(@Nullable List<String> failoverStatusCodes) {
+
             this.failoverStatusCodes = failoverStatusCodes;
             return this;
         }
@@ -270,81 +282,97 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorApplicationLoadB
         }
         @CustomType.Setter
         public Builder failoverTitle(@Nullable String failoverTitle) {
+
             this.failoverTitle = failoverTitle;
             return this;
         }
         @CustomType.Setter
         public Builder label(@Nullable String label) {
+
             this.label = label;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder originCookieName(@Nullable String originCookieName) {
+
             this.originCookieName = originCookieName;
             return this;
         }
         @CustomType.Setter
         public Builder specifyStickinessCookieDomain(@Nullable Boolean specifyStickinessCookieDomain) {
+
             this.specifyStickinessCookieDomain = specifyStickinessCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessCookieAutomaticSalt(@Nullable Boolean stickinessCookieAutomaticSalt) {
+
             this.stickinessCookieAutomaticSalt = stickinessCookieAutomaticSalt;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessCookieDomain(@Nullable String stickinessCookieDomain) {
+
             this.stickinessCookieDomain = stickinessCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessCookieSalt(@Nullable String stickinessCookieSalt) {
+
             this.stickinessCookieSalt = stickinessCookieSalt;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessCookieSetHttpOnlyFlag(@Nullable Boolean stickinessCookieSetHttpOnlyFlag) {
+
             this.stickinessCookieSetHttpOnlyFlag = stickinessCookieSetHttpOnlyFlag;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessCookieType(@Nullable String stickinessCookieType) {
+
             this.stickinessCookieType = stickinessCookieType;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessDuration(@Nullable String stickinessDuration) {
+
             this.stickinessDuration = stickinessDuration;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessExpirationDate(@Nullable String stickinessExpirationDate) {
+
             this.stickinessExpirationDate = stickinessExpirationDate;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessRefresh(@Nullable Boolean stickinessRefresh) {
+
             this.stickinessRefresh = stickinessRefresh;
             return this;
         }
         @CustomType.Setter
         public Builder stickinessTitle(@Nullable String stickinessTitle) {
+
             this.stickinessTitle = stickinessTitle;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

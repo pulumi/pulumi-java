@@ -253,6 +253,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
 
         @CustomType.Setter
         public Builder appends(@Nullable List<GetImagingPolicyImagePolicyTransformationAppend> appends) {
+
             this.appends = appends;
             return this;
         }
@@ -261,6 +262,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder aspectCrops(@Nullable List<GetImagingPolicyImagePolicyTransformationAspectCrop> aspectCrops) {
+
             this.aspectCrops = aspectCrops;
             return this;
         }
@@ -269,6 +271,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder backgroundColors(@Nullable List<GetImagingPolicyImagePolicyTransformationBackgroundColor> backgroundColors) {
+
             this.backgroundColors = backgroundColors;
             return this;
         }
@@ -277,6 +280,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder blurs(@Nullable List<GetImagingPolicyImagePolicyTransformationBlur> blurs) {
+
             this.blurs = blurs;
             return this;
         }
@@ -285,6 +289,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder chromaKeys(@Nullable List<GetImagingPolicyImagePolicyTransformationChromaKey> chromaKeys) {
+
             this.chromaKeys = chromaKeys;
             return this;
         }
@@ -293,6 +298,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder composites(@Nullable List<GetImagingPolicyImagePolicyTransformationComposite> composites) {
+
             this.composites = composites;
             return this;
         }
@@ -301,6 +307,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder compounds(@Nullable List<GetImagingPolicyImagePolicyTransformationCompound> compounds) {
+
             this.compounds = compounds;
             return this;
         }
@@ -309,6 +316,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder contrasts(@Nullable List<GetImagingPolicyImagePolicyTransformationContrast> contrasts) {
+
             this.contrasts = contrasts;
             return this;
         }
@@ -317,6 +325,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder crops(@Nullable List<GetImagingPolicyImagePolicyTransformationCrop> crops) {
+
             this.crops = crops;
             return this;
         }
@@ -325,6 +334,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder faceCrops(@Nullable List<GetImagingPolicyImagePolicyTransformationFaceCrop> faceCrops) {
+
             this.faceCrops = faceCrops;
             return this;
         }
@@ -333,6 +343,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder featureCrops(@Nullable List<GetImagingPolicyImagePolicyTransformationFeatureCrop> featureCrops) {
+
             this.featureCrops = featureCrops;
             return this;
         }
@@ -341,6 +352,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder fitAndFills(@Nullable List<GetImagingPolicyImagePolicyTransformationFitAndFill> fitAndFills) {
+
             this.fitAndFills = fitAndFills;
             return this;
         }
@@ -349,6 +361,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder goops(@Nullable List<GetImagingPolicyImagePolicyTransformationGoop> goops) {
+
             this.goops = goops;
             return this;
         }
@@ -357,6 +370,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder grayscales(@Nullable List<GetImagingPolicyImagePolicyTransformationGrayscale> grayscales) {
+
             this.grayscales = grayscales;
             return this;
         }
@@ -365,6 +379,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder hsls(@Nullable List<GetImagingPolicyImagePolicyTransformationHsl> hsls) {
+
             this.hsls = hsls;
             return this;
         }
@@ -373,6 +388,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder hsvs(@Nullable List<GetImagingPolicyImagePolicyTransformationHsv> hsvs) {
+
             this.hsvs = hsvs;
             return this;
         }
@@ -381,6 +397,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder ifDimensions(@Nullable List<GetImagingPolicyImagePolicyTransformationIfDimension> ifDimensions) {
+
             this.ifDimensions = ifDimensions;
             return this;
         }
@@ -389,6 +406,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder ifOrientations(@Nullable List<GetImagingPolicyImagePolicyTransformationIfOrientation> ifOrientations) {
+
             this.ifOrientations = ifOrientations;
             return this;
         }
@@ -397,6 +415,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder imQueries(@Nullable List<GetImagingPolicyImagePolicyTransformationImQuery> imQueries) {
+
             this.imQueries = imQueries;
             return this;
         }
@@ -405,6 +424,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder maxColors(@Nullable List<GetImagingPolicyImagePolicyTransformationMaxColor> maxColors) {
+
             this.maxColors = maxColors;
             return this;
         }
@@ -413,6 +433,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder mirrors(@Nullable List<GetImagingPolicyImagePolicyTransformationMirror> mirrors) {
+
             this.mirrors = mirrors;
             return this;
         }
@@ -421,6 +442,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder monoHues(@Nullable List<GetImagingPolicyImagePolicyTransformationMonoHue> monoHues) {
+
             this.monoHues = monoHues;
             return this;
         }
@@ -429,6 +451,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder opacities(@Nullable List<GetImagingPolicyImagePolicyTransformationOpacity> opacities) {
+
             this.opacities = opacities;
             return this;
         }
@@ -437,6 +460,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder regionOfInterestCrops(@Nullable List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop> regionOfInterestCrops) {
+
             this.regionOfInterestCrops = regionOfInterestCrops;
             return this;
         }
@@ -445,6 +469,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder relativeCrops(@Nullable List<GetImagingPolicyImagePolicyTransformationRelativeCrop> relativeCrops) {
+
             this.relativeCrops = relativeCrops;
             return this;
         }
@@ -453,6 +478,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder removeColors(@Nullable List<GetImagingPolicyImagePolicyTransformationRemoveColor> removeColors) {
+
             this.removeColors = removeColors;
             return this;
         }
@@ -461,6 +487,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder resizes(@Nullable List<GetImagingPolicyImagePolicyTransformationResize> resizes) {
+
             this.resizes = resizes;
             return this;
         }
@@ -469,6 +496,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder rotates(@Nullable List<GetImagingPolicyImagePolicyTransformationRotate> rotates) {
+
             this.rotates = rotates;
             return this;
         }
@@ -477,6 +505,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder scales(@Nullable List<GetImagingPolicyImagePolicyTransformationScale> scales) {
+
             this.scales = scales;
             return this;
         }
@@ -485,6 +514,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder shears(@Nullable List<GetImagingPolicyImagePolicyTransformationShears> shears) {
+
             this.shears = shears;
             return this;
         }
@@ -493,6 +523,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder trims(@Nullable List<GetImagingPolicyImagePolicyTransformationTrim> trims) {
+
             this.trims = trims;
             return this;
         }
@@ -501,6 +532,7 @@ public final class GetImagingPolicyImagePolicyTransformation {
         }
         @CustomType.Setter
         public Builder unsharpMasks(@Nullable List<GetImagingPolicyImagePolicyTransformationUnsharpMask> unsharpMasks) {
+
             this.unsharpMasks = unsharpMasks;
             return this;
         }

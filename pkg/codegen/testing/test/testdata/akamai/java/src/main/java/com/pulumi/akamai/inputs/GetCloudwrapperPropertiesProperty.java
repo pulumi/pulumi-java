@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -102,11 +103,21 @@ public final class GetCloudwrapperPropertiesProperty extends com.pulumi.resource
         }
 
         public GetCloudwrapperPropertiesProperty build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.propertyId = Objects.requireNonNull($.propertyId, "expected parameter 'propertyId' to be non-null");
-            $.propertyName = Objects.requireNonNull($.propertyName, "expected parameter 'propertyName' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "groupId");
+            }
+            if ($.propertyId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "propertyId");
+            }
+            if ($.propertyName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "propertyName");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "type");
+            }
             return $;
         }
     }

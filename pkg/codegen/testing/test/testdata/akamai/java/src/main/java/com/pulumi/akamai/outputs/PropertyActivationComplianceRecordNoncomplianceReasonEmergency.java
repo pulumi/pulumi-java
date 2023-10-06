@@ -36,6 +36,7 @@ public final class PropertyActivationComplianceRecordNoncomplianceReasonEmergenc
 
         @CustomType.Setter
         public Builder ticketId(@Nullable String ticketId) {
+
             this.ticketId = ticketId;
             return this;
         }

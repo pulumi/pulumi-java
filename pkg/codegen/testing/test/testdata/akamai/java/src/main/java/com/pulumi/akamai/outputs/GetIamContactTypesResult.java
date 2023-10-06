@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,7 +50,10 @@ public final class GetIamContactTypesResult {
 
         @CustomType.Setter
         public Builder contactTypes(List<String> contactTypes) {
-            this.contactTypes = Objects.requireNonNull(contactTypes);
+            if (contactTypes == null) {
+              throw new MissingRequiredPropertyException("GetIamContactTypesResult", "contactTypes");
+            }
+            this.contactTypes = contactTypes;
             return this;
         }
         public Builder contactTypes(String... contactTypes) {
@@ -57,7 +61,10 @@ public final class GetIamContactTypesResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetIamContactTypesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetIamContactTypesResult build() {

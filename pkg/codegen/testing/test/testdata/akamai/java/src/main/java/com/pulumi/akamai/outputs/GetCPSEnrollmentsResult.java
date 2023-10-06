@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCPSEnrollmentsEnrollment;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,12 +57,18 @@ public final class GetCPSEnrollmentsResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder enrollments(List<GetCPSEnrollmentsEnrollment> enrollments) {
-            this.enrollments = Objects.requireNonNull(enrollments);
+            if (enrollments == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsResult", "enrollments");
+            }
+            this.enrollments = enrollments;
             return this;
         }
         public Builder enrollments(GetCPSEnrollmentsEnrollment... enrollments) {
@@ -69,7 +76,10 @@ public final class GetCPSEnrollmentsResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetCPSEnrollmentsResult build() {

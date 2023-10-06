@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationsConfigurationLocati
 import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -311,19 +312,45 @@ public final class GetCloudwrapperConfigurationsConfigurationArgs extends com.pu
         }
 
         public GetCloudwrapperConfigurationsConfigurationArgs build() {
-            $.capacityAlertsThreshold = Objects.requireNonNull($.capacityAlertsThreshold, "expected parameter 'capacityAlertsThreshold' to be non-null");
-            $.comments = Objects.requireNonNull($.comments, "expected parameter 'comments' to be non-null");
-            $.configName = Objects.requireNonNull($.configName, "expected parameter 'configName' to be non-null");
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
-            $.lastActivatedBy = Objects.requireNonNull($.lastActivatedBy, "expected parameter 'lastActivatedBy' to be non-null");
-            $.lastActivatedDate = Objects.requireNonNull($.lastActivatedDate, "expected parameter 'lastActivatedDate' to be non-null");
-            $.lastUpdatedBy = Objects.requireNonNull($.lastUpdatedBy, "expected parameter 'lastUpdatedBy' to be non-null");
-            $.lastUpdatedDate = Objects.requireNonNull($.lastUpdatedDate, "expected parameter 'lastUpdatedDate' to be non-null");
-            $.notificationEmails = Objects.requireNonNull($.notificationEmails, "expected parameter 'notificationEmails' to be non-null");
-            $.propertyIds = Objects.requireNonNull($.propertyIds, "expected parameter 'propertyIds' to be non-null");
-            $.retainIdleObjects = Objects.requireNonNull($.retainIdleObjects, "expected parameter 'retainIdleObjects' to be non-null");
-            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            if ($.capacityAlertsThreshold == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "capacityAlertsThreshold");
+            }
+            if ($.comments == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "comments");
+            }
+            if ($.configName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "configName");
+            }
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "contractId");
+            }
+            if ($.id == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "id");
+            }
+            if ($.lastActivatedBy == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "lastActivatedBy");
+            }
+            if ($.lastActivatedDate == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "lastActivatedDate");
+            }
+            if ($.lastUpdatedBy == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "lastUpdatedBy");
+            }
+            if ($.lastUpdatedDate == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "lastUpdatedDate");
+            }
+            if ($.notificationEmails == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "notificationEmails");
+            }
+            if ($.propertyIds == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "propertyIds");
+            }
+            if ($.retainIdleObjects == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "retainIdleObjects");
+            }
+            if ($.status == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationArgs", "status");
+            }
             return $;
         }
     }

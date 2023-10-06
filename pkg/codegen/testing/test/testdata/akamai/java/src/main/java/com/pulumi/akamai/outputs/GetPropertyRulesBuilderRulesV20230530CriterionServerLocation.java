@@ -80,6 +80,7 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionServerLocation 
 
         @CustomType.Setter
         public Builder continents(@Nullable List<String> continents) {
+
             this.continents = continents;
             return this;
         }
@@ -88,6 +89,7 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionServerLocation 
         }
         @CustomType.Setter
         public Builder countries(@Nullable List<String> countries) {
+
             this.countries = countries;
             return this;
         }
@@ -96,21 +98,25 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionServerLocation 
         }
         @CustomType.Setter
         public Builder locationType(@Nullable String locationType) {
+
             this.locationType = locationType;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder regions(@Nullable List<String> regions) {
+
             this.regions = regions;
             return this;
         }
@@ -119,11 +125,13 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionServerLocation 
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

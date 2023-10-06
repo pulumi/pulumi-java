@@ -6,6 +6,7 @@ package com.pulumi.akamai.outputs;
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationLocation;
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationMultiCdnSettings;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -125,51 +126,79 @@ public final class GetCloudwrapperConfigurationResult {
 
         @CustomType.Setter
         public Builder capacityAlertsThreshold(Integer capacityAlertsThreshold) {
-            this.capacityAlertsThreshold = Objects.requireNonNull(capacityAlertsThreshold);
+            if (capacityAlertsThreshold == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "capacityAlertsThreshold");
+            }
+            this.capacityAlertsThreshold = capacityAlertsThreshold;
             return this;
         }
         @CustomType.Setter
         public Builder comments(String comments) {
-            this.comments = Objects.requireNonNull(comments);
+            if (comments == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "comments");
+            }
+            this.comments = comments;
             return this;
         }
         @CustomType.Setter
         public Builder configName(String configName) {
-            this.configName = Objects.requireNonNull(configName);
+            if (configName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "configName");
+            }
+            this.configName = configName;
             return this;
         }
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder id(Integer id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder lastActivatedBy(String lastActivatedBy) {
-            this.lastActivatedBy = Objects.requireNonNull(lastActivatedBy);
+            if (lastActivatedBy == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "lastActivatedBy");
+            }
+            this.lastActivatedBy = lastActivatedBy;
             return this;
         }
         @CustomType.Setter
         public Builder lastActivatedDate(String lastActivatedDate) {
-            this.lastActivatedDate = Objects.requireNonNull(lastActivatedDate);
+            if (lastActivatedDate == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "lastActivatedDate");
+            }
+            this.lastActivatedDate = lastActivatedDate;
             return this;
         }
         @CustomType.Setter
         public Builder lastUpdatedBy(String lastUpdatedBy) {
-            this.lastUpdatedBy = Objects.requireNonNull(lastUpdatedBy);
+            if (lastUpdatedBy == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "lastUpdatedBy");
+            }
+            this.lastUpdatedBy = lastUpdatedBy;
             return this;
         }
         @CustomType.Setter
         public Builder lastUpdatedDate(String lastUpdatedDate) {
-            this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
+            if (lastUpdatedDate == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "lastUpdatedDate");
+            }
+            this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
         @CustomType.Setter
         public Builder locations(@Nullable List<GetCloudwrapperConfigurationLocation> locations) {
+
             this.locations = locations;
             return this;
         }
@@ -178,12 +207,16 @@ public final class GetCloudwrapperConfigurationResult {
         }
         @CustomType.Setter
         public Builder multiCdnSettings(@Nullable GetCloudwrapperConfigurationMultiCdnSettings multiCdnSettings) {
+
             this.multiCdnSettings = multiCdnSettings;
             return this;
         }
         @CustomType.Setter
         public Builder notificationEmails(List<String> notificationEmails) {
-            this.notificationEmails = Objects.requireNonNull(notificationEmails);
+            if (notificationEmails == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "notificationEmails");
+            }
+            this.notificationEmails = notificationEmails;
             return this;
         }
         public Builder notificationEmails(String... notificationEmails) {
@@ -191,7 +224,10 @@ public final class GetCloudwrapperConfigurationResult {
         }
         @CustomType.Setter
         public Builder propertyIds(List<String> propertyIds) {
-            this.propertyIds = Objects.requireNonNull(propertyIds);
+            if (propertyIds == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "propertyIds");
+            }
+            this.propertyIds = propertyIds;
             return this;
         }
         public Builder propertyIds(String... propertyIds) {
@@ -199,12 +235,18 @@ public final class GetCloudwrapperConfigurationResult {
         }
         @CustomType.Setter
         public Builder retainIdleObjects(Boolean retainIdleObjects) {
-            this.retainIdleObjects = Objects.requireNonNull(retainIdleObjects);
+            if (retainIdleObjects == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "retainIdleObjects");
+            }
+            this.retainIdleObjects = retainIdleObjects;
             return this;
         }
         @CustomType.Setter
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            if (status == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationResult", "status");
+            }
+            this.status = status;
             return this;
         }
         public GetCloudwrapperConfigurationResult build() {

@@ -57,6 +57,7 @@ public final class GetImagingPolicyImagePolicyTransformationCompositeImage {
 
         @CustomType.Setter
         public Builder boxImages(@Nullable List<GetImagingPolicyImagePolicyTransformationCompositeImageBoxImage> boxImages) {
+
             this.boxImages = boxImages;
             return this;
         }
@@ -65,6 +66,7 @@ public final class GetImagingPolicyImagePolicyTransformationCompositeImage {
         }
         @CustomType.Setter
         public Builder circleImages(@Nullable List<GetImagingPolicyImagePolicyTransformationCompositeImageCircleImage> circleImages) {
+
             this.circleImages = circleImages;
             return this;
         }
@@ -73,6 +75,7 @@ public final class GetImagingPolicyImagePolicyTransformationCompositeImage {
         }
         @CustomType.Setter
         public Builder textImages(@Nullable List<GetImagingPolicyImagePolicyTransformationCompositeImageTextImage> textImages) {
+
             this.textImages = textImages;
             return this;
         }
@@ -81,6 +84,7 @@ public final class GetImagingPolicyImagePolicyTransformationCompositeImage {
         }
         @CustomType.Setter
         public Builder urlImages(@Nullable List<GetImagingPolicyImagePolicyTransformationCompositeImageUrlImage> urlImages) {
+
             this.urlImages = urlImages;
             return this;
         }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,12 +50,18 @@ public final class GetIamSupportedLangsResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetIamSupportedLangsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder languages(List<String> languages) {
-            this.languages = Objects.requireNonNull(languages);
+            if (languages == null) {
+              throw new MissingRequiredPropertyException("GetIamSupportedLangsResult", "languages");
+            }
+            this.languages = languages;
             return this;
         }
         public Builder languages(String... languages) {

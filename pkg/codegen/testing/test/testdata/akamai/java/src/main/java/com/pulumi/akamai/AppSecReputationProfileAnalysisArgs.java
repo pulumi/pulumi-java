@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -187,10 +188,18 @@ public final class AppSecReputationProfileAnalysisArgs extends com.pulumi.resour
         }
 
         public AppSecReputationProfileAnalysisArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.forwardSharedIpToHttpHeaderSiem = Objects.requireNonNull($.forwardSharedIpToHttpHeaderSiem, "expected parameter 'forwardSharedIpToHttpHeaderSiem' to be non-null");
-            $.forwardToHttpHeader = Objects.requireNonNull($.forwardToHttpHeader, "expected parameter 'forwardToHttpHeader' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileAnalysisArgs", "configId");
+            }
+            if ($.forwardSharedIpToHttpHeaderSiem == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileAnalysisArgs", "forwardSharedIpToHttpHeaderSiem");
+            }
+            if ($.forwardToHttpHeader == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileAnalysisArgs", "forwardToHttpHeader");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileAnalysisArgs", "securityPolicyId");
+            }
             return $;
         }
     }

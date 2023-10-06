@@ -85,46 +85,55 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorDcpRealTimeAuth 
 
         @CustomType.Setter
         public Builder extractHostname(@Nullable Boolean extractHostname) {
+
             this.extractHostname = extractHostname;
             return this;
         }
         @CustomType.Setter
         public Builder extractJurisdiction(@Nullable Boolean extractJurisdiction) {
+
             this.extractJurisdiction = extractJurisdiction;
             return this;
         }
         @CustomType.Setter
         public Builder extractNamespace(@Nullable Boolean extractNamespace) {
+
             this.extractNamespace = extractNamespace;
             return this;
         }
         @CustomType.Setter
         public Builder hostnameClaim(@Nullable String hostnameClaim) {
+
             this.hostnameClaim = hostnameClaim;
             return this;
         }
         @CustomType.Setter
         public Builder jurisdictionClaim(@Nullable String jurisdictionClaim) {
+
             this.jurisdictionClaim = jurisdictionClaim;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder namespaceClaim(@Nullable String namespaceClaim) {
+
             this.namespaceClaim = namespaceClaim;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

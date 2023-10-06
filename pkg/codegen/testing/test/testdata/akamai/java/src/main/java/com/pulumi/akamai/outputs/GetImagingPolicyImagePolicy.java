@@ -78,11 +78,13 @@ public final class GetImagingPolicyImagePolicy {
 
         @CustomType.Setter
         public Builder breakpoints(@Nullable GetImagingPolicyImagePolicyBreakpoints breakpoints) {
+
             this.breakpoints = breakpoints;
             return this;
         }
         @CustomType.Setter
         public Builder hosts(@Nullable List<String> hosts) {
+
             this.hosts = hosts;
             return this;
         }
@@ -91,11 +93,13 @@ public final class GetImagingPolicyImagePolicy {
         }
         @CustomType.Setter
         public Builder output(@Nullable GetImagingPolicyImagePolicyOutput output) {
+
             this.output = output;
             return this;
         }
         @CustomType.Setter
         public Builder postBreakpointTransformations(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformation> postBreakpointTransformations) {
+
             this.postBreakpointTransformations = postBreakpointTransformations;
             return this;
         }
@@ -104,11 +108,13 @@ public final class GetImagingPolicyImagePolicy {
         }
         @CustomType.Setter
         public Builder rolloutDuration(@Nullable String rolloutDuration) {
+
             this.rolloutDuration = rolloutDuration;
             return this;
         }
         @CustomType.Setter
         public Builder transformations(@Nullable List<GetImagingPolicyImagePolicyTransformation> transformations) {
+
             this.transformations = transformations;
             return this;
         }
@@ -117,6 +123,7 @@ public final class GetImagingPolicyImagePolicy {
         }
         @CustomType.Setter
         public Builder variables(@Nullable List<GetImagingPolicyImagePolicyVariable> variables) {
+
             this.variables = variables;
             return this;
         }

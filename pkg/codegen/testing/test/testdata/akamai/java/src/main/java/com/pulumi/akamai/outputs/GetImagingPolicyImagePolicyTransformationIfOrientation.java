@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyTransformationIfOrientation {
 
         @CustomType.Setter("default")
         public Builder default_(@Nullable GetImagingPolicyImagePolicyTransformation default_) {
+
             this.default_ = default_;
             return this;
         }
         @CustomType.Setter
         public Builder landscape(@Nullable GetImagingPolicyImagePolicyTransformation landscape) {
+
             this.landscape = landscape;
             return this;
         }
         @CustomType.Setter
         public Builder portrait(@Nullable GetImagingPolicyImagePolicyTransformation portrait) {
+
             this.portrait = portrait;
             return this;
         }
         @CustomType.Setter
         public Builder square(@Nullable GetImagingPolicyImagePolicyTransformation square) {
+
             this.square = square;
             return this;
         }

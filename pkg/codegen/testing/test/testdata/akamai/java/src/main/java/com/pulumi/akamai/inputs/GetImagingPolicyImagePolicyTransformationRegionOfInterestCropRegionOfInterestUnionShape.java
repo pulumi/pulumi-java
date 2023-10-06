@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShape;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.util.List;
 import java.util.Objects;
 
@@ -54,7 +55,9 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
         }
 
         public GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShape build() {
-            $.shapes = Objects.requireNonNull($.shapes, "expected parameter 'shapes' to be non-null");
+            if ($.shapes == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShape", "shapes");
+            }
             return $;
         }
     }

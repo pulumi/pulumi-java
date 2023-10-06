@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -87,42 +88,64 @@ public final class GetPropertyRulesResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder errors(String errors) {
-            this.errors = Objects.requireNonNull(errors);
+            if (errors == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "errors");
+            }
+            this.errors = errors;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder propertyId(String propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         @CustomType.Setter
         public Builder ruleFormat(@Nullable String ruleFormat) {
+
             this.ruleFormat = ruleFormat;
             return this;
         }
         @CustomType.Setter
         public Builder rules(String rules) {
-            this.rules = Objects.requireNonNull(rules);
+            if (rules == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "rules");
+            }
+            this.rules = rules;
             return this;
         }
         @CustomType.Setter
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesResult", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetPropertyRulesResult build() {

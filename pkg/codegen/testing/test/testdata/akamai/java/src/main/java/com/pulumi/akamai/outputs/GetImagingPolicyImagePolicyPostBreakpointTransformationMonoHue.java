@@ -42,11 +42,13 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationMonoHu
 
         @CustomType.Setter
         public Builder hue(@Nullable String hue) {
+
             this.hue = hue;
             return this;
         }
         @CustomType.Setter
         public Builder hueVar(@Nullable String hueVar) {
+
             this.hueVar = hueVar;
             return this;
         }

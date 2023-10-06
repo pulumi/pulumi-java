@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionClientCertifica
 
         @CustomType.Setter
         public Builder isCertificatePresent(@Nullable Boolean isCertificatePresent) {
+
             this.isCertificatePresent = isCertificatePresent;
             return this;
         }
         @CustomType.Setter
         public Builder isCertificateValid(@Nullable String isCertificateValid) {
+
             this.isCertificateValid = isCertificateValid;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

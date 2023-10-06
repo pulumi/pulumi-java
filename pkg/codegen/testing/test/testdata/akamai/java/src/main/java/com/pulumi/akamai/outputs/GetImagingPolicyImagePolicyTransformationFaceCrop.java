@@ -138,91 +138,109 @@ public final class GetImagingPolicyImagePolicyTransformationFaceCrop {
 
         @CustomType.Setter
         public Builder algorithm(@Nullable String algorithm) {
+
             this.algorithm = algorithm;
             return this;
         }
         @CustomType.Setter
         public Builder algorithmVar(@Nullable String algorithmVar) {
+
             this.algorithmVar = algorithmVar;
             return this;
         }
         @CustomType.Setter
         public Builder confidence(@Nullable String confidence) {
+
             this.confidence = confidence;
             return this;
         }
         @CustomType.Setter
         public Builder confidenceVar(@Nullable String confidenceVar) {
+
             this.confidenceVar = confidenceVar;
             return this;
         }
         @CustomType.Setter
         public Builder failGravity(@Nullable String failGravity) {
+
             this.failGravity = failGravity;
             return this;
         }
         @CustomType.Setter
         public Builder failGravityVar(@Nullable String failGravityVar) {
+
             this.failGravityVar = failGravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder focus(@Nullable String focus) {
+
             this.focus = focus;
             return this;
         }
         @CustomType.Setter
         public Builder focusVar(@Nullable String focusVar) {
+
             this.focusVar = focusVar;
             return this;
         }
         @CustomType.Setter
         public Builder gravity(@Nullable String gravity) {
+
             this.gravity = gravity;
             return this;
         }
         @CustomType.Setter
         public Builder gravityVar(@Nullable String gravityVar) {
+
             this.gravityVar = gravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder padding(@Nullable String padding) {
+
             this.padding = padding;
             return this;
         }
         @CustomType.Setter
         public Builder paddingVar(@Nullable String paddingVar) {
+
             this.paddingVar = paddingVar;
             return this;
         }
         @CustomType.Setter
         public Builder style(@Nullable String style) {
+
             this.style = style;
             return this;
         }
         @CustomType.Setter
         public Builder styleVar(@Nullable String styleVar) {
+
             this.styleVar = styleVar;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }

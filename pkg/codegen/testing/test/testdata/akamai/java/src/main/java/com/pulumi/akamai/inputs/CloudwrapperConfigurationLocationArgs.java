@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.CloudwrapperConfigurationLocationCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -92,8 +93,12 @@ public final class CloudwrapperConfigurationLocationArgs extends com.pulumi.reso
         }
 
         public CloudwrapperConfigurationLocationArgs build() {
-            $.comments = Objects.requireNonNull($.comments, "expected parameter 'comments' to be non-null");
-            $.trafficTypeId = Objects.requireNonNull($.trafficTypeId, "expected parameter 'trafficTypeId' to be non-null");
+            if ($.comments == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperConfigurationLocationArgs", "comments");
+            }
+            if ($.trafficTypeId == null) {
+                throw new MissingRequiredPropertyException("CloudwrapperConfigurationLocationArgs", "trafficTypeId");
+            }
             return $;
         }
     }

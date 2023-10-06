@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -92,12 +93,18 @@ public final class GetAppSecIPGeoResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder exceptionIpNetworkLists(List<String> exceptionIpNetworkLists) {
-            this.exceptionIpNetworkLists = Objects.requireNonNull(exceptionIpNetworkLists);
+            if (exceptionIpNetworkLists == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "exceptionIpNetworkLists");
+            }
+            this.exceptionIpNetworkLists = exceptionIpNetworkLists;
             return this;
         }
         public Builder exceptionIpNetworkLists(String... exceptionIpNetworkLists) {
@@ -105,7 +112,10 @@ public final class GetAppSecIPGeoResult {
         }
         @CustomType.Setter
         public Builder geoNetworkLists(List<String> geoNetworkLists) {
-            this.geoNetworkLists = Objects.requireNonNull(geoNetworkLists);
+            if (geoNetworkLists == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "geoNetworkLists");
+            }
+            this.geoNetworkLists = geoNetworkLists;
             return this;
         }
         public Builder geoNetworkLists(String... geoNetworkLists) {
@@ -113,12 +123,18 @@ public final class GetAppSecIPGeoResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder ipNetworkLists(List<String> ipNetworkLists) {
-            this.ipNetworkLists = Objects.requireNonNull(ipNetworkLists);
+            if (ipNetworkLists == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "ipNetworkLists");
+            }
+            this.ipNetworkLists = ipNetworkLists;
             return this;
         }
         public Builder ipNetworkLists(String... ipNetworkLists) {
@@ -126,22 +142,34 @@ public final class GetAppSecIPGeoResult {
         }
         @CustomType.Setter
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            if (mode == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "mode");
+            }
+            this.mode = mode;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         @CustomType.Setter
         public Builder ukraineGeoControlAction(String ukraineGeoControlAction) {
-            this.ukraineGeoControlAction = Objects.requireNonNull(ukraineGeoControlAction);
+            if (ukraineGeoControlAction == null) {
+              throw new MissingRequiredPropertyException("GetAppSecIPGeoResult", "ukraineGeoControlAction");
+            }
+            this.ukraineGeoControlAction = ukraineGeoControlAction;
             return this;
         }
         public GetAppSecIPGeoResult build() {

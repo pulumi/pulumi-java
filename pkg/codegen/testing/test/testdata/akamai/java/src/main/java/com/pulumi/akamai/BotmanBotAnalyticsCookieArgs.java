@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class BotmanBotAnalyticsCookieArgs extends com.pulumi.resources.Res
         }
 
         public BotmanBotAnalyticsCookieArgs build() {
-            $.botAnalyticsCookie = Objects.requireNonNull($.botAnalyticsCookie, "expected parameter 'botAnalyticsCookie' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.botAnalyticsCookie == null) {
+                throw new MissingRequiredPropertyException("BotmanBotAnalyticsCookieArgs", "botAnalyticsCookie");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanBotAnalyticsCookieArgs", "configId");
+            }
             return $;
         }
     }

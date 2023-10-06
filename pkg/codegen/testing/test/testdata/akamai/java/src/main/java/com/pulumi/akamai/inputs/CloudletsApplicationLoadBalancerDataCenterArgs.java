@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -250,12 +251,24 @@ public final class CloudletsApplicationLoadBalancerDataCenterArgs extends com.pu
         }
 
         public CloudletsApplicationLoadBalancerDataCenterArgs build() {
-            $.continent = Objects.requireNonNull($.continent, "expected parameter 'continent' to be non-null");
-            $.country = Objects.requireNonNull($.country, "expected parameter 'country' to be non-null");
-            $.latitude = Objects.requireNonNull($.latitude, "expected parameter 'latitude' to be non-null");
-            $.longitude = Objects.requireNonNull($.longitude, "expected parameter 'longitude' to be non-null");
-            $.originId = Objects.requireNonNull($.originId, "expected parameter 'originId' to be non-null");
-            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            if ($.continent == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerDataCenterArgs", "continent");
+            }
+            if ($.country == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerDataCenterArgs", "country");
+            }
+            if ($.latitude == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerDataCenterArgs", "latitude");
+            }
+            if ($.longitude == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerDataCenterArgs", "longitude");
+            }
+            if ($.originId == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerDataCenterArgs", "originId");
+            }
+            if ($.percent == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerDataCenterArgs", "percent");
+            }
             return $;
         }
     }

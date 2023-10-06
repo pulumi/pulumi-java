@@ -125,76 +125,91 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorApiPrioritizatio
 
         @CustomType.Setter
         public Builder alternateResponseCacheTtl(@Nullable Integer alternateResponseCacheTtl) {
+
             this.alternateResponseCacheTtl = alternateResponseCacheTtl;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorApiPrioritizationCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletSharedPolicy(@Nullable Integer cloudletSharedPolicy) {
+
             this.cloudletSharedPolicy = cloudletSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder isSharedPolicy(@Nullable Boolean isSharedPolicy) {
+
             this.isSharedPolicy = isSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder label(@Nullable String label) {
+
             this.label = label;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder netStorage(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorApiPrioritizationNetStorage netStorage) {
+
             this.netStorage = netStorage;
             return this;
         }
         @CustomType.Setter
         public Builder netStoragePath(@Nullable String netStoragePath) {
+
             this.netStoragePath = netStoragePath;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder throttledCpCode(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorApiPrioritizationThrottledCpCode throttledCpCode) {
+
             this.throttledCpCode = throttledCpCode;
             return this;
         }
         @CustomType.Setter
         public Builder throttledStatusCode(@Nullable Integer throttledStatusCode) {
+
             this.throttledStatusCode = throttledStatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder useThrottledCpCode(@Nullable Boolean useThrottledCpCode) {
+
             this.useThrottledCpCode = useThrottledCpCode;
             return this;
         }
         @CustomType.Setter
         public Builder useThrottledStatusCode(@Nullable Boolean useThrottledStatusCode) {
+
             this.useThrottledStatusCode = useThrottledStatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

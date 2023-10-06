@@ -6,6 +6,7 @@ package com.pulumi.akamai.outputs;
 import com.pulumi.akamai.outputs.GetPropertyRulesBuilderRulesV20230105;
 import com.pulumi.akamai.outputs.GetPropertyRulesBuilderRulesV20230530;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,26 +71,37 @@ public final class GetPropertyRulesBuilderResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder ruleFormat(String ruleFormat) {
-            this.ruleFormat = Objects.requireNonNull(ruleFormat);
+            if (ruleFormat == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderResult", "ruleFormat");
+            }
+            this.ruleFormat = ruleFormat;
             return this;
         }
         @CustomType.Setter
         public Builder rulesV20230105(@Nullable GetPropertyRulesBuilderRulesV20230105 rulesV20230105) {
+
             this.rulesV20230105 = rulesV20230105;
             return this;
         }
         @CustomType.Setter
         public Builder rulesV20230530(@Nullable GetPropertyRulesBuilderRulesV20230530 rulesV20230530) {
+
             this.rulesV20230530 = rulesV20230530;
             return this;
         }

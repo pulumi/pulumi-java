@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -112,8 +113,12 @@ public final class AppSecMatchTargetArgs extends com.pulumi.resources.ResourceAr
         }
 
         public AppSecMatchTargetArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.matchTarget = Objects.requireNonNull($.matchTarget, "expected parameter 'matchTarget' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecMatchTargetArgs", "configId");
+            }
+            if ($.matchTarget == null) {
+                throw new MissingRequiredPropertyException("AppSecMatchTargetArgs", "matchTarget");
+            }
             return $;
         }
     }

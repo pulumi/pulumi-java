@@ -48,16 +48,19 @@ public final class CpsDvEnrollmentDnsChallenge {
 
         @CustomType.Setter
         public Builder domain(@Nullable String domain) {
+
             this.domain = domain;
             return this;
         }
         @CustomType.Setter
         public Builder fullPath(@Nullable String fullPath) {
+
             this.fullPath = fullPath;
             return this;
         }
         @CustomType.Setter
         public Builder responseBody(@Nullable String responseBody) {
+
             this.responseBody = responseBody;
             return this;
         }

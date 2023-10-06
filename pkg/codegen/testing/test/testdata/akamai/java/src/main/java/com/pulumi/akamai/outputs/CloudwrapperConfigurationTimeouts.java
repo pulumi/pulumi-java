@@ -36,6 +36,7 @@ public final class CloudwrapperConfigurationTimeouts {
 
         @CustomType.Setter
         public Builder delete(@Nullable String delete) {
+
             this.delete = delete;
             return this;
         }

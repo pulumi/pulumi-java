@@ -92,51 +92,61 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorAggregatedReport
 
         @CustomType.Setter
         public Builder attribute1(@Nullable String attribute1) {
+
             this.attribute1 = attribute1;
             return this;
         }
         @CustomType.Setter
         public Builder attribute2(@Nullable String attribute2) {
+
             this.attribute2 = attribute2;
             return this;
         }
         @CustomType.Setter
         public Builder attribute3(@Nullable String attribute3) {
+
             this.attribute3 = attribute3;
             return this;
         }
         @CustomType.Setter
         public Builder attribute4(@Nullable String attribute4) {
+
             this.attribute4 = attribute4;
             return this;
         }
         @CustomType.Setter
         public Builder attributesCount(@Nullable Integer attributesCount) {
+
             this.attributesCount = attributesCount;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder reportName(@Nullable String reportName) {
+
             this.reportName = reportName;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

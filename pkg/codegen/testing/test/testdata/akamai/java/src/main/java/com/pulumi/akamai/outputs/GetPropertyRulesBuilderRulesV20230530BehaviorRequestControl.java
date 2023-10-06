@@ -112,66 +112,79 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorRequestControl {
 
         @CustomType.Setter
         public Builder branded403File(@Nullable String branded403File) {
+
             this.branded403File = branded403File;
             return this;
         }
         @CustomType.Setter
         public Builder branded403StatusCode(@Nullable Integer branded403StatusCode) {
+
             this.branded403StatusCode = branded403StatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder branded403Url(@Nullable String branded403Url) {
+
             this.branded403Url = branded403Url;
             return this;
         }
         @CustomType.Setter
         public Builder brandedDenyCacheTtl(@Nullable Integer brandedDenyCacheTtl) {
+
             this.brandedDenyCacheTtl = brandedDenyCacheTtl;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRequestControlCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletSharedPolicy(@Nullable Integer cloudletSharedPolicy) {
+
             this.cloudletSharedPolicy = cloudletSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enableBranded403(@Nullable Boolean enableBranded403) {
+
             this.enableBranded403 = enableBranded403;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder isSharedPolicy(@Nullable Boolean isSharedPolicy) {
+
             this.isSharedPolicy = isSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder netStorage(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorRequestControlNetStorage netStorage) {
+
             this.netStorage = netStorage;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -103,42 +104,66 @@ public final class GetCloudletsApplicationLoadBalancerDataCenter {
 
         @CustomType.Setter
         public Builder city(String city) {
-            this.city = Objects.requireNonNull(city);
+            if (city == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "city");
+            }
+            this.city = city;
             return this;
         }
         @CustomType.Setter
         public Builder cloudServerHostHeaderOverride(Boolean cloudServerHostHeaderOverride) {
-            this.cloudServerHostHeaderOverride = Objects.requireNonNull(cloudServerHostHeaderOverride);
+            if (cloudServerHostHeaderOverride == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "cloudServerHostHeaderOverride");
+            }
+            this.cloudServerHostHeaderOverride = cloudServerHostHeaderOverride;
             return this;
         }
         @CustomType.Setter
         public Builder cloudService(Boolean cloudService) {
-            this.cloudService = Objects.requireNonNull(cloudService);
+            if (cloudService == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "cloudService");
+            }
+            this.cloudService = cloudService;
             return this;
         }
         @CustomType.Setter
         public Builder continent(String continent) {
-            this.continent = Objects.requireNonNull(continent);
+            if (continent == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "continent");
+            }
+            this.continent = continent;
             return this;
         }
         @CustomType.Setter
         public Builder country(String country) {
-            this.country = Objects.requireNonNull(country);
+            if (country == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "country");
+            }
+            this.country = country;
             return this;
         }
         @CustomType.Setter
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            if (hostname == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "hostname");
+            }
+            this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder latitude(Double latitude) {
-            this.latitude = Objects.requireNonNull(latitude);
+            if (latitude == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "latitude");
+            }
+            this.latitude = latitude;
             return this;
         }
         @CustomType.Setter
         public Builder livenessHosts(List<String> livenessHosts) {
-            this.livenessHosts = Objects.requireNonNull(livenessHosts);
+            if (livenessHosts == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "livenessHosts");
+            }
+            this.livenessHosts = livenessHosts;
             return this;
         }
         public Builder livenessHosts(String... livenessHosts) {
@@ -146,22 +171,34 @@ public final class GetCloudletsApplicationLoadBalancerDataCenter {
         }
         @CustomType.Setter
         public Builder longitude(Double longitude) {
-            this.longitude = Objects.requireNonNull(longitude);
+            if (longitude == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "longitude");
+            }
+            this.longitude = longitude;
             return this;
         }
         @CustomType.Setter
         public Builder originId(String originId) {
-            this.originId = Objects.requireNonNull(originId);
+            if (originId == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "originId");
+            }
+            this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder percent(Double percent) {
-            this.percent = Objects.requireNonNull(percent);
+            if (percent == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "percent");
+            }
+            this.percent = percent;
             return this;
         }
         @CustomType.Setter
         public Builder stateOrProvince(String stateOrProvince) {
-            this.stateOrProvince = Objects.requireNonNull(stateOrProvince);
+            if (stateOrProvince == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerDataCenter", "stateOrProvince");
+            }
+            this.stateOrProvince = stateOrProvince;
             return this;
         }
         public GetCloudletsApplicationLoadBalancerDataCenter build() {

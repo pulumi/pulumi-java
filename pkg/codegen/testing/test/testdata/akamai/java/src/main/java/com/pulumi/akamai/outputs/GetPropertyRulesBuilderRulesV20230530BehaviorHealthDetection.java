@@ -68,31 +68,37 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorHealthDetection 
 
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder maximumReconnects(@Nullable Integer maximumReconnects) {
+
             this.maximumReconnects = maximumReconnects;
             return this;
         }
         @CustomType.Setter
         public Builder retryCount(@Nullable Integer retryCount) {
+
             this.retryCount = retryCount;
             return this;
         }
         @CustomType.Setter
         public Builder retryInterval(@Nullable String retryInterval) {
+
             this.retryInterval = retryInterval;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

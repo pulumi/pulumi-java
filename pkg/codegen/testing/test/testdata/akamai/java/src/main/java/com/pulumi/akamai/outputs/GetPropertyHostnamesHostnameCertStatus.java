@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,22 +53,34 @@ public final class GetPropertyHostnamesHostnameCertStatus {
 
         @CustomType.Setter
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            if (hostname == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostnameCertStatus", "hostname");
+            }
+            this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder productionStatus(String productionStatus) {
-            this.productionStatus = Objects.requireNonNull(productionStatus);
+            if (productionStatus == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostnameCertStatus", "productionStatus");
+            }
+            this.productionStatus = productionStatus;
             return this;
         }
         @CustomType.Setter
         public Builder stagingStatus(String stagingStatus) {
-            this.stagingStatus = Objects.requireNonNull(stagingStatus);
+            if (stagingStatus == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostnameCertStatus", "stagingStatus");
+            }
+            this.stagingStatus = stagingStatus;
             return this;
         }
         @CustomType.Setter
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            if (target == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostnameCertStatus", "target");
+            }
+            this.target = target;
             return this;
         }
         public GetPropertyHostnamesHostnameCertStatus build() {

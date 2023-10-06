@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -100,27 +101,42 @@ public final class GetNetworkListsResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(Integer groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder lists(List<String> lists) {
-            this.lists = Objects.requireNonNull(lists);
+            if (lists == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "lists");
+            }
+            this.lists = lists;
             return this;
         }
         public Builder lists(String... lists) {
@@ -128,26 +144,37 @@ public final class GetNetworkListsResult {
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder networkListId(String networkListId) {
-            this.networkListId = Objects.requireNonNull(networkListId);
+            if (networkListId == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "networkListId");
+            }
+            this.networkListId = networkListId;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder syncPoint(Integer syncPoint) {
-            this.syncPoint = Objects.requireNonNull(syncPoint);
+            if (syncPoint == null) {
+              throw new MissingRequiredPropertyException("GetNetworkListsResult", "syncPoint");
+            }
+            this.syncPoint = syncPoint;
             return this;
         }
         @CustomType.Setter
         public Builder type(@Nullable String type) {
+
             this.type = type;
             return this;
         }

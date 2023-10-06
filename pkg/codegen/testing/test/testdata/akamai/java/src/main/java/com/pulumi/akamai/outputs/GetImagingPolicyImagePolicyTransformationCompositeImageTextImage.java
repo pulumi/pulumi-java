@@ -109,66 +109,79 @@ public final class GetImagingPolicyImagePolicyTransformationCompositeImageTextIm
 
         @CustomType.Setter
         public Builder fill(@Nullable String fill) {
+
             this.fill = fill;
             return this;
         }
         @CustomType.Setter
         public Builder fillVar(@Nullable String fillVar) {
+
             this.fillVar = fillVar;
             return this;
         }
         @CustomType.Setter
         public Builder size(@Nullable String size) {
+
             this.size = size;
             return this;
         }
         @CustomType.Setter
         public Builder sizeVar(@Nullable String sizeVar) {
+
             this.sizeVar = sizeVar;
             return this;
         }
         @CustomType.Setter
         public Builder stroke(@Nullable String stroke) {
+
             this.stroke = stroke;
             return this;
         }
         @CustomType.Setter
         public Builder strokeSize(@Nullable String strokeSize) {
+
             this.strokeSize = strokeSize;
             return this;
         }
         @CustomType.Setter
         public Builder strokeSizeVar(@Nullable String strokeSizeVar) {
+
             this.strokeSizeVar = strokeSizeVar;
             return this;
         }
         @CustomType.Setter
         public Builder strokeVar(@Nullable String strokeVar) {
+
             this.strokeVar = strokeVar;
             return this;
         }
         @CustomType.Setter
         public Builder text(@Nullable String text) {
+
             this.text = text;
             return this;
         }
         @CustomType.Setter
         public Builder textVar(@Nullable String textVar) {
+
             this.textVar = textVar;
             return this;
         }
         @CustomType.Setter
         public Builder transformation(@Nullable GetImagingPolicyImagePolicyTransformation transformation) {
+
             this.transformation = transformation;
             return this;
         }
         @CustomType.Setter
         public Builder typeface(@Nullable String typeface) {
+
             this.typeface = typeface;
             return this;
         }
         @CustomType.Setter
         public Builder typefaceVar(@Nullable String typefaceVar) {
+
             this.typefaceVar = typefaceVar;
             return this;
         }

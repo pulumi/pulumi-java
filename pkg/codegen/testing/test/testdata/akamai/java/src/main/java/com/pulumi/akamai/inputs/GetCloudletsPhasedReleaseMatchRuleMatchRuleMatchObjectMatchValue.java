@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetCloudletsPhasedReleaseMatchRuleMatchRuleMatchObjectMatchValueOptions;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -123,7 +124,9 @@ public final class GetCloudletsPhasedReleaseMatchRuleMatchRuleMatchObjectMatchVa
         }
 
         public GetCloudletsPhasedReleaseMatchRuleMatchRuleMatchObjectMatchValue build() {
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRuleMatchObjectMatchValue", "type");
+            }
             return $;
         }
     }

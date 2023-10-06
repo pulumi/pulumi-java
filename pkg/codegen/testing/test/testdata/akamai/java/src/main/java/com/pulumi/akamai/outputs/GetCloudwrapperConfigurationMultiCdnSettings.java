@@ -8,6 +8,7 @@ import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationMultiCdnSettingsCdn
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationMultiCdnSettingsDataStreams;
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationMultiCdnSettingsOrigin;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -65,11 +66,13 @@ public final class GetCloudwrapperConfigurationMultiCdnSettings {
 
         @CustomType.Setter
         public Builder bocc(@Nullable GetCloudwrapperConfigurationMultiCdnSettingsBocc bocc) {
+
             this.bocc = bocc;
             return this;
         }
         @CustomType.Setter
         public Builder cdns(@Nullable List<GetCloudwrapperConfigurationMultiCdnSettingsCdn> cdns) {
+
             this.cdns = cdns;
             return this;
         }
@@ -78,16 +81,21 @@ public final class GetCloudwrapperConfigurationMultiCdnSettings {
         }
         @CustomType.Setter
         public Builder dataStreams(@Nullable GetCloudwrapperConfigurationMultiCdnSettingsDataStreams dataStreams) {
+
             this.dataStreams = dataStreams;
             return this;
         }
         @CustomType.Setter
         public Builder enableSoftAlerts(Boolean enableSoftAlerts) {
-            this.enableSoftAlerts = Objects.requireNonNull(enableSoftAlerts);
+            if (enableSoftAlerts == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettings", "enableSoftAlerts");
+            }
+            this.enableSoftAlerts = enableSoftAlerts;
             return this;
         }
         @CustomType.Setter
         public Builder origins(@Nullable List<GetCloudwrapperConfigurationMultiCdnSettingsOrigin> origins) {
+
             this.origins = origins;
             return this;
         }

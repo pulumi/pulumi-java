@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -66,32 +67,48 @@ public final class CpsDvEnrollmentCsr {
 
         @CustomType.Setter
         public Builder city(String city) {
-            this.city = Objects.requireNonNull(city);
+            if (city == null) {
+              throw new MissingRequiredPropertyException("CpsDvEnrollmentCsr", "city");
+            }
+            this.city = city;
             return this;
         }
         @CustomType.Setter
         public Builder countryCode(String countryCode) {
-            this.countryCode = Objects.requireNonNull(countryCode);
+            if (countryCode == null) {
+              throw new MissingRequiredPropertyException("CpsDvEnrollmentCsr", "countryCode");
+            }
+            this.countryCode = countryCode;
             return this;
         }
         @CustomType.Setter
         public Builder organization(String organization) {
-            this.organization = Objects.requireNonNull(organization);
+            if (organization == null) {
+              throw new MissingRequiredPropertyException("CpsDvEnrollmentCsr", "organization");
+            }
+            this.organization = organization;
             return this;
         }
         @CustomType.Setter
         public Builder organizationalUnit(String organizationalUnit) {
-            this.organizationalUnit = Objects.requireNonNull(organizationalUnit);
+            if (organizationalUnit == null) {
+              throw new MissingRequiredPropertyException("CpsDvEnrollmentCsr", "organizationalUnit");
+            }
+            this.organizationalUnit = organizationalUnit;
             return this;
         }
         @CustomType.Setter
         public Builder preferredTrustChain(@Nullable String preferredTrustChain) {
+
             this.preferredTrustChain = preferredTrustChain;
             return this;
         }
         @CustomType.Setter
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            if (state == null) {
+              throw new MissingRequiredPropertyException("CpsDvEnrollmentCsr", "state");
+            }
+            this.state = state;
             return this;
         }
         public CpsDvEnrollmentCsr build() {

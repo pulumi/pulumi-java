@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,22 +62,34 @@ public final class GetCpsCsrResult {
 
         @CustomType.Setter
         public Builder csrEcdsa(String csrEcdsa) {
-            this.csrEcdsa = Objects.requireNonNull(csrEcdsa);
+            if (csrEcdsa == null) {
+              throw new MissingRequiredPropertyException("GetCpsCsrResult", "csrEcdsa");
+            }
+            this.csrEcdsa = csrEcdsa;
             return this;
         }
         @CustomType.Setter
         public Builder csrRsa(String csrRsa) {
-            this.csrRsa = Objects.requireNonNull(csrRsa);
+            if (csrRsa == null) {
+              throw new MissingRequiredPropertyException("GetCpsCsrResult", "csrRsa");
+            }
+            this.csrRsa = csrRsa;
             return this;
         }
         @CustomType.Setter
         public Builder enrollmentId(Integer enrollmentId) {
-            this.enrollmentId = Objects.requireNonNull(enrollmentId);
+            if (enrollmentId == null) {
+              throw new MissingRequiredPropertyException("GetCpsCsrResult", "enrollmentId");
+            }
+            this.enrollmentId = enrollmentId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCpsCsrResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetCpsCsrResult build() {

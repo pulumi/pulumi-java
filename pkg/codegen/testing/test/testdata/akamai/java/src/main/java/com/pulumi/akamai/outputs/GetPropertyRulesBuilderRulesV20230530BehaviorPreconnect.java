@@ -56,11 +56,13 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorPreconnect {
 
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder preconnectlists(@Nullable List<String> preconnectlists) {
+
             this.preconnectlists = preconnectlists;
             return this;
         }
@@ -69,11 +71,13 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorPreconnect {
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

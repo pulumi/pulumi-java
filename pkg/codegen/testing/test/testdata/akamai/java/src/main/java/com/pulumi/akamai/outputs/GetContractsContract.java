@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,12 +41,18 @@ public final class GetContractsContract {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetContractsContract", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder contractTypeName(String contractTypeName) {
-            this.contractTypeName = Objects.requireNonNull(contractTypeName);
+            if (contractTypeName == null) {
+              throw new MissingRequiredPropertyException("GetContractsContract", "contractTypeName");
+            }
+            this.contractTypeName = contractTypeName;
             return this;
         }
         public GetContractsContract build() {

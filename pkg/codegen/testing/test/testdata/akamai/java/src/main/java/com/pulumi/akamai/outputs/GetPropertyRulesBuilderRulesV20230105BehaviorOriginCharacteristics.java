@@ -183,61 +183,73 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginCharacteri
 
         @CustomType.Setter
         public Builder accessKeyEncryptedStorage(@Nullable Boolean accessKeyEncryptedStorage) {
+
             this.accessKeyEncryptedStorage = accessKeyEncryptedStorage;
             return this;
         }
         @CustomType.Setter
         public Builder adcTitle(@Nullable String adcTitle) {
+
             this.adcTitle = adcTitle;
             return this;
         }
         @CustomType.Setter
         public Builder authenticationMethod(@Nullable String authenticationMethod) {
+
             this.authenticationMethod = authenticationMethod;
             return this;
         }
         @CustomType.Setter
         public Builder authenticationMethodTitle(@Nullable String authenticationMethodTitle) {
+
             this.authenticationMethodTitle = authenticationMethodTitle;
             return this;
         }
         @CustomType.Setter
         public Builder awsAccessKeyId(@Nullable String awsAccessKeyId) {
+
             this.awsAccessKeyId = awsAccessKeyId;
             return this;
         }
         @CustomType.Setter
         public Builder awsAccessKeyVersionGuid(@Nullable String awsAccessKeyVersionGuid) {
+
             this.awsAccessKeyVersionGuid = awsAccessKeyVersionGuid;
             return this;
         }
         @CustomType.Setter
         public Builder awsHost(@Nullable String awsHost) {
+
             this.awsHost = awsHost;
             return this;
         }
         @CustomType.Setter
         public Builder awsRegion(@Nullable String awsRegion) {
+
             this.awsRegion = awsRegion;
             return this;
         }
         @CustomType.Setter
         public Builder awsSecretAccessKey(@Nullable String awsSecretAccessKey) {
+
             this.awsSecretAccessKey = awsSecretAccessKey;
             return this;
         }
         @CustomType.Setter
         public Builder awsService(@Nullable String awsService) {
+
             this.awsService = awsService;
             return this;
         }
         @CustomType.Setter
         public Builder country(@Nullable String country) {
+
             this.country = country;
             return this;
         }
         @CustomType.Setter
         public Builder customSignStrings(@Nullable List<String> customSignStrings) {
+
             this.customSignStrings = customSignStrings;
             return this;
         }
@@ -246,66 +258,79 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginCharacteri
         }
         @CustomType.Setter
         public Builder directConnectGeo(@Nullable String directConnectGeo) {
+
             this.directConnectGeo = directConnectGeo;
             return this;
         }
         @CustomType.Setter
         public Builder encodingVersion(@Nullable Integer encodingVersion) {
+
             this.encodingVersion = encodingVersion;
             return this;
         }
         @CustomType.Setter
         public Builder gcsAccessKeyVersionGuid(@Nullable String gcsAccessKeyVersionGuid) {
+
             this.gcsAccessKeyVersionGuid = gcsAccessKeyVersionGuid;
             return this;
         }
         @CustomType.Setter
         public Builder gcsHmacKeyAccessId(@Nullable String gcsHmacKeyAccessId) {
+
             this.gcsHmacKeyAccessId = gcsHmacKeyAccessId;
             return this;
         }
         @CustomType.Setter
         public Builder gcsHmacKeySecret(@Nullable String gcsHmacKeySecret) {
+
             this.gcsHmacKeySecret = gcsHmacKeySecret;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder mslkey(@Nullable String mslkey) {
+
             this.mslkey = mslkey;
             return this;
         }
         @CustomType.Setter
         public Builder mslname(@Nullable String mslname) {
+
             this.mslname = mslname;
             return this;
         }
         @CustomType.Setter
         public Builder nonce(@Nullable String nonce) {
+
             this.nonce = nonce;
             return this;
         }
         @CustomType.Setter
         public Builder secretKey(@Nullable String secretKey) {
+
             this.secretKey = secretKey;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder useCustomSignString(@Nullable Boolean useCustomSignString) {
+
             this.useCustomSignString = useCustomSignString;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

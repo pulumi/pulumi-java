@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -89,52 +90,82 @@ public final class GetPropertiesProperty {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder latestVersion(Integer latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            if (latestVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "latestVersion");
+            }
+            this.latestVersion = latestVersion;
             return this;
         }
         @CustomType.Setter
         public Builder note(String note) {
-            this.note = Objects.requireNonNull(note);
+            if (note == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "note");
+            }
+            this.note = note;
             return this;
         }
         @CustomType.Setter
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            if (productId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "productId");
+            }
+            this.productId = productId;
             return this;
         }
         @CustomType.Setter
         public Builder productionVersion(Integer productionVersion) {
-            this.productionVersion = Objects.requireNonNull(productionVersion);
+            if (productionVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "productionVersion");
+            }
+            this.productionVersion = productionVersion;
             return this;
         }
         @CustomType.Setter
         public Builder propertyId(String propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         @CustomType.Setter
         public Builder propertyName(String propertyName) {
-            this.propertyName = Objects.requireNonNull(propertyName);
+            if (propertyName == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "propertyName");
+            }
+            this.propertyName = propertyName;
             return this;
         }
         @CustomType.Setter
         public Builder ruleFormat(String ruleFormat) {
-            this.ruleFormat = Objects.requireNonNull(ruleFormat);
+            if (ruleFormat == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "ruleFormat");
+            }
+            this.ruleFormat = ruleFormat;
             return this;
         }
         @CustomType.Setter
         public Builder stagingVersion(Integer stagingVersion) {
-            this.stagingVersion = Objects.requireNonNull(stagingVersion);
+            if (stagingVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesProperty", "stagingVersion");
+            }
+            this.stagingVersion = stagingVersion;
             return this;
         }
         public GetPropertiesProperty build() {

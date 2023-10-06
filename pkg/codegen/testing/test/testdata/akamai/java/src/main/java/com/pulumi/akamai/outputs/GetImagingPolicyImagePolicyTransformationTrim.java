@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyTransformationTrim {
 
         @CustomType.Setter
         public Builder fuzz(@Nullable String fuzz) {
+
             this.fuzz = fuzz;
             return this;
         }
         @CustomType.Setter
         public Builder fuzzVar(@Nullable String fuzzVar) {
+
             this.fuzzVar = fuzzVar;
             return this;
         }
         @CustomType.Setter
         public Builder padding(@Nullable String padding) {
+
             this.padding = padding;
             return this;
         }
         @CustomType.Setter
         public Builder paddingVar(@Nullable String paddingVar) {
+
             this.paddingVar = paddingVar;
             return this;
         }

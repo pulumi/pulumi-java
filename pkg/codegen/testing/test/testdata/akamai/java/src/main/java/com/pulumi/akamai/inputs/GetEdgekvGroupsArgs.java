@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -71,8 +72,12 @@ public final class GetEdgekvGroupsArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         public GetEdgekvGroupsArgs build() {
-            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
-            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            if ($.namespaceName == null) {
+                throw new MissingRequiredPropertyException("GetEdgekvGroupsArgs", "namespaceName");
+            }
+            if ($.network == null) {
+                throw new MissingRequiredPropertyException("GetEdgekvGroupsArgs", "network");
+            }
             return $;
         }
     }

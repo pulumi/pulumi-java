@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -34,7 +35,10 @@ public final class DatastreamDeliveryConfigurationFrequency {
 
         @CustomType.Setter
         public Builder intervalInSecs(Integer intervalInSecs) {
-            this.intervalInSecs = Objects.requireNonNull(intervalInSecs);
+            if (intervalInSecs == null) {
+              throw new MissingRequiredPropertyException("DatastreamDeliveryConfigurationFrequency", "intervalInSecs");
+            }
+            this.intervalInSecs = intervalInSecs;
             return this;
         }
         public DatastreamDeliveryConfigurationFrequency build() {

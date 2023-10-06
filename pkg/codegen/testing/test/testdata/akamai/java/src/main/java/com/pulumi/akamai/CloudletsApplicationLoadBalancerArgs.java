@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.CloudletsApplicationLoadBalancerDataCenterArgs;
 import com.pulumi.akamai.inputs.CloudletsApplicationLoadBalancerLivenessSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -227,8 +228,12 @@ public final class CloudletsApplicationLoadBalancerArgs extends com.pulumi.resou
         }
 
         public CloudletsApplicationLoadBalancerArgs build() {
-            $.dataCenters = Objects.requireNonNull($.dataCenters, "expected parameter 'dataCenters' to be non-null");
-            $.originId = Objects.requireNonNull($.originId, "expected parameter 'originId' to be non-null");
+            if ($.dataCenters == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerArgs", "dataCenters");
+            }
+            if ($.originId == null) {
+                throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerArgs", "originId");
+            }
             return $;
         }
     }

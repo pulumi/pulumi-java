@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,12 +57,18 @@ public final class GetBotmanCustomClientSequenceResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetBotmanCustomClientSequenceResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder customClientIds(List<String> customClientIds) {
-            this.customClientIds = Objects.requireNonNull(customClientIds);
+            if (customClientIds == null) {
+              throw new MissingRequiredPropertyException("GetBotmanCustomClientSequenceResult", "customClientIds");
+            }
+            this.customClientIds = customClientIds;
             return this;
         }
         public Builder customClientIds(String... customClientIds) {
@@ -69,7 +76,10 @@ public final class GetBotmanCustomClientSequenceResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetBotmanCustomClientSequenceResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetBotmanCustomClientSequenceResult build() {

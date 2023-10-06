@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,17 +56,26 @@ public final class GetIamStatesResult {
 
         @CustomType.Setter
         public Builder country(String country) {
-            this.country = Objects.requireNonNull(country);
+            if (country == null) {
+              throw new MissingRequiredPropertyException("GetIamStatesResult", "country");
+            }
+            this.country = country;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetIamStatesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder states(List<String> states) {
-            this.states = Objects.requireNonNull(states);
+            if (states == null) {
+              throw new MissingRequiredPropertyException("GetIamStatesResult", "states");
+            }
+            this.states = states;
             return this;
         }
         public Builder states(String... states) {

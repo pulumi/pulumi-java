@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -96,8 +97,12 @@ public final class GetAppSecExportConfigurationArgs extends com.pulumi.resources
         }
 
         public GetAppSecExportConfigurationArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("GetAppSecExportConfigurationArgs", "configId");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("GetAppSecExportConfigurationArgs", "version");
+            }
             return $;
         }
     }

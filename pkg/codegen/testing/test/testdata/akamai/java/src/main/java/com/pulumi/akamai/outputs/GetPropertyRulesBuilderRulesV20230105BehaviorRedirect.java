@@ -128,81 +128,97 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorRedirect {
 
         @CustomType.Setter
         public Builder destinationHostname(@Nullable String destinationHostname) {
+
             this.destinationHostname = destinationHostname;
             return this;
         }
         @CustomType.Setter
         public Builder destinationHostnameOther(@Nullable String destinationHostnameOther) {
+
             this.destinationHostnameOther = destinationHostnameOther;
             return this;
         }
         @CustomType.Setter
         public Builder destinationHostnameSibling(@Nullable String destinationHostnameSibling) {
+
             this.destinationHostnameSibling = destinationHostnameSibling;
             return this;
         }
         @CustomType.Setter
         public Builder destinationHostnameSubdomain(@Nullable String destinationHostnameSubdomain) {
+
             this.destinationHostnameSubdomain = destinationHostnameSubdomain;
             return this;
         }
         @CustomType.Setter
         public Builder destinationPath(@Nullable String destinationPath) {
+
             this.destinationPath = destinationPath;
             return this;
         }
         @CustomType.Setter
         public Builder destinationPathOther(@Nullable String destinationPathOther) {
+
             this.destinationPathOther = destinationPathOther;
             return this;
         }
         @CustomType.Setter
         public Builder destinationPathPrefix(@Nullable String destinationPathPrefix) {
+
             this.destinationPathPrefix = destinationPathPrefix;
             return this;
         }
         @CustomType.Setter
         public Builder destinationPathSuffix(@Nullable String destinationPathSuffix) {
+
             this.destinationPathSuffix = destinationPathSuffix;
             return this;
         }
         @CustomType.Setter
         public Builder destinationPathSuffixStatus(@Nullable String destinationPathSuffixStatus) {
+
             this.destinationPathSuffixStatus = destinationPathSuffixStatus;
             return this;
         }
         @CustomType.Setter
         public Builder destinationProtocol(@Nullable String destinationProtocol) {
+
             this.destinationProtocol = destinationProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder mobileDefaultChoice(@Nullable String mobileDefaultChoice) {
+
             this.mobileDefaultChoice = mobileDefaultChoice;
             return this;
         }
         @CustomType.Setter
         public Builder queryString(@Nullable String queryString) {
+
             this.queryString = queryString;
             return this;
         }
         @CustomType.Setter
         public Builder responseCode(@Nullable Integer responseCode) {
+
             this.responseCode = responseCode;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

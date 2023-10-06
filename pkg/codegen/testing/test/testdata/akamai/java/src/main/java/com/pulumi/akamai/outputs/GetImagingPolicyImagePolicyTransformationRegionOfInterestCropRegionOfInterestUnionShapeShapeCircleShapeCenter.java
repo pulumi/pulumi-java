@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
 
         @CustomType.Setter
         public Builder x(@Nullable String x) {
+
             this.x = x;
             return this;
         }
         @CustomType.Setter
         public Builder xVar(@Nullable String xVar) {
+
             this.xVar = xVar;
             return this;
         }
         @CustomType.Setter
         public Builder y(@Nullable String y) {
+
             this.y = y;
             return this;
         }
         @CustomType.Setter
         public Builder yVar(@Nullable String yVar) {
+
             this.yVar = yVar;
             return this;
         }

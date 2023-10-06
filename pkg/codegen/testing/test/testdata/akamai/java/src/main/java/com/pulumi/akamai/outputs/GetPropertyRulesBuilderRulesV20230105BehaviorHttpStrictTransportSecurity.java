@@ -86,46 +86,55 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorHttpStrictTransp
 
         @CustomType.Setter
         public Builder enable(@Nullable Boolean enable) {
+
             this.enable = enable;
             return this;
         }
         @CustomType.Setter
         public Builder includeSubDomains(@Nullable Boolean includeSubDomains) {
+
             this.includeSubDomains = includeSubDomains;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder maxAge(@Nullable String maxAge) {
+
             this.maxAge = maxAge;
             return this;
         }
         @CustomType.Setter
         public Builder preload(@Nullable Boolean preload) {
+
             this.preload = preload;
             return this;
         }
         @CustomType.Setter
         public Builder redirect(@Nullable Boolean redirect) {
+
             this.redirect = redirect;
             return this;
         }
         @CustomType.Setter
         public Builder redirectStatusCode(@Nullable Integer redirectStatusCode) {
+
             this.redirectStatusCode = redirectStatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

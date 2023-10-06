@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -55,17 +56,26 @@ public final class GetEdgeWorkersPropertyRulesResult {
 
         @CustomType.Setter
         public Builder edgeworkerId(Integer edgeworkerId) {
-            this.edgeworkerId = Objects.requireNonNull(edgeworkerId);
+            if (edgeworkerId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersPropertyRulesResult", "edgeworkerId");
+            }
+            this.edgeworkerId = edgeworkerId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersPropertyRulesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersPropertyRulesResult", "json");
+            }
+            this.json = json;
             return this;
         }
         public GetEdgeWorkersPropertyRulesResult build() {

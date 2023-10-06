@@ -109,66 +109,79 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorVerifyTokenAutho
 
         @CustomType.Setter
         public Builder algorithm(@Nullable String algorithm) {
+
             this.algorithm = algorithm;
             return this;
         }
         @CustomType.Setter
         public Builder escapeHmacInputs(@Nullable Boolean escapeHmacInputs) {
+
             this.escapeHmacInputs = escapeHmacInputs;
             return this;
         }
         @CustomType.Setter
         public Builder failureResponse(@Nullable Boolean failureResponse) {
+
             this.failureResponse = failureResponse;
             return this;
         }
         @CustomType.Setter
         public Builder ignoreQueryString(@Nullable Boolean ignoreQueryString) {
+
             this.ignoreQueryString = ignoreQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder key(@Nullable String key) {
+
             this.key = key;
             return this;
         }
         @CustomType.Setter
         public Builder location(@Nullable String location) {
+
             this.location = location;
             return this;
         }
         @CustomType.Setter
         public Builder locationId(@Nullable String locationId) {
+
             this.locationId = locationId;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder salt(@Nullable String salt) {
+
             this.salt = salt;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder transitionKey(@Nullable String transitionKey) {
+
             this.transitionKey = transitionKey;
             return this;
         }
         @CustomType.Setter
         public Builder useAdvanced(@Nullable Boolean useAdvanced) {
+
             this.useAdvanced = useAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

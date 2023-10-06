@@ -66,31 +66,37 @@ public final class GetImagingPolicyImagePolicyTransformationUnsharpMask {
 
         @CustomType.Setter
         public Builder gain(@Nullable String gain) {
+
             this.gain = gain;
             return this;
         }
         @CustomType.Setter
         public Builder gainVar(@Nullable String gainVar) {
+
             this.gainVar = gainVar;
             return this;
         }
         @CustomType.Setter
         public Builder sigma(@Nullable String sigma) {
+
             this.sigma = sigma;
             return this;
         }
         @CustomType.Setter
         public Builder sigmaVar(@Nullable String sigmaVar) {
+
             this.sigmaVar = sigmaVar;
             return this;
         }
         @CustomType.Setter
         public Builder threshold(@Nullable String threshold) {
+
             this.threshold = threshold;
             return this;
         }
         @CustomType.Setter
         public Builder thresholdVar(@Nullable String thresholdVar) {
+
             this.thresholdVar = thresholdVar;
             return this;
         }

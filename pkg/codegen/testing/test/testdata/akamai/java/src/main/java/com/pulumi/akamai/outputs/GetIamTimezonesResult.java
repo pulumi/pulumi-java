@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetIamTimezonesTimezone;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,12 +51,18 @@ public final class GetIamTimezonesResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetIamTimezonesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder timezones(List<GetIamTimezonesTimezone> timezones) {
-            this.timezones = Objects.requireNonNull(timezones);
+            if (timezones == null) {
+              throw new MissingRequiredPropertyException("GetIamTimezonesResult", "timezones");
+            }
+            this.timezones = timezones;
             return this;
         }
         public Builder timezones(GetIamTimezonesTimezone... timezones) {

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -49,6 +50,7 @@ public final class GtmCidrmapAssignment {
 
         @CustomType.Setter
         public Builder blocks(@Nullable List<String> blocks) {
+
             this.blocks = blocks;
             return this;
         }
@@ -57,12 +59,18 @@ public final class GtmCidrmapAssignment {
         }
         @CustomType.Setter
         public Builder datacenterId(Integer datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            if (datacenterId == null) {
+              throw new MissingRequiredPropertyException("GtmCidrmapAssignment", "datacenterId");
+            }
+            this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder nickname(String nickname) {
-            this.nickname = Objects.requireNonNull(nickname);
+            if (nickname == null) {
+              throw new MissingRequiredPropertyException("GtmCidrmapAssignment", "nickname");
+            }
+            this.nickname = nickname;
             return this;
         }
         public GtmCidrmapAssignment build() {

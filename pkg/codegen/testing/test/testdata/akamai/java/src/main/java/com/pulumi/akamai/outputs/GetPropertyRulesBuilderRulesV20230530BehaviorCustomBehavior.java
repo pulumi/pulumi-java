@@ -55,21 +55,25 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorCustomBehavior {
 
         @CustomType.Setter
         public Builder behaviorId(@Nullable String behaviorId) {
+
             this.behaviorId = behaviorId;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

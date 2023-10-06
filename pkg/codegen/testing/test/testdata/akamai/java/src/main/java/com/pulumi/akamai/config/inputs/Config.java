@@ -4,6 +4,7 @@
 package com.pulumi.akamai.config.inputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,31 +68,45 @@ public final class Config {
 
         @CustomType.Setter
         public Builder accessToken(String accessToken) {
-            this.accessToken = Objects.requireNonNull(accessToken);
+            if (accessToken == null) {
+              throw new MissingRequiredPropertyException("Config", "accessToken");
+            }
+            this.accessToken = accessToken;
             return this;
         }
         @CustomType.Setter
         public Builder accountKey(@Nullable String accountKey) {
+
             this.accountKey = accountKey;
             return this;
         }
         @CustomType.Setter
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            if (clientSecret == null) {
+              throw new MissingRequiredPropertyException("Config", "clientSecret");
+            }
+            this.clientSecret = clientSecret;
             return this;
         }
         @CustomType.Setter
         public Builder clientToken(String clientToken) {
-            this.clientToken = Objects.requireNonNull(clientToken);
+            if (clientToken == null) {
+              throw new MissingRequiredPropertyException("Config", "clientToken");
+            }
+            this.clientToken = clientToken;
             return this;
         }
         @CustomType.Setter
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            if (host == null) {
+              throw new MissingRequiredPropertyException("Config", "host");
+            }
+            this.host = host;
             return this;
         }
         @CustomType.Setter
         public Builder maxBody(@Nullable Integer maxBody) {
+
             this.maxBody = maxBody;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationsConfigurationLocationCapacity;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -90,10 +91,18 @@ public final class GetCloudwrapperConfigurationsConfigurationLocation extends co
         }
 
         public GetCloudwrapperConfigurationsConfigurationLocation build() {
-            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
-            $.comments = Objects.requireNonNull($.comments, "expected parameter 'comments' to be non-null");
-            $.mapName = Objects.requireNonNull($.mapName, "expected parameter 'mapName' to be non-null");
-            $.trafficTypeId = Objects.requireNonNull($.trafficTypeId, "expected parameter 'trafficTypeId' to be non-null");
+            if ($.capacity == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "capacity");
+            }
+            if ($.comments == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "comments");
+            }
+            if ($.mapName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "mapName");
+            }
+            if ($.trafficTypeId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationLocation", "trafficTypeId");
+            }
             return $;
         }
     }

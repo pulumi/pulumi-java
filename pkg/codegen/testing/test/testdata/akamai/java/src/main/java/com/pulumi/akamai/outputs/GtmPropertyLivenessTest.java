@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GtmPropertyLivenessTestHttpHeader;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -179,41 +180,49 @@ public final class GtmPropertyLivenessTest {
 
         @CustomType.Setter
         public Builder answersRequired(@Nullable Boolean answersRequired) {
+
             this.answersRequired = answersRequired;
             return this;
         }
         @CustomType.Setter
         public Builder disableNonstandardPortWarning(@Nullable Boolean disableNonstandardPortWarning) {
+
             this.disableNonstandardPortWarning = disableNonstandardPortWarning;
             return this;
         }
         @CustomType.Setter
         public Builder disabled(@Nullable Boolean disabled) {
+
             this.disabled = disabled;
             return this;
         }
         @CustomType.Setter
         public Builder errorPenalty(@Nullable Double errorPenalty) {
+
             this.errorPenalty = errorPenalty;
             return this;
         }
         @CustomType.Setter
         public Builder httpError3xx(@Nullable Boolean httpError3xx) {
+
             this.httpError3xx = httpError3xx;
             return this;
         }
         @CustomType.Setter
         public Builder httpError4xx(@Nullable Boolean httpError4xx) {
+
             this.httpError4xx = httpError4xx;
             return this;
         }
         @CustomType.Setter
         public Builder httpError5xx(@Nullable Boolean httpError5xx) {
+
             this.httpError5xx = httpError5xx;
             return this;
         }
         @CustomType.Setter
         public Builder httpHeaders(@Nullable List<GtmPropertyLivenessTestHttpHeader> httpHeaders) {
+
             this.httpHeaders = httpHeaders;
             return this;
         }
@@ -222,81 +231,105 @@ public final class GtmPropertyLivenessTest {
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GtmPropertyLivenessTest", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder peerCertificateVerification(@Nullable Boolean peerCertificateVerification) {
+
             this.peerCertificateVerification = peerCertificateVerification;
             return this;
         }
         @CustomType.Setter
         public Builder recursionRequested(@Nullable Boolean recursionRequested) {
+
             this.recursionRequested = recursionRequested;
             return this;
         }
         @CustomType.Setter
         public Builder requestString(@Nullable String requestString) {
+
             this.requestString = requestString;
             return this;
         }
         @CustomType.Setter
         public Builder resourceType(@Nullable String resourceType) {
+
             this.resourceType = resourceType;
             return this;
         }
         @CustomType.Setter
         public Builder responseString(@Nullable String responseString) {
+
             this.responseString = responseString;
             return this;
         }
         @CustomType.Setter
         public Builder sslClientCertificate(@Nullable String sslClientCertificate) {
+
             this.sslClientCertificate = sslClientCertificate;
             return this;
         }
         @CustomType.Setter
         public Builder sslClientPrivateKey(@Nullable String sslClientPrivateKey) {
+
             this.sslClientPrivateKey = sslClientPrivateKey;
             return this;
         }
         @CustomType.Setter
         public Builder testInterval(Integer testInterval) {
-            this.testInterval = Objects.requireNonNull(testInterval);
+            if (testInterval == null) {
+              throw new MissingRequiredPropertyException("GtmPropertyLivenessTest", "testInterval");
+            }
+            this.testInterval = testInterval;
             return this;
         }
         @CustomType.Setter
         public Builder testObject(@Nullable String testObject) {
+
             this.testObject = testObject;
             return this;
         }
         @CustomType.Setter
         public Builder testObjectPassword(@Nullable String testObjectPassword) {
+
             this.testObjectPassword = testObjectPassword;
             return this;
         }
         @CustomType.Setter
         public Builder testObjectPort(@Nullable Integer testObjectPort) {
+
             this.testObjectPort = testObjectPort;
             return this;
         }
         @CustomType.Setter
         public Builder testObjectProtocol(String testObjectProtocol) {
-            this.testObjectProtocol = Objects.requireNonNull(testObjectProtocol);
+            if (testObjectProtocol == null) {
+              throw new MissingRequiredPropertyException("GtmPropertyLivenessTest", "testObjectProtocol");
+            }
+            this.testObjectProtocol = testObjectProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder testObjectUsername(@Nullable String testObjectUsername) {
+
             this.testObjectUsername = testObjectUsername;
             return this;
         }
         @CustomType.Setter
         public Builder testTimeout(Double testTimeout) {
-            this.testTimeout = Objects.requireNonNull(testTimeout);
+            if (testTimeout == null) {
+              throw new MissingRequiredPropertyException("GtmPropertyLivenessTest", "testTimeout");
+            }
+            this.testTimeout = testTimeout;
             return this;
         }
         @CustomType.Setter
         public Builder timeoutPenalty(@Nullable Double timeoutPenalty) {
+
             this.timeoutPenalty = timeoutPenalty;
             return this;
         }

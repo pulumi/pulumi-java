@@ -104,26 +104,31 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCorsSupport {
 
         @CustomType.Setter
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
+
             this.allowCredentials = allowCredentials;
             return this;
         }
         @CustomType.Setter
         public Builder allowHeaders(@Nullable String allowHeaders) {
+
             this.allowHeaders = allowHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder allowOrigins(@Nullable String allowOrigins) {
+
             this.allowOrigins = allowOrigins;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
+
             this.exposeHeaders = exposeHeaders;
             return this;
         }
@@ -132,6 +137,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCorsSupport {
         }
         @CustomType.Setter
         public Builder headers(@Nullable List<String> headers) {
+
             this.headers = headers;
             return this;
         }
@@ -140,11 +146,13 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCorsSupport {
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder methods(@Nullable List<String> methods) {
+
             this.methods = methods;
             return this;
         }
@@ -153,6 +161,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCorsSupport {
         }
         @CustomType.Setter
         public Builder origins(@Nullable List<String> origins) {
+
             this.origins = origins;
             return this;
         }
@@ -161,16 +170,19 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorCorsSupport {
         }
         @CustomType.Setter
         public Builder preflightMaxAge(@Nullable String preflightMaxAge) {
+
             this.preflightMaxAge = preflightMaxAge;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

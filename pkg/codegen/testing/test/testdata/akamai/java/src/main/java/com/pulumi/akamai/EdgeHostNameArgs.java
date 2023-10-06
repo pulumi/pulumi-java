@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -227,10 +228,18 @@ public final class EdgeHostNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public EdgeHostNameArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.edgeHostname = Objects.requireNonNull($.edgeHostname, "expected parameter 'edgeHostname' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.ipBehavior = Objects.requireNonNull($.ipBehavior, "expected parameter 'ipBehavior' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("EdgeHostNameArgs", "contractId");
+            }
+            if ($.edgeHostname == null) {
+                throw new MissingRequiredPropertyException("EdgeHostNameArgs", "edgeHostname");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("EdgeHostNameArgs", "groupId");
+            }
+            if ($.ipBehavior == null) {
+                throw new MissingRequiredPropertyException("EdgeHostNameArgs", "ipBehavior");
+            }
             return $;
         }
     }

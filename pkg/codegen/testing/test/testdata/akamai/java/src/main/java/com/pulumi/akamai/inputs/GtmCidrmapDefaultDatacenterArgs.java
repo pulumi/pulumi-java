@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +75,9 @@ public final class GtmCidrmapDefaultDatacenterArgs extends com.pulumi.resources.
         }
 
         public GtmCidrmapDefaultDatacenterArgs build() {
-            $.datacenterId = Objects.requireNonNull($.datacenterId, "expected parameter 'datacenterId' to be non-null");
+            if ($.datacenterId == null) {
+                throw new MissingRequiredPropertyException("GtmCidrmapDefaultDatacenterArgs", "datacenterId");
+            }
             return $;
         }
     }

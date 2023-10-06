@@ -73,36 +73,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorScheduleInvalida
 
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder refreshMethod(@Nullable String refreshMethod) {
+
             this.refreshMethod = refreshMethod;
             return this;
         }
         @CustomType.Setter
         public Builder repeat(@Nullable Boolean repeat) {
+
             this.repeat = repeat;
             return this;
         }
         @CustomType.Setter
         public Builder repeatInterval(@Nullable String repeatInterval) {
+
             this.repeatInterval = repeatInterval;
             return this;
         }
         @CustomType.Setter
         public Builder start(@Nullable String start) {
+
             this.start = start;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

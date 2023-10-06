@@ -42,11 +42,13 @@ public final class GetImagingPolicyImagePolicyTransformationBlur {
 
         @CustomType.Setter
         public Builder sigma(@Nullable String sigma) {
+
             this.sigma = sigma;
             return this;
         }
         @CustomType.Setter
         public Builder sigmaVar(@Nullable String sigmaVar) {
+
             this.sigmaVar = sigmaVar;
             return this;
         }

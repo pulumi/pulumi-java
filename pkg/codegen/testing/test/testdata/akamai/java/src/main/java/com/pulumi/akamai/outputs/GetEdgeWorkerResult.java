@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -94,47 +95,72 @@ public final class GetEdgeWorkerResult {
 
         @CustomType.Setter
         public Builder edgeworkerId(Integer edgeworkerId) {
-            this.edgeworkerId = Objects.requireNonNull(edgeworkerId);
+            if (edgeworkerId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "edgeworkerId");
+            }
+            this.edgeworkerId = edgeworkerId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder localBundle(@Nullable String localBundle) {
+
             this.localBundle = localBundle;
             return this;
         }
         @CustomType.Setter
         public Builder localBundleHash(String localBundleHash) {
-            this.localBundleHash = Objects.requireNonNull(localBundleHash);
+            if (localBundleHash == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "localBundleHash");
+            }
+            this.localBundleHash = localBundleHash;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder resourceTierId(Integer resourceTierId) {
-            this.resourceTierId = Objects.requireNonNull(resourceTierId);
+            if (resourceTierId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "resourceTierId");
+            }
+            this.resourceTierId = resourceTierId;
             return this;
         }
         @CustomType.Setter
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "version");
+            }
+            this.version = version;
             return this;
         }
         @CustomType.Setter
         public Builder warnings(List<String> warnings) {
-            this.warnings = Objects.requireNonNull(warnings);
+            if (warnings == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerResult", "warnings");
+            }
+            this.warnings = warnings;
             return this;
         }
         public Builder warnings(String... warnings) {

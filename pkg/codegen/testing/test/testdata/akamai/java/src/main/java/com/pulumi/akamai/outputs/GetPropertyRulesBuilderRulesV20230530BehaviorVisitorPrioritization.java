@@ -288,106 +288,127 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritiz
 
         @CustomType.Setter
         public Builder allowedUserCookieAdvanced(@Nullable Boolean allowedUserCookieAdvanced) {
+
             this.allowedUserCookieAdvanced = allowedUserCookieAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieAutomaticSalt(@Nullable Boolean allowedUserCookieAutomaticSalt) {
+
             this.allowedUserCookieAutomaticSalt = allowedUserCookieAutomaticSalt;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieDomain(@Nullable String allowedUserCookieDomain) {
+
             this.allowedUserCookieDomain = allowedUserCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieDomainType(@Nullable String allowedUserCookieDomainType) {
+
             this.allowedUserCookieDomainType = allowedUserCookieDomainType;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieDuration(@Nullable Integer allowedUserCookieDuration) {
+
             this.allowedUserCookieDuration = allowedUserCookieDuration;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieEnabled(@Nullable Boolean allowedUserCookieEnabled) {
+
             this.allowedUserCookieEnabled = allowedUserCookieEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieHttpOnly(@Nullable Boolean allowedUserCookieHttpOnly) {
+
             this.allowedUserCookieHttpOnly = allowedUserCookieHttpOnly;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieLabel(@Nullable String allowedUserCookieLabel) {
+
             this.allowedUserCookieLabel = allowedUserCookieLabel;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieManagementTitle(@Nullable String allowedUserCookieManagementTitle) {
+
             this.allowedUserCookieManagementTitle = allowedUserCookieManagementTitle;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieRefresh(@Nullable Boolean allowedUserCookieRefresh) {
+
             this.allowedUserCookieRefresh = allowedUserCookieRefresh;
             return this;
         }
         @CustomType.Setter
         public Builder allowedUserCookieSalt(@Nullable String allowedUserCookieSalt) {
+
             this.allowedUserCookieSalt = allowedUserCookieSalt;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritizationCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByCookie(@Nullable Boolean userIdentificationByCookie) {
+
             this.userIdentificationByCookie = userIdentificationByCookie;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByHeaders(@Nullable Boolean userIdentificationByHeaders) {
+
             this.userIdentificationByHeaders = userIdentificationByHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByIp(@Nullable Boolean userIdentificationByIp) {
+
             this.userIdentificationByIp = userIdentificationByIp;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationByParams(@Nullable Boolean userIdentificationByParams) {
+
             this.userIdentificationByParams = userIdentificationByParams;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationKeyCookie(@Nullable String userIdentificationKeyCookie) {
+
             this.userIdentificationKeyCookie = userIdentificationKeyCookie;
             return this;
         }
         @CustomType.Setter
         public Builder userIdentificationKeyHeaders(@Nullable List<String> userIdentificationKeyHeaders) {
+
             this.userIdentificationKeyHeaders = userIdentificationKeyHeaders;
             return this;
         }
@@ -396,6 +417,7 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritiz
         }
         @CustomType.Setter
         public Builder userIdentificationKeyParams(@Nullable List<String> userIdentificationKeyParams) {
+
             this.userIdentificationKeyParams = userIdentificationKeyParams;
             return this;
         }
@@ -404,101 +426,121 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritiz
         }
         @CustomType.Setter
         public Builder userIdentificationTitle(@Nullable String userIdentificationTitle) {
+
             this.userIdentificationTitle = userIdentificationTitle;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCacheTtl(@Nullable Integer waitingRoomCacheTtl) {
+
             this.waitingRoomCacheTtl = waitingRoomCacheTtl;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieAdvanced(@Nullable Boolean waitingRoomCookieAdvanced) {
+
             this.waitingRoomCookieAdvanced = waitingRoomCookieAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieAutomaticSalt(@Nullable Boolean waitingRoomCookieAutomaticSalt) {
+
             this.waitingRoomCookieAutomaticSalt = waitingRoomCookieAutomaticSalt;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieDomain(@Nullable String waitingRoomCookieDomain) {
+
             this.waitingRoomCookieDomain = waitingRoomCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieDomainType(@Nullable String waitingRoomCookieDomainType) {
+
             this.waitingRoomCookieDomainType = waitingRoomCookieDomainType;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieDuration(@Nullable Integer waitingRoomCookieDuration) {
+
             this.waitingRoomCookieDuration = waitingRoomCookieDuration;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieEnabled(@Nullable Boolean waitingRoomCookieEnabled) {
+
             this.waitingRoomCookieEnabled = waitingRoomCookieEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieHttpOnly(@Nullable Boolean waitingRoomCookieHttpOnly) {
+
             this.waitingRoomCookieHttpOnly = waitingRoomCookieHttpOnly;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieLabel(@Nullable String waitingRoomCookieLabel) {
+
             this.waitingRoomCookieLabel = waitingRoomCookieLabel;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieManagementTitle(@Nullable String waitingRoomCookieManagementTitle) {
+
             this.waitingRoomCookieManagementTitle = waitingRoomCookieManagementTitle;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieSalt(@Nullable String waitingRoomCookieSalt) {
+
             this.waitingRoomCookieSalt = waitingRoomCookieSalt;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCookieShareLabel(@Nullable Boolean waitingRoomCookieShareLabel) {
+
             this.waitingRoomCookieShareLabel = waitingRoomCookieShareLabel;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomCpCode(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritizationWaitingRoomCpCode waitingRoomCpCode) {
+
             this.waitingRoomCpCode = waitingRoomCpCode;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomDirectory(@Nullable String waitingRoomDirectory) {
+
             this.waitingRoomDirectory = waitingRoomDirectory;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomManagementTitle(@Nullable String waitingRoomManagementTitle) {
+
             this.waitingRoomManagementTitle = waitingRoomManagementTitle;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomNetStorage(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorVisitorPrioritizationWaitingRoomNetStorage waitingRoomNetStorage) {
+
             this.waitingRoomNetStorage = waitingRoomNetStorage;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomStatusCode(@Nullable Integer waitingRoomStatusCode) {
+
             this.waitingRoomStatusCode = waitingRoomStatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomUseCpCode(@Nullable Boolean waitingRoomUseCpCode) {
+
             this.waitingRoomUseCpCode = waitingRoomUseCpCode;
             return this;
         }

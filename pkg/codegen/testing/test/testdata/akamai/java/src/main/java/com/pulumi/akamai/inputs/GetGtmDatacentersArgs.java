@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +55,9 @@ public final class GetGtmDatacentersArgs extends com.pulumi.resources.InvokeArgs
         }
 
         public GetGtmDatacentersArgs build() {
-            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            if ($.domain == null) {
+                throw new MissingRequiredPropertyException("GetGtmDatacentersArgs", "domain");
+            }
             return $;
         }
     }

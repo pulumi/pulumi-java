@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,8 +63,12 @@ public final class GetCloudwrapperLocationPlainArgs extends com.pulumi.resources
         }
 
         public GetCloudwrapperLocationPlainArgs build() {
-            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
-            $.trafficType = Objects.requireNonNull($.trafficType, "expected parameter 'trafficType' to be non-null");
+            if ($.locationName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperLocationPlainArgs", "locationName");
+            }
+            if ($.trafficType == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperLocationPlainArgs", "trafficType");
+            }
             return $;
         }
     }

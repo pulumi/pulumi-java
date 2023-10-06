@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -102,61 +103,93 @@ public final class GetCPSEnrollmentAdminContact {
 
         @CustomType.Setter
         public Builder addressLineOne(String addressLineOne) {
-            this.addressLineOne = Objects.requireNonNull(addressLineOne);
+            if (addressLineOne == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "addressLineOne");
+            }
+            this.addressLineOne = addressLineOne;
             return this;
         }
         @CustomType.Setter
         public Builder addressLineTwo(@Nullable String addressLineTwo) {
+
             this.addressLineTwo = addressLineTwo;
             return this;
         }
         @CustomType.Setter
         public Builder city(String city) {
-            this.city = Objects.requireNonNull(city);
+            if (city == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "city");
+            }
+            this.city = city;
             return this;
         }
         @CustomType.Setter
         public Builder countryCode(String countryCode) {
-            this.countryCode = Objects.requireNonNull(countryCode);
+            if (countryCode == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "countryCode");
+            }
+            this.countryCode = countryCode;
             return this;
         }
         @CustomType.Setter
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            if (email == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "email");
+            }
+            this.email = email;
             return this;
         }
         @CustomType.Setter
         public Builder firstName(String firstName) {
-            this.firstName = Objects.requireNonNull(firstName);
+            if (firstName == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "firstName");
+            }
+            this.firstName = firstName;
             return this;
         }
         @CustomType.Setter
         public Builder lastName(String lastName) {
-            this.lastName = Objects.requireNonNull(lastName);
+            if (lastName == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "lastName");
+            }
+            this.lastName = lastName;
             return this;
         }
         @CustomType.Setter
         public Builder organization(String organization) {
-            this.organization = Objects.requireNonNull(organization);
+            if (organization == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "organization");
+            }
+            this.organization = organization;
             return this;
         }
         @CustomType.Setter
         public Builder phone(String phone) {
-            this.phone = Objects.requireNonNull(phone);
+            if (phone == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "phone");
+            }
+            this.phone = phone;
             return this;
         }
         @CustomType.Setter
         public Builder postalCode(String postalCode) {
-            this.postalCode = Objects.requireNonNull(postalCode);
+            if (postalCode == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "postalCode");
+            }
+            this.postalCode = postalCode;
             return this;
         }
         @CustomType.Setter
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            if (region == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentAdminContact", "region");
+            }
+            this.region = region;
             return this;
         }
         @CustomType.Setter
         public Builder title(@Nullable String title) {
+
             this.title = title;
             return this;
         }

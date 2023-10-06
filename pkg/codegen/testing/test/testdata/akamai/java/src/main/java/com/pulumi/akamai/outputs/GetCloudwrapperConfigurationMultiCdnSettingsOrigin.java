@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -47,17 +48,26 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsOrigin {
 
         @CustomType.Setter
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            if (hostname == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsOrigin", "hostname");
+            }
+            this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder originId(String originId) {
-            this.originId = Objects.requireNonNull(originId);
+            if (originId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsOrigin", "originId");
+            }
+            this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder propertyId(Integer propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsOrigin", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         public GetCloudwrapperConfigurationMultiCdnSettingsOrigin build() {

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -188,8 +189,12 @@ public final class EdgeWorkerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public EdgeWorkerArgs build() {
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.resourceTierId = Objects.requireNonNull($.resourceTierId, "expected parameter 'resourceTierId' to be non-null");
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("EdgeWorkerArgs", "groupId");
+            }
+            if ($.resourceTierId == null) {
+                throw new MissingRequiredPropertyException("EdgeWorkerArgs", "resourceTierId");
+            }
             return $;
         }
     }

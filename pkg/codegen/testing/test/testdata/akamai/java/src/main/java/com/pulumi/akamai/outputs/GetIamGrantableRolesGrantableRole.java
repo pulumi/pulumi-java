@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -47,17 +48,26 @@ public final class GetIamGrantableRolesGrantableRole {
 
         @CustomType.Setter
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            if (description == null) {
+              throw new MissingRequiredPropertyException("GetIamGrantableRolesGrantableRole", "description");
+            }
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder grantedRoleId(Integer grantedRoleId) {
-            this.grantedRoleId = Objects.requireNonNull(grantedRoleId);
+            if (grantedRoleId == null) {
+              throw new MissingRequiredPropertyException("GetIamGrantableRolesGrantableRole", "grantedRoleId");
+            }
+            this.grantedRoleId = grantedRoleId;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetIamGrantableRolesGrantableRole", "name");
+            }
+            this.name = name;
             return this;
         }
         public GetIamGrantableRolesGrantableRole build() {

@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -142,11 +143,21 @@ public final class DatastreamAzureConnectorArgs extends com.pulumi.resources.Res
         }
 
         public DatastreamAzureConnectorArgs build() {
-            $.accessKey = Objects.requireNonNull($.accessKey, "expected parameter 'accessKey' to be non-null");
-            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
-            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            if ($.accessKey == null) {
+                throw new MissingRequiredPropertyException("DatastreamAzureConnectorArgs", "accessKey");
+            }
+            if ($.accountName == null) {
+                throw new MissingRequiredPropertyException("DatastreamAzureConnectorArgs", "accountName");
+            }
+            if ($.containerName == null) {
+                throw new MissingRequiredPropertyException("DatastreamAzureConnectorArgs", "containerName");
+            }
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamAzureConnectorArgs", "displayName");
+            }
+            if ($.path == null) {
+                throw new MissingRequiredPropertyException("DatastreamAzureConnectorArgs", "path");
+            }
             return $;
         }
     }

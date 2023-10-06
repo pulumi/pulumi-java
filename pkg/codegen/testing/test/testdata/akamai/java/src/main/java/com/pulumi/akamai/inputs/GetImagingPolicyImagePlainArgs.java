@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetImagingPolicyImagePolicy;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.util.Objects;
 
 
@@ -49,7 +50,9 @@ public final class GetImagingPolicyImagePlainArgs extends com.pulumi.resources.I
         }
 
         public GetImagingPolicyImagePlainArgs build() {
-            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            if ($.policy == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePlainArgs", "policy");
+            }
             return $;
         }
     }

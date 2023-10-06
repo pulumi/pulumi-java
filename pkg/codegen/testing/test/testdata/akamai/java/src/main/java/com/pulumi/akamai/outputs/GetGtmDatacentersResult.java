@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetGtmDatacentersDatacenter;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,7 +57,10 @@ public final class GetGtmDatacentersResult {
 
         @CustomType.Setter
         public Builder datacenters(List<GetGtmDatacentersDatacenter> datacenters) {
-            this.datacenters = Objects.requireNonNull(datacenters);
+            if (datacenters == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacentersResult", "datacenters");
+            }
+            this.datacenters = datacenters;
             return this;
         }
         public Builder datacenters(GetGtmDatacentersDatacenter... datacenters) {
@@ -64,12 +68,18 @@ public final class GetGtmDatacentersResult {
         }
         @CustomType.Setter
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            if (domain == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacentersResult", "domain");
+            }
+            this.domain = domain;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacentersResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetGtmDatacentersResult build() {

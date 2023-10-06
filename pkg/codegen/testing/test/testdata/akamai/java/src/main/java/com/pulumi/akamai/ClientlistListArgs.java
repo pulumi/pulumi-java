@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.ClientlistListItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -321,9 +322,15 @@ public final class ClientlistListArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         public ClientlistListArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("ClientlistListArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("ClientlistListArgs", "groupId");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("ClientlistListArgs", "type");
+            }
             return $;
         }
     }

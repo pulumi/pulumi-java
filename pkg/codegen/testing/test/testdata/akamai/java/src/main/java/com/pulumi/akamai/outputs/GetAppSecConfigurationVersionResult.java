@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -81,36 +82,55 @@ public final class GetAppSecConfigurationVersionResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecConfigurationVersionResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecConfigurationVersionResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder latestVersion(Integer latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            if (latestVersion == null) {
+              throw new MissingRequiredPropertyException("GetAppSecConfigurationVersionResult", "latestVersion");
+            }
+            this.latestVersion = latestVersion;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecConfigurationVersionResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder productionStatus(String productionStatus) {
-            this.productionStatus = Objects.requireNonNull(productionStatus);
+            if (productionStatus == null) {
+              throw new MissingRequiredPropertyException("GetAppSecConfigurationVersionResult", "productionStatus");
+            }
+            this.productionStatus = productionStatus;
             return this;
         }
         @CustomType.Setter
         public Builder stagingStatus(String stagingStatus) {
-            this.stagingStatus = Objects.requireNonNull(stagingStatus);
+            if (stagingStatus == null) {
+              throw new MissingRequiredPropertyException("GetAppSecConfigurationVersionResult", "stagingStatus");
+            }
+            this.stagingStatus = stagingStatus;
             return this;
         }
         @CustomType.Setter
         public Builder version(@Nullable Integer version) {
+
             this.version = version;
             return this;
         }

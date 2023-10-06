@@ -111,46 +111,55 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionDeviceCharacter
 
         @CustomType.Setter
         public Builder booleanValue(@Nullable Boolean booleanValue) {
+
             this.booleanValue = booleanValue;
             return this;
         }
         @CustomType.Setter
         public Builder characteristic(@Nullable String characteristic) {
+
             this.characteristic = characteristic;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchCaseSensitive(@Nullable Boolean matchCaseSensitive) {
+
             this.matchCaseSensitive = matchCaseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder matchWildcard(@Nullable Boolean matchWildcard) {
+
             this.matchWildcard = matchWildcard;
             return this;
         }
         @CustomType.Setter
         public Builder numericMatchOperator(@Nullable String numericMatchOperator) {
+
             this.numericMatchOperator = numericMatchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder numericValue(@Nullable Integer numericValue) {
+
             this.numericValue = numericValue;
             return this;
         }
         @CustomType.Setter
         public Builder stringMatchOperator(@Nullable String stringMatchOperator) {
+
             this.stringMatchOperator = stringMatchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder stringValues(@Nullable List<String> stringValues) {
+
             this.stringValues = stringValues;
             return this;
         }
@@ -159,21 +168,25 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionDeviceCharacter
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder versionMatchOperator(@Nullable String versionMatchOperator) {
+
             this.versionMatchOperator = versionMatchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder versionValue(@Nullable String versionValue) {
+
             this.versionValue = versionValue;
             return this;
         }

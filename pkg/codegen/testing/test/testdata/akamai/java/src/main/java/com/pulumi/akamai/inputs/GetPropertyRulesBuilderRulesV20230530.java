@@ -8,6 +8,7 @@ import com.pulumi.akamai.inputs.GetPropertyRulesBuilderRulesV20230530Criterion;
 import com.pulumi.akamai.inputs.GetPropertyRulesBuilderRulesV20230530CustomOverride;
 import com.pulumi.akamai.inputs.GetPropertyRulesBuilderRulesV20230530Variable;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -242,7 +243,9 @@ public final class GetPropertyRulesBuilderRulesV20230530 extends com.pulumi.reso
         }
 
         public GetPropertyRulesBuilderRulesV20230530 build() {
-            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230530", "name");
+            }
             return $;
         }
     }

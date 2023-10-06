@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,8 +63,12 @@ public final class GetPropertyRulesTemplateTemplate extends com.pulumi.resources
         }
 
         public GetPropertyRulesTemplateTemplate build() {
-            $.templateData = Objects.requireNonNull($.templateData, "expected parameter 'templateData' to be non-null");
-            $.templateDir = Objects.requireNonNull($.templateDir, "expected parameter 'templateDir' to be non-null");
+            if ($.templateData == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesTemplateTemplate", "templateData");
+            }
+            if ($.templateDir == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesTemplateTemplate", "templateDir");
+            }
             return $;
         }
     }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,12 +42,18 @@ public final class GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettings {
 
         @CustomType.Setter
         public Builder originId(String originId) {
-            this.originId = Objects.requireNonNull(originId);
+            if (originId == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettings", "originId");
+            }
+            this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder percent(Integer percent) {
-            this.percent = Objects.requireNonNull(percent);
+            if (percent == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettings", "percent");
+            }
+            this.percent = percent;
             return this;
         }
         public GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettings build() {

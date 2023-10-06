@@ -98,56 +98,67 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionMatchVariable {
 
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder lowerBound(@Nullable String lowerBound) {
+
             this.lowerBound = lowerBound;
             return this;
         }
         @CustomType.Setter
         public Builder matchCaseSensitive(@Nullable Boolean matchCaseSensitive) {
+
             this.matchCaseSensitive = matchCaseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder matchWildcard(@Nullable Boolean matchWildcard) {
+
             this.matchWildcard = matchWildcard;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder upperBound(@Nullable String upperBound) {
+
             this.upperBound = upperBound;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder variableExpression(@Nullable String variableExpression) {
+
             this.variableExpression = variableExpression;
             return this;
         }
         @CustomType.Setter
         public Builder variableName(@Nullable String variableName) {
+
             this.variableName = variableName;
             return this;
         }
         @CustomType.Setter
         public Builder variableValues(@Nullable List<String> variableValues) {
+
             this.variableValues = variableValues;
             return this;
         }

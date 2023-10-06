@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -112,8 +113,12 @@ public final class AppsecAdvancedSettingsPiiLearningArgs extends com.pulumi.reso
         }
 
         public AppsecAdvancedSettingsPiiLearningArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.enablePiiLearning = Objects.requireNonNull($.enablePiiLearning, "expected parameter 'enablePiiLearning' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppsecAdvancedSettingsPiiLearningArgs", "configId");
+            }
+            if ($.enablePiiLearning == null) {
+                throw new MissingRequiredPropertyException("AppsecAdvancedSettingsPiiLearningArgs", "enablePiiLearning");
+            }
             return $;
         }
     }

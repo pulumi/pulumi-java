@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudletsEdgeRedirectorMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -100,21 +101,25 @@ public final class GetCloudletsEdgeRedirectorMatchRuleMatchRule {
 
         @CustomType.Setter
         public Builder disabled(@Nullable Boolean disabled) {
+
             this.disabled = disabled;
             return this;
         }
         @CustomType.Setter
         public Builder end(@Nullable Integer end) {
+
             this.end = end;
             return this;
         }
         @CustomType.Setter
         public Builder matchUrl(@Nullable String matchUrl) {
+
             this.matchUrl = matchUrl;
             return this;
         }
         @CustomType.Setter
         public Builder matches(@Nullable List<GetCloudletsEdgeRedirectorMatchRuleMatchRuleMatch> matches) {
+
             this.matches = matches;
             return this;
         }
@@ -123,36 +128,49 @@ public final class GetCloudletsEdgeRedirectorMatchRuleMatchRule {
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder redirectUrl(String redirectUrl) {
-            this.redirectUrl = Objects.requireNonNull(redirectUrl);
+            if (redirectUrl == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsEdgeRedirectorMatchRuleMatchRule", "redirectUrl");
+            }
+            this.redirectUrl = redirectUrl;
             return this;
         }
         @CustomType.Setter
         public Builder start(@Nullable Integer start) {
+
             this.start = start;
             return this;
         }
         @CustomType.Setter
         public Builder statusCode(Integer statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            if (statusCode == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsEdgeRedirectorMatchRuleMatchRule", "statusCode");
+            }
+            this.statusCode = statusCode;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsEdgeRedirectorMatchRuleMatchRule", "type");
+            }
+            this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder useIncomingQueryString(@Nullable Boolean useIncomingQueryString) {
+
             this.useIncomingQueryString = useIncomingQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder useRelativeUrl(@Nullable String useRelativeUrl) {
+
             this.useRelativeUrl = useRelativeUrl;
             return this;
         }

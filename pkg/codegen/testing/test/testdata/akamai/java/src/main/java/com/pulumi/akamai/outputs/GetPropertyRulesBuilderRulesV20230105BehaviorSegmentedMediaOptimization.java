@@ -97,56 +97,67 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorSegmentedMediaOp
 
         @CustomType.Setter
         public Builder behavior(@Nullable String behavior) {
+
             this.behavior = behavior;
             return this;
         }
         @CustomType.Setter
         public Builder dvrType(@Nullable String dvrType) {
+
             this.dvrType = dvrType;
             return this;
         }
         @CustomType.Setter
         public Builder dvrWindow(@Nullable String dvrWindow) {
+
             this.dvrWindow = dvrWindow;
             return this;
         }
         @CustomType.Setter
         public Builder enableUllStreaming(@Nullable Boolean enableUllStreaming) {
+
             this.enableUllStreaming = enableUllStreaming;
             return this;
         }
         @CustomType.Setter
         public Builder endTime(@Nullable String endTime) {
+
             this.endTime = endTime;
             return this;
         }
         @CustomType.Setter
         public Builder liveType(@Nullable String liveType) {
+
             this.liveType = liveType;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder showAdvanced(@Nullable Boolean showAdvanced) {
+
             this.showAdvanced = showAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder startTime(@Nullable String startTime) {
+
             this.startTime = startTime;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

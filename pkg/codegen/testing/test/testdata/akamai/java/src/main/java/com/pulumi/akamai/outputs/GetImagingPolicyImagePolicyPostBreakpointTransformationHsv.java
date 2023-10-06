@@ -66,31 +66,37 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationHsv {
 
         @CustomType.Setter
         public Builder hue(@Nullable String hue) {
+
             this.hue = hue;
             return this;
         }
         @CustomType.Setter
         public Builder hueVar(@Nullable String hueVar) {
+
             this.hueVar = hueVar;
             return this;
         }
         @CustomType.Setter
         public Builder saturation(@Nullable String saturation) {
+
             this.saturation = saturation;
             return this;
         }
         @CustomType.Setter
         public Builder saturationVar(@Nullable String saturationVar) {
+
             this.saturationVar = saturationVar;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable String value) {
+
             this.value = value;
             return this;
         }
         @CustomType.Setter
         public Builder valueVar(@Nullable String valueVar) {
+
             this.valueVar = valueVar;
             return this;
         }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -107,67 +108,106 @@ public final class GetPropertiesSearchProperty {
 
         @CustomType.Setter
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            if (accountId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "accountId");
+            }
+            this.accountId = accountId;
             return this;
         }
         @CustomType.Setter
         public Builder assetId(String assetId) {
-            this.assetId = Objects.requireNonNull(assetId);
+            if (assetId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "assetId");
+            }
+            this.assetId = assetId;
             return this;
         }
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder edgeHostname(String edgeHostname) {
-            this.edgeHostname = Objects.requireNonNull(edgeHostname);
+            if (edgeHostname == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "edgeHostname");
+            }
+            this.edgeHostname = edgeHostname;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            if (hostname == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "hostname");
+            }
+            this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder productionStatus(String productionStatus) {
-            this.productionStatus = Objects.requireNonNull(productionStatus);
+            if (productionStatus == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "productionStatus");
+            }
+            this.productionStatus = productionStatus;
             return this;
         }
         @CustomType.Setter
         public Builder propertyId(String propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         @CustomType.Setter
         public Builder propertyName(String propertyName) {
-            this.propertyName = Objects.requireNonNull(propertyName);
+            if (propertyName == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "propertyName");
+            }
+            this.propertyName = propertyName;
             return this;
         }
         @CustomType.Setter
         public Builder propertyVersion(Integer propertyVersion) {
-            this.propertyVersion = Objects.requireNonNull(propertyVersion);
+            if (propertyVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "propertyVersion");
+            }
+            this.propertyVersion = propertyVersion;
             return this;
         }
         @CustomType.Setter
         public Builder stagingStatus(String stagingStatus) {
-            this.stagingStatus = Objects.requireNonNull(stagingStatus);
+            if (stagingStatus == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "stagingStatus");
+            }
+            this.stagingStatus = stagingStatus;
             return this;
         }
         @CustomType.Setter
         public Builder updatedByUser(String updatedByUser) {
-            this.updatedByUser = Objects.requireNonNull(updatedByUser);
+            if (updatedByUser == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "updatedByUser");
+            }
+            this.updatedByUser = updatedByUser;
             return this;
         }
         @CustomType.Setter
         public Builder updatedDate(String updatedDate) {
-            this.updatedDate = Objects.requireNonNull(updatedDate);
+            if (updatedDate == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesSearchProperty", "updatedDate");
+            }
+            this.updatedDate = updatedDate;
             return this;
         }
         public GetPropertiesSearchProperty build() {

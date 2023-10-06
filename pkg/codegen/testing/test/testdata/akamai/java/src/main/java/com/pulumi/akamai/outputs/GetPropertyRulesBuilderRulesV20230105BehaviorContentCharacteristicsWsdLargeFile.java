@@ -73,36 +73,43 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentCharacter
 
         @CustomType.Setter
         public Builder catalogSize(@Nullable String catalogSize) {
+
             this.catalogSize = catalogSize;
             return this;
         }
         @CustomType.Setter
         public Builder contentType(@Nullable String contentType) {
+
             this.contentType = contentType;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder objectSize(@Nullable String objectSize) {
+
             this.objectSize = objectSize;
             return this;
         }
         @CustomType.Setter
         public Builder popularityDistribution(@Nullable String popularityDistribution) {
+
             this.popularityDistribution = popularityDistribution;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

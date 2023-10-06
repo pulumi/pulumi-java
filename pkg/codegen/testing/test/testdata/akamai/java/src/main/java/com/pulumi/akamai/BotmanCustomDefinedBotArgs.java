@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class BotmanCustomDefinedBotArgs extends com.pulumi.resources.Resou
         }
 
         public BotmanCustomDefinedBotArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.customDefinedBot = Objects.requireNonNull($.customDefinedBot, "expected parameter 'customDefinedBot' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanCustomDefinedBotArgs", "configId");
+            }
+            if ($.customDefinedBot == null) {
+                throw new MissingRequiredPropertyException("BotmanCustomDefinedBotArgs", "customDefinedBot");
+            }
             return $;
         }
     }

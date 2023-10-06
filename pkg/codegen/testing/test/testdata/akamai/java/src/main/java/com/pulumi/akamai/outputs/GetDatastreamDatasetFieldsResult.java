@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetDatastreamDatasetFieldsDatasetField;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +59,10 @@ public final class GetDatastreamDatasetFieldsResult {
 
         @CustomType.Setter
         public Builder datasetFields(List<GetDatastreamDatasetFieldsDatasetField> datasetFields) {
-            this.datasetFields = Objects.requireNonNull(datasetFields);
+            if (datasetFields == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsResult", "datasetFields");
+            }
+            this.datasetFields = datasetFields;
             return this;
         }
         public Builder datasetFields(GetDatastreamDatasetFieldsDatasetField... datasetFields) {
@@ -66,11 +70,15 @@ public final class GetDatastreamDatasetFieldsResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamDatasetFieldsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder productId(@Nullable String productId) {
+
             this.productId = productId;
             return this;
         }

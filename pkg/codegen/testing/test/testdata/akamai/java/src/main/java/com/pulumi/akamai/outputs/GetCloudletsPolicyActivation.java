@@ -6,6 +6,7 @@ package com.pulumi.akamai.outputs;
 import com.pulumi.akamai.outputs.GetCloudletsPolicyActivationPolicyInfo;
 import com.pulumi.akamai.outputs.GetCloudletsPolicyActivationPropertyInfo;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,17 +56,26 @@ public final class GetCloudletsPolicyActivation {
 
         @CustomType.Setter
         public Builder apiVersion(String apiVersion) {
-            this.apiVersion = Objects.requireNonNull(apiVersion);
+            if (apiVersion == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivation", "apiVersion");
+            }
+            this.apiVersion = apiVersion;
             return this;
         }
         @CustomType.Setter
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            if (network == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivation", "network");
+            }
+            this.network = network;
             return this;
         }
         @CustomType.Setter
         public Builder policyInfos(List<GetCloudletsPolicyActivationPolicyInfo> policyInfos) {
-            this.policyInfos = Objects.requireNonNull(policyInfos);
+            if (policyInfos == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivation", "policyInfos");
+            }
+            this.policyInfos = policyInfos;
             return this;
         }
         public Builder policyInfos(GetCloudletsPolicyActivationPolicyInfo... policyInfos) {
@@ -73,7 +83,10 @@ public final class GetCloudletsPolicyActivation {
         }
         @CustomType.Setter
         public Builder propertyInfos(List<GetCloudletsPolicyActivationPropertyInfo> propertyInfos) {
-            this.propertyInfos = Objects.requireNonNull(propertyInfos);
+            if (propertyInfos == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsPolicyActivation", "propertyInfos");
+            }
+            this.propertyInfos = propertyInfos;
             return this;
         }
         public Builder propertyInfos(GetCloudletsPolicyActivationPropertyInfo... propertyInfos) {

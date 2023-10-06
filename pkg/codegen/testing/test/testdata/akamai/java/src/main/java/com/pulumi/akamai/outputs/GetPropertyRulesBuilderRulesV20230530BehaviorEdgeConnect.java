@@ -104,26 +104,31 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorEdgeConnect {
 
         @CustomType.Setter
         public Builder aggregateLines(@Nullable String aggregateLines) {
+
             this.aggregateLines = aggregateLines;
             return this;
         }
         @CustomType.Setter
         public Builder aggregateSize(@Nullable String aggregateSize) {
+
             this.aggregateSize = aggregateSize;
             return this;
         }
         @CustomType.Setter
         public Builder aggregateTime(@Nullable String aggregateTime) {
+
             this.aggregateTime = aggregateTime;
             return this;
         }
         @CustomType.Setter
         public Builder apiConnector(@Nullable String apiConnector) {
+
             this.apiConnector = apiConnector;
             return this;
         }
         @CustomType.Setter
         public Builder apiDataElements(@Nullable List<String> apiDataElements) {
+
             this.apiDataElements = apiDataElements;
             return this;
         }
@@ -132,36 +137,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorEdgeConnect {
         }
         @CustomType.Setter
         public Builder destinationHostname(@Nullable String destinationHostname) {
+
             this.destinationHostname = destinationHostname;
             return this;
         }
         @CustomType.Setter
         public Builder destinationPath(@Nullable String destinationPath) {
+
             this.destinationPath = destinationPath;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder overrideAggregateSettings(@Nullable Boolean overrideAggregateSettings) {
+
             this.overrideAggregateSettings = overrideAggregateSettings;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

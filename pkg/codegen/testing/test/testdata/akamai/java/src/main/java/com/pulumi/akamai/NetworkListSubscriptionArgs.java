@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -80,8 +81,12 @@ public final class NetworkListSubscriptionArgs extends com.pulumi.resources.Reso
         }
 
         public NetworkListSubscriptionArgs build() {
-            $.networkLists = Objects.requireNonNull($.networkLists, "expected parameter 'networkLists' to be non-null");
-            $.recipients = Objects.requireNonNull($.recipients, "expected parameter 'recipients' to be non-null");
+            if ($.networkLists == null) {
+                throw new MissingRequiredPropertyException("NetworkListSubscriptionArgs", "networkLists");
+            }
+            if ($.recipients == null) {
+                throw new MissingRequiredPropertyException("NetworkListSubscriptionArgs", "recipients");
+            }
             return $;
         }
     }

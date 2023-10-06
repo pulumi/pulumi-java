@@ -86,46 +86,55 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionRequestHeader {
 
         @CustomType.Setter
         public Builder headerName(@Nullable String headerName) {
+
             this.headerName = headerName;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchCaseSensitiveValue(@Nullable Boolean matchCaseSensitiveValue) {
+
             this.matchCaseSensitiveValue = matchCaseSensitiveValue;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder matchWildcardName(@Nullable Boolean matchWildcardName) {
+
             this.matchWildcardName = matchWildcardName;
             return this;
         }
         @CustomType.Setter
         public Builder matchWildcardValue(@Nullable Boolean matchWildcardValue) {
+
             this.matchWildcardValue = matchWildcardValue;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder values(@Nullable List<String> values) {
+
             this.values = values;
             return this;
         }

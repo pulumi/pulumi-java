@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,17 +47,26 @@ public final class GetCPSEnrollmentHttpChallenge {
 
         @CustomType.Setter
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            if (domain == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentHttpChallenge", "domain");
+            }
+            this.domain = domain;
             return this;
         }
         @CustomType.Setter
         public Builder fullPath(String fullPath) {
-            this.fullPath = Objects.requireNonNull(fullPath);
+            if (fullPath == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentHttpChallenge", "fullPath");
+            }
+            this.fullPath = fullPath;
             return this;
         }
         @CustomType.Setter
         public Builder responseBody(String responseBody) {
-            this.responseBody = Objects.requireNonNull(responseBody);
+            if (responseBody == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentHttpChallenge", "responseBody");
+            }
+            this.responseBody = responseBody;
             return this;
         }
         public GetCPSEnrollmentHttpChallenge build() {

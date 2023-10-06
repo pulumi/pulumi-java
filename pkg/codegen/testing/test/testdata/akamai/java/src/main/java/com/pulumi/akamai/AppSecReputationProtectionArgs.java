@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -150,9 +151,15 @@ public final class AppSecReputationProtectionArgs extends com.pulumi.resources.R
         }
 
         public AppSecReputationProtectionArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProtectionArgs", "configId");
+            }
+            if ($.enabled == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProtectionArgs", "enabled");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProtectionArgs", "securityPolicyId");
+            }
             return $;
         }
     }

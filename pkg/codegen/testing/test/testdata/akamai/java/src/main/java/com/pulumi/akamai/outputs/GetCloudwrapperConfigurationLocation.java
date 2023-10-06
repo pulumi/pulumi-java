@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationLocationCapacity;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -54,22 +55,34 @@ public final class GetCloudwrapperConfigurationLocation {
 
         @CustomType.Setter
         public Builder capacity(GetCloudwrapperConfigurationLocationCapacity capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            if (capacity == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationLocation", "capacity");
+            }
+            this.capacity = capacity;
             return this;
         }
         @CustomType.Setter
         public Builder comments(String comments) {
-            this.comments = Objects.requireNonNull(comments);
+            if (comments == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationLocation", "comments");
+            }
+            this.comments = comments;
             return this;
         }
         @CustomType.Setter
         public Builder mapName(String mapName) {
-            this.mapName = Objects.requireNonNull(mapName);
+            if (mapName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationLocation", "mapName");
+            }
+            this.mapName = mapName;
             return this;
         }
         @CustomType.Setter
         public Builder trafficTypeId(Integer trafficTypeId) {
-            this.trafficTypeId = Objects.requireNonNull(trafficTypeId);
+            if (trafficTypeId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationLocation", "trafficTypeId");
+            }
+            this.trafficTypeId = trafficTypeId;
             return this;
         }
         public GetCloudwrapperConfigurationLocation build() {

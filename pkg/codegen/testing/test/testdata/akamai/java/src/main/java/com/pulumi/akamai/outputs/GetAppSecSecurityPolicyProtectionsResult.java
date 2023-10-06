@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -116,67 +117,106 @@ public final class GetAppSecSecurityPolicyProtectionsResult {
 
         @CustomType.Setter
         public Builder applyApiConstraints(Boolean applyApiConstraints) {
-            this.applyApiConstraints = Objects.requireNonNull(applyApiConstraints);
+            if (applyApiConstraints == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyApiConstraints");
+            }
+            this.applyApiConstraints = applyApiConstraints;
             return this;
         }
         @CustomType.Setter
         public Builder applyApplicationLayerControls(Boolean applyApplicationLayerControls) {
-            this.applyApplicationLayerControls = Objects.requireNonNull(applyApplicationLayerControls);
+            if (applyApplicationLayerControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyApplicationLayerControls");
+            }
+            this.applyApplicationLayerControls = applyApplicationLayerControls;
             return this;
         }
         @CustomType.Setter
         public Builder applyBotmanControls(Boolean applyBotmanControls) {
-            this.applyBotmanControls = Objects.requireNonNull(applyBotmanControls);
+            if (applyBotmanControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyBotmanControls");
+            }
+            this.applyBotmanControls = applyBotmanControls;
             return this;
         }
         @CustomType.Setter
         public Builder applyMalwareControls(Boolean applyMalwareControls) {
-            this.applyMalwareControls = Objects.requireNonNull(applyMalwareControls);
+            if (applyMalwareControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyMalwareControls");
+            }
+            this.applyMalwareControls = applyMalwareControls;
             return this;
         }
         @CustomType.Setter
         public Builder applyNetworkLayerControls(Boolean applyNetworkLayerControls) {
-            this.applyNetworkLayerControls = Objects.requireNonNull(applyNetworkLayerControls);
+            if (applyNetworkLayerControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyNetworkLayerControls");
+            }
+            this.applyNetworkLayerControls = applyNetworkLayerControls;
             return this;
         }
         @CustomType.Setter
         public Builder applyRateControls(Boolean applyRateControls) {
-            this.applyRateControls = Objects.requireNonNull(applyRateControls);
+            if (applyRateControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyRateControls");
+            }
+            this.applyRateControls = applyRateControls;
             return this;
         }
         @CustomType.Setter
         public Builder applyReputationControls(Boolean applyReputationControls) {
-            this.applyReputationControls = Objects.requireNonNull(applyReputationControls);
+            if (applyReputationControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applyReputationControls");
+            }
+            this.applyReputationControls = applyReputationControls;
             return this;
         }
         @CustomType.Setter
         public Builder applySlowPostControls(Boolean applySlowPostControls) {
-            this.applySlowPostControls = Objects.requireNonNull(applySlowPostControls);
+            if (applySlowPostControls == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "applySlowPostControls");
+            }
+            this.applySlowPostControls = applySlowPostControls;
             return this;
         }
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyProtectionsResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         public GetAppSecSecurityPolicyProtectionsResult build() {

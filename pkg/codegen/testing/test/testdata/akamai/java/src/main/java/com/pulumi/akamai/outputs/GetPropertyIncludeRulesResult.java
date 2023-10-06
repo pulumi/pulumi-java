@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -103,57 +104,90 @@ public final class GetPropertyIncludeRulesResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder includeId(String includeId) {
-            this.includeId = Objects.requireNonNull(includeId);
+            if (includeId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "includeId");
+            }
+            this.includeId = includeId;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder ruleErrors(String ruleErrors) {
-            this.ruleErrors = Objects.requireNonNull(ruleErrors);
+            if (ruleErrors == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "ruleErrors");
+            }
+            this.ruleErrors = ruleErrors;
             return this;
         }
         @CustomType.Setter
         public Builder ruleFormat(String ruleFormat) {
-            this.ruleFormat = Objects.requireNonNull(ruleFormat);
+            if (ruleFormat == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "ruleFormat");
+            }
+            this.ruleFormat = ruleFormat;
             return this;
         }
         @CustomType.Setter
         public Builder ruleWarnings(String ruleWarnings) {
-            this.ruleWarnings = Objects.requireNonNull(ruleWarnings);
+            if (ruleWarnings == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "ruleWarnings");
+            }
+            this.ruleWarnings = ruleWarnings;
             return this;
         }
         @CustomType.Setter
         public Builder rules(String rules) {
-            this.rules = Objects.requireNonNull(rules);
+            if (rules == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "rules");
+            }
+            this.rules = rules;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "type");
+            }
+            this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeRulesResult", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetPropertyIncludeRulesResult build() {

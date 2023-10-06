@@ -57,21 +57,25 @@ public final class PropertyIncludeActivationComplianceRecord {
 
         @CustomType.Setter
         public Builder noncomplianceReasonEmergency(@Nullable PropertyIncludeActivationComplianceRecordNoncomplianceReasonEmergency noncomplianceReasonEmergency) {
+
             this.noncomplianceReasonEmergency = noncomplianceReasonEmergency;
             return this;
         }
         @CustomType.Setter
         public Builder noncomplianceReasonNoProductionTraffic(@Nullable PropertyIncludeActivationComplianceRecordNoncomplianceReasonNoProductionTraffic noncomplianceReasonNoProductionTraffic) {
+
             this.noncomplianceReasonNoProductionTraffic = noncomplianceReasonNoProductionTraffic;
             return this;
         }
         @CustomType.Setter
         public Builder noncomplianceReasonNone(@Nullable PropertyIncludeActivationComplianceRecordNoncomplianceReasonNone noncomplianceReasonNone) {
+
             this.noncomplianceReasonNone = noncomplianceReasonNone;
             return this;
         }
         @CustomType.Setter
         public Builder noncomplianceReasonOther(@Nullable PropertyIncludeActivationComplianceRecordNoncomplianceReasonOther noncomplianceReasonOther) {
+
             this.noncomplianceReasonOther = noncomplianceReasonOther;
             return this;
         }

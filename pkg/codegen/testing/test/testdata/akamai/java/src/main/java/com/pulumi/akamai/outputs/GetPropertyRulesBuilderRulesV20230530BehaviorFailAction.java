@@ -244,176 +244,211 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorFailAction {
 
         @CustomType.Setter
         public Builder actionType(@Nullable String actionType) {
+
             this.actionType = actionType;
             return this;
         }
         @CustomType.Setter
         public Builder allowFcmParentOverride(@Nullable Boolean allowFcmParentOverride) {
+
             this.allowFcmParentOverride = allowFcmParentOverride;
             return this;
         }
         @CustomType.Setter
         public Builder cexCustomPath(@Nullable Boolean cexCustomPath) {
+
             this.cexCustomPath = cexCustomPath;
             return this;
         }
         @CustomType.Setter
         public Builder cexHostname(@Nullable String cexHostname) {
+
             this.cexHostname = cexHostname;
             return this;
         }
         @CustomType.Setter
         public Builder cexPath(@Nullable String cexPath) {
+
             this.cexPath = cexPath;
             return this;
         }
         @CustomType.Setter
         public Builder contentCustomPath(@Nullable Boolean contentCustomPath) {
+
             this.contentCustomPath = contentCustomPath;
             return this;
         }
         @CustomType.Setter
         public Builder contentHostname(@Nullable String contentHostname) {
+
             this.contentHostname = contentHostname;
             return this;
         }
         @CustomType.Setter
         public Builder contentPath(@Nullable String contentPath) {
+
             this.contentPath = contentPath;
             return this;
         }
         @CustomType.Setter
         public Builder cpCode(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFailActionCpCode cpCode) {
+
             this.cpCode = cpCode;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicCustomPath(@Nullable Boolean dynamicCustomPath) {
+
             this.dynamicCustomPath = dynamicCustomPath;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicMethod(@Nullable String dynamicMethod) {
+
             this.dynamicMethod = dynamicMethod;
             return this;
         }
         @CustomType.Setter
         public Builder dynamicPath(@Nullable String dynamicPath) {
+
             this.dynamicPath = dynamicPath;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder modifyProtocol(@Nullable Boolean modifyProtocol) {
+
             this.modifyProtocol = modifyProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder netStorageHostname(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFailActionNetStorageHostname netStorageHostname) {
+
             this.netStorageHostname = netStorageHostname;
             return this;
         }
         @CustomType.Setter
         public Builder netStoragePath(@Nullable String netStoragePath) {
+
             this.netStoragePath = netStoragePath;
             return this;
         }
         @CustomType.Setter
         public Builder preserveQueryString(@Nullable Boolean preserveQueryString) {
+
             this.preserveQueryString = preserveQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder protocol(@Nullable String protocol) {
+
             this.protocol = protocol;
             return this;
         }
         @CustomType.Setter
         public Builder redirectCustomPath(@Nullable Boolean redirectCustomPath) {
+
             this.redirectCustomPath = redirectCustomPath;
             return this;
         }
         @CustomType.Setter
         public Builder redirectHostname(@Nullable String redirectHostname) {
+
             this.redirectHostname = redirectHostname;
             return this;
         }
         @CustomType.Setter
         public Builder redirectHostnameType(@Nullable String redirectHostnameType) {
+
             this.redirectHostnameType = redirectHostnameType;
             return this;
         }
         @CustomType.Setter
         public Builder redirectMethod(@Nullable Integer redirectMethod) {
+
             this.redirectMethod = redirectMethod;
             return this;
         }
         @CustomType.Setter
         public Builder redirectPath(@Nullable String redirectPath) {
+
             this.redirectPath = redirectPath;
             return this;
         }
         @CustomType.Setter
         public Builder saasCnameEnabled(@Nullable Boolean saasCnameEnabled) {
+
             this.saasCnameEnabled = saasCnameEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder saasCnameLevel(@Nullable Integer saasCnameLevel) {
+
             this.saasCnameLevel = saasCnameLevel;
             return this;
         }
         @CustomType.Setter
         public Builder saasCookie(@Nullable String saasCookie) {
+
             this.saasCookie = saasCookie;
             return this;
         }
         @CustomType.Setter
         public Builder saasQueryString(@Nullable String saasQueryString) {
+
             this.saasQueryString = saasQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder saasRegex(@Nullable String saasRegex) {
+
             this.saasRegex = saasRegex;
             return this;
         }
         @CustomType.Setter
         public Builder saasReplace(@Nullable String saasReplace) {
+
             this.saasReplace = saasReplace;
             return this;
         }
         @CustomType.Setter
         public Builder saasSuffix(@Nullable String saasSuffix) {
+
             this.saasSuffix = saasSuffix;
             return this;
         }
         @CustomType.Setter
         public Builder saasType(@Nullable String saasType) {
+
             this.saasType = saasType;
             return this;
         }
         @CustomType.Setter
         public Builder statusCode(@Nullable Integer statusCode) {
+
             this.statusCode = statusCode;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

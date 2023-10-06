@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.GetImagingPolicyVideoPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.util.Objects;
 
 
@@ -54,7 +55,9 @@ public final class GetImagingPolicyVideoArgs extends com.pulumi.resources.Invoke
         }
 
         public GetImagingPolicyVideoArgs build() {
-            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            if ($.policy == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyVideoArgs", "policy");
+            }
             return $;
         }
     }

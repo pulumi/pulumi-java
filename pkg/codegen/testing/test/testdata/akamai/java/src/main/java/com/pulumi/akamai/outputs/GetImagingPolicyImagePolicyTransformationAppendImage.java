@@ -57,6 +57,7 @@ public final class GetImagingPolicyImagePolicyTransformationAppendImage {
 
         @CustomType.Setter
         public Builder boxImages(@Nullable List<GetImagingPolicyImagePolicyTransformationAppendImageBoxImage> boxImages) {
+
             this.boxImages = boxImages;
             return this;
         }
@@ -65,6 +66,7 @@ public final class GetImagingPolicyImagePolicyTransformationAppendImage {
         }
         @CustomType.Setter
         public Builder circleImages(@Nullable List<GetImagingPolicyImagePolicyTransformationAppendImageCircleImage> circleImages) {
+
             this.circleImages = circleImages;
             return this;
         }
@@ -73,6 +75,7 @@ public final class GetImagingPolicyImagePolicyTransformationAppendImage {
         }
         @CustomType.Setter
         public Builder textImages(@Nullable List<GetImagingPolicyImagePolicyTransformationAppendImageTextImage> textImages) {
+
             this.textImages = textImages;
             return this;
         }
@@ -81,6 +84,7 @@ public final class GetImagingPolicyImagePolicyTransformationAppendImage {
         }
         @CustomType.Setter
         public Builder urlImages(@Nullable List<GetImagingPolicyImagePolicyTransformationAppendImageUrlImage> urlImages) {
+
             this.urlImages = urlImages;
             return this;
         }

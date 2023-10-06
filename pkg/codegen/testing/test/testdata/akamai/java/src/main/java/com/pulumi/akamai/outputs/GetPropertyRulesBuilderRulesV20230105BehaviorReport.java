@@ -110,6 +110,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorReport {
 
         @CustomType.Setter
         public Builder cookies(@Nullable List<String> cookies) {
+
             this.cookies = cookies;
             return this;
         }
@@ -118,61 +119,73 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorReport {
         }
         @CustomType.Setter
         public Builder customLogField(@Nullable String customLogField) {
+
             this.customLogField = customLogField;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder logAcceptLanguage(@Nullable Boolean logAcceptLanguage) {
+
             this.logAcceptLanguage = logAcceptLanguage;
             return this;
         }
         @CustomType.Setter
         public Builder logCookies(@Nullable String logCookies) {
+
             this.logCookies = logCookies;
             return this;
         }
         @CustomType.Setter
         public Builder logCustomLogField(@Nullable Boolean logCustomLogField) {
+
             this.logCustomLogField = logCustomLogField;
             return this;
         }
         @CustomType.Setter
         public Builder logEdgeIp(@Nullable Boolean logEdgeIp) {
+
             this.logEdgeIp = logEdgeIp;
             return this;
         }
         @CustomType.Setter
         public Builder logHost(@Nullable Boolean logHost) {
+
             this.logHost = logHost;
             return this;
         }
         @CustomType.Setter
         public Builder logReferer(@Nullable Boolean logReferer) {
+
             this.logReferer = logReferer;
             return this;
         }
         @CustomType.Setter
         public Builder logUserAgent(@Nullable Boolean logUserAgent) {
+
             this.logUserAgent = logUserAgent;
             return this;
         }
         @CustomType.Setter
         public Builder logXForwardedFor(@Nullable Boolean logXForwardedFor) {
+
             this.logXForwardedFor = logXForwardedFor;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

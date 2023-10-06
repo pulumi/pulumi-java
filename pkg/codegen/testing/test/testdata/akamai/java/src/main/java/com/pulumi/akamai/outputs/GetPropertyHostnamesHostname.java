@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetPropertyHostnamesHostnameCertStatus;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -66,12 +67,18 @@ public final class GetPropertyHostnamesHostname {
 
         @CustomType.Setter
         public Builder certProvisioningType(String certProvisioningType) {
-            this.certProvisioningType = Objects.requireNonNull(certProvisioningType);
+            if (certProvisioningType == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostname", "certProvisioningType");
+            }
+            this.certProvisioningType = certProvisioningType;
             return this;
         }
         @CustomType.Setter
         public Builder certStatuses(List<GetPropertyHostnamesHostnameCertStatus> certStatuses) {
-            this.certStatuses = Objects.requireNonNull(certStatuses);
+            if (certStatuses == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostname", "certStatuses");
+            }
+            this.certStatuses = certStatuses;
             return this;
         }
         public Builder certStatuses(GetPropertyHostnamesHostnameCertStatus... certStatuses) {
@@ -79,22 +86,34 @@ public final class GetPropertyHostnamesHostname {
         }
         @CustomType.Setter
         public Builder cnameFrom(String cnameFrom) {
-            this.cnameFrom = Objects.requireNonNull(cnameFrom);
+            if (cnameFrom == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostname", "cnameFrom");
+            }
+            this.cnameFrom = cnameFrom;
             return this;
         }
         @CustomType.Setter
         public Builder cnameTo(String cnameTo) {
-            this.cnameTo = Objects.requireNonNull(cnameTo);
+            if (cnameTo == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostname", "cnameTo");
+            }
+            this.cnameTo = cnameTo;
             return this;
         }
         @CustomType.Setter
         public Builder cnameType(String cnameType) {
-            this.cnameType = Objects.requireNonNull(cnameType);
+            if (cnameType == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostname", "cnameType");
+            }
+            this.cnameType = cnameType;
             return this;
         }
         @CustomType.Setter
         public Builder edgeHostnameId(String edgeHostnameId) {
-            this.edgeHostnameId = Objects.requireNonNull(edgeHostnameId);
+            if (edgeHostnameId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyHostnamesHostname", "edgeHostnameId");
+            }
+            this.edgeHostnameId = edgeHostnameId;
             return this;
         }
         public GetPropertyHostnamesHostname build() {

@@ -85,46 +85,55 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorDcp {
 
         @CustomType.Setter
         public Builder anonymous(@Nullable Boolean anonymous) {
+
             this.anonymous = anonymous;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder gwenabled(@Nullable Boolean gwenabled) {
+
             this.gwenabled = gwenabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder namespaceId(@Nullable String namespaceId) {
+
             this.namespaceId = namespaceId;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder tlsenabled(@Nullable Boolean tlsenabled) {
+
             this.tlsenabled = tlsenabled;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder wsenabled(@Nullable Boolean wsenabled) {
+
             this.wsenabled = wsenabled;
             return this;
         }

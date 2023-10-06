@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -73,37 +74,50 @@ public final class DatastreamSumologicConnector {
 
         @CustomType.Setter
         public Builder collectorCode(String collectorCode) {
-            this.collectorCode = Objects.requireNonNull(collectorCode);
+            if (collectorCode == null) {
+              throw new MissingRequiredPropertyException("DatastreamSumologicConnector", "collectorCode");
+            }
+            this.collectorCode = collectorCode;
             return this;
         }
         @CustomType.Setter
         public Builder compressLogs(@Nullable Boolean compressLogs) {
+
             this.compressLogs = compressLogs;
             return this;
         }
         @CustomType.Setter
         public Builder contentType(@Nullable String contentType) {
+
             this.contentType = contentType;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderName(@Nullable String customHeaderName) {
+
             this.customHeaderName = customHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderValue(@Nullable String customHeaderValue) {
+
             this.customHeaderValue = customHeaderValue;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("DatastreamSumologicConnector", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            if (endpoint == null) {
+              throw new MissingRequiredPropertyException("DatastreamSumologicConnector", "endpoint");
+            }
+            this.endpoint = endpoint;
             return this;
         }
         public DatastreamSumologicConnector build() {

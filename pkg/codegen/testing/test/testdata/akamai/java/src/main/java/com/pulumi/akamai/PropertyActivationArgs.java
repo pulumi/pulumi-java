@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.PropertyActivationComplianceRecordArgs;
 import com.pulumi.akamai.inputs.PropertyActivationRuleErrorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -265,9 +266,15 @@ public final class PropertyActivationArgs extends com.pulumi.resources.ResourceA
         }
 
         public PropertyActivationArgs build() {
-            $.contacts = Objects.requireNonNull($.contacts, "expected parameter 'contacts' to be non-null");
-            $.propertyId = Objects.requireNonNull($.propertyId, "expected parameter 'propertyId' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.contacts == null) {
+                throw new MissingRequiredPropertyException("PropertyActivationArgs", "contacts");
+            }
+            if ($.propertyId == null) {
+                throw new MissingRequiredPropertyException("PropertyActivationArgs", "propertyId");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("PropertyActivationArgs", "version");
+            }
             return $;
         }
     }
