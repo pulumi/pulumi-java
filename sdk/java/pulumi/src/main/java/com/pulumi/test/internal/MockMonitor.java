@@ -55,7 +55,7 @@ public class MockMonitor implements Monitor {
 
     @Override
     public CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
-        var hasSupport = "secrets".equals(request.getId()) || "resourceReferences".equals(request.getId());
+        var hasSupport = !"outputValues".equals(request.getId());
         return CompletableFuture.completedFuture(
                 SupportsFeatureResponse.newBuilder().setHasSupport(hasSupport).build()
         );
