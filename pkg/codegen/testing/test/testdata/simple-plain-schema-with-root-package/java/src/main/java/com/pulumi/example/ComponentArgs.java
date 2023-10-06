@@ -6,6 +6,7 @@ package com.pulumi.example;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.example.inputs.FooArgs;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -168,9 +169,15 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ComponentArgs build() {
-            $.a = Objects.requireNonNull($.a, "expected parameter 'a' to be non-null");
-            $.c = Objects.requireNonNull($.c, "expected parameter 'c' to be non-null");
-            $.e = Objects.requireNonNull($.e, "expected parameter 'e' to be non-null");
+            if ($.a == null) {
+                throw new MissingRequiredPropertyException("ComponentArgs", "a");
+            }
+            if ($.c == null) {
+                throw new MissingRequiredPropertyException("ComponentArgs", "c");
+            }
+            if ($.e == null) {
+                throw new MissingRequiredPropertyException("ComponentArgs", "e");
+            }
             return $;
         }
     }

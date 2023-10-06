@@ -35,6 +35,7 @@ public final class Rec {
 
         @CustomType.Setter
         public Builder rec1(@Nullable Rec rec1) {
+
             this.rec1 = rec1;
             return this;
         }

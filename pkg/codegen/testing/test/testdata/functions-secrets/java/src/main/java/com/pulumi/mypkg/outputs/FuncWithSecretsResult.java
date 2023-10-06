@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,22 +53,34 @@ public final class FuncWithSecretsResult {
 
         @CustomType.Setter
         public Builder ciphertext(String ciphertext) {
-            this.ciphertext = Objects.requireNonNull(ciphertext);
+            if (ciphertext == null) {
+              throw new MissingRequiredPropertyException("FuncWithSecretsResult", "ciphertext");
+            }
+            this.ciphertext = ciphertext;
             return this;
         }
         @CustomType.Setter
         public Builder cryptoKey(String cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            if (cryptoKey == null) {
+              throw new MissingRequiredPropertyException("FuncWithSecretsResult", "cryptoKey");
+            }
+            this.cryptoKey = cryptoKey;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("FuncWithSecretsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder plaintext(String plaintext) {
-            this.plaintext = Objects.requireNonNull(plaintext);
+            if (plaintext == null) {
+              throw new MissingRequiredPropertyException("FuncWithSecretsResult", "plaintext");
+            }
+            this.plaintext = plaintext;
             return this;
         }
         public FuncWithSecretsResult build() {

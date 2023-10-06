@@ -44,6 +44,7 @@ public final class SqlContainerGetPropertiesResponseResource {
 
         @CustomType.Setter
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
+
             this.indexingPolicy = indexingPolicy;
             return this;
         }

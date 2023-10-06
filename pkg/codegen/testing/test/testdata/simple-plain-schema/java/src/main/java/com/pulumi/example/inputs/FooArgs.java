@@ -4,6 +4,7 @@
 package com.pulumi.example.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -118,9 +119,15 @@ public final class FooArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public FooArgs build() {
-            $.a = Objects.requireNonNull($.a, "expected parameter 'a' to be non-null");
-            $.c = Objects.requireNonNull($.c, "expected parameter 'c' to be non-null");
-            $.e = Objects.requireNonNull($.e, "expected parameter 'e' to be non-null");
+            if ($.a == null) {
+                throw new MissingRequiredPropertyException("FooArgs", "a");
+            }
+            if ($.c == null) {
+                throw new MissingRequiredPropertyException("FooArgs", "c");
+            }
+            if ($.e == null) {
+                throw new MissingRequiredPropertyException("FooArgs", "e");
+            }
             return $;
         }
     }

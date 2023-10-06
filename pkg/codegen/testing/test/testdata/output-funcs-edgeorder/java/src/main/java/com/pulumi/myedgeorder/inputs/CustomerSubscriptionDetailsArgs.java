@@ -5,6 +5,7 @@ package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.inputs.CustomerSubscriptionRegisteredFeaturesArgs;
 import java.lang.String;
 import java.util.List;
@@ -166,7 +167,9 @@ public final class CustomerSubscriptionDetailsArgs extends com.pulumi.resources.
         }
 
         public CustomerSubscriptionDetailsArgs build() {
-            $.quotaId = Objects.requireNonNull($.quotaId, "expected parameter 'quotaId' to be non-null");
+            if ($.quotaId == null) {
+                throw new MissingRequiredPropertyException("CustomerSubscriptionDetailsArgs", "quotaId");
+            }
             return $;
         }
     }

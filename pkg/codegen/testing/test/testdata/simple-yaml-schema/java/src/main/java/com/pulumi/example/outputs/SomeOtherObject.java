@@ -36,6 +36,7 @@ public final class SomeOtherObject {
 
         @CustomType.Setter
         public Builder baz(@Nullable String baz) {
+
             this.baz = baz;
             return this;
         }

@@ -36,6 +36,7 @@ public final class OverlayResult {
 
         @CustomType.Setter
         public Builder result(@Nullable Overlay result) {
+
             this.result = result;
             return this;
         }

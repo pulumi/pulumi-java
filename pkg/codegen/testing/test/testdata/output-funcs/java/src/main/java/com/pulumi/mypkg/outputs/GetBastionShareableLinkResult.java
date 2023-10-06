@@ -44,6 +44,7 @@ public final class GetBastionShareableLinkResult {
 
         @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
+
             this.nextLink = nextLink;
             return this;
         }

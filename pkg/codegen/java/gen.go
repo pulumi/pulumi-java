@@ -491,6 +491,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 	// Determine property types
 	propTypes := make([]TypeShape, len(pt.properties))
+	anyPropertyRequired := false
 	for i, prop := range pt.properties {
 		requireInitializers := !pt.args || isInputType(prop.Type)
 
@@ -503,6 +504,14 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
+
+		if prop.IsRequired() {
+			anyPropertyRequired = true
+		}
+	}
+
+	if anyPropertyRequired {
+		ctx.imports.Ref(names.PulumiMissingRequiredPropertyException)
 	}
 
 	w := ctx.writer
@@ -599,6 +608,15 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	for propIndex, prop := range pt.properties {
 		propType := propTypes[propIndex]
 		fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
+
+		if prop.IsRequired() && prop.DefaultValue == nil && prop.ConstValue == nil {
+			fprintf(w, "            if ($.%s == null) {\n", fieldName)
+			fprintf(w, "                throw new %s(\"%s\", \"%s\");\n",
+				ctx.ref(names.PulumiMissingRequiredPropertyException), pt.name, fieldName)
+			fprintf(w, "            }\n")
+			continue
+		}
+
 		propRef := fmt.Sprintf("$.%s", fieldName)
 		propInit, err := dg.defaultValueExpr(
 			fmt.Sprintf("property of class %s", pt.name),
@@ -704,6 +722,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
 	fprintf(w, "public final class %s {\n", pt.name)
 
+	anyPropertyRequired := false
 	// Generate each output field.
 	for _, prop := range props {
 		fieldName := names.Ident(pt.mod.propertyName(prop))
@@ -721,7 +740,15 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			isGetter: true,
 		})
 		fprintf(w, "    private %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
+		if prop.IsRequired() {
+			anyPropertyRequired = true
+		}
 	}
+
+	if anyPropertyRequired {
+		ctx.imports.Ref(names.PulumiMissingRequiredPropertyException)
+	}
+
 	if len(props) > 0 {
 		fprintf(w, "\n")
 	}
@@ -810,12 +837,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		})
 
 		setterName := propertyName.AsProperty().Setter()
-		assignment := func(propertyName names.Ident) string {
-			if prop.IsRequired() {
-				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-			}
-			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
-		}
 
 		// add setter
 		var setterAnnotation string
@@ -828,7 +849,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			SetterName:   setterName,
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
-			Assignment:   assignment(propertyName),
+			Assignment:   fmt.Sprintf("this.%s = %s", propertyName, propertyName),
+			IsRequired:   prop.IsRequired(),
 			ListType:     propertyType.ListType(ctx),
 			Annotations:  []string{setterAnnotation},
 		})

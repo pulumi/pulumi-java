@@ -5,6 +5,7 @@ package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetailsArgs;
 import com.pulumi.myedgeorder.inputs.FilterablePropertyArgs;
 import java.lang.String;
@@ -191,7 +192,9 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
         }
 
         public ListProductFamiliesArgs build() {
-            $.filterableProperties = Objects.requireNonNull($.filterableProperties, "expected parameter 'filterableProperties' to be non-null");
+            if ($.filterableProperties == null) {
+                throw new MissingRequiredPropertyException("ListProductFamiliesArgs", "filterableProperties");
+            }
             return $;
         }
     }

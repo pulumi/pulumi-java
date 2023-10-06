@@ -81,11 +81,13 @@ public final class Object {
 
         @CustomType.Setter
         public Builder bar(@Nullable String bar) {
+
             this.bar = bar;
             return this;
         }
         @CustomType.Setter
         public Builder configs(@Nullable List<ConfigMap> configs) {
+
             this.configs = configs;
             return this;
         }
@@ -94,16 +96,19 @@ public final class Object {
         }
         @CustomType.Setter
         public Builder foo(@Nullable Resource foo) {
+
             this.foo = foo;
             return this;
         }
         @CustomType.Setter
         public Builder others(@Nullable List<List<SomeOtherObject>> others) {
+
             this.others = others;
             return this;
         }
         @CustomType.Setter
         public Builder stillOthers(@Nullable Map<String,List<SomeOtherObject>> stillOthers) {
+
             this.stillOthers = stillOthers;
             return this;
         }

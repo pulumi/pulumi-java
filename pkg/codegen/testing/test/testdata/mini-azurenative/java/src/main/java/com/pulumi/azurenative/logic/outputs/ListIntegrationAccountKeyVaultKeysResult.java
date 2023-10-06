@@ -44,6 +44,7 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
 
         @CustomType.Setter
         public Builder skipToken(@Nullable String skipToken) {
+
             this.skipToken = skipToken;
             return this;
         }

@@ -1572,1286 +1572,1543 @@ public final class ACustomType {
 
         @CustomType.Setter
         public Builder bar1(@Nullable String bar1) {
+
             this.bar1 = bar1;
             return this;
         }
         @CustomType.Setter
         public Builder bar10(@Nullable String bar10) {
+
             this.bar10 = bar10;
             return this;
         }
         @CustomType.Setter
         public Builder bar100(@Nullable String bar100) {
+
             this.bar100 = bar100;
             return this;
         }
         @CustomType.Setter
         public Builder bar101(@Nullable String bar101) {
+
             this.bar101 = bar101;
             return this;
         }
         @CustomType.Setter
         public Builder bar102(@Nullable String bar102) {
+
             this.bar102 = bar102;
             return this;
         }
         @CustomType.Setter
         public Builder bar103(@Nullable String bar103) {
+
             this.bar103 = bar103;
             return this;
         }
         @CustomType.Setter
         public Builder bar104(@Nullable String bar104) {
+
             this.bar104 = bar104;
             return this;
         }
         @CustomType.Setter
         public Builder bar105(@Nullable String bar105) {
+
             this.bar105 = bar105;
             return this;
         }
         @CustomType.Setter
         public Builder bar106(@Nullable String bar106) {
+
             this.bar106 = bar106;
             return this;
         }
         @CustomType.Setter
         public Builder bar107(@Nullable String bar107) {
+
             this.bar107 = bar107;
             return this;
         }
         @CustomType.Setter
         public Builder bar108(@Nullable String bar108) {
+
             this.bar108 = bar108;
             return this;
         }
         @CustomType.Setter
         public Builder bar109(@Nullable String bar109) {
+
             this.bar109 = bar109;
             return this;
         }
         @CustomType.Setter
         public Builder bar11(@Nullable String bar11) {
+
             this.bar11 = bar11;
             return this;
         }
         @CustomType.Setter
         public Builder bar110(@Nullable String bar110) {
+
             this.bar110 = bar110;
             return this;
         }
         @CustomType.Setter
         public Builder bar111(@Nullable String bar111) {
+
             this.bar111 = bar111;
             return this;
         }
         @CustomType.Setter
         public Builder bar112(@Nullable String bar112) {
+
             this.bar112 = bar112;
             return this;
         }
         @CustomType.Setter
         public Builder bar113(@Nullable String bar113) {
+
             this.bar113 = bar113;
             return this;
         }
         @CustomType.Setter
         public Builder bar114(@Nullable String bar114) {
+
             this.bar114 = bar114;
             return this;
         }
         @CustomType.Setter
         public Builder bar115(@Nullable String bar115) {
+
             this.bar115 = bar115;
             return this;
         }
         @CustomType.Setter
         public Builder bar116(@Nullable String bar116) {
+
             this.bar116 = bar116;
             return this;
         }
         @CustomType.Setter
         public Builder bar117(@Nullable String bar117) {
+
             this.bar117 = bar117;
             return this;
         }
         @CustomType.Setter
         public Builder bar118(@Nullable String bar118) {
+
             this.bar118 = bar118;
             return this;
         }
         @CustomType.Setter
         public Builder bar119(@Nullable String bar119) {
+
             this.bar119 = bar119;
             return this;
         }
         @CustomType.Setter
         public Builder bar12(@Nullable String bar12) {
+
             this.bar12 = bar12;
             return this;
         }
         @CustomType.Setter
         public Builder bar120(@Nullable String bar120) {
+
             this.bar120 = bar120;
             return this;
         }
         @CustomType.Setter
         public Builder bar121(@Nullable String bar121) {
+
             this.bar121 = bar121;
             return this;
         }
         @CustomType.Setter
         public Builder bar122(@Nullable String bar122) {
+
             this.bar122 = bar122;
             return this;
         }
         @CustomType.Setter
         public Builder bar123(@Nullable String bar123) {
+
             this.bar123 = bar123;
             return this;
         }
         @CustomType.Setter
         public Builder bar124(@Nullable String bar124) {
+
             this.bar124 = bar124;
             return this;
         }
         @CustomType.Setter
         public Builder bar125(@Nullable String bar125) {
+
             this.bar125 = bar125;
             return this;
         }
         @CustomType.Setter
         public Builder bar126(@Nullable String bar126) {
+
             this.bar126 = bar126;
             return this;
         }
         @CustomType.Setter
         public Builder bar127(@Nullable String bar127) {
+
             this.bar127 = bar127;
             return this;
         }
         @CustomType.Setter
         public Builder bar128(@Nullable String bar128) {
+
             this.bar128 = bar128;
             return this;
         }
         @CustomType.Setter
         public Builder bar129(@Nullable String bar129) {
+
             this.bar129 = bar129;
             return this;
         }
         @CustomType.Setter
         public Builder bar13(@Nullable String bar13) {
+
             this.bar13 = bar13;
             return this;
         }
         @CustomType.Setter
         public Builder bar130(@Nullable String bar130) {
+
             this.bar130 = bar130;
             return this;
         }
         @CustomType.Setter
         public Builder bar131(@Nullable String bar131) {
+
             this.bar131 = bar131;
             return this;
         }
         @CustomType.Setter
         public Builder bar132(@Nullable String bar132) {
+
             this.bar132 = bar132;
             return this;
         }
         @CustomType.Setter
         public Builder bar133(@Nullable String bar133) {
+
             this.bar133 = bar133;
             return this;
         }
         @CustomType.Setter
         public Builder bar134(@Nullable String bar134) {
+
             this.bar134 = bar134;
             return this;
         }
         @CustomType.Setter
         public Builder bar135(@Nullable String bar135) {
+
             this.bar135 = bar135;
             return this;
         }
         @CustomType.Setter
         public Builder bar136(@Nullable String bar136) {
+
             this.bar136 = bar136;
             return this;
         }
         @CustomType.Setter
         public Builder bar137(@Nullable String bar137) {
+
             this.bar137 = bar137;
             return this;
         }
         @CustomType.Setter
         public Builder bar138(@Nullable String bar138) {
+
             this.bar138 = bar138;
             return this;
         }
         @CustomType.Setter
         public Builder bar139(@Nullable String bar139) {
+
             this.bar139 = bar139;
             return this;
         }
         @CustomType.Setter
         public Builder bar14(@Nullable String bar14) {
+
             this.bar14 = bar14;
             return this;
         }
         @CustomType.Setter
         public Builder bar140(@Nullable String bar140) {
+
             this.bar140 = bar140;
             return this;
         }
         @CustomType.Setter
         public Builder bar141(@Nullable String bar141) {
+
             this.bar141 = bar141;
             return this;
         }
         @CustomType.Setter
         public Builder bar142(@Nullable String bar142) {
+
             this.bar142 = bar142;
             return this;
         }
         @CustomType.Setter
         public Builder bar143(@Nullable String bar143) {
+
             this.bar143 = bar143;
             return this;
         }
         @CustomType.Setter
         public Builder bar144(@Nullable String bar144) {
+
             this.bar144 = bar144;
             return this;
         }
         @CustomType.Setter
         public Builder bar145(@Nullable String bar145) {
+
             this.bar145 = bar145;
             return this;
         }
         @CustomType.Setter
         public Builder bar146(@Nullable String bar146) {
+
             this.bar146 = bar146;
             return this;
         }
         @CustomType.Setter
         public Builder bar147(@Nullable String bar147) {
+
             this.bar147 = bar147;
             return this;
         }
         @CustomType.Setter
         public Builder bar148(@Nullable String bar148) {
+
             this.bar148 = bar148;
             return this;
         }
         @CustomType.Setter
         public Builder bar149(@Nullable String bar149) {
+
             this.bar149 = bar149;
             return this;
         }
         @CustomType.Setter
         public Builder bar15(@Nullable String bar15) {
+
             this.bar15 = bar15;
             return this;
         }
         @CustomType.Setter
         public Builder bar150(@Nullable String bar150) {
+
             this.bar150 = bar150;
             return this;
         }
         @CustomType.Setter
         public Builder bar151(@Nullable String bar151) {
+
             this.bar151 = bar151;
             return this;
         }
         @CustomType.Setter
         public Builder bar152(@Nullable String bar152) {
+
             this.bar152 = bar152;
             return this;
         }
         @CustomType.Setter
         public Builder bar153(@Nullable String bar153) {
+
             this.bar153 = bar153;
             return this;
         }
         @CustomType.Setter
         public Builder bar154(@Nullable String bar154) {
+
             this.bar154 = bar154;
             return this;
         }
         @CustomType.Setter
         public Builder bar155(@Nullable String bar155) {
+
             this.bar155 = bar155;
             return this;
         }
         @CustomType.Setter
         public Builder bar156(@Nullable String bar156) {
+
             this.bar156 = bar156;
             return this;
         }
         @CustomType.Setter
         public Builder bar157(@Nullable String bar157) {
+
             this.bar157 = bar157;
             return this;
         }
         @CustomType.Setter
         public Builder bar158(@Nullable String bar158) {
+
             this.bar158 = bar158;
             return this;
         }
         @CustomType.Setter
         public Builder bar159(@Nullable String bar159) {
+
             this.bar159 = bar159;
             return this;
         }
         @CustomType.Setter
         public Builder bar16(@Nullable String bar16) {
+
             this.bar16 = bar16;
             return this;
         }
         @CustomType.Setter
         public Builder bar160(@Nullable String bar160) {
+
             this.bar160 = bar160;
             return this;
         }
         @CustomType.Setter
         public Builder bar161(@Nullable String bar161) {
+
             this.bar161 = bar161;
             return this;
         }
         @CustomType.Setter
         public Builder bar162(@Nullable String bar162) {
+
             this.bar162 = bar162;
             return this;
         }
         @CustomType.Setter
         public Builder bar163(@Nullable String bar163) {
+
             this.bar163 = bar163;
             return this;
         }
         @CustomType.Setter
         public Builder bar164(@Nullable String bar164) {
+
             this.bar164 = bar164;
             return this;
         }
         @CustomType.Setter
         public Builder bar165(@Nullable String bar165) {
+
             this.bar165 = bar165;
             return this;
         }
         @CustomType.Setter
         public Builder bar166(@Nullable String bar166) {
+
             this.bar166 = bar166;
             return this;
         }
         @CustomType.Setter
         public Builder bar167(@Nullable String bar167) {
+
             this.bar167 = bar167;
             return this;
         }
         @CustomType.Setter
         public Builder bar168(@Nullable String bar168) {
+
             this.bar168 = bar168;
             return this;
         }
         @CustomType.Setter
         public Builder bar169(@Nullable String bar169) {
+
             this.bar169 = bar169;
             return this;
         }
         @CustomType.Setter
         public Builder bar17(@Nullable String bar17) {
+
             this.bar17 = bar17;
             return this;
         }
         @CustomType.Setter
         public Builder bar170(@Nullable String bar170) {
+
             this.bar170 = bar170;
             return this;
         }
         @CustomType.Setter
         public Builder bar171(@Nullable String bar171) {
+
             this.bar171 = bar171;
             return this;
         }
         @CustomType.Setter
         public Builder bar172(@Nullable String bar172) {
+
             this.bar172 = bar172;
             return this;
         }
         @CustomType.Setter
         public Builder bar173(@Nullable String bar173) {
+
             this.bar173 = bar173;
             return this;
         }
         @CustomType.Setter
         public Builder bar174(@Nullable String bar174) {
+
             this.bar174 = bar174;
             return this;
         }
         @CustomType.Setter
         public Builder bar175(@Nullable String bar175) {
+
             this.bar175 = bar175;
             return this;
         }
         @CustomType.Setter
         public Builder bar176(@Nullable String bar176) {
+
             this.bar176 = bar176;
             return this;
         }
         @CustomType.Setter
         public Builder bar177(@Nullable String bar177) {
+
             this.bar177 = bar177;
             return this;
         }
         @CustomType.Setter
         public Builder bar178(@Nullable String bar178) {
+
             this.bar178 = bar178;
             return this;
         }
         @CustomType.Setter
         public Builder bar179(@Nullable String bar179) {
+
             this.bar179 = bar179;
             return this;
         }
         @CustomType.Setter
         public Builder bar18(@Nullable String bar18) {
+
             this.bar18 = bar18;
             return this;
         }
         @CustomType.Setter
         public Builder bar180(@Nullable String bar180) {
+
             this.bar180 = bar180;
             return this;
         }
         @CustomType.Setter
         public Builder bar181(@Nullable String bar181) {
+
             this.bar181 = bar181;
             return this;
         }
         @CustomType.Setter
         public Builder bar182(@Nullable String bar182) {
+
             this.bar182 = bar182;
             return this;
         }
         @CustomType.Setter
         public Builder bar183(@Nullable String bar183) {
+
             this.bar183 = bar183;
             return this;
         }
         @CustomType.Setter
         public Builder bar184(@Nullable String bar184) {
+
             this.bar184 = bar184;
             return this;
         }
         @CustomType.Setter
         public Builder bar185(@Nullable String bar185) {
+
             this.bar185 = bar185;
             return this;
         }
         @CustomType.Setter
         public Builder bar186(@Nullable String bar186) {
+
             this.bar186 = bar186;
             return this;
         }
         @CustomType.Setter
         public Builder bar187(@Nullable String bar187) {
+
             this.bar187 = bar187;
             return this;
         }
         @CustomType.Setter
         public Builder bar188(@Nullable String bar188) {
+
             this.bar188 = bar188;
             return this;
         }
         @CustomType.Setter
         public Builder bar189(@Nullable String bar189) {
+
             this.bar189 = bar189;
             return this;
         }
         @CustomType.Setter
         public Builder bar19(@Nullable String bar19) {
+
             this.bar19 = bar19;
             return this;
         }
         @CustomType.Setter
         public Builder bar190(@Nullable String bar190) {
+
             this.bar190 = bar190;
             return this;
         }
         @CustomType.Setter
         public Builder bar191(@Nullable String bar191) {
+
             this.bar191 = bar191;
             return this;
         }
         @CustomType.Setter
         public Builder bar192(@Nullable String bar192) {
+
             this.bar192 = bar192;
             return this;
         }
         @CustomType.Setter
         public Builder bar193(@Nullable String bar193) {
+
             this.bar193 = bar193;
             return this;
         }
         @CustomType.Setter
         public Builder bar194(@Nullable String bar194) {
+
             this.bar194 = bar194;
             return this;
         }
         @CustomType.Setter
         public Builder bar195(@Nullable String bar195) {
+
             this.bar195 = bar195;
             return this;
         }
         @CustomType.Setter
         public Builder bar196(@Nullable String bar196) {
+
             this.bar196 = bar196;
             return this;
         }
         @CustomType.Setter
         public Builder bar197(@Nullable String bar197) {
+
             this.bar197 = bar197;
             return this;
         }
         @CustomType.Setter
         public Builder bar198(@Nullable String bar198) {
+
             this.bar198 = bar198;
             return this;
         }
         @CustomType.Setter
         public Builder bar199(@Nullable String bar199) {
+
             this.bar199 = bar199;
             return this;
         }
         @CustomType.Setter
         public Builder bar2(@Nullable String bar2) {
+
             this.bar2 = bar2;
             return this;
         }
         @CustomType.Setter
         public Builder bar20(@Nullable String bar20) {
+
             this.bar20 = bar20;
             return this;
         }
         @CustomType.Setter
         public Builder bar200(@Nullable String bar200) {
+
             this.bar200 = bar200;
             return this;
         }
         @CustomType.Setter
         public Builder bar201(@Nullable String bar201) {
+
             this.bar201 = bar201;
             return this;
         }
         @CustomType.Setter
         public Builder bar202(@Nullable String bar202) {
+
             this.bar202 = bar202;
             return this;
         }
         @CustomType.Setter
         public Builder bar203(@Nullable String bar203) {
+
             this.bar203 = bar203;
             return this;
         }
         @CustomType.Setter
         public Builder bar204(@Nullable String bar204) {
+
             this.bar204 = bar204;
             return this;
         }
         @CustomType.Setter
         public Builder bar205(@Nullable String bar205) {
+
             this.bar205 = bar205;
             return this;
         }
         @CustomType.Setter
         public Builder bar206(@Nullable String bar206) {
+
             this.bar206 = bar206;
             return this;
         }
         @CustomType.Setter
         public Builder bar207(@Nullable String bar207) {
+
             this.bar207 = bar207;
             return this;
         }
         @CustomType.Setter
         public Builder bar208(@Nullable String bar208) {
+
             this.bar208 = bar208;
             return this;
         }
         @CustomType.Setter
         public Builder bar209(@Nullable String bar209) {
+
             this.bar209 = bar209;
             return this;
         }
         @CustomType.Setter
         public Builder bar21(@Nullable String bar21) {
+
             this.bar21 = bar21;
             return this;
         }
         @CustomType.Setter
         public Builder bar210(@Nullable String bar210) {
+
             this.bar210 = bar210;
             return this;
         }
         @CustomType.Setter
         public Builder bar211(@Nullable String bar211) {
+
             this.bar211 = bar211;
             return this;
         }
         @CustomType.Setter
         public Builder bar212(@Nullable String bar212) {
+
             this.bar212 = bar212;
             return this;
         }
         @CustomType.Setter
         public Builder bar213(@Nullable String bar213) {
+
             this.bar213 = bar213;
             return this;
         }
         @CustomType.Setter
         public Builder bar214(@Nullable String bar214) {
+
             this.bar214 = bar214;
             return this;
         }
         @CustomType.Setter
         public Builder bar215(@Nullable String bar215) {
+
             this.bar215 = bar215;
             return this;
         }
         @CustomType.Setter
         public Builder bar216(@Nullable String bar216) {
+
             this.bar216 = bar216;
             return this;
         }
         @CustomType.Setter
         public Builder bar217(@Nullable String bar217) {
+
             this.bar217 = bar217;
             return this;
         }
         @CustomType.Setter
         public Builder bar218(@Nullable String bar218) {
+
             this.bar218 = bar218;
             return this;
         }
         @CustomType.Setter
         public Builder bar219(@Nullable String bar219) {
+
             this.bar219 = bar219;
             return this;
         }
         @CustomType.Setter
         public Builder bar22(@Nullable String bar22) {
+
             this.bar22 = bar22;
             return this;
         }
         @CustomType.Setter
         public Builder bar220(@Nullable String bar220) {
+
             this.bar220 = bar220;
             return this;
         }
         @CustomType.Setter
         public Builder bar221(@Nullable String bar221) {
+
             this.bar221 = bar221;
             return this;
         }
         @CustomType.Setter
         public Builder bar222(@Nullable String bar222) {
+
             this.bar222 = bar222;
             return this;
         }
         @CustomType.Setter
         public Builder bar223(@Nullable String bar223) {
+
             this.bar223 = bar223;
             return this;
         }
         @CustomType.Setter
         public Builder bar224(@Nullable String bar224) {
+
             this.bar224 = bar224;
             return this;
         }
         @CustomType.Setter
         public Builder bar225(@Nullable String bar225) {
+
             this.bar225 = bar225;
             return this;
         }
         @CustomType.Setter
         public Builder bar226(@Nullable String bar226) {
+
             this.bar226 = bar226;
             return this;
         }
         @CustomType.Setter
         public Builder bar227(@Nullable String bar227) {
+
             this.bar227 = bar227;
             return this;
         }
         @CustomType.Setter
         public Builder bar228(@Nullable String bar228) {
+
             this.bar228 = bar228;
             return this;
         }
         @CustomType.Setter
         public Builder bar229(@Nullable String bar229) {
+
             this.bar229 = bar229;
             return this;
         }
         @CustomType.Setter
         public Builder bar23(@Nullable String bar23) {
+
             this.bar23 = bar23;
             return this;
         }
         @CustomType.Setter
         public Builder bar230(@Nullable String bar230) {
+
             this.bar230 = bar230;
             return this;
         }
         @CustomType.Setter
         public Builder bar231(@Nullable String bar231) {
+
             this.bar231 = bar231;
             return this;
         }
         @CustomType.Setter
         public Builder bar232(@Nullable String bar232) {
+
             this.bar232 = bar232;
             return this;
         }
         @CustomType.Setter
         public Builder bar233(@Nullable String bar233) {
+
             this.bar233 = bar233;
             return this;
         }
         @CustomType.Setter
         public Builder bar234(@Nullable String bar234) {
+
             this.bar234 = bar234;
             return this;
         }
         @CustomType.Setter
         public Builder bar235(@Nullable String bar235) {
+
             this.bar235 = bar235;
             return this;
         }
         @CustomType.Setter
         public Builder bar236(@Nullable String bar236) {
+
             this.bar236 = bar236;
             return this;
         }
         @CustomType.Setter
         public Builder bar237(@Nullable String bar237) {
+
             this.bar237 = bar237;
             return this;
         }
         @CustomType.Setter
         public Builder bar238(@Nullable String bar238) {
+
             this.bar238 = bar238;
             return this;
         }
         @CustomType.Setter
         public Builder bar239(@Nullable String bar239) {
+
             this.bar239 = bar239;
             return this;
         }
         @CustomType.Setter
         public Builder bar24(@Nullable String bar24) {
+
             this.bar24 = bar24;
             return this;
         }
         @CustomType.Setter
         public Builder bar240(@Nullable String bar240) {
+
             this.bar240 = bar240;
             return this;
         }
         @CustomType.Setter
         public Builder bar241(@Nullable String bar241) {
+
             this.bar241 = bar241;
             return this;
         }
         @CustomType.Setter
         public Builder bar242(@Nullable String bar242) {
+
             this.bar242 = bar242;
             return this;
         }
         @CustomType.Setter
         public Builder bar243(@Nullable String bar243) {
+
             this.bar243 = bar243;
             return this;
         }
         @CustomType.Setter
         public Builder bar244(@Nullable String bar244) {
+
             this.bar244 = bar244;
             return this;
         }
         @CustomType.Setter
         public Builder bar245(@Nullable String bar245) {
+
             this.bar245 = bar245;
             return this;
         }
         @CustomType.Setter
         public Builder bar246(@Nullable String bar246) {
+
             this.bar246 = bar246;
             return this;
         }
         @CustomType.Setter
         public Builder bar247(@Nullable String bar247) {
+
             this.bar247 = bar247;
             return this;
         }
         @CustomType.Setter
         public Builder bar248(@Nullable String bar248) {
+
             this.bar248 = bar248;
             return this;
         }
         @CustomType.Setter
         public Builder bar249(@Nullable String bar249) {
+
             this.bar249 = bar249;
             return this;
         }
         @CustomType.Setter
         public Builder bar25(@Nullable String bar25) {
+
             this.bar25 = bar25;
             return this;
         }
         @CustomType.Setter
         public Builder bar250(@Nullable String bar250) {
+
             this.bar250 = bar250;
             return this;
         }
         @CustomType.Setter
         public Builder bar251(@Nullable String bar251) {
+
             this.bar251 = bar251;
             return this;
         }
         @CustomType.Setter
         public Builder bar252(@Nullable String bar252) {
+
             this.bar252 = bar252;
             return this;
         }
         @CustomType.Setter
         public Builder bar253(@Nullable String bar253) {
+
             this.bar253 = bar253;
             return this;
         }
         @CustomType.Setter
         public Builder bar254(@Nullable String bar254) {
+
             this.bar254 = bar254;
             return this;
         }
         @CustomType.Setter
         public Builder bar255(@Nullable String bar255) {
+
             this.bar255 = bar255;
             return this;
         }
         @CustomType.Setter
         public Builder bar256(@Nullable String bar256) {
+
             this.bar256 = bar256;
             return this;
         }
         @CustomType.Setter
         public Builder bar26(@Nullable String bar26) {
+
             this.bar26 = bar26;
             return this;
         }
         @CustomType.Setter
         public Builder bar27(@Nullable String bar27) {
+
             this.bar27 = bar27;
             return this;
         }
         @CustomType.Setter
         public Builder bar28(@Nullable String bar28) {
+
             this.bar28 = bar28;
             return this;
         }
         @CustomType.Setter
         public Builder bar29(@Nullable String bar29) {
+
             this.bar29 = bar29;
             return this;
         }
         @CustomType.Setter
         public Builder bar3(@Nullable String bar3) {
+
             this.bar3 = bar3;
             return this;
         }
         @CustomType.Setter
         public Builder bar30(@Nullable String bar30) {
+
             this.bar30 = bar30;
             return this;
         }
         @CustomType.Setter
         public Builder bar31(@Nullable String bar31) {
+
             this.bar31 = bar31;
             return this;
         }
         @CustomType.Setter
         public Builder bar32(@Nullable String bar32) {
+
             this.bar32 = bar32;
             return this;
         }
         @CustomType.Setter
         public Builder bar33(@Nullable String bar33) {
+
             this.bar33 = bar33;
             return this;
         }
         @CustomType.Setter
         public Builder bar34(@Nullable String bar34) {
+
             this.bar34 = bar34;
             return this;
         }
         @CustomType.Setter
         public Builder bar35(@Nullable String bar35) {
+
             this.bar35 = bar35;
             return this;
         }
         @CustomType.Setter
         public Builder bar36(@Nullable String bar36) {
+
             this.bar36 = bar36;
             return this;
         }
         @CustomType.Setter
         public Builder bar37(@Nullable String bar37) {
+
             this.bar37 = bar37;
             return this;
         }
         @CustomType.Setter
         public Builder bar38(@Nullable String bar38) {
+
             this.bar38 = bar38;
             return this;
         }
         @CustomType.Setter
         public Builder bar39(@Nullable String bar39) {
+
             this.bar39 = bar39;
             return this;
         }
         @CustomType.Setter
         public Builder bar4(@Nullable String bar4) {
+
             this.bar4 = bar4;
             return this;
         }
         @CustomType.Setter
         public Builder bar40(@Nullable String bar40) {
+
             this.bar40 = bar40;
             return this;
         }
         @CustomType.Setter
         public Builder bar41(@Nullable String bar41) {
+
             this.bar41 = bar41;
             return this;
         }
         @CustomType.Setter
         public Builder bar42(@Nullable String bar42) {
+
             this.bar42 = bar42;
             return this;
         }
         @CustomType.Setter
         public Builder bar43(@Nullable String bar43) {
+
             this.bar43 = bar43;
             return this;
         }
         @CustomType.Setter
         public Builder bar44(@Nullable String bar44) {
+
             this.bar44 = bar44;
             return this;
         }
         @CustomType.Setter
         public Builder bar45(@Nullable String bar45) {
+
             this.bar45 = bar45;
             return this;
         }
         @CustomType.Setter
         public Builder bar46(@Nullable String bar46) {
+
             this.bar46 = bar46;
             return this;
         }
         @CustomType.Setter
         public Builder bar47(@Nullable String bar47) {
+
             this.bar47 = bar47;
             return this;
         }
         @CustomType.Setter
         public Builder bar48(@Nullable String bar48) {
+
             this.bar48 = bar48;
             return this;
         }
         @CustomType.Setter
         public Builder bar49(@Nullable String bar49) {
+
             this.bar49 = bar49;
             return this;
         }
         @CustomType.Setter
         public Builder bar5(@Nullable String bar5) {
+
             this.bar5 = bar5;
             return this;
         }
         @CustomType.Setter
         public Builder bar50(@Nullable String bar50) {
+
             this.bar50 = bar50;
             return this;
         }
         @CustomType.Setter
         public Builder bar51(@Nullable String bar51) {
+
             this.bar51 = bar51;
             return this;
         }
         @CustomType.Setter
         public Builder bar52(@Nullable String bar52) {
+
             this.bar52 = bar52;
             return this;
         }
         @CustomType.Setter
         public Builder bar53(@Nullable String bar53) {
+
             this.bar53 = bar53;
             return this;
         }
         @CustomType.Setter
         public Builder bar54(@Nullable String bar54) {
+
             this.bar54 = bar54;
             return this;
         }
         @CustomType.Setter
         public Builder bar55(@Nullable String bar55) {
+
             this.bar55 = bar55;
             return this;
         }
         @CustomType.Setter
         public Builder bar56(@Nullable String bar56) {
+
             this.bar56 = bar56;
             return this;
         }
         @CustomType.Setter
         public Builder bar57(@Nullable String bar57) {
+
             this.bar57 = bar57;
             return this;
         }
         @CustomType.Setter
         public Builder bar58(@Nullable String bar58) {
+
             this.bar58 = bar58;
             return this;
         }
         @CustomType.Setter
         public Builder bar59(@Nullable String bar59) {
+
             this.bar59 = bar59;
             return this;
         }
         @CustomType.Setter
         public Builder bar6(@Nullable String bar6) {
+
             this.bar6 = bar6;
             return this;
         }
         @CustomType.Setter
         public Builder bar60(@Nullable String bar60) {
+
             this.bar60 = bar60;
             return this;
         }
         @CustomType.Setter
         public Builder bar61(@Nullable String bar61) {
+
             this.bar61 = bar61;
             return this;
         }
         @CustomType.Setter
         public Builder bar62(@Nullable String bar62) {
+
             this.bar62 = bar62;
             return this;
         }
         @CustomType.Setter
         public Builder bar63(@Nullable String bar63) {
+
             this.bar63 = bar63;
             return this;
         }
         @CustomType.Setter
         public Builder bar64(@Nullable String bar64) {
+
             this.bar64 = bar64;
             return this;
         }
         @CustomType.Setter
         public Builder bar65(@Nullable String bar65) {
+
             this.bar65 = bar65;
             return this;
         }
         @CustomType.Setter
         public Builder bar66(@Nullable String bar66) {
+
             this.bar66 = bar66;
             return this;
         }
         @CustomType.Setter
         public Builder bar67(@Nullable String bar67) {
+
             this.bar67 = bar67;
             return this;
         }
         @CustomType.Setter
         public Builder bar68(@Nullable String bar68) {
+
             this.bar68 = bar68;
             return this;
         }
         @CustomType.Setter
         public Builder bar69(@Nullable String bar69) {
+
             this.bar69 = bar69;
             return this;
         }
         @CustomType.Setter
         public Builder bar7(@Nullable String bar7) {
+
             this.bar7 = bar7;
             return this;
         }
         @CustomType.Setter
         public Builder bar70(@Nullable String bar70) {
+
             this.bar70 = bar70;
             return this;
         }
         @CustomType.Setter
         public Builder bar71(@Nullable String bar71) {
+
             this.bar71 = bar71;
             return this;
         }
         @CustomType.Setter
         public Builder bar72(@Nullable String bar72) {
+
             this.bar72 = bar72;
             return this;
         }
         @CustomType.Setter
         public Builder bar73(@Nullable String bar73) {
+
             this.bar73 = bar73;
             return this;
         }
         @CustomType.Setter
         public Builder bar74(@Nullable String bar74) {
+
             this.bar74 = bar74;
             return this;
         }
         @CustomType.Setter
         public Builder bar75(@Nullable String bar75) {
+
             this.bar75 = bar75;
             return this;
         }
         @CustomType.Setter
         public Builder bar76(@Nullable String bar76) {
+
             this.bar76 = bar76;
             return this;
         }
         @CustomType.Setter
         public Builder bar77(@Nullable String bar77) {
+
             this.bar77 = bar77;
             return this;
         }
         @CustomType.Setter
         public Builder bar78(@Nullable String bar78) {
+
             this.bar78 = bar78;
             return this;
         }
         @CustomType.Setter
         public Builder bar79(@Nullable String bar79) {
+
             this.bar79 = bar79;
             return this;
         }
         @CustomType.Setter
         public Builder bar8(@Nullable String bar8) {
+
             this.bar8 = bar8;
             return this;
         }
         @CustomType.Setter
         public Builder bar80(@Nullable String bar80) {
+
             this.bar80 = bar80;
             return this;
         }
         @CustomType.Setter
         public Builder bar81(@Nullable String bar81) {
+
             this.bar81 = bar81;
             return this;
         }
         @CustomType.Setter
         public Builder bar82(@Nullable String bar82) {
+
             this.bar82 = bar82;
             return this;
         }
         @CustomType.Setter
         public Builder bar83(@Nullable String bar83) {
+
             this.bar83 = bar83;
             return this;
         }
         @CustomType.Setter
         public Builder bar84(@Nullable String bar84) {
+
             this.bar84 = bar84;
             return this;
         }
         @CustomType.Setter
         public Builder bar85(@Nullable String bar85) {
+
             this.bar85 = bar85;
             return this;
         }
         @CustomType.Setter
         public Builder bar86(@Nullable String bar86) {
+
             this.bar86 = bar86;
             return this;
         }
         @CustomType.Setter
         public Builder bar87(@Nullable String bar87) {
+
             this.bar87 = bar87;
             return this;
         }
         @CustomType.Setter
         public Builder bar88(@Nullable String bar88) {
+
             this.bar88 = bar88;
             return this;
         }
         @CustomType.Setter
         public Builder bar89(@Nullable String bar89) {
+
             this.bar89 = bar89;
             return this;
         }
         @CustomType.Setter
         public Builder bar9(@Nullable String bar9) {
+
             this.bar9 = bar9;
             return this;
         }
         @CustomType.Setter
         public Builder bar90(@Nullable String bar90) {
+
             this.bar90 = bar90;
             return this;
         }
         @CustomType.Setter
         public Builder bar91(@Nullable String bar91) {
+
             this.bar91 = bar91;
             return this;
         }
         @CustomType.Setter
         public Builder bar92(@Nullable String bar92) {
+
             this.bar92 = bar92;
             return this;
         }
         @CustomType.Setter
         public Builder bar93(@Nullable String bar93) {
+
             this.bar93 = bar93;
             return this;
         }
         @CustomType.Setter
         public Builder bar94(@Nullable String bar94) {
+
             this.bar94 = bar94;
             return this;
         }
         @CustomType.Setter
         public Builder bar95(@Nullable String bar95) {
+
             this.bar95 = bar95;
             return this;
         }
         @CustomType.Setter
         public Builder bar96(@Nullable String bar96) {
+
             this.bar96 = bar96;
             return this;
         }
         @CustomType.Setter
         public Builder bar97(@Nullable String bar97) {
+
             this.bar97 = bar97;
             return this;
         }
         @CustomType.Setter
         public Builder bar98(@Nullable String bar98) {
+
             this.bar98 = bar98;
             return this;
         }
         @CustomType.Setter
         public Builder bar99(@Nullable String bar99) {
+
             this.bar99 = bar99;
             return this;
         }
         @CustomType.Setter("default")
         public Builder default_(@Nullable String default_) {
+
             this.default_ = default_;
             return this;
         }

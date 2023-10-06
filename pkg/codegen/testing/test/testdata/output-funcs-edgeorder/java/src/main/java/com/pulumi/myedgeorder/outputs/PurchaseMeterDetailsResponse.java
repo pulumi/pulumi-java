@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -115,32 +116,50 @@ public final class PurchaseMeterDetailsResponse {
 
         @CustomType.Setter
         public Builder billingType(String billingType) {
-            this.billingType = Objects.requireNonNull(billingType);
+            if (billingType == null) {
+              throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "billingType");
+            }
+            this.billingType = billingType;
             return this;
         }
         @CustomType.Setter
         public Builder chargingType(String chargingType) {
-            this.chargingType = Objects.requireNonNull(chargingType);
+            if (chargingType == null) {
+              throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "chargingType");
+            }
+            this.chargingType = chargingType;
             return this;
         }
         @CustomType.Setter
         public Builder multiplier(Double multiplier) {
-            this.multiplier = Objects.requireNonNull(multiplier);
+            if (multiplier == null) {
+              throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "multiplier");
+            }
+            this.multiplier = multiplier;
             return this;
         }
         @CustomType.Setter
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            if (productId == null) {
+              throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "productId");
+            }
+            this.productId = productId;
             return this;
         }
         @CustomType.Setter
         public Builder skuId(String skuId) {
-            this.skuId = Objects.requireNonNull(skuId);
+            if (skuId == null) {
+              throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "skuId");
+            }
+            this.skuId = skuId;
             return this;
         }
         @CustomType.Setter
         public Builder termId(String termId) {
-            this.termId = Objects.requireNonNull(termId);
+            if (termId == null) {
+              throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "termId");
+            }
+            this.termId = termId;
             return this;
         }
         public PurchaseMeterDetailsResponse build() {

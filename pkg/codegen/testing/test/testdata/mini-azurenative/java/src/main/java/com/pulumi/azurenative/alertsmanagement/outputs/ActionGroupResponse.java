@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.alertsmanagement.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -144,42 +145,62 @@ public final class ActionGroupResponse {
 
         @CustomType.Setter
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Objects.requireNonNull(actionGroupId);
+            if (actionGroupId == null) {
+              throw new MissingRequiredPropertyException("ActionGroupResponse", "actionGroupId");
+            }
+            this.actionGroupId = actionGroupId;
             return this;
         }
         @CustomType.Setter
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            if (createdAt == null) {
+              throw new MissingRequiredPropertyException("ActionGroupResponse", "createdAt");
+            }
+            this.createdAt = createdAt;
             return this;
         }
         @CustomType.Setter
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            if (createdBy == null) {
+              throw new MissingRequiredPropertyException("ActionGroupResponse", "createdBy");
+            }
+            this.createdBy = createdBy;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder lastModifiedAt(String lastModifiedAt) {
-            this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
+            if (lastModifiedAt == null) {
+              throw new MissingRequiredPropertyException("ActionGroupResponse", "lastModifiedAt");
+            }
+            this.lastModifiedAt = lastModifiedAt;
             return this;
         }
         @CustomType.Setter
         public Builder lastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+            if (lastModifiedBy == null) {
+              throw new MissingRequiredPropertyException("ActionGroupResponse", "lastModifiedBy");
+            }
+            this.lastModifiedBy = lastModifiedBy;
             return this;
         }
         @CustomType.Setter
         public Builder status(@Nullable String status) {
+
             this.status = status;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("ActionGroupResponse", "type");
+            }
+            this.type = type;
             return this;
         }
         public ActionGroupResponse build() {

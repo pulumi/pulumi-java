@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,12 +57,18 @@ public final class LinkResponse {
 
         @CustomType.Setter
         public Builder linkType(String linkType) {
-            this.linkType = Objects.requireNonNull(linkType);
+            if (linkType == null) {
+              throw new MissingRequiredPropertyException("LinkResponse", "linkType");
+            }
+            this.linkType = linkType;
             return this;
         }
         @CustomType.Setter
         public Builder linkUrl(String linkUrl) {
-            this.linkUrl = Objects.requireNonNull(linkUrl);
+            if (linkUrl == null) {
+              throw new MissingRequiredPropertyException("LinkResponse", "linkUrl");
+            }
+            this.linkUrl = linkUrl;
             return this;
         }
         public LinkResponse build() {

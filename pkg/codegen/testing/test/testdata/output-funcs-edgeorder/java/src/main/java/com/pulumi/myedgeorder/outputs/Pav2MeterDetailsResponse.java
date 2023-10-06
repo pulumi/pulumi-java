@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -87,22 +88,34 @@ public final class Pav2MeterDetailsResponse {
 
         @CustomType.Setter
         public Builder billingType(String billingType) {
-            this.billingType = Objects.requireNonNull(billingType);
+            if (billingType == null) {
+              throw new MissingRequiredPropertyException("Pav2MeterDetailsResponse", "billingType");
+            }
+            this.billingType = billingType;
             return this;
         }
         @CustomType.Setter
         public Builder chargingType(String chargingType) {
-            this.chargingType = Objects.requireNonNull(chargingType);
+            if (chargingType == null) {
+              throw new MissingRequiredPropertyException("Pav2MeterDetailsResponse", "chargingType");
+            }
+            this.chargingType = chargingType;
             return this;
         }
         @CustomType.Setter
         public Builder meterGuid(String meterGuid) {
-            this.meterGuid = Objects.requireNonNull(meterGuid);
+            if (meterGuid == null) {
+              throw new MissingRequiredPropertyException("Pav2MeterDetailsResponse", "meterGuid");
+            }
+            this.meterGuid = meterGuid;
             return this;
         }
         @CustomType.Setter
         public Builder multiplier(Double multiplier) {
-            this.multiplier = Objects.requireNonNull(multiplier);
+            if (multiplier == null) {
+              throw new MissingRequiredPropertyException("Pav2MeterDetailsResponse", "multiplier");
+            }
+            this.multiplier = multiplier;
             return this;
         }
         public Pav2MeterDetailsResponse build() {

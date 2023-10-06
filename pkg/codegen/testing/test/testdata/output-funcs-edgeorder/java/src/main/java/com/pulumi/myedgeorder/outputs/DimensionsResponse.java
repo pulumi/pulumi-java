@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -127,37 +128,58 @@ public final class DimensionsResponse {
 
         @CustomType.Setter
         public Builder depth(Double depth) {
-            this.depth = Objects.requireNonNull(depth);
+            if (depth == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "depth");
+            }
+            this.depth = depth;
             return this;
         }
         @CustomType.Setter
         public Builder height(Double height) {
-            this.height = Objects.requireNonNull(height);
+            if (height == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "height");
+            }
+            this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder length(Double length) {
-            this.length = Objects.requireNonNull(length);
+            if (length == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "length");
+            }
+            this.length = length;
             return this;
         }
         @CustomType.Setter
         public Builder lengthHeightUnit(String lengthHeightUnit) {
-            this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
+            if (lengthHeightUnit == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "lengthHeightUnit");
+            }
+            this.lengthHeightUnit = lengthHeightUnit;
             return this;
         }
         @CustomType.Setter
         public Builder weight(Double weight) {
-            this.weight = Objects.requireNonNull(weight);
+            if (weight == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "weight");
+            }
+            this.weight = weight;
             return this;
         }
         @CustomType.Setter
         public Builder weightUnit(String weightUnit) {
-            this.weightUnit = Objects.requireNonNull(weightUnit);
+            if (weightUnit == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "weightUnit");
+            }
+            this.weightUnit = weightUnit;
             return this;
         }
         @CustomType.Setter
         public Builder width(Double width) {
-            this.width = Objects.requireNonNull(width);
+            if (width == null) {
+              throw new MissingRequiredPropertyException("DimensionsResponse", "width");
+            }
+            this.width = width;
             return this;
         }
         public DimensionsResponse build() {

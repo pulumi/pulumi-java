@@ -36,6 +36,7 @@ public final class TopLevel {
 
         @CustomType.Setter
         public Builder buzz(@Nullable String buzz) {
+
             this.buzz = buzz;
             return this;
         }

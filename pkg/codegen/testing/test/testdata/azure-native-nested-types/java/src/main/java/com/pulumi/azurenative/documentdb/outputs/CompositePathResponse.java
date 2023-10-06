@@ -58,11 +58,13 @@ public final class CompositePathResponse {
 
         @CustomType.Setter
         public Builder order(@Nullable String order) {
+
             this.order = order;
             return this;
         }
         @CustomType.Setter
         public Builder path(@Nullable String path) {
+
             this.path = path;
             return this;
         }

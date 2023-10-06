@@ -36,6 +36,7 @@ public final class OutputOnlyObjectType {
 
         @CustomType.Setter
         public Builder foo(@Nullable String foo) {
+
             this.foo = foo;
             return this;
         }

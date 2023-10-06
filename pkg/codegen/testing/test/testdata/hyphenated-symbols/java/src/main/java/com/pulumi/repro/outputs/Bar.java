@@ -36,6 +36,7 @@ public final class Bar {
 
         @CustomType.Setter("has-a-hyphen")
         public Builder hasahyphen(@Nullable String hasahyphen) {
+
             this.hasahyphen = hasahyphen;
             return this;
         }

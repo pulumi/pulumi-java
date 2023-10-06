@@ -200,61 +200,73 @@ public final class SsisParameterResponse {
 
         @CustomType.Setter
         public Builder dataType(@Nullable String dataType) {
+
             this.dataType = dataType;
             return this;
         }
         @CustomType.Setter
         public Builder defaultValue(@Nullable String defaultValue) {
+
             this.defaultValue = defaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder designDefaultValue(@Nullable String designDefaultValue) {
+
             this.designDefaultValue = designDefaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder required(@Nullable Boolean required) {
+
             this.required = required;
             return this;
         }
         @CustomType.Setter
         public Builder sensitive(@Nullable Boolean sensitive) {
+
             this.sensitive = sensitive;
             return this;
         }
         @CustomType.Setter
         public Builder sensitiveDefaultValue(@Nullable String sensitiveDefaultValue) {
+
             this.sensitiveDefaultValue = sensitiveDefaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder valueSet(@Nullable Boolean valueSet) {
+
             this.valueSet = valueSet;
             return this;
         }
         @CustomType.Setter
         public Builder valueType(@Nullable String valueType) {
+
             this.valueType = valueType;
             return this;
         }
         @CustomType.Setter
         public Builder variable(@Nullable String variable) {
+
             this.variable = variable;
             return this;
         }

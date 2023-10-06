@@ -5,6 +5,7 @@ package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.enums.SupportedFilterTypes;
 import java.lang.String;
 import java.util.List;
@@ -127,8 +128,12 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
         }
 
         public FilterableProperty build() {
-            $.supportedValues = Objects.requireNonNull($.supportedValues, "expected parameter 'supportedValues' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.supportedValues == null) {
+                throw new MissingRequiredPropertyException("FilterableProperty", "supportedValues");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("FilterableProperty", "type");
+            }
             return $;
         }
     }

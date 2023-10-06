@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -336,10 +337,18 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
         }
 
         public BatchDeploymentArgs build() {
-            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
-            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            if ($.endpointName == null) {
+                throw new MissingRequiredPropertyException("BatchDeploymentArgs", "endpointName");
+            }
+            if ($.properties == null) {
+                throw new MissingRequiredPropertyException("BatchDeploymentArgs", "properties");
+            }
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("BatchDeploymentArgs", "resourceGroupName");
+            }
+            if ($.workspaceName == null) {
+                throw new MissingRequiredPropertyException("BatchDeploymentArgs", "workspaceName");
+            }
             return $;
         }
     }

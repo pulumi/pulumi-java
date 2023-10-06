@@ -5,6 +5,7 @@ package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.inputs.GetAmiIdsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -288,7 +289,9 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         public GetAmiIdsArgs build() {
-            $.owners = Objects.requireNonNull($.owners, "expected parameter 'owners' to be non-null");
+            if ($.owners == null) {
+                throw new MissingRequiredPropertyException("GetAmiIdsArgs", "owners");
+            }
             return $;
         }
     }

@@ -7,6 +7,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.plant.inputs.ContainerArgs;
 import com.pulumi.plant.tree_v1.enums.Diameter;
 import com.pulumi.plant.tree_v1.enums.Farm;

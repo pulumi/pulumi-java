@@ -8,6 +8,10 @@ var Optional = JavaUtil.Dot("Optional")
 
 var Pulumi = Ident("com").FQN().Dot("pulumi")
 
+var PulumiExceptions = Pulumi.Dot("exceptions")
+
+var PulumiMissingRequiredPropertyException = PulumiExceptions.Dot("MissingRequiredPropertyException")
+
 var PulumiCore = Pulumi.Dot("core")
 
 var PulumiAsset = Pulumi.Dot("asset")

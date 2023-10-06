@@ -6,6 +6,7 @@ package com.pulumi.mypkg.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +75,9 @@ public final class FuncWithDefaultValueArgs extends com.pulumi.resources.InvokeA
         }
 
         public FuncWithDefaultValueArgs build() {
-            $.a = Objects.requireNonNull($.a, "expected parameter 'a' to be non-null");
+            if ($.a == null) {
+                throw new MissingRequiredPropertyException("FuncWithDefaultValueArgs", "a");
+            }
             $.b = Codegen.stringProp("b").output().arg($.b).def("b-default").getNullable();
             return $;
         }

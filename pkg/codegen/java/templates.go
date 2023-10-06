@@ -136,6 +136,7 @@ type builderSetterTemplateContext struct {
 	PropertyType string
 	PropertyName string
 	Assignment   string
+	IsRequired   bool
 	ListType     string
 	Annotations  []string
 }
@@ -173,6 +174,9 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}    {{ $annotation }}
 {{- end }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
+{{ if $setter.IsRequired }}{{ $.Indent }}        if ({{ $setter.PropertyName }} == null) {
+{{ $.Indent }}          throw new MissingRequiredPropertyException("{{ $.ResultType }}", "{{ $setter.PropertyName }}");
+{{ $.Indent }}        }{{ end }}
 {{ $.Indent }}        {{ $setter.Assignment }};
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
