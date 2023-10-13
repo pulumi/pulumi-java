@@ -92,11 +92,13 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionUserLocation {
 
         @CustomType.Setter
         public Builder checkIps(@Nullable String checkIps) {
+
             this.checkIps = checkIps;
             return this;
         }
         @CustomType.Setter
         public Builder continentValues(@Nullable List<String> continentValues) {
+
             this.continentValues = continentValues;
             return this;
         }
@@ -105,6 +107,7 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionUserLocation {
         }
         @CustomType.Setter
         public Builder countryValues(@Nullable List<String> countryValues) {
+
             this.countryValues = countryValues;
             return this;
         }
@@ -113,21 +116,25 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionUserLocation {
         }
         @CustomType.Setter
         public Builder field(@Nullable String field) {
+
             this.field = field;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder regionValues(@Nullable List<String> regionValues) {
+
             this.regionValues = regionValues;
             return this;
         }
@@ -136,16 +143,19 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionUserLocation {
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder useOnlyFirstXForwardedForIp(@Nullable Boolean useOnlyFirstXForwardedForIp) {
+
             this.useOnlyFirstXForwardedForIp = useOnlyFirstXForwardedForIp;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

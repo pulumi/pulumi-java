@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -186,10 +187,18 @@ public final class AppSecCustomRuleActionArgs extends com.pulumi.resources.Resou
         }
 
         public AppSecCustomRuleActionArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.customRuleAction = Objects.requireNonNull($.customRuleAction, "expected parameter 'customRuleAction' to be non-null");
-            $.customRuleId = Objects.requireNonNull($.customRuleId, "expected parameter 'customRuleId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecCustomRuleActionArgs", "configId");
+            }
+            if ($.customRuleAction == null) {
+                throw new MissingRequiredPropertyException("AppSecCustomRuleActionArgs", "customRuleAction");
+            }
+            if ($.customRuleId == null) {
+                throw new MissingRequiredPropertyException("AppSecCustomRuleActionArgs", "customRuleId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecCustomRuleActionArgs", "securityPolicyId");
+            }
             return $;
         }
     }

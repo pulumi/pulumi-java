@@ -138,91 +138,109 @@ public final class GetImagingPolicyImagePolicyTransformationFeatureCrop {
 
         @CustomType.Setter
         public Builder failGravity(@Nullable String failGravity) {
+
             this.failGravity = failGravity;
             return this;
         }
         @CustomType.Setter
         public Builder failGravityVar(@Nullable String failGravityVar) {
+
             this.failGravityVar = failGravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder featureRadius(@Nullable String featureRadius) {
+
             this.featureRadius = featureRadius;
             return this;
         }
         @CustomType.Setter
         public Builder featureRadiusVar(@Nullable String featureRadiusVar) {
+
             this.featureRadiusVar = featureRadiusVar;
             return this;
         }
         @CustomType.Setter
         public Builder gravity(@Nullable String gravity) {
+
             this.gravity = gravity;
             return this;
         }
         @CustomType.Setter
         public Builder gravityVar(@Nullable String gravityVar) {
+
             this.gravityVar = gravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder maxFeatures(@Nullable String maxFeatures) {
+
             this.maxFeatures = maxFeatures;
             return this;
         }
         @CustomType.Setter
         public Builder maxFeaturesVar(@Nullable String maxFeaturesVar) {
+
             this.maxFeaturesVar = maxFeaturesVar;
             return this;
         }
         @CustomType.Setter
         public Builder minFeatureQuality(@Nullable String minFeatureQuality) {
+
             this.minFeatureQuality = minFeatureQuality;
             return this;
         }
         @CustomType.Setter
         public Builder minFeatureQualityVar(@Nullable String minFeatureQualityVar) {
+
             this.minFeatureQualityVar = minFeatureQualityVar;
             return this;
         }
         @CustomType.Setter
         public Builder padding(@Nullable String padding) {
+
             this.padding = padding;
             return this;
         }
         @CustomType.Setter
         public Builder paddingVar(@Nullable String paddingVar) {
+
             this.paddingVar = paddingVar;
             return this;
         }
         @CustomType.Setter
         public Builder style(@Nullable String style) {
+
             this.style = style;
             return this;
         }
         @CustomType.Setter
         public Builder styleVar(@Nullable String styleVar) {
+
             this.styleVar = styleVar;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapePolygonShapePoint;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.util.List;
 import java.util.Objects;
 
@@ -35,7 +36,10 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
 
         @CustomType.Setter
         public Builder points(List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapePolygonShapePoint> points) {
-            this.points = Objects.requireNonNull(points);
+            if (points == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapePolygonShape", "points");
+            }
+            this.points = points;
             return this;
         }
         public Builder points(GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapePolygonShapePoint... points) {

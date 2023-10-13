@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetImagingPolicyVideoPolicyVariableEnumOption;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,11 +69,15 @@ public final class GetImagingPolicyVideoPolicyVariable {
 
         @CustomType.Setter
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            if (defaultValue == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariable", "defaultValue");
+            }
+            this.defaultValue = defaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder enumOptions(@Nullable List<GetImagingPolicyVideoPolicyVariableEnumOption> enumOptions) {
+
             this.enumOptions = enumOptions;
             return this;
         }
@@ -81,22 +86,30 @@ public final class GetImagingPolicyVideoPolicyVariable {
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariable", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder postfix(@Nullable String postfix) {
+
             this.postfix = postfix;
             return this;
         }
         @CustomType.Setter
         public Builder prefix(@Nullable String prefix) {
+
             this.prefix = prefix;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariable", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetImagingPolicyVideoPolicyVariable build() {

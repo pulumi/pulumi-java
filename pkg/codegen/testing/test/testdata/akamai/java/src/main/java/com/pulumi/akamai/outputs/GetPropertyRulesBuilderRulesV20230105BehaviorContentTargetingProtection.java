@@ -182,6 +182,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
 
         @CustomType.Setter
         public Builder countries(@Nullable List<String> countries) {
+
             this.countries = countries;
             return this;
         }
@@ -190,6 +191,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
         }
         @CustomType.Setter
         public Builder dmas(@Nullable List<String> dmas) {
+
             this.dmas = dmas;
             return this;
         }
@@ -198,56 +200,67 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
         }
         @CustomType.Setter
         public Builder enableGeoProtection(@Nullable Boolean enableGeoProtection) {
+
             this.enableGeoProtection = enableGeoProtection;
             return this;
         }
         @CustomType.Setter
         public Builder enableGeoRedirectOnDeny(@Nullable Boolean enableGeoRedirectOnDeny) {
+
             this.enableGeoRedirectOnDeny = enableGeoRedirectOnDeny;
             return this;
         }
         @CustomType.Setter
         public Builder enableIpProtection(@Nullable Boolean enableIpProtection) {
+
             this.enableIpProtection = enableIpProtection;
             return this;
         }
         @CustomType.Setter
         public Builder enableIpRedirectOnDeny(@Nullable Boolean enableIpRedirectOnDeny) {
+
             this.enableIpRedirectOnDeny = enableIpRedirectOnDeny;
             return this;
         }
         @CustomType.Setter
         public Builder enableReferrerProtection(@Nullable Boolean enableReferrerProtection) {
+
             this.enableReferrerProtection = enableReferrerProtection;
             return this;
         }
         @CustomType.Setter
         public Builder enableReferrerRedirectOnDeny(@Nullable Boolean enableReferrerRedirectOnDeny) {
+
             this.enableReferrerRedirectOnDeny = enableReferrerRedirectOnDeny;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder geoProtectionMode(@Nullable String geoProtectionMode) {
+
             this.geoProtectionMode = geoProtectionMode;
             return this;
         }
         @CustomType.Setter
         public Builder geoProtectionTitle(@Nullable String geoProtectionTitle) {
+
             this.geoProtectionTitle = geoProtectionTitle;
             return this;
         }
         @CustomType.Setter
         public Builder geoRedirectUrl(@Nullable String geoRedirectUrl) {
+
             this.geoRedirectUrl = geoRedirectUrl;
             return this;
         }
         @CustomType.Setter
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
+
             this.ipAddresses = ipAddresses;
             return this;
         }
@@ -256,26 +269,31 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
         }
         @CustomType.Setter
         public Builder ipProtectionMode(@Nullable String ipProtectionMode) {
+
             this.ipProtectionMode = ipProtectionMode;
             return this;
         }
         @CustomType.Setter
         public Builder ipProtectionTitle(@Nullable String ipProtectionTitle) {
+
             this.ipProtectionTitle = ipProtectionTitle;
             return this;
         }
         @CustomType.Setter
         public Builder ipRedirectUrl(@Nullable String ipRedirectUrl) {
+
             this.ipRedirectUrl = ipRedirectUrl;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder overrideIpAddresses(@Nullable List<String> overrideIpAddresses) {
+
             this.overrideIpAddresses = overrideIpAddresses;
             return this;
         }
@@ -284,6 +302,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
         }
         @CustomType.Setter
         public Builder referrerDomains(@Nullable List<String> referrerDomains) {
+
             this.referrerDomains = referrerDomains;
             return this;
         }
@@ -292,21 +311,25 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
         }
         @CustomType.Setter
         public Builder referrerProtectionMode(@Nullable String referrerProtectionMode) {
+
             this.referrerProtectionMode = referrerProtectionMode;
             return this;
         }
         @CustomType.Setter
         public Builder referrerProtectionTitle(@Nullable String referrerProtectionTitle) {
+
             this.referrerProtectionTitle = referrerProtectionTitle;
             return this;
         }
         @CustomType.Setter
         public Builder referrerRedirectUrl(@Nullable String referrerRedirectUrl) {
+
             this.referrerRedirectUrl = referrerRedirectUrl;
             return this;
         }
         @CustomType.Setter
         public Builder regions(@Nullable List<String> regions) {
+
             this.regions = regions;
             return this;
         }
@@ -315,11 +338,13 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentTargeting
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

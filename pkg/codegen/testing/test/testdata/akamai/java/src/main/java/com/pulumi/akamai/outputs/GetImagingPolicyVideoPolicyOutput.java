@@ -66,31 +66,37 @@ public final class GetImagingPolicyVideoPolicyOutput {
 
         @CustomType.Setter
         public Builder perceptualQuality(@Nullable String perceptualQuality) {
+
             this.perceptualQuality = perceptualQuality;
             return this;
         }
         @CustomType.Setter
         public Builder perceptualQualityVar(@Nullable String perceptualQualityVar) {
+
             this.perceptualQualityVar = perceptualQualityVar;
             return this;
         }
         @CustomType.Setter
         public Builder placeholderVideoUrl(@Nullable String placeholderVideoUrl) {
+
             this.placeholderVideoUrl = placeholderVideoUrl;
             return this;
         }
         @CustomType.Setter
         public Builder placeholderVideoUrlVar(@Nullable String placeholderVideoUrlVar) {
+
             this.placeholderVideoUrlVar = placeholderVideoUrlVar;
             return this;
         }
         @CustomType.Setter
         public Builder videoAdaptiveQuality(@Nullable String videoAdaptiveQuality) {
+
             this.videoAdaptiveQuality = videoAdaptiveQuality;
             return this;
         }
         @CustomType.Setter
         public Builder videoAdaptiveQualityVar(@Nullable String videoAdaptiveQualityVar) {
+
             this.videoAdaptiveQualityVar = videoAdaptiveQualityVar;
             return this;
         }

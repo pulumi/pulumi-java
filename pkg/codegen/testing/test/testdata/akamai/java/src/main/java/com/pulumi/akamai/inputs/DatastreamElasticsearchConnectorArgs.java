@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -261,11 +262,21 @@ public final class DatastreamElasticsearchConnectorArgs extends com.pulumi.resou
         }
 
         public DatastreamElasticsearchConnectorArgs build() {
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
-            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
-            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
-            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamElasticsearchConnectorArgs", "displayName");
+            }
+            if ($.endpoint == null) {
+                throw new MissingRequiredPropertyException("DatastreamElasticsearchConnectorArgs", "endpoint");
+            }
+            if ($.indexName == null) {
+                throw new MissingRequiredPropertyException("DatastreamElasticsearchConnectorArgs", "indexName");
+            }
+            if ($.password == null) {
+                throw new MissingRequiredPropertyException("DatastreamElasticsearchConnectorArgs", "password");
+            }
+            if ($.userName == null) {
+                throw new MissingRequiredPropertyException("DatastreamElasticsearchConnectorArgs", "userName");
+            }
             return $;
         }
     }

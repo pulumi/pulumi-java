@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.PropertyHostnameCertStatusArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -147,9 +148,15 @@ public final class PropertyHostnameArgs extends com.pulumi.resources.ResourceArg
         }
 
         public PropertyHostnameArgs build() {
-            $.certProvisioningType = Objects.requireNonNull($.certProvisioningType, "expected parameter 'certProvisioningType' to be non-null");
-            $.cnameFrom = Objects.requireNonNull($.cnameFrom, "expected parameter 'cnameFrom' to be non-null");
-            $.cnameTo = Objects.requireNonNull($.cnameTo, "expected parameter 'cnameTo' to be non-null");
+            if ($.certProvisioningType == null) {
+                throw new MissingRequiredPropertyException("PropertyHostnameArgs", "certProvisioningType");
+            }
+            if ($.cnameFrom == null) {
+                throw new MissingRequiredPropertyException("PropertyHostnameArgs", "cnameFrom");
+            }
+            if ($.cnameTo == null) {
+                throw new MissingRequiredPropertyException("PropertyHostnameArgs", "cnameTo");
+            }
             return $;
         }
     }

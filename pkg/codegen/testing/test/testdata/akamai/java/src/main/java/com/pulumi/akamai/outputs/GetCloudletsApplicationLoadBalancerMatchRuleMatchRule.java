@@ -6,6 +6,7 @@ package com.pulumi.akamai.outputs;
 import com.pulumi.akamai.outputs.GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleForwardSetting;
 import com.pulumi.akamai.outputs.GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -95,17 +96,22 @@ public final class GetCloudletsApplicationLoadBalancerMatchRuleMatchRule {
 
         @CustomType.Setter
         public Builder disabled(@Nullable Boolean disabled) {
+
             this.disabled = disabled;
             return this;
         }
         @CustomType.Setter
         public Builder end(@Nullable Integer end) {
+
             this.end = end;
             return this;
         }
         @CustomType.Setter
         public Builder forwardSettings(List<GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleForwardSetting> forwardSettings) {
-            this.forwardSettings = Objects.requireNonNull(forwardSettings);
+            if (forwardSettings == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerMatchRuleMatchRule", "forwardSettings");
+            }
+            this.forwardSettings = forwardSettings;
             return this;
         }
         public Builder forwardSettings(GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleForwardSetting... forwardSettings) {
@@ -113,16 +119,19 @@ public final class GetCloudletsApplicationLoadBalancerMatchRuleMatchRule {
         }
         @CustomType.Setter
         public Builder id(@Nullable Integer id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder matchUrl(@Nullable String matchUrl) {
+
             this.matchUrl = matchUrl;
             return this;
         }
         @CustomType.Setter
         public Builder matches(@Nullable List<GetCloudletsApplicationLoadBalancerMatchRuleMatchRuleMatch> matches) {
+
             this.matches = matches;
             return this;
         }
@@ -131,22 +140,28 @@ public final class GetCloudletsApplicationLoadBalancerMatchRuleMatchRule {
         }
         @CustomType.Setter
         public Builder matchesAlways(@Nullable Boolean matchesAlways) {
+
             this.matchesAlways = matchesAlways;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder start(@Nullable Integer start) {
+
             this.start = start;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerMatchRuleMatchRule", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetCloudletsApplicationLoadBalancerMatchRuleMatchRule build() {

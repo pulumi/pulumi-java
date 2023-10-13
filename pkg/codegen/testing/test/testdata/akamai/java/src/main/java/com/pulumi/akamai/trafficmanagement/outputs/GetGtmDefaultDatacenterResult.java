@@ -4,6 +4,7 @@
 package com.pulumi.akamai.trafficmanagement.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -69,27 +70,40 @@ public final class GetGtmDefaultDatacenterResult {
 
         @CustomType.Setter
         public Builder datacenter(@Nullable Integer datacenter) {
+
             this.datacenter = datacenter;
             return this;
         }
         @CustomType.Setter
         public Builder datacenterId(Integer datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            if (datacenterId == null) {
+              throw new MissingRequiredPropertyException("GetGtmDefaultDatacenterResult", "datacenterId");
+            }
+            this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            if (domain == null) {
+              throw new MissingRequiredPropertyException("GetGtmDefaultDatacenterResult", "domain");
+            }
+            this.domain = domain;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetGtmDefaultDatacenterResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder nickname(String nickname) {
-            this.nickname = Objects.requireNonNull(nickname);
+            if (nickname == null) {
+              throw new MissingRequiredPropertyException("GetGtmDefaultDatacenterResult", "nickname");
+            }
+            this.nickname = nickname;
             return this;
         }
         public GetGtmDefaultDatacenterResult build() {

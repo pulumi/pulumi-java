@@ -10,6 +10,7 @@ import com.pulumi.akamai.inputs.CpsThirdPartyEnrollmentOrganizationArgs;
 import com.pulumi.akamai.inputs.CpsThirdPartyEnrollmentTechContactArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -695,15 +696,33 @@ public final class CpsThirdPartyEnrollmentArgs extends com.pulumi.resources.Reso
         }
 
         public CpsThirdPartyEnrollmentArgs build() {
-            $.adminContact = Objects.requireNonNull($.adminContact, "expected parameter 'adminContact' to be non-null");
-            $.commonName = Objects.requireNonNull($.commonName, "expected parameter 'commonName' to be non-null");
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.csr = Objects.requireNonNull($.csr, "expected parameter 'csr' to be non-null");
-            $.networkConfiguration = Objects.requireNonNull($.networkConfiguration, "expected parameter 'networkConfiguration' to be non-null");
-            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
-            $.secureNetwork = Objects.requireNonNull($.secureNetwork, "expected parameter 'secureNetwork' to be non-null");
-            $.sniOnly = Objects.requireNonNull($.sniOnly, "expected parameter 'sniOnly' to be non-null");
-            $.techContact = Objects.requireNonNull($.techContact, "expected parameter 'techContact' to be non-null");
+            if ($.adminContact == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "adminContact");
+            }
+            if ($.commonName == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "commonName");
+            }
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "contractId");
+            }
+            if ($.csr == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "csr");
+            }
+            if ($.networkConfiguration == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "networkConfiguration");
+            }
+            if ($.organization == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "organization");
+            }
+            if ($.secureNetwork == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "secureNetwork");
+            }
+            if ($.sniOnly == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "sniOnly");
+            }
+            if ($.techContact == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentArgs", "techContact");
+            }
             return $;
         }
     }

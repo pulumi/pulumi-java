@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -149,9 +150,15 @@ public final class AppSecSecurityPolicyRenameArgs extends com.pulumi.resources.R
         }
 
         public AppSecSecurityPolicyRenameArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
-            $.securityPolicyName = Objects.requireNonNull($.securityPolicyName, "expected parameter 'securityPolicyName' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecSecurityPolicyRenameArgs", "configId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecSecurityPolicyRenameArgs", "securityPolicyId");
+            }
+            if ($.securityPolicyName == null) {
+                throw new MissingRequiredPropertyException("AppSecSecurityPolicyRenameArgs", "securityPolicyName");
+            }
             return $;
         }
     }

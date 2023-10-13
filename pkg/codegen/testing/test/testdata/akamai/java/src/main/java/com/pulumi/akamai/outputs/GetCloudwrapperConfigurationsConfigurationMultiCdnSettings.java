@@ -8,6 +8,7 @@ import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationsConfigurationMulti
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsDataStreams;
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsOrigin;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -65,11 +66,13 @@ public final class GetCloudwrapperConfigurationsConfigurationMultiCdnSettings {
 
         @CustomType.Setter
         public Builder bocc(@Nullable GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsBocc bocc) {
+
             this.bocc = bocc;
             return this;
         }
         @CustomType.Setter
         public Builder cdns(@Nullable List<GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsCdn> cdns) {
+
             this.cdns = cdns;
             return this;
         }
@@ -78,16 +81,21 @@ public final class GetCloudwrapperConfigurationsConfigurationMultiCdnSettings {
         }
         @CustomType.Setter
         public Builder dataStreams(@Nullable GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsDataStreams dataStreams) {
+
             this.dataStreams = dataStreams;
             return this;
         }
         @CustomType.Setter
         public Builder enableSoftAlerts(Boolean enableSoftAlerts) {
-            this.enableSoftAlerts = Objects.requireNonNull(enableSoftAlerts);
+            if (enableSoftAlerts == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationsConfigurationMultiCdnSettings", "enableSoftAlerts");
+            }
+            this.enableSoftAlerts = enableSoftAlerts;
             return this;
         }
         @CustomType.Setter
         public Builder origins(@Nullable List<GetCloudwrapperConfigurationsConfigurationMultiCdnSettingsOrigin> origins) {
+
             this.origins = origins;
             return this;
         }

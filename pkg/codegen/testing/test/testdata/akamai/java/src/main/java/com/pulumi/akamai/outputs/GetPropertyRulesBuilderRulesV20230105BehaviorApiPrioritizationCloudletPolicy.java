@@ -43,11 +43,13 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorApiPrioritizatio
 
         @CustomType.Setter
         public Builder id(@Nullable Integer id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }

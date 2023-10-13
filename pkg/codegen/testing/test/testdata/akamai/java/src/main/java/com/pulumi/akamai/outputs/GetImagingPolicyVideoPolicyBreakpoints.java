@@ -36,6 +36,7 @@ public final class GetImagingPolicyVideoPolicyBreakpoints {
 
         @CustomType.Setter
         public Builder widths(@Nullable List<Integer> widths) {
+
             this.widths = widths;
             return this;
         }

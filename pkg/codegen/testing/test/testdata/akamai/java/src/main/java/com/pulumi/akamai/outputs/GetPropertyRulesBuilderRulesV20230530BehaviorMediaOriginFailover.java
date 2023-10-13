@@ -357,116 +357,139 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorMediaOriginFailo
 
         @CustomType.Setter
         public Builder cacheErrorResponse(@Nullable Boolean cacheErrorResponse) {
+
             this.cacheErrorResponse = cacheErrorResponse;
             return this;
         }
         @CustomType.Setter
         public Builder cacheWindow(@Nullable String cacheWindow) {
+
             this.cacheWindow = cacheWindow;
             return this;
         }
         @CustomType.Setter
         public Builder clientResponseCode(@Nullable String clientResponseCode) {
+
             this.clientResponseCode = clientResponseCode;
             return this;
         }
         @CustomType.Setter
         public Builder detectObjectUnavailable(@Nullable Boolean detectObjectUnavailable) {
+
             this.detectObjectUnavailable = detectObjectUnavailable;
             return this;
         }
         @CustomType.Setter
         public Builder detectObjectUnavailableTitle(@Nullable String detectObjectUnavailableTitle) {
+
             this.detectObjectUnavailableTitle = detectObjectUnavailableTitle;
             return this;
         }
         @CustomType.Setter
         public Builder detectOriginUnavailable(@Nullable Boolean detectOriginUnavailable) {
+
             this.detectOriginUnavailable = detectOriginUnavailable;
             return this;
         }
         @CustomType.Setter
         public Builder detectOriginUnavailableTitle(@Nullable String detectOriginUnavailableTitle) {
+
             this.detectOriginUnavailableTitle = detectOriginUnavailableTitle;
             return this;
         }
         @CustomType.Setter
         public Builder detectOriginUnresponsive(@Nullable Boolean detectOriginUnresponsive) {
+
             this.detectOriginUnresponsive = detectOriginUnresponsive;
             return this;
         }
         @CustomType.Setter
         public Builder detectOriginUnresponsiveTitle(@Nullable String detectOriginUnresponsiveTitle) {
+
             this.detectOriginUnresponsiveTitle = detectOriginUnresponsiveTitle;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableAlternateHost(@Nullable String objectUnavailableAlternateHost) {
+
             this.objectUnavailableAlternateHost = objectUnavailableAlternateHost;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableBackupHost(@Nullable String objectUnavailableBackupHost) {
+
             this.objectUnavailableBackupHost = objectUnavailableBackupHost;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableBlacklistOriginIp(@Nullable Boolean objectUnavailableBlacklistOriginIp) {
+
             this.objectUnavailableBlacklistOriginIp = objectUnavailableBlacklistOriginIp;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableBlacklistWindow(@Nullable String objectUnavailableBlacklistWindow) {
+
             this.objectUnavailableBlacklistWindow = objectUnavailableBlacklistWindow;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableChangeProtocol(@Nullable Boolean objectUnavailableChangeProtocol) {
+
             this.objectUnavailableChangeProtocol = objectUnavailableChangeProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableDetectionLevel(@Nullable String objectUnavailableDetectionLevel) {
+
             this.objectUnavailableDetectionLevel = objectUnavailableDetectionLevel;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableIncludeQueryString(@Nullable Boolean objectUnavailableIncludeQueryString) {
+
             this.objectUnavailableIncludeQueryString = objectUnavailableIncludeQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableModifiedPath(@Nullable String objectUnavailableModifiedPath) {
+
             this.objectUnavailableModifiedPath = objectUnavailableModifiedPath;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableModifyRequestPath(@Nullable Boolean objectUnavailableModifyRequestPath) {
+
             this.objectUnavailableModifyRequestPath = objectUnavailableModifyRequestPath;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableProtocol(@Nullable String objectUnavailableProtocol) {
+
             this.objectUnavailableProtocol = objectUnavailableProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableRecovery(@Nullable String objectUnavailableRecovery) {
+
             this.objectUnavailableRecovery = objectUnavailableRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableRedirectMethod(@Nullable Integer objectUnavailableRedirectMethod) {
+
             this.objectUnavailableRedirectMethod = objectUnavailableRedirectMethod;
             return this;
         }
         @CustomType.Setter
         public Builder objectUnavailableResponseCodes(@Nullable List<String> objectUnavailableResponseCodes) {
+
             this.objectUnavailableResponseCodes = objectUnavailableResponseCodes;
             return this;
         }
@@ -475,71 +498,85 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorMediaOriginFailo
         }
         @CustomType.Setter
         public Builder objectUnavailableRetryLimit(@Nullable String objectUnavailableRetryLimit) {
+
             this.objectUnavailableRetryLimit = objectUnavailableRetryLimit;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableAlternateHost(@Nullable String originUnavailableAlternateHost) {
+
             this.originUnavailableAlternateHost = originUnavailableAlternateHost;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableBackupHost(@Nullable String originUnavailableBackupHost) {
+
             this.originUnavailableBackupHost = originUnavailableBackupHost;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableBlacklistOriginIp(@Nullable Boolean originUnavailableBlacklistOriginIp) {
+
             this.originUnavailableBlacklistOriginIp = originUnavailableBlacklistOriginIp;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableBlacklistWindow(@Nullable String originUnavailableBlacklistWindow) {
+
             this.originUnavailableBlacklistWindow = originUnavailableBlacklistWindow;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableChangeProtocol(@Nullable Boolean originUnavailableChangeProtocol) {
+
             this.originUnavailableChangeProtocol = originUnavailableChangeProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableDetectionLevel(@Nullable String originUnavailableDetectionLevel) {
+
             this.originUnavailableDetectionLevel = originUnavailableDetectionLevel;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableIncludeQueryString(@Nullable Boolean originUnavailableIncludeQueryString) {
+
             this.originUnavailableIncludeQueryString = originUnavailableIncludeQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableModifiedPath(@Nullable String originUnavailableModifiedPath) {
+
             this.originUnavailableModifiedPath = originUnavailableModifiedPath;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableModifyRequestPath(@Nullable Boolean originUnavailableModifyRequestPath) {
+
             this.originUnavailableModifyRequestPath = originUnavailableModifyRequestPath;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableProtocol(@Nullable String originUnavailableProtocol) {
+
             this.originUnavailableProtocol = originUnavailableProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableRecovery(@Nullable String originUnavailableRecovery) {
+
             this.originUnavailableRecovery = originUnavailableRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableRedirectMethod(@Nullable Integer originUnavailableRedirectMethod) {
+
             this.originUnavailableRedirectMethod = originUnavailableRedirectMethod;
             return this;
         }
         @CustomType.Setter
         public Builder originUnavailableResponseCodes(@Nullable List<String> originUnavailableResponseCodes) {
+
             this.originUnavailableResponseCodes = originUnavailableResponseCodes;
             return this;
         }
@@ -548,86 +585,103 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorMediaOriginFailo
         }
         @CustomType.Setter
         public Builder originUnavailableRetryLimit(@Nullable String originUnavailableRetryLimit) {
+
             this.originUnavailableRetryLimit = originUnavailableRetryLimit;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveAlternateHost(@Nullable String originUnresponsiveAlternateHost) {
+
             this.originUnresponsiveAlternateHost = originUnresponsiveAlternateHost;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveBackupHost(@Nullable String originUnresponsiveBackupHost) {
+
             this.originUnresponsiveBackupHost = originUnresponsiveBackupHost;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveBlacklistOriginIp(@Nullable Boolean originUnresponsiveBlacklistOriginIp) {
+
             this.originUnresponsiveBlacklistOriginIp = originUnresponsiveBlacklistOriginIp;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveBlacklistWindow(@Nullable String originUnresponsiveBlacklistWindow) {
+
             this.originUnresponsiveBlacklistWindow = originUnresponsiveBlacklistWindow;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveChangeProtocol(@Nullable Boolean originUnresponsiveChangeProtocol) {
+
             this.originUnresponsiveChangeProtocol = originUnresponsiveChangeProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveDetectionLevel(@Nullable String originUnresponsiveDetectionLevel) {
+
             this.originUnresponsiveDetectionLevel = originUnresponsiveDetectionLevel;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveIncludeQueryString(@Nullable Boolean originUnresponsiveIncludeQueryString) {
+
             this.originUnresponsiveIncludeQueryString = originUnresponsiveIncludeQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveModifiedPath(@Nullable String originUnresponsiveModifiedPath) {
+
             this.originUnresponsiveModifiedPath = originUnresponsiveModifiedPath;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveModifyRequestPath(@Nullable Boolean originUnresponsiveModifyRequestPath) {
+
             this.originUnresponsiveModifyRequestPath = originUnresponsiveModifyRequestPath;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveProtocol(@Nullable String originUnresponsiveProtocol) {
+
             this.originUnresponsiveProtocol = originUnresponsiveProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveRecovery(@Nullable String originUnresponsiveRecovery) {
+
             this.originUnresponsiveRecovery = originUnresponsiveRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveRedirectMethod(@Nullable Integer originUnresponsiveRedirectMethod) {
+
             this.originUnresponsiveRedirectMethod = originUnresponsiveRedirectMethod;
             return this;
         }
         @CustomType.Setter
         public Builder originUnresponsiveRetryLimit(@Nullable String originUnresponsiveRetryLimit) {
+
             this.originUnresponsiveRetryLimit = originUnresponsiveRetryLimit;
             return this;
         }
         @CustomType.Setter
         public Builder otherOptions(@Nullable String otherOptions) {
+
             this.otherOptions = otherOptions;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

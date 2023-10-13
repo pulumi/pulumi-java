@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.DatastreamDeliveryConfigurationFrequency;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,26 +62,35 @@ public final class DatastreamDeliveryConfiguration {
 
         @CustomType.Setter
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
+
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
         @CustomType.Setter
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            if (format == null) {
+              throw new MissingRequiredPropertyException("DatastreamDeliveryConfiguration", "format");
+            }
+            this.format = format;
             return this;
         }
         @CustomType.Setter
         public Builder frequency(DatastreamDeliveryConfigurationFrequency frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            if (frequency == null) {
+              throw new MissingRequiredPropertyException("DatastreamDeliveryConfiguration", "frequency");
+            }
+            this.frequency = frequency;
             return this;
         }
         @CustomType.Setter
         public Builder uploadFilePrefix(@Nullable String uploadFilePrefix) {
+
             this.uploadFilePrefix = uploadFilePrefix;
             return this;
         }
         @CustomType.Setter
         public Builder uploadFileSuffix(@Nullable String uploadFileSuffix) {
+
             this.uploadFileSuffix = uploadFileSuffix;
             return this;
         }

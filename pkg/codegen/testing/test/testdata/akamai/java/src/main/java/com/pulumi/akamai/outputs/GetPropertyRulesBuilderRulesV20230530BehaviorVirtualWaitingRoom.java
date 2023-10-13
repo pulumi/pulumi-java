@@ -105,51 +105,61 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorVirtualWaitingRo
 
         @CustomType.Setter
         public Builder accessTitle(@Nullable String accessTitle) {
+
             this.accessTitle = accessTitle;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletSharedPolicy(@Nullable Integer cloudletSharedPolicy) {
+
             this.cloudletSharedPolicy = cloudletSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder customCookieDomain(@Nullable String customCookieDomain) {
+
             this.customCookieDomain = customCookieDomain;
             return this;
         }
         @CustomType.Setter
         public Builder domainConfig(@Nullable String domainConfig) {
+
             this.domainConfig = domainConfig;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder sessionAutoProlong(@Nullable Boolean sessionAutoProlong) {
+
             this.sessionAutoProlong = sessionAutoProlong;
             return this;
         }
         @CustomType.Setter
         public Builder sessionDuration(@Nullable Integer sessionDuration) {
+
             this.sessionDuration = sessionDuration;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomAssetsPaths(@Nullable List<String> waitingRoomAssetsPaths) {
+
             this.waitingRoomAssetsPaths = waitingRoomAssetsPaths;
             return this;
         }
@@ -158,11 +168,13 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorVirtualWaitingRo
         }
         @CustomType.Setter
         public Builder waitingRoomPath(@Nullable String waitingRoomPath) {
+
             this.waitingRoomPath = waitingRoomPath;
             return this;
         }
         @CustomType.Setter
         public Builder waitingRoomTitle(@Nullable String waitingRoomTitle) {
+
             this.waitingRoomTitle = waitingRoomTitle;
             return this;
         }

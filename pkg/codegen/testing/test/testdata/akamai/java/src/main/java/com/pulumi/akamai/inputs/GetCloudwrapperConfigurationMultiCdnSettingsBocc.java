@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -102,11 +103,21 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsBocc extends com.
         }
 
         public GetCloudwrapperConfigurationMultiCdnSettingsBocc build() {
-            $.conditionalSamplingFrequency = Objects.requireNonNull($.conditionalSamplingFrequency, "expected parameter 'conditionalSamplingFrequency' to be non-null");
-            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
-            $.forwardType = Objects.requireNonNull($.forwardType, "expected parameter 'forwardType' to be non-null");
-            $.requestType = Objects.requireNonNull($.requestType, "expected parameter 'requestType' to be non-null");
-            $.samplingFrequency = Objects.requireNonNull($.samplingFrequency, "expected parameter 'samplingFrequency' to be non-null");
+            if ($.conditionalSamplingFrequency == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "conditionalSamplingFrequency");
+            }
+            if ($.enabled == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "enabled");
+            }
+            if ($.forwardType == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "forwardType");
+            }
+            if ($.requestType == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "requestType");
+            }
+            if ($.samplingFrequency == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsBocc", "samplingFrequency");
+            }
             return $;
         }
     }

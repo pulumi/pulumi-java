@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.GetCloudletsAudienceSegmentationMatchRuleMatchRuleForwardSettings;
 import com.pulumi.akamai.inputs.GetCloudletsAudienceSegmentationMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -151,8 +152,12 @@ public final class GetCloudletsAudienceSegmentationMatchRuleMatchRule extends co
         }
 
         public GetCloudletsAudienceSegmentationMatchRuleMatchRule build() {
-            $.forwardSettings = Objects.requireNonNull($.forwardSettings, "expected parameter 'forwardSettings' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.forwardSettings == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsAudienceSegmentationMatchRuleMatchRule", "forwardSettings");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsAudienceSegmentationMatchRuleMatchRule", "type");
+            }
             return $;
         }
     }

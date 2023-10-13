@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -75,26 +76,39 @@ public final class GetAppSecExportConfigurationResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecExportConfigurationResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecExportConfigurationResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecExportConfigurationResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecExportConfigurationResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder searches(@Nullable List<String> searches) {
+
             this.searches = searches;
             return this;
         }
@@ -103,7 +117,10 @@ public final class GetAppSecExportConfigurationResult {
         }
         @CustomType.Setter
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetAppSecExportConfigurationResult", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetAppSecExportConfigurationResult build() {

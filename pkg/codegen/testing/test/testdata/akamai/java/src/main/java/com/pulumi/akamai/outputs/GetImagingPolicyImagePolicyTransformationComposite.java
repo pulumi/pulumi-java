@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetImagingPolicyImagePolicyTransformationCompositeImage;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -109,66 +110,81 @@ public final class GetImagingPolicyImagePolicyTransformationComposite {
 
         @CustomType.Setter
         public Builder gravity(@Nullable String gravity) {
+
             this.gravity = gravity;
             return this;
         }
         @CustomType.Setter
         public Builder gravityVar(@Nullable String gravityVar) {
+
             this.gravityVar = gravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder image(GetImagingPolicyImagePolicyTransformationCompositeImage image) {
-            this.image = Objects.requireNonNull(image);
+            if (image == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationComposite", "image");
+            }
+            this.image = image;
             return this;
         }
         @CustomType.Setter
         public Builder placement(@Nullable String placement) {
+
             this.placement = placement;
             return this;
         }
         @CustomType.Setter
         public Builder placementVar(@Nullable String placementVar) {
+
             this.placementVar = placementVar;
             return this;
         }
         @CustomType.Setter
         public Builder scale(@Nullable String scale) {
+
             this.scale = scale;
             return this;
         }
         @CustomType.Setter
         public Builder scaleDimension(@Nullable String scaleDimension) {
+
             this.scaleDimension = scaleDimension;
             return this;
         }
         @CustomType.Setter
         public Builder scaleDimensionVar(@Nullable String scaleDimensionVar) {
+
             this.scaleDimensionVar = scaleDimensionVar;
             return this;
         }
         @CustomType.Setter
         public Builder scaleVar(@Nullable String scaleVar) {
+
             this.scaleVar = scaleVar;
             return this;
         }
         @CustomType.Setter
         public Builder xPosition(@Nullable String xPosition) {
+
             this.xPosition = xPosition;
             return this;
         }
         @CustomType.Setter
         public Builder xPositionVar(@Nullable String xPositionVar) {
+
             this.xPositionVar = xPositionVar;
             return this;
         }
         @CustomType.Setter
         public Builder yPosition(@Nullable String yPosition) {
+
             this.yPosition = yPosition;
             return this;
         }
         @CustomType.Setter
         public Builder yPositionVar(@Nullable String yPositionVar) {
+
             this.yPositionVar = yPositionVar;
             return this;
         }

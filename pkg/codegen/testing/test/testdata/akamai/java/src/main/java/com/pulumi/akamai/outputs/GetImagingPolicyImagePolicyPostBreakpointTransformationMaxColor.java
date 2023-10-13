@@ -42,11 +42,13 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationMaxCol
 
         @CustomType.Setter
         public Builder colors(@Nullable String colors) {
+
             this.colors = colors;
             return this;
         }
         @CustomType.Setter
         public Builder colorsVar(@Nullable String colorsVar) {
+
             this.colorsVar = colorsVar;
             return this;
         }

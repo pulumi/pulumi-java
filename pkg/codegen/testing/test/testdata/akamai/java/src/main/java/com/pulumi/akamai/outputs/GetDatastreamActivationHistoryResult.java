@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetDatastreamActivationHistoryActivation;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -57,7 +58,10 @@ public final class GetDatastreamActivationHistoryResult {
 
         @CustomType.Setter
         public Builder activations(List<GetDatastreamActivationHistoryActivation> activations) {
-            this.activations = Objects.requireNonNull(activations);
+            if (activations == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryResult", "activations");
+            }
+            this.activations = activations;
             return this;
         }
         public Builder activations(GetDatastreamActivationHistoryActivation... activations) {
@@ -65,12 +69,18 @@ public final class GetDatastreamActivationHistoryResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder streamId(Integer streamId) {
-            this.streamId = Objects.requireNonNull(streamId);
+            if (streamId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryResult", "streamId");
+            }
+            this.streamId = streamId;
             return this;
         }
         public GetDatastreamActivationHistoryResult build() {

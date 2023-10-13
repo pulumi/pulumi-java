@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.GtmPropertyLivenessTestHttpHeaderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -456,10 +457,18 @@ public final class GtmPropertyLivenessTestArgs extends com.pulumi.resources.Reso
         }
 
         public GtmPropertyLivenessTestArgs build() {
-            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
-            $.testInterval = Objects.requireNonNull($.testInterval, "expected parameter 'testInterval' to be non-null");
-            $.testObjectProtocol = Objects.requireNonNull($.testObjectProtocol, "expected parameter 'testObjectProtocol' to be non-null");
-            $.testTimeout = Objects.requireNonNull($.testTimeout, "expected parameter 'testTimeout' to be non-null");
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyLivenessTestArgs", "name");
+            }
+            if ($.testInterval == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyLivenessTestArgs", "testInterval");
+            }
+            if ($.testObjectProtocol == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyLivenessTestArgs", "testObjectProtocol");
+            }
+            if ($.testTimeout == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyLivenessTestArgs", "testTimeout");
+            }
             return $;
         }
     }

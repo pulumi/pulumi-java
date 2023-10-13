@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -68,12 +69,18 @@ public final class GetAppSecSelectedHostnamesResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectedHostnamesResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder hostnames(List<String> hostnames) {
-            this.hostnames = Objects.requireNonNull(hostnames);
+            if (hostnames == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectedHostnamesResult", "hostnames");
+            }
+            this.hostnames = hostnames;
             return this;
         }
         public Builder hostnames(String... hostnames) {
@@ -81,17 +88,26 @@ public final class GetAppSecSelectedHostnamesResult {
         }
         @CustomType.Setter
         public Builder hostnamesJson(String hostnamesJson) {
-            this.hostnamesJson = Objects.requireNonNull(hostnamesJson);
+            if (hostnamesJson == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectedHostnamesResult", "hostnamesJson");
+            }
+            this.hostnamesJson = hostnamesJson;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectedHostnamesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectedHostnamesResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         public GetAppSecSelectedHostnamesResult build() {

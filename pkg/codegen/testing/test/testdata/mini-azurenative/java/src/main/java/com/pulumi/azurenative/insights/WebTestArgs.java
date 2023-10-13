@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.enums.WebTestKind;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -490,8 +491,12 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
         public WebTestArgs build() {
             $.frequency = Codegen.integerProp("frequency").output().arg($.frequency).def(300).getNullable();
             $.kind = Codegen.objectProp("kind", WebTestKind.class).output().arg($.kind).def(WebTestKind.Ping).getNullable();
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-            $.syntheticMonitorId = Objects.requireNonNull($.syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("WebTestArgs", "resourceGroupName");
+            }
+            if ($.syntheticMonitorId == null) {
+                throw new MissingRequiredPropertyException("WebTestArgs", "syntheticMonitorId");
+            }
             $.timeout = Codegen.integerProp("timeout").output().arg($.timeout).def(30).getNullable();
             $.webTestKind = Codegen.objectProp("webTestKind", WebTestKind.class).output().arg($.webTestKind).def(WebTestKind.Ping).require();
             return $;

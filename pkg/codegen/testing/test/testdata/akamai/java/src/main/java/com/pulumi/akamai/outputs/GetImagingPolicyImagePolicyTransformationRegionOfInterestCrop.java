@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterest;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -85,46 +86,57 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
 
         @CustomType.Setter
         public Builder gravity(@Nullable String gravity) {
+
             this.gravity = gravity;
             return this;
         }
         @CustomType.Setter
         public Builder gravityVar(@Nullable String gravityVar) {
+
             this.gravityVar = gravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder regionOfInterest(GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterest regionOfInterest) {
-            this.regionOfInterest = Objects.requireNonNull(regionOfInterest);
+            if (regionOfInterest == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop", "regionOfInterest");
+            }
+            this.regionOfInterest = regionOfInterest;
             return this;
         }
         @CustomType.Setter
         public Builder style(@Nullable String style) {
+
             this.style = style;
             return this;
         }
         @CustomType.Setter
         public Builder styleVar(@Nullable String styleVar) {
+
             this.styleVar = styleVar;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }

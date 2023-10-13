@@ -67,31 +67,37 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionRegularExpressi
 
         @CustomType.Setter
         public Builder caseSensitive(@Nullable Boolean caseSensitive) {
+
             this.caseSensitive = caseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchString(@Nullable String matchString) {
+
             this.matchString = matchString;
             return this;
         }
         @CustomType.Setter
         public Builder regex(@Nullable String regex) {
+
             this.regex = regex;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

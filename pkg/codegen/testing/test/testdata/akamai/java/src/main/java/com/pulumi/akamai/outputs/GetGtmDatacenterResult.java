@@ -6,6 +6,7 @@ package com.pulumi.akamai.outputs;
 import com.pulumi.akamai.outputs.GetGtmDatacenterDefaultLoadObject;
 import com.pulumi.akamai.outputs.GetGtmDatacenterLink;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -150,42 +151,66 @@ public final class GetGtmDatacenterResult {
 
         @CustomType.Setter
         public Builder city(String city) {
-            this.city = Objects.requireNonNull(city);
+            if (city == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "city");
+            }
+            this.city = city;
             return this;
         }
         @CustomType.Setter
         public Builder cloneOf(Integer cloneOf) {
-            this.cloneOf = Objects.requireNonNull(cloneOf);
+            if (cloneOf == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "cloneOf");
+            }
+            this.cloneOf = cloneOf;
             return this;
         }
         @CustomType.Setter
         public Builder cloudServerHostHeaderOverride(Boolean cloudServerHostHeaderOverride) {
-            this.cloudServerHostHeaderOverride = Objects.requireNonNull(cloudServerHostHeaderOverride);
+            if (cloudServerHostHeaderOverride == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "cloudServerHostHeaderOverride");
+            }
+            this.cloudServerHostHeaderOverride = cloudServerHostHeaderOverride;
             return this;
         }
         @CustomType.Setter
         public Builder cloudServerTargeting(Boolean cloudServerTargeting) {
-            this.cloudServerTargeting = Objects.requireNonNull(cloudServerTargeting);
+            if (cloudServerTargeting == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "cloudServerTargeting");
+            }
+            this.cloudServerTargeting = cloudServerTargeting;
             return this;
         }
         @CustomType.Setter
         public Builder continent(String continent) {
-            this.continent = Objects.requireNonNull(continent);
+            if (continent == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "continent");
+            }
+            this.continent = continent;
             return this;
         }
         @CustomType.Setter
         public Builder country(String country) {
-            this.country = Objects.requireNonNull(country);
+            if (country == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "country");
+            }
+            this.country = country;
             return this;
         }
         @CustomType.Setter
         public Builder datacenterId(Integer datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            if (datacenterId == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "datacenterId");
+            }
+            this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder defaultLoadObjects(List<GetGtmDatacenterDefaultLoadObject> defaultLoadObjects) {
-            this.defaultLoadObjects = Objects.requireNonNull(defaultLoadObjects);
+            if (defaultLoadObjects == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "defaultLoadObjects");
+            }
+            this.defaultLoadObjects = defaultLoadObjects;
             return this;
         }
         public Builder defaultLoadObjects(GetGtmDatacenterDefaultLoadObject... defaultLoadObjects) {
@@ -193,22 +218,34 @@ public final class GetGtmDatacenterResult {
         }
         @CustomType.Setter
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            if (domain == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "domain");
+            }
+            this.domain = domain;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder latitude(Double latitude) {
-            this.latitude = Objects.requireNonNull(latitude);
+            if (latitude == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "latitude");
+            }
+            this.latitude = latitude;
             return this;
         }
         @CustomType.Setter
         public Builder links(List<GetGtmDatacenterLink> links) {
-            this.links = Objects.requireNonNull(links);
+            if (links == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "links");
+            }
+            this.links = links;
             return this;
         }
         public Builder links(GetGtmDatacenterLink... links) {
@@ -216,32 +253,50 @@ public final class GetGtmDatacenterResult {
         }
         @CustomType.Setter
         public Builder longitude(Double longitude) {
-            this.longitude = Objects.requireNonNull(longitude);
+            if (longitude == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "longitude");
+            }
+            this.longitude = longitude;
             return this;
         }
         @CustomType.Setter
         public Builder nickname(String nickname) {
-            this.nickname = Objects.requireNonNull(nickname);
+            if (nickname == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "nickname");
+            }
+            this.nickname = nickname;
             return this;
         }
         @CustomType.Setter
         public Builder scorePenalty(Integer scorePenalty) {
-            this.scorePenalty = Objects.requireNonNull(scorePenalty);
+            if (scorePenalty == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "scorePenalty");
+            }
+            this.scorePenalty = scorePenalty;
             return this;
         }
         @CustomType.Setter
         public Builder servermonitorPool(String servermonitorPool) {
-            this.servermonitorPool = Objects.requireNonNull(servermonitorPool);
+            if (servermonitorPool == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "servermonitorPool");
+            }
+            this.servermonitorPool = servermonitorPool;
             return this;
         }
         @CustomType.Setter
         public Builder stateOrProvince(String stateOrProvince) {
-            this.stateOrProvince = Objects.requireNonNull(stateOrProvince);
+            if (stateOrProvince == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "stateOrProvince");
+            }
+            this.stateOrProvince = stateOrProvince;
             return this;
         }
         @CustomType.Setter
         public Builder virtual(Boolean virtual) {
-            this.virtual = Objects.requireNonNull(virtual);
+            if (virtual == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacenterResult", "virtual");
+            }
+            this.virtual = virtual;
             return this;
         }
         public GetGtmDatacenterResult build() {

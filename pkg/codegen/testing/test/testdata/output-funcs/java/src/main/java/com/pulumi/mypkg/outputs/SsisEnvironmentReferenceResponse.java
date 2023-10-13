@@ -87,21 +87,25 @@ public final class SsisEnvironmentReferenceResponse {
 
         @CustomType.Setter
         public Builder environmentFolderName(@Nullable String environmentFolderName) {
+
             this.environmentFolderName = environmentFolderName;
             return this;
         }
         @CustomType.Setter
         public Builder environmentName(@Nullable String environmentName) {
+
             this.environmentName = environmentName;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder referenceType(@Nullable String referenceType) {
+
             this.referenceType = referenceType;
             return this;
         }

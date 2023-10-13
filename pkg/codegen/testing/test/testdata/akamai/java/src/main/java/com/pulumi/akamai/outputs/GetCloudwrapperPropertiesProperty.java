@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,27 +60,42 @@ public final class GetCloudwrapperPropertiesProperty {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(Integer groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder propertyId(Integer propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         @CustomType.Setter
         public Builder propertyName(String propertyName) {
-            this.propertyName = Objects.requireNonNull(propertyName);
+            if (propertyName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "propertyName");
+            }
+            this.propertyName = propertyName;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperPropertiesProperty", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetCloudwrapperPropertiesProperty build() {

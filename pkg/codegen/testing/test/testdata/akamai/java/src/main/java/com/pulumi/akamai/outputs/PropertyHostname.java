@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.PropertyHostnameCertStatus;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,11 +69,15 @@ public final class PropertyHostname {
 
         @CustomType.Setter
         public Builder certProvisioningType(String certProvisioningType) {
-            this.certProvisioningType = Objects.requireNonNull(certProvisioningType);
+            if (certProvisioningType == null) {
+              throw new MissingRequiredPropertyException("PropertyHostname", "certProvisioningType");
+            }
+            this.certProvisioningType = certProvisioningType;
             return this;
         }
         @CustomType.Setter
         public Builder certStatuses(@Nullable List<PropertyHostnameCertStatus> certStatuses) {
+
             this.certStatuses = certStatuses;
             return this;
         }
@@ -81,21 +86,29 @@ public final class PropertyHostname {
         }
         @CustomType.Setter
         public Builder cnameFrom(String cnameFrom) {
-            this.cnameFrom = Objects.requireNonNull(cnameFrom);
+            if (cnameFrom == null) {
+              throw new MissingRequiredPropertyException("PropertyHostname", "cnameFrom");
+            }
+            this.cnameFrom = cnameFrom;
             return this;
         }
         @CustomType.Setter
         public Builder cnameTo(String cnameTo) {
-            this.cnameTo = Objects.requireNonNull(cnameTo);
+            if (cnameTo == null) {
+              throw new MissingRequiredPropertyException("PropertyHostname", "cnameTo");
+            }
+            this.cnameTo = cnameTo;
             return this;
         }
         @CustomType.Setter
         public Builder cnameType(@Nullable String cnameType) {
+
             this.cnameType = cnameType;
             return this;
         }
         @CustomType.Setter
         public Builder edgeHostnameId(@Nullable String edgeHostnameId) {
+
             this.edgeHostnameId = edgeHostnameId;
             return this;
         }

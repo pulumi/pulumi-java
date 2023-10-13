@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -67,27 +68,42 @@ public final class GetEdgekvGroupItemsResult {
 
         @CustomType.Setter
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            if (groupName == null) {
+              throw new MissingRequiredPropertyException("GetEdgekvGroupItemsResult", "groupName");
+            }
+            this.groupName = groupName;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetEdgekvGroupItemsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder items(Map<String,String> items) {
-            this.items = Objects.requireNonNull(items);
+            if (items == null) {
+              throw new MissingRequiredPropertyException("GetEdgekvGroupItemsResult", "items");
+            }
+            this.items = items;
             return this;
         }
         @CustomType.Setter
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            if (namespaceName == null) {
+              throw new MissingRequiredPropertyException("GetEdgekvGroupItemsResult", "namespaceName");
+            }
+            this.namespaceName = namespaceName;
             return this;
         }
         @CustomType.Setter
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            if (network == null) {
+              throw new MissingRequiredPropertyException("GetEdgekvGroupItemsResult", "network");
+            }
+            this.network = network;
             return this;
         }
         public GetEdgekvGroupItemsResult build() {

@@ -8,6 +8,7 @@ import com.pulumi.akamai.inputs.GtmPropertyStaticRrSetArgs;
 import com.pulumi.akamai.inputs.GtmPropertyTrafficTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -602,11 +603,21 @@ public final class GtmPropertyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public GtmPropertyArgs build() {
-            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
-            $.handoutLimit = Objects.requireNonNull($.handoutLimit, "expected parameter 'handoutLimit' to be non-null");
-            $.handoutMode = Objects.requireNonNull($.handoutMode, "expected parameter 'handoutMode' to be non-null");
-            $.scoreAggregationType = Objects.requireNonNull($.scoreAggregationType, "expected parameter 'scoreAggregationType' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.domain == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyArgs", "domain");
+            }
+            if ($.handoutLimit == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyArgs", "handoutLimit");
+            }
+            if ($.handoutMode == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyArgs", "handoutMode");
+            }
+            if ($.scoreAggregationType == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyArgs", "scoreAggregationType");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GtmPropertyArgs", "type");
+            }
             return $;
         }
     }

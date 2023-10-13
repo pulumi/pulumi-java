@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -151,8 +152,12 @@ public final class AppSecAdvancedSettingsLoggingArgs extends com.pulumi.resource
         }
 
         public AppSecAdvancedSettingsLoggingArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.logging = Objects.requireNonNull($.logging, "expected parameter 'logging' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsLoggingArgs", "configId");
+            }
+            if ($.logging == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsLoggingArgs", "logging");
+            }
             return $;
         }
     }

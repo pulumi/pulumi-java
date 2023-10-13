@@ -78,41 +78,49 @@ public final class GetImagingPolicyImagePolicyTransformationRelativeCrop {
 
         @CustomType.Setter
         public Builder east(@Nullable String east) {
+
             this.east = east;
             return this;
         }
         @CustomType.Setter
         public Builder eastVar(@Nullable String eastVar) {
+
             this.eastVar = eastVar;
             return this;
         }
         @CustomType.Setter
         public Builder north(@Nullable String north) {
+
             this.north = north;
             return this;
         }
         @CustomType.Setter
         public Builder northVar(@Nullable String northVar) {
+
             this.northVar = northVar;
             return this;
         }
         @CustomType.Setter
         public Builder south(@Nullable String south) {
+
             this.south = south;
             return this;
         }
         @CustomType.Setter
         public Builder southVar(@Nullable String southVar) {
+
             this.southVar = southVar;
             return this;
         }
         @CustomType.Setter
         public Builder west(@Nullable String west) {
+
             this.west = west;
             return this;
         }
         @CustomType.Setter
         public Builder westVar(@Nullable String westVar) {
+
             this.westVar = westVar;
             return this;
         }

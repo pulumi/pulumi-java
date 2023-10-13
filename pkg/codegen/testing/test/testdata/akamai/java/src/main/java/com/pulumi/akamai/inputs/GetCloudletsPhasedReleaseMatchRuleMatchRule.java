@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettings;
 import com.pulumi.akamai.inputs.GetCloudletsPhasedReleaseMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -164,8 +165,12 @@ public final class GetCloudletsPhasedReleaseMatchRuleMatchRule extends com.pulum
         }
 
         public GetCloudletsPhasedReleaseMatchRuleMatchRule build() {
-            $.forwardSettings = Objects.requireNonNull($.forwardSettings, "expected parameter 'forwardSettings' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.forwardSettings == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRule", "forwardSettings");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRule", "type");
+            }
             return $;
         }
     }

@@ -90,51 +90,61 @@ public final class GetImagingPolicyImagePolicyTransformationAspectCrop {
 
         @CustomType.Setter
         public Builder allowExpansion(@Nullable String allowExpansion) {
+
             this.allowExpansion = allowExpansion;
             return this;
         }
         @CustomType.Setter
         public Builder allowExpansionVar(@Nullable String allowExpansionVar) {
+
             this.allowExpansionVar = allowExpansionVar;
             return this;
         }
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }
         @CustomType.Setter
         public Builder xPosition(@Nullable String xPosition) {
+
             this.xPosition = xPosition;
             return this;
         }
         @CustomType.Setter
         public Builder xPositionVar(@Nullable String xPositionVar) {
+
             this.xPositionVar = xPositionVar;
             return this;
         }
         @CustomType.Setter
         public Builder yPosition(@Nullable String yPosition) {
+
             this.yPosition = yPosition;
             return this;
         }
         @CustomType.Setter
         public Builder yPositionVar(@Nullable String yPositionVar) {
+
             this.yPositionVar = yPositionVar;
             return this;
         }

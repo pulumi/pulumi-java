@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,22 +62,34 @@ public final class GetEdgeWorkersResourceTierResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersResourceTierResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersResourceTierResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder resourceTierId(Integer resourceTierId) {
-            this.resourceTierId = Objects.requireNonNull(resourceTierId);
+            if (resourceTierId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersResourceTierResult", "resourceTierId");
+            }
+            this.resourceTierId = resourceTierId;
             return this;
         }
         @CustomType.Setter
         public Builder resourceTierName(String resourceTierName) {
-            this.resourceTierName = Objects.requireNonNull(resourceTierName);
+            if (resourceTierName == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkersResourceTierResult", "resourceTierName");
+            }
+            this.resourceTierName = resourceTierName;
             return this;
         }
         public GetEdgeWorkersResourceTierResult build() {

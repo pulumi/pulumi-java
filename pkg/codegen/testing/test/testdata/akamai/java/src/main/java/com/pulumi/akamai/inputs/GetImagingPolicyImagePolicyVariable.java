@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetImagingPolicyImagePolicyVariableEnumOption;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -122,9 +123,15 @@ public final class GetImagingPolicyImagePolicyVariable extends com.pulumi.resour
         }
 
         public GetImagingPolicyImagePolicyVariable build() {
-            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
-            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.defaultValue == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyVariable", "defaultValue");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyVariable", "name");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyVariable", "type");
+            }
             return $;
         }
     }

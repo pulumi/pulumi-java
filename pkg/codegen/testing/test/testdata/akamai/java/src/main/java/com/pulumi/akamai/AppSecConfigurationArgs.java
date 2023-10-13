@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -310,10 +311,18 @@ public final class AppSecConfigurationArgs extends com.pulumi.resources.Resource
         }
 
         public AppSecConfigurationArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.hostNames = Objects.requireNonNull($.hostNames, "expected parameter 'hostNames' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("AppSecConfigurationArgs", "contractId");
+            }
+            if ($.description == null) {
+                throw new MissingRequiredPropertyException("AppSecConfigurationArgs", "description");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("AppSecConfigurationArgs", "groupId");
+            }
+            if ($.hostNames == null) {
+                throw new MissingRequiredPropertyException("AppSecConfigurationArgs", "hostNames");
+            }
             return $;
         }
     }

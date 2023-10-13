@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -54,7 +55,9 @@ public final class DatastreamDeliveryConfigurationFrequencyArgs extends com.pulu
         }
 
         public DatastreamDeliveryConfigurationFrequencyArgs build() {
-            $.intervalInSecs = Objects.requireNonNull($.intervalInSecs, "expected parameter 'intervalInSecs' to be non-null");
+            if ($.intervalInSecs == null) {
+                throw new MissingRequiredPropertyException("DatastreamDeliveryConfigurationFrequencyArgs", "intervalInSecs");
+            }
             return $;
         }
     }

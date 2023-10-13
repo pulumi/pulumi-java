@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetImagingPolicyImagePolicyTransformationAppendImage;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,36 +74,45 @@ public final class GetImagingPolicyImagePolicyTransformationAppend {
 
         @CustomType.Setter
         public Builder gravity(@Nullable String gravity) {
+
             this.gravity = gravity;
             return this;
         }
         @CustomType.Setter
         public Builder gravityPriority(@Nullable String gravityPriority) {
+
             this.gravityPriority = gravityPriority;
             return this;
         }
         @CustomType.Setter
         public Builder gravityPriorityVar(@Nullable String gravityPriorityVar) {
+
             this.gravityPriorityVar = gravityPriorityVar;
             return this;
         }
         @CustomType.Setter
         public Builder gravityVar(@Nullable String gravityVar) {
+
             this.gravityVar = gravityVar;
             return this;
         }
         @CustomType.Setter
         public Builder image(GetImagingPolicyImagePolicyTransformationAppendImage image) {
-            this.image = Objects.requireNonNull(image);
+            if (image == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationAppend", "image");
+            }
+            this.image = image;
             return this;
         }
         @CustomType.Setter
         public Builder preserveMinorDimension(@Nullable String preserveMinorDimension) {
+
             this.preserveMinorDimension = preserveMinorDimension;
             return this;
         }
         @CustomType.Setter
         public Builder preserveMinorDimensionVar(@Nullable String preserveMinorDimensionVar) {
+
             this.preserveMinorDimensionVar = preserveMinorDimensionVar;
             return this;
         }

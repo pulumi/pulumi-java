@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -159,9 +160,15 @@ public final class DatastreamSumologicConnectorArgs extends com.pulumi.resources
         }
 
         public DatastreamSumologicConnectorArgs build() {
-            $.collectorCode = Objects.requireNonNull($.collectorCode, "expected parameter 'collectorCode' to be non-null");
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            if ($.collectorCode == null) {
+                throw new MissingRequiredPropertyException("DatastreamSumologicConnectorArgs", "collectorCode");
+            }
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamSumologicConnectorArgs", "displayName");
+            }
+            if ($.endpoint == null) {
+                throw new MissingRequiredPropertyException("DatastreamSumologicConnectorArgs", "endpoint");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -106,10 +107,18 @@ public final class BotmanTransactionalEndpointArgs extends com.pulumi.resources.
         }
 
         public BotmanTransactionalEndpointArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
-            $.transactionalEndpoint = Objects.requireNonNull($.transactionalEndpoint, "expected parameter 'transactionalEndpoint' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanTransactionalEndpointArgs", "configId");
+            }
+            if ($.operationId == null) {
+                throw new MissingRequiredPropertyException("BotmanTransactionalEndpointArgs", "operationId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("BotmanTransactionalEndpointArgs", "securityPolicyId");
+            }
+            if ($.transactionalEndpoint == null) {
+                throw new MissingRequiredPropertyException("BotmanTransactionalEndpointArgs", "transactionalEndpoint");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.azurenative.logic.inputs.KeyVaultReference;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -147,9 +148,15 @@ public final class ListIntegrationAccountKeyVaultKeysPlainArgs extends com.pulum
         }
 
         public ListIntegrationAccountKeyVaultKeysPlainArgs build() {
-            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-            $.keyVault = Objects.requireNonNull($.keyVault, "expected parameter 'keyVault' to be non-null");
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            if ($.integrationAccountName == null) {
+                throw new MissingRequiredPropertyException("ListIntegrationAccountKeyVaultKeysPlainArgs", "integrationAccountName");
+            }
+            if ($.keyVault == null) {
+                throw new MissingRequiredPropertyException("ListIntegrationAccountKeyVaultKeysPlainArgs", "keyVault");
+            }
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("ListIntegrationAccountKeyVaultKeysPlainArgs", "resourceGroupName");
+            }
             return $;
         }
     }

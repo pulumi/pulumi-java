@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -115,71 +116,91 @@ public final class DatastreamHttpsConnector {
 
         @CustomType.Setter
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            if (authenticationType == null) {
+              throw new MissingRequiredPropertyException("DatastreamHttpsConnector", "authenticationType");
+            }
+            this.authenticationType = authenticationType;
             return this;
         }
         @CustomType.Setter
         public Builder caCert(@Nullable String caCert) {
+
             this.caCert = caCert;
             return this;
         }
         @CustomType.Setter
         public Builder clientCert(@Nullable String clientCert) {
+
             this.clientCert = clientCert;
             return this;
         }
         @CustomType.Setter
         public Builder clientKey(@Nullable String clientKey) {
+
             this.clientKey = clientKey;
             return this;
         }
         @CustomType.Setter
         public Builder compressLogs(@Nullable Boolean compressLogs) {
+
             this.compressLogs = compressLogs;
             return this;
         }
         @CustomType.Setter
         public Builder contentType(@Nullable String contentType) {
+
             this.contentType = contentType;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderName(@Nullable String customHeaderName) {
+
             this.customHeaderName = customHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderValue(@Nullable String customHeaderValue) {
+
             this.customHeaderValue = customHeaderValue;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("DatastreamHttpsConnector", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            if (endpoint == null) {
+              throw new MissingRequiredPropertyException("DatastreamHttpsConnector", "endpoint");
+            }
+            this.endpoint = endpoint;
             return this;
         }
         @CustomType.Setter
         public Builder mTls(@Nullable Boolean mTls) {
+
             this.mTls = mTls;
             return this;
         }
         @CustomType.Setter
         public Builder password(@Nullable String password) {
+
             this.password = password;
             return this;
         }
         @CustomType.Setter
         public Builder tlsHostname(@Nullable String tlsHostname) {
+
             this.tlsHostname = tlsHostname;
             return this;
         }
         @CustomType.Setter
         public Builder userName(@Nullable String userName) {
+
             this.userName = userName;
             return this;
         }

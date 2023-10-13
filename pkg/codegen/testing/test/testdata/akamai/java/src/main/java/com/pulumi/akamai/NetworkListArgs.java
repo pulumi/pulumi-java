@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -315,9 +316,15 @@ public final class NetworkListArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public NetworkListArgs build() {
-            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
-            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.description == null) {
+                throw new MissingRequiredPropertyException("NetworkListArgs", "description");
+            }
+            if ($.mode == null) {
+                throw new MissingRequiredPropertyException("NetworkListArgs", "mode");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("NetworkListArgs", "type");
+            }
             return $;
         }
     }

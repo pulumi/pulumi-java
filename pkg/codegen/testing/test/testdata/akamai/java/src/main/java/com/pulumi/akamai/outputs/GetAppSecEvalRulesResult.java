@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -87,42 +88,64 @@ public final class GetAppSecEvalRulesResult {
 
         @CustomType.Setter
         public Builder conditionException(String conditionException) {
-            this.conditionException = Objects.requireNonNull(conditionException);
+            if (conditionException == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "conditionException");
+            }
+            this.conditionException = conditionException;
             return this;
         }
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder evalRuleAction(String evalRuleAction) {
-            this.evalRuleAction = Objects.requireNonNull(evalRuleAction);
+            if (evalRuleAction == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "evalRuleAction");
+            }
+            this.evalRuleAction = evalRuleAction;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder ruleId(@Nullable Integer ruleId) {
+
             this.ruleId = ruleId;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecEvalRulesResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         public GetAppSecEvalRulesResult build() {

@@ -135,21 +135,25 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorImOverride {
 
         @CustomType.Setter
         public Builder dpr(@Nullable Double dpr) {
+
             this.dpr = dpr;
             return this;
         }
         @CustomType.Setter
         public Builder dprvar(@Nullable String dprvar) {
+
             this.dprvar = dprvar;
             return this;
         }
         @CustomType.Setter
         public Builder excludeAllQueryParameters(@Nullable Boolean excludeAllQueryParameters) {
+
             this.excludeAllQueryParameters = excludeAllQueryParameters;
             return this;
         }
         @CustomType.Setter
         public Builder excludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
+
             this.excludedQueryParameters = excludedQueryParameters;
             return this;
         }
@@ -158,66 +162,79 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorImOverride {
         }
         @CustomType.Setter
         public Builder format(@Nullable String format) {
+
             this.format = format;
             return this;
         }
         @CustomType.Setter
         public Builder formatvar(@Nullable String formatvar) {
+
             this.formatvar = formatvar;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder override(@Nullable String override) {
+
             this.override = override;
             return this;
         }
         @CustomType.Setter
         public Builder policy(@Nullable String policy) {
+
             this.policy = policy;
             return this;
         }
         @CustomType.Setter
         public Builder policyvar(@Nullable String policyvar) {
+
             this.policyvar = policyvar;
             return this;
         }
         @CustomType.Setter
         public Builder policyvarIMvar(@Nullable String policyvarIMvar) {
+
             this.policyvarIMvar = policyvarIMvar;
             return this;
         }
         @CustomType.Setter
         public Builder policyvarName(@Nullable String policyvarName) {
+
             this.policyvarName = policyvarName;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder typesel(@Nullable String typesel) {
+
             this.typesel = typesel;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable Double width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthvar(@Nullable String widthvar) {
+
             this.widthvar = widthvar;
             return this;
         }

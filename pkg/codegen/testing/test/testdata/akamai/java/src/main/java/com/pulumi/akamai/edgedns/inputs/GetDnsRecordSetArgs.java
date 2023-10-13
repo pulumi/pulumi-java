@@ -5,6 +5,7 @@ package com.pulumi.akamai.edgedns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -88,9 +89,15 @@ public final class GetDnsRecordSetArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         public GetDnsRecordSetArgs build() {
-            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
-            $.recordType = Objects.requireNonNull($.recordType, "expected parameter 'recordType' to be non-null");
-            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            if ($.host == null) {
+                throw new MissingRequiredPropertyException("GetDnsRecordSetArgs", "host");
+            }
+            if ($.recordType == null) {
+                throw new MissingRequiredPropertyException("GetDnsRecordSetArgs", "recordType");
+            }
+            if ($.zone == null) {
+                throw new MissingRequiredPropertyException("GetDnsRecordSetArgs", "zone");
+            }
             return $;
         }
     }

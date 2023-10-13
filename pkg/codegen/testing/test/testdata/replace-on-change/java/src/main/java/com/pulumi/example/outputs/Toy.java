@@ -49,16 +49,19 @@ public final class Toy {
 
         @CustomType.Setter
         public Builder associated(@Nullable Toy associated) {
+
             this.associated = associated;
             return this;
         }
         @CustomType.Setter
         public Builder color(@Nullable String color) {
+
             this.color = color;
             return this;
         }
         @CustomType.Setter
         public Builder wear(@Nullable Double wear) {
+
             this.wear = wear;
             return this;
         }

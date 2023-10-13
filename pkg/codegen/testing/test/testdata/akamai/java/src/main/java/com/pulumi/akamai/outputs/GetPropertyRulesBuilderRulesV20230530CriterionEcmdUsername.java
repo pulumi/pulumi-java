@@ -67,31 +67,37 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionEcmdUsername {
 
         @CustomType.Setter
         public Builder length(@Nullable String length) {
+
             this.length = length;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable String value) {
+
             this.value = value;
             return this;
         }

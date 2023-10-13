@@ -146,96 +146,115 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorQuality {
 
         @CustomType.Setter
         public Builder audienceSettings(@Nullable String audienceSettings) {
+
             this.audienceSettings = audienceSettings;
             return this;
         }
         @CustomType.Setter
         public Builder catalogSize(@Nullable String catalogSize) {
+
             this.catalogSize = catalogSize;
             return this;
         }
         @CustomType.Setter
         public Builder contentSettings(@Nullable String contentSettings) {
+
             this.contentSettings = contentSettings;
             return this;
         }
         @CustomType.Setter
         public Builder contentType(@Nullable String contentType) {
+
             this.contentType = contentType;
             return this;
         }
         @CustomType.Setter
         public Builder country(@Nullable String country) {
+
             this.country = country;
             return this;
         }
         @CustomType.Setter
         public Builder deliveryFormat(@Nullable String deliveryFormat) {
+
             this.deliveryFormat = deliveryFormat;
             return this;
         }
         @CustomType.Setter
         public Builder deliveryType(@Nullable String deliveryType) {
+
             this.deliveryType = deliveryType;
             return this;
         }
         @CustomType.Setter
         public Builder downloadType(@Nullable String downloadType) {
+
             this.downloadType = downloadType;
             return this;
         }
         @CustomType.Setter
         public Builder endUserLocation(@Nullable String endUserLocation) {
+
             this.endUserLocation = endUserLocation;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder maximumConcurrentUsers(@Nullable String maximumConcurrentUsers) {
+
             this.maximumConcurrentUsers = maximumConcurrentUsers;
             return this;
         }
         @CustomType.Setter
         public Builder objectSize(@Nullable String objectSize) {
+
             this.objectSize = objectSize;
             return this;
         }
         @CustomType.Setter
         public Builder optimizeFor(@Nullable String optimizeFor) {
+
             this.optimizeFor = optimizeFor;
             return this;
         }
         @CustomType.Setter
         public Builder originSettings(@Nullable String originSettings) {
+
             this.originSettings = originSettings;
             return this;
         }
         @CustomType.Setter
         public Builder popularityDistribution(@Nullable String popularityDistribution) {
+
             this.popularityDistribution = popularityDistribution;
             return this;
         }
         @CustomType.Setter
         public Builder refreshRate(@Nullable String refreshRate) {
+
             this.refreshRate = refreshRate;
             return this;
         }
         @CustomType.Setter
         public Builder segmentDuration(@Nullable Integer segmentDuration) {
+
             this.segmentDuration = segmentDuration;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

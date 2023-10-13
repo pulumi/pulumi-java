@@ -115,71 +115,85 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorModifyOutgoingRe
 
         @CustomType.Setter
         public Builder action(@Nullable String action) {
+
             this.action = action;
             return this;
         }
         @CustomType.Setter
         public Builder avoidDuplicateHeaders(@Nullable Boolean avoidDuplicateHeaders) {
+
             this.avoidDuplicateHeaders = avoidDuplicateHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderName(@Nullable String customHeaderName) {
+
             this.customHeaderName = customHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder headerValue(@Nullable String headerValue) {
+
             this.headerValue = headerValue;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchMultiple(@Nullable Boolean matchMultiple) {
+
             this.matchMultiple = matchMultiple;
             return this;
         }
         @CustomType.Setter
         public Builder newHeaderValue(@Nullable String newHeaderValue) {
+
             this.newHeaderValue = newHeaderValue;
             return this;
         }
         @CustomType.Setter
         public Builder regexHeaderMatch(@Nullable String regexHeaderMatch) {
+
             this.regexHeaderMatch = regexHeaderMatch;
             return this;
         }
         @CustomType.Setter
         public Builder regexHeaderReplace(@Nullable String regexHeaderReplace) {
+
             this.regexHeaderReplace = regexHeaderReplace;
             return this;
         }
         @CustomType.Setter
         public Builder standardAddHeaderName(@Nullable String standardAddHeaderName) {
+
             this.standardAddHeaderName = standardAddHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder standardDeleteHeaderName(@Nullable String standardDeleteHeaderName) {
+
             this.standardDeleteHeaderName = standardDeleteHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder standardModifyHeaderName(@Nullable String standardModifyHeaderName) {
+
             this.standardModifyHeaderName = standardModifyHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

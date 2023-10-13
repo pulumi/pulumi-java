@@ -145,96 +145,115 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorCaching {
 
         @CustomType.Setter
         public Builder behavior(@Nullable String behavior) {
+
             this.behavior = behavior;
             return this;
         }
         @CustomType.Setter
         public Builder cacheControlDirectives(@Nullable String cacheControlDirectives) {
+
             this.cacheControlDirectives = cacheControlDirectives;
             return this;
         }
         @CustomType.Setter
         public Builder cacheabilitySettings(@Nullable String cacheabilitySettings) {
+
             this.cacheabilitySettings = cacheabilitySettings;
             return this;
         }
         @CustomType.Setter
         public Builder defaultTtl(@Nullable String defaultTtl) {
+
             this.defaultTtl = defaultTtl;
             return this;
         }
         @CustomType.Setter
         public Builder enhancedRfcSupport(@Nullable Boolean enhancedRfcSupport) {
+
             this.enhancedRfcSupport = enhancedRfcSupport;
             return this;
         }
         @CustomType.Setter
         public Builder expirationSettings(@Nullable String expirationSettings) {
+
             this.expirationSettings = expirationSettings;
             return this;
         }
         @CustomType.Setter
         public Builder honorMaxAge(@Nullable Boolean honorMaxAge) {
+
             this.honorMaxAge = honorMaxAge;
             return this;
         }
         @CustomType.Setter
         public Builder honorMustRevalidate(@Nullable Boolean honorMustRevalidate) {
+
             this.honorMustRevalidate = honorMustRevalidate;
             return this;
         }
         @CustomType.Setter
         public Builder honorNoCache(@Nullable Boolean honorNoCache) {
+
             this.honorNoCache = honorNoCache;
             return this;
         }
         @CustomType.Setter
         public Builder honorNoStore(@Nullable Boolean honorNoStore) {
+
             this.honorNoStore = honorNoStore;
             return this;
         }
         @CustomType.Setter
         public Builder honorPrivate(@Nullable Boolean honorPrivate) {
+
             this.honorPrivate = honorPrivate;
             return this;
         }
         @CustomType.Setter
         public Builder honorProxyRevalidate(@Nullable Boolean honorProxyRevalidate) {
+
             this.honorProxyRevalidate = honorProxyRevalidate;
             return this;
         }
         @CustomType.Setter
         public Builder honorSMaxage(@Nullable Boolean honorSMaxage) {
+
             this.honorSMaxage = honorSMaxage;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder mustRevalidate(@Nullable Boolean mustRevalidate) {
+
             this.mustRevalidate = mustRevalidate;
             return this;
         }
         @CustomType.Setter
         public Builder revalidationSettings(@Nullable String revalidationSettings) {
+
             this.revalidationSettings = revalidationSettings;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder ttl(@Nullable String ttl) {
+
             this.ttl = ttl;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

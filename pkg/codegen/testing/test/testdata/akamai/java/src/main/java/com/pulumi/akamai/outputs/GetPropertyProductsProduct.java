@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,12 +41,18 @@ public final class GetPropertyProductsProduct {
 
         @CustomType.Setter
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            if (productId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyProductsProduct", "productId");
+            }
+            this.productId = productId;
             return this;
         }
         @CustomType.Setter
         public Builder productName(String productName) {
-            this.productName = Objects.requireNonNull(productName);
+            if (productName == null) {
+              throw new MissingRequiredPropertyException("GetPropertyProductsProduct", "productName");
+            }
+            this.productName = productName;
             return this;
         }
         public GetPropertyProductsProduct build() {

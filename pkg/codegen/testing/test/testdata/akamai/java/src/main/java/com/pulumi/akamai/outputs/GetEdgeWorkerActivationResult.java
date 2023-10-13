@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,27 +68,42 @@ public final class GetEdgeWorkerActivationResult {
 
         @CustomType.Setter
         public Builder activationId(Integer activationId) {
-            this.activationId = Objects.requireNonNull(activationId);
+            if (activationId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerActivationResult", "activationId");
+            }
+            this.activationId = activationId;
             return this;
         }
         @CustomType.Setter
         public Builder edgeworkerId(Integer edgeworkerId) {
-            this.edgeworkerId = Objects.requireNonNull(edgeworkerId);
+            if (edgeworkerId == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerActivationResult", "edgeworkerId");
+            }
+            this.edgeworkerId = edgeworkerId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerActivationResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            if (network == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerActivationResult", "network");
+            }
+            this.network = network;
             return this;
         }
         @CustomType.Setter
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetEdgeWorkerActivationResult", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetEdgeWorkerActivationResult build() {

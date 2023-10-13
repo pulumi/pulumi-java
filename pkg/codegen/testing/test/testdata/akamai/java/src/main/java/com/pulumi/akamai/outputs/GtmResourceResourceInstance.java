@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -63,21 +64,27 @@ public final class GtmResourceResourceInstance {
 
         @CustomType.Setter
         public Builder datacenterId(Integer datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            if (datacenterId == null) {
+              throw new MissingRequiredPropertyException("GtmResourceResourceInstance", "datacenterId");
+            }
+            this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder loadObject(@Nullable String loadObject) {
+
             this.loadObject = loadObject;
             return this;
         }
         @CustomType.Setter
         public Builder loadObjectPort(@Nullable Integer loadObjectPort) {
+
             this.loadObjectPort = loadObjectPort;
             return this;
         }
         @CustomType.Setter
         public Builder loadServers(@Nullable List<String> loadServers) {
+
             this.loadServers = loadServers;
             return this;
         }
@@ -86,6 +93,7 @@ public final class GtmResourceResourceInstance {
         }
         @CustomType.Setter
         public Builder useDefaultLoadObject(@Nullable Boolean useDefaultLoadObject) {
+
             this.useDefaultLoadObject = useDefaultLoadObject;
             return this;
         }

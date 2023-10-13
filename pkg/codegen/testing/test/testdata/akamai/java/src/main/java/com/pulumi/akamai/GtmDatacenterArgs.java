@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.GtmDatacenterDefaultLoadObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -264,7 +265,9 @@ public final class GtmDatacenterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public GtmDatacenterArgs build() {
-            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            if ($.domain == null) {
+                throw new MissingRequiredPropertyException("GtmDatacenterArgs", "domain");
+            }
             return $;
         }
     }

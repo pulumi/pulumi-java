@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -385,7 +386,9 @@ public final class CpsUploadCertificateArgs extends com.pulumi.resources.Resourc
         }
 
         public CpsUploadCertificateArgs build() {
-            $.enrollmentId = Objects.requireNonNull($.enrollmentId, "expected parameter 'enrollmentId' to be non-null");
+            if ($.enrollmentId == null) {
+                throw new MissingRequiredPropertyException("CpsUploadCertificateArgs", "enrollmentId");
+            }
             return $;
         }
     }

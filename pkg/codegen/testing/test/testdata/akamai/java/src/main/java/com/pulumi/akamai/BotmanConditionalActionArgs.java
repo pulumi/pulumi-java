@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class BotmanConditionalActionArgs extends com.pulumi.resources.Reso
         }
 
         public BotmanConditionalActionArgs build() {
-            $.conditionalAction = Objects.requireNonNull($.conditionalAction, "expected parameter 'conditionalAction' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.conditionalAction == null) {
+                throw new MissingRequiredPropertyException("BotmanConditionalActionArgs", "conditionalAction");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanConditionalActionArgs", "configId");
+            }
             return $;
         }
     }

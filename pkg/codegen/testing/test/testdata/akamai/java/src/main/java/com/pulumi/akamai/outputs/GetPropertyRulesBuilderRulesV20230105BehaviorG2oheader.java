@@ -99,6 +99,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorG2oheader {
 
         @CustomType.Setter
         public Builder customSignStrings(@Nullable List<String> customSignStrings) {
+
             this.customSignStrings = customSignStrings;
             return this;
         }
@@ -107,51 +108,61 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorG2oheader {
         }
         @CustomType.Setter
         public Builder dataHeader(@Nullable String dataHeader) {
+
             this.dataHeader = dataHeader;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder encodingVersion(@Nullable Integer encodingVersion) {
+
             this.encodingVersion = encodingVersion;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder nonce(@Nullable String nonce) {
+
             this.nonce = nonce;
             return this;
         }
         @CustomType.Setter
         public Builder secretKey(@Nullable String secretKey) {
+
             this.secretKey = secretKey;
             return this;
         }
         @CustomType.Setter
         public Builder signedHeader(@Nullable String signedHeader) {
+
             this.signedHeader = signedHeader;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder useCustomSignString(@Nullable Boolean useCustomSignString) {
+
             this.useCustomSignString = useCustomSignString;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

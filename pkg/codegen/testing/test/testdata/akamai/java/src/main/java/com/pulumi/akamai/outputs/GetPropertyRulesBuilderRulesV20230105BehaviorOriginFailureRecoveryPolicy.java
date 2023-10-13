@@ -237,41 +237,49 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginFailureRec
 
         @CustomType.Setter
         public Builder binaryEquivalentContent(@Nullable Boolean binaryEquivalentContent) {
+
             this.binaryEquivalentContent = binaryEquivalentContent;
             return this;
         }
         @CustomType.Setter
         public Builder enableIpAvoidance(@Nullable Boolean enableIpAvoidance) {
+
             this.enableIpAvoidance = enableIpAvoidance;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder ipAvoidanceErrorThreshold(@Nullable Integer ipAvoidanceErrorThreshold) {
+
             this.ipAvoidanceErrorThreshold = ipAvoidanceErrorThreshold;
             return this;
         }
         @CustomType.Setter
         public Builder ipAvoidanceRetryInterval(@Nullable Integer ipAvoidanceRetryInterval) {
+
             this.ipAvoidanceRetryInterval = ipAvoidanceRetryInterval;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder monitorOriginResponsiveness(@Nullable Boolean monitorOriginResponsiveness) {
+
             this.monitorOriginResponsiveness = monitorOriginResponsiveness;
             return this;
         }
         @CustomType.Setter
         public Builder monitorResponseCodes1s(@Nullable List<String> monitorResponseCodes1s) {
+
             this.monitorResponseCodes1s = monitorResponseCodes1s;
             return this;
         }
@@ -280,6 +288,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginFailureRec
         }
         @CustomType.Setter
         public Builder monitorResponseCodes2s(@Nullable List<String> monitorResponseCodes2s) {
+
             this.monitorResponseCodes2s = monitorResponseCodes2s;
             return this;
         }
@@ -288,6 +297,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginFailureRec
         }
         @CustomType.Setter
         public Builder monitorResponseCodes3s(@Nullable List<String> monitorResponseCodes3s) {
+
             this.monitorResponseCodes3s = monitorResponseCodes3s;
             return this;
         }
@@ -296,121 +306,145 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorOriginFailureRec
         }
         @CustomType.Setter
         public Builder monitorStatusCodes1(@Nullable Boolean monitorStatusCodes1) {
+
             this.monitorStatusCodes1 = monitorStatusCodes1;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes1EnableRecovery(@Nullable Boolean monitorStatusCodes1EnableRecovery) {
+
             this.monitorStatusCodes1EnableRecovery = monitorStatusCodes1EnableRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes1EnableRetry(@Nullable Boolean monitorStatusCodes1EnableRetry) {
+
             this.monitorStatusCodes1EnableRetry = monitorStatusCodes1EnableRetry;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes1RecoveryConfigName(@Nullable String monitorStatusCodes1RecoveryConfigName) {
+
             this.monitorStatusCodes1RecoveryConfigName = monitorStatusCodes1RecoveryConfigName;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes2(@Nullable Boolean monitorStatusCodes2) {
+
             this.monitorStatusCodes2 = monitorStatusCodes2;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes2EnableRecovery(@Nullable Boolean monitorStatusCodes2EnableRecovery) {
+
             this.monitorStatusCodes2EnableRecovery = monitorStatusCodes2EnableRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes2EnableRetry(@Nullable Boolean monitorStatusCodes2EnableRetry) {
+
             this.monitorStatusCodes2EnableRetry = monitorStatusCodes2EnableRetry;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes2RecoveryConfigName(@Nullable String monitorStatusCodes2RecoveryConfigName) {
+
             this.monitorStatusCodes2RecoveryConfigName = monitorStatusCodes2RecoveryConfigName;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes3(@Nullable Boolean monitorStatusCodes3) {
+
             this.monitorStatusCodes3 = monitorStatusCodes3;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes3EnableRecovery(@Nullable Boolean monitorStatusCodes3EnableRecovery) {
+
             this.monitorStatusCodes3EnableRecovery = monitorStatusCodes3EnableRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes3EnableRetry(@Nullable Boolean monitorStatusCodes3EnableRetry) {
+
             this.monitorStatusCodes3EnableRetry = monitorStatusCodes3EnableRetry;
             return this;
         }
         @CustomType.Setter
         public Builder monitorStatusCodes3RecoveryConfigName(@Nullable String monitorStatusCodes3RecoveryConfigName) {
+
             this.monitorStatusCodes3RecoveryConfigName = monitorStatusCodes3RecoveryConfigName;
             return this;
         }
         @CustomType.Setter
         public Builder originResponsivenessCustomTimeout(@Nullable Integer originResponsivenessCustomTimeout) {
+
             this.originResponsivenessCustomTimeout = originResponsivenessCustomTimeout;
             return this;
         }
         @CustomType.Setter
         public Builder originResponsivenessEnableRecovery(@Nullable Boolean originResponsivenessEnableRecovery) {
+
             this.originResponsivenessEnableRecovery = originResponsivenessEnableRecovery;
             return this;
         }
         @CustomType.Setter
         public Builder originResponsivenessEnableRetry(@Nullable Boolean originResponsivenessEnableRetry) {
+
             this.originResponsivenessEnableRetry = originResponsivenessEnableRetry;
             return this;
         }
         @CustomType.Setter
         public Builder originResponsivenessMonitoring(@Nullable String originResponsivenessMonitoring) {
+
             this.originResponsivenessMonitoring = originResponsivenessMonitoring;
             return this;
         }
         @CustomType.Setter
         public Builder originResponsivenessRecoveryConfigName(@Nullable String originResponsivenessRecoveryConfigName) {
+
             this.originResponsivenessRecoveryConfigName = originResponsivenessRecoveryConfigName;
             return this;
         }
         @CustomType.Setter
         public Builder originResponsivenessTimeout(@Nullable String originResponsivenessTimeout) {
+
             this.originResponsivenessTimeout = originResponsivenessTimeout;
             return this;
         }
         @CustomType.Setter
         public Builder statusCodeMonitoring1(@Nullable String statusCodeMonitoring1) {
+
             this.statusCodeMonitoring1 = statusCodeMonitoring1;
             return this;
         }
         @CustomType.Setter
         public Builder statusCodeMonitoring2(@Nullable String statusCodeMonitoring2) {
+
             this.statusCodeMonitoring2 = statusCodeMonitoring2;
             return this;
         }
         @CustomType.Setter
         public Builder statusCodeMonitoring3(@Nullable String statusCodeMonitoring3) {
+
             this.statusCodeMonitoring3 = statusCodeMonitoring3;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder tuningParameters(@Nullable String tuningParameters) {
+
             this.tuningParameters = tuningParameters;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

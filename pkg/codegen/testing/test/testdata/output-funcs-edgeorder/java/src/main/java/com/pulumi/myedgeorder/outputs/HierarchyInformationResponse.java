@@ -86,21 +86,25 @@ public final class HierarchyInformationResponse {
 
         @CustomType.Setter
         public Builder configurationName(@Nullable String configurationName) {
+
             this.configurationName = configurationName;
             return this;
         }
         @CustomType.Setter
         public Builder productFamilyName(@Nullable String productFamilyName) {
+
             this.productFamilyName = productFamilyName;
             return this;
         }
         @CustomType.Setter
         public Builder productLineName(@Nullable String productLineName) {
+
             this.productLineName = productLineName;
             return this;
         }
         @CustomType.Setter
         public Builder productName(@Nullable String productName) {
+
             this.productName = productName;
             return this;
         }

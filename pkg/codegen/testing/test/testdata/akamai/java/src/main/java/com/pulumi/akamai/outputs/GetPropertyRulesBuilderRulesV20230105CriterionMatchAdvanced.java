@@ -67,31 +67,37 @@ public final class GetPropertyRulesBuilderRulesV20230105CriterionMatchAdvanced {
 
         @CustomType.Setter
         public Builder closeXml(@Nullable String closeXml) {
+
             this.closeXml = closeXml;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder openXml(@Nullable String openXml) {
+
             this.openXml = openXml;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

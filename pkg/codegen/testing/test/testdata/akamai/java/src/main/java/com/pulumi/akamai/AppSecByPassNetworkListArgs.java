@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -160,9 +161,15 @@ public final class AppSecByPassNetworkListArgs extends com.pulumi.resources.Reso
         }
 
         public AppSecByPassNetworkListArgs build() {
-            $.bypassNetworkLists = Objects.requireNonNull($.bypassNetworkLists, "expected parameter 'bypassNetworkLists' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.bypassNetworkLists == null) {
+                throw new MissingRequiredPropertyException("AppSecByPassNetworkListArgs", "bypassNetworkLists");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecByPassNetworkListArgs", "configId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecByPassNetworkListArgs", "securityPolicyId");
+            }
             return $;
         }
     }

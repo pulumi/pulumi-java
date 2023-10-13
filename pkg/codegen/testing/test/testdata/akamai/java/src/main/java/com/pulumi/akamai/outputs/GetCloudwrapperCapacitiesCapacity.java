@@ -7,6 +7,7 @@ import com.pulumi.akamai.outputs.GetCloudwrapperCapacitiesCapacityApproved;
 import com.pulumi.akamai.outputs.GetCloudwrapperCapacitiesCapacityAssigned;
 import com.pulumi.akamai.outputs.GetCloudwrapperCapacitiesCapacityUnassigned;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,37 +75,58 @@ public final class GetCloudwrapperCapacitiesCapacity {
 
         @CustomType.Setter
         public Builder approved(GetCloudwrapperCapacitiesCapacityApproved approved) {
-            this.approved = Objects.requireNonNull(approved);
+            if (approved == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "approved");
+            }
+            this.approved = approved;
             return this;
         }
         @CustomType.Setter
         public Builder assigned(GetCloudwrapperCapacitiesCapacityAssigned assigned) {
-            this.assigned = Objects.requireNonNull(assigned);
+            if (assigned == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "assigned");
+            }
+            this.assigned = assigned;
             return this;
         }
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder locationId(Integer locationId) {
-            this.locationId = Objects.requireNonNull(locationId);
+            if (locationId == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "locationId");
+            }
+            this.locationId = locationId;
             return this;
         }
         @CustomType.Setter
         public Builder locationName(String locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            if (locationName == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "locationName");
+            }
+            this.locationName = locationName;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "type");
+            }
+            this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder unassigned(GetCloudwrapperCapacitiesCapacityUnassigned unassigned) {
-            this.unassigned = Objects.requireNonNull(unassigned);
+            if (unassigned == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacity", "unassigned");
+            }
+            this.unassigned = unassigned;
             return this;
         }
         public GetCloudwrapperCapacitiesCapacity build() {

@@ -82,26 +82,31 @@ public final class GtmPropertyTrafficTarget {
 
         @CustomType.Setter
         public Builder datacenterId(@Nullable Integer datacenterId) {
+
             this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder handoutCname(@Nullable String handoutCname) {
+
             this.handoutCname = handoutCname;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder servers(@Nullable List<String> servers) {
+
             this.servers = servers;
             return this;
         }
@@ -110,6 +115,7 @@ public final class GtmPropertyTrafficTarget {
         }
         @CustomType.Setter
         public Builder weight(@Nullable Double weight) {
+
             this.weight = weight;
             return this;
         }

@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import com.pulumi.myedgeorder.outputs.CostInformationResponse;
 import com.pulumi.myedgeorder.outputs.DescriptionResponse;
@@ -163,32 +164,50 @@ public final class ConfigurationResponse {
 
         @CustomType.Setter
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
-            this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
+            if (availabilityInformation == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "availabilityInformation");
+            }
+            this.availabilityInformation = availabilityInformation;
             return this;
         }
         @CustomType.Setter
         public Builder costInformation(CostInformationResponse costInformation) {
-            this.costInformation = Objects.requireNonNull(costInformation);
+            if (costInformation == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "costInformation");
+            }
+            this.costInformation = costInformation;
             return this;
         }
         @CustomType.Setter
         public Builder description(DescriptionResponse description) {
-            this.description = Objects.requireNonNull(description);
+            if (description == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "description");
+            }
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder dimensions(DimensionsResponse dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            if (dimensions == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "dimensions");
+            }
+            this.dimensions = dimensions;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
-            this.filterableProperties = Objects.requireNonNull(filterableProperties);
+            if (filterableProperties == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "filterableProperties");
+            }
+            this.filterableProperties = filterableProperties;
             return this;
         }
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
@@ -196,12 +215,18 @@ public final class ConfigurationResponse {
         }
         @CustomType.Setter
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            if (hierarchyInformation == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "hierarchyInformation");
+            }
+            this.hierarchyInformation = hierarchyInformation;
             return this;
         }
         @CustomType.Setter
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
-            this.imageInformation = Objects.requireNonNull(imageInformation);
+            if (imageInformation == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "imageInformation");
+            }
+            this.imageInformation = imageInformation;
             return this;
         }
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
@@ -209,7 +234,10 @@ public final class ConfigurationResponse {
         }
         @CustomType.Setter
         public Builder specifications(List<SpecificationResponse> specifications) {
-            this.specifications = Objects.requireNonNull(specifications);
+            if (specifications == null) {
+              throw new MissingRequiredPropertyException("ConfigurationResponse", "specifications");
+            }
+            this.specifications = specifications;
             return this;
         }
         public Builder specifications(SpecificationResponse... specifications) {

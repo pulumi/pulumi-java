@@ -44,6 +44,7 @@ public final class IndexingPolicyResponse {
 
         @CustomType.Setter
         public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
+
             this.compositeIndexes = compositeIndexes;
             return this;
         }

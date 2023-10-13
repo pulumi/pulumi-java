@@ -68,31 +68,37 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorTeaLeaf {
 
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder ibmCustomerId(@Nullable Integer ibmCustomerId) {
+
             this.ibmCustomerId = ibmCustomerId;
             return this;
         }
         @CustomType.Setter
         public Builder limitToDynamic(@Nullable Boolean limitToDynamic) {
+
             this.limitToDynamic = limitToDynamic;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

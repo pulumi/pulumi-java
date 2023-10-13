@@ -121,76 +121,91 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSureRoute {
 
         @CustomType.Setter
         public Builder allowFcmParentOverride(@Nullable Boolean allowFcmParentOverride) {
+
             this.allowFcmParentOverride = allowFcmParentOverride;
             return this;
         }
         @CustomType.Setter
         public Builder customMap(@Nullable String customMap) {
+
             this.customMap = customMap;
             return this;
         }
         @CustomType.Setter
         public Builder customStatKey(@Nullable String customStatKey) {
+
             this.customStatKey = customStatKey;
             return this;
         }
         @CustomType.Setter
         public Builder enableCustomKey(@Nullable Boolean enableCustomKey) {
+
             this.enableCustomKey = enableCustomKey;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder forceSslForward(@Nullable Boolean forceSslForward) {
+
             this.forceSslForward = forceSslForward;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder raceStatTtl(@Nullable String raceStatTtl) {
+
             this.raceStatTtl = raceStatTtl;
             return this;
         }
         @CustomType.Setter
         public Builder srDownloadLinkTitle(@Nullable String srDownloadLinkTitle) {
+
             this.srDownloadLinkTitle = srDownloadLinkTitle;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder testObjectUrl(@Nullable String testObjectUrl) {
+
             this.testObjectUrl = testObjectUrl;
             return this;
         }
         @CustomType.Setter
         public Builder toHost(@Nullable String toHost) {
+
             this.toHost = toHost;
             return this;
         }
         @CustomType.Setter
         public Builder toHostStatus(@Nullable String toHostStatus) {
+
             this.toHostStatus = toHostStatus;
             return this;
         }
         @CustomType.Setter
         public Builder type(@Nullable String type) {
+
             this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

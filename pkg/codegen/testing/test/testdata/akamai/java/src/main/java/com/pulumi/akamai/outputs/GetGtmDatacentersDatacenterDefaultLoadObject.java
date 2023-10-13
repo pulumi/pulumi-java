@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,17 +49,26 @@ public final class GetGtmDatacentersDatacenterDefaultLoadObject {
 
         @CustomType.Setter
         public Builder loadObject(String loadObject) {
-            this.loadObject = Objects.requireNonNull(loadObject);
+            if (loadObject == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacentersDatacenterDefaultLoadObject", "loadObject");
+            }
+            this.loadObject = loadObject;
             return this;
         }
         @CustomType.Setter
         public Builder loadObjectPort(Integer loadObjectPort) {
-            this.loadObjectPort = Objects.requireNonNull(loadObjectPort);
+            if (loadObjectPort == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacentersDatacenterDefaultLoadObject", "loadObjectPort");
+            }
+            this.loadObjectPort = loadObjectPort;
             return this;
         }
         @CustomType.Setter
         public Builder loadServers(List<String> loadServers) {
-            this.loadServers = Objects.requireNonNull(loadServers);
+            if (loadServers == null) {
+              throw new MissingRequiredPropertyException("GetGtmDatacentersDatacenterDefaultLoadObject", "loadServers");
+            }
+            this.loadServers = loadServers;
             return this;
         }
         public Builder loadServers(String... loadServers) {

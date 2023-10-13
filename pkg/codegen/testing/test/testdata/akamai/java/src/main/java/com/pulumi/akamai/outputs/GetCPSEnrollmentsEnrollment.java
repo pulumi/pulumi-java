@@ -9,6 +9,7 @@ import com.pulumi.akamai.outputs.GetCPSEnrollmentsEnrollmentNetworkConfiguration
 import com.pulumi.akamai.outputs.GetCPSEnrollmentsEnrollmentOrganization;
 import com.pulumi.akamai.outputs.GetCPSEnrollmentsEnrollmentTechContact;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -138,7 +139,10 @@ public final class GetCPSEnrollmentsEnrollment {
 
         @CustomType.Setter
         public Builder adminContacts(List<GetCPSEnrollmentsEnrollmentAdminContact> adminContacts) {
-            this.adminContacts = Objects.requireNonNull(adminContacts);
+            if (adminContacts == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "adminContacts");
+            }
+            this.adminContacts = adminContacts;
             return this;
         }
         public Builder adminContacts(GetCPSEnrollmentsEnrollmentAdminContact... adminContacts) {
@@ -146,22 +150,34 @@ public final class GetCPSEnrollmentsEnrollment {
         }
         @CustomType.Setter
         public Builder certificateChainType(String certificateChainType) {
-            this.certificateChainType = Objects.requireNonNull(certificateChainType);
+            if (certificateChainType == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "certificateChainType");
+            }
+            this.certificateChainType = certificateChainType;
             return this;
         }
         @CustomType.Setter
         public Builder certificateType(String certificateType) {
-            this.certificateType = Objects.requireNonNull(certificateType);
+            if (certificateType == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "certificateType");
+            }
+            this.certificateType = certificateType;
             return this;
         }
         @CustomType.Setter
         public Builder commonName(String commonName) {
-            this.commonName = Objects.requireNonNull(commonName);
+            if (commonName == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "commonName");
+            }
+            this.commonName = commonName;
             return this;
         }
         @CustomType.Setter
         public Builder csrs(List<GetCPSEnrollmentsEnrollmentCsr> csrs) {
-            this.csrs = Objects.requireNonNull(csrs);
+            if (csrs == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "csrs");
+            }
+            this.csrs = csrs;
             return this;
         }
         public Builder csrs(GetCPSEnrollmentsEnrollmentCsr... csrs) {
@@ -169,17 +185,26 @@ public final class GetCPSEnrollmentsEnrollment {
         }
         @CustomType.Setter
         public Builder enableMultiStackedCertificates(Boolean enableMultiStackedCertificates) {
-            this.enableMultiStackedCertificates = Objects.requireNonNull(enableMultiStackedCertificates);
+            if (enableMultiStackedCertificates == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "enableMultiStackedCertificates");
+            }
+            this.enableMultiStackedCertificates = enableMultiStackedCertificates;
             return this;
         }
         @CustomType.Setter
         public Builder enrollmentId(Integer enrollmentId) {
-            this.enrollmentId = Objects.requireNonNull(enrollmentId);
+            if (enrollmentId == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "enrollmentId");
+            }
+            this.enrollmentId = enrollmentId;
             return this;
         }
         @CustomType.Setter
         public Builder networkConfigurations(List<GetCPSEnrollmentsEnrollmentNetworkConfiguration> networkConfigurations) {
-            this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
+            if (networkConfigurations == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "networkConfigurations");
+            }
+            this.networkConfigurations = networkConfigurations;
             return this;
         }
         public Builder networkConfigurations(GetCPSEnrollmentsEnrollmentNetworkConfiguration... networkConfigurations) {
@@ -187,7 +212,10 @@ public final class GetCPSEnrollmentsEnrollment {
         }
         @CustomType.Setter
         public Builder organizations(List<GetCPSEnrollmentsEnrollmentOrganization> organizations) {
-            this.organizations = Objects.requireNonNull(organizations);
+            if (organizations == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "organizations");
+            }
+            this.organizations = organizations;
             return this;
         }
         public Builder organizations(GetCPSEnrollmentsEnrollmentOrganization... organizations) {
@@ -195,17 +223,26 @@ public final class GetCPSEnrollmentsEnrollment {
         }
         @CustomType.Setter
         public Builder pendingChanges(Boolean pendingChanges) {
-            this.pendingChanges = Objects.requireNonNull(pendingChanges);
+            if (pendingChanges == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "pendingChanges");
+            }
+            this.pendingChanges = pendingChanges;
             return this;
         }
         @CustomType.Setter
         public Builder registrationAuthority(String registrationAuthority) {
-            this.registrationAuthority = Objects.requireNonNull(registrationAuthority);
+            if (registrationAuthority == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "registrationAuthority");
+            }
+            this.registrationAuthority = registrationAuthority;
             return this;
         }
         @CustomType.Setter
         public Builder sans(List<String> sans) {
-            this.sans = Objects.requireNonNull(sans);
+            if (sans == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "sans");
+            }
+            this.sans = sans;
             return this;
         }
         public Builder sans(String... sans) {
@@ -213,22 +250,34 @@ public final class GetCPSEnrollmentsEnrollment {
         }
         @CustomType.Setter
         public Builder secureNetwork(String secureNetwork) {
-            this.secureNetwork = Objects.requireNonNull(secureNetwork);
+            if (secureNetwork == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "secureNetwork");
+            }
+            this.secureNetwork = secureNetwork;
             return this;
         }
         @CustomType.Setter
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+            if (signatureAlgorithm == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "signatureAlgorithm");
+            }
+            this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
         @CustomType.Setter
         public Builder sniOnly(Boolean sniOnly) {
-            this.sniOnly = Objects.requireNonNull(sniOnly);
+            if (sniOnly == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "sniOnly");
+            }
+            this.sniOnly = sniOnly;
             return this;
         }
         @CustomType.Setter
         public Builder techContacts(List<GetCPSEnrollmentsEnrollmentTechContact> techContacts) {
-            this.techContacts = Objects.requireNonNull(techContacts);
+            if (techContacts == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "techContacts");
+            }
+            this.techContacts = techContacts;
             return this;
         }
         public Builder techContacts(GetCPSEnrollmentsEnrollmentTechContact... techContacts) {
@@ -236,7 +285,10 @@ public final class GetCPSEnrollmentsEnrollment {
         }
         @CustomType.Setter
         public Builder validationType(String validationType) {
-            this.validationType = Objects.requireNonNull(validationType);
+            if (validationType == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollment", "validationType");
+            }
+            this.validationType = validationType;
             return this;
         }
         public GetCPSEnrollmentsEnrollment build() {

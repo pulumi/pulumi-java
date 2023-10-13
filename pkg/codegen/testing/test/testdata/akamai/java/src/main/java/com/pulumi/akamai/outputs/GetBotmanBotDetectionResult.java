@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,17 +57,24 @@ public final class GetBotmanBotDetectionResult {
 
         @CustomType.Setter
         public Builder detectionName(@Nullable String detectionName) {
+
             this.detectionName = detectionName;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetBotmanBotDetectionResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetBotmanBotDetectionResult", "json");
+            }
+            this.json = json;
             return this;
         }
         public GetBotmanBotDetectionResult build() {

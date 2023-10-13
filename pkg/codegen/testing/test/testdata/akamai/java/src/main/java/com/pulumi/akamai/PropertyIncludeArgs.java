@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -298,10 +299,18 @@ public final class PropertyIncludeArgs extends com.pulumi.resources.ResourceArgs
         }
 
         public PropertyIncludeArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.ruleFormat = Objects.requireNonNull($.ruleFormat, "expected parameter 'ruleFormat' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeArgs", "groupId");
+            }
+            if ($.ruleFormat == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeArgs", "ruleFormat");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("PropertyIncludeArgs", "type");
+            }
             return $;
         }
     }

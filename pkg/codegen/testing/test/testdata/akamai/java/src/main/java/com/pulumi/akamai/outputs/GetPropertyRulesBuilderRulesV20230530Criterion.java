@@ -344,226 +344,271 @@ public final class GetPropertyRulesBuilderRulesV20230530Criterion {
 
         @CustomType.Setter
         public Builder advancedImMatch(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionAdvancedImMatch advancedImMatch) {
+
             this.advancedImMatch = advancedImMatch;
             return this;
         }
         @CustomType.Setter
         public Builder bucket(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionBucket bucket) {
+
             this.bucket = bucket;
             return this;
         }
         @CustomType.Setter
         public Builder cacheability(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionCacheability cacheability) {
+
             this.cacheability = cacheability;
             return this;
         }
         @CustomType.Setter
         public Builder chinaCdnRegion(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionChinaCdnRegion chinaCdnRegion) {
+
             this.chinaCdnRegion = chinaCdnRegion;
             return this;
         }
         @CustomType.Setter
         public Builder clientCertificate(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionClientCertificate clientCertificate) {
+
             this.clientCertificate = clientCertificate;
             return this;
         }
         @CustomType.Setter
         public Builder clientIp(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionClientIp clientIp) {
+
             this.clientIp = clientIp;
             return this;
         }
         @CustomType.Setter
         public Builder clientIpVersion(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionClientIpVersion clientIpVersion) {
+
             this.clientIpVersion = clientIpVersion;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletsOrigin(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionCloudletsOrigin cloudletsOrigin) {
+
             this.cloudletsOrigin = cloudletsOrigin;
             return this;
         }
         @CustomType.Setter
         public Builder contentDeliveryNetwork(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionContentDeliveryNetwork contentDeliveryNetwork) {
+
             this.contentDeliveryNetwork = contentDeliveryNetwork;
             return this;
         }
         @CustomType.Setter
         public Builder contentType(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionContentType contentType) {
+
             this.contentType = contentType;
             return this;
         }
         @CustomType.Setter
         public Builder deviceCharacteristic(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionDeviceCharacteristic deviceCharacteristic) {
+
             this.deviceCharacteristic = deviceCharacteristic;
             return this;
         }
         @CustomType.Setter
         public Builder ecmdAuthGroups(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionEcmdAuthGroups ecmdAuthGroups) {
+
             this.ecmdAuthGroups = ecmdAuthGroups;
             return this;
         }
         @CustomType.Setter
         public Builder ecmdAuthScheme(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionEcmdAuthScheme ecmdAuthScheme) {
+
             this.ecmdAuthScheme = ecmdAuthScheme;
             return this;
         }
         @CustomType.Setter
         public Builder ecmdIsAuthenticated(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionEcmdIsAuthenticated ecmdIsAuthenticated) {
+
             this.ecmdIsAuthenticated = ecmdIsAuthenticated;
             return this;
         }
         @CustomType.Setter
         public Builder ecmdUsername(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionEcmdUsername ecmdUsername) {
+
             this.ecmdUsername = ecmdUsername;
             return this;
         }
         @CustomType.Setter
         public Builder edgeWorkersFailure(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionEdgeWorkersFailure edgeWorkersFailure) {
+
             this.edgeWorkersFailure = edgeWorkersFailure;
             return this;
         }
         @CustomType.Setter
         public Builder fileExtension(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionFileExtension fileExtension) {
+
             this.fileExtension = fileExtension;
             return this;
         }
         @CustomType.Setter
         public Builder filename(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionFilename filename) {
+
             this.filename = filename;
             return this;
         }
         @CustomType.Setter
         public Builder hostname(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionHostname hostname) {
+
             this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder matchAdvanced(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionMatchAdvanced matchAdvanced) {
+
             this.matchAdvanced = matchAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder matchCpCode(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionMatchCpCode matchCpCode) {
+
             this.matchCpCode = matchCpCode;
             return this;
         }
         @CustomType.Setter
         public Builder matchResponseCode(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionMatchResponseCode matchResponseCode) {
+
             this.matchResponseCode = matchResponseCode;
             return this;
         }
         @CustomType.Setter
         public Builder matchVariable(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionMatchVariable matchVariable) {
+
             this.matchVariable = matchVariable;
             return this;
         }
         @CustomType.Setter
         public Builder metadataStage(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionMetadataStage metadataStage) {
+
             this.metadataStage = metadataStage;
             return this;
         }
         @CustomType.Setter
         public Builder originTimeout(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionOriginTimeout originTimeout) {
+
             this.originTimeout = originTimeout;
             return this;
         }
         @CustomType.Setter
         public Builder path(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionPath path) {
+
             this.path = path;
             return this;
         }
         @CustomType.Setter
         public Builder queryStringParameter(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionQueryStringParameter queryStringParameter) {
+
             this.queryStringParameter = queryStringParameter;
             return this;
         }
         @CustomType.Setter
         public Builder random(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRandom random) {
+
             this.random = random;
             return this;
         }
         @CustomType.Setter
         public Builder recoveryConfig(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRecoveryConfig recoveryConfig) {
+
             this.recoveryConfig = recoveryConfig;
             return this;
         }
         @CustomType.Setter
         public Builder regularExpression(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRegularExpression regularExpression) {
+
             this.regularExpression = regularExpression;
             return this;
         }
         @CustomType.Setter
         public Builder requestCookie(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRequestCookie requestCookie) {
+
             this.requestCookie = requestCookie;
             return this;
         }
         @CustomType.Setter
         public Builder requestHeader(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRequestHeader requestHeader) {
+
             this.requestHeader = requestHeader;
             return this;
         }
         @CustomType.Setter
         public Builder requestMethod(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRequestMethod requestMethod) {
+
             this.requestMethod = requestMethod;
             return this;
         }
         @CustomType.Setter
         public Builder requestProtocol(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRequestProtocol requestProtocol) {
+
             this.requestProtocol = requestProtocol;
             return this;
         }
         @CustomType.Setter
         public Builder requestType(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionRequestType requestType) {
+
             this.requestType = requestType;
             return this;
         }
         @CustomType.Setter
         public Builder responseHeader(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionResponseHeader responseHeader) {
+
             this.responseHeader = responseHeader;
             return this;
         }
         @CustomType.Setter
         public Builder serverLocation(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionServerLocation serverLocation) {
+
             this.serverLocation = serverLocation;
             return this;
         }
         @CustomType.Setter
         public Builder time(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionTime time) {
+
             this.time = time;
             return this;
         }
         @CustomType.Setter
         public Builder tokenAuthorization(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionTokenAuthorization tokenAuthorization) {
+
             this.tokenAuthorization = tokenAuthorization;
             return this;
         }
         @CustomType.Setter
         public Builder userAgent(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionUserAgent userAgent) {
+
             this.userAgent = userAgent;
             return this;
         }
         @CustomType.Setter
         public Builder userLocation(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionUserLocation userLocation) {
+
             this.userLocation = userLocation;
             return this;
         }
         @CustomType.Setter
         public Builder userNetwork(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionUserNetwork userNetwork) {
+
             this.userNetwork = userNetwork;
             return this;
         }
         @CustomType.Setter
         public Builder variableError(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionVariableError variableError) {
+
             this.variableError = variableError;
             return this;
         }
         @CustomType.Setter
         public Builder virtualWaitingRoomRequest(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionVirtualWaitingRoomRequest virtualWaitingRoomRequest) {
+
             this.virtualWaitingRoomRequest = virtualWaitingRoomRequest;
             return this;
         }
         @CustomType.Setter
         public Builder visitorPrioritizationRequest(@Nullable GetPropertyRulesBuilderRulesV20230530CriterionVisitorPrioritizationRequest visitorPrioritizationRequest) {
+
             this.visitorPrioritizationRequest = visitorPrioritizationRequest;
             return this;
         }

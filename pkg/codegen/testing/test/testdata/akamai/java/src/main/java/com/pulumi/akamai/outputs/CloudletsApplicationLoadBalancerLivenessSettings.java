@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -112,66 +113,85 @@ public final class CloudletsApplicationLoadBalancerLivenessSettings {
 
         @CustomType.Setter
         public Builder additionalHeaders(@Nullable Map<String,String> additionalHeaders) {
+
             this.additionalHeaders = additionalHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder hostHeader(@Nullable String hostHeader) {
+
             this.hostHeader = hostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder interval(@Nullable Integer interval) {
+
             this.interval = interval;
             return this;
         }
         @CustomType.Setter
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            if (path == null) {
+              throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerLivenessSettings", "path");
+            }
+            this.path = path;
             return this;
         }
         @CustomType.Setter
         public Builder peerCertificateVerification(@Nullable Boolean peerCertificateVerification) {
+
             this.peerCertificateVerification = peerCertificateVerification;
             return this;
         }
         @CustomType.Setter
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            if (port == null) {
+              throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerLivenessSettings", "port");
+            }
+            this.port = port;
             return this;
         }
         @CustomType.Setter
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            if (protocol == null) {
+              throw new MissingRequiredPropertyException("CloudletsApplicationLoadBalancerLivenessSettings", "protocol");
+            }
+            this.protocol = protocol;
             return this;
         }
         @CustomType.Setter
         public Builder requestString(@Nullable String requestString) {
+
             this.requestString = requestString;
             return this;
         }
         @CustomType.Setter
         public Builder responseString(@Nullable String responseString) {
+
             this.responseString = responseString;
             return this;
         }
         @CustomType.Setter
         public Builder status3xxFailure(@Nullable Boolean status3xxFailure) {
+
             this.status3xxFailure = status3xxFailure;
             return this;
         }
         @CustomType.Setter
         public Builder status4xxFailure(@Nullable Boolean status4xxFailure) {
+
             this.status4xxFailure = status4xxFailure;
             return this;
         }
         @CustomType.Setter
         public Builder status5xxFailure(@Nullable Boolean status5xxFailure) {
+
             this.status5xxFailure = status5xxFailure;
             return this;
         }
         @CustomType.Setter
         public Builder timeout(@Nullable Double timeout) {
+
             this.timeout = timeout;
             return this;
         }

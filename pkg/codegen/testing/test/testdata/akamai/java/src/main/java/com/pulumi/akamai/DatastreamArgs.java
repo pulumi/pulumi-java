@@ -17,6 +17,7 @@ import com.pulumi.akamai.inputs.DatastreamSplunkConnectorArgs;
 import com.pulumi.akamai.inputs.DatastreamSumologicConnectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -609,13 +610,27 @@ public final class DatastreamArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public DatastreamArgs build() {
-            $.active = Objects.requireNonNull($.active, "expected parameter 'active' to be non-null");
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.datasetFields = Objects.requireNonNull($.datasetFields, "expected parameter 'datasetFields' to be non-null");
-            $.deliveryConfiguration = Objects.requireNonNull($.deliveryConfiguration, "expected parameter 'deliveryConfiguration' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
-            $.streamName = Objects.requireNonNull($.streamName, "expected parameter 'streamName' to be non-null");
+            if ($.active == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "active");
+            }
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "contractId");
+            }
+            if ($.datasetFields == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "datasetFields");
+            }
+            if ($.deliveryConfiguration == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "deliveryConfiguration");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "groupId");
+            }
+            if ($.properties == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "properties");
+            }
+            if ($.streamName == null) {
+                throw new MissingRequiredPropertyException("DatastreamArgs", "streamName");
+            }
             return $;
         }
     }

@@ -264,16 +264,19 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOrigin {
 
         @CustomType.Setter
         public Builder cacheKeyHostname(@Nullable String cacheKeyHostname) {
+
             this.cacheKeyHostname = cacheKeyHostname;
             return this;
         }
         @CustomType.Setter
         public Builder compress(@Nullable Boolean compress) {
+
             this.compress = compress;
             return this;
         }
         @CustomType.Setter
         public Builder customCertificateAuthorities(@Nullable List<GetPropertyRulesBuilderRulesV20230530BehaviorOriginCustomCertificateAuthority> customCertificateAuthorities) {
+
             this.customCertificateAuthorities = customCertificateAuthorities;
             return this;
         }
@@ -282,6 +285,7 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOrigin {
         }
         @CustomType.Setter
         public Builder customCertificates(@Nullable List<GetPropertyRulesBuilderRulesV20230530BehaviorOriginCustomCertificate> customCertificates) {
+
             this.customCertificates = customCertificates;
             return this;
         }
@@ -290,11 +294,13 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOrigin {
         }
         @CustomType.Setter
         public Builder customForwardHostHeader(@Nullable String customForwardHostHeader) {
+
             this.customForwardHostHeader = customForwardHostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder customValidCnValues(@Nullable List<String> customValidCnValues) {
+
             this.customValidCnValues = customValidCnValues;
             return this;
         }
@@ -303,131 +309,157 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOrigin {
         }
         @CustomType.Setter
         public Builder enableTrueClientIp(@Nullable Boolean enableTrueClientIp) {
+
             this.enableTrueClientIp = enableTrueClientIp;
             return this;
         }
         @CustomType.Setter
         public Builder forwardHostHeader(@Nullable String forwardHostHeader) {
+
             this.forwardHostHeader = forwardHostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder hostname(@Nullable String hostname) {
+
             this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder httpPort(@Nullable Integer httpPort) {
+
             this.httpPort = httpPort;
             return this;
         }
         @CustomType.Setter
         public Builder httpsPort(@Nullable Integer httpsPort) {
+
             this.httpsPort = httpsPort;
             return this;
         }
         @CustomType.Setter
         public Builder ipVersion(@Nullable String ipVersion) {
+
             this.ipVersion = ipVersion;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder mslorigin(@Nullable String mslorigin) {
+
             this.mslorigin = mslorigin;
             return this;
         }
         @CustomType.Setter
         public Builder netStorage(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorOriginNetStorage netStorage) {
+
             this.netStorage = netStorage;
             return this;
         }
         @CustomType.Setter
         public Builder originCertificate(@Nullable String originCertificate) {
+
             this.originCertificate = originCertificate;
             return this;
         }
         @CustomType.Setter
         public Builder originCertsToHonor(@Nullable String originCertsToHonor) {
+
             this.originCertsToHonor = originCertsToHonor;
             return this;
         }
         @CustomType.Setter
         public Builder originId(@Nullable String originId) {
+
             this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder originSni(@Nullable Boolean originSni) {
+
             this.originSni = originSni;
             return this;
         }
         @CustomType.Setter
         public Builder originType(@Nullable String originType) {
+
             this.originType = originType;
             return this;
         }
         @CustomType.Setter
         public Builder ports(@Nullable String ports) {
+
             this.ports = ports;
             return this;
         }
         @CustomType.Setter
         public Builder saasCnameEnabled(@Nullable Boolean saasCnameEnabled) {
+
             this.saasCnameEnabled = saasCnameEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder saasCnameLevel(@Nullable Integer saasCnameLevel) {
+
             this.saasCnameLevel = saasCnameLevel;
             return this;
         }
         @CustomType.Setter
         public Builder saasCookie(@Nullable String saasCookie) {
+
             this.saasCookie = saasCookie;
             return this;
         }
         @CustomType.Setter
         public Builder saasQueryString(@Nullable String saasQueryString) {
+
             this.saasQueryString = saasQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder saasRegex(@Nullable String saasRegex) {
+
             this.saasRegex = saasRegex;
             return this;
         }
         @CustomType.Setter
         public Builder saasReplace(@Nullable String saasReplace) {
+
             this.saasReplace = saasReplace;
             return this;
         }
         @CustomType.Setter
         public Builder saasSuffix(@Nullable String saasSuffix) {
+
             this.saasSuffix = saasSuffix;
             return this;
         }
         @CustomType.Setter
         public Builder saasType(@Nullable String saasType) {
+
             this.saasType = saasType;
             return this;
         }
         @CustomType.Setter
         public Builder secondHostname(@Nullable String secondHostname) {
+
             this.secondHostname = secondHostname;
             return this;
         }
         @CustomType.Setter
         public Builder secondHostnameEnabled(@Nullable Boolean secondHostnameEnabled) {
+
             this.secondHostnameEnabled = secondHostnameEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder standardCertificateAuthorities(@Nullable List<String> standardCertificateAuthorities) {
+
             this.standardCertificateAuthorities = standardCertificateAuthorities;
             return this;
         }
@@ -436,31 +468,37 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOrigin {
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder trueClientIpClientSetting(@Nullable Boolean trueClientIpClientSetting) {
+
             this.trueClientIpClientSetting = trueClientIpClientSetting;
             return this;
         }
         @CustomType.Setter
         public Builder trueClientIpHeader(@Nullable String trueClientIpHeader) {
+
             this.trueClientIpHeader = trueClientIpHeader;
             return this;
         }
         @CustomType.Setter
         public Builder useUniqueCacheKey(@Nullable Boolean useUniqueCacheKey) {
+
             this.useUniqueCacheKey = useUniqueCacheKey;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder verificationMode(@Nullable String verificationMode) {
+
             this.verificationMode = verificationMode;
             return this;
         }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,42 +92,66 @@ public final class GetPropertyIncludeActivationResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder includeId(String includeId) {
-            this.includeId = Objects.requireNonNull(includeId);
+            if (includeId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "includeId");
+            }
+            this.includeId = includeId;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            if (network == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "network");
+            }
+            this.network = network;
             return this;
         }
         @CustomType.Setter
         public Builder note(String note) {
-            this.note = Objects.requireNonNull(note);
+            if (note == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "note");
+            }
+            this.note = note;
             return this;
         }
         @CustomType.Setter
         public Builder notifyEmails(List<String> notifyEmails) {
-            this.notifyEmails = Objects.requireNonNull(notifyEmails);
+            if (notifyEmails == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "notifyEmails");
+            }
+            this.notifyEmails = notifyEmails;
             return this;
         }
         public Builder notifyEmails(String... notifyEmails) {
@@ -134,7 +159,10 @@ public final class GetPropertyIncludeActivationResult {
         }
         @CustomType.Setter
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeActivationResult", "version");
+            }
+            this.version = version;
             return this;
         }
         public GetPropertyIncludeActivationResult build() {

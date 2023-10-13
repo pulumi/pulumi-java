@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,8 +77,12 @@ public final class GetImagingPolicyImagePolicyTransformationImQueryArgs extends 
         }
 
         public GetImagingPolicyImagePolicyTransformationImQueryArgs build() {
-            $.allowedTransformations = Objects.requireNonNull($.allowedTransformations, "expected parameter 'allowedTransformations' to be non-null");
-            $.queryVar = Objects.requireNonNull($.queryVar, "expected parameter 'queryVar' to be non-null");
+            if ($.allowedTransformations == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationImQueryArgs", "allowedTransformations");
+            }
+            if ($.queryVar == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationImQueryArgs", "queryVar");
+            }
             return $;
         }
     }

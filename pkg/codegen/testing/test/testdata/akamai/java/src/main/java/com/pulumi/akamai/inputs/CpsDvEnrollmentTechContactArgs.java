@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -243,16 +244,36 @@ public final class CpsDvEnrollmentTechContactArgs extends com.pulumi.resources.R
         }
 
         public CpsDvEnrollmentTechContactArgs build() {
-            $.addressLineOne = Objects.requireNonNull($.addressLineOne, "expected parameter 'addressLineOne' to be non-null");
-            $.city = Objects.requireNonNull($.city, "expected parameter 'city' to be non-null");
-            $.countryCode = Objects.requireNonNull($.countryCode, "expected parameter 'countryCode' to be non-null");
-            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
-            $.firstName = Objects.requireNonNull($.firstName, "expected parameter 'firstName' to be non-null");
-            $.lastName = Objects.requireNonNull($.lastName, "expected parameter 'lastName' to be non-null");
-            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
-            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
-            $.postalCode = Objects.requireNonNull($.postalCode, "expected parameter 'postalCode' to be non-null");
-            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            if ($.addressLineOne == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "addressLineOne");
+            }
+            if ($.city == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "city");
+            }
+            if ($.countryCode == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "countryCode");
+            }
+            if ($.email == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "email");
+            }
+            if ($.firstName == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "firstName");
+            }
+            if ($.lastName == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "lastName");
+            }
+            if ($.organization == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "organization");
+            }
+            if ($.phone == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "phone");
+            }
+            if ($.postalCode == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "postalCode");
+            }
+            if ($.region == null) {
+                throw new MissingRequiredPropertyException("CpsDvEnrollmentTechContactArgs", "region");
+            }
             return $;
         }
     }

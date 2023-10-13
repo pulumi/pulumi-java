@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,10 @@ public final class GtmAsmapAssignment {
 
         @CustomType.Setter
         public Builder asNumbers(List<Integer> asNumbers) {
-            this.asNumbers = Objects.requireNonNull(asNumbers);
+            if (asNumbers == null) {
+              throw new MissingRequiredPropertyException("GtmAsmapAssignment", "asNumbers");
+            }
+            this.asNumbers = asNumbers;
             return this;
         }
         public Builder asNumbers(Integer... asNumbers) {
@@ -56,12 +60,18 @@ public final class GtmAsmapAssignment {
         }
         @CustomType.Setter
         public Builder datacenterId(Integer datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            if (datacenterId == null) {
+              throw new MissingRequiredPropertyException("GtmAsmapAssignment", "datacenterId");
+            }
+            this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder nickname(String nickname) {
-            this.nickname = Objects.requireNonNull(nickname);
+            if (nickname == null) {
+              throw new MissingRequiredPropertyException("GtmAsmapAssignment", "nickname");
+            }
+            this.nickname = nickname;
             return this;
         }
         public GtmAsmapAssignment build() {

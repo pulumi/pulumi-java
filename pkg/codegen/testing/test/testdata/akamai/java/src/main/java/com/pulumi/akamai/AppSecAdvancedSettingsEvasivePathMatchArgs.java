@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -152,8 +153,12 @@ public final class AppSecAdvancedSettingsEvasivePathMatchArgs extends com.pulumi
         }
 
         public AppSecAdvancedSettingsEvasivePathMatchArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.enablePathMatch = Objects.requireNonNull($.enablePathMatch, "expected parameter 'enablePathMatch' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsEvasivePathMatchArgs", "configId");
+            }
+            if ($.enablePathMatch == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsEvasivePathMatchArgs", "enablePathMatch");
+            }
             return $;
         }
     }

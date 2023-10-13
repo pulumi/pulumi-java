@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -73,37 +74,54 @@ public final class DatastreamGcsConnector {
 
         @CustomType.Setter
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            if (bucket == null) {
+              throw new MissingRequiredPropertyException("DatastreamGcsConnector", "bucket");
+            }
+            this.bucket = bucket;
             return this;
         }
         @CustomType.Setter
         public Builder compressLogs(@Nullable Boolean compressLogs) {
+
             this.compressLogs = compressLogs;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("DatastreamGcsConnector", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder path(@Nullable String path) {
+
             this.path = path;
             return this;
         }
         @CustomType.Setter
         public Builder privateKey(String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            if (privateKey == null) {
+              throw new MissingRequiredPropertyException("DatastreamGcsConnector", "privateKey");
+            }
+            this.privateKey = privateKey;
             return this;
         }
         @CustomType.Setter
         public Builder projectId(String projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            if (projectId == null) {
+              throw new MissingRequiredPropertyException("DatastreamGcsConnector", "projectId");
+            }
+            this.projectId = projectId;
             return this;
         }
         @CustomType.Setter
         public Builder serviceAccountName(String serviceAccountName) {
-            this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
+            if (serviceAccountName == null) {
+              throw new MissingRequiredPropertyException("DatastreamGcsConnector", "serviceAccountName");
+            }
+            this.serviceAccountName = serviceAccountName;
             return this;
         }
         public DatastreamGcsConnector build() {

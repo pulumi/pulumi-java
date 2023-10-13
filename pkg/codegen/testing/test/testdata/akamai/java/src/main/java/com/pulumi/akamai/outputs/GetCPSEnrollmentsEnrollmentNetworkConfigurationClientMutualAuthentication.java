@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -47,17 +48,26 @@ public final class GetCPSEnrollmentsEnrollmentNetworkConfigurationClientMutualAu
 
         @CustomType.Setter
         public Builder ocspEnabled(Boolean ocspEnabled) {
-            this.ocspEnabled = Objects.requireNonNull(ocspEnabled);
+            if (ocspEnabled == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentNetworkConfigurationClientMutualAuthentication", "ocspEnabled");
+            }
+            this.ocspEnabled = ocspEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder sendCaListToClient(Boolean sendCaListToClient) {
-            this.sendCaListToClient = Objects.requireNonNull(sendCaListToClient);
+            if (sendCaListToClient == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentNetworkConfigurationClientMutualAuthentication", "sendCaListToClient");
+            }
+            this.sendCaListToClient = sendCaListToClient;
             return this;
         }
         @CustomType.Setter
         public Builder setId(String setId) {
-            this.setId = Objects.requireNonNull(setId);
+            if (setId == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentNetworkConfigurationClientMutualAuthentication", "setId");
+            }
+            this.setId = setId;
             return this;
         }
         public GetCPSEnrollmentsEnrollmentNetworkConfigurationClientMutualAuthentication build() {

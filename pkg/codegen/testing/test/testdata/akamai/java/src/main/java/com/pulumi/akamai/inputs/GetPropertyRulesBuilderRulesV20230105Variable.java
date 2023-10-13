@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -102,11 +103,21 @@ public final class GetPropertyRulesBuilderRulesV20230105Variable extends com.pul
         }
 
         public GetPropertyRulesBuilderRulesV20230105Variable build() {
-            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
-            $.hidden = Objects.requireNonNull($.hidden, "expected parameter 'hidden' to be non-null");
-            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
-            $.sensitive = Objects.requireNonNull($.sensitive, "expected parameter 'sensitive' to be non-null");
-            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            if ($.description == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "description");
+            }
+            if ($.hidden == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "hidden");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "name");
+            }
+            if ($.sensitive == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "sensitive");
+            }
+            if ($.value == null) {
+                throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "value");
+            }
             return $;
         }
     }

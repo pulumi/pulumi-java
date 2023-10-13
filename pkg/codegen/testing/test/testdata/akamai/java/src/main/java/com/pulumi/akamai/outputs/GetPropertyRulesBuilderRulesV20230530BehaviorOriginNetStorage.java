@@ -49,16 +49,19 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOriginNetStorage
 
         @CustomType.Setter
         public Builder cpCode(@Nullable Integer cpCode) {
+
             this.cpCode = cpCode;
             return this;
         }
         @CustomType.Setter
         public Builder downloadDomainName(@Nullable String downloadDomainName) {
+
             this.downloadDomainName = downloadDomainName;
             return this;
         }
         @CustomType.Setter
         public Builder g2oToken(@Nullable String g2oToken) {
+
             this.g2oToken = g2oToken;
             return this;
         }

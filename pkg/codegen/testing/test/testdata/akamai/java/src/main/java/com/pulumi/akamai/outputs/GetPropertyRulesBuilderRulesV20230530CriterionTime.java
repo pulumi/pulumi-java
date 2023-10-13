@@ -103,61 +103,73 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionTime {
 
         @CustomType.Setter
         public Builder applyDaylightSavingsTime(@Nullable Boolean applyDaylightSavingsTime) {
+
             this.applyDaylightSavingsTime = applyDaylightSavingsTime;
             return this;
         }
         @CustomType.Setter
         public Builder beginDate(@Nullable String beginDate) {
+
             this.beginDate = beginDate;
             return this;
         }
         @CustomType.Setter
         public Builder endDate(@Nullable String endDate) {
+
             this.endDate = endDate;
             return this;
         }
         @CustomType.Setter
         public Builder lastingDate(@Nullable String lastingDate) {
+
             this.lastingDate = lastingDate;
             return this;
         }
         @CustomType.Setter
         public Builder lastingDuration(@Nullable String lastingDuration) {
+
             this.lastingDuration = lastingDuration;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder repeatBeginDate(@Nullable String repeatBeginDate) {
+
             this.repeatBeginDate = repeatBeginDate;
             return this;
         }
         @CustomType.Setter
         public Builder repeatDuration(@Nullable String repeatDuration) {
+
             this.repeatDuration = repeatDuration;
             return this;
         }
         @CustomType.Setter
         public Builder repeatInterval(@Nullable String repeatInterval) {
+
             this.repeatInterval = repeatInterval;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

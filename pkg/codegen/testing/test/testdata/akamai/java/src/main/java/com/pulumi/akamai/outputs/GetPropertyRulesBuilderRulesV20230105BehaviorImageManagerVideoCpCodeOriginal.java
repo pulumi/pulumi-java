@@ -69,31 +69,37 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorImageManagerVide
 
         @CustomType.Setter
         public Builder cpCodeLimits(@Nullable GetPropertyRulesBuilderRulesV20230105BehaviorImageManagerVideoCpCodeOriginalCpCodeLimits cpCodeLimits) {
+
             this.cpCodeLimits = cpCodeLimits;
             return this;
         }
         @CustomType.Setter
         public Builder createdDate(@Nullable Integer createdDate) {
+
             this.createdDate = createdDate;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Integer id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder products(@Nullable List<String> products) {
+
             this.products = products;
             return this;
         }

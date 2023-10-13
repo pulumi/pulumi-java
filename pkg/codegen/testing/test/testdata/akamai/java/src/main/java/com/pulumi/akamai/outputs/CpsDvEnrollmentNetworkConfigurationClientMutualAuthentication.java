@@ -49,16 +49,19 @@ public final class CpsDvEnrollmentNetworkConfigurationClientMutualAuthentication
 
         @CustomType.Setter
         public Builder ocspEnabled(@Nullable Boolean ocspEnabled) {
+
             this.ocspEnabled = ocspEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder sendCaListToClient(@Nullable Boolean sendCaListToClient) {
+
             this.sendCaListToClient = sendCaListToClient;
             return this;
         }
         @CustomType.Setter
         public Builder setId(@Nullable String setId) {
+
             this.setId = setId;
             return this;
         }

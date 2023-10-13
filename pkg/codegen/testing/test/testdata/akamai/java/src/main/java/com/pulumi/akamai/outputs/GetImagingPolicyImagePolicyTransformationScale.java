@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyTransformationScale {
 
         @CustomType.Setter
         public Builder height(@Nullable String height) {
+
             this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder heightVar(@Nullable String heightVar) {
+
             this.heightVar = heightVar;
             return this;
         }
         @CustomType.Setter
         public Builder width(@Nullable String width) {
+
             this.width = width;
             return this;
         }
         @CustomType.Setter
         public Builder widthVar(@Nullable String widthVar) {
+
             this.widthVar = widthVar;
             return this;
         }

@@ -85,46 +85,55 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorVerifyJsonWebTok
 
         @CustomType.Setter
         public Builder enableEs256(@Nullable Boolean enableEs256) {
+
             this.enableEs256 = enableEs256;
             return this;
         }
         @CustomType.Setter
         public Builder enableRs256(@Nullable Boolean enableRs256) {
+
             this.enableRs256 = enableRs256;
             return this;
         }
         @CustomType.Setter
         public Builder extractLocation(@Nullable String extractLocation) {
+
             this.extractLocation = extractLocation;
             return this;
         }
         @CustomType.Setter
         public Builder headerName(@Nullable String headerName) {
+
             this.headerName = headerName;
             return this;
         }
         @CustomType.Setter
         public Builder jwt(@Nullable String jwt) {
+
             this.jwt = jwt;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder queryParameterName(@Nullable String queryParameterName) {
+
             this.queryParameterName = queryParameterName;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

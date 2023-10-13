@@ -133,86 +133,103 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorVerifyJsonWebTok
 
         @CustomType.Setter
         public Builder authorizations(@Nullable String authorizations) {
+
             this.authorizations = authorizations;
             return this;
         }
         @CustomType.Setter
         public Builder clientId(@Nullable String clientId) {
+
             this.clientId = clientId;
             return this;
         }
         @CustomType.Setter
         public Builder customHeader(@Nullable Boolean customHeader) {
+
             this.customHeader = customHeader;
             return this;
         }
         @CustomType.Setter
         public Builder enableEs256(@Nullable Boolean enableEs256) {
+
             this.enableEs256 = enableEs256;
             return this;
         }
         @CustomType.Setter
         public Builder enableRs256(@Nullable Boolean enableRs256) {
+
             this.enableRs256 = enableRs256;
             return this;
         }
         @CustomType.Setter
         public Builder extractAuthorizations(@Nullable Boolean extractAuthorizations) {
+
             this.extractAuthorizations = extractAuthorizations;
             return this;
         }
         @CustomType.Setter
         public Builder extractClientId(@Nullable Boolean extractClientId) {
+
             this.extractClientId = extractClientId;
             return this;
         }
         @CustomType.Setter
         public Builder extractLocation(@Nullable String extractLocation) {
+
             this.extractLocation = extractLocation;
             return this;
         }
         @CustomType.Setter
         public Builder extractUserName(@Nullable Boolean extractUserName) {
+
             this.extractUserName = extractUserName;
             return this;
         }
         @CustomType.Setter
         public Builder headerName(@Nullable String headerName) {
+
             this.headerName = headerName;
             return this;
         }
         @CustomType.Setter
         public Builder jwt(@Nullable String jwt) {
+
             this.jwt = jwt;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder primaryLocation(@Nullable String primaryLocation) {
+
             this.primaryLocation = primaryLocation;
             return this;
         }
         @CustomType.Setter
         public Builder queryParameterName(@Nullable String queryParameterName) {
+
             this.queryParameterName = queryParameterName;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder userName(@Nullable String userName) {
+
             this.userName = userName;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

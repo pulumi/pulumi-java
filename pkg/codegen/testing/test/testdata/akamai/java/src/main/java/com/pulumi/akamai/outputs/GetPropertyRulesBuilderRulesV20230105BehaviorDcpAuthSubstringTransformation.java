@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorDcpAuthSubstring
 
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder substringEnd(@Nullable String substringEnd) {
+
             this.substringEnd = substringEnd;
             return this;
         }
         @CustomType.Setter
         public Builder substringStart(@Nullable String substringStart) {
+
             this.substringStart = substringStart;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

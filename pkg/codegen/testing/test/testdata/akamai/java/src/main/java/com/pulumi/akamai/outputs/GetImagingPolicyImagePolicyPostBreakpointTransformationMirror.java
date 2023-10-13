@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformationMirror
 
         @CustomType.Setter
         public Builder horizontal(@Nullable String horizontal) {
+
             this.horizontal = horizontal;
             return this;
         }
         @CustomType.Setter
         public Builder horizontalVar(@Nullable String horizontalVar) {
+
             this.horizontalVar = horizontalVar;
             return this;
         }
         @CustomType.Setter
         public Builder vertical(@Nullable String vertical) {
+
             this.vertical = vertical;
             return this;
         }
         @CustomType.Setter
         public Builder verticalVar(@Nullable String verticalVar) {
+
             this.verticalVar = verticalVar;
             return this;
         }

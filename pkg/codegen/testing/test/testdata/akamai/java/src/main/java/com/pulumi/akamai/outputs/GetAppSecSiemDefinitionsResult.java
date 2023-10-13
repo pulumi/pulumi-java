@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,21 +63,31 @@ public final class GetAppSecSiemDefinitionsResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSiemDefinitionsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSiemDefinitionsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSiemDefinitionsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder siemDefinitionName(@Nullable String siemDefinitionName) {
+
             this.siemDefinitionName = siemDefinitionName;
             return this;
         }

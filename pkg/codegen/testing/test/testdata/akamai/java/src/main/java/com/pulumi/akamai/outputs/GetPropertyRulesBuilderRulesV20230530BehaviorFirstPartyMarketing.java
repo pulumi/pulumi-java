@@ -74,36 +74,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorFirstPartyMarket
 
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorFirstPartyMarketingCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder javaScriptInsertionRule(@Nullable String javaScriptInsertionRule) {
+
             this.javaScriptInsertionRule = javaScriptInsertionRule;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder mediaMathPrefix(@Nullable String mediaMathPrefix) {
+
             this.mediaMathPrefix = mediaMathPrefix;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

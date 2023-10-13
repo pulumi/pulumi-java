@@ -55,21 +55,25 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorClientCharacteri
 
         @CustomType.Setter
         public Builder country(@Nullable String country) {
+
             this.country = country;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

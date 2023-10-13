@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -106,10 +107,18 @@ public final class GetPropertyIncludeRulesArgs extends com.pulumi.resources.Invo
         }
 
         public GetPropertyIncludeRulesArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.includeId = Objects.requireNonNull($.includeId, "expected parameter 'includeId' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeRulesArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeRulesArgs", "groupId");
+            }
+            if ($.includeId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeRulesArgs", "includeId");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeRulesArgs", "version");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapeCircleShapeCenter;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,16 +50,21 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
 
         @CustomType.Setter
         public Builder center(GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapeCircleShapeCenter center) {
-            this.center = Objects.requireNonNull(center);
+            if (center == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapeCircleShape", "center");
+            }
+            this.center = center;
             return this;
         }
         @CustomType.Setter
         public Builder radius(@Nullable String radius) {
+
             this.radius = radius;
             return this;
         }
         @CustomType.Setter
         public Builder radiusVar(@Nullable String radiusVar) {
+
             this.radiusVar = radiusVar;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -186,10 +187,18 @@ public final class AppSecReputationProfileActionArgs extends com.pulumi.resource
         }
 
         public AppSecReputationProfileActionArgs build() {
-            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.reputationProfileId = Objects.requireNonNull($.reputationProfileId, "expected parameter 'reputationProfileId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.action == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileActionArgs", "action");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileActionArgs", "configId");
+            }
+            if ($.reputationProfileId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileActionArgs", "reputationProfileId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("AppSecReputationProfileActionArgs", "securityPolicyId");
+            }
             return $;
         }
     }

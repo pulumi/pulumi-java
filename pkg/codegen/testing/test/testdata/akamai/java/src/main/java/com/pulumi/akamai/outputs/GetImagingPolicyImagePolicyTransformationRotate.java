@@ -42,11 +42,13 @@ public final class GetImagingPolicyImagePolicyTransformationRotate {
 
         @CustomType.Setter
         public Builder degrees(@Nullable String degrees) {
+
             this.degrees = degrees;
             return this;
         }
         @CustomType.Setter
         public Builder degreesVar(@Nullable String degreesVar) {
+
             this.degreesVar = degreesVar;
             return this;
         }

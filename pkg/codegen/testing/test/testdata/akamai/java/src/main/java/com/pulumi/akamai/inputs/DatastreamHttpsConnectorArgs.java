@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -278,9 +279,15 @@ public final class DatastreamHttpsConnectorArgs extends com.pulumi.resources.Res
         }
 
         public DatastreamHttpsConnectorArgs build() {
-            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            if ($.authenticationType == null) {
+                throw new MissingRequiredPropertyException("DatastreamHttpsConnectorArgs", "authenticationType");
+            }
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamHttpsConnectorArgs", "displayName");
+            }
+            if ($.endpoint == null) {
+                throw new MissingRequiredPropertyException("DatastreamHttpsConnectorArgs", "endpoint");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -106,10 +107,18 @@ public final class BotmanAkamaiBotCategoryActionArgs extends com.pulumi.resource
         }
 
         public BotmanAkamaiBotCategoryActionArgs build() {
-            $.akamaiBotCategoryAction = Objects.requireNonNull($.akamaiBotCategoryAction, "expected parameter 'akamaiBotCategoryAction' to be non-null");
-            $.categoryId = Objects.requireNonNull($.categoryId, "expected parameter 'categoryId' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            if ($.akamaiBotCategoryAction == null) {
+                throw new MissingRequiredPropertyException("BotmanAkamaiBotCategoryActionArgs", "akamaiBotCategoryAction");
+            }
+            if ($.categoryId == null) {
+                throw new MissingRequiredPropertyException("BotmanAkamaiBotCategoryActionArgs", "categoryId");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanAkamaiBotCategoryActionArgs", "configId");
+            }
+            if ($.securityPolicyId == null) {
+                throw new MissingRequiredPropertyException("BotmanAkamaiBotCategoryActionArgs", "securityPolicyId");
+            }
             return $;
         }
     }

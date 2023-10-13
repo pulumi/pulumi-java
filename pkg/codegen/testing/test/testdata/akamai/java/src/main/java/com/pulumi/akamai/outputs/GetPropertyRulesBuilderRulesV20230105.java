@@ -8,6 +8,7 @@ import com.pulumi.akamai.outputs.GetPropertyRulesBuilderRulesV20230105Criterion;
 import com.pulumi.akamai.outputs.GetPropertyRulesBuilderRulesV20230105CustomOverride;
 import com.pulumi.akamai.outputs.GetPropertyRulesBuilderRulesV20230105Variable;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -120,11 +121,13 @@ public final class GetPropertyRulesBuilderRulesV20230105 {
 
         @CustomType.Setter
         public Builder advancedOverride(@Nullable String advancedOverride) {
+
             this.advancedOverride = advancedOverride;
             return this;
         }
         @CustomType.Setter
         public Builder behaviors(@Nullable List<GetPropertyRulesBuilderRulesV20230105Behavior> behaviors) {
+
             this.behaviors = behaviors;
             return this;
         }
@@ -133,6 +136,7 @@ public final class GetPropertyRulesBuilderRulesV20230105 {
         }
         @CustomType.Setter
         public Builder childrens(@Nullable List<String> childrens) {
+
             this.childrens = childrens;
             return this;
         }
@@ -141,21 +145,25 @@ public final class GetPropertyRulesBuilderRulesV20230105 {
         }
         @CustomType.Setter
         public Builder comments(@Nullable String comments) {
+
             this.comments = comments;
             return this;
         }
         @CustomType.Setter
         public Builder criteriaLocked(@Nullable Boolean criteriaLocked) {
+
             this.criteriaLocked = criteriaLocked;
             return this;
         }
         @CustomType.Setter
         public Builder criteriaMustSatisfy(@Nullable String criteriaMustSatisfy) {
+
             this.criteriaMustSatisfy = criteriaMustSatisfy;
             return this;
         }
         @CustomType.Setter
         public Builder criterions(@Nullable List<GetPropertyRulesBuilderRulesV20230105Criterion> criterions) {
+
             this.criterions = criterions;
             return this;
         }
@@ -164,36 +172,45 @@ public final class GetPropertyRulesBuilderRulesV20230105 {
         }
         @CustomType.Setter
         public Builder customOverride(@Nullable GetPropertyRulesBuilderRulesV20230105CustomOverride customOverride) {
+
             this.customOverride = customOverride;
             return this;
         }
         @CustomType.Setter
         public Builder isSecure(@Nullable Boolean isSecure) {
+
             this.isSecure = isSecure;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder templateLink(@Nullable String templateLink) {
+
             this.templateLink = templateLink;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder variables(@Nullable List<GetPropertyRulesBuilderRulesV20230105Variable> variables) {
+
             this.variables = variables;
             return this;
         }

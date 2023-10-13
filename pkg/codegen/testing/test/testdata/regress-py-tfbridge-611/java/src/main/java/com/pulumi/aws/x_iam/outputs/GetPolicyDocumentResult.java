@@ -5,6 +5,7 @@ package com.pulumi.aws.x_iam.outputs;
 
 import com.pulumi.aws.x.outputs.GetPolicyDocumentStatement;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,16 +50,23 @@ public final class GetPolicyDocumentResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPolicyDocumentResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetPolicyDocumentResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder statements(@Nullable List<GetPolicyDocumentStatement> statements) {
+
             this.statements = statements;
             return this;
         }

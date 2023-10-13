@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -159,11 +160,21 @@ public final class DatastreamGcsConnectorArgs extends com.pulumi.resources.Resou
         }
 
         public DatastreamGcsConnectorArgs build() {
-            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
-            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
-            $.serviceAccountName = Objects.requireNonNull($.serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
+            if ($.bucket == null) {
+                throw new MissingRequiredPropertyException("DatastreamGcsConnectorArgs", "bucket");
+            }
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamGcsConnectorArgs", "displayName");
+            }
+            if ($.privateKey == null) {
+                throw new MissingRequiredPropertyException("DatastreamGcsConnectorArgs", "privateKey");
+            }
+            if ($.projectId == null) {
+                throw new MissingRequiredPropertyException("DatastreamGcsConnectorArgs", "projectId");
+            }
+            if ($.serviceAccountName == null) {
+                throw new MissingRequiredPropertyException("DatastreamGcsConnectorArgs", "serviceAccountName");
+            }
             return $;
         }
     }

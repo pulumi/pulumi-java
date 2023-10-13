@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -65,32 +66,50 @@ public final class GetPropertyIncludeParentsParent {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsParent", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder isIncludeUsedInProductionVersion(Boolean isIncludeUsedInProductionVersion) {
-            this.isIncludeUsedInProductionVersion = Objects.requireNonNull(isIncludeUsedInProductionVersion);
+            if (isIncludeUsedInProductionVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsParent", "isIncludeUsedInProductionVersion");
+            }
+            this.isIncludeUsedInProductionVersion = isIncludeUsedInProductionVersion;
             return this;
         }
         @CustomType.Setter
         public Builder isIncludeUsedInStagingVersion(Boolean isIncludeUsedInStagingVersion) {
-            this.isIncludeUsedInStagingVersion = Objects.requireNonNull(isIncludeUsedInStagingVersion);
+            if (isIncludeUsedInStagingVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsParent", "isIncludeUsedInStagingVersion");
+            }
+            this.isIncludeUsedInStagingVersion = isIncludeUsedInStagingVersion;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsParent", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder productionVersion(String productionVersion) {
-            this.productionVersion = Objects.requireNonNull(productionVersion);
+            if (productionVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsParent", "productionVersion");
+            }
+            this.productionVersion = productionVersion;
             return this;
         }
         @CustomType.Setter
         public Builder stagingVersion(String stagingVersion) {
-            this.stagingVersion = Objects.requireNonNull(stagingVersion);
+            if (stagingVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeParentsParent", "stagingVersion");
+            }
+            this.stagingVersion = stagingVersion;
             return this;
         }
         public GetPropertyIncludeParentsParent build() {

@@ -85,46 +85,55 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorGraphqlCaching {
 
         @CustomType.Setter
         public Builder advanced(@Nullable String advanced) {
+
             this.advanced = advanced;
             return this;
         }
         @CustomType.Setter
         public Builder cacheResponsesWithErrors(@Nullable Boolean cacheResponsesWithErrors) {
+
             this.cacheResponsesWithErrors = cacheResponsesWithErrors;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder operationsJsonBodyParameterName(@Nullable String operationsJsonBodyParameterName) {
+
             this.operationsJsonBodyParameterName = operationsJsonBodyParameterName;
             return this;
         }
         @CustomType.Setter
         public Builder operationsUrlQueryParameterName(@Nullable String operationsUrlQueryParameterName) {
+
             this.operationsUrlQueryParameterName = operationsUrlQueryParameterName;
             return this;
         }
         @CustomType.Setter
         public Builder postRequestProcessingErrorHandling(@Nullable String postRequestProcessingErrorHandling) {
+
             this.postRequestProcessingErrorHandling = postRequestProcessingErrorHandling;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

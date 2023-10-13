@@ -64,11 +64,13 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
 
         @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
+
             this.nextLink = nextLink;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable List<Object> value) {
+
             this.value = value;
             return this;
         }

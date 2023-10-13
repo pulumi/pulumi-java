@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -91,8 +92,12 @@ public final class GetPropertyActivationArgs extends com.pulumi.resources.Invoke
         }
 
         public GetPropertyActivationArgs build() {
-            $.propertyId = Objects.requireNonNull($.propertyId, "expected parameter 'propertyId' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.propertyId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyActivationArgs", "propertyId");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("GetPropertyActivationArgs", "version");
+            }
             return $;
         }
     }

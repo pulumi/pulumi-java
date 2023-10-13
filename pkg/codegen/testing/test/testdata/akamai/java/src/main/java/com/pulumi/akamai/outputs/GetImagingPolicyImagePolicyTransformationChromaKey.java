@@ -114,71 +114,85 @@ public final class GetImagingPolicyImagePolicyTransformationChromaKey {
 
         @CustomType.Setter
         public Builder hue(@Nullable String hue) {
+
             this.hue = hue;
             return this;
         }
         @CustomType.Setter
         public Builder hueFeather(@Nullable String hueFeather) {
+
             this.hueFeather = hueFeather;
             return this;
         }
         @CustomType.Setter
         public Builder hueFeatherVar(@Nullable String hueFeatherVar) {
+
             this.hueFeatherVar = hueFeatherVar;
             return this;
         }
         @CustomType.Setter
         public Builder hueTolerance(@Nullable String hueTolerance) {
+
             this.hueTolerance = hueTolerance;
             return this;
         }
         @CustomType.Setter
         public Builder hueToleranceVar(@Nullable String hueToleranceVar) {
+
             this.hueToleranceVar = hueToleranceVar;
             return this;
         }
         @CustomType.Setter
         public Builder hueVar(@Nullable String hueVar) {
+
             this.hueVar = hueVar;
             return this;
         }
         @CustomType.Setter
         public Builder lightnessFeather(@Nullable String lightnessFeather) {
+
             this.lightnessFeather = lightnessFeather;
             return this;
         }
         @CustomType.Setter
         public Builder lightnessFeatherVar(@Nullable String lightnessFeatherVar) {
+
             this.lightnessFeatherVar = lightnessFeatherVar;
             return this;
         }
         @CustomType.Setter
         public Builder lightnessTolerance(@Nullable String lightnessTolerance) {
+
             this.lightnessTolerance = lightnessTolerance;
             return this;
         }
         @CustomType.Setter
         public Builder lightnessToleranceVar(@Nullable String lightnessToleranceVar) {
+
             this.lightnessToleranceVar = lightnessToleranceVar;
             return this;
         }
         @CustomType.Setter
         public Builder saturationFeather(@Nullable String saturationFeather) {
+
             this.saturationFeather = saturationFeather;
             return this;
         }
         @CustomType.Setter
         public Builder saturationFeatherVar(@Nullable String saturationFeatherVar) {
+
             this.saturationFeatherVar = saturationFeatherVar;
             return this;
         }
         @CustomType.Setter
         public Builder saturationTolerance(@Nullable String saturationTolerance) {
+
             this.saturationTolerance = saturationTolerance;
             return this;
         }
         @CustomType.Setter
         public Builder saturationToleranceVar(@Nullable String saturationToleranceVar) {
+
             this.saturationToleranceVar = saturationToleranceVar;
             return this;
         }

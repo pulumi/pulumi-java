@@ -64,11 +64,13 @@ public final class GetImagingPolicyVideoPolicy {
 
         @CustomType.Setter
         public Builder breakpoints(@Nullable GetImagingPolicyVideoPolicyBreakpoints breakpoints) {
+
             this.breakpoints = breakpoints;
             return this;
         }
         @CustomType.Setter
         public Builder hosts(@Nullable List<String> hosts) {
+
             this.hosts = hosts;
             return this;
         }
@@ -77,16 +79,19 @@ public final class GetImagingPolicyVideoPolicy {
         }
         @CustomType.Setter
         public Builder output(@Nullable GetImagingPolicyVideoPolicyOutput output) {
+
             this.output = output;
             return this;
         }
         @CustomType.Setter
         public Builder rolloutDuration(@Nullable String rolloutDuration) {
+
             this.rolloutDuration = rolloutDuration;
             return this;
         }
         @CustomType.Setter
         public Builder variables(@Nullable List<GetImagingPolicyVideoPolicyVariable> variables) {
+
             this.variables = variables;
             return this;
         }

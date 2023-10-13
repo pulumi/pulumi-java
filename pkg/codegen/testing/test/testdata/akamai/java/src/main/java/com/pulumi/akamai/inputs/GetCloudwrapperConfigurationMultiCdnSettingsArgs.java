@@ -9,6 +9,7 @@ import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationMultiCdnSettingsData
 import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationMultiCdnSettingsOriginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -137,7 +138,9 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsArgs extends com.
         }
 
         public GetCloudwrapperConfigurationMultiCdnSettingsArgs build() {
-            $.enableSoftAlerts = Objects.requireNonNull($.enableSoftAlerts, "expected parameter 'enableSoftAlerts' to be non-null");
+            if ($.enableSoftAlerts == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsArgs", "enableSoftAlerts");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetPropertiesProperty;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,22 +63,34 @@ public final class GetPropertiesResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder properties(List<GetPropertiesProperty> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            if (properties == null) {
+              throw new MissingRequiredPropertyException("GetPropertiesResult", "properties");
+            }
+            this.properties = properties;
             return this;
         }
         public Builder properties(GetPropertiesProperty... properties) {

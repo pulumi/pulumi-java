@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class BotmanChallengeInterceptionRulesArgs extends com.pulumi.resou
         }
 
         public BotmanChallengeInterceptionRulesArgs build() {
-            $.challengeInterceptionRules = Objects.requireNonNull($.challengeInterceptionRules, "expected parameter 'challengeInterceptionRules' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.challengeInterceptionRules == null) {
+                throw new MissingRequiredPropertyException("BotmanChallengeInterceptionRulesArgs", "challengeInterceptionRules");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanChallengeInterceptionRulesArgs", "configId");
+            }
             return $;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class GetAppSecHostnameCoverageOverlappingArgs extends com.pulumi.r
         }
 
         public GetAppSecHostnameCoverageOverlappingArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("GetAppSecHostnameCoverageOverlappingArgs", "configId");
+            }
+            if ($.hostname == null) {
+                throw new MissingRequiredPropertyException("GetAppSecHostnameCoverageOverlappingArgs", "hostname");
+            }
             return $;
         }
     }

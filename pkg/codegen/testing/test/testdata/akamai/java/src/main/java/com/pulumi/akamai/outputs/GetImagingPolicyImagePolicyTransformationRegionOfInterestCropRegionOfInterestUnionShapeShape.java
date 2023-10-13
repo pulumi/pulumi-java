@@ -64,6 +64,7 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
 
         @CustomType.Setter
         public Builder circleShapes(@Nullable List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapeCircleShape> circleShapes) {
+
             this.circleShapes = circleShapes;
             return this;
         }
@@ -72,6 +73,7 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
         }
         @CustomType.Setter
         public Builder pointShapes(@Nullable List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapePointShape> pointShapes) {
+
             this.pointShapes = pointShapes;
             return this;
         }
@@ -80,6 +82,7 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
         }
         @CustomType.Setter
         public Builder polygonShapes(@Nullable List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapePolygonShape> polygonShapes) {
+
             this.polygonShapes = polygonShapes;
             return this;
         }
@@ -88,6 +91,7 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
         }
         @CustomType.Setter
         public Builder rectangleShapes(@Nullable List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapeRectangleShape> rectangleShapes) {
+
             this.rectangleShapes = rectangleShapes;
             return this;
         }
@@ -96,6 +100,7 @@ public final class GetImagingPolicyImagePolicyTransformationRegionOfInterestCrop
         }
         @CustomType.Setter
         public Builder unionShapes(@Nullable List<GetImagingPolicyImagePolicyTransformationRegionOfInterestCropRegionOfInterestUnionShapeShapeUnionShape> unionShapes) {
+
             this.unionShapes = unionShapes;
             return this;
         }

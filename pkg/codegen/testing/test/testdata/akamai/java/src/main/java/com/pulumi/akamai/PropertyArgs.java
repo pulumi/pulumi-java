@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.PropertyHostnameArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -284,9 +285,15 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public PropertyArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("PropertyArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("PropertyArgs", "groupId");
+            }
+            if ($.productId == null) {
+                throw new MissingRequiredPropertyException("PropertyArgs", "productId");
+            }
             return $;
         }
     }

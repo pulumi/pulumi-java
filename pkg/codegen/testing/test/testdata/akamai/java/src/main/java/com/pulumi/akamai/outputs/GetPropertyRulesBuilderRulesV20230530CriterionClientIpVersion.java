@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230530CriterionClientIpVersion
 
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder useXForwardedFor(@Nullable Boolean useXForwardedFor) {
+
             this.useXForwardedFor = useXForwardedFor;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable String value) {
+
             this.value = value;
             return this;
         }

@@ -8,6 +8,7 @@ import com.pulumi.akamai.inputs.GetCloudwrapperCapacitiesCapacityAssignedArgs;
 import com.pulumi.akamai.inputs.GetCloudwrapperCapacitiesCapacityUnassignedArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -160,13 +161,27 @@ public final class GetCloudwrapperCapacitiesCapacityArgs extends com.pulumi.reso
         }
 
         public GetCloudwrapperCapacitiesCapacityArgs build() {
-            $.approved = Objects.requireNonNull($.approved, "expected parameter 'approved' to be non-null");
-            $.assigned = Objects.requireNonNull($.assigned, "expected parameter 'assigned' to be non-null");
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.locationId = Objects.requireNonNull($.locationId, "expected parameter 'locationId' to be non-null");
-            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
-            $.unassigned = Objects.requireNonNull($.unassigned, "expected parameter 'unassigned' to be non-null");
+            if ($.approved == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "approved");
+            }
+            if ($.assigned == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "assigned");
+            }
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "contractId");
+            }
+            if ($.locationId == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "locationId");
+            }
+            if ($.locationName == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "locationName");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "type");
+            }
+            if ($.unassigned == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesCapacityArgs", "unassigned");
+            }
             return $;
         }
     }

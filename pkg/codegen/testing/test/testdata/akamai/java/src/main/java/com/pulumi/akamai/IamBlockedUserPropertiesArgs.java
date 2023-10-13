@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -160,9 +161,15 @@ public final class IamBlockedUserPropertiesArgs extends com.pulumi.resources.Res
         }
 
         public IamBlockedUserPropertiesArgs build() {
-            $.blockedProperties = Objects.requireNonNull($.blockedProperties, "expected parameter 'blockedProperties' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.identityId = Objects.requireNonNull($.identityId, "expected parameter 'identityId' to be non-null");
+            if ($.blockedProperties == null) {
+                throw new MissingRequiredPropertyException("IamBlockedUserPropertiesArgs", "blockedProperties");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("IamBlockedUserPropertiesArgs", "groupId");
+            }
+            if ($.identityId == null) {
+                throw new MissingRequiredPropertyException("IamBlockedUserPropertiesArgs", "identityId");
+            }
             return $;
         }
     }

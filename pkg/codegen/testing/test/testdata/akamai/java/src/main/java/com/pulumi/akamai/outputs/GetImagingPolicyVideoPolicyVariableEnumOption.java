@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,12 +41,18 @@ public final class GetImagingPolicyVideoPolicyVariableEnumOption {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariableEnumOption", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            if (value == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyVideoPolicyVariableEnumOption", "value");
+            }
+            this.value = value;
             return this;
         }
         public GetImagingPolicyVideoPolicyVariableEnumOption build() {

@@ -75,36 +75,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorForwardRewrite {
 
         @CustomType.Setter
         public Builder cloudletPolicy(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorForwardRewriteCloudletPolicy cloudletPolicy) {
+
             this.cloudletPolicy = cloudletPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder cloudletSharedPolicy(@Nullable Integer cloudletSharedPolicy) {
+
             this.cloudletSharedPolicy = cloudletSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder isSharedPolicy(@Nullable Boolean isSharedPolicy) {
+
             this.isSharedPolicy = isSharedPolicy;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

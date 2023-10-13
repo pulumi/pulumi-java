@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -186,10 +187,18 @@ public final class EdgekvGroupItemsArgs extends com.pulumi.resources.ResourceArg
         }
 
         public EdgekvGroupItemsArgs build() {
-            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
-            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
-            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
-            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            if ($.groupName == null) {
+                throw new MissingRequiredPropertyException("EdgekvGroupItemsArgs", "groupName");
+            }
+            if ($.items == null) {
+                throw new MissingRequiredPropertyException("EdgekvGroupItemsArgs", "items");
+            }
+            if ($.namespaceName == null) {
+                throw new MissingRequiredPropertyException("EdgekvGroupItemsArgs", "namespaceName");
+            }
+            if ($.network == null) {
+                throw new MissingRequiredPropertyException("EdgekvGroupItemsArgs", "network");
+            }
             return $;
         }
     }

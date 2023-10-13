@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -65,32 +66,50 @@ public final class GetPropertyIncludesInclude {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludesInclude", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder latestVersion(Integer latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            if (latestVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludesInclude", "latestVersion");
+            }
+            this.latestVersion = latestVersion;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludesInclude", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder productionVersion(String productionVersion) {
-            this.productionVersion = Objects.requireNonNull(productionVersion);
+            if (productionVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludesInclude", "productionVersion");
+            }
+            this.productionVersion = productionVersion;
             return this;
         }
         @CustomType.Setter
         public Builder stagingVersion(String stagingVersion) {
-            this.stagingVersion = Objects.requireNonNull(stagingVersion);
+            if (stagingVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludesInclude", "stagingVersion");
+            }
+            this.stagingVersion = stagingVersion;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludesInclude", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetPropertyIncludesInclude build() {

@@ -49,16 +49,19 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorImageManagerVide
 
         @CustomType.Setter
         public Builder currentCapacity(@Nullable Integer currentCapacity) {
+
             this.currentCapacity = currentCapacity;
             return this;
         }
         @CustomType.Setter
         public Builder limit(@Nullable Integer limit) {
+
             this.limit = limit;
             return this;
         }
         @CustomType.Setter
         public Builder limitType(@Nullable String limitType) {
+
             this.limitType = limitType;
             return this;
         }

@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -187,9 +188,15 @@ public final class ImagingPolicySetArgs extends com.pulumi.resources.ResourceArg
         }
 
         public ImagingPolicySetArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("ImagingPolicySetArgs", "contractId");
+            }
+            if ($.region == null) {
+                throw new MissingRequiredPropertyException("ImagingPolicySetArgs", "region");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("ImagingPolicySetArgs", "type");
+            }
             return $;
         }
     }

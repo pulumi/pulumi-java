@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,7 +50,9 @@ public final class GetIamStatesPlainArgs extends com.pulumi.resources.InvokeArgs
         }
 
         public GetIamStatesPlainArgs build() {
-            $.country = Objects.requireNonNull($.country, "expected parameter 'country' to be non-null");
+            if ($.country == null) {
+                throw new MissingRequiredPropertyException("GetIamStatesPlainArgs", "country");
+            }
             return $;
         }
     }

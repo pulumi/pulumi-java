@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetPropertyProductsProduct;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,17 +57,26 @@ public final class GetPropertyProductsResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyProductsResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyProductsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder products(List<GetPropertyProductsProduct> products) {
-            this.products = Objects.requireNonNull(products);
+            if (products == null) {
+              throw new MissingRequiredPropertyException("GetPropertyProductsResult", "products");
+            }
+            this.products = products;
             return this;
         }
         public Builder products(GetPropertyProductsProduct... products) {

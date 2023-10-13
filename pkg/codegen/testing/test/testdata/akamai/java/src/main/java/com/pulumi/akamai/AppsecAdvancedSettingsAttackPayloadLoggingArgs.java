@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -151,8 +152,12 @@ public final class AppsecAdvancedSettingsAttackPayloadLoggingArgs extends com.pu
         }
 
         public AppsecAdvancedSettingsAttackPayloadLoggingArgs build() {
-            $.attackPayloadLogging = Objects.requireNonNull($.attackPayloadLogging, "expected parameter 'attackPayloadLogging' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.attackPayloadLogging == null) {
+                throw new MissingRequiredPropertyException("AppsecAdvancedSettingsAttackPayloadLoggingArgs", "attackPayloadLogging");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppsecAdvancedSettingsAttackPayloadLoggingArgs", "configId");
+            }
             return $;
         }
     }

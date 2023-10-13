@@ -145,96 +145,115 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorAdaptiveAccelera
 
         @CustomType.Setter
         public Builder abLogic(@Nullable String abLogic) {
+
             this.abLogic = abLogic;
             return this;
         }
         @CustomType.Setter
         public Builder abTesting(@Nullable String abTesting) {
+
             this.abTesting = abTesting;
             return this;
         }
         @CustomType.Setter
         public Builder compression(@Nullable String compression) {
+
             this.compression = compression;
             return this;
         }
         @CustomType.Setter
         public Builder cookieName(@Nullable String cookieName) {
+
             this.cookieName = cookieName;
             return this;
         }
         @CustomType.Setter
         public Builder enableBrotliCompression(@Nullable Boolean enableBrotliCompression) {
+
             this.enableBrotliCompression = enableBrotliCompression;
             return this;
         }
         @CustomType.Setter
         public Builder enableForNoncacheable(@Nullable Boolean enableForNoncacheable) {
+
             this.enableForNoncacheable = enableForNoncacheable;
             return this;
         }
         @CustomType.Setter
         public Builder enablePreconnect(@Nullable Boolean enablePreconnect) {
+
             this.enablePreconnect = enablePreconnect;
             return this;
         }
         @CustomType.Setter
         public Builder enablePush(@Nullable Boolean enablePush) {
+
             this.enablePush = enablePush;
             return this;
         }
         @CustomType.Setter
         public Builder enableRo(@Nullable Boolean enableRo) {
+
             this.enableRo = enableRo;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder preloadEnable(@Nullable Boolean preloadEnable) {
+
             this.preloadEnable = preloadEnable;
             return this;
         }
         @CustomType.Setter
         public Builder source(@Nullable String source) {
+
             this.source = source;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder titleBrotli(@Nullable String titleBrotli) {
+
             this.titleBrotli = titleBrotli;
             return this;
         }
         @CustomType.Setter
         public Builder titleHttp2ServerPush(@Nullable String titleHttp2ServerPush) {
+
             this.titleHttp2ServerPush = titleHttp2ServerPush;
             return this;
         }
         @CustomType.Setter
         public Builder titlePreconnect(@Nullable String titlePreconnect) {
+
             this.titlePreconnect = titlePreconnect;
             return this;
         }
         @CustomType.Setter
         public Builder titlePreload(@Nullable String titlePreload) {
+
             this.titlePreload = titlePreload;
             return this;
         }
         @CustomType.Setter
         public Builder titleRo(@Nullable String titleRo) {
+
             this.titleRo = titleRo;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

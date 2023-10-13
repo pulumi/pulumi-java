@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -67,32 +68,48 @@ public final class DatastreamAzureConnector {
 
         @CustomType.Setter
         public Builder accessKey(String accessKey) {
-            this.accessKey = Objects.requireNonNull(accessKey);
+            if (accessKey == null) {
+              throw new MissingRequiredPropertyException("DatastreamAzureConnector", "accessKey");
+            }
+            this.accessKey = accessKey;
             return this;
         }
         @CustomType.Setter
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            if (accountName == null) {
+              throw new MissingRequiredPropertyException("DatastreamAzureConnector", "accountName");
+            }
+            this.accountName = accountName;
             return this;
         }
         @CustomType.Setter
         public Builder compressLogs(@Nullable Boolean compressLogs) {
+
             this.compressLogs = compressLogs;
             return this;
         }
         @CustomType.Setter
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            if (containerName == null) {
+              throw new MissingRequiredPropertyException("DatastreamAzureConnector", "containerName");
+            }
+            this.containerName = containerName;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("DatastreamAzureConnector", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            if (path == null) {
+              throw new MissingRequiredPropertyException("DatastreamAzureConnector", "path");
+            }
+            this.path = path;
             return this;
         }
         public DatastreamAzureConnector build() {

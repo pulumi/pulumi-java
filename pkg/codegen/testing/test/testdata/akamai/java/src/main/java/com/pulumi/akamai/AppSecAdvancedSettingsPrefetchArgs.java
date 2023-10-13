@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -235,11 +236,21 @@ public final class AppSecAdvancedSettingsPrefetchArgs extends com.pulumi.resourc
         }
 
         public AppSecAdvancedSettingsPrefetchArgs build() {
-            $.allExtensions = Objects.requireNonNull($.allExtensions, "expected parameter 'allExtensions' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.enableAppLayer = Objects.requireNonNull($.enableAppLayer, "expected parameter 'enableAppLayer' to be non-null");
-            $.enableRateControls = Objects.requireNonNull($.enableRateControls, "expected parameter 'enableRateControls' to be non-null");
-            $.extensions = Objects.requireNonNull($.extensions, "expected parameter 'extensions' to be non-null");
+            if ($.allExtensions == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsPrefetchArgs", "allExtensions");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsPrefetchArgs", "configId");
+            }
+            if ($.enableAppLayer == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsPrefetchArgs", "enableAppLayer");
+            }
+            if ($.enableRateControls == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsPrefetchArgs", "enableRateControls");
+            }
+            if ($.extensions == null) {
+                throw new MissingRequiredPropertyException("AppSecAdvancedSettingsPrefetchArgs", "extensions");
+            }
             return $;
         }
     }

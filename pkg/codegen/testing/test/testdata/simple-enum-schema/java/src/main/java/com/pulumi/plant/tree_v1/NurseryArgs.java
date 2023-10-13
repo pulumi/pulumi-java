@@ -5,6 +5,7 @@ package com.pulumi.plant.tree_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import com.pulumi.plant.tree_v1.enums.TreeSize;
 import java.lang.String;
@@ -127,7 +128,9 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public NurseryArgs build() {
-            $.varieties = Objects.requireNonNull($.varieties, "expected parameter 'varieties' to be non-null");
+            if ($.varieties == null) {
+                throw new MissingRequiredPropertyException("NurseryArgs", "varieties");
+            }
             return $;
         }
     }

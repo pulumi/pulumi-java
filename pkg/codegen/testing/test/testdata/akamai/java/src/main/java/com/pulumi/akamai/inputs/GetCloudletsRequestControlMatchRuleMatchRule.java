@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.akamai.inputs.GetCloudletsRequestControlMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -150,8 +151,12 @@ public final class GetCloudletsRequestControlMatchRuleMatchRule extends com.pulu
         }
 
         public GetCloudletsRequestControlMatchRuleMatchRule build() {
-            $.allowDeny = Objects.requireNonNull($.allowDeny, "expected parameter 'allowDeny' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            if ($.allowDeny == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsRequestControlMatchRuleMatchRule", "allowDeny");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsRequestControlMatchRuleMatchRule", "type");
+            }
             return $;
         }
     }

@@ -91,51 +91,61 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorSalesForceCommer
 
         @CustomType.Setter
         public Builder allowOverrideOriginCacheKey(@Nullable Boolean allowOverrideOriginCacheKey) {
+
             this.allowOverrideOriginCacheKey = allowOverrideOriginCacheKey;
             return this;
         }
         @CustomType.Setter
         public Builder connectorId(@Nullable String connectorId) {
+
             this.connectorId = connectorId;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder originHostHeader(@Nullable String originHostHeader) {
+
             this.originHostHeader = originHostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder originType(@Nullable String originType) {
+
             this.originType = originType;
             return this;
         }
         @CustomType.Setter
         public Builder sf3cOriginHost(@Nullable String sf3cOriginHost) {
+
             this.sf3cOriginHost = sf3cOriginHost;
             return this;
         }
         @CustomType.Setter
         public Builder sf3cOriginHostHeader(@Nullable String sf3cOriginHostHeader) {
+
             this.sf3cOriginHostHeader = sf3cOriginHostHeader;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

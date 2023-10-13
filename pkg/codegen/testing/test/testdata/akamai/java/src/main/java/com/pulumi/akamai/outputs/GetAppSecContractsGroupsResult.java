@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -81,37 +82,54 @@ public final class GetAppSecContractsGroupsResult {
 
         @CustomType.Setter
         public Builder contractid(@Nullable String contractid) {
+
             this.contractid = contractid;
             return this;
         }
         @CustomType.Setter
         public Builder defaultContractid(String defaultContractid) {
-            this.defaultContractid = Objects.requireNonNull(defaultContractid);
+            if (defaultContractid == null) {
+              throw new MissingRequiredPropertyException("GetAppSecContractsGroupsResult", "defaultContractid");
+            }
+            this.defaultContractid = defaultContractid;
             return this;
         }
         @CustomType.Setter
         public Builder defaultGroupid(Integer defaultGroupid) {
-            this.defaultGroupid = Objects.requireNonNull(defaultGroupid);
+            if (defaultGroupid == null) {
+              throw new MissingRequiredPropertyException("GetAppSecContractsGroupsResult", "defaultGroupid");
+            }
+            this.defaultGroupid = defaultGroupid;
             return this;
         }
         @CustomType.Setter
         public Builder groupid(@Nullable Integer groupid) {
+
             this.groupid = groupid;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecContractsGroupsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecContractsGroupsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecContractsGroupsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         public GetAppSecContractsGroupsResult build() {

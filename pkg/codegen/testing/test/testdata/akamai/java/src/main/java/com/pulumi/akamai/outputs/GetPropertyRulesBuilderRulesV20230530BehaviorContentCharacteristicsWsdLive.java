@@ -139,91 +139,109 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorContentCharacter
 
         @CustomType.Setter
         public Builder catalogSize(@Nullable String catalogSize) {
+
             this.catalogSize = catalogSize;
             return this;
         }
         @CustomType.Setter
         public Builder contentType(@Nullable String contentType) {
+
             this.contentType = contentType;
             return this;
         }
         @CustomType.Setter
         public Builder dash(@Nullable Boolean dash) {
+
             this.dash = dash;
             return this;
         }
         @CustomType.Setter
         public Builder hds(@Nullable Boolean hds) {
+
             this.hds = hds;
             return this;
         }
         @CustomType.Setter
         public Builder hls(@Nullable Boolean hls) {
+
             this.hls = hls;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder popularityDistribution(@Nullable String popularityDistribution) {
+
             this.popularityDistribution = popularityDistribution;
             return this;
         }
         @CustomType.Setter
         public Builder segmentDurationDash(@Nullable String segmentDurationDash) {
+
             this.segmentDurationDash = segmentDurationDash;
             return this;
         }
         @CustomType.Setter
         public Builder segmentDurationHds(@Nullable String segmentDurationHds) {
+
             this.segmentDurationHds = segmentDurationHds;
             return this;
         }
         @CustomType.Setter
         public Builder segmentDurationHls(@Nullable String segmentDurationHls) {
+
             this.segmentDurationHls = segmentDurationHls;
             return this;
         }
         @CustomType.Setter
         public Builder segmentDurationSmooth(@Nullable String segmentDurationSmooth) {
+
             this.segmentDurationSmooth = segmentDurationSmooth;
             return this;
         }
         @CustomType.Setter
         public Builder segmentSizeDash(@Nullable String segmentSizeDash) {
+
             this.segmentSizeDash = segmentSizeDash;
             return this;
         }
         @CustomType.Setter
         public Builder segmentSizeHds(@Nullable String segmentSizeHds) {
+
             this.segmentSizeHds = segmentSizeHds;
             return this;
         }
         @CustomType.Setter
         public Builder segmentSizeHls(@Nullable String segmentSizeHls) {
+
             this.segmentSizeHls = segmentSizeHls;
             return this;
         }
         @CustomType.Setter
         public Builder segmentSizeSmooth(@Nullable String segmentSizeSmooth) {
+
             this.segmentSizeSmooth = segmentSizeSmooth;
             return this;
         }
         @CustomType.Setter
         public Builder smooth(@Nullable Boolean smooth) {
+
             this.smooth = smooth;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

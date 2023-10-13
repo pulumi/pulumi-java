@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -88,9 +89,15 @@ public final class GetPropertyIncludeParentsArgs extends com.pulumi.resources.In
         }
 
         public GetPropertyIncludeParentsArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.includeId = Objects.requireNonNull($.includeId, "expected parameter 'includeId' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeParentsArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeParentsArgs", "groupId");
+            }
+            if ($.includeId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyIncludeParentsArgs", "includeId");
+            }
             return $;
         }
     }

@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -79,42 +80,64 @@ public final class DatastreamOracleConnector {
 
         @CustomType.Setter
         public Builder accessKey(String accessKey) {
-            this.accessKey = Objects.requireNonNull(accessKey);
+            if (accessKey == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "accessKey");
+            }
+            this.accessKey = accessKey;
             return this;
         }
         @CustomType.Setter
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            if (bucket == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "bucket");
+            }
+            this.bucket = bucket;
             return this;
         }
         @CustomType.Setter
         public Builder compressLogs(@Nullable Boolean compressLogs) {
+
             this.compressLogs = compressLogs;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            if (namespace == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "namespace");
+            }
+            this.namespace = namespace;
             return this;
         }
         @CustomType.Setter
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            if (path == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "path");
+            }
+            this.path = path;
             return this;
         }
         @CustomType.Setter
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            if (region == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "region");
+            }
+            this.region = region;
             return this;
         }
         @CustomType.Setter
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+            if (secretAccessKey == null) {
+              throw new MissingRequiredPropertyException("DatastreamOracleConnector", "secretAccessKey");
+            }
+            this.secretAccessKey = secretAccessKey;
             return this;
         }
         public DatastreamOracleConnector build() {

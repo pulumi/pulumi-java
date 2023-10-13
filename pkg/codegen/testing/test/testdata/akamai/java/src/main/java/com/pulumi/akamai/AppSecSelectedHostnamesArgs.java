@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -160,9 +161,15 @@ public final class AppSecSelectedHostnamesArgs extends com.pulumi.resources.Reso
         }
 
         public AppSecSelectedHostnamesArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.hostnames = Objects.requireNonNull($.hostnames, "expected parameter 'hostnames' to be non-null");
-            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecSelectedHostnamesArgs", "configId");
+            }
+            if ($.hostnames == null) {
+                throw new MissingRequiredPropertyException("AppSecSelectedHostnamesArgs", "hostnames");
+            }
+            if ($.mode == null) {
+                throw new MissingRequiredPropertyException("AppSecSelectedHostnamesArgs", "mode");
+            }
             return $;
         }
     }

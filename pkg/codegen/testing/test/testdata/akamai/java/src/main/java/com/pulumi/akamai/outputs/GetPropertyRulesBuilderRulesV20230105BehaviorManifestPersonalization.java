@@ -121,76 +121,91 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorManifestPersonal
 
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder hlsEnableDebugHeaders(@Nullable Boolean hlsEnableDebugHeaders) {
+
             this.hlsEnableDebugHeaders = hlsEnableDebugHeaders;
             return this;
         }
         @CustomType.Setter
         public Builder hlsEnabled(@Nullable Boolean hlsEnabled) {
+
             this.hlsEnabled = hlsEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder hlsFilterInBitrateRanges(@Nullable String hlsFilterInBitrateRanges) {
+
             this.hlsFilterInBitrateRanges = hlsFilterInBitrateRanges;
             return this;
         }
         @CustomType.Setter
         public Builder hlsFilterInBitrates(@Nullable String hlsFilterInBitrates) {
+
             this.hlsFilterInBitrates = hlsFilterInBitrates;
             return this;
         }
         @CustomType.Setter
         public Builder hlsMode(@Nullable String hlsMode) {
+
             this.hlsMode = hlsMode;
             return this;
         }
         @CustomType.Setter
         public Builder hlsPreferredBitrate(@Nullable String hlsPreferredBitrate) {
+
             this.hlsPreferredBitrate = hlsPreferredBitrate;
             return this;
         }
         @CustomType.Setter
         public Builder hlsQueryParamEnabled(@Nullable Boolean hlsQueryParamEnabled) {
+
             this.hlsQueryParamEnabled = hlsQueryParamEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder hlsQueryParamSecretKey(@Nullable String hlsQueryParamSecretKey) {
+
             this.hlsQueryParamSecretKey = hlsQueryParamSecretKey;
             return this;
         }
         @CustomType.Setter
         public Builder hlsQueryParamTransitionKey(@Nullable String hlsQueryParamTransitionKey) {
+
             this.hlsQueryParamTransitionKey = hlsQueryParamTransitionKey;
             return this;
         }
         @CustomType.Setter
         public Builder hlsShowAdvanced(@Nullable Boolean hlsShowAdvanced) {
+
             this.hlsShowAdvanced = hlsShowAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder hlsTitle(@Nullable String hlsTitle) {
+
             this.hlsTitle = hlsTitle;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

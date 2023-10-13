@@ -4,6 +4,7 @@
 package com.pulumi.akamai.edgedns.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -67,17 +68,26 @@ public final class GetDnsRecordSetResult {
 
         @CustomType.Setter
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            if (host == null) {
+              throw new MissingRequiredPropertyException("GetDnsRecordSetResult", "host");
+            }
+            this.host = host;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetDnsRecordSetResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder rdatas(List<String> rdatas) {
-            this.rdatas = Objects.requireNonNull(rdatas);
+            if (rdatas == null) {
+              throw new MissingRequiredPropertyException("GetDnsRecordSetResult", "rdatas");
+            }
+            this.rdatas = rdatas;
             return this;
         }
         public Builder rdatas(String... rdatas) {
@@ -85,12 +95,18 @@ public final class GetDnsRecordSetResult {
         }
         @CustomType.Setter
         public Builder recordType(String recordType) {
-            this.recordType = Objects.requireNonNull(recordType);
+            if (recordType == null) {
+              throw new MissingRequiredPropertyException("GetDnsRecordSetResult", "recordType");
+            }
+            this.recordType = recordType;
             return this;
         }
         @CustomType.Setter
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            if (zone == null) {
+              throw new MissingRequiredPropertyException("GetDnsRecordSetResult", "zone");
+            }
+            this.zone = zone;
             return this;
         }
         public GetDnsRecordSetResult build() {

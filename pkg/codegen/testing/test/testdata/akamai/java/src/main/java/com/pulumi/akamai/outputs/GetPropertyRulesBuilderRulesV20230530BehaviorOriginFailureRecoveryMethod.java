@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorOriginFailureRec
 
         @CustomType.Setter
         public Builder customStatusCode(@Nullable String customStatusCode) {
+
             this.customStatusCode = customStatusCode;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder recoveryMethod(@Nullable String recoveryMethod) {
+
             this.recoveryMethod = recoveryMethod;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

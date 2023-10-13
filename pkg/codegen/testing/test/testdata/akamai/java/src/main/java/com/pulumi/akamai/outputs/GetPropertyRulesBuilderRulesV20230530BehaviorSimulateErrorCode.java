@@ -61,26 +61,31 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSimulateErrorCod
 
         @CustomType.Setter
         public Builder errorType(@Nullable String errorType) {
+
             this.errorType = errorType;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder timeout(@Nullable String timeout) {
+
             this.timeout = timeout;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

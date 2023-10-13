@@ -85,46 +85,55 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorAkamaizerTag {
 
         @CustomType.Setter
         public Builder includeTagsAttribute(@Nullable Boolean includeTagsAttribute) {
+
             this.includeTagsAttribute = includeTagsAttribute;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder matchHostname(@Nullable String matchHostname) {
+
             this.matchHostname = matchHostname;
             return this;
         }
         @CustomType.Setter
         public Builder replaceAll(@Nullable Boolean replaceAll) {
+
             this.replaceAll = replaceAll;
             return this;
         }
         @CustomType.Setter
         public Builder replacementHostname(@Nullable String replacementHostname) {
+
             this.replacementHostname = replacementHostname;
             return this;
         }
         @CustomType.Setter
         public Builder scope(@Nullable String scope) {
+
             this.scope = scope;
             return this;
         }
         @CustomType.Setter
         public Builder tagsAttribute(@Nullable String tagsAttribute) {
+
             this.tagsAttribute = tagsAttribute;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

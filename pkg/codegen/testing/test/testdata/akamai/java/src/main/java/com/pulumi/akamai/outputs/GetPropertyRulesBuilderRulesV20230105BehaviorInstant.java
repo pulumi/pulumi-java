@@ -80,6 +80,7 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorInstant {
 
         @CustomType.Setter
         public Builder customLinkRelations(@Nullable List<String> customLinkRelations) {
+
             this.customLinkRelations = customLinkRelations;
             return this;
         }
@@ -88,26 +89,31 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorInstant {
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchCacheable(@Nullable Boolean prefetchCacheable) {
+
             this.prefetchCacheable = prefetchCacheable;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchHtml(@Nullable Boolean prefetchHtml) {
+
             this.prefetchHtml = prefetchHtml;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchNoStore(@Nullable Boolean prefetchNoStore) {
+
             this.prefetchNoStore = prefetchNoStore;
             return this;
         }
         @CustomType.Setter
         public Builder prefetchNoStoreExtensions(@Nullable List<String> prefetchNoStoreExtensions) {
+
             this.prefetchNoStoreExtensions = prefetchNoStoreExtensions;
             return this;
         }
@@ -116,11 +122,13 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorInstant {
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

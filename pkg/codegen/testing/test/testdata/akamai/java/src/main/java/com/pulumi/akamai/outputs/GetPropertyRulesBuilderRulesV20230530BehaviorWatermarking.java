@@ -145,96 +145,115 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorWatermarking {
 
         @CustomType.Setter
         public Builder abVariantLocation(@Nullable String abVariantLocation) {
+
             this.abVariantLocation = abVariantLocation;
             return this;
         }
         @CustomType.Setter
         public Builder decryptionPassword1(@Nullable String decryptionPassword1) {
+
             this.decryptionPassword1 = decryptionPassword1;
             return this;
         }
         @CustomType.Setter
         public Builder decryptionPassword2(@Nullable String decryptionPassword2) {
+
             this.decryptionPassword2 = decryptionPassword2;
             return this;
         }
         @CustomType.Setter
         public Builder decryptionPasswordId1(@Nullable String decryptionPasswordId1) {
+
             this.decryptionPasswordId1 = decryptionPasswordId1;
             return this;
         }
         @CustomType.Setter
         public Builder decryptionPasswordId2(@Nullable String decryptionPasswordId2) {
+
             this.decryptionPasswordId2 = decryptionPasswordId2;
             return this;
         }
         @CustomType.Setter
         public Builder enable(@Nullable Boolean enable) {
+
             this.enable = enable;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder miscellaneousSettingsTitle(@Nullable String miscellaneousSettingsTitle) {
+
             this.miscellaneousSettingsTitle = miscellaneousSettingsTitle;
             return this;
         }
         @CustomType.Setter
         public Builder patternDecryptionEnable(@Nullable Boolean patternDecryptionEnable) {
+
             this.patternDecryptionEnable = patternDecryptionEnable;
             return this;
         }
         @CustomType.Setter
         public Builder patternEncryptionTitle(@Nullable String patternEncryptionTitle) {
+
             this.patternEncryptionTitle = patternEncryptionTitle;
             return this;
         }
         @CustomType.Setter
         public Builder signatureVerificationEnable(@Nullable Boolean signatureVerificationEnable) {
+
             this.signatureVerificationEnable = signatureVerificationEnable;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder tokenSigningTitle(@Nullable String tokenSigningTitle) {
+
             this.tokenSigningTitle = tokenSigningTitle;
             return this;
         }
         @CustomType.Setter
         public Builder useOriginalAsA(@Nullable Boolean useOriginalAsA) {
+
             this.useOriginalAsA = useOriginalAsA;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
         @CustomType.Setter
         public Builder verificationKeyId1(@Nullable String verificationKeyId1) {
+
             this.verificationKeyId1 = verificationKeyId1;
             return this;
         }
         @CustomType.Setter
         public Builder verificationKeyId2(@Nullable String verificationKeyId2) {
+
             this.verificationKeyId2 = verificationKeyId2;
             return this;
         }
         @CustomType.Setter
         public Builder verificationPublicKey1(@Nullable String verificationPublicKey1) {
+
             this.verificationPublicKey1 = verificationPublicKey1;
             return this;
         }
         @CustomType.Setter
         public Builder verificationPublicKey2(@Nullable String verificationPublicKey2) {
+
             this.verificationPublicKey2 = verificationPublicKey2;
             return this;
         }

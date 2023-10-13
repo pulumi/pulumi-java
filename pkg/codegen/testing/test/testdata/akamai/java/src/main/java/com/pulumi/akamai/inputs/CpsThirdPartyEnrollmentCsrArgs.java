@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,11 +142,21 @@ public final class CpsThirdPartyEnrollmentCsrArgs extends com.pulumi.resources.R
         }
 
         public CpsThirdPartyEnrollmentCsrArgs build() {
-            $.city = Objects.requireNonNull($.city, "expected parameter 'city' to be non-null");
-            $.countryCode = Objects.requireNonNull($.countryCode, "expected parameter 'countryCode' to be non-null");
-            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
-            $.organizationalUnit = Objects.requireNonNull($.organizationalUnit, "expected parameter 'organizationalUnit' to be non-null");
-            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            if ($.city == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentCsrArgs", "city");
+            }
+            if ($.countryCode == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentCsrArgs", "countryCode");
+            }
+            if ($.organization == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentCsrArgs", "organization");
+            }
+            if ($.organizationalUnit == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentCsrArgs", "organizationalUnit");
+            }
+            if ($.state == null) {
+                throw new MissingRequiredPropertyException("CpsThirdPartyEnrollmentCsrArgs", "state");
+            }
             return $;
         }
     }

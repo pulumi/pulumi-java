@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKey;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -62,6 +63,7 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsCdn {
 
         @CustomType.Setter
         public Builder cdnAuthKeys(@Nullable List<GetCloudwrapperConfigurationMultiCdnSettingsCdnCdnAuthKey> cdnAuthKeys) {
+
             this.cdnAuthKeys = cdnAuthKeys;
             return this;
         }
@@ -70,22 +72,34 @@ public final class GetCloudwrapperConfigurationMultiCdnSettingsCdn {
         }
         @CustomType.Setter
         public Builder cdnCode(String cdnCode) {
-            this.cdnCode = Objects.requireNonNull(cdnCode);
+            if (cdnCode == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "cdnCode");
+            }
+            this.cdnCode = cdnCode;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            if (enabled == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "enabled");
+            }
+            this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder httpsOnly(Boolean httpsOnly) {
-            this.httpsOnly = Objects.requireNonNull(httpsOnly);
+            if (httpsOnly == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "httpsOnly");
+            }
+            this.httpsOnly = httpsOnly;
             return this;
         }
         @CustomType.Setter
         public Builder ipAclCidrs(List<String> ipAclCidrs) {
-            this.ipAclCidrs = Objects.requireNonNull(ipAclCidrs);
+            if (ipAclCidrs == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationMultiCdnSettingsCdn", "ipAclCidrs");
+            }
+            this.ipAclCidrs = ipAclCidrs;
             return this;
         }
         public Builder ipAclCidrs(String... ipAclCidrs) {

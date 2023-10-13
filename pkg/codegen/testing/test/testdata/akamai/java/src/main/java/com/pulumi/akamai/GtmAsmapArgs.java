@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.GtmAsmapAssignmentArgs;
 import com.pulumi.akamai.inputs.GtmAsmapDefaultDatacenterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -132,8 +133,12 @@ public final class GtmAsmapArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public GtmAsmapArgs build() {
-            $.defaultDatacenter = Objects.requireNonNull($.defaultDatacenter, "expected parameter 'defaultDatacenter' to be non-null");
-            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            if ($.defaultDatacenter == null) {
+                throw new MissingRequiredPropertyException("GtmAsmapArgs", "defaultDatacenter");
+            }
+            if ($.domain == null) {
+                throw new MissingRequiredPropertyException("GtmAsmapArgs", "domain");
+            }
             return $;
         }
     }

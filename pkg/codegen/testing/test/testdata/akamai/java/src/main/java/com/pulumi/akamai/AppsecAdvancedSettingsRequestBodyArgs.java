@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -151,8 +152,12 @@ public final class AppsecAdvancedSettingsRequestBodyArgs extends com.pulumi.reso
         }
 
         public AppsecAdvancedSettingsRequestBodyArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.requestBodyInspectionLimit = Objects.requireNonNull($.requestBodyInspectionLimit, "expected parameter 'requestBodyInspectionLimit' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppsecAdvancedSettingsRequestBodyArgs", "configId");
+            }
+            if ($.requestBodyInspectionLimit == null) {
+                throw new MissingRequiredPropertyException("AppsecAdvancedSettingsRequestBodyArgs", "requestBodyInspectionLimit");
+            }
             return $;
         }
     }

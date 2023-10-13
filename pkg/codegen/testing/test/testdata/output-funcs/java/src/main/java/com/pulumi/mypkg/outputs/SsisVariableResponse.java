@@ -130,36 +130,43 @@ public final class SsisVariableResponse {
 
         @CustomType.Setter
         public Builder dataType(@Nullable String dataType) {
+
             this.dataType = dataType;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder sensitive(@Nullable Boolean sensitive) {
+
             this.sensitive = sensitive;
             return this;
         }
         @CustomType.Setter
         public Builder sensitiveValue(@Nullable String sensitiveValue) {
+
             this.sensitiveValue = sensitiveValue;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable String value) {
+
             this.value = value;
             return this;
         }

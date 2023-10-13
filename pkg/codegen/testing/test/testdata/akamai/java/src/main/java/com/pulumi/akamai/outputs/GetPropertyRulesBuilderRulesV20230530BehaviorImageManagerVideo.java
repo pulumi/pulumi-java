@@ -135,86 +135,103 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorImageManagerVide
 
         @CustomType.Setter
         public Builder advanced(@Nullable Boolean advanced) {
+
             this.advanced = advanced;
             return this;
         }
         @CustomType.Setter
         public Builder apiReferenceTitle(@Nullable String apiReferenceTitle) {
+
             this.apiReferenceTitle = apiReferenceTitle;
             return this;
         }
         @CustomType.Setter
         public Builder applyBestFileType(@Nullable Boolean applyBestFileType) {
+
             this.applyBestFileType = applyBestFileType;
             return this;
         }
         @CustomType.Setter
         public Builder cpCodeOriginal(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorImageManagerVideoCpCodeOriginal cpCodeOriginal) {
+
             this.cpCodeOriginal = cpCodeOriginal;
             return this;
         }
         @CustomType.Setter
         public Builder cpCodeTransformed(@Nullable GetPropertyRulesBuilderRulesV20230530BehaviorImageManagerVideoCpCodeTransformed cpCodeTransformed) {
+
             this.cpCodeTransformed = cpCodeTransformed;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder policySet(@Nullable String policySet) {
+
             this.policySet = policySet;
             return this;
         }
         @CustomType.Setter
         public Builder policyToken(@Nullable String policyToken) {
+
             this.policyToken = policyToken;
             return this;
         }
         @CustomType.Setter
         public Builder policyTokenDefault(@Nullable String policyTokenDefault) {
+
             this.policyTokenDefault = policyTokenDefault;
             return this;
         }
         @CustomType.Setter
         public Builder resize(@Nullable Boolean resize) {
+
             this.resize = resize;
             return this;
         }
         @CustomType.Setter
         public Builder settingsTitle(@Nullable String settingsTitle) {
+
             this.settingsTitle = settingsTitle;
             return this;
         }
         @CustomType.Setter
         public Builder superCacheRegion(@Nullable String superCacheRegion) {
+
             this.superCacheRegion = superCacheRegion;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder trafficTitle(@Nullable String trafficTitle) {
+
             this.trafficTitle = trafficTitle;
             return this;
         }
         @CustomType.Setter
         public Builder useExistingPolicySet(@Nullable Boolean useExistingPolicySet) {
+
             this.useExistingPolicySet = useExistingPolicySet;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

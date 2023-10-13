@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudwrapperCapacitiesCapacity;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,6 +62,7 @@ public final class GetCloudwrapperCapacitiesResult {
 
         @CustomType.Setter
         public Builder capacities(@Nullable List<GetCloudwrapperCapacitiesCapacity> capacities) {
+
             this.capacities = capacities;
             return this;
         }
@@ -69,6 +71,7 @@ public final class GetCloudwrapperCapacitiesResult {
         }
         @CustomType.Setter
         public Builder contractIds(@Nullable List<String> contractIds) {
+
             this.contractIds = contractIds;
             return this;
         }
@@ -77,7 +80,10 @@ public final class GetCloudwrapperCapacitiesResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCloudwrapperCapacitiesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetCloudwrapperCapacitiesResult build() {

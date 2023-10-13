@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -1026,9 +1027,15 @@ public final class DnsRecordArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public DnsRecordArgs build() {
-            $.recordtype = Objects.requireNonNull($.recordtype, "expected parameter 'recordtype' to be non-null");
-            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
-            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            if ($.recordtype == null) {
+                throw new MissingRequiredPropertyException("DnsRecordArgs", "recordtype");
+            }
+            if ($.ttl == null) {
+                throw new MissingRequiredPropertyException("DnsRecordArgs", "ttl");
+            }
+            if ($.zone == null) {
+                throw new MissingRequiredPropertyException("DnsRecordArgs", "zone");
+            }
             return $;
         }
     }

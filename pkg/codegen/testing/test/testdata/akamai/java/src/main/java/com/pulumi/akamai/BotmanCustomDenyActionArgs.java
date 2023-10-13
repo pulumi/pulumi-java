@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class BotmanCustomDenyActionArgs extends com.pulumi.resources.Resou
         }
 
         public BotmanCustomDenyActionArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.customDenyAction = Objects.requireNonNull($.customDenyAction, "expected parameter 'customDenyAction' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanCustomDenyActionArgs", "configId");
+            }
+            if ($.customDenyAction == null) {
+                throw new MissingRequiredPropertyException("BotmanCustomDenyActionArgs", "customDenyAction");
+            }
             return $;
         }
     }

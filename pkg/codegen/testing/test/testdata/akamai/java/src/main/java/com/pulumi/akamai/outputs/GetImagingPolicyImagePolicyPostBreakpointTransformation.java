@@ -155,6 +155,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
 
         @CustomType.Setter
         public Builder backgroundColors(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationBackgroundColor> backgroundColors) {
+
             this.backgroundColors = backgroundColors;
             return this;
         }
@@ -163,6 +164,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder blurs(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationBlur> blurs) {
+
             this.blurs = blurs;
             return this;
         }
@@ -171,6 +173,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder chromaKeys(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationChromaKey> chromaKeys) {
+
             this.chromaKeys = chromaKeys;
             return this;
         }
@@ -179,6 +182,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder composites(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationComposite> composites) {
+
             this.composites = composites;
             return this;
         }
@@ -187,6 +191,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder compounds(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationCompound> compounds) {
+
             this.compounds = compounds;
             return this;
         }
@@ -195,6 +200,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder contrasts(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationContrast> contrasts) {
+
             this.contrasts = contrasts;
             return this;
         }
@@ -203,6 +209,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder goops(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationGoop> goops) {
+
             this.goops = goops;
             return this;
         }
@@ -211,6 +218,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder grayscales(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationGrayscale> grayscales) {
+
             this.grayscales = grayscales;
             return this;
         }
@@ -219,6 +227,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder hsls(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationHsl> hsls) {
+
             this.hsls = hsls;
             return this;
         }
@@ -227,6 +236,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder hsvs(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationHsv> hsvs) {
+
             this.hsvs = hsvs;
             return this;
         }
@@ -235,6 +245,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder ifDimensions(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationIfDimension> ifDimensions) {
+
             this.ifDimensions = ifDimensions;
             return this;
         }
@@ -243,6 +254,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder ifOrientations(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationIfOrientation> ifOrientations) {
+
             this.ifOrientations = ifOrientations;
             return this;
         }
@@ -251,6 +263,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder maxColors(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationMaxColor> maxColors) {
+
             this.maxColors = maxColors;
             return this;
         }
@@ -259,6 +272,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder mirrors(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationMirror> mirrors) {
+
             this.mirrors = mirrors;
             return this;
         }
@@ -267,6 +281,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder monoHues(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationMonoHue> monoHues) {
+
             this.monoHues = monoHues;
             return this;
         }
@@ -275,6 +290,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder opacities(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationOpacity> opacities) {
+
             this.opacities = opacities;
             return this;
         }
@@ -283,6 +299,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder removeColors(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationRemoveColor> removeColors) {
+
             this.removeColors = removeColors;
             return this;
         }
@@ -291,6 +308,7 @@ public final class GetImagingPolicyImagePolicyPostBreakpointTransformation {
         }
         @CustomType.Setter
         public Builder unsharpMasks(@Nullable List<GetImagingPolicyImagePolicyPostBreakpointTransformationUnsharpMask> unsharpMasks) {
+
             this.unsharpMasks = unsharpMasks;
             return this;
         }

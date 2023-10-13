@@ -194,136 +194,163 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorSaasDefinitions 
 
         @CustomType.Setter
         public Builder applicationAction(@Nullable String applicationAction) {
+
             this.applicationAction = applicationAction;
             return this;
         }
         @CustomType.Setter
         public Builder applicationCnameEnabled(@Nullable Boolean applicationCnameEnabled) {
+
             this.applicationCnameEnabled = applicationCnameEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder applicationCnameLevel(@Nullable Integer applicationCnameLevel) {
+
             this.applicationCnameLevel = applicationCnameLevel;
             return this;
         }
         @CustomType.Setter
         public Builder applicationCookie(@Nullable String applicationCookie) {
+
             this.applicationCookie = applicationCookie;
             return this;
         }
         @CustomType.Setter
         public Builder applicationQueryString(@Nullable String applicationQueryString) {
+
             this.applicationQueryString = applicationQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder applicationRegex(@Nullable String applicationRegex) {
+
             this.applicationRegex = applicationRegex;
             return this;
         }
         @CustomType.Setter
         public Builder applicationReplace(@Nullable String applicationReplace) {
+
             this.applicationReplace = applicationReplace;
             return this;
         }
         @CustomType.Setter
         public Builder applicationTitle(@Nullable String applicationTitle) {
+
             this.applicationTitle = applicationTitle;
             return this;
         }
         @CustomType.Setter
         public Builder customerAction(@Nullable String customerAction) {
+
             this.customerAction = customerAction;
             return this;
         }
         @CustomType.Setter
         public Builder customerCnameEnabled(@Nullable Boolean customerCnameEnabled) {
+
             this.customerCnameEnabled = customerCnameEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder customerCnameLevel(@Nullable Integer customerCnameLevel) {
+
             this.customerCnameLevel = customerCnameLevel;
             return this;
         }
         @CustomType.Setter
         public Builder customerCookie(@Nullable String customerCookie) {
+
             this.customerCookie = customerCookie;
             return this;
         }
         @CustomType.Setter
         public Builder customerQueryString(@Nullable String customerQueryString) {
+
             this.customerQueryString = customerQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder customerRegex(@Nullable String customerRegex) {
+
             this.customerRegex = customerRegex;
             return this;
         }
         @CustomType.Setter
         public Builder customerReplace(@Nullable String customerReplace) {
+
             this.customerReplace = customerReplace;
             return this;
         }
         @CustomType.Setter
         public Builder customerTitle(@Nullable String customerTitle) {
+
             this.customerTitle = customerTitle;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder usersAction(@Nullable String usersAction) {
+
             this.usersAction = usersAction;
             return this;
         }
         @CustomType.Setter
         public Builder usersCnameEnabled(@Nullable Boolean usersCnameEnabled) {
+
             this.usersCnameEnabled = usersCnameEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder usersCnameLevel(@Nullable Integer usersCnameLevel) {
+
             this.usersCnameLevel = usersCnameLevel;
             return this;
         }
         @CustomType.Setter
         public Builder usersCookie(@Nullable String usersCookie) {
+
             this.usersCookie = usersCookie;
             return this;
         }
         @CustomType.Setter
         public Builder usersQueryString(@Nullable String usersQueryString) {
+
             this.usersQueryString = usersQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder usersRegex(@Nullable String usersRegex) {
+
             this.usersRegex = usersRegex;
             return this;
         }
         @CustomType.Setter
         public Builder usersReplace(@Nullable String usersReplace) {
+
             this.usersReplace = usersReplace;
             return this;
         }
         @CustomType.Setter
         public Builder usersTitle(@Nullable String usersTitle) {
+
             this.usersTitle = usersTitle;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

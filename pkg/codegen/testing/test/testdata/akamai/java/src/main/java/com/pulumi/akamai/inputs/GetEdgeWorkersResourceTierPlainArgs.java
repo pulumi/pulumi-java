@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,8 +63,12 @@ public final class GetEdgeWorkersResourceTierPlainArgs extends com.pulumi.resour
         }
 
         public GetEdgeWorkersResourceTierPlainArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.resourceTierName = Objects.requireNonNull($.resourceTierName, "expected parameter 'resourceTierName' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetEdgeWorkersResourceTierPlainArgs", "contractId");
+            }
+            if ($.resourceTierName == null) {
+                throw new MissingRequiredPropertyException("GetEdgeWorkersResourceTierPlainArgs", "resourceTierName");
+            }
             return $;
         }
     }

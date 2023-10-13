@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -199,8 +200,12 @@ public final class IamRoleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public IamRoleArgs build() {
-            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
-            $.grantedRoles = Objects.requireNonNull($.grantedRoles, "expected parameter 'grantedRoles' to be non-null");
+            if ($.description == null) {
+                throw new MissingRequiredPropertyException("IamRoleArgs", "description");
+            }
+            if ($.grantedRoles == null) {
+                throw new MissingRequiredPropertyException("IamRoleArgs", "grantedRoles");
+            }
             return $;
         }
     }

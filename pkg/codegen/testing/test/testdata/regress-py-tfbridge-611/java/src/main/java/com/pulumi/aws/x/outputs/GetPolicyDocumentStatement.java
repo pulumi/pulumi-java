@@ -36,6 +36,7 @@ public final class GetPolicyDocumentStatement {
 
         @CustomType.Setter
         public Builder actions(@Nullable List<String> actions) {
+
             this.actions = actions;
             return this;
         }

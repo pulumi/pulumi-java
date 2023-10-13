@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCloudletsApiPrioritizationMatchRuleMatchRuleMatch;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -83,21 +84,25 @@ public final class GetCloudletsApiPrioritizationMatchRuleMatchRule {
 
         @CustomType.Setter
         public Builder disabled(@Nullable Boolean disabled) {
+
             this.disabled = disabled;
             return this;
         }
         @CustomType.Setter
         public Builder end(@Nullable Integer end) {
+
             this.end = end;
             return this;
         }
         @CustomType.Setter
         public Builder matchUrl(@Nullable String matchUrl) {
+
             this.matchUrl = matchUrl;
             return this;
         }
         @CustomType.Setter
         public Builder matches(@Nullable List<GetCloudletsApiPrioritizationMatchRuleMatchRuleMatch> matches) {
+
             this.matches = matches;
             return this;
         }
@@ -106,22 +111,30 @@ public final class GetCloudletsApiPrioritizationMatchRuleMatchRule {
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder passThroughPercent(Double passThroughPercent) {
-            this.passThroughPercent = Objects.requireNonNull(passThroughPercent);
+            if (passThroughPercent == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApiPrioritizationMatchRuleMatchRule", "passThroughPercent");
+            }
+            this.passThroughPercent = passThroughPercent;
             return this;
         }
         @CustomType.Setter
         public Builder start(@Nullable Integer start) {
+
             this.start = start;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApiPrioritizationMatchRuleMatchRule", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetCloudletsApiPrioritizationMatchRuleMatchRule build() {

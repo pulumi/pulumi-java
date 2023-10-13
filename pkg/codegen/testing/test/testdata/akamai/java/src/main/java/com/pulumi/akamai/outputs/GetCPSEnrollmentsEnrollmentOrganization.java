@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,42 +77,66 @@ public final class GetCPSEnrollmentsEnrollmentOrganization {
 
         @CustomType.Setter
         public Builder addressLineOne(String addressLineOne) {
-            this.addressLineOne = Objects.requireNonNull(addressLineOne);
+            if (addressLineOne == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "addressLineOne");
+            }
+            this.addressLineOne = addressLineOne;
             return this;
         }
         @CustomType.Setter
         public Builder addressLineTwo(String addressLineTwo) {
-            this.addressLineTwo = Objects.requireNonNull(addressLineTwo);
+            if (addressLineTwo == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "addressLineTwo");
+            }
+            this.addressLineTwo = addressLineTwo;
             return this;
         }
         @CustomType.Setter
         public Builder city(String city) {
-            this.city = Objects.requireNonNull(city);
+            if (city == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "city");
+            }
+            this.city = city;
             return this;
         }
         @CustomType.Setter
         public Builder countryCode(String countryCode) {
-            this.countryCode = Objects.requireNonNull(countryCode);
+            if (countryCode == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "countryCode");
+            }
+            this.countryCode = countryCode;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder phone(String phone) {
-            this.phone = Objects.requireNonNull(phone);
+            if (phone == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "phone");
+            }
+            this.phone = phone;
             return this;
         }
         @CustomType.Setter
         public Builder postalCode(String postalCode) {
-            this.postalCode = Objects.requireNonNull(postalCode);
+            if (postalCode == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "postalCode");
+            }
+            this.postalCode = postalCode;
             return this;
         }
         @CustomType.Setter
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            if (region == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentsEnrollmentOrganization", "region");
+            }
+            this.region = region;
             return this;
         }
         public GetCPSEnrollmentsEnrollmentOrganization build() {

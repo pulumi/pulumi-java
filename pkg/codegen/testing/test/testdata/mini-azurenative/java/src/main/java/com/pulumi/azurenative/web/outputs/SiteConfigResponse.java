@@ -44,6 +44,7 @@ public final class SiteConfigResponse {
 
         @CustomType.Setter
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
+
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }

@@ -43,11 +43,13 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorLimitBitRateThre
 
         @CustomType.Setter
         public Builder thresholdUnit(@Nullable String thresholdUnit) {
+
             this.thresholdUnit = thresholdUnit;
             return this;
         }
         @CustomType.Setter
         public Builder thresholdValue(@Nullable Integer thresholdValue) {
+
             this.thresholdValue = thresholdValue;
             return this;
         }

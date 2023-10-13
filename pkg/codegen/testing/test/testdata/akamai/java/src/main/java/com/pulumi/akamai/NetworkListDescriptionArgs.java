@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,8 +91,12 @@ public final class NetworkListDescriptionArgs extends com.pulumi.resources.Resou
         }
 
         public NetworkListDescriptionArgs build() {
-            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
-            $.networkListId = Objects.requireNonNull($.networkListId, "expected parameter 'networkListId' to be non-null");
+            if ($.description == null) {
+                throw new MissingRequiredPropertyException("NetworkListDescriptionArgs", "description");
+            }
+            if ($.networkListId == null) {
+                throw new MissingRequiredPropertyException("NetworkListDescriptionArgs", "networkListId");
+            }
             return $;
         }
     }

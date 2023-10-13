@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -83,47 +84,74 @@ public final class GetPropertyIncludeResult {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder includeId(String includeId) {
-            this.includeId = Objects.requireNonNull(includeId);
+            if (includeId == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "includeId");
+            }
+            this.includeId = includeId;
             return this;
         }
         @CustomType.Setter
         public Builder latestVersion(Integer latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            if (latestVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "latestVersion");
+            }
+            this.latestVersion = latestVersion;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder productionVersion(Integer productionVersion) {
-            this.productionVersion = Objects.requireNonNull(productionVersion);
+            if (productionVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "productionVersion");
+            }
+            this.productionVersion = productionVersion;
             return this;
         }
         @CustomType.Setter
         public Builder stagingVersion(Integer stagingVersion) {
-            this.stagingVersion = Objects.requireNonNull(stagingVersion);
+            if (stagingVersion == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "stagingVersion");
+            }
+            this.stagingVersion = stagingVersion;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetPropertyIncludeResult", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetPropertyIncludeResult build() {

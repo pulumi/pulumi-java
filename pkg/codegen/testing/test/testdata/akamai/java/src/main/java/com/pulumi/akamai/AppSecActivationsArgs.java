@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -236,9 +237,15 @@ public final class AppSecActivationsArgs extends com.pulumi.resources.ResourceAr
         }
 
         public AppSecActivationsArgs build() {
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
-            $.notificationEmails = Objects.requireNonNull($.notificationEmails, "expected parameter 'notificationEmails' to be non-null");
-            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("AppSecActivationsArgs", "configId");
+            }
+            if ($.notificationEmails == null) {
+                throw new MissingRequiredPropertyException("AppSecActivationsArgs", "notificationEmails");
+            }
+            if ($.version == null) {
+                throw new MissingRequiredPropertyException("AppSecActivationsArgs", "version");
+            }
             return $;
         }
     }

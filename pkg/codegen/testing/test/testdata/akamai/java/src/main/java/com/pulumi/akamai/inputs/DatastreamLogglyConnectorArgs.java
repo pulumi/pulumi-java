@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -158,9 +159,15 @@ public final class DatastreamLogglyConnectorArgs extends com.pulumi.resources.Re
         }
 
         public DatastreamLogglyConnectorArgs build() {
-            $.authToken = Objects.requireNonNull($.authToken, "expected parameter 'authToken' to be non-null");
-            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
-            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            if ($.authToken == null) {
+                throw new MissingRequiredPropertyException("DatastreamLogglyConnectorArgs", "authToken");
+            }
+            if ($.displayName == null) {
+                throw new MissingRequiredPropertyException("DatastreamLogglyConnectorArgs", "displayName");
+            }
+            if ($.endpoint == null) {
+                throw new MissingRequiredPropertyException("DatastreamLogglyConnectorArgs", "endpoint");
+            }
             return $;
         }
     }

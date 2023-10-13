@@ -6,6 +6,7 @@ package com.pulumi.akamai.inputs;
 import com.pulumi.akamai.inputs.GetImagingPolicyImagePolicyTransformationAppendImageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -159,7 +160,9 @@ public final class GetImagingPolicyImagePolicyTransformationAppendArgs extends c
         }
 
         public GetImagingPolicyImagePolicyTransformationAppendArgs build() {
-            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            if ($.image == null) {
+                throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationAppendArgs", "image");
+            }
             return $;
         }
     }

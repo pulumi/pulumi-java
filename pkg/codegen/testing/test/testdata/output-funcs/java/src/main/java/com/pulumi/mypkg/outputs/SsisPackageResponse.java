@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.outputs.SsisParameterResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -147,26 +148,31 @@ public final class SsisPackageResponse {
 
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder folderId(@Nullable Double folderId) {
+
             this.folderId = folderId;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
+
             this.parameters = parameters;
             return this;
         }
@@ -175,17 +181,22 @@ public final class SsisPackageResponse {
         }
         @CustomType.Setter
         public Builder projectId(@Nullable Double projectId) {
+
             this.projectId = projectId;
             return this;
         }
         @CustomType.Setter
         public Builder projectVersion(@Nullable Double projectVersion) {
+
             this.projectVersion = projectVersion;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("SsisPackageResponse", "type");
+            }
+            this.type = type;
             return this;
         }
         public SsisPackageResponse build() {

@@ -6,6 +6,7 @@ package com.pulumi.akamai.outputs;
 import com.pulumi.akamai.outputs.GetCloudletsApplicationLoadBalancerDataCenter;
 import com.pulumi.akamai.outputs.GetCloudletsApplicationLoadBalancerLivenessSetting;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -133,22 +134,34 @@ public final class GetCloudletsApplicationLoadBalancerResult {
 
         @CustomType.Setter
         public Builder balancingType(String balancingType) {
-            this.balancingType = Objects.requireNonNull(balancingType);
+            if (balancingType == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "balancingType");
+            }
+            this.balancingType = balancingType;
             return this;
         }
         @CustomType.Setter
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            if (createdBy == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "createdBy");
+            }
+            this.createdBy = createdBy;
             return this;
         }
         @CustomType.Setter
         public Builder createdDate(String createdDate) {
-            this.createdDate = Objects.requireNonNull(createdDate);
+            if (createdDate == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "createdDate");
+            }
+            this.createdDate = createdDate;
             return this;
         }
         @CustomType.Setter
         public Builder dataCenters(List<GetCloudletsApplicationLoadBalancerDataCenter> dataCenters) {
-            this.dataCenters = Objects.requireNonNull(dataCenters);
+            if (dataCenters == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "dataCenters");
+            }
+            this.dataCenters = dataCenters;
             return this;
         }
         public Builder dataCenters(GetCloudletsApplicationLoadBalancerDataCenter... dataCenters) {
@@ -156,37 +169,58 @@ public final class GetCloudletsApplicationLoadBalancerResult {
         }
         @CustomType.Setter
         public Builder deleted(Boolean deleted) {
-            this.deleted = Objects.requireNonNull(deleted);
+            if (deleted == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "deleted");
+            }
+            this.deleted = deleted;
             return this;
         }
         @CustomType.Setter
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            if (description == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "description");
+            }
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder immutable(Boolean immutable) {
-            this.immutable = Objects.requireNonNull(immutable);
+            if (immutable == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "immutable");
+            }
+            this.immutable = immutable;
             return this;
         }
         @CustomType.Setter
         public Builder lastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+            if (lastModifiedBy == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "lastModifiedBy");
+            }
+            this.lastModifiedBy = lastModifiedBy;
             return this;
         }
         @CustomType.Setter
         public Builder lastModifiedDate(String lastModifiedDate) {
-            this.lastModifiedDate = Objects.requireNonNull(lastModifiedDate);
+            if (lastModifiedDate == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "lastModifiedDate");
+            }
+            this.lastModifiedDate = lastModifiedDate;
             return this;
         }
         @CustomType.Setter
         public Builder livenessSettings(List<GetCloudletsApplicationLoadBalancerLivenessSetting> livenessSettings) {
-            this.livenessSettings = Objects.requireNonNull(livenessSettings);
+            if (livenessSettings == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "livenessSettings");
+            }
+            this.livenessSettings = livenessSettings;
             return this;
         }
         public Builder livenessSettings(GetCloudletsApplicationLoadBalancerLivenessSetting... livenessSettings) {
@@ -194,22 +228,32 @@ public final class GetCloudletsApplicationLoadBalancerResult {
         }
         @CustomType.Setter
         public Builder originId(String originId) {
-            this.originId = Objects.requireNonNull(originId);
+            if (originId == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "originId");
+            }
+            this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "type");
+            }
+            this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder version(@Nullable Integer version) {
+
             this.version = version;
             return this;
         }
         @CustomType.Setter
         public Builder warnings(String warnings) {
-            this.warnings = Objects.requireNonNull(warnings);
+            if (warnings == null) {
+              throw new MissingRequiredPropertyException("GetCloudletsApplicationLoadBalancerResult", "warnings");
+            }
+            this.warnings = warnings;
             return this;
         }
         public GetCloudletsApplicationLoadBalancerResult build() {

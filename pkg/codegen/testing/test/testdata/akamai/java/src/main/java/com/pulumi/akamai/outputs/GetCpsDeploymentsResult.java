@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -85,42 +86,66 @@ public final class GetCpsDeploymentsResult {
 
         @CustomType.Setter
         public Builder autoRenewalStartTime(String autoRenewalStartTime) {
-            this.autoRenewalStartTime = Objects.requireNonNull(autoRenewalStartTime);
+            if (autoRenewalStartTime == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "autoRenewalStartTime");
+            }
+            this.autoRenewalStartTime = autoRenewalStartTime;
             return this;
         }
         @CustomType.Setter
         public Builder enrollmentId(Integer enrollmentId) {
-            this.enrollmentId = Objects.requireNonNull(enrollmentId);
+            if (enrollmentId == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "enrollmentId");
+            }
+            this.enrollmentId = enrollmentId;
             return this;
         }
         @CustomType.Setter
         public Builder expiryDate(String expiryDate) {
-            this.expiryDate = Objects.requireNonNull(expiryDate);
+            if (expiryDate == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "expiryDate");
+            }
+            this.expiryDate = expiryDate;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder productionCertificateEcdsa(String productionCertificateEcdsa) {
-            this.productionCertificateEcdsa = Objects.requireNonNull(productionCertificateEcdsa);
+            if (productionCertificateEcdsa == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "productionCertificateEcdsa");
+            }
+            this.productionCertificateEcdsa = productionCertificateEcdsa;
             return this;
         }
         @CustomType.Setter
         public Builder productionCertificateRsa(String productionCertificateRsa) {
-            this.productionCertificateRsa = Objects.requireNonNull(productionCertificateRsa);
+            if (productionCertificateRsa == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "productionCertificateRsa");
+            }
+            this.productionCertificateRsa = productionCertificateRsa;
             return this;
         }
         @CustomType.Setter
         public Builder stagingCertificateEcdsa(String stagingCertificateEcdsa) {
-            this.stagingCertificateEcdsa = Objects.requireNonNull(stagingCertificateEcdsa);
+            if (stagingCertificateEcdsa == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "stagingCertificateEcdsa");
+            }
+            this.stagingCertificateEcdsa = stagingCertificateEcdsa;
             return this;
         }
         @CustomType.Setter
         public Builder stagingCertificateRsa(String stagingCertificateRsa) {
-            this.stagingCertificateRsa = Objects.requireNonNull(stagingCertificateRsa);
+            if (stagingCertificateRsa == null) {
+              throw new MissingRequiredPropertyException("GetCpsDeploymentsResult", "stagingCertificateRsa");
+            }
+            this.stagingCertificateRsa = stagingCertificateRsa;
             return this;
         }
         public GetCpsDeploymentsResult build() {

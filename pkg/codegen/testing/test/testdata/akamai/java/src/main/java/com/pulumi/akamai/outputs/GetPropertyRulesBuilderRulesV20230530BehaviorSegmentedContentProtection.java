@@ -177,36 +177,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSegmentedContent
 
         @CustomType.Setter
         public Builder acl(@Nullable Boolean acl) {
+
             this.acl = acl;
             return this;
         }
         @CustomType.Setter
         public Builder dashMediaEncryption(@Nullable Boolean dashMediaEncryption) {
+
             this.dashMediaEncryption = dashMediaEncryption;
             return this;
         }
         @CustomType.Setter
         public Builder dataPayload(@Nullable Boolean dataPayload) {
+
             this.dataPayload = dataPayload;
             return this;
         }
         @CustomType.Setter
         public Builder enableTokenInUri(@Nullable Boolean enableTokenInUri) {
+
             this.enableTokenInUri = enableTokenInUri;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder fieldCarryOver(@Nullable String fieldCarryOver) {
+
             this.fieldCarryOver = fieldCarryOver;
             return this;
         }
         @CustomType.Setter
         public Builder headerForSalts(@Nullable List<String> headerForSalts) {
+
             this.headerForSalts = headerForSalts;
             return this;
         }
@@ -215,6 +222,7 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSegmentedContent
         }
         @CustomType.Setter
         public Builder hlsMasterManifestFiles(@Nullable List<String> hlsMasterManifestFiles) {
+
             this.hlsMasterManifestFiles = hlsMasterManifestFiles;
             return this;
         }
@@ -223,81 +231,97 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSegmentedContent
         }
         @CustomType.Setter
         public Builder hlsMediaEncryption(@Nullable Boolean hlsMediaEncryption) {
+
             this.hlsMediaEncryption = hlsMediaEncryption;
             return this;
         }
         @CustomType.Setter
         public Builder ip(@Nullable Boolean ip) {
+
             this.ip = ip;
             return this;
         }
         @CustomType.Setter
         public Builder key(@Nullable String key) {
+
             this.key = key;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder mediaEncryptionTitle(@Nullable String mediaEncryptionTitle) {
+
             this.mediaEncryptionTitle = mediaEncryptionTitle;
             return this;
         }
         @CustomType.Setter
         public Builder revokedListId(@Nullable Integer revokedListId) {
+
             this.revokedListId = revokedListId;
             return this;
         }
         @CustomType.Setter
         public Builder salt(@Nullable String salt) {
+
             this.salt = salt;
             return this;
         }
         @CustomType.Setter
         public Builder sessionId(@Nullable Boolean sessionId) {
+
             this.sessionId = sessionId;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder tokenAuthHlsTitle(@Nullable String tokenAuthHlsTitle) {
+
             this.tokenAuthHlsTitle = tokenAuthHlsTitle;
             return this;
         }
         @CustomType.Setter
         public Builder tokenAuthenticationTitle(@Nullable String tokenAuthenticationTitle) {
+
             this.tokenAuthenticationTitle = tokenAuthenticationTitle;
             return this;
         }
         @CustomType.Setter
         public Builder tokenRevocationEnabled(@Nullable Boolean tokenRevocationEnabled) {
+
             this.tokenRevocationEnabled = tokenRevocationEnabled;
             return this;
         }
         @CustomType.Setter
         public Builder tokenRevocationTitle(@Nullable String tokenRevocationTitle) {
+
             this.tokenRevocationTitle = tokenRevocationTitle;
             return this;
         }
         @CustomType.Setter
         public Builder transitionKey(@Nullable String transitionKey) {
+
             this.transitionKey = transitionKey;
             return this;
         }
         @CustomType.Setter
         public Builder useAdvanced(@Nullable Boolean useAdvanced) {
+
             this.useAdvanced = useAdvanced;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

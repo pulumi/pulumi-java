@@ -43,11 +43,13 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorLimitBitRateBitr
 
         @CustomType.Setter
         public Builder bitrateUnit(@Nullable String bitrateUnit) {
+
             this.bitrateUnit = bitrateUnit;
             return this;
         }
         @CustomType.Setter
         public Builder bitrateValue(@Nullable Double bitrateValue) {
+
             this.bitrateValue = bitrateValue;
             return this;
         }

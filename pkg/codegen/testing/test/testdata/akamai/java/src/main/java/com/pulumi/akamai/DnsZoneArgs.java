@@ -6,6 +6,7 @@ package com.pulumi.akamai;
 import com.pulumi.akamai.inputs.DnsZoneTsigKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -233,9 +234,15 @@ public final class DnsZoneArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public DnsZoneArgs build() {
-            $.contract = Objects.requireNonNull($.contract, "expected parameter 'contract' to be non-null");
-            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
-            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            if ($.contract == null) {
+                throw new MissingRequiredPropertyException("DnsZoneArgs", "contract");
+            }
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("DnsZoneArgs", "type");
+            }
+            if ($.zone == null) {
+                throw new MissingRequiredPropertyException("DnsZoneArgs", "zone");
+            }
             return $;
         }
     }

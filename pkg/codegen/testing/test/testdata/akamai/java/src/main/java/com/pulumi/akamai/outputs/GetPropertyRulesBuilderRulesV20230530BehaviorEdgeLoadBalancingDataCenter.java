@@ -99,21 +99,25 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancin
 
         @CustomType.Setter
         public Builder cookieName(@Nullable String cookieName) {
+
             this.cookieName = cookieName;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder enableFailover(@Nullable Boolean enableFailover) {
+
             this.enableFailover = enableFailover;
             return this;
         }
         @CustomType.Setter
         public Builder failoverRules(@Nullable List<GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancingDataCenterFailoverRule> failoverRules) {
+
             this.failoverRules = failoverRules;
             return this;
         }
@@ -122,36 +126,43 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorEdgeLoadBalancin
         }
         @CustomType.Setter
         public Builder failoverTitle(@Nullable String failoverTitle) {
+
             this.failoverTitle = failoverTitle;
             return this;
         }
         @CustomType.Setter
         public Builder hostname(@Nullable String hostname) {
+
             this.hostname = hostname;
             return this;
         }
         @CustomType.Setter
         public Builder ip(@Nullable String ip) {
+
             this.ip = ip;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder originId(@Nullable String originId) {
+
             this.originId = originId;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

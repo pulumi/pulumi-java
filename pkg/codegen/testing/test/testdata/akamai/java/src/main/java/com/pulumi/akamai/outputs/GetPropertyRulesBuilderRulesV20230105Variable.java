@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -59,27 +60,42 @@ public final class GetPropertyRulesBuilderRulesV20230105Variable {
 
         @CustomType.Setter
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            if (description == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "description");
+            }
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder hidden(Boolean hidden) {
-            this.hidden = Objects.requireNonNull(hidden);
+            if (hidden == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "hidden");
+            }
+            this.hidden = hidden;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder sensitive(Boolean sensitive) {
-            this.sensitive = Objects.requireNonNull(sensitive);
+            if (sensitive == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "sensitive");
+            }
+            this.sensitive = sensitive;
             return this;
         }
         @CustomType.Setter
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            if (value == null) {
+              throw new MissingRequiredPropertyException("GetPropertyRulesBuilderRulesV20230105Variable", "value");
+            }
+            this.value = value;
             return this;
         }
         public GetPropertyRulesBuilderRulesV20230105Variable build() {

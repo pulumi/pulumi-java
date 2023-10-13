@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,12 +42,18 @@ public final class GetDatastreamsStreamsDetailProperty {
 
         @CustomType.Setter
         public Builder propertyId(Integer propertyId) {
-            this.propertyId = Objects.requireNonNull(propertyId);
+            if (propertyId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetailProperty", "propertyId");
+            }
+            this.propertyId = propertyId;
             return this;
         }
         @CustomType.Setter
         public Builder propertyName(String propertyName) {
-            this.propertyName = Objects.requireNonNull(propertyName);
+            if (propertyName == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetailProperty", "propertyName");
+            }
+            this.propertyName = propertyName;
             return this;
         }
         public GetDatastreamsStreamsDetailProperty build() {

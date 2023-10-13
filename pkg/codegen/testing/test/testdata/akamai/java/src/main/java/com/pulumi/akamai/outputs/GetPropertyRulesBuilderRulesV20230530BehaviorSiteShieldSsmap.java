@@ -67,31 +67,37 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorSiteShieldSsmap 
 
         @CustomType.Setter
         public Builder chinaCdnMap(@Nullable String chinaCdnMap) {
+
             this.chinaCdnMap = chinaCdnMap;
             return this;
         }
         @CustomType.Setter
         public Builder hasMixedHosts(@Nullable Boolean hasMixedHosts) {
+
             this.hasMixedHosts = hasMixedHosts;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder src(@Nullable String src) {
+
             this.src = src;
             return this;
         }
         @CustomType.Setter
         public Builder srmap(@Nullable String srmap) {
+
             this.srmap = srmap;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable String value) {
+
             this.value = value;
             return this;
         }

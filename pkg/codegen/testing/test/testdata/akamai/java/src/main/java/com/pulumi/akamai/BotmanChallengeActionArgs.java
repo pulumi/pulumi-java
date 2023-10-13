@@ -5,6 +5,7 @@ package com.pulumi.akamai;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class BotmanChallengeActionArgs extends com.pulumi.resources.Resour
         }
 
         public BotmanChallengeActionArgs build() {
-            $.challengeAction = Objects.requireNonNull($.challengeAction, "expected parameter 'challengeAction' to be non-null");
-            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            if ($.challengeAction == null) {
+                throw new MissingRequiredPropertyException("BotmanChallengeActionArgs", "challengeAction");
+            }
+            if ($.configId == null) {
+                throw new MissingRequiredPropertyException("BotmanChallengeActionArgs", "configId");
+            }
             return $;
         }
     }

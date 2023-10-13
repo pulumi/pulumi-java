@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,9 +76,15 @@ public final class GetPropertyHostnamesPlainArgs extends com.pulumi.resources.In
         }
 
         public GetPropertyHostnamesPlainArgs build() {
-            $.contractId = Objects.requireNonNull($.contractId, "expected parameter 'contractId' to be non-null");
-            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
-            $.propertyId = Objects.requireNonNull($.propertyId, "expected parameter 'propertyId' to be non-null");
+            if ($.contractId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyHostnamesPlainArgs", "contractId");
+            }
+            if ($.groupId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyHostnamesPlainArgs", "groupId");
+            }
+            if ($.propertyId == null) {
+                throw new MissingRequiredPropertyException("GetPropertyHostnamesPlainArgs", "propertyId");
+            }
             return $;
         }
     }

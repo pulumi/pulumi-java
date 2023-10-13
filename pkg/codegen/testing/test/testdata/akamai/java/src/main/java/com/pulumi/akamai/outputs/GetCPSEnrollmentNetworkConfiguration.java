@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetCPSEnrollmentNetworkConfigurationClientMutualAuthentication;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -79,7 +80,10 @@ public final class GetCPSEnrollmentNetworkConfiguration {
 
         @CustomType.Setter
         public Builder clientMutualAuthentications(List<GetCPSEnrollmentNetworkConfigurationClientMutualAuthentication> clientMutualAuthentications) {
-            this.clientMutualAuthentications = Objects.requireNonNull(clientMutualAuthentications);
+            if (clientMutualAuthentications == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "clientMutualAuthentications");
+            }
+            this.clientMutualAuthentications = clientMutualAuthentications;
             return this;
         }
         public Builder clientMutualAuthentications(GetCPSEnrollmentNetworkConfigurationClientMutualAuthentication... clientMutualAuthentications) {
@@ -87,12 +91,18 @@ public final class GetCPSEnrollmentNetworkConfiguration {
         }
         @CustomType.Setter
         public Builder cloneDnsNames(Boolean cloneDnsNames) {
-            this.cloneDnsNames = Objects.requireNonNull(cloneDnsNames);
+            if (cloneDnsNames == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "cloneDnsNames");
+            }
+            this.cloneDnsNames = cloneDnsNames;
             return this;
         }
         @CustomType.Setter
         public Builder disallowedTlsVersions(List<String> disallowedTlsVersions) {
-            this.disallowedTlsVersions = Objects.requireNonNull(disallowedTlsVersions);
+            if (disallowedTlsVersions == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "disallowedTlsVersions");
+            }
+            this.disallowedTlsVersions = disallowedTlsVersions;
             return this;
         }
         public Builder disallowedTlsVersions(String... disallowedTlsVersions) {
@@ -100,27 +110,42 @@ public final class GetCPSEnrollmentNetworkConfiguration {
         }
         @CustomType.Setter
         public Builder geography(String geography) {
-            this.geography = Objects.requireNonNull(geography);
+            if (geography == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "geography");
+            }
+            this.geography = geography;
             return this;
         }
         @CustomType.Setter
         public Builder mustHaveCiphers(String mustHaveCiphers) {
-            this.mustHaveCiphers = Objects.requireNonNull(mustHaveCiphers);
+            if (mustHaveCiphers == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "mustHaveCiphers");
+            }
+            this.mustHaveCiphers = mustHaveCiphers;
             return this;
         }
         @CustomType.Setter
         public Builder ocspStapling(String ocspStapling) {
-            this.ocspStapling = Objects.requireNonNull(ocspStapling);
+            if (ocspStapling == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "ocspStapling");
+            }
+            this.ocspStapling = ocspStapling;
             return this;
         }
         @CustomType.Setter
         public Builder preferredCiphers(String preferredCiphers) {
-            this.preferredCiphers = Objects.requireNonNull(preferredCiphers);
+            if (preferredCiphers == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "preferredCiphers");
+            }
+            this.preferredCiphers = preferredCiphers;
             return this;
         }
         @CustomType.Setter
         public Builder quicEnabled(Boolean quicEnabled) {
-            this.quicEnabled = Objects.requireNonNull(quicEnabled);
+            if (quicEnabled == null) {
+              throw new MissingRequiredPropertyException("GetCPSEnrollmentNetworkConfiguration", "quicEnabled");
+            }
+            this.quicEnabled = quicEnabled;
             return this;
         }
         public GetCPSEnrollmentNetworkConfiguration build() {

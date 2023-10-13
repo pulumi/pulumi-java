@@ -98,11 +98,13 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorBossBeaconing {
 
         @CustomType.Setter
         public Builder conditionalErrorPattern(@Nullable String conditionalErrorPattern) {
+
             this.conditionalErrorPattern = conditionalErrorPattern;
             return this;
         }
         @CustomType.Setter
         public Builder conditionalHttpStatuses(@Nullable List<String> conditionalHttpStatuses) {
+
             this.conditionalHttpStatuses = conditionalHttpStatuses;
             return this;
         }
@@ -111,46 +113,55 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorBossBeaconing {
         }
         @CustomType.Setter
         public Builder conditionalSamplingFrequency(@Nullable String conditionalSamplingFrequency) {
+
             this.conditionalSamplingFrequency = conditionalSamplingFrequency;
             return this;
         }
         @CustomType.Setter
         public Builder cpcodes(@Nullable String cpcodes) {
+
             this.cpcodes = cpcodes;
             return this;
         }
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder forwardType(@Nullable String forwardType) {
+
             this.forwardType = forwardType;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder requestType(@Nullable String requestType) {
+
             this.requestType = requestType;
             return this;
         }
         @CustomType.Setter
         public Builder samplingFrequency(@Nullable String samplingFrequency) {
+
             this.samplingFrequency = samplingFrequency;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

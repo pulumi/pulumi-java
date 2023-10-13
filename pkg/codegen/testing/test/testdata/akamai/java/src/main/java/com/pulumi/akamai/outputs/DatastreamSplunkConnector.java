@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -97,56 +98,73 @@ public final class DatastreamSplunkConnector {
 
         @CustomType.Setter
         public Builder caCert(@Nullable String caCert) {
+
             this.caCert = caCert;
             return this;
         }
         @CustomType.Setter
         public Builder clientCert(@Nullable String clientCert) {
+
             this.clientCert = clientCert;
             return this;
         }
         @CustomType.Setter
         public Builder clientKey(@Nullable String clientKey) {
+
             this.clientKey = clientKey;
             return this;
         }
         @CustomType.Setter
         public Builder compressLogs(@Nullable Boolean compressLogs) {
+
             this.compressLogs = compressLogs;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderName(@Nullable String customHeaderName) {
+
             this.customHeaderName = customHeaderName;
             return this;
         }
         @CustomType.Setter
         public Builder customHeaderValue(@Nullable String customHeaderValue) {
+
             this.customHeaderValue = customHeaderValue;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("DatastreamSplunkConnector", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            if (endpoint == null) {
+              throw new MissingRequiredPropertyException("DatastreamSplunkConnector", "endpoint");
+            }
+            this.endpoint = endpoint;
             return this;
         }
         @CustomType.Setter
         public Builder eventCollectorToken(String eventCollectorToken) {
-            this.eventCollectorToken = Objects.requireNonNull(eventCollectorToken);
+            if (eventCollectorToken == null) {
+              throw new MissingRequiredPropertyException("DatastreamSplunkConnector", "eventCollectorToken");
+            }
+            this.eventCollectorToken = eventCollectorToken;
             return this;
         }
         @CustomType.Setter
         public Builder mTls(@Nullable Boolean mTls) {
+
             this.mTls = mTls;
             return this;
         }
         @CustomType.Setter
         public Builder tlsHostname(@Nullable String tlsHostname) {
+
             this.tlsHostname = tlsHostname;
             return this;
         }

@@ -58,6 +58,7 @@ public final class IgnoreTags {
 
         @CustomType.Setter
         public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
+
             this.keyPrefixes = keyPrefixes;
             return this;
         }
@@ -66,6 +67,7 @@ public final class IgnoreTags {
         }
         @CustomType.Setter
         public Builder keys(@Nullable List<String> keys) {
+
             this.keys = keys;
             return this;
         }

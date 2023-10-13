@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +42,10 @@ public final class GetImagingPolicyImagePolicyTransformationImQuery {
 
         @CustomType.Setter
         public Builder allowedTransformations(List<String> allowedTransformations) {
-            this.allowedTransformations = Objects.requireNonNull(allowedTransformations);
+            if (allowedTransformations == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationImQuery", "allowedTransformations");
+            }
+            this.allowedTransformations = allowedTransformations;
             return this;
         }
         public Builder allowedTransformations(String... allowedTransformations) {
@@ -49,7 +53,10 @@ public final class GetImagingPolicyImagePolicyTransformationImQuery {
         }
         @CustomType.Setter
         public Builder queryVar(String queryVar) {
-            this.queryVar = Objects.requireNonNull(queryVar);
+            if (queryVar == null) {
+              throw new MissingRequiredPropertyException("GetImagingPolicyImagePolicyTransformationImQuery", "queryVar");
+            }
+            this.queryVar = queryVar;
             return this;
         }
         public GetImagingPolicyImagePolicyTransformationImQuery build() {

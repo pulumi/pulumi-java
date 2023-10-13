@@ -43,11 +43,13 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorApplicationLoadB
 
         @CustomType.Setter
         public Builder fromOriginId(@Nullable String fromOriginId) {
+
             this.fromOriginId = fromOriginId;
             return this;
         }
         @CustomType.Setter
         public Builder toOriginIds(@Nullable List<String> toOriginIds) {
+
             this.toOriginIds = toOriginIds;
             return this;
         }

@@ -91,51 +91,61 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorAdScalerCircuitB
 
         @CustomType.Setter
         public Builder fallbackActionResponseCodeBased(@Nullable String fallbackActionResponseCodeBased) {
+
             this.fallbackActionResponseCodeBased = fallbackActionResponseCodeBased;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder responseCodeBased(@Nullable Boolean responseCodeBased) {
+
             this.responseCodeBased = responseCodeBased;
             return this;
         }
         @CustomType.Setter
         public Builder responseCodes(@Nullable String responseCodes) {
+
             this.responseCodes = responseCodes;
             return this;
         }
         @CustomType.Setter
         public Builder responseDelayBased(@Nullable Boolean responseDelayBased) {
+
             this.responseDelayBased = responseDelayBased;
             return this;
         }
         @CustomType.Setter
         public Builder responseDelayThreshold(@Nullable String responseDelayThreshold) {
+
             this.responseDelayThreshold = responseDelayThreshold;
             return this;
         }
         @CustomType.Setter
         public Builder returnErrorResponseCodeBased(@Nullable String returnErrorResponseCodeBased) {
+
             this.returnErrorResponseCodeBased = returnErrorResponseCodeBased;
             return this;
         }
         @CustomType.Setter
         public Builder specifyYourOwnResponseCodeBased(@Nullable String specifyYourOwnResponseCodeBased) {
+
             this.specifyYourOwnResponseCodeBased = specifyYourOwnResponseCodeBased;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

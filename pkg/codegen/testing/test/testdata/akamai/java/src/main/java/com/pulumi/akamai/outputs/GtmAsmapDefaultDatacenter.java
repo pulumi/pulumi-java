@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -43,11 +44,15 @@ public final class GtmAsmapDefaultDatacenter {
 
         @CustomType.Setter
         public Builder datacenterId(Integer datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            if (datacenterId == null) {
+              throw new MissingRequiredPropertyException("GtmAsmapDefaultDatacenter", "datacenterId");
+            }
+            this.datacenterId = datacenterId;
             return this;
         }
         @CustomType.Setter
         public Builder nickname(@Nullable String nickname) {
+
             this.nickname = nickname;
             return this;
         }

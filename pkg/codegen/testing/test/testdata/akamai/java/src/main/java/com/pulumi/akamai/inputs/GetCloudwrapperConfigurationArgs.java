@@ -7,6 +7,7 @@ import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationLocationArgs;
 import com.pulumi.akamai.inputs.GetCloudwrapperConfigurationMultiCdnSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -97,7 +98,9 @@ public final class GetCloudwrapperConfigurationArgs extends com.pulumi.resources
         }
 
         public GetCloudwrapperConfigurationArgs build() {
-            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            if ($.id == null) {
+                throw new MissingRequiredPropertyException("GetCloudwrapperConfigurationArgs", "id");
+            }
             return $;
         }
     }

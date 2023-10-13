@@ -36,6 +36,7 @@ public final class ArgFunctionResult {
 
         @CustomType.Setter
         public Builder result(@Nullable Resource result) {
+
             this.result = result;
             return this;
         }

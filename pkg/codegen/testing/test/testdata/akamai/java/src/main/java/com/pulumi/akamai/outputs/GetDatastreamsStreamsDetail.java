@@ -5,6 +5,7 @@ package com.pulumi.akamai.outputs;
 
 import com.pulumi.akamai.outputs.GetDatastreamsStreamsDetailProperty;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -109,47 +110,74 @@ public final class GetDatastreamsStreamsDetail {
 
         @CustomType.Setter
         public Builder contractId(String contractId) {
-            this.contractId = Objects.requireNonNull(contractId);
+            if (contractId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "contractId");
+            }
+            this.contractId = contractId;
             return this;
         }
         @CustomType.Setter
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            if (createdBy == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "createdBy");
+            }
+            this.createdBy = createdBy;
             return this;
         }
         @CustomType.Setter
         public Builder createdDate(String createdDate) {
-            this.createdDate = Objects.requireNonNull(createdDate);
+            if (createdDate == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "createdDate");
+            }
+            this.createdDate = createdDate;
             return this;
         }
         @CustomType.Setter
         public Builder groupId(Integer groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            if (groupId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "groupId");
+            }
+            this.groupId = groupId;
             return this;
         }
         @CustomType.Setter
         public Builder latestVersion(Integer latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            if (latestVersion == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "latestVersion");
+            }
+            this.latestVersion = latestVersion;
             return this;
         }
         @CustomType.Setter
         public Builder modifiedBy(String modifiedBy) {
-            this.modifiedBy = Objects.requireNonNull(modifiedBy);
+            if (modifiedBy == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "modifiedBy");
+            }
+            this.modifiedBy = modifiedBy;
             return this;
         }
         @CustomType.Setter
         public Builder modifiedDate(String modifiedDate) {
-            this.modifiedDate = Objects.requireNonNull(modifiedDate);
+            if (modifiedDate == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "modifiedDate");
+            }
+            this.modifiedDate = modifiedDate;
             return this;
         }
         @CustomType.Setter
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            if (productId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "productId");
+            }
+            this.productId = productId;
             return this;
         }
         @CustomType.Setter
         public Builder properties(List<GetDatastreamsStreamsDetailProperty> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            if (properties == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "properties");
+            }
+            this.properties = properties;
             return this;
         }
         public Builder properties(GetDatastreamsStreamsDetailProperty... properties) {
@@ -157,22 +185,34 @@ public final class GetDatastreamsStreamsDetail {
         }
         @CustomType.Setter
         public Builder streamId(Integer streamId) {
-            this.streamId = Objects.requireNonNull(streamId);
+            if (streamId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "streamId");
+            }
+            this.streamId = streamId;
             return this;
         }
         @CustomType.Setter
         public Builder streamName(String streamName) {
-            this.streamName = Objects.requireNonNull(streamName);
+            if (streamName == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "streamName");
+            }
+            this.streamName = streamName;
             return this;
         }
         @CustomType.Setter
         public Builder streamStatus(String streamStatus) {
-            this.streamStatus = Objects.requireNonNull(streamStatus);
+            if (streamStatus == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "streamStatus");
+            }
+            this.streamStatus = streamStatus;
             return this;
         }
         @CustomType.Setter
         public Builder streamVersion(Integer streamVersion) {
-            this.streamVersion = Objects.requireNonNull(streamVersion);
+            if (streamVersion == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamsStreamsDetail", "streamVersion");
+            }
+            this.streamVersion = streamVersion;
             return this;
         }
         public GetDatastreamsStreamsDetail build() {

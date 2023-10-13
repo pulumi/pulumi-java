@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -82,32 +83,50 @@ public final class GetAppSecSecurityPolicyResult {
 
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyIdLists(List<String> securityPolicyIdLists) {
-            this.securityPolicyIdLists = Objects.requireNonNull(securityPolicyIdLists);
+            if (securityPolicyIdLists == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSecurityPolicyResult", "securityPolicyIdLists");
+            }
+            this.securityPolicyIdLists = securityPolicyIdLists;
             return this;
         }
         public Builder securityPolicyIdLists(String... securityPolicyIdLists) {
@@ -115,6 +134,7 @@ public final class GetAppSecSecurityPolicyResult {
         }
         @CustomType.Setter
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
+
             this.securityPolicyName = securityPolicyName;
             return this;
         }

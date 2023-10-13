@@ -67,31 +67,37 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorWebApplicationFi
 
         @CustomType.Setter
         public Builder configId(@Nullable Integer configId) {
+
             this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder fileName(@Nullable String fileName) {
+
             this.fileName = fileName;
             return this;
         }
         @CustomType.Setter
         public Builder productionStatus(@Nullable String productionStatus) {
+
             this.productionStatus = productionStatus;
             return this;
         }
         @CustomType.Setter
         public Builder productionVersion(@Nullable Integer productionVersion) {
+
             this.productionVersion = productionVersion;
             return this;
         }
         @CustomType.Setter
         public Builder stagingStatus(@Nullable String stagingStatus) {
+
             this.stagingStatus = stagingStatus;
             return this;
         }
         @CustomType.Setter
         public Builder stagingVersion(@Nullable Integer stagingVersion) {
+
             this.stagingVersion = stagingVersion;
             return this;
         }

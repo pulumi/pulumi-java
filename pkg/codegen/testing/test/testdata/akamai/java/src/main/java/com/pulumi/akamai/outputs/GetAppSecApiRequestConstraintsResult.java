@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,32 +76,48 @@ public final class GetAppSecApiRequestConstraintsResult {
 
         @CustomType.Setter
         public Builder apiId(@Nullable Integer apiId) {
+
             this.apiId = apiId;
             return this;
         }
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiRequestConstraintsResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiRequestConstraintsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder json(String json) {
-            this.json = Objects.requireNonNull(json);
+            if (json == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiRequestConstraintsResult", "json");
+            }
+            this.json = json;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiRequestConstraintsResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         @CustomType.Setter
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            if (securityPolicyId == null) {
+              throw new MissingRequiredPropertyException("GetAppSecApiRequestConstraintsResult", "securityPolicyId");
+            }
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
         public GetAppSecApiRequestConstraintsResult build() {

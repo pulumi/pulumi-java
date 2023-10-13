@@ -5,6 +5,7 @@ package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.inputs.BastionShareableLinkArgs;
 import java.lang.String;
 import java.util.List;
@@ -162,8 +163,12 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
         }
 
         public GetBastionShareableLinkArgs build() {
-            $.bastionHostName = Objects.requireNonNull($.bastionHostName, "expected parameter 'bastionHostName' to be non-null");
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            if ($.bastionHostName == null) {
+                throw new MissingRequiredPropertyException("GetBastionShareableLinkArgs", "bastionHostName");
+            }
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("GetBastionShareableLinkArgs", "resourceGroupName");
+            }
             return $;
         }
     }

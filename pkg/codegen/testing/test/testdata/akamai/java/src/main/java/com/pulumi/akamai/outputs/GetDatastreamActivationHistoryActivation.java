@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -59,27 +60,42 @@ public final class GetDatastreamActivationHistoryActivation {
 
         @CustomType.Setter
         public Builder modifiedBy(String modifiedBy) {
-            this.modifiedBy = Objects.requireNonNull(modifiedBy);
+            if (modifiedBy == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryActivation", "modifiedBy");
+            }
+            this.modifiedBy = modifiedBy;
             return this;
         }
         @CustomType.Setter
         public Builder modifiedDate(String modifiedDate) {
-            this.modifiedDate = Objects.requireNonNull(modifiedDate);
+            if (modifiedDate == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryActivation", "modifiedDate");
+            }
+            this.modifiedDate = modifiedDate;
             return this;
         }
         @CustomType.Setter
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            if (status == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryActivation", "status");
+            }
+            this.status = status;
             return this;
         }
         @CustomType.Setter
         public Builder streamId(Integer streamId) {
-            this.streamId = Objects.requireNonNull(streamId);
+            if (streamId == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryActivation", "streamId");
+            }
+            this.streamId = streamId;
             return this;
         }
         @CustomType.Setter
         public Builder streamVersion(Integer streamVersion) {
-            this.streamVersion = Objects.requireNonNull(streamVersion);
+            if (streamVersion == null) {
+              throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryActivation", "streamVersion");
+            }
+            this.streamVersion = streamVersion;
             return this;
         }
         public GetDatastreamActivationHistoryActivation build() {

@@ -54,21 +54,25 @@ public final class GetImagingPolicyImagePolicyTransformationShears {
 
         @CustomType.Setter
         public Builder xShear(@Nullable String xShear) {
+
             this.xShear = xShear;
             return this;
         }
         @CustomType.Setter
         public Builder xShearVar(@Nullable String xShearVar) {
+
             this.xShearVar = xShearVar;
             return this;
         }
         @CustomType.Setter
         public Builder yShear(@Nullable String yShear) {
+
             this.yShear = yShear;
             return this;
         }
         @CustomType.Setter
         public Builder yShearVar(@Nullable String yShearVar) {
+
             this.yShearVar = yShearVar;
             return this;
         }

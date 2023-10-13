@@ -4,6 +4,7 @@
 package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -49,7 +50,9 @@ public final class GetDatastreamActivationHistoryPlainArgs extends com.pulumi.re
         }
 
         public GetDatastreamActivationHistoryPlainArgs build() {
-            $.streamId = Objects.requireNonNull($.streamId, "expected parameter 'streamId' to be non-null");
+            if ($.streamId == null) {
+                throw new MissingRequiredPropertyException("GetDatastreamActivationHistoryPlainArgs", "streamId");
+            }
             return $;
         }
     }

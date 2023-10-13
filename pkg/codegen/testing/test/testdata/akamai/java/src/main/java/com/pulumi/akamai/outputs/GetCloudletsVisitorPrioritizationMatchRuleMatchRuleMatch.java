@@ -75,36 +75,43 @@ public final class GetCloudletsVisitorPrioritizationMatchRuleMatchRuleMatch {
 
         @CustomType.Setter
         public Builder caseSensitive(@Nullable Boolean caseSensitive) {
+
             this.caseSensitive = caseSensitive;
             return this;
         }
         @CustomType.Setter
         public Builder checkIps(@Nullable String checkIps) {
+
             this.checkIps = checkIps;
             return this;
         }
         @CustomType.Setter
         public Builder matchOperator(@Nullable String matchOperator) {
+
             this.matchOperator = matchOperator;
             return this;
         }
         @CustomType.Setter
         public Builder matchType(@Nullable String matchType) {
+
             this.matchType = matchType;
             return this;
         }
         @CustomType.Setter
         public Builder matchValue(@Nullable String matchValue) {
+
             this.matchValue = matchValue;
             return this;
         }
         @CustomType.Setter
         public Builder negate(@Nullable Boolean negate) {
+
             this.negate = negate;
             return this;
         }
         @CustomType.Setter
         public Builder objectMatchValues(@Nullable List<GetCloudletsVisitorPrioritizationMatchRuleMatchRuleMatchObjectMatchValue> objectMatchValues) {
+
             this.objectMatchValues = objectMatchValues;
             return this;
         }

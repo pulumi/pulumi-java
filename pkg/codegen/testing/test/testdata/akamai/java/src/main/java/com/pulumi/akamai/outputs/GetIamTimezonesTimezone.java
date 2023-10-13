@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,22 +53,34 @@ public final class GetIamTimezonesTimezone {
 
         @CustomType.Setter
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            if (description == null) {
+              throw new MissingRequiredPropertyException("GetIamTimezonesTimezone", "description");
+            }
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder offset(String offset) {
-            this.offset = Objects.requireNonNull(offset);
+            if (offset == null) {
+              throw new MissingRequiredPropertyException("GetIamTimezonesTimezone", "offset");
+            }
+            this.offset = offset;
             return this;
         }
         @CustomType.Setter
         public Builder posix(String posix) {
-            this.posix = Objects.requireNonNull(posix);
+            if (posix == null) {
+              throw new MissingRequiredPropertyException("GetIamTimezonesTimezone", "posix");
+            }
+            this.posix = posix;
             return this;
         }
         @CustomType.Setter
         public Builder timezone(String timezone) {
-            this.timezone = Objects.requireNonNull(timezone);
+            if (timezone == null) {
+              throw new MissingRequiredPropertyException("GetIamTimezonesTimezone", "timezone");
+            }
+            this.timezone = timezone;
             return this;
         }
         public GetIamTimezonesTimezone build() {

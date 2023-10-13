@@ -4,6 +4,7 @@
 package com.pulumi.example.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -43,12 +44,16 @@ public final class ObjectWithNodeOptionalInputs {
 
         @CustomType.Setter
         public Builder bar(@Nullable Integer bar) {
+
             this.bar = bar;
             return this;
         }
         @CustomType.Setter
         public Builder foo(String foo) {
-            this.foo = Objects.requireNonNull(foo);
+            if (foo == null) {
+              throw new MissingRequiredPropertyException("ObjectWithNodeOptionalInputs", "foo");
+            }
+            this.foo = foo;
             return this;
         }
         public ObjectWithNodeOptionalInputs build() {

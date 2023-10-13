@@ -44,6 +44,7 @@ public final class GetWebAppSlotResult {
 
         @CustomType.Setter
         public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
+
             this.siteConfig = siteConfig;
             return this;
         }

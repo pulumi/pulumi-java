@@ -5,6 +5,7 @@ package com.pulumi.akamai.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,8 +73,12 @@ public final class GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettingsArg
         }
 
         public GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettingsArgs build() {
-            $.originId = Objects.requireNonNull($.originId, "expected parameter 'originId' to be non-null");
-            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            if ($.originId == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettingsArgs", "originId");
+            }
+            if ($.percent == null) {
+                throw new MissingRequiredPropertyException("GetCloudletsPhasedReleaseMatchRuleMatchRuleForwardSettingsArgs", "percent");
+            }
             return $;
         }
     }

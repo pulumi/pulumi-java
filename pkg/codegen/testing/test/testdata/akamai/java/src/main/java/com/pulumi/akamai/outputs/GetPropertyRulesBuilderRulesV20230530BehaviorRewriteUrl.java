@@ -103,61 +103,73 @@ public final class GetPropertyRulesBuilderRulesV20230530BehaviorRewriteUrl {
 
         @CustomType.Setter
         public Builder behavior(@Nullable String behavior) {
+
             this.behavior = behavior;
             return this;
         }
         @CustomType.Setter
         public Builder keepQueryString(@Nullable Boolean keepQueryString) {
+
             this.keepQueryString = keepQueryString;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder match(@Nullable String match) {
+
             this.match = match;
             return this;
         }
         @CustomType.Setter
         public Builder matchMultiple(@Nullable Boolean matchMultiple) {
+
             this.matchMultiple = matchMultiple;
             return this;
         }
         @CustomType.Setter
         public Builder matchRegex(@Nullable String matchRegex) {
+
             this.matchRegex = matchRegex;
             return this;
         }
         @CustomType.Setter
         public Builder targetPath(@Nullable String targetPath) {
+
             this.targetPath = targetPath;
             return this;
         }
         @CustomType.Setter
         public Builder targetPathPrepend(@Nullable String targetPathPrepend) {
+
             this.targetPathPrepend = targetPathPrepend;
             return this;
         }
         @CustomType.Setter
         public Builder targetRegex(@Nullable String targetRegex) {
+
             this.targetRegex = targetRegex;
             return this;
         }
         @CustomType.Setter
         public Builder targetUrl(@Nullable String targetUrl) {
+
             this.targetUrl = targetUrl;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }

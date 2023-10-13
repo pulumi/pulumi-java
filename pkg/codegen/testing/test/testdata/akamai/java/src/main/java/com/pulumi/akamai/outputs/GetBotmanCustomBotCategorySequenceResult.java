@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -56,7 +57,10 @@ public final class GetBotmanCustomBotCategorySequenceResult {
 
         @CustomType.Setter
         public Builder categoryIds(List<String> categoryIds) {
-            this.categoryIds = Objects.requireNonNull(categoryIds);
+            if (categoryIds == null) {
+              throw new MissingRequiredPropertyException("GetBotmanCustomBotCategorySequenceResult", "categoryIds");
+            }
+            this.categoryIds = categoryIds;
             return this;
         }
         public Builder categoryIds(String... categoryIds) {
@@ -64,12 +68,18 @@ public final class GetBotmanCustomBotCategorySequenceResult {
         }
         @CustomType.Setter
         public Builder configId(Integer configId) {
-            this.configId = Objects.requireNonNull(configId);
+            if (configId == null) {
+              throw new MissingRequiredPropertyException("GetBotmanCustomBotCategorySequenceResult", "configId");
+            }
+            this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetBotmanCustomBotCategorySequenceResult", "id");
+            }
+            this.id = id;
             return this;
         }
         public GetBotmanCustomBotCategorySequenceResult build() {

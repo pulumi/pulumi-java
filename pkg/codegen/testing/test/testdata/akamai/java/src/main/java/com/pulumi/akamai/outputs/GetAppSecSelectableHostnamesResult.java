@@ -4,6 +4,7 @@
 package com.pulumi.akamai.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -95,32 +96,40 @@ public final class GetAppSecSelectableHostnamesResult {
 
         @CustomType.Setter
         public Builder activeInProduction(@Nullable Boolean activeInProduction) {
+
             this.activeInProduction = activeInProduction;
             return this;
         }
         @CustomType.Setter
         public Builder activeInStaging(@Nullable Boolean activeInStaging) {
+
             this.activeInStaging = activeInStaging;
             return this;
         }
         @CustomType.Setter
         public Builder configId(@Nullable Integer configId) {
+
             this.configId = configId;
             return this;
         }
         @CustomType.Setter
         public Builder contractid(@Nullable String contractid) {
+
             this.contractid = contractid;
             return this;
         }
         @CustomType.Setter
         public Builder groupid(@Nullable Integer groupid) {
+
             this.groupid = groupid;
             return this;
         }
         @CustomType.Setter
         public Builder hostnames(List<String> hostnames) {
-            this.hostnames = Objects.requireNonNull(hostnames);
+            if (hostnames == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectableHostnamesResult", "hostnames");
+            }
+            this.hostnames = hostnames;
             return this;
         }
         public Builder hostnames(String... hostnames) {
@@ -128,17 +137,26 @@ public final class GetAppSecSelectableHostnamesResult {
         }
         @CustomType.Setter
         public Builder hostnamesJson(String hostnamesJson) {
-            this.hostnamesJson = Objects.requireNonNull(hostnamesJson);
+            if (hostnamesJson == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectableHostnamesResult", "hostnamesJson");
+            }
+            this.hostnamesJson = hostnamesJson;
             return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectableHostnamesResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder outputText(String outputText) {
-            this.outputText = Objects.requireNonNull(outputText);
+            if (outputText == null) {
+              throw new MissingRequiredPropertyException("GetAppSecSelectableHostnamesResult", "outputText");
+            }
+            this.outputText = outputText;
             return this;
         }
         public GetAppSecSelectableHostnamesResult build() {

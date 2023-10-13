@@ -79,41 +79,49 @@ public final class GetPropertyRulesBuilderRulesV20230105BehaviorContentPrePositi
 
         @CustomType.Setter
         public Builder enabled(@Nullable Boolean enabled) {
+
             this.enabled = enabled;
             return this;
         }
         @CustomType.Setter
         public Builder firstLocation(@Nullable String firstLocation) {
+
             this.firstLocation = firstLocation;
             return this;
         }
         @CustomType.Setter
         public Builder locked(@Nullable Boolean locked) {
+
             this.locked = locked;
             return this;
         }
         @CustomType.Setter
         public Builder secondLocation(@Nullable String secondLocation) {
+
             this.secondLocation = secondLocation;
             return this;
         }
         @CustomType.Setter
         public Builder sourceType(@Nullable String sourceType) {
+
             this.sourceType = sourceType;
             return this;
         }
         @CustomType.Setter
         public Builder targets(@Nullable String targets) {
+
             this.targets = targets;
             return this;
         }
         @CustomType.Setter
         public Builder templateUuid(@Nullable String templateUuid) {
+
             this.templateUuid = templateUuid;
             return this;
         }
         @CustomType.Setter
         public Builder uuid(@Nullable String uuid) {
+
             this.uuid = uuid;
             return this;
         }
