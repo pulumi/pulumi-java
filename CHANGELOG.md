@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 0.9.9 (2023-12-27)
+
+### Improvements
+
+- Update pulumi/pulumi to v3.99.0.
+
 ## 0.9.8 (2023-10-05)
 
 ### Improvements
