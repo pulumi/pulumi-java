@@ -669,7 +669,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 }
 
 // genPostamble closes the method and the class and declares stack output statements.
-func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
+func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 	g.Indented(func() {
 		g.genIndent(w)
 		g.Fgen(w, "}\n")

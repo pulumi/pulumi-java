@@ -45,11 +45,11 @@ func (d DocLanguageHelper) GetPropertyName(p *schema.Property) (string, error) {
 	return names.Ident(p.Name).AsProperty().Getter(), nil
 }
 
-func (d DocLanguageHelper) GetFunctionName(modName string, f *schema.Function) string {
+func (d DocLanguageHelper) GetFunctionName(_ string, f *schema.Function) string {
 	return tokenToFunctionName(f.Token)
 }
 
-func (d DocLanguageHelper) GetResourceFunctionResultName(modName string, f *schema.Function) string {
+func (d DocLanguageHelper) GetResourceFunctionResultName(_ string, f *schema.Function) string {
 	return tokenToFunctionResultClassName(nil, f.Token).String()
 }
 
@@ -59,7 +59,7 @@ func (d DocLanguageHelper) GetMethodName(m *schema.Method) string {
 }
 
 func (d DocLanguageHelper) GetMethodResultName(
-	pkg *schema.Package, modName string, r *schema.Resource, m *schema.Method,
+	_ *schema.Package, _ string, _ *schema.Resource, m *schema.Method,
 ) string {
 	// TODO revise when method support is built, revise when output-versioned functions are built
 	return tokenToFunctionResultClassName(nil, m.Function.Token).String()
@@ -87,26 +87,26 @@ func (d DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string,
 // Context, BucketArgs and ResourceOption get linked to Go API docs.
 //
 // For Java we could link to JavaDoc when appropriate.
-func (d DocLanguageHelper) GetDocLinkForPulumiType(pkg *schema.Package, typeName string) string {
+func (d DocLanguageHelper) GetDocLinkForPulumiType(_ *schema.Package, _ string) string {
 	return ""
 }
 
-func (d DocLanguageHelper) GetDocLinkForResourceType(pkg *schema.Package, modName, typeName string) string {
+func (d DocLanguageHelper) GetDocLinkForResourceType(_ *schema.Package, _, _ string) string {
 	panic("Not implemented")
 }
 
 func (d DocLanguageHelper) GetDocLinkForResourceInputOrOutputType(
-	pkg *schema.Package, modName, typeName string, input bool,
+	_ *schema.Package, _, _ string, _ bool,
 ) string {
 	panic("Not implemented")
 }
 
 func (d DocLanguageHelper) GetDocLinkForFunctionInputOrOutputType(
-	pkg *schema.Package, modName, typeName string, input bool,
+	_ *schema.Package, _, _ string, _ bool,
 ) string {
 	panic("Not implemented")
 }
 
-func (d DocLanguageHelper) GetModuleDocLink(pkg *schema.Package, modName string) (string, string) {
+func (d DocLanguageHelper) GetModuleDocLink(_ *schema.Package, _ string) (string, string) {
 	panic("Not implemented")
 }
