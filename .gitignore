@@ -50,3 +50,7 @@ pulumi-python-shim.cmd
 pulumi-analyzer-policy.cmd
 pulumi-analyzer-policy-python.cmd
 **/*.hprof
+
+# Ignore user-provided go.work files.
+/go.work
+/go.work.sum
