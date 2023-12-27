@@ -156,7 +156,7 @@ func (host *javaLanguageHost) GetRequiredPlugins(
 	ctx context.Context,
 	req *pulumirpc.GetRequiredPluginsRequest,
 ) (*pulumirpc.GetRequiredPluginsResponse, error) {
-	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
+	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram()) //nolint:staticcheck
 
 	// now, introspect the user project to see which pulumi resource packages it references.
 	pulumiPackages, err := host.determinePulumiPackages(ctx)
@@ -279,7 +279,7 @@ func (host *javaLanguageHost) runJavaCommand(
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
 func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
-	logging.V(5).Infof("Run: program=%v", req.GetProgram())
+	logging.V(5).Infof("Run: program=%v", req.GetProgram()) //nolint:staticcheck
 
 	config, err := host.constructConfig(req)
 	if err != nil {
@@ -407,11 +407,11 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	// Executor may not support the build command (for example, jar executor).
 	if executor.BuildArgs == nil {
-		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory)
+		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory) //nolint:staticcheck
 		return nil
 	}
 
-	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory)
+	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory) //nolint:staticcheck
 
 	closer, stdout, stderr, err := rpcutil.MakeInstallDependenciesStreams(server, req.IsTerminal)
 	if err != nil {
@@ -428,11 +428,11 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	cmd.Stderr = stderr
 
 	if err := runCommand(cmd); err != nil {
-		logging.V(5).Infof("InstallDependencies(Directory=%s): failed", req.Directory)
+		logging.V(5).Infof("InstallDependencies(Directory=%s): failed", req.Directory) //nolint:staticcheck
 		return err
 	}
 
-	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
+	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory) //nolint:staticcheck
 	return nil
 }
 
