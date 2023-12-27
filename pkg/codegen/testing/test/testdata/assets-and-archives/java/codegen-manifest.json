@@ -1,0 +1,18 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/example/ExampleFunctions.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/ResourceWithAssets.java",
+    "src/main/java/com/pulumi/example/ResourceWithAssetsArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/java/com/pulumi/example/inputs/GetAssetsArgs.java",
+    "src/main/java/com/pulumi/example/inputs/GetAssetsPlainArgs.java",
+    "src/main/java/com/pulumi/example/inputs/TypeWithAssetsArgs.java",
+    "src/main/java/com/pulumi/example/outputs/GetAssetsResult.java",
+    "src/main/java/com/pulumi/example/outputs/TypeWithAssets.java"
+  ]
+}

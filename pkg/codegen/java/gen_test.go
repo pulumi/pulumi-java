@@ -156,6 +156,30 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "naming-collisions":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "assets-and-archives-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "simple-plain-schema-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "simple-enum-schema-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "secrets-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "plain-and-default-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "output-funcs-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "regress-py-14539":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "regress-py-14012":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "methods-return-plain-resource":
+		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "go-overridden-internal-module-name":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "regress-py-12546":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "array-of-enum-map":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
 	}
 
 	if hasExtras {

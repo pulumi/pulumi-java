@@ -1,0 +1,14 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/example/ExampleServer.java",
+    "src/main/java/com/pulumi/example/ExampleServerArgs.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/java/com/pulumi/example/inputs/ServerPropertiesForReplicaArgs.java",
+    "src/main/java/com/pulumi/example/inputs/ServerPropertiesForRestoreArgs.java"
+  ]
+}
