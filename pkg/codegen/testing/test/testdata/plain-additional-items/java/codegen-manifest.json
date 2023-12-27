@@ -1,0 +1,13 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/example/HttpApi.java",
+    "src/main/java/com/pulumi/example/HttpApiArgs.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/java/com/pulumi/example/inputs/HttpAuthorizerArgs.java"
+  ]
+}

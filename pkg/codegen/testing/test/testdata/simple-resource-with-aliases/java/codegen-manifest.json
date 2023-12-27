@@ -1,0 +1,16 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/example/BasicResource.java",
+    "src/main/java/com/pulumi/example/BasicResourceArgs.java",
+    "src/main/java/com/pulumi/example/BasicResourceV2.java",
+    "src/main/java/com/pulumi/example/BasicResourceV2Args.java",
+    "src/main/java/com/pulumi/example/BasicResourceV3.java",
+    "src/main/java/com/pulumi/example/BasicResourceV3Args.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java"
+  ]
+}

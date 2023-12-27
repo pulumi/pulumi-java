@@ -137,8 +137,8 @@ func (dg *defaultsGen) builderExpr(
 // Degenerate cases can have simpler code.
 func (dg *defaultsGen) builderExprSpecialCase(
 	prop *schema.Property,
-	targetType TypeShape,
-	config string,
+	_ TypeShape,
+	_ string,
 	arg string,
 ) (string, bool) {
 	// No defaults, no null check, already have an argument of wanted type, simply pass it on.
