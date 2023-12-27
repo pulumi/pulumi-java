@@ -1,5 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
+//nolint:goconst
 package java
 
 import (
