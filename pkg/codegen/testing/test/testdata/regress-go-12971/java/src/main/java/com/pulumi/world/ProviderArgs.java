@@ -25,14 +25,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
-    @Import(name="populated", json=true)
+    @Import(name="populated")
     private @Nullable Output<Boolean> populated;
 
     public Optional<Output<Boolean>> populated() {
         return Optional.ofNullable(this.populated);
     }
 
-    @Import(name="radiusKm", json=true)
+    @Import(name="radiusKm")
     private @Nullable Output<Double> radiusKm;
 
     public Optional<Output<Double>> radiusKm() {

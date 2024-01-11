@@ -18,14 +18,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    @Import(name="cacheEnabled", json=true)
+    @Import(name="cacheEnabled")
     private @Nullable Output<Boolean> cacheEnabled;
 
     public Optional<Output<Boolean>> cacheEnabled() {
         return Optional.ofNullable(this.cacheEnabled);
     }
 
-    @Import(name="config", json=true)
+    @Import(name="config")
     private @Nullable Output<ProviderConfigArgs> config;
 
     public Optional<Output<ProviderConfigArgs>> config() {
@@ -58,7 +58,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * The maximum number of API requests to be made per second (0 for no limit)
      * 
      */
-    @Import(name="requestLimit", json=true)
+    @Import(name="requestLimit")
     private @Nullable Output<Integer> requestLimit;
 
     /**
