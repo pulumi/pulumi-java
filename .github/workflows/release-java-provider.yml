@@ -14,7 +14,7 @@ jobs:
   release-pulumi-language-java:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Fetch Tags
         run: |
           git fetch --quiet --prune --unshallow --tags

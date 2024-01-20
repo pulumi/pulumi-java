@@ -9,7 +9,7 @@ jobs:
   command-dispatch-for-testing:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Run Build
         uses: peter-evans/slash-command-dispatch@v3
         with:
