@@ -48,7 +48,7 @@ public interface Pulumi {
      * @see #runAsync(Consumer)
      */
     static Pulumi.API withOptions(StackOptions options) {
-        return PulumiInternal.fromEnvironment(options);
+        return PulumiInternal.APIInternal.fromEnvironment(options);
     }
 
     /**

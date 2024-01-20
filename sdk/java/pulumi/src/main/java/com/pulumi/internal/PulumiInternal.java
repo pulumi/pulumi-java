@@ -2,6 +2,7 @@ package com.pulumi.internal;
 
 import com.pulumi.Config;
 import com.pulumi.Context;
+import com.pulumi.Log;
 import com.pulumi.Pulumi;
 import com.pulumi.context.internal.ConfigContextInternal;
 import com.pulumi.context.internal.ContextInternal;
@@ -10,6 +11,7 @@ import com.pulumi.context.internal.OutputContextInternal;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.DeploymentInstance;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
@@ -25,7 +27,7 @@ import static java.util.Objects.requireNonNull;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public class PulumiInternal implements Pulumi, Pulumi.API {
+public class PulumiInternal implements Pulumi {
 
     protected final Runner runner;
     protected final ContextInternal stackContext;
@@ -36,32 +38,7 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
         this.stackContext = requireNonNull(stackContext);
     }
 
-    @InternalUse
-    public static PulumiInternal fromEnvironment(StackOptions options) {
-        var deployment = DeploymentImpl.fromEnvironment();
-        var instance = Deployment.getInstance();
-        var projectName = deployment.getProjectName();
-        var stackName = deployment.getStackName();
-        var runner = deployment.getRunner();
-        var log = deployment.getLog();
-
-        Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
-        var config = new ConfigContextInternal(projectName, configFactory);
-        var logging = new LoggingContextInternal(log);
-        var outputFactory = new OutputFactory(runner);
-        var outputs = new OutputContextInternal(outputFactory);
-
-        var ctx = new ContextInternal(
-                projectName, stackName, logging, config, outputs, options.resourceTransformations()
-        );
-        return new PulumiInternal(runner, ctx);
-    }
-
-    public void run(Consumer<Context> stack) {
-        System.exit(runAsync(stack).join());
-    }
-
-    public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
+    protected CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
         return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
     }
 
@@ -79,5 +56,55 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
                     return this.stackContext.exports();
                 })
         );
+    }
+
+    private static ContextInternal contextInternal(
+            StackOptions options,
+            DeploymentInstance instance,
+            String projectName,
+            String stackName,
+            Runner runner,
+            Log log
+    ) {
+        Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
+        var config = new ConfigContextInternal(projectName, configFactory);
+        var logging = new LoggingContextInternal(log);
+        var outputFactory = new OutputFactory(runner);
+        var outputs = new OutputContextInternal(outputFactory);
+
+        return new ContextInternal(
+                projectName, stackName, logging, config, outputs, options.resourceTransformations()
+        );
+    }
+
+    @InternalUse
+    @ParametersAreNonnullByDefault
+    public static final class APIInternal extends PulumiInternal implements Pulumi.API {
+
+        public APIInternal(Runner runner, ContextInternal stackContext) {
+            super(runner, stackContext);
+        }
+
+        @Override
+        public void run(Consumer<Context> stackCallback) {
+            System.exit(runAsync(stackCallback).join());
+        }
+
+        @Override
+        public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
+            return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
+        }
+
+        public static APIInternal fromEnvironment(StackOptions options) {
+            var deployment = DeploymentImpl.fromEnvironment();
+            var instance = Deployment.getInstance();
+            var projectName = deployment.getProjectName();
+            var stackName = deployment.getStackName();
+            var runner = deployment.getRunner();
+            var log = deployment.getLog();
+
+            ContextInternal ctx = contextInternal(options, instance, projectName, stackName, runner, log);
+            return new APIInternal(runner, ctx);
+        }
     }
 }
