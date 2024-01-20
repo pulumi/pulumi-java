@@ -6,6 +6,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.DeploymentInstance;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
@@ -19,17 +20,21 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
+import static java.util.Objects.requireNonNull;
+
 /**
  * Metadata of the deployment that is currently running. Accessible via @see {@link com.pulumi.deployment.Deployment#getInstance()}.
  */
 @InternalUse
 public final class DeploymentInstanceInternal implements DeploymentInstance {
 
+    private final ConfigInternal config;
     private final DeploymentInternal deployment;
 
     @InternalUse
-    public DeploymentInstanceInternal(DeploymentInternal deployment) {
-        this.deployment = deployment;
+    public DeploymentInstanceInternal(ConfigInternal config, DeploymentInternal deployment) {
+        this.config = requireNonNull(config);
+        this.deployment = requireNonNull(deployment);
     }
 
     @InternalUse
@@ -55,8 +60,8 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
-    public DeploymentImpl.Config getConfig() {
-        return deployment.getConfig();
+    public ConfigInternal getConfig() {
+        return config;
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.context.internal.ConfigContextInternal;
@@ -25,6 +24,7 @@ import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.deployment.internal.ReadOrRegisterResource;
 import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.test.EmptyMocks;
 import com.pulumi.test.Mocks;
@@ -226,7 +226,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         @Nullable
         private EngineLogger engineLogger;
         @Nullable
-        private DeploymentImpl.Config config;
+        private Function<String, ConfigInternal> configFactory;
         @Nullable
         private DeploymentImpl.DeploymentState state;
         @Nullable
@@ -271,8 +271,8 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * @return this {@link PulumiTestInternal.Builder}
          */
         public PulumiTestInternal.Builder config(Map<String, String> allConfig, Set<String> configSecretKeys) {
-            return internalConfig(new DeploymentImpl.Config(
-                    ImmutableMap.copyOf(allConfig), ImmutableSet.copyOf(configSecretKeys)
+            return internalConfig(name -> new ConfigInternal(
+                    name, ImmutableMap.copyOf(allConfig), ImmutableSet.copyOf(configSecretKeys)
             ));
         }
 
@@ -283,13 +283,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * @return this {@link PulumiTestInternal.Builder}
          */
         public PulumiTestInternal.Builder config(Map<String, String> allConfig) {
-            return internalConfig(new DeploymentImpl.Config(
-                    ImmutableMap.copyOf(allConfig), ImmutableSet.of()
+            return internalConfig(name -> new ConfigInternal(
+                    name, ImmutableMap.copyOf(allConfig), ImmutableSet.of()
             ));
         }
 
-        private PulumiTestInternal.Builder internalConfig(DeploymentImpl.Config config) {
-            this.config = requireNonNull(config);
+        private PulumiTestInternal.Builder internalConfig(Function<String, ConfigInternal> configFactory) {
+            this.configFactory = requireNonNull(configFactory);
             return this;
         }
 
@@ -357,12 +357,11 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             if (this.monitor == null) {
                 this.monitor = monitorDecorator.apply(new MockMonitor(this.mocks, this.log));
             }
-            if (this.config == null) {
-                this.config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
+            if (this.configFactory == null) {
+                this.configFactory = name -> new ConfigInternal(name, ImmutableMap.of(), ImmutableSet.of());
             }
             if (this.state == null) {
                 this.state = new DeploymentImpl.DeploymentState(
-                        this.config,
                         this.standardLogger,
                         this.options.projectName(),
                         this.options.stackName(),
@@ -371,16 +370,17 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                         this.monitor
                 );
             }
+
             if (this.deploymentFactory == null) {
-                this.deploymentFactory = DeploymentImpl::new;
+                this.deploymentFactory = state -> new DeploymentImpl(state);
             }
             var deployment = deploymentFactory.apply(this.state);
             // FIXME: this is needed because we create runner inside DeploymentState currently
             this.runner = deployment.getRunner();
-            DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
+            var config = configFactory.apply(options.projectName());
+            DeploymentImpl.setInstance(new DeploymentInstanceInternal(config, deployment));
 
-            Function<String, Config> configFactory = (name) -> new Config(this.config, name);
-            var configContext = new ConfigContextInternal(this.options.projectName(), configFactory);
+            var configContext = new ConfigContextInternal(config);
             var loggingContext = new LoggingContextInternal(this.log);
             var outputFactory = new OutputFactory(this.runner);
             var outputsContext = new OutputContextInternal(outputFactory);
@@ -423,20 +423,5 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     @InternalUse
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {
         return new Log(new DeploymentImpl.DefaultEngineLogger(logger, MockRunner::new, engine));
-    }
-
-    @InternalUse
-    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-        return new DeploymentImpl.Config(allConfig, configSecretKeys);
-    }
-
-    @InternalUse
-    public static ImmutableMap<String, String> parseConfig(String configJson) {
-        return DeploymentImpl.Config.parseConfig(configJson);
-    }
-
-    @InternalUse
-    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
-        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
     }
 }

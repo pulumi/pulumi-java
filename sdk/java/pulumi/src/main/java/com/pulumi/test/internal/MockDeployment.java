@@ -20,7 +20,6 @@ import com.pulumi.resources.internal.Stack;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
@@ -33,7 +32,9 @@ import static java.util.Objects.requireNonNull;
 public class MockDeployment extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
     public final DeploymentImpl.DeploymentState state;
 
-    public MockDeployment(DeploymentImpl.DeploymentState state) {
+    public MockDeployment(
+            DeploymentImpl.DeploymentState state
+    ) {
         this.state = requireNonNull(state);
     }
 
@@ -112,21 +113,6 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
     @Override
     public void call(String token, CallArgs args) {
         // Empty
-    }
-
-    @Override
-    public DeploymentImpl.Config getConfig() {
-        return this.state.config;
-    }
-
-    @Override
-    public Optional<String> getConfig(String fullKey) {
-        return this.state.config.getConfig(fullKey);
-    }
-
-    @Override
-    public boolean isConfigSecret(String fullKey) {
-        return this.state.config.isConfigSecret(fullKey);
     }
 
     @Override

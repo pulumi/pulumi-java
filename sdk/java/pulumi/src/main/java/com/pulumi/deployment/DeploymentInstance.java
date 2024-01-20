@@ -1,10 +1,9 @@
 package com.pulumi.deployment;
 
-
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.deployment.internal.DeploymentImpl;
+import com.pulumi.internal.ConfigInternal;
 
 public interface DeploymentInstance extends Deployment {
     @InternalUse
-    DeploymentImpl.Config getConfig();
+    ConfigInternal getConfig();
 }

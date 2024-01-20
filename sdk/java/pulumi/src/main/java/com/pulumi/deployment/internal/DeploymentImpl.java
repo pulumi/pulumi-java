@@ -6,8 +6,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.pulumi.Log;
@@ -16,7 +14,6 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.CompletableFutures;
 import com.pulumi.core.internal.Constants;
-import com.pulumi.core.internal.Environment;
 import com.pulumi.core.internal.GlobalLogging;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.Maps;
@@ -31,6 +28,7 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.exceptions.LogException;
 import com.pulumi.exceptions.ResourceException;
 import com.pulumi.exceptions.RunException;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
@@ -50,6 +48,7 @@ import com.pulumi.serialization.internal.JsonFormatter;
 import com.pulumi.serialization.internal.PropertiesSerializer;
 import com.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
 import com.pulumi.serialization.internal.Structs;
+import pulumirpc.AliasOuterClass.Alias;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
@@ -58,7 +57,6 @@ import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
-import pulumirpc.AliasOuterClass.Alias;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -69,7 +67,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -96,7 +93,6 @@ import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
 
 @InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
@@ -155,8 +151,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @VisibleForTesting
     public static DeploymentImpl fromEnvironment() {
         var state = DeploymentState.fromEnvironment();
+        var config = ConfigInternal.fromEnvironment(state.projectName);
         var impl = new DeploymentImpl(state);
-        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(config, impl));
         return impl;
     }
 
@@ -185,22 +182,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     public Log getLog() {
         return this.log;
-    }
-
-    @Override
-    @InternalUse
-    public Config getConfig() {
-        return this.state.config;
-    }
-
-    @Override
-    public Optional<String> getConfig(String fullKey) {
-        return this.state.config.getConfig(fullKey);
-    }
-
-    @Override
-    public boolean isConfigSecret(String fullKey) {
-        return this.state.config.isConfigSecret(fullKey);
     }
 
     @Nullable
@@ -250,151 +231,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @InternalUse
         CompletableFuture<Boolean> monitorSupportsResourceReferences() {
             return monitorSupportsFeature("resourceReferences");
-        }
-    }
-
-    @ParametersAreNonnullByDefault
-    @InternalUse
-    public static class Config {
-
-        /**
-         * The environment variable key that the language plugin uses to set configuration values.
-         */
-        private static final String ConfigEnvKey = "PULUMI_CONFIG";
-
-        /**
-         * The environment variable key that the language plugin uses to set the list of secret configuration keys.
-         */
-        private static final String ConfigSecretKeysEnvKey = "PULUMI_CONFIG_SECRET_KEYS";
-
-        private ImmutableMap<String, String> allConfig;
-
-        private ImmutableSet<String> configSecretKeys;
-
-        @VisibleForTesting
-        public Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-            this.allConfig = Objects.requireNonNull(allConfig);
-            this.configSecretKeys = Objects.requireNonNull(configSecretKeys);
-        }
-
-        private static Config parse() {
-            return new Config(parseConfig(), parseConfigSecretKeys());
-        }
-
-        /**
-         * Returns a copy of the full config map.
-         */
-        @InternalUse
-        private ImmutableMap<String, String> getAllConfig() {
-            return allConfig;
-        }
-
-        /**
-         * Returns a copy of the config secret keys.
-         */
-        @InternalUse
-        private ImmutableSet<String> configSecretKeys() {
-            return configSecretKeys;
-        }
-
-        /**
-         * Sets a configuration variable.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setConfig(String key, String value) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .put(key, value)
-                    .build();
-        }
-
-        /**
-         * Appends all provided configuration.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setAllConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .putAll(config)
-                    .build();
-            if (secretKeys != null) {
-                this.configSecretKeys = new ImmutableSet.Builder<String>()
-                        .addAll(this.configSecretKeys)
-                        .addAll(secretKeys)
-                        .build();
-            }
-        }
-
-        public Optional<String> getConfig(String fullKey) {
-            return Optional.ofNullable(this.allConfig.getOrDefault(fullKey, null));
-        }
-
-        public boolean isConfigSecret(String fullKey) {
-            return this.configSecretKeys.contains(fullKey);
-        }
-
-        private static ImmutableMap<String, String> parseConfig() {
-            var envConfig = Environment.getEnvironmentVariable(ConfigEnvKey);
-            if (envConfig.isValue()) {
-                return parseConfig(envConfig.value());
-            }
-            return ImmutableMap.of();
-        }
-
-        @InternalUse
-        @VisibleForTesting
-        public static ImmutableMap<String, String> parseConfig(String envConfigJson) {
-            var parsedConfig = ImmutableMap.<String, String>builder();
-
-            var gson = new Gson();
-            var envObject = gson.fromJson(envConfigJson, JsonElement.class);
-            for (var prop : envObject.getAsJsonObject().entrySet()) {
-                parsedConfig.put(cleanKey(prop.getKey()), prop.getValue().getAsString());
-            }
-
-            return parsedConfig.build();
-        }
-
-        private static ImmutableSet<String> parseConfigSecretKeys() {
-            var envConfigSecretKeys = Environment.getEnvironmentVariable(ConfigSecretKeysEnvKey);
-            if (envConfigSecretKeys.isValue()) {
-                return parseConfigSecretKeys(envConfigSecretKeys.value());
-            }
-
-            return ImmutableSet.of();
-        }
-
-        @InternalUse
-        @VisibleForTesting
-        public static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
-            var parsedConfigSecretKeys = ImmutableSet.<String>builder();
-
-            var gson = new Gson();
-            var envObject = gson.fromJson(envConfigSecretKeysJson, JsonElement.class);
-            for (var element : envObject.getAsJsonArray()) {
-                parsedConfigSecretKeys.add(element.getAsString());
-            }
-
-            return parsedConfigSecretKeys.build();
-        }
-
-        /**
-         * CleanKey takes a configuration key, and if it is of the form "(string):config:(string)"
-         * removes the ":config:" portion. Previously, our keys always had the string ":config:" in
-         * them, and we'd like to remove it. However, the language host needs to continue to set it
-         * so we can be compatible with older versions of our packages. Once we stop supporting
-         * older packages, we can change the language host to not add this :config: thing and
-         * remove this function.
-         */
-        private static String cleanKey(String key) {
-            final var prefix = "config:";
-            var idx = key.indexOf(":");
-            if (idx > 0 && key.substring(idx + 1).startsWith(prefix)) {
-                return key.substring(0, idx) + ":" + key.substring(idx + 1 + prefix.length());
-            }
-            return key;
         }
     }
 
@@ -1613,7 +1449,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
 
-        public final DeploymentImpl.Config config;
         public final String projectName;
         public final String stackName;
         public final boolean isDryRun;
@@ -1627,14 +1462,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @InternalUse
         @VisibleForTesting
         public DeploymentState(
-                DeploymentImpl.Config config,
                 Logger standardLogger,
                 String projectName,
                 String stackName,
                 boolean isDryRun,
                 Engine engine,
                 Monitor monitor) {
-            this.config = Objects.requireNonNull(config);
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.projectName = Objects.requireNonNull(projectName);
             this.stackName = Objects.requireNonNull(stackName);
@@ -1665,7 +1498,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
                 var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
 
-                var config = Config.parse();
                 standardLogger.setLevel(GlobalLogging.GlobalLevel);
 
                 standardLogger.log(Level.FINEST, "Creating deployment engine");
@@ -1676,7 +1508,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var monitor = new GrpcMonitor(monitorTarget);
                 standardLogger.log(Level.FINEST, "Created deployment monitor");
 
-                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
+                return new DeploymentState(standardLogger, project, stack, dryRun, engine, monitor);
             } catch (NullPointerException ex) {
                 throw new IllegalStateException(
                         "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);

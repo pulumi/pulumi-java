@@ -3,9 +3,9 @@ package com.pulumi.context.internal;
 import com.pulumi.Config;
 import com.pulumi.context.ConfigContext;
 import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.internal.ConfigInternal;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.function.Function;
 
 import static java.util.Objects.requireNonNull;
 
@@ -13,21 +13,19 @@ import static java.util.Objects.requireNonNull;
 @ParametersAreNonnullByDefault
 public class ConfigContextInternal implements ConfigContext {
 
-    private final String projectName;
-    private final Function<String, Config> configFactory;
+    private final ConfigInternal config;
 
-    public ConfigContextInternal(String projectName, Function<String, Config> configFactory) {
-        this.projectName = requireNonNull(projectName);
-        this.configFactory = requireNonNull(configFactory);
+    public ConfigContextInternal(ConfigInternal config) {
+        this.config = requireNonNull(config);
     }
 
     @Override
     public Config config() {
-        return this.configFactory.apply(this.projectName);
+        return this.config;
     }
 
     @Override
     public Config config(String name) {
-        return this.configFactory.apply(name);
+        return this.config.withName(name);
     }
 }
