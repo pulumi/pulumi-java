@@ -65,8 +65,8 @@ jobs:
       - name: Configure Go cache
         id: go-cache-paths
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
       - name: Set up Go cache
         uses: actions/cache@v3
         id: go-cache
@@ -106,7 +106,7 @@ jobs:
             KEY: ${{ secrets.AWS_ACCESS_KEY_ID  }}
         run: |
             echo "Enable testing against cloud environments: ${{ env.KEY != '' }}"
-            echo "::set-output name=gotcloudcreds::${{ env.KEY != '' }}"
+            echo "gotcloudcreds=${{ env.KEY != '' }}" >> "$GITHUB_OUTPUT"
     strategy:
       fail-fast: true
 
@@ -161,8 +161,8 @@ jobs:
       - name: Configure Go cache
         id: go-cache-paths
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
       - name: Set up Go cache
         uses: actions/cache@v3
         id: go-cache
@@ -219,8 +219,8 @@ jobs:
       - name: Configure Go cache
         id: go-cache-paths
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
       - name: Set up Go cache
         uses: actions/cache@v3
         id: go-cache
@@ -331,8 +331,8 @@ jobs:
       - name: Configure Go cache
         id: go-cache-paths
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
       - name: Set up Go cache
         uses: actions/cache@v3
         id: go-cache
@@ -386,8 +386,8 @@ jobs:
       - name: Configure Go cache
         id: go-cache-paths
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
       - name: Set up Go cache
         uses: actions/cache@v3
         id: go-cache
