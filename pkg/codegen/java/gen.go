@@ -435,18 +435,6 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	if prop.IsRequired() {
 		attributeArgs = ", required=true"
 	}
-	if pt.res != nil && pt.res.IsProvider {
-		pType := codegen.UnwrapType(prop.Type)
-		json := true
-		if pType == schema.StringType {
-			json = false
-		} else if t, ok := pType.(*schema.TokenType); ok && t.UnderlyingType == schema.StringType {
-			json = false
-		}
-		if json {
-			attributeArgs += ", json=true"
-		}
-	}
 
 	const indent = "    "
 	genPropJavadoc(ctx, prop, propJavadocOptions{

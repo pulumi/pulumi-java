@@ -51,7 +51,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * Options for tuning the Kubernetes client used by a Provider.
      * 
      */
-    @Import(name="kubeClientSettings", json=true)
+    @Import(name="kubeClientSettings")
     private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
     /**

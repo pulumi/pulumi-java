@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+## Unreleased
+
+### Improvements
+
+- Provider configuration is no longer serialized to JSON. This improves secret management for providers and does not
+  impact public APIs. [#1308](https://github.com/pulumi/pulumi-java/pull/1308)
+
 ## 0.9.9 (2023-12-27)
 
 ### Improvements
