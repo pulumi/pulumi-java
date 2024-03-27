@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+## 0.10.0 (2024-03-27)
+
+### Improvements
+
+- Emit comments/trivia for resource and local variable declarations in program-gen
+- Support `stringAsset` function in program-gen from PCL
+- Turn not yet implemented error into a warning in program-gen
+
 ## 0.9.9 (2023-12-27)
 
 ### Improvements
