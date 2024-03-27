@@ -24,7 +24,7 @@ func readOverlays(rootDir string, overlays []string) (map[string][]byte, error) 
 	result := map[string][]byte{}
 	for _, overlay := range overlays {
 		overlayDir := filepath.Join(rootDir, overlay)
-		err := filepath.WalkDir(overlayDir, func(path string, entry fs.DirEntry, err error) error {
+		err := filepath.WalkDir(overlayDir, func(_ string, entry fs.DirEntry, err error) error {
 			if err != nil {
 				return err
 			}
