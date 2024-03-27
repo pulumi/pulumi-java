@@ -56,6 +56,9 @@ public class App {
             .toPort(443)
             .build());
 
+        // A contrived example to test that helper nested records ( `filters`
+        // below) generate correctly when using output-versioned function
+        // invoke forms.
         final var amis = Ec2Functions.getAmiIds(GetAmiIdsArgs.builder()
             .owners(bar.id())
             .filters(GetAmiIdsFilterArgs.builder()
