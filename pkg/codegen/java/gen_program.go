@@ -690,6 +690,10 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		g.genImport(w, "com.pulumi.asset.FileArchive")
 	}
 
+	if containsFunctionCall("stringAsset", nodes) {
+		g.genImport(w, "com.pulumi.asset.StringAsset")
+	}
+
 	g.genImport(w, "java.util.List")
 	g.genImport(w, "java.util.ArrayList")
 	g.genImport(w, "java.util.Map")
@@ -1099,7 +1103,7 @@ func (g *generator) genNode(w io.Writer, n pcl.Node) {
 func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
 	message := fmt.Sprintf("not yet implemented: %s", fmt.Sprintf(reason, vs...))
 	g.diagnostics = append(g.diagnostics, &hcl.Diagnostic{
-		Severity: hcl.DiagError,
+		Severity: hcl.DiagWarning,
 		Summary:  message,
 		Detail:   message,
 	})

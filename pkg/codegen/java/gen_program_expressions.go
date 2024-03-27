@@ -267,6 +267,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		} else {
 			g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
 		}
+	case "stringAsset":
+		g.Fgenf(w, "new StringAsset(%.v)", expr.Args[0])
 	case "file":
 		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)), StandardCharsets.UTF_8)", expr.Args[0])
 	case "filebase64":
