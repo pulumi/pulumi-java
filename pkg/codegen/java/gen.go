@@ -319,6 +319,8 @@ func (mod *modContext) typeStringRecHelper(
 			return TypeShape{Type: names.JSONElement}
 		case schema.AnyType:
 			return TypeShape{Type: names.Object}
+		case schema.AnyResourceType:
+			return TypeShape{Type: names.ResourceType}
 		default:
 			panic(fmt.Sprintf("Unknown primitive: %#v", t))
 		}
@@ -956,7 +958,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	printObsoleteAttribute(ctx, r.DeprecationMessage, "")
 	fprintf(w, "@%s(type=\"%s\")\n",
-		ctx.imports.Ref(names.ResourceType),
+		ctx.imports.Ref(names.ResourceTypeAnnotation),
 		r.Token)
 	fprintf(w, "public class %s extends %s {\n", className, baseType)
 
