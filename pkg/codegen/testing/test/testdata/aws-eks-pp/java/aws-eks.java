@@ -44,6 +44,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
+        // VPC
         var eksVpc = new Vpc("eksVpc", VpcArgs.builder()        
             .cidrBlock("10.100.0.0/16")
             .instanceTenancy("default")
@@ -66,6 +67,7 @@ public class App {
             .tags(Map.of("Name", "pulumi-vpc-rt"))
             .build());
 
+        // Subnets, one for each AZ in a region
         final var zones = AwsFunctions.getAvailabilityZones();
 
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
@@ -123,6 +125,7 @@ public class App {
                     .build())
             .build());
 
+        // EKS Cluster Role
         var eksRole = new Role("eksRole", RoleArgs.builder()        
             .assumeRolePolicy(serializeJson(
                 jsonObject(
@@ -148,6 +151,7 @@ public class App {
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy")
             .build());
 
+        // EC2 NodeGroup Role
         var ec2Role = new Role("ec2Role", RoleArgs.builder()        
             .assumeRolePolicy(serializeJson(
                 jsonObject(
@@ -178,6 +182,7 @@ public class App {
             .policyArn("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly")
             .build());
 
+        // EKS Cluster
         var eksCluster = new Cluster("eksCluster", ClusterArgs.builder()        
             .roleArn(eksRole.arn())
             .tags(Map.of("Name", "pulumi-eks-cluster"))

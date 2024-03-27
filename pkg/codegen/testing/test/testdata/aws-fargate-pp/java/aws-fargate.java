@@ -43,6 +43,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
+        // Read the default VPC and public subnets, which we will use.
         final var vpc = Ec2Functions.getVpc(GetVpcArgs.builder()
             .default_(true)
             .build());
@@ -51,6 +52,7 @@ public class App {
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .build());
 
+        // Create a security group that permits HTTP ingress and unrestricted egress.
         var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()        
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .egress(SecurityGroupEgressArgs.builder()
@@ -67,8 +69,10 @@ public class App {
                 .build())
             .build());
 
+        // Create an ECS cluster to run a container-based service.
         var cluster = new Cluster("cluster");
 
+        // Create an IAM role that can be used by our service's task.
         var taskExecRole = new Role("taskExecRole", RoleArgs.builder()        
             .assumeRolePolicy(serializeJson(
                 jsonObject(
@@ -89,6 +93,7 @@ public class App {
             .policyArn("arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
             .build());
 
+        // Create a load balancer to listen for HTTP traffic on port 80.
         var webLoadBalancer = new LoadBalancer("webLoadBalancer", LoadBalancerArgs.builder()        
             .subnets(subnets.applyValue(getSubnetIdsResult -> getSubnetIdsResult.ids()))
             .securityGroups(webSecurityGroup.id())
@@ -110,6 +115,7 @@ public class App {
                 .build())
             .build());
 
+        // Spin up a load balanced service running NGINX
         var appTask = new TaskDefinition("appTask", TaskDefinitionArgs.builder()        
             .family("fargate-task-definition")
             .cpu("256")
