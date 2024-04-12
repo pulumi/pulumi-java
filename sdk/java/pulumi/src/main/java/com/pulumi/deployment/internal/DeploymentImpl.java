@@ -53,7 +53,7 @@ import com.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
-import pulumirpc.Provider.CallRequest;
+import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
@@ -740,14 +740,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var providerReference = providerFuture.join();
 
                         // Add arg dependencies to the request.
-                        CompletableFuture<Map<String, CallRequest.ArgumentDependencies>> argDependencies = CompletableFutures.allOf(
+                        CompletableFuture<Map<String, ResourceCallRequest.ArgumentDependencies>> argDependencies = CompletableFutures.allOf(
                                 serialized.propertyToDependentResources.entrySet().stream().collect(Collectors.toMap(
                                         Map.Entry::getKey,
                                         e -> {
                                             var directDependencies = ImmutableSet.copyOf(e.getValue());
                                             return prepare.getAllTransitivelyReferencedResourceUrnsAsync(directDependencies)
                                                     .thenApply(
-                                                            urns -> CallRequest.ArgumentDependencies.newBuilder()
+                                                            urns -> ResourceCallRequest.ArgumentDependencies.newBuilder()
                                                                     .addAllUrns(urns)
                                                                     .build()
                                                     );
@@ -762,7 +762,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                         // Kick off the call.
                         return argDependencies.thenCompose(deps ->
-                                this.monitor.callAsync(CallRequest.newBuilder()
+                                this.monitor.callAsync(ResourceCallRequest.newBuilder()
                                         .setTok(token)
                                         .setProvider(providerReference.orElse(""))
                                         .setVersion(version.orElse(""))

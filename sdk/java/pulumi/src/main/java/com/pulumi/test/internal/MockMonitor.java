@@ -13,7 +13,7 @@ import com.pulumi.resources.Resource;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
 import com.pulumi.test.Mocks;
-import pulumirpc.Provider.CallRequest;
+import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
@@ -83,7 +83,7 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<CallResponse> callAsync(CallRequest request) {
+    public CompletableFuture<CallResponse> callAsync(ResourceCallRequest request) {
         // For now, we'll route both Invoke and Call through IMocks.CallAsync.
         var args = deserializeToMap(request.getArgs());
 
