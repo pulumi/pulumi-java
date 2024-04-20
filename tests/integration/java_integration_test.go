@@ -23,6 +23,9 @@ func TestIntegrations(t *testing.T) {
 			Quick:         true,
 			DebugUpdates:  false,
 			DebugLogLevel: 0,
+			// Stack references will change on refresh due to steps changing outputs and self stack
+			// references.
+			SkipRefresh:   true,
 			Env: []string{
 				"PULUMI_EXCESSIVE_DEBUG_OUTPUT=false",
 			},

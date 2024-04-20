@@ -1,0 +1,30 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/kubernetes/Config.java",
+    "src/main/java/com/pulumi/kubernetes/Provider.java",
+    "src/main/java/com/pulumi/kubernetes/ProviderArgs.java",
+    "src/main/java/com/pulumi/kubernetes/Utilities.java",
+    "src/main/java/com/pulumi/kubernetes/core_v1/ConfigMap.java",
+    "src/main/java/com/pulumi/kubernetes/core_v1/ConfigMapArgs.java",
+    "src/main/java/com/pulumi/kubernetes/core_v1/ConfigMapList.java",
+    "src/main/java/com/pulumi/kubernetes/core_v1/ConfigMapListArgs.java",
+    "src/main/java/com/pulumi/kubernetes/core_v1/inputs/ConfigMapArgs.java",
+    "src/main/java/com/pulumi/kubernetes/core_v1/outputs/ConfigMap.java",
+    "src/main/java/com/pulumi/kubernetes/helm/sh_v3/Release.java",
+    "src/main/java/com/pulumi/kubernetes/helm/sh_v3/ReleaseArgs.java",
+    "src/main/java/com/pulumi/kubernetes/inputs/KubeClientSettingsArgs.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/inputs/ListMetaArgs.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/inputs/ManagedFieldsEntryArgs.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/inputs/ObjectMetaArgs.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/inputs/OwnerReferenceArgs.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/outputs/ListMeta.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/outputs/ManagedFieldsEntry.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/outputs/ObjectMeta.java",
+    "src/main/java/com/pulumi/kubernetes/meta_v1/outputs/OwnerReference.java",
+    "src/main/java/com/pulumi/kubernetes/yaml_v2/ConfigGroup.java",
+    "src/main/java/com/pulumi/kubernetes/yaml_v2/ConfigGroupArgs.java"
+  ]
+}

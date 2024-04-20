@@ -15,11 +15,11 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="foobar::ModuleResource")
 public class ModuleResource extends com.pulumi.resources.CustomResource {
-    @Export(name="optional_bool", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> optional_bool;
+    @Export(name="optionalBool", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> optionalBool;
 
-    public Output<Optional<Boolean>> optional_bool() {
-        return Codegen.optional(this.optional_bool);
+    public Output<Optional<Boolean>> optionalBool() {
+        return Codegen.optional(this.optionalBool);
     }
 
     /**
@@ -54,9 +54,9 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
     private static ModuleResourceArgs makeArgs(ModuleResourceArgs args) {
         var builder = args == null ? ModuleResourceArgs.builder() : ModuleResourceArgs.builder(args);
         return builder
-            .optional_const("val")
-            .plain_optional_const("val")
-            .plain_required_const("val")
+            .optionalConst("val")
+            .plainOptionalConst("val")
+            .plainRequiredConst("val")
             .build();
     }
 

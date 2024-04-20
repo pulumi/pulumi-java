@@ -70,7 +70,6 @@ func main() {
 		engineAddress = args[0]
 		var err error
 		cancelChannel, err = setupHealthChecks(engineAddress)
-
 		if err != nil {
 			cmdutil.Exit(errors.Wrapf(err, "could not start health check host RPC server"))
 		}

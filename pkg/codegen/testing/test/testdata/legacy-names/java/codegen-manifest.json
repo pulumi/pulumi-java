@@ -1,0 +1,14 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/legacy_names/Example_resource.java",
+    "src/main/java/com/pulumi/legacy_names/Example_resourceArgs.java",
+    "src/main/java/com/pulumi/legacy_names/HTTP_module/inputs/RequestArgs.java",
+    "src/main/java/com/pulumi/legacy_names/Provider.java",
+    "src/main/java/com/pulumi/legacy_names/ProviderArgs.java",
+    "src/main/java/com/pulumi/legacy_names/Utilities.java",
+    "src/main/java/com/pulumi/legacy_names/enums/Enum_XYZ.java"
+  ]
+}
