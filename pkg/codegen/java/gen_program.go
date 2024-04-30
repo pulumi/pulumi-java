@@ -184,8 +184,9 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	}
 
 	g := &generator{
-		program:         program,
-		functionInvokes: map[string]*schema.Function{},
+		program:                     program,
+		functionInvokes:             map[string]*schema.Function{},
+		currentResourcePropertyType: schema.AnyType,
 	}
 
 	g.Formatter = format.NewFormatter(g)
