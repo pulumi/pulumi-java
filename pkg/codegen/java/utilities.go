@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"html"
 	"io"
+	"regexp"
 	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -19,23 +20,45 @@ func formatForeignBlockComment(comment, indent string) string {
 	return formatForeignBlockCommentFrom(comment, 0, indent)
 }
 
+var replaceAtRegexp = regexp.MustCompile("( ?)(@+)")
+
 // formatForeignBlockCommentFrom is like [formatForeignBlockComment], except that it
 // unconditionally accepts the first idx bytes of comment.
 func formatForeignBlockCommentFrom(comment string, idx int, indent string) string {
 	comment = codegen.FilterExamples(comment, "java")
+
+	// Escape a '@' with a '{@literal @}'.
+	//
+	// This inserts a space before the new '@', so we attempt to remove a leading
+	// space when possible. It not possible, we do it anyway.
+	escapeAtLiteral := func(s string) string {
+		return replaceAtRegexp.ReplaceAllString(s, "{@literal $2}")
+	}
 
 	comment = comment[:idx] + mapCommentHelper(comment[idx:],
 		// Code
 		func(s string) string {
 			s = strings.TrimPrefix(s, "```java")
 			s = strings.TrimSuffix(s, "```")
-			return "{@code" + s + "}"
+
+			// Javadoc doesn't have a way to escape an arbitrarily code
+			// snippet. The best we have is:
+			//
+			// <pre>
+			// {@code
+			// THE CODE GOES HERE:
+			// - '@' needs to be escaped.
+			// - '&', '<', '>' does not need to be escaped.
+			// }
+			// </pre>
+			var b strings.Builder
+			b.WriteString("<pre>\n{@code")
+			b.WriteString(escapeAtLiteral(s))
+			b.WriteString("}\n</pre>")
+			return b.String()
 		},
 		// Non-code
-		func(s string) string {
-			s = strings.ReplaceAll(s, "@", "{@literal @}")
-			return html.EscapeString(s)
-		},
+		func(s string) string { return html.EscapeString(escapeAtLiteral(s)) },
 	)
 
 	return formatBlockComment(comment, indent)

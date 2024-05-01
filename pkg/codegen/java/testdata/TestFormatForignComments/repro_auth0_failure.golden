@@ -8,6 +8,7 @@
  * ### Auth0 Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -101,6 +102,7 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Google OAuth2 Connection
@@ -108,6 +110,7 @@
  * \u003e Your Auth0 account may be pre-configured with a `google-oauth2` connection.
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -155,11 +158,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Google Apps
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -217,11 +222,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Facebook Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -266,11 +273,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Apple Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -318,11 +327,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### LinkedIn Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -367,11 +378,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### GitHub Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -416,11 +429,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### SalesForce Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -464,6 +479,7 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### OAuth2 Connection
@@ -471,6 +487,7 @@
  * Also applies to following connection strategies: `dropbox`, `bitbucket`, `paypal`, `twitter`, `amazon`, `yahoo`, `box`, `wordpress`, `shopify`, `custom`
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -523,11 +540,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Active Directory (AD)
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -586,11 +605,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Azure AD Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -655,6 +676,7 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Email Connection
@@ -662,6 +684,7 @@
  * \u003e To be able to see this in the management dashboard as well, the name of the connection must be set to &#34;email&#34;.
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -691,7 +714,7 @@
  *             .name("email")
  *             .options(ConnectionOptionsArgs.builder()
  *                 .name("email")
- *                 .from("{{ application.name }} \u003croot@auth0.com\u003e")
+ *                 .from("{{ application.name }} \u003croot{@literal @}auth0.com\u003e")
  *                 .subject("Welcome to {{ application.name }}")
  *                 .syntax("liquid")
  *                 .template("\u003chtml\u003eThis is the body of the email\u003c/html\u003e")
@@ -713,11 +736,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### SAML Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -761,11 +786,11 @@
  *                 .protocolBinding("urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST")
  *                 .requestTemplate("""
  * \u003csamlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
- * @@AssertServiceURLAndDestination@@
- *     ID="@@ID@@"
- *     IssueInstant="@@IssueInstant@@"
- *     ProtocolBinding="@@ProtocolBinding@@" Version="2.0"\u003e
- *     \u003csaml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\u003e@@Issuer@@\u003c/saml:Issuer\u003e
+ * {@literal @@}AssertServiceURLAndDestination{@literal @@}
+ *     ID="{@literal @@}ID{@literal @@}"
+ *     IssueInstant="{@literal @@}IssueInstant{@literal @@}"
+ *     ProtocolBinding="{@literal @@}ProtocolBinding{@literal @@}" Version="2.0"\u003e
+ *     \u003csaml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\u003e{@literal @@}Issuer{@literal @@}\u003c/saml:Issuer\u003e
  * \u003c/samlp:AuthnRequest\u003e                """)
  *                 .userIdAttribute("https://saml.provider/imi/ns/identity-200810")
  *                 .signatureAlgorithm("rsa-sha256")
@@ -825,11 +850,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### WindowsLive Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -873,11 +900,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### OIDC Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -952,11 +981,13 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ### Okta Connection
  * 
  * \u003c!--Start PulumiCodeChooser --\u003e
+ * <pre>
  * {@code
  * package generated_program;
  * 
@@ -1034,6 +1065,7 @@
  *     }
  * }
  * }
+ * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
  * 
  * ## Import
