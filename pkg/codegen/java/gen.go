@@ -414,7 +414,7 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 	}
 
 	if prop.Comment != "" {
-		fprintf(w, "%s\n", formatForeignBlockCommentFrom(preamble+prop.Comment, len(preamble), options.indent))
+		fprintf(w, "%s\n", formatBlockComment(preamble+prop.Comment, options.indent))
 	}
 	if options.isBuilder {
 		fprintf(w, "%s\n", formatBlockComment("@return builder", options.indent))
@@ -422,7 +422,7 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 
 	if prop.DeprecationMessage != "" {
 		fprintf(w, "%s * @deprecated\n", options.indent)
-		fprintf(w, "%s\n", formatForeignBlockComment(prop.DeprecationMessage, options.indent))
+		fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, options.indent))
 	}
 	fprintf(w, "%s */\n", options.indent)
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, options.indent)
@@ -523,7 +523,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	// Open the class.
 	if pt.comment != "" {
 		fprintf(w, "/**\n")
-		fprintf(w, "%s\n", formatForeignBlockComment(pt.comment, ""))
+		fprintf(w, "%s\n", formatBlockComment(pt.comment, ""))
 		fprintf(w, " */\n")
 	}
 
@@ -931,12 +931,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if r.Comment != "" || r.DeprecationMessage != "" {
 		fprintf(w, "/**\n")
 		if r.Comment != "" {
-			fprintf(w, "%s\n", formatForeignBlockComment(r.Comment, ""))
+			fprintf(w, "%s\n", formatBlockComment(r.Comment, ""))
 		}
 
 		if r.DeprecationMessage != "" {
 			fprintf(w, " * @deprecated\n")
-			fprintf(w, "%s\n", formatForeignBlockComment(r.DeprecationMessage, ""))
+			fprintf(w, "%s\n", formatBlockComment(r.DeprecationMessage, ""))
 
 		}
 		fprintf(w, " */\n")
@@ -986,12 +986,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
 			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatForeignBlockComment(prop.Comment, "    "))
+				fprintf(w, "%s\n", formatBlockComment(prop.Comment, "    "))
 			}
 
 			if prop.DeprecationMessage != "" {
 				fprintf(w, "     * @deprecated\n")
-				fprintf(w, "%s\n", formatForeignBlockComment(prop.DeprecationMessage, "    "))
+				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, "    "))
 
 			}
 			fprintf(w, "     */\n")
@@ -1009,7 +1009,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		if prop.Comment != "" {
 			fprintf(w, "    /**\n")
-			fprintf(w, "%s\n", formatForeignBlockCommentFrom("@return "+prop.Comment, 2, "    "))
+			fprintf(w, "%s\n", formatBlockComment("@return "+prop.Comment, "    "))
 			fprintf(w, "     */\n")
 		}
 
@@ -1220,10 +1220,10 @@ func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent st
 	w := ctx.writer
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
-		fprintf(w, "%s\n", formatForeignBlockComment(fun.Comment, indent))
+		fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
 		if fun.DeprecationMessage != "" {
 			fprintf(w, "     * @deprecated\n")
-			fprintf(w, "%s\n", formatForeignBlockComment(fun.DeprecationMessage, indent))
+			fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
 		}
 		fprintf(w, "     */\n")
 	}
@@ -1469,7 +1469,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 
 	if enum.Comment != "" {
 		fprintf(w, "%s/**\n", indent)
-		fprintf(w, "%s\n", formatForeignBlockComment(enum.Comment, indent))
+		fprintf(w, "%s\n", formatBlockComment(enum.Comment, indent))
 		fprintf(w, "%s */\n", indent)
 	}
 
@@ -1494,7 +1494,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 			if e.Comment != "" || e.DeprecationMessage != "" {
 				fprintf(w, "%s/**\n", indent)
 				if e.Comment != "" {
-					fprintf(w, "%s\n", formatForeignBlockComment(e.Comment, indent))
+					fprintf(w, "%s\n", formatBlockComment(e.Comment, indent))
 				}
 
 				if e.DeprecationMessage != "" {
@@ -1685,7 +1685,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 
 		if p.Comment != "" {
 			fprintf(w, "/**\n")
-			fprintf(w, "%s\n", formatForeignBlockComment(p.Comment, ""))
+			fprintf(w, "%s\n", formatBlockComment(p.Comment, ""))
 			fprintf(w, " */\n")
 		}
 		if err := getterTemplate.Execute(w, getterTemplateContext{
