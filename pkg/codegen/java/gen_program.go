@@ -904,6 +904,20 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	}
 	g.genTrivia(w, resource.Definition.Tokens.GetOpenBrace())
 
+	if resource.Schema != nil {
+		for _, input := range resource.Inputs {
+			// We traverse the set of resource input types to make sure that this attribute appears in the schema.
+			// However, we'll use the type we've already computed rather than the result of the traversal since the
+			// latter will typically be a union of the type we've computed and one or more output types. This may result
+			// in inaccurate code generation later on. Arguably this is a bug in the generator, but this will have to do
+			// for now.
+			_, diagnostics := resource.InputType.Traverse(hcl.TraverseAttr{Name: input.Name})
+			g.diagnostics = append(g.diagnostics, diagnostics...)
+			value := g.lowerExpression(input.Value, input.Type())
+			input.Value = value
+		}
+	}
+
 	instantiate := func(resName string) {
 		resourceProperties := typedResourceProperties(resource)
 		if len(resource.Inputs) == 0 && !hasCustomResourceOptions(resource) {
@@ -916,13 +930,13 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			g.Fgen(w, ")")
 		} else {
 			g.Fgenf(w, "new %s(%s, %s.builder()", resourceTypeName, resName, resourceArgs)
-			g.Fgenf(w, "%s\n", g.Indent)
+			g.Fgen(w, "\n")
 			g.Indented(func() {
 				for _, attr := range resource.Inputs {
 					attributeIdent := names.MakeValidIdentifier(attr.Name)
 					attributeSchemaType := resourceProperties[attr.Name]
 					g.currentResourcePropertyType = attributeSchemaType
-					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, g.lowerExpression(attr.Value, attr.Type()))
+					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, attr.Value)
 				}
 
 				if !hasCustomResourceOptions(resource) {

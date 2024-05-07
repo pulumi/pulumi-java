@@ -18,7 +18,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var random_pet = new RandomPet("random_pet", RandomPetArgs.builder()        
+        var random_pet = new RandomPet("random_pet", RandomPetArgs.builder()
             .prefix("doggo")
             .build());
 

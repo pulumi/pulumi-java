@@ -24,7 +24,7 @@ public class App {
 
     public static void stack(Context ctx) {
         // Create a new security group for port 80.
-        var securityGroup = new SecurityGroup("securityGroup", SecurityGroupArgs.builder()        
+        var securityGroup = new SecurityGroup("securityGroup", SecurityGroupArgs.builder()
             .ingress(SecurityGroupIngressArgs.builder()
                 .protocol("tcp")
                 .fromPort(0)
@@ -44,7 +44,7 @@ public class App {
             .build());
 
         // Create a simple web server using the startup script for the instance.
-        var server = new Instance("server", InstanceArgs.builder()        
+        var server = new Instance("server", InstanceArgs.builder()
             .tags(Map.of("Name", "web-server-www"))
             .instanceType("t2.micro")
             .securityGroups(securityGroup.name())

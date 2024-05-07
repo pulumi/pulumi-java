@@ -28,7 +28,7 @@ public class App {
 
     public static void stack(Context ctx) {
         // Create a bucket and expose a website index document
-        var siteBucket = new Bucket("siteBucket", BucketArgs.builder()        
+        var siteBucket = new Bucket("siteBucket", BucketArgs.builder()
             .website(BucketWebsiteArgs.builder()
                 .indexDocument("index.html")
                 .build())
@@ -38,7 +38,7 @@ public class App {
 
         // For each file in the directory, create an S3 object stored in `siteBucket`
         for (var range : readDir(siteDir)) {
-            new BucketObject("files-" + range.key(), BucketObjectArgs.builder()            
+            new BucketObject("files-" + range.key(), BucketObjectArgs.builder()
                 .bucket(siteBucket.id())
                 .key(range.value())
                 .source(new FileAsset(Paths.get(siteDir, range.value())))
@@ -48,7 +48,7 @@ public class App {
 
         // set the MIME type of the file
         // Set the access policy for the bucket so all objects are readable
-        var bucketPolicy = new BucketPolicy("bucketPolicy", BucketPolicyArgs.builder()        
+        var bucketPolicy = new BucketPolicy("bucketPolicy", BucketPolicyArgs.builder()
             .bucket(siteBucket.id())
             .policy(siteBucket.id().applyValue(id -> serializeJson(
                 jsonObject(

@@ -22,7 +22,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var frontDoor = new FrontDoor("frontDoor", FrontDoorArgs.builder()        
+        var frontDoor = new FrontDoor("frontDoor", FrontDoorArgs.builder()
             .routingRules(RoutingRuleArgs.builder()
                 .routeConfiguration(ForwardingConfigurationArgs.builder()
                     .odataType("#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration")
@@ -33,7 +33,7 @@ public class App {
                 .build())
             .build());
 
-        var endpoint = new Endpoint("endpoint", EndpointArgs.builder()        
+        var endpoint = new Endpoint("endpoint", EndpointArgs.builder()
             .deliveryPolicy(EndpointPropertiesUpdateParametersDeliveryPolicyArgs.builder()
                 .rules(DeliveryRuleArgs.builder()
                     .actions(                    

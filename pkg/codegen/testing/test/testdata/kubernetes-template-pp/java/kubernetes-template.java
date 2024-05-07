@@ -24,11 +24,11 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var provider = new Provider("provider", ProviderArgs.builder()        
-            .enableServerSideApply(true)
+        var provider = new Provider("provider", ProviderArgs.builder()
+            .enableDryRun(true)
             .build());
 
-        var argocd_serverDeployment = new Deployment("argocd_serverDeployment", DeploymentArgs.builder()        
+        var argocd_serverDeployment = new Deployment("argocd_serverDeployment", DeploymentArgs.builder()
             .apiVersion("apps/v1")
             .kind("Deployment")
             .metadata(ObjectMetaArgs.builder()

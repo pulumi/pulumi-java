@@ -22,11 +22,11 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var provider = new Provider("provider", ProviderArgs.builder()        
+        var provider = new Provider("provider", ProviderArgs.builder()
             .region("us-west-2")
             .build());
 
-        var bucket = new Bucket("bucket", BucketArgs.builder()        
+        var bucket = new Bucket("bucket", BucketArgs.builder()
             .website(BucketWebsiteArgs.builder()
                 .indexDocument("index.html")
                 .build())

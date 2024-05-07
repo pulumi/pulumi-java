@@ -45,7 +45,7 @@ public class App {
 
     public static void stack(Context ctx) {
         // VPC
-        var eksVpc = new Vpc("eksVpc", VpcArgs.builder()        
+        var eksVpc = new Vpc("eksVpc", VpcArgs.builder()
             .cidrBlock("10.100.0.0/16")
             .instanceTenancy("default")
             .enableDnsHostnames(true)
@@ -53,12 +53,12 @@ public class App {
             .tags(Map.of("Name", "pulumi-eks-vpc"))
             .build());
 
-        var eksIgw = new InternetGateway("eksIgw", InternetGatewayArgs.builder()        
+        var eksIgw = new InternetGateway("eksIgw", InternetGatewayArgs.builder()
             .vpcId(eksVpc.id())
             .tags(Map.of("Name", "pulumi-vpc-ig"))
             .build());
 
-        var eksRouteTable = new RouteTable("eksRouteTable", RouteTableArgs.builder()        
+        var eksRouteTable = new RouteTable("eksRouteTable", RouteTableArgs.builder()
             .vpcId(eksVpc.id())
             .routes(RouteTableRouteArgs.builder()
                 .cidrBlock("0.0.0.0/0")
@@ -73,7 +73,7 @@ public class App {
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
             for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
-                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()                
+                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()
                     .assignIpv6AddressOnCreation(false)
                     .vpcId(eksVpc.id())
                     .mapPublicIpOnLaunch(true)
@@ -91,7 +91,7 @@ public class App {
         final var rta = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<RouteTableAssociation>();
             for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
-                var resource = new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()                
+                var resource = new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()
                     .routeTableId(eksRouteTable.id())
                     .subnetId(vpcSubnet[range.key()].id())
                     .build());
@@ -104,7 +104,7 @@ public class App {
 
         final var subnetIds = vpcSubnet.stream().map(element -> element.id()).collect(toList());
 
-        var eksSecurityGroup = new SecurityGroup("eksSecurityGroup", SecurityGroupArgs.builder()        
+        var eksSecurityGroup = new SecurityGroup("eksSecurityGroup", SecurityGroupArgs.builder()
             .vpcId(eksVpc.id())
             .description("Allow all HTTP(s) traffic to EKS Cluster")
             .tags(Map.of("Name", "pulumi-cluster-sg"))
@@ -126,7 +126,7 @@ public class App {
             .build());
 
         // EKS Cluster Role
-        var eksRole = new Role("eksRole", RoleArgs.builder()        
+        var eksRole = new Role("eksRole", RoleArgs.builder()
             .assumeRolePolicy(serializeJson(
                 jsonObject(
                     jsonProperty("Version", "2012-10-17"),
@@ -141,18 +141,18 @@ public class App {
                 )))
             .build());
 
-        var servicePolicyAttachment = new RolePolicyAttachment("servicePolicyAttachment", RolePolicyAttachmentArgs.builder()        
+        var servicePolicyAttachment = new RolePolicyAttachment("servicePolicyAttachment", RolePolicyAttachmentArgs.builder()
             .role(eksRole.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSServicePolicy")
             .build());
 
-        var clusterPolicyAttachment = new RolePolicyAttachment("clusterPolicyAttachment", RolePolicyAttachmentArgs.builder()        
+        var clusterPolicyAttachment = new RolePolicyAttachment("clusterPolicyAttachment", RolePolicyAttachmentArgs.builder()
             .role(eksRole.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy")
             .build());
 
         // EC2 NodeGroup Role
-        var ec2Role = new Role("ec2Role", RoleArgs.builder()        
+        var ec2Role = new Role("ec2Role", RoleArgs.builder()
             .assumeRolePolicy(serializeJson(
                 jsonObject(
                     jsonProperty("Version", "2012-10-17"),
@@ -167,23 +167,23 @@ public class App {
                 )))
             .build());
 
-        var workerNodePolicyAttachment = new RolePolicyAttachment("workerNodePolicyAttachment", RolePolicyAttachmentArgs.builder()        
+        var workerNodePolicyAttachment = new RolePolicyAttachment("workerNodePolicyAttachment", RolePolicyAttachmentArgs.builder()
             .role(ec2Role.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy")
             .build());
 
-        var cniPolicyAttachment = new RolePolicyAttachment("cniPolicyAttachment", RolePolicyAttachmentArgs.builder()        
+        var cniPolicyAttachment = new RolePolicyAttachment("cniPolicyAttachment", RolePolicyAttachmentArgs.builder()
             .role(ec2Role.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSCNIPolicy")
             .build());
 
-        var registryPolicyAttachment = new RolePolicyAttachment("registryPolicyAttachment", RolePolicyAttachmentArgs.builder()        
+        var registryPolicyAttachment = new RolePolicyAttachment("registryPolicyAttachment", RolePolicyAttachmentArgs.builder()
             .role(ec2Role.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly")
             .build());
 
         // EKS Cluster
-        var eksCluster = new Cluster("eksCluster", ClusterArgs.builder()        
+        var eksCluster = new Cluster("eksCluster", ClusterArgs.builder()
             .roleArn(eksRole.arn())
             .tags(Map.of("Name", "pulumi-eks-cluster"))
             .vpcConfig(ClusterVpcConfigArgs.builder()
@@ -193,7 +193,7 @@ public class App {
                 .build())
             .build());
 
-        var nodeGroup = new NodeGroup("nodeGroup", NodeGroupArgs.builder()        
+        var nodeGroup = new NodeGroup("nodeGroup", NodeGroupArgs.builder()
             .clusterName(eksCluster.name())
             .nodeGroupName("pulumi-eks-nodegroup")
             .nodeRoleArn(ec2Role.arn())
