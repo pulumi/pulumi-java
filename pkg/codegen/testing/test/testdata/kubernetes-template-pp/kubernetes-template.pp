@@ -1,5 +1,5 @@
 resource provider "pulumi:providers:kubernetes" {
-    enableServerSideApply = true
+    enableDryRun = true
 }
 
 resource argocd_serverDeployment "kubernetes:apps/v1:Deployment" {

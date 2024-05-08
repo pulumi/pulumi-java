@@ -20,7 +20,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var bar = new Pod("bar", PodArgs.builder()        
+        var bar = new Pod("bar", PodArgs.builder()
             .apiVersion("v1")
             .kind("Pod")
             .metadata(ObjectMetaArgs.builder()

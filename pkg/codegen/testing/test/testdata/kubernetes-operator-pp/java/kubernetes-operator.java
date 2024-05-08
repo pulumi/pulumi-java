@@ -32,7 +32,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var pulumi_kubernetes_operatorDeployment = new Deployment("pulumi_kubernetes_operatorDeployment", DeploymentArgs.builder()        
+        var pulumi_kubernetes_operatorDeployment = new Deployment("pulumi_kubernetes_operatorDeployment", DeploymentArgs.builder()
             .apiVersion("apps/v1")
             .kind("Deployment")
             .metadata(ObjectMetaArgs.builder()
@@ -85,7 +85,7 @@ public class App {
                 .build())
             .build());
 
-        var pulumi_kubernetes_operatorRole = new Role("pulumi_kubernetes_operatorRole", RoleArgs.builder()        
+        var pulumi_kubernetes_operatorRole = new Role("pulumi_kubernetes_operatorRole", RoleArgs.builder()
             .apiVersion("rbac.authorization.k8s.io/v1")
             .kind("Role")
             .metadata(ObjectMetaArgs.builder()
@@ -168,7 +168,7 @@ public class App {
                     .build())
             .build());
 
-        var pulumi_kubernetes_operatorRoleBinding = new RoleBinding("pulumi_kubernetes_operatorRoleBinding", RoleBindingArgs.builder()        
+        var pulumi_kubernetes_operatorRoleBinding = new RoleBinding("pulumi_kubernetes_operatorRoleBinding", RoleBindingArgs.builder()
             .kind("RoleBinding")
             .apiVersion("rbac.authorization.k8s.io/v1")
             .metadata(ObjectMetaArgs.builder()
@@ -185,7 +185,7 @@ public class App {
                 .build())
             .build());
 
-        var pulumi_kubernetes_operatorServiceAccount = new ServiceAccount("pulumi_kubernetes_operatorServiceAccount", ServiceAccountArgs.builder()        
+        var pulumi_kubernetes_operatorServiceAccount = new ServiceAccount("pulumi_kubernetes_operatorServiceAccount", ServiceAccountArgs.builder()
             .apiVersion("v1")
             .kind("ServiceAccount")
             .metadata(ObjectMetaArgs.builder()

@@ -26,7 +26,7 @@ public class App {
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
             for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
-                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()                
+                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()
                     .assignIpv6AddressOnCreation(false)
                     .mapPublicIpOnLaunch(true)
                     .cidrBlock(String.format("10.100.%s.0/24", range.key()))
