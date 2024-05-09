@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+## 0.11.0 (2024-05-09)
+
+### Bug Fixes
+
+* Escape javadoc special characters in generated code.
+* Fail fast rather than emitting `PANIC`s when attempting to generate code for ill-formed programs.
+
 ## 0.10.0 (2024-03-27)
 
 ### Improvements
