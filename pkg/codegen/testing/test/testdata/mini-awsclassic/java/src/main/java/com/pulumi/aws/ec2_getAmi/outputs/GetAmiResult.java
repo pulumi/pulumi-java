@@ -4,6 +4,7 @@
 package com.pulumi.aws.ec2_getAmi.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,13 +45,16 @@ public final class GetAmiResult {
 
         @CustomType.Setter
         public Builder kernelId(String kernelId) {
-            this.kernelId = Objects.requireNonNull(kernelId);
+            if (kernelId == null) {
+              throw new MissingRequiredPropertyException("GetAmiResult", "kernelId");
+            }
+            this.kernelId = kernelId;
             return this;
         }
         public GetAmiResult build() {
-            final var o = new GetAmiResult();
-            o.kernelId = kernelId;
-            return o;
+            final var _resultValue = new GetAmiResult();
+            _resultValue.kernelId = kernelId;
+            return _resultValue;
         }
     }
 }

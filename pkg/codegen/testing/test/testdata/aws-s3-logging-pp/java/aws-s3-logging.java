@@ -23,13 +23,13 @@ public class App {
     public static void stack(Context ctx) {
         var logs = new Bucket("logs");
 
-        var bucket = new Bucket("bucket", BucketArgs.builder()        
+        var bucket = new Bucket("bucket", BucketArgs.builder()
             .loggings(BucketLoggingArgs.builder()
                 .targetBucket(logs.bucket())
                 .build())
             .build());
 
-        var indexFile = new BucketObject("indexFile", BucketObjectArgs.builder()        
+        var indexFile = new BucketObject("indexFile", BucketObjectArgs.builder()
             .bucket(bucket.id())
             .source(Files.readString(Paths.get("./index.html")))
             .build());

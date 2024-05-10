@@ -136,6 +136,7 @@ type builderSetterTemplateContext struct {
 	PropertyType string
 	PropertyName string
 	Assignment   string
+	IsRequired   bool
 	ListType     string
 	Annotations  []string
 }
@@ -173,6 +174,9 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}    {{ $annotation }}
 {{- end }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
+{{ if $setter.IsRequired }}{{ $.Indent }}        if ({{ $setter.PropertyName }} == null) {
+{{ $.Indent }}          throw new MissingRequiredPropertyException("{{ $.ResultType }}", "{{ $setter.PropertyName }}");
+{{ $.Indent }}        }{{ end }}
 {{ $.Indent }}        {{ $setter.Assignment }};
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
@@ -183,11 +187,11 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{- end -}}
 {{ end }}
 {{ $.Indent }}    public {{ .ResultType }} build() {
-{{ $.Indent }}        final var o = new {{ .ResultType }}();
+{{ $.Indent }}        final var _resultValue = new {{ .ResultType }}();
 {{- range $i, $field := .Fields }}
-{{ $.Indent }}        o.{{ $field.FieldName }} = {{ $field.FieldName }};
+{{ $.Indent }}        _resultValue.{{ $field.FieldName }} = {{ $field.FieldName }};
 {{- end }}
-{{ $.Indent }}        return o;
+{{ $.Indent }}        return _resultValue;
 {{ .Indent }}    }
 {{ .Indent }}}`
 

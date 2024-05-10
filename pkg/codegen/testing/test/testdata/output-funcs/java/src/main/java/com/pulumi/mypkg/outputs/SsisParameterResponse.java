@@ -200,79 +200,91 @@ public final class SsisParameterResponse {
 
         @CustomType.Setter
         public Builder dataType(@Nullable String dataType) {
+
             this.dataType = dataType;
             return this;
         }
         @CustomType.Setter
         public Builder defaultValue(@Nullable String defaultValue) {
+
             this.defaultValue = defaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder designDefaultValue(@Nullable String designDefaultValue) {
+
             this.designDefaultValue = designDefaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder required(@Nullable Boolean required) {
+
             this.required = required;
             return this;
         }
         @CustomType.Setter
         public Builder sensitive(@Nullable Boolean sensitive) {
+
             this.sensitive = sensitive;
             return this;
         }
         @CustomType.Setter
         public Builder sensitiveDefaultValue(@Nullable String sensitiveDefaultValue) {
+
             this.sensitiveDefaultValue = sensitiveDefaultValue;
             return this;
         }
         @CustomType.Setter
         public Builder valueSet(@Nullable Boolean valueSet) {
+
             this.valueSet = valueSet;
             return this;
         }
         @CustomType.Setter
         public Builder valueType(@Nullable String valueType) {
+
             this.valueType = valueType;
             return this;
         }
         @CustomType.Setter
         public Builder variable(@Nullable String variable) {
+
             this.variable = variable;
             return this;
         }
         public SsisParameterResponse build() {
-            final var o = new SsisParameterResponse();
-            o.dataType = dataType;
-            o.defaultValue = defaultValue;
-            o.description = description;
-            o.designDefaultValue = designDefaultValue;
-            o.id = id;
-            o.name = name;
-            o.required = required;
-            o.sensitive = sensitive;
-            o.sensitiveDefaultValue = sensitiveDefaultValue;
-            o.valueSet = valueSet;
-            o.valueType = valueType;
-            o.variable = variable;
-            return o;
+            final var _resultValue = new SsisParameterResponse();
+            _resultValue.dataType = dataType;
+            _resultValue.defaultValue = defaultValue;
+            _resultValue.description = description;
+            _resultValue.designDefaultValue = designDefaultValue;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.required = required;
+            _resultValue.sensitive = sensitive;
+            _resultValue.sensitiveDefaultValue = sensitiveDefaultValue;
+            _resultValue.valueSet = valueSet;
+            _resultValue.valueType = valueType;
+            _resultValue.variable = variable;
+            return _resultValue;
         }
     }
 }

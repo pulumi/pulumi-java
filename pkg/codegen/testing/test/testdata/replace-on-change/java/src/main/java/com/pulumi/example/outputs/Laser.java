@@ -50,25 +50,28 @@ public final class Laser {
 
         @CustomType.Setter
         public Builder animal(@Nullable Cat animal) {
+
             this.animal = animal;
             return this;
         }
         @CustomType.Setter
         public Builder batteries(@Nullable Boolean batteries) {
+
             this.batteries = batteries;
             return this;
         }
         @CustomType.Setter
         public Builder light(@Nullable Double light) {
+
             this.light = light;
             return this;
         }
         public Laser build() {
-            final var o = new Laser();
-            o.animal = animal;
-            o.batteries = batteries;
-            o.light = light;
-            return o;
+            final var _resultValue = new Laser();
+            _resultValue.animal = animal;
+            _resultValue.batteries = batteries;
+            _resultValue.light = light;
+            return _resultValue;
         }
     }
 }

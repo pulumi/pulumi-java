@@ -36,13 +36,14 @@ public final class SomeOtherObject {
 
         @CustomType.Setter
         public Builder baz(@Nullable String baz) {
+
             this.baz = baz;
             return this;
         }
         public SomeOtherObject build() {
-            final var o = new SomeOtherObject();
-            o.baz = baz;
-            return o;
+            final var _resultValue = new SomeOtherObject();
+            _resultValue.baz = baz;
+            return _resultValue;
         }
     }
 }

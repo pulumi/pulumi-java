@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.outputs.GetAmiIdsFilter;
 import java.lang.Boolean;
 import java.lang.String;
@@ -83,6 +84,7 @@ public final class GetAmiIdsResult {
 
         @CustomType.Setter
         public Builder executableUsers(@Nullable List<String> executableUsers) {
+
             this.executableUsers = executableUsers;
             return this;
         }
@@ -91,6 +93,7 @@ public final class GetAmiIdsResult {
         }
         @CustomType.Setter
         public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
+
             this.filters = filters;
             return this;
         }
@@ -99,12 +102,18 @@ public final class GetAmiIdsResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetAmiIdsResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder ids(List<String> ids) {
-            this.ids = Objects.requireNonNull(ids);
+            if (ids == null) {
+              throw new MissingRequiredPropertyException("GetAmiIdsResult", "ids");
+            }
+            this.ids = ids;
             return this;
         }
         public Builder ids(String... ids) {
@@ -112,12 +121,16 @@ public final class GetAmiIdsResult {
         }
         @CustomType.Setter
         public Builder nameRegex(@Nullable String nameRegex) {
+
             this.nameRegex = nameRegex;
             return this;
         }
         @CustomType.Setter
         public Builder owners(List<String> owners) {
-            this.owners = Objects.requireNonNull(owners);
+            if (owners == null) {
+              throw new MissingRequiredPropertyException("GetAmiIdsResult", "owners");
+            }
+            this.owners = owners;
             return this;
         }
         public Builder owners(String... owners) {
@@ -125,19 +138,20 @@ public final class GetAmiIdsResult {
         }
         @CustomType.Setter
         public Builder sortAscending(@Nullable Boolean sortAscending) {
+
             this.sortAscending = sortAscending;
             return this;
         }
         public GetAmiIdsResult build() {
-            final var o = new GetAmiIdsResult();
-            o.executableUsers = executableUsers;
-            o.filters = filters;
-            o.id = id;
-            o.ids = ids;
-            o.nameRegex = nameRegex;
-            o.owners = owners;
-            o.sortAscending = sortAscending;
-            return o;
+            final var _resultValue = new GetAmiIdsResult();
+            _resultValue.executableUsers = executableUsers;
+            _resultValue.filters = filters;
+            _resultValue.id = id;
+            _resultValue.ids = ids;
+            _resultValue.nameRegex = nameRegex;
+            _resultValue.owners = owners;
+            _resultValue.sortAscending = sortAscending;
+            return _resultValue;
         }
     }
 }

@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,19 +57,25 @@ public final class ImageInformationResponse {
 
         @CustomType.Setter
         public Builder imageType(String imageType) {
-            this.imageType = Objects.requireNonNull(imageType);
+            if (imageType == null) {
+              throw new MissingRequiredPropertyException("ImageInformationResponse", "imageType");
+            }
+            this.imageType = imageType;
             return this;
         }
         @CustomType.Setter
         public Builder imageUrl(String imageUrl) {
-            this.imageUrl = Objects.requireNonNull(imageUrl);
+            if (imageUrl == null) {
+              throw new MissingRequiredPropertyException("ImageInformationResponse", "imageUrl");
+            }
+            this.imageUrl = imageUrl;
             return this;
         }
         public ImageInformationResponse build() {
-            final var o = new ImageInformationResponse();
-            o.imageType = imageType;
-            o.imageUrl = imageUrl;
-            return o;
+            final var _resultValue = new ImageInformationResponse();
+            _resultValue.imageType = imageType;
+            _resultValue.imageUrl = imageUrl;
+            return _resultValue;
         }
     }
 }

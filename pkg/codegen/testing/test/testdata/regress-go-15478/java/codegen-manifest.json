@@ -1,0 +1,13 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/nestedTypes/Provider.java",
+    "src/main/java/com/pulumi/nestedTypes/ProviderArgs.java",
+    "src/main/java/com/pulumi/nestedTypes/Resource.java",
+    "src/main/java/com/pulumi/nestedTypes/ResourceArgs.java",
+    "src/main/java/com/pulumi/nestedTypes/Utilities.java",
+    "src/main/java/com/pulumi/nestedTypes/outputs/NestedType.java"
+  ]
+}

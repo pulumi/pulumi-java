@@ -22,11 +22,11 @@ public class NoRecursive extends com.pulumi.resources.CustomResource {
     public Output<Optional<Rec>> rec() {
         return Codegen.optional(this.rec);
     }
-    @Export(name="replace", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> replace;
+    @Export(name="replaceMe", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> replaceMe;
 
-    public Output<Optional<String>> replace() {
-        return Codegen.optional(this.replace);
+    public Output<Optional<String>> replaceMe() {
+        return Codegen.optional(this.replaceMe);
     }
 
     /**

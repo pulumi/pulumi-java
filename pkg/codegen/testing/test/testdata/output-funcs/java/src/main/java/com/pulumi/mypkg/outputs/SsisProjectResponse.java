@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.outputs.SsisEnvironmentReferenceResponse;
 import com.pulumi.mypkg.outputs.SsisParameterResponse;
 import java.lang.Double;
@@ -148,11 +149,13 @@ public final class SsisProjectResponse {
 
         @CustomType.Setter
         public Builder description(@Nullable String description) {
+
             this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder environmentRefs(@Nullable List<SsisEnvironmentReferenceResponse> environmentRefs) {
+
             this.environmentRefs = environmentRefs;
             return this;
         }
@@ -161,21 +164,25 @@ public final class SsisProjectResponse {
         }
         @CustomType.Setter
         public Builder folderId(@Nullable Double folderId) {
+
             this.folderId = folderId;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
+
             this.parameters = parameters;
             return this;
         }
@@ -184,25 +191,29 @@ public final class SsisProjectResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("SsisProjectResponse", "type");
+            }
+            this.type = type;
             return this;
         }
         @CustomType.Setter
         public Builder version(@Nullable Double version) {
+
             this.version = version;
             return this;
         }
         public SsisProjectResponse build() {
-            final var o = new SsisProjectResponse();
-            o.description = description;
-            o.environmentRefs = environmentRefs;
-            o.folderId = folderId;
-            o.id = id;
-            o.name = name;
-            o.parameters = parameters;
-            o.type = type;
-            o.version = version;
-            return o;
+            final var _resultValue = new SsisProjectResponse();
+            _resultValue.description = description;
+            _resultValue.environmentRefs = environmentRefs;
+            _resultValue.folderId = folderId;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.parameters = parameters;
+            _resultValue.type = type;
+            _resultValue.version = version;
+            return _resultValue;
         }
     }
 }

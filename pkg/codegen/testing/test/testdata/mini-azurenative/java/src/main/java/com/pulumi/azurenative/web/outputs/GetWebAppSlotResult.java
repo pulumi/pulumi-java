@@ -44,13 +44,14 @@ public final class GetWebAppSlotResult {
 
         @CustomType.Setter
         public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
+
             this.siteConfig = siteConfig;
             return this;
         }
         public GetWebAppSlotResult build() {
-            final var o = new GetWebAppSlotResult();
-            o.siteConfig = siteConfig;
-            return o;
+            final var _resultValue = new GetWebAppSlotResult();
+            _resultValue.siteConfig = siteConfig;
+            return _resultValue;
         }
     }
 }

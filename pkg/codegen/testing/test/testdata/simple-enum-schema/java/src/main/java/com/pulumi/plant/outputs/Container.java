@@ -4,6 +4,7 @@
 package com.pulumi.plant.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.plant.enums.ContainerBrightness;
 import com.pulumi.plant.enums.ContainerSize;
 import java.lang.String;
@@ -56,31 +57,37 @@ public final class Container {
 
         @CustomType.Setter
         public Builder brightness(@Nullable ContainerBrightness brightness) {
+
             this.brightness = brightness;
             return this;
         }
         @CustomType.Setter
         public Builder color(@Nullable String color) {
+
             this.color = color;
             return this;
         }
         @CustomType.Setter
         public Builder material(@Nullable String material) {
+
             this.material = material;
             return this;
         }
         @CustomType.Setter
         public Builder size(ContainerSize size) {
-            this.size = Objects.requireNonNull(size);
+            if (size == null) {
+              throw new MissingRequiredPropertyException("Container", "size");
+            }
+            this.size = size;
             return this;
         }
         public Container build() {
-            final var o = new Container();
-            o.brightness = brightness;
-            o.color = color;
-            o.material = material;
-            o.size = size;
-            return o;
+            final var _resultValue = new Container();
+            _resultValue.brightness = brightness;
+            _resultValue.color = color;
+            _resultValue.material = material;
+            _resultValue.size = size;
+            return _resultValue;
         }
     }
 }

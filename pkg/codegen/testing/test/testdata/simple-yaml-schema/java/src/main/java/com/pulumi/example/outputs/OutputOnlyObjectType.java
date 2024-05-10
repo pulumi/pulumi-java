@@ -36,13 +36,14 @@ public final class OutputOnlyObjectType {
 
         @CustomType.Setter
         public Builder foo(@Nullable String foo) {
+
             this.foo = foo;
             return this;
         }
         public OutputOnlyObjectType build() {
-            final var o = new OutputOnlyObjectType();
-            o.foo = foo;
-            return o;
+            final var _resultValue = new OutputOnlyObjectType();
+            _resultValue.foo = foo;
+            return _resultValue;
         }
     }
 }

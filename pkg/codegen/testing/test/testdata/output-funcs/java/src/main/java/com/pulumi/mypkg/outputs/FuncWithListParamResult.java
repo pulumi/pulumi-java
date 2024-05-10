@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,13 +35,16 @@ public final class FuncWithListParamResult {
 
         @CustomType.Setter
         public Builder r(String r) {
-            this.r = Objects.requireNonNull(r);
+            if (r == null) {
+              throw new MissingRequiredPropertyException("FuncWithListParamResult", "r");
+            }
+            this.r = r;
             return this;
         }
         public FuncWithListParamResult build() {
-            final var o = new FuncWithListParamResult();
-            o.r = r;
-            return o;
+            final var _resultValue = new FuncWithListParamResult();
+            _resultValue.r = r;
+            return _resultValue;
         }
     }
 }

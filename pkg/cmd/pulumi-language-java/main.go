@@ -70,7 +70,6 @@ func main() {
 		engineAddress = args[0]
 		var err error
 		cancelChannel, err = setupHealthChecks(engineAddress)
-
 		if err != nil {
 			cmdutil.Exit(errors.Wrapf(err, "could not start health check host RPC server"))
 		}
@@ -156,7 +155,7 @@ func (host *javaLanguageHost) GetRequiredPlugins(
 	ctx context.Context,
 	req *pulumirpc.GetRequiredPluginsRequest,
 ) (*pulumirpc.GetRequiredPluginsResponse, error) {
-	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
+	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram()) //nolint:staticcheck
 
 	// now, introspect the user project to see which pulumi resource packages it references.
 	pulumiPackages, err := host.determinePulumiPackages(ctx)
@@ -238,7 +237,7 @@ type javaCommandResponse struct {
 }
 
 func (host *javaLanguageHost) runJavaCommand(
-	ctx context.Context, dir, name string, args []string, quiet bool,
+	_ context.Context, dir, name string, args []string, quiet bool,
 ) (javaCommandResponse, error) {
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -278,8 +277,8 @@ func (host *javaLanguageHost) runJavaCommand(
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
-func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
-	logging.V(5).Infof("Run: program=%v", req.GetProgram())
+func (host *javaLanguageHost) Run(_ context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
+	logging.V(5).Infof("Run: program=%v", req.GetProgram()) //nolint:staticcheck
 
 	config, err := host.constructConfig(req)
 	if err != nil {
@@ -391,7 +390,7 @@ func (host *javaLanguageHost) constructConfigSecretKeys(req *pulumirpc.RunReques
 	return string(configSecretKeysJSON), nil
 }
 
-func (host *javaLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Empty) (*pulumirpc.PluginInfo, error) {
+func (host *javaLanguageHost) GetPluginInfo(_ context.Context, _ *pbempty.Empty) (*pulumirpc.PluginInfo, error) {
 	return &pulumirpc.PluginInfo{
 		Version: version.Version,
 	}, nil
@@ -407,11 +406,11 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	// Executor may not support the build command (for example, jar executor).
 	if executor.BuildArgs == nil {
-		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory)
+		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory) //nolint:staticcheck
 		return nil
 	}
 
-	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory)
+	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory) //nolint:staticcheck
 
 	closer, stdout, stderr, err := rpcutil.MakeInstallDependenciesStreams(server, req.IsTerminal)
 	if err != nil {
@@ -428,22 +427,22 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	cmd.Stderr = stderr
 
 	if err := runCommand(cmd); err != nil {
-		logging.V(5).Infof("InstallDependencies(Directory=%s): failed", req.Directory)
+		logging.V(5).Infof("InstallDependencies(Directory=%s): failed", req.Directory) //nolint:staticcheck
 		return err
 	}
 
-	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
+	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory) //nolint:staticcheck
 	return nil
 }
 
 func (host *javaLanguageHost) GetProgramDependencies(
-	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest,
+	_ context.Context, _ *pulumirpc.GetProgramDependenciesRequest,
 ) (*pulumirpc.GetProgramDependenciesResponse, error) {
 	// TODO: Implement dependency fetcher for Java
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 
-func (host *javaLanguageHost) About(ctx context.Context, req *emptypb.Empty) (*pulumirpc.AboutResponse, error) {
+func (host *javaLanguageHost) About(_ context.Context, _ *emptypb.Empty) (*pulumirpc.AboutResponse, error) {
 	getResponse := func(execString string, args ...string) (string, string, error) {
 		ex, err := executable.FindExecutable(execString)
 		if err != nil {

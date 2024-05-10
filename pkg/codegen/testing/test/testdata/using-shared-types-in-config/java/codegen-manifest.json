@@ -1,0 +1,16 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/credentials/Config.java",
+    "src/main/java/com/pulumi/credentials/Provider.java",
+    "src/main/java/com/pulumi/credentials/ProviderArgs.java",
+    "src/main/java/com/pulumi/credentials/User.java",
+    "src/main/java/com/pulumi/credentials/UserArgs.java",
+    "src/main/java/com/pulumi/credentials/Utilities.java",
+    "src/main/java/com/pulumi/credentials/enums/HashKind.java",
+    "src/main/java/com/pulumi/credentials/inputs/Shared.java",
+    "src/main/java/com/pulumi/credentials/inputs/SharedArgs.java"
+  ]
+}

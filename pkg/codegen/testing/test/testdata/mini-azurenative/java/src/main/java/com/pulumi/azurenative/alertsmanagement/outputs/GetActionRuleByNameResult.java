@@ -7,6 +7,7 @@ import com.pulumi.azurenative.alertsmanagement.outputs.ActionGroupResponse;
 import com.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
 import com.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -118,43 +119,59 @@ public final class GetActionRuleByNameResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetActionRuleByNameResult", "id");
+            }
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            if (location == null) {
+              throw new MissingRequiredPropertyException("GetActionRuleByNameResult", "location");
+            }
+            this.location = location;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetActionRuleByNameResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder properties(Object properties) {
-            this.properties = Objects.requireNonNull(properties);
+            if (properties == null) {
+              throw new MissingRequiredPropertyException("GetActionRuleByNameResult", "properties");
+            }
+            this.properties = properties;
             return this;
         }
         @CustomType.Setter
         public Builder tags(@Nullable Map<String,String> tags) {
+
             this.tags = tags;
             return this;
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetActionRuleByNameResult", "type");
+            }
+            this.type = type;
             return this;
         }
         public GetActionRuleByNameResult build() {
-            final var o = new GetActionRuleByNameResult();
-            o.id = id;
-            o.location = location;
-            o.name = name;
-            o.properties = properties;
-            o.tags = tags;
-            o.type = type;
-            return o;
+            final var _resultValue = new GetActionRuleByNameResult();
+            _resultValue.id = id;
+            _resultValue.location = location;
+            _resultValue.name = name;
+            _resultValue.properties = properties;
+            _resultValue.tags = tags;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

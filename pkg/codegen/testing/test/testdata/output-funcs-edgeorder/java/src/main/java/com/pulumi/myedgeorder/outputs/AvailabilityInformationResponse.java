@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -70,25 +71,34 @@ public final class AvailabilityInformationResponse {
 
         @CustomType.Setter
         public Builder availabilityStage(String availabilityStage) {
-            this.availabilityStage = Objects.requireNonNull(availabilityStage);
+            if (availabilityStage == null) {
+              throw new MissingRequiredPropertyException("AvailabilityInformationResponse", "availabilityStage");
+            }
+            this.availabilityStage = availabilityStage;
             return this;
         }
         @CustomType.Setter
         public Builder disabledReason(String disabledReason) {
-            this.disabledReason = Objects.requireNonNull(disabledReason);
+            if (disabledReason == null) {
+              throw new MissingRequiredPropertyException("AvailabilityInformationResponse", "disabledReason");
+            }
+            this.disabledReason = disabledReason;
             return this;
         }
         @CustomType.Setter
         public Builder disabledReasonMessage(String disabledReasonMessage) {
-            this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
+            if (disabledReasonMessage == null) {
+              throw new MissingRequiredPropertyException("AvailabilityInformationResponse", "disabledReasonMessage");
+            }
+            this.disabledReasonMessage = disabledReasonMessage;
             return this;
         }
         public AvailabilityInformationResponse build() {
-            final var o = new AvailabilityInformationResponse();
-            o.availabilityStage = availabilityStage;
-            o.disabledReason = disabledReason;
-            o.disabledReasonMessage = disabledReasonMessage;
-            return o;
+            final var _resultValue = new AvailabilityInformationResponse();
+            _resultValue.availabilityStage = availabilityStage;
+            _resultValue.disabledReason = disabledReason;
+            _resultValue.disabledReasonMessage = disabledReasonMessage;
+            return _resultValue;
         }
     }
 }

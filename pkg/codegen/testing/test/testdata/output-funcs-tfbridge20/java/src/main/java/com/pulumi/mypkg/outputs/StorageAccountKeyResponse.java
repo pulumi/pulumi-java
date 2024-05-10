@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -84,31 +85,43 @@ public final class StorageAccountKeyResponse {
 
         @CustomType.Setter
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            if (creationTime == null) {
+              throw new MissingRequiredPropertyException("StorageAccountKeyResponse", "creationTime");
+            }
+            this.creationTime = creationTime;
             return this;
         }
         @CustomType.Setter
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            if (keyName == null) {
+              throw new MissingRequiredPropertyException("StorageAccountKeyResponse", "keyName");
+            }
+            this.keyName = keyName;
             return this;
         }
         @CustomType.Setter
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            if (permissions == null) {
+              throw new MissingRequiredPropertyException("StorageAccountKeyResponse", "permissions");
+            }
+            this.permissions = permissions;
             return this;
         }
         @CustomType.Setter
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            if (value == null) {
+              throw new MissingRequiredPropertyException("StorageAccountKeyResponse", "value");
+            }
+            this.value = value;
             return this;
         }
         public StorageAccountKeyResponse build() {
-            final var o = new StorageAccountKeyResponse();
-            o.creationTime = creationTime;
-            o.keyName = keyName;
-            o.permissions = permissions;
-            o.value = value;
-            return o;
+            final var _resultValue = new StorageAccountKeyResponse();
+            _resultValue.creationTime = creationTime;
+            _resultValue.keyName = keyName;
+            _resultValue.permissions = permissions;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

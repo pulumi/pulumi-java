@@ -43,6 +43,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
+        // Read the default VPC and public subnets, which we will use.
         final var vpc = Ec2Functions.getVpc(GetVpcArgs.builder()
             .default_(true)
             .build());
@@ -51,7 +52,8 @@ public class App {
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .build());
 
-        var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()        
+        // Create a security group that permits HTTP ingress and unrestricted egress.
+        var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .egress(SecurityGroupEgressArgs.builder()
                 .protocol("-1")
@@ -67,9 +69,11 @@ public class App {
                 .build())
             .build());
 
+        // Create an ECS cluster to run a container-based service.
         var cluster = new Cluster("cluster");
 
-        var taskExecRole = new Role("taskExecRole", RoleArgs.builder()        
+        // Create an IAM role that can be used by our service's task.
+        var taskExecRole = new Role("taskExecRole", RoleArgs.builder()
             .assumeRolePolicy(serializeJson(
                 jsonObject(
                     jsonProperty("Version", "2008-10-17"),
@@ -84,24 +88,25 @@ public class App {
                 )))
             .build());
 
-        var taskExecRolePolicyAttachment = new RolePolicyAttachment("taskExecRolePolicyAttachment", RolePolicyAttachmentArgs.builder()        
+        var taskExecRolePolicyAttachment = new RolePolicyAttachment("taskExecRolePolicyAttachment", RolePolicyAttachmentArgs.builder()
             .role(taskExecRole.name())
             .policyArn("arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
             .build());
 
-        var webLoadBalancer = new LoadBalancer("webLoadBalancer", LoadBalancerArgs.builder()        
+        // Create a load balancer to listen for HTTP traffic on port 80.
+        var webLoadBalancer = new LoadBalancer("webLoadBalancer", LoadBalancerArgs.builder()
             .subnets(subnets.applyValue(getSubnetIdsResult -> getSubnetIdsResult.ids()))
             .securityGroups(webSecurityGroup.id())
             .build());
 
-        var webTargetGroup = new TargetGroup("webTargetGroup", TargetGroupArgs.builder()        
+        var webTargetGroup = new TargetGroup("webTargetGroup", TargetGroupArgs.builder()
             .port(80)
             .protocol("HTTP")
             .targetType("ip")
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .build());
 
-        var webListener = new Listener("webListener", ListenerArgs.builder()        
+        var webListener = new Listener("webListener", ListenerArgs.builder()
             .loadBalancerArn(webLoadBalancer.arn())
             .port(80)
             .defaultActions(ListenerDefaultActionArgs.builder()
@@ -110,7 +115,8 @@ public class App {
                 .build())
             .build());
 
-        var appTask = new TaskDefinition("appTask", TaskDefinitionArgs.builder()        
+        // Spin up a load balanced service running NGINX
+        var appTask = new TaskDefinition("appTask", TaskDefinitionArgs.builder()
             .family("fargate-task-definition")
             .cpu("256")
             .memory("512")
@@ -129,7 +135,7 @@ public class App {
                 ))))
             .build());
 
-        var appService = new Service("appService", ServiceArgs.builder()        
+        var appService = new Service("appService", ServiceArgs.builder()
             .cluster(cluster.arn())
             .desiredCount(5)
             .launchType("FARGATE")

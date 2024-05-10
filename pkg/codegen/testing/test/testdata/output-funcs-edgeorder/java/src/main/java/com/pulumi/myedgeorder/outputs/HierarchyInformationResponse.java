@@ -86,31 +86,35 @@ public final class HierarchyInformationResponse {
 
         @CustomType.Setter
         public Builder configurationName(@Nullable String configurationName) {
+
             this.configurationName = configurationName;
             return this;
         }
         @CustomType.Setter
         public Builder productFamilyName(@Nullable String productFamilyName) {
+
             this.productFamilyName = productFamilyName;
             return this;
         }
         @CustomType.Setter
         public Builder productLineName(@Nullable String productLineName) {
+
             this.productLineName = productLineName;
             return this;
         }
         @CustomType.Setter
         public Builder productName(@Nullable String productName) {
+
             this.productName = productName;
             return this;
         }
         public HierarchyInformationResponse build() {
-            final var o = new HierarchyInformationResponse();
-            o.configurationName = configurationName;
-            o.productFamilyName = productFamilyName;
-            o.productLineName = productLineName;
-            o.productName = productName;
-            return o;
+            final var _resultValue = new HierarchyInformationResponse();
+            _resultValue.configurationName = configurationName;
+            _resultValue.productFamilyName = productFamilyName;
+            _resultValue.productLineName = productLineName;
+            _resultValue.productName = productName;
+            return _resultValue;
         }
     }
 }

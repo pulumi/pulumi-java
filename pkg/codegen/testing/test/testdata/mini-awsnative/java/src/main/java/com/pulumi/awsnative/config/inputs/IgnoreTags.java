@@ -58,6 +58,7 @@ public final class IgnoreTags {
 
         @CustomType.Setter
         public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
+
             this.keyPrefixes = keyPrefixes;
             return this;
         }
@@ -66,6 +67,7 @@ public final class IgnoreTags {
         }
         @CustomType.Setter
         public Builder keys(@Nullable List<String> keys) {
+
             this.keys = keys;
             return this;
         }
@@ -73,10 +75,10 @@ public final class IgnoreTags {
             return keys(List.of(keys));
         }
         public IgnoreTags build() {
-            final var o = new IgnoreTags();
-            o.keyPrefixes = keyPrefixes;
-            o.keys = keys;
-            return o;
+            final var _resultValue = new IgnoreTags();
+            _resultValue.keyPrefixes = keyPrefixes;
+            _resultValue.keys = keys;
+            return _resultValue;
         }
     }
 }

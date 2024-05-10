@@ -18,7 +18,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var dbCluster = new Cluster("dbCluster", ClusterArgs.builder()        
+        var dbCluster = new Cluster("dbCluster", ClusterArgs.builder()
             .masterPassword(Output.ofSecret("foobar"))
             .build());
 

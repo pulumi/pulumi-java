@@ -48,7 +48,7 @@ func newVersionCommand() *cobra.Command {
 		Use:   "version",
 		Short: "Print pulumi-java-gen version number",
 		Args:  cmdutil.NoArgs,
-		Run: cmdutil.RunFunc(func(cmd *cobra.Command, args []string) error {
+		Run: cmdutil.RunFunc(func(_ *cobra.Command, _ []string) error {
 			fmt.Printf("%v\n", version.Version)
 			return nil
 		}),
@@ -102,7 +102,7 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 
 `)
 
-	cmd.Run = cmdutil.RunFunc(func(cmd *cobra.Command, args []string) error {
+	cmd.Run = cmdutil.RunFunc(func(_ *cobra.Command, _ []string) error {
 		rootDir, err := os.Getwd()
 		if err != nil {
 			return err

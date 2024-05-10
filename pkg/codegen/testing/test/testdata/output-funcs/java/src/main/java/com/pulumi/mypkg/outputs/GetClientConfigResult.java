@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -84,31 +85,43 @@ public final class GetClientConfigResult {
 
         @CustomType.Setter
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            if (clientId == null) {
+              throw new MissingRequiredPropertyException("GetClientConfigResult", "clientId");
+            }
+            this.clientId = clientId;
             return this;
         }
         @CustomType.Setter
         public Builder objectId(String objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            if (objectId == null) {
+              throw new MissingRequiredPropertyException("GetClientConfigResult", "objectId");
+            }
+            this.objectId = objectId;
             return this;
         }
         @CustomType.Setter
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            if (subscriptionId == null) {
+              throw new MissingRequiredPropertyException("GetClientConfigResult", "subscriptionId");
+            }
+            this.subscriptionId = subscriptionId;
             return this;
         }
         @CustomType.Setter
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            if (tenantId == null) {
+              throw new MissingRequiredPropertyException("GetClientConfigResult", "tenantId");
+            }
+            this.tenantId = tenantId;
             return this;
         }
         public GetClientConfigResult build() {
-            final var o = new GetClientConfigResult();
-            o.clientId = clientId;
-            o.objectId = objectId;
-            o.subscriptionId = subscriptionId;
-            o.tenantId = tenantId;
-            return o;
+            final var _resultValue = new GetClientConfigResult();
+            _resultValue.clientId = clientId;
+            _resultValue.objectId = objectId;
+            _resultValue.subscriptionId = subscriptionId;
+            _resultValue.tenantId = tenantId;
+            return _resultValue;
         }
     }
 }

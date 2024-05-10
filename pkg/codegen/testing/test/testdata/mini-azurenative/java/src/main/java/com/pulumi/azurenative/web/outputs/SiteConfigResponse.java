@@ -44,13 +44,14 @@ public final class SiteConfigResponse {
 
         @CustomType.Setter
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
+
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
         public SiteConfigResponse build() {
-            final var o = new SiteConfigResponse();
-            o.netFrameworkVersion = netFrameworkVersion;
-            return o;
+            final var _resultValue = new SiteConfigResponse();
+            _resultValue.netFrameworkVersion = netFrameworkVersion;
+            return _resultValue;
         }
     }
 }

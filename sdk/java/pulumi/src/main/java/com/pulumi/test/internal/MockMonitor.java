@@ -13,7 +13,7 @@ import com.pulumi.resources.Resource;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
 import com.pulumi.test.Mocks;
-import pulumirpc.Provider.CallRequest;
+import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
@@ -55,7 +55,7 @@ public class MockMonitor implements Monitor {
 
     @Override
     public CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
-        var hasSupport = "secrets".equals(request.getId()) || "resourceReferences".equals(request.getId());
+        var hasSupport = !"outputValues".equals(request.getId());
         return CompletableFuture.completedFuture(
                 SupportsFeatureResponse.newBuilder().setHasSupport(hasSupport).build()
         );
@@ -83,7 +83,7 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<CallResponse> callAsync(CallRequest request) {
+    public CompletableFuture<CallResponse> callAsync(ResourceCallRequest request) {
         // For now, we'll route both Invoke and Call through IMocks.CallAsync.
         var args = deserializeToMap(request.getArgs());
 

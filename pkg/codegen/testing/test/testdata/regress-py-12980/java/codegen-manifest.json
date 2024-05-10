@@ -1,0 +1,20 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/myPkg/Provider.java",
+    "src/main/java/com/pulumi/myPkg/ProviderArgs.java",
+    "src/main/java/com/pulumi/myPkg/Utilities.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childA/MemberA1.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childA/MemberA1Args.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childA/enums/EnumA.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childA/outputs/ObjectA.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childB/MemberB1.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childB/MemberB1Args.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childB/MemberB2.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childB/MemberB2Args.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childB/enums/EnumB.java",
+    "src/main/java/com/pulumi/myPkg/myMod_childB/outputs/ObjectB.java"
+  ]
+}

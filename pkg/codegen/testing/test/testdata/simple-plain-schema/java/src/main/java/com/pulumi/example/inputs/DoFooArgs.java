@@ -6,6 +6,7 @@ package com.pulumi.example.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.example.inputs.FooArgs;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.util.Objects;
 
 
@@ -54,7 +55,9 @@ public final class DoFooArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         public DoFooArgs build() {
-            $.foo = Objects.requireNonNull($.foo, "expected parameter 'foo' to be non-null");
+            if ($.foo == null) {
+                throw new MissingRequiredPropertyException("DoFooArgs", "foo");
+            }
             return $;
         }
     }

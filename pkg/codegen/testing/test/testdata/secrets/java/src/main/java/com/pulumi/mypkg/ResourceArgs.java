@@ -5,6 +5,7 @@ package com.pulumi.mypkg;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.inputs.ConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -150,12 +151,24 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ResourceArgs build() {
-            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
-            $.configArray = Objects.requireNonNull($.configArray, "expected parameter 'configArray' to be non-null");
-            $.configMap = Objects.requireNonNull($.configMap, "expected parameter 'configMap' to be non-null");
-            $.foo = Objects.requireNonNull($.foo, "expected parameter 'foo' to be non-null");
-            $.fooArray = Objects.requireNonNull($.fooArray, "expected parameter 'fooArray' to be non-null");
-            $.fooMap = Objects.requireNonNull($.fooMap, "expected parameter 'fooMap' to be non-null");
+            if ($.config == null) {
+                throw new MissingRequiredPropertyException("ResourceArgs", "config");
+            }
+            if ($.configArray == null) {
+                throw new MissingRequiredPropertyException("ResourceArgs", "configArray");
+            }
+            if ($.configMap == null) {
+                throw new MissingRequiredPropertyException("ResourceArgs", "configMap");
+            }
+            if ($.foo == null) {
+                throw new MissingRequiredPropertyException("ResourceArgs", "foo");
+            }
+            if ($.fooArray == null) {
+                throw new MissingRequiredPropertyException("ResourceArgs", "fooArray");
+            }
+            if ($.fooMap == null) {
+                throw new MissingRequiredPropertyException("ResourceArgs", "fooMap");
+            }
             return $;
         }
     }

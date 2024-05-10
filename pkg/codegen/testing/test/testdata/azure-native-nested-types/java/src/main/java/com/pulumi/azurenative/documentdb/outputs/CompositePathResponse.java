@@ -58,19 +58,21 @@ public final class CompositePathResponse {
 
         @CustomType.Setter
         public Builder order(@Nullable String order) {
+
             this.order = order;
             return this;
         }
         @CustomType.Setter
         public Builder path(@Nullable String path) {
+
             this.path = path;
             return this;
         }
         public CompositePathResponse build() {
-            final var o = new CompositePathResponse();
-            o.order = order;
-            o.path = path;
-            return o;
+            final var _resultValue = new CompositePathResponse();
+            _resultValue.order = order;
+            _resultValue.path = path;
+            return _resultValue;
         }
     }
 }

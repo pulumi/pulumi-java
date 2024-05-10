@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.outputs.BillingMeterDetailsResponse;
 import java.lang.String;
 import java.util.List;
@@ -58,22 +59,28 @@ public final class CostInformationResponse {
 
         @CustomType.Setter
         public Builder billingInfoUrl(String billingInfoUrl) {
-            this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
+            if (billingInfoUrl == null) {
+              throw new MissingRequiredPropertyException("CostInformationResponse", "billingInfoUrl");
+            }
+            this.billingInfoUrl = billingInfoUrl;
             return this;
         }
         @CustomType.Setter
         public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
-            this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
+            if (billingMeterDetails == null) {
+              throw new MissingRequiredPropertyException("CostInformationResponse", "billingMeterDetails");
+            }
+            this.billingMeterDetails = billingMeterDetails;
             return this;
         }
         public Builder billingMeterDetails(BillingMeterDetailsResponse... billingMeterDetails) {
             return billingMeterDetails(List.of(billingMeterDetails));
         }
         public CostInformationResponse build() {
-            final var o = new CostInformationResponse();
-            o.billingInfoUrl = billingInfoUrl;
-            o.billingMeterDetails = billingMeterDetails;
-            return o;
+            final var _resultValue = new CostInformationResponse();
+            _resultValue.billingInfoUrl = billingInfoUrl;
+            _resultValue.billingMeterDetails = billingMeterDetails;
+            return _resultValue;
         }
     }
 }

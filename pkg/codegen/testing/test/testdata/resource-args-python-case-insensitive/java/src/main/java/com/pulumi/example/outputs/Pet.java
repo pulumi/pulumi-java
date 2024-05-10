@@ -36,13 +36,14 @@ public final class Pet {
 
         @CustomType.Setter
         public Builder name(@Nullable String name) {
+
             this.name = name;
             return this;
         }
         public Pet build() {
-            final var o = new Pet();
-            o.name = name;
-            return o;
+            final var _resultValue = new Pet();
+            _resultValue.name = name;
+            return _resultValue;
         }
     }
 }

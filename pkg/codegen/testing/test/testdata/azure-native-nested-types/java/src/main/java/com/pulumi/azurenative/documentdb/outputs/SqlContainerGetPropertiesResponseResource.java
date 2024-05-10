@@ -44,13 +44,14 @@ public final class SqlContainerGetPropertiesResponseResource {
 
         @CustomType.Setter
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
+
             this.indexingPolicy = indexingPolicy;
             return this;
         }
         public SqlContainerGetPropertiesResponseResource build() {
-            final var o = new SqlContainerGetPropertiesResponseResource();
-            o.indexingPolicy = indexingPolicy;
-            return o;
+            final var _resultValue = new SqlContainerGetPropertiesResponseResource();
+            _resultValue.indexingPolicy = indexingPolicy;
+            return _resultValue;
         }
     }
 }

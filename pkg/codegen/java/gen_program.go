@@ -1,5 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
+//nolint:goconst
 package java
 
 import (
@@ -9,6 +10,8 @@ import (
 	"os"
 	"path"
 	"strings"
+
+	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
 
 	"github.com/zclconf/go-cty/cty"
 
@@ -44,6 +47,27 @@ type generator struct {
 	// later on when apply a traversal sush as resourceGroup.getName(),
 	// we should rewrite it as resourceGroup.thenApply(getResourceGroupResult -> getResourceGroupResult.getName())
 	functionInvokes map[string]*schema.Function
+}
+
+// genComment generates a comment into the output.
+func (g *generator) genComment(w io.Writer, comment syntax.Comment) {
+	for _, l := range comment.Lines {
+		g.Fgenf(w, "%s//%s\n", g.Indent, l)
+	}
+}
+
+// genTrivia generates the list of trivia associated with a given token.
+func (g *generator) genTrivia(w io.Writer, token syntax.Token) {
+	for _, t := range token.LeadingTrivia {
+		if c, ok := t.(syntax.Comment); ok {
+			g.genComment(w, c)
+		}
+	}
+	for _, t := range token.TrailingTrivia {
+		if c, ok := t.(syntax.Comment); ok {
+			g.genComment(w, c)
+		}
+	}
 }
 
 func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpression) {
@@ -415,6 +439,23 @@ func pulumiInputImport(pkg string, module string, member string) string {
 	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + ".inputs." + member
 }
 
+func literalExprText(expr model.Expression) (string, bool) {
+	if lit, ok := expr.(*model.LiteralValueExpression); ok {
+		if lit.Value.IsNull() {
+			return "", false
+		}
+		return lit.Value.AsString(), true
+	}
+
+	if templateExpr, ok := expr.(*model.TemplateExpression); ok {
+		if len(templateExpr.Parts) == 1 {
+			return literalExprText(templateExpr.Parts[0])
+		}
+	}
+
+	return "", false
+}
+
 // Recursively derives imports from object by using its property type and
 // any nested object property that it instantiates
 func collectObjectImports(object *model.ObjectConsExpression, objectType *schema.ObjectType) []string {
@@ -438,18 +479,18 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 	// then check whether one of the properties of this object is an object too
 	// in which case, we call this function recursively
 	for _, property := range object.Items {
-		switch property.Value.(type) {
+		switch innerObject := property.Value.(type) {
 		case *model.ObjectConsExpression:
-			innerObject := property.Value.(*model.ObjectConsExpression)
-			innerObjectKey := property.Key.(*model.LiteralValueExpression).Value.AsString()
-			objectProperty, found := objectType.Property(innerObjectKey)
-			if found {
-				objectPropertyType := codegen.UnwrapType(objectProperty.Type)
-				switch objectPropertyType := objectPropertyType.(type) {
-				case *schema.ObjectType:
-					innerObjectType := objectPropertyType
-					// recurse into nested object
-					imports = append(imports, collectObjectImports(innerObject, innerObjectType)...)
+			if innerObjectKey, ok := literalExprText(property.Key); ok {
+				objectProperty, found := objectType.Property(innerObjectKey)
+				if found {
+					objectPropertyType := codegen.UnwrapType(objectProperty.Type)
+					switch objectPropertyType := objectPropertyType.(type) {
+					case *schema.ObjectType:
+						innerObjectType := objectPropertyType
+						// recurse into nested object
+						imports = append(imports, collectObjectImports(innerObject, innerObjectType)...)
+					}
 				}
 			}
 		}
@@ -521,7 +562,10 @@ func collectResourceImports(resource *pcl.Resource) []string {
 }
 
 func (g *generator) functionImportDef(tokenArg model.Expression) (string, string) {
-	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
+	token, ok := literalExprText(tokenArg)
+	if !ok {
+		return "", ""
+	}
 	tokenRange := tokenArg.SyntaxNode().Range()
 
 	// Compute the resource type from the Pulumi type token.
@@ -646,6 +690,10 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		g.genImport(w, "com.pulumi.asset.FileArchive")
 	}
 
+	if containsFunctionCall("stringAsset", nodes) {
+		g.genImport(w, "com.pulumi.asset.StringAsset")
+	}
+
 	g.genImport(w, "java.util.List")
 	g.genImport(w, "java.util.ArrayList")
 	g.genImport(w, "java.util.Map")
@@ -668,7 +716,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 }
 
 // genPostamble closes the method and the class and declares stack output statements.
-func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
+func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 	g.Indented(func() {
 		g.genIndent(w)
 		g.Fgen(w, "}\n")
@@ -702,7 +750,11 @@ func makeResourceName(baseName string, suffix string) string {
 }
 
 func (g *generator) findFunctionSchema(token model.Expression) (*schema.Function, bool) {
-	tk := token.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
+	tk, validToken := literalExprText(token)
+	if !validToken {
+		return nil, false
+	}
+
 	for _, pkg := range g.program.PackageReferences() {
 		fn, ok, err := pcl.LookupFunction(pkg, tk)
 		if !ok {
@@ -846,6 +898,26 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
 	variableName := names.LowerCamelCase(names.MakeValidIdentifier(resource.Name()))
+	g.genTrivia(w, resource.Definition.Tokens.GetType(""))
+	for _, l := range resource.Definition.Tokens.GetLabels(nil) {
+		g.genTrivia(w, l)
+	}
+	g.genTrivia(w, resource.Definition.Tokens.GetOpenBrace())
+
+	if resource.Schema != nil {
+		for _, input := range resource.Inputs {
+			// We traverse the set of resource input types to make sure that this attribute appears in the schema.
+			// However, we'll use the type we've already computed rather than the result of the traversal since the
+			// latter will typically be a union of the type we've computed and one or more output types. This may result
+			// in inaccurate code generation later on. Arguably this is a bug in the generator, but this will have to do
+			// for now.
+			_, diagnostics := resource.InputType.Traverse(hcl.TraverseAttr{Name: input.Name})
+			g.diagnostics = append(g.diagnostics, diagnostics...)
+			value := g.lowerExpression(input.Value, input.Type())
+			input.Value = value
+		}
+	}
+
 	instantiate := func(resName string) {
 		resourceProperties := typedResourceProperties(resource)
 		if len(resource.Inputs) == 0 && !hasCustomResourceOptions(resource) {
@@ -858,13 +930,13 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			g.Fgen(w, ")")
 		} else {
 			g.Fgenf(w, "new %s(%s, %s.builder()", resourceTypeName, resName, resourceArgs)
-			g.Fgenf(w, "%s\n", g.Indent)
+			g.Fgen(w, "\n")
 			g.Indented(func() {
 				for _, attr := range resource.Inputs {
 					attributeIdent := names.MakeValidIdentifier(attr.Name)
 					attributeSchemaType := resourceProperties[attr.Name]
 					g.currentResourcePropertyType = attributeSchemaType
-					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, g.lowerExpression(attr.Value, attr.Type()))
+					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, attr.Value)
 				}
 
 				if !hasCustomResourceOptions(resource) {
@@ -967,6 +1039,8 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 		instantiate(makeResourceName(resource.Name(), suffix))
 		g.Fgenf(w, ";\n\n")
 	}
+
+	g.genTrivia(w, resource.Definition.Tokens.GetCloseBrace())
 }
 
 func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVariable) {
@@ -1002,6 +1076,7 @@ func (g *generator) isFunctionInvoke(localVariable *pcl.LocalVariable) (*schema.
 }
 
 func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariable) {
+	g.genTrivia(w, localVariable.Definition.Tokens.Name)
 	variableName := localVariable.Name()
 	functionSchema, isInvokeCall := g.isFunctionInvoke(localVariable)
 	g.genIndent(w)
@@ -1042,7 +1117,7 @@ func (g *generator) genNode(w io.Writer, n pcl.Node) {
 func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
 	message := fmt.Sprintf("not yet implemented: %s", fmt.Sprintf(reason, vs...))
 	g.diagnostics = append(g.diagnostics, &hcl.Diagnostic{
-		Severity: hcl.DiagError,
+		Severity: hcl.DiagWarning,
 		Summary:  message,
 		Detail:   message,
 	})

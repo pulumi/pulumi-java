@@ -87,31 +87,35 @@ public final class SsisEnvironmentReferenceResponse {
 
         @CustomType.Setter
         public Builder environmentFolderName(@Nullable String environmentFolderName) {
+
             this.environmentFolderName = environmentFolderName;
             return this;
         }
         @CustomType.Setter
         public Builder environmentName(@Nullable String environmentName) {
+
             this.environmentName = environmentName;
             return this;
         }
         @CustomType.Setter
         public Builder id(@Nullable Double id) {
+
             this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder referenceType(@Nullable String referenceType) {
+
             this.referenceType = referenceType;
             return this;
         }
         public SsisEnvironmentReferenceResponse build() {
-            final var o = new SsisEnvironmentReferenceResponse();
-            o.environmentFolderName = environmentFolderName;
-            o.environmentName = environmentName;
-            o.id = id;
-            o.referenceType = referenceType;
-            return o;
+            final var _resultValue = new SsisEnvironmentReferenceResponse();
+            _resultValue.environmentFolderName = environmentFolderName;
+            _resultValue.environmentName = environmentName;
+            _resultValue.id = id;
+            _resultValue.referenceType = referenceType;
+            return _resultValue;
         }
     }
 }

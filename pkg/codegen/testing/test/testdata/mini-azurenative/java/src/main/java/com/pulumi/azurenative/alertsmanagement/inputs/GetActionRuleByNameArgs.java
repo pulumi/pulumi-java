@@ -5,6 +5,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -111,8 +112,12 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
         }
 
         public GetActionRuleByNameArgs build() {
-            $.actionRuleName = Objects.requireNonNull($.actionRuleName, "expected parameter 'actionRuleName' to be non-null");
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            if ($.actionRuleName == null) {
+                throw new MissingRequiredPropertyException("GetActionRuleByNameArgs", "actionRuleName");
+            }
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("GetActionRuleByNameArgs", "resourceGroupName");
+            }
             return $;
         }
     }

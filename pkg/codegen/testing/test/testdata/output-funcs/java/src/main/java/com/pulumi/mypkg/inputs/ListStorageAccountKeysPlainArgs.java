@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,8 +120,12 @@ public final class ListStorageAccountKeysPlainArgs extends com.pulumi.resources.
         }
 
         public ListStorageAccountKeysPlainArgs build() {
-            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            if ($.accountName == null) {
+                throw new MissingRequiredPropertyException("ListStorageAccountKeysPlainArgs", "accountName");
+            }
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("ListStorageAccountKeysPlainArgs", "resourceGroupName");
+            }
             return $;
         }
     }

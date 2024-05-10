@@ -5,6 +5,7 @@ package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.inputs.ConfigurationFiltersArgs;
 import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetailsArgs;
 import java.lang.String;
@@ -163,7 +164,9 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
         }
 
         public ListConfigurationsArgs build() {
-            $.configurationFilters = Objects.requireNonNull($.configurationFilters, "expected parameter 'configurationFilters' to be non-null");
+            if ($.configurationFilters == null) {
+                throw new MissingRequiredPropertyException("ListConfigurationsArgs", "configurationFilters");
+            }
             return $;
         }
     }

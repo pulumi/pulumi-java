@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.inputs.FilterableProperty;
 import com.pulumi.myedgeorder.inputs.HierarchyInformation;
 import java.util.List;
@@ -108,7 +109,9 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
         }
 
         public ConfigurationFilters build() {
-            $.hierarchyInformation = Objects.requireNonNull($.hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
+            if ($.hierarchyInformation == null) {
+                throw new MissingRequiredPropertyException("ConfigurationFilters", "hierarchyInformation");
+            }
             return $;
         }
     }

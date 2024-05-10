@@ -4,6 +4,7 @@
 package com.pulumi.example.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,43 +69,55 @@ public final class Foo {
 
         @CustomType.Setter
         public Builder a(Boolean a) {
-            this.a = Objects.requireNonNull(a);
+            if (a == null) {
+              throw new MissingRequiredPropertyException("Foo", "a");
+            }
+            this.a = a;
             return this;
         }
         @CustomType.Setter
         public Builder b(@Nullable Boolean b) {
+
             this.b = b;
             return this;
         }
         @CustomType.Setter
         public Builder c(Integer c) {
-            this.c = Objects.requireNonNull(c);
+            if (c == null) {
+              throw new MissingRequiredPropertyException("Foo", "c");
+            }
+            this.c = c;
             return this;
         }
         @CustomType.Setter
         public Builder d(@Nullable Integer d) {
+
             this.d = d;
             return this;
         }
         @CustomType.Setter
         public Builder e(String e) {
-            this.e = Objects.requireNonNull(e);
+            if (e == null) {
+              throw new MissingRequiredPropertyException("Foo", "e");
+            }
+            this.e = e;
             return this;
         }
         @CustomType.Setter
         public Builder f(@Nullable String f) {
+
             this.f = f;
             return this;
         }
         public Foo build() {
-            final var o = new Foo();
-            o.a = a;
-            o.b = b;
-            o.c = c;
-            o.d = d;
-            o.e = e;
-            o.f = f;
-            return o;
+            final var _resultValue = new Foo();
+            _resultValue.a = a;
+            _resultValue.b = b;
+            _resultValue.c = c;
+            _resultValue.d = d;
+            _resultValue.e = e;
+            _resultValue.f = f;
+            return _resultValue;
         }
     }
 }

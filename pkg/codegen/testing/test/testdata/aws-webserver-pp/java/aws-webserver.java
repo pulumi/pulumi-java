@@ -23,7 +23,8 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var securityGroup = new SecurityGroup("securityGroup", SecurityGroupArgs.builder()        
+        // Create a new security group for port 80.
+        var securityGroup = new SecurityGroup("securityGroup", SecurityGroupArgs.builder()
             .ingress(SecurityGroupIngressArgs.builder()
                 .protocol("tcp")
                 .fromPort(0)
@@ -32,6 +33,7 @@ public class App {
                 .build())
             .build());
 
+        // Get the ID for the latest Amazon Linux AMI.
         final var ami = AwsFunctions.getAmi(GetAmiArgs.builder()
             .filters(GetAmiFilterArgs.builder()
                 .name("name")
@@ -41,7 +43,8 @@ public class App {
             .mostRecent(true)
             .build());
 
-        var server = new Instance("server", InstanceArgs.builder()        
+        // Create a simple web server using the startup script for the instance.
+        var server = new Instance("server", InstanceArgs.builder()
             .tags(Map.of("Name", "web-server-www"))
             .instanceType("t2.micro")
             .securityGroups(securityGroup.name())

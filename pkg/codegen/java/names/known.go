@@ -8,6 +8,10 @@ var Optional = JavaUtil.Dot("Optional")
 
 var Pulumi = Ident("com").FQN().Dot("pulumi")
 
+var PulumiExceptions = Pulumi.Dot("exceptions")
+
+var PulumiMissingRequiredPropertyException = PulumiExceptions.Dot("MissingRequiredPropertyException")
+
 var PulumiCore = Pulumi.Dot("core")
 
 var PulumiAsset = Pulumi.Dot("asset")
@@ -16,7 +20,7 @@ var PulumiInternal = PulumiCore.Dot("internal")
 
 var PulumiAnnotations = PulumiCore.Dot("annotations")
 
-var ResourceType = PulumiAnnotations.Dot("ResourceType")
+var ResourceTypeAnnotation = PulumiAnnotations.Dot("ResourceType")
 
 var Output = PulumiCore.Dot("Output")
 
@@ -61,6 +65,8 @@ var Alias = PulumiCore.Dot("Alias")
 var PulumiDeployment = Pulumi.Dot("deployment")
 
 var InvokeArgs = Pulumi.Dot("resources").Dot("InvokeArgs")
+
+var ResourceType = Pulumi.Dot("resources").Dot("Resource")
 
 var Deployment = PulumiDeployment.Dot("Deployment")
 

@@ -137,7 +137,7 @@ func (g *generator) GenConditionalExpression(w io.Writer, expr *model.Conditiona
 	g.Fgenf(w, "%.4v ? %.4v : %.4v", expr.Condition, expr.TrueResult, expr.FalseResult)
 }
 
-func (g *generator) GenForExpression(w io.Writer, expr *model.ForExpression) {
+func (g *generator) GenForExpression(w io.Writer, _ *model.ForExpression) {
 	g.genNYI(w, "ForExpression") // TODO
 }
 
@@ -267,6 +267,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		} else {
 			g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
 		}
+	case "stringAsset":
+		g.Fgenf(w, "new StringAsset(%.v)", expr.Args[0])
 	case "file":
 		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)), StandardCharsets.UTF_8)", expr.Args[0])
 	case "filebase64":
@@ -621,7 +623,7 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 }
 
 func (g *generator) genRelativeTraversal(w io.Writer,
-	traversal hcl.Traversal, parts []model.Traversable, objType *schema.ObjectType,
+	traversal hcl.Traversal, _ []model.Traversable, _ *schema.ObjectType,
 ) {
 	for _, part := range traversal {
 		var key cty.Value
@@ -686,7 +688,7 @@ func (g *generator) GenSplatExpression(w io.Writer, expr *model.SplatExpression)
 	g.Fgenf(w, "%.20v.stream().map(element -> element%.v).collect(toList())", expr.Source, expr.Each)
 }
 
-func (g *generator) GenTemplateJoinExpression(w io.Writer, expr *model.TemplateJoinExpression) {
+func (g *generator) GenTemplateJoinExpression(w io.Writer, _ *model.TemplateJoinExpression) {
 	g.genNYI(w, "TemplateJoinExpression")
 }
 
@@ -784,6 +786,6 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 }
 
-func (g *generator) GenUnaryOpExpression(w io.Writer, expr *model.UnaryOpExpression) {
+func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {
 	g.genNYI(w, "GenUnaryOpExpression") // TODO
 }

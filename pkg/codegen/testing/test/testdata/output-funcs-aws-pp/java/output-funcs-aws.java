@@ -27,12 +27,12 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var aws_vpc = new Vpc("aws_vpc", VpcArgs.builder()        
+        var aws_vpc = new Vpc("aws_vpc", VpcArgs.builder()
             .cidrBlock("10.0.0.0/16")
             .instanceTenancy("default")
             .build());
 
-        var privateS3VpcEndpoint = new VpcEndpoint("privateS3VpcEndpoint", VpcEndpointArgs.builder()        
+        var privateS3VpcEndpoint = new VpcEndpoint("privateS3VpcEndpoint", VpcEndpointArgs.builder()
             .vpcId(aws_vpc.id())
             .serviceName("com.amazonaws.us-west-2.s3")
             .build());
@@ -41,11 +41,11 @@ public class App {
             .prefixListId(privateS3VpcEndpoint.prefixListId())
             .build());
 
-        var bar = new NetworkAcl("bar", NetworkAclArgs.builder()        
+        var bar = new NetworkAcl("bar", NetworkAclArgs.builder()
             .vpcId(aws_vpc.id())
             .build());
 
-        var privateS3NetworkAclRule = new NetworkAclRule("privateS3NetworkAclRule", NetworkAclRuleArgs.builder()        
+        var privateS3NetworkAclRule = new NetworkAclRule("privateS3NetworkAclRule", NetworkAclRuleArgs.builder()
             .networkAclId(bar.id())
             .ruleNumber(200)
             .egress(false)
@@ -56,6 +56,9 @@ public class App {
             .toPort(443)
             .build());
 
+        // A contrived example to test that helper nested records ( `filters`
+        // below) generate correctly when using output-versioned function
+        // invoke forms.
         final var amis = Ec2Functions.getAmiIds(GetAmiIdsArgs.builder()
             .owners(bar.id())
             .filters(GetAmiIdsFilterArgs.builder()

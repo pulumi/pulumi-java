@@ -5,6 +5,7 @@ package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.outputs.Pav2MeterDetailsResponse;
 import com.pulumi.myedgeorder.outputs.PurchaseMeterDetailsResponse;
 import java.lang.String;
@@ -87,31 +88,43 @@ public final class BillingMeterDetailsResponse {
 
         @CustomType.Setter
         public Builder frequency(String frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            if (frequency == null) {
+              throw new MissingRequiredPropertyException("BillingMeterDetailsResponse", "frequency");
+            }
+            this.frequency = frequency;
             return this;
         }
         @CustomType.Setter
         public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
-            this.meterDetails = Objects.requireNonNull(meterDetails);
+            if (meterDetails == null) {
+              throw new MissingRequiredPropertyException("BillingMeterDetailsResponse", "meterDetails");
+            }
+            this.meterDetails = meterDetails;
             return this;
         }
         @CustomType.Setter
         public Builder meteringType(String meteringType) {
-            this.meteringType = Objects.requireNonNull(meteringType);
+            if (meteringType == null) {
+              throw new MissingRequiredPropertyException("BillingMeterDetailsResponse", "meteringType");
+            }
+            this.meteringType = meteringType;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            if (name == null) {
+              throw new MissingRequiredPropertyException("BillingMeterDetailsResponse", "name");
+            }
+            this.name = name;
             return this;
         }
         public BillingMeterDetailsResponse build() {
-            final var o = new BillingMeterDetailsResponse();
-            o.frequency = frequency;
-            o.meterDetails = meterDetails;
-            o.meteringType = meteringType;
-            o.name = name;
-            return o;
+            final var _resultValue = new BillingMeterDetailsResponse();
+            _resultValue.frequency = frequency;
+            _resultValue.meterDetails = meterDetails;
+            _resultValue.meteringType = meteringType;
+            _resultValue.name = name;
+            return _resultValue;
         }
     }
 }

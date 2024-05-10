@@ -36,13 +36,14 @@ public final class ConfigMap {
 
         @CustomType.Setter
         public Builder config(@Nullable String config) {
+
             this.config = config;
             return this;
         }
         public ConfigMap build() {
-            final var o = new ConfigMap();
-            o.config = config;
-            return o;
+            final var _resultValue = new ConfigMap();
+            _resultValue.config = config;
+            return _resultValue;
         }
     }
 }

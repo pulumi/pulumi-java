@@ -5,6 +5,7 @@ package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -187,9 +188,15 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
         }
 
         public GetIntegrationRuntimeObjectMetadatumArgs build() {
-            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
-            $.integrationRuntimeName = Objects.requireNonNull($.integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
-            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            if ($.factoryName == null) {
+                throw new MissingRequiredPropertyException("GetIntegrationRuntimeObjectMetadatumArgs", "factoryName");
+            }
+            if ($.integrationRuntimeName == null) {
+                throw new MissingRequiredPropertyException("GetIntegrationRuntimeObjectMetadatumArgs", "integrationRuntimeName");
+            }
+            if ($.resourceGroupName == null) {
+                throw new MissingRequiredPropertyException("GetIntegrationRuntimeObjectMetadatumArgs", "resourceGroupName");
+            }
             return $;
         }
     }

@@ -44,13 +44,14 @@ public final class IndexingPolicyResponse {
 
         @CustomType.Setter
         public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
+
             this.compositeIndexes = compositeIndexes;
             return this;
         }
         public IndexingPolicyResponse build() {
-            final var o = new IndexingPolicyResponse();
-            o.compositeIndexes = compositeIndexes;
-            return o;
+            final var _resultValue = new IndexingPolicyResponse();
+            _resultValue.compositeIndexes = compositeIndexes;
+            return _resultValue;
         }
     }
 }

@@ -25,8 +25,8 @@ public final class SuppressionResponse {
         }
 
         public SuppressionResponse build() {
-            final var o = new SuppressionResponse();
-            return o;
+            final var _resultValue = new SuppressionResponse();
+            return _resultValue;
         }
     }
 }

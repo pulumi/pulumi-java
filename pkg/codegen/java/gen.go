@@ -1,5 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
+//nolint:goconst
 package java
 
 import (
@@ -318,6 +319,8 @@ func (mod *modContext) typeStringRecHelper(
 			return TypeShape{Type: names.JSONElement}
 		case schema.AnyType:
 			return TypeShape{Type: names.Object}
+		case schema.AnyResourceType:
+			return TypeShape{Type: names.ResourceType}
 		default:
 			panic(fmt.Sprintf("Unknown primitive: %#v", t))
 		}
@@ -411,7 +414,7 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 	}
 
 	if prop.Comment != "" {
-		fprintf(w, "%s\n", formatBlockComment(preamble+prop.Comment, options.indent))
+		fprintf(w, "%s\n", formatForeignBlockCommentFrom(preamble+prop.Comment, len(preamble), options.indent))
 	}
 	if options.isBuilder {
 		fprintf(w, "%s\n", formatBlockComment("@return builder", options.indent))
@@ -419,7 +422,7 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 
 	if prop.DeprecationMessage != "" {
 		fprintf(w, "%s * @deprecated\n", options.indent)
-		fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, options.indent))
+		fprintf(w, "%s\n", formatForeignBlockComment(prop.DeprecationMessage, options.indent))
 	}
 	fprintf(w, "%s */\n", options.indent)
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, options.indent)
@@ -491,6 +494,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 	// Determine property types
 	propTypes := make([]TypeShape, len(pt.properties))
+	anyPropertyRequired := false
 	for i, prop := range pt.properties {
 		requireInitializers := !pt.args || isInputType(prop.Type)
 
@@ -503,6 +507,14 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
+
+		if prop.IsRequired() {
+			anyPropertyRequired = true
+		}
+	}
+
+	if anyPropertyRequired {
+		ctx.imports.Ref(names.PulumiMissingRequiredPropertyException)
 	}
 
 	w := ctx.writer
@@ -511,7 +523,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	// Open the class.
 	if pt.comment != "" {
 		fprintf(w, "/**\n")
-		fprintf(w, "%s\n", formatBlockComment(pt.comment, ""))
+		fprintf(w, "%s\n", formatForeignBlockComment(pt.comment, ""))
 		fprintf(w, " */\n")
 	}
 
@@ -599,6 +611,15 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	for propIndex, prop := range pt.properties {
 		propType := propTypes[propIndex]
 		fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
+
+		if prop.IsRequired() && prop.DefaultValue == nil && prop.ConstValue == nil {
+			fprintf(w, "            if ($.%s == null) {\n", fieldName)
+			fprintf(w, "                throw new %s(\"%s\", \"%s\");\n",
+				ctx.ref(names.PulumiMissingRequiredPropertyException), pt.name, fieldName)
+			fprintf(w, "            }\n")
+			continue
+		}
+
 		propRef := fmt.Sprintf("$.%s", fieldName)
 		propInit, err := dg.defaultValueExpr(
 			fmt.Sprintf("property of class %s", pt.name),
@@ -704,6 +725,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
 	fprintf(w, "public final class %s {\n", pt.name)
 
+	anyPropertyRequired := false
 	// Generate each output field.
 	for _, prop := range props {
 		fieldName := names.Ident(pt.mod.propertyName(prop))
@@ -721,7 +743,15 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			isGetter: true,
 		})
 		fprintf(w, "    private %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
+		if prop.IsRequired() {
+			anyPropertyRequired = true
+		}
 	}
+
+	if anyPropertyRequired {
+		ctx.imports.Ref(names.PulumiMissingRequiredPropertyException)
+	}
+
 	if len(props) > 0 {
 		fprintf(w, "\n")
 	}
@@ -810,12 +840,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		})
 
 		setterName := propertyName.AsProperty().Setter()
-		assignment := func(propertyName names.Ident) string {
-			if prop.IsRequired() {
-				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-			}
-			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
-		}
 
 		// add setter
 		var setterAnnotation string
@@ -828,7 +852,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			SetterName:   setterName,
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
-			Assignment:   assignment(propertyName),
+			Assignment:   fmt.Sprintf("this.%s = %s", propertyName, propertyName),
+			IsRequired:   prop.IsRequired(),
 			ListType:     propertyType.ListType(ctx),
 			Annotations:  []string{setterAnnotation},
 		})
@@ -906,12 +931,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if r.Comment != "" || r.DeprecationMessage != "" {
 		fprintf(w, "/**\n")
 		if r.Comment != "" {
-			fprintf(w, "%s\n", formatBlockComment(r.Comment, ""))
+			fprintf(w, "%s\n", formatForeignBlockComment(r.Comment, ""))
 		}
 
 		if r.DeprecationMessage != "" {
 			fprintf(w, " * @deprecated\n")
-			fprintf(w, "%s\n", formatBlockComment(r.DeprecationMessage, ""))
+			fprintf(w, "%s\n", formatForeignBlockComment(r.DeprecationMessage, ""))
 
 		}
 		fprintf(w, " */\n")
@@ -933,7 +958,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	printObsoleteAttribute(ctx, r.DeprecationMessage, "")
 	fprintf(w, "@%s(type=\"%s\")\n",
-		ctx.imports.Ref(names.ResourceType),
+		ctx.imports.Ref(names.ResourceTypeAnnotation),
 		r.Token)
 	fprintf(w, "public class %s extends %s {\n", className, baseType)
 
@@ -961,12 +986,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
 			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, "    "))
+				fprintf(w, "%s\n", formatForeignBlockComment(prop.Comment, "    "))
 			}
 
 			if prop.DeprecationMessage != "" {
 				fprintf(w, "     * @deprecated\n")
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, "    "))
+				fprintf(w, "%s\n", formatForeignBlockComment(prop.DeprecationMessage, "    "))
 
 			}
 			fprintf(w, "     */\n")
@@ -984,7 +1009,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		if prop.Comment != "" {
 			fprintf(w, "    /**\n")
-			fprintf(w, "%s\n", formatBlockComment("@return "+prop.Comment, "    "))
+			fprintf(w, "%s\n", formatForeignBlockCommentFrom("@return "+prop.Comment, 2, "    "))
 			fprintf(w, "     */\n")
 		}
 
@@ -1195,10 +1220,10 @@ func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent st
 	w := ctx.writer
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
-		fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
+		fprintf(w, "%s\n", formatForeignBlockComment(fun.Comment, indent))
 		if fun.DeprecationMessage != "" {
 			fprintf(w, "     * @deprecated\n")
-			fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
+			fprintf(w, "%s\n", formatForeignBlockComment(fun.DeprecationMessage, indent))
 		}
 		fprintf(w, "     */\n")
 	}
@@ -1444,7 +1469,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 
 	if enum.Comment != "" {
 		fprintf(w, "%s/**\n", indent)
-		fprintf(w, "%s\n", formatBlockComment(enum.Comment, indent))
+		fprintf(w, "%s\n", formatForeignBlockComment(enum.Comment, indent))
 		fprintf(w, "%s */\n", indent)
 	}
 
@@ -1469,7 +1494,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 			if e.Comment != "" || e.DeprecationMessage != "" {
 				fprintf(w, "%s/**\n", indent)
 				if e.Comment != "" {
-					fprintf(w, "%s\n", formatBlockComment(e.Comment, indent))
+					fprintf(w, "%s\n", formatForeignBlockComment(e.Comment, indent))
 				}
 
 				if e.DeprecationMessage != "" {
@@ -1660,7 +1685,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 
 		if p.Comment != "" {
 			fprintf(w, "/**\n")
-			fprintf(w, "%s\n", formatBlockComment(p.Comment, ""))
+			fprintf(w, "%s\n", formatForeignBlockComment(p.Comment, ""))
 			fprintf(w, " */\n")
 		}
 		if err := getterTemplate.Execute(w, getterTemplateContext{

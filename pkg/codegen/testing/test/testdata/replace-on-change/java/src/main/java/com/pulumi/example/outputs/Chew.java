@@ -36,13 +36,14 @@ public final class Chew {
 
         @CustomType.Setter
         public Builder owner(@Nullable Dog owner) {
+
             this.owner = owner;
             return this;
         }
         public Chew build() {
-            final var o = new Chew();
-            o.owner = owner;
-            return o;
+            final var _resultValue = new Chew();
+            _resultValue.owner = owner;
+            return _resultValue;
         }
     }
 }

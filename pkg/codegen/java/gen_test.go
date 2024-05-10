@@ -22,7 +22,7 @@ type generatePackageTestConfig struct {
 }
 
 // Configures tests that are maintained in the pulumi-java repository
-// specifially for Java codegen testing.
+// specifically for Java codegen testing.
 func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 	return []generatePackageTestConfig{
 		newGeneratePackageTestConfig(&test.SDKTest{
@@ -62,6 +62,10 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "mini-awsx",
 			Description: "Regression tests extracted from trying to codegen awsx",
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "akamai",
+			Description: "Regression tests extracted from trying to codegen akamai",
 		}),
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "jumbo-resources",
@@ -152,6 +156,30 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "naming-collisions":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "assets-and-archives-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "simple-plain-schema-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "simple-enum-schema-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "secrets-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "plain-and-default-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "output-funcs-go-generics-only":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "regress-py-14539":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "regress-py-14012":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "methods-return-plain-resource":
+		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "go-overridden-internal-module-name":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "regress-py-12546":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "array-of-enum-map":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
 	}
 
 	if hasExtras {

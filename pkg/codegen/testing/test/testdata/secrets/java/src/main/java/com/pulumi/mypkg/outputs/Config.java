@@ -36,13 +36,14 @@ public final class Config {
 
         @CustomType.Setter
         public Builder foo(@Nullable String foo) {
+
             this.foo = foo;
             return this;
         }
         public Config build() {
-            final var o = new Config();
-            o.foo = foo;
-            return o;
+            final var _resultValue = new Config();
+            _resultValue.foo = foo;
+            return _resultValue;
         }
     }
 }

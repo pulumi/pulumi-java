@@ -36,13 +36,14 @@ public final class ArgFunctionResult {
 
         @CustomType.Setter
         public Builder result(@Nullable Resource result) {
+
             this.result = result;
             return this;
         }
         public ArgFunctionResult build() {
-            final var o = new ArgFunctionResult();
-            o.result = result;
-            return o;
+            final var _resultValue = new ArgFunctionResult();
+            _resultValue.result = result;
+            return _resultValue;
         }
     }
 }

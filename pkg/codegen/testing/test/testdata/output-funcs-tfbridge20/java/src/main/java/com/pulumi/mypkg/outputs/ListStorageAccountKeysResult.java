@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.outputs.StorageAccountKeyResponse;
 import java.util.List;
 import java.util.Objects;
@@ -43,16 +44,19 @@ public final class ListStorageAccountKeysResult {
 
         @CustomType.Setter
         public Builder keys(List<StorageAccountKeyResponse> keys) {
-            this.keys = Objects.requireNonNull(keys);
+            if (keys == null) {
+              throw new MissingRequiredPropertyException("ListStorageAccountKeysResult", "keys");
+            }
+            this.keys = keys;
             return this;
         }
         public Builder keys(StorageAccountKeyResponse... keys) {
             return keys(List.of(keys));
         }
         public ListStorageAccountKeysResult build() {
-            final var o = new ListStorageAccountKeysResult();
-            o.keys = keys;
-            return o;
+            final var _resultValue = new ListStorageAccountKeysResult();
+            _resultValue.keys = keys;
+            return _resultValue;
         }
     }
 }

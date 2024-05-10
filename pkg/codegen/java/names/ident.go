@@ -73,7 +73,7 @@ func isLegalIdentifierPart(c rune) bool {
 		unicode.In(c, unicode.Letter, unicode.Digit)
 }
 
-func MakeSafeEnumName(name, typeName string) (string, error) {
+func MakeSafeEnumName(name, _ string) (string, error) {
 	// Replace common single character enum names.
 	safeName := codegen.ExpandShortEnumName(name)
 

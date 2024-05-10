@@ -1,6 +1,38 @@
 CHANGELOG
 =========
 
+## 0.11.0 (2024-05-09)
+
+### Bug Fixes
+
+* Escape javadoc special characters in generated code.
+* Fail fast rather than emitting `PANIC`s when attempting to generate code for ill-formed programs.
+
+## 0.10.0 (2024-03-27)
+
+### Improvements
+
+- Emit comments/trivia for resource and local variable declarations in program-gen
+- Support `stringAsset` function in program-gen from PCL
+- Turn not yet implemented error into a warning in program-gen
+
+## 0.9.9 (2023-12-27)
+
+### Improvements
+
+- Update pulumi/pulumi to v3.99.0.
+
+## 0.9.8 (2023-10-05)
+
+### Improvements
+
+- Adds `MissingRequiredPropertyException` to the main java SDK to be used later in the generated provider SDKs.
+
+### Bug Fixes
+
+- Fixes `builder()` implementation for result types where the identifier of the local variable defined for the result type collides with one of the fields of the result type.
+- Adds `options.encoding = "UTF-8"` to the `compileJava` options so that it can handle non-ASCII characters in the source code, especially in the documentation comments of fields.
+
 ## 0.9.7 (2023-08-29)
 
 ### Improvements

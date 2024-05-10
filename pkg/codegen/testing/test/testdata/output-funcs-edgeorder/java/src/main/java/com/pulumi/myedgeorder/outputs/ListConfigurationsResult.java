@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.outputs.ConfigurationResponse;
 import java.lang.String;
 import java.util.List;
@@ -60,22 +61,26 @@ public final class ListConfigurationsResult {
 
         @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
+
             this.nextLink = nextLink;
             return this;
         }
         @CustomType.Setter
         public Builder value(List<ConfigurationResponse> value) {
-            this.value = Objects.requireNonNull(value);
+            if (value == null) {
+              throw new MissingRequiredPropertyException("ListConfigurationsResult", "value");
+            }
+            this.value = value;
             return this;
         }
         public Builder value(ConfigurationResponse... value) {
             return value(List.of(value));
         }
         public ListConfigurationsResult build() {
-            final var o = new ListConfigurationsResult();
-            o.nextLink = nextLink;
-            o.value = value;
-            return o;
+            final var _resultValue = new ListConfigurationsResult();
+            _resultValue.nextLink = nextLink;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

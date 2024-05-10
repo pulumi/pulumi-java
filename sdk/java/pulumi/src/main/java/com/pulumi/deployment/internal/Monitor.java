@@ -1,7 +1,7 @@
 package com.pulumi.deployment.internal;
 
 import com.pulumi.resources.Resource;
-import pulumirpc.Provider.CallRequest;
+import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Provider.InvokeResponse;
@@ -14,7 +14,7 @@ public interface Monitor {
 
     CompletableFuture<InvokeResponse> invokeAsync(ResourceInvokeRequest request);
 
-    CompletableFuture<CallResponse> callAsync(CallRequest request);
+    CompletableFuture<CallResponse> callAsync(ResourceCallRequest request);
 
     CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request);
 

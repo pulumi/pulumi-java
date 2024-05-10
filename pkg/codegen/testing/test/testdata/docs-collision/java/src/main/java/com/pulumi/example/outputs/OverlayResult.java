@@ -36,13 +36,14 @@ public final class OverlayResult {
 
         @CustomType.Setter
         public Builder result(@Nullable Overlay result) {
+
             this.result = result;
             return this;
         }
         public OverlayResult build() {
-            final var o = new OverlayResult();
-            o.result = result;
-            return o;
+            final var _resultValue = new OverlayResult();
+            _resultValue.result = result;
+            return _resultValue;
         }
     }
 }

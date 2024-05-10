@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import com.pulumi.myedgeorder.outputs.ConfigurationResponse;
 import com.pulumi.myedgeorder.outputs.CostInformationResponse;
@@ -148,12 +149,18 @@ public final class ProductResponse {
 
         @CustomType.Setter
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
-            this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
+            if (availabilityInformation == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "availabilityInformation");
+            }
+            this.availabilityInformation = availabilityInformation;
             return this;
         }
         @CustomType.Setter
         public Builder configurations(List<ConfigurationResponse> configurations) {
-            this.configurations = Objects.requireNonNull(configurations);
+            if (configurations == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "configurations");
+            }
+            this.configurations = configurations;
             return this;
         }
         public Builder configurations(ConfigurationResponse... configurations) {
@@ -161,22 +168,34 @@ public final class ProductResponse {
         }
         @CustomType.Setter
         public Builder costInformation(CostInformationResponse costInformation) {
-            this.costInformation = Objects.requireNonNull(costInformation);
+            if (costInformation == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "costInformation");
+            }
+            this.costInformation = costInformation;
             return this;
         }
         @CustomType.Setter
         public Builder description(DescriptionResponse description) {
-            this.description = Objects.requireNonNull(description);
+            if (description == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "description");
+            }
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            if (displayName == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "displayName");
+            }
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
-            this.filterableProperties = Objects.requireNonNull(filterableProperties);
+            if (filterableProperties == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "filterableProperties");
+            }
+            this.filterableProperties = filterableProperties;
             return this;
         }
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
@@ -184,28 +203,34 @@ public final class ProductResponse {
         }
         @CustomType.Setter
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            if (hierarchyInformation == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "hierarchyInformation");
+            }
+            this.hierarchyInformation = hierarchyInformation;
             return this;
         }
         @CustomType.Setter
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
-            this.imageInformation = Objects.requireNonNull(imageInformation);
+            if (imageInformation == null) {
+              throw new MissingRequiredPropertyException("ProductResponse", "imageInformation");
+            }
+            this.imageInformation = imageInformation;
             return this;
         }
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
             return imageInformation(List.of(imageInformation));
         }
         public ProductResponse build() {
-            final var o = new ProductResponse();
-            o.availabilityInformation = availabilityInformation;
-            o.configurations = configurations;
-            o.costInformation = costInformation;
-            o.description = description;
-            o.displayName = displayName;
-            o.filterableProperties = filterableProperties;
-            o.hierarchyInformation = hierarchyInformation;
-            o.imageInformation = imageInformation;
-            return o;
+            final var _resultValue = new ProductResponse();
+            _resultValue.availabilityInformation = availabilityInformation;
+            _resultValue.configurations = configurations;
+            _resultValue.costInformation = costInformation;
+            _resultValue.description = description;
+            _resultValue.displayName = displayName;
+            _resultValue.filterableProperties = filterableProperties;
+            _resultValue.hierarchyInformation = hierarchyInformation;
+            _resultValue.imageInformation = imageInformation;
+            return _resultValue;
         }
     }
 }

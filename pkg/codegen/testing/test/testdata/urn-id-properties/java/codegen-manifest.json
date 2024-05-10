@@ -1,0 +1,17 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/urnid/Provider.java",
+    "src/main/java/com/pulumi/urnid/ProviderArgs.java",
+    "src/main/java/com/pulumi/urnid/Res.java",
+    "src/main/java/com/pulumi/urnid/ResArgs.java",
+    "src/main/java/com/pulumi/urnid/UrnidFunctions.java",
+    "src/main/java/com/pulumi/urnid/Utilities.java",
+    "src/main/java/com/pulumi/urnid/inputs/TestArgs.java",
+    "src/main/java/com/pulumi/urnid/inputs/TestPlainArgs.java",
+    "src/main/java/com/pulumi/urnid/outputs/InnerType.java",
+    "src/main/java/com/pulumi/urnid/outputs/TestResult.java"
+  ]
+}

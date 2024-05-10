@@ -7,6 +7,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.plant.enums.ContainerBrightness;
 import com.pulumi.plant.enums.ContainerColor;
 import com.pulumi.plant.enums.ContainerSize;
@@ -121,7 +122,9 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
 
         public ContainerArgs build() {
             $.brightness = Codegen.objectProp("brightness", ContainerBrightness.class).output().arg($.brightness).def(ContainerBrightness.One).getNullable();
-            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            if ($.size == null) {
+                throw new MissingRequiredPropertyException("ContainerArgs", "size");
+            }
             return $;
         }
     }

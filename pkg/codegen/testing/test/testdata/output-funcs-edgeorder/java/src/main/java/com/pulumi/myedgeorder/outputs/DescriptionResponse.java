@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.myedgeorder.outputs.LinkResponse;
 import java.lang.String;
 import java.util.List;
@@ -114,7 +115,10 @@ public final class DescriptionResponse {
 
         @CustomType.Setter
         public Builder attributes(List<String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            if (attributes == null) {
+              throw new MissingRequiredPropertyException("DescriptionResponse", "attributes");
+            }
+            this.attributes = attributes;
             return this;
         }
         public Builder attributes(String... attributes) {
@@ -122,12 +126,18 @@ public final class DescriptionResponse {
         }
         @CustomType.Setter
         public Builder descriptionType(String descriptionType) {
-            this.descriptionType = Objects.requireNonNull(descriptionType);
+            if (descriptionType == null) {
+              throw new MissingRequiredPropertyException("DescriptionResponse", "descriptionType");
+            }
+            this.descriptionType = descriptionType;
             return this;
         }
         @CustomType.Setter
         public Builder keywords(List<String> keywords) {
-            this.keywords = Objects.requireNonNull(keywords);
+            if (keywords == null) {
+              throw new MissingRequiredPropertyException("DescriptionResponse", "keywords");
+            }
+            this.keywords = keywords;
             return this;
         }
         public Builder keywords(String... keywords) {
@@ -135,7 +145,10 @@ public final class DescriptionResponse {
         }
         @CustomType.Setter
         public Builder links(List<LinkResponse> links) {
-            this.links = Objects.requireNonNull(links);
+            if (links == null) {
+              throw new MissingRequiredPropertyException("DescriptionResponse", "links");
+            }
+            this.links = links;
             return this;
         }
         public Builder links(LinkResponse... links) {
@@ -143,23 +156,29 @@ public final class DescriptionResponse {
         }
         @CustomType.Setter
         public Builder longDescription(String longDescription) {
-            this.longDescription = Objects.requireNonNull(longDescription);
+            if (longDescription == null) {
+              throw new MissingRequiredPropertyException("DescriptionResponse", "longDescription");
+            }
+            this.longDescription = longDescription;
             return this;
         }
         @CustomType.Setter
         public Builder shortDescription(String shortDescription) {
-            this.shortDescription = Objects.requireNonNull(shortDescription);
+            if (shortDescription == null) {
+              throw new MissingRequiredPropertyException("DescriptionResponse", "shortDescription");
+            }
+            this.shortDescription = shortDescription;
             return this;
         }
         public DescriptionResponse build() {
-            final var o = new DescriptionResponse();
-            o.attributes = attributes;
-            o.descriptionType = descriptionType;
-            o.keywords = keywords;
-            o.links = links;
-            o.longDescription = longDescription;
-            o.shortDescription = shortDescription;
-            return o;
+            final var _resultValue = new DescriptionResponse();
+            _resultValue.attributes = attributes;
+            _resultValue.descriptionType = descriptionType;
+            _resultValue.keywords = keywords;
+            _resultValue.links = links;
+            _resultValue.longDescription = longDescription;
+            _resultValue.shortDescription = shortDescription;
+            return _resultValue;
         }
     }
 }

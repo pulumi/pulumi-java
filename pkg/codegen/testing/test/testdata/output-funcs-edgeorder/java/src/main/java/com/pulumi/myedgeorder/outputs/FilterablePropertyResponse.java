@@ -4,6 +4,7 @@
 package com.pulumi.myedgeorder.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +58,10 @@ public final class FilterablePropertyResponse {
 
         @CustomType.Setter
         public Builder supportedValues(List<String> supportedValues) {
-            this.supportedValues = Objects.requireNonNull(supportedValues);
+            if (supportedValues == null) {
+              throw new MissingRequiredPropertyException("FilterablePropertyResponse", "supportedValues");
+            }
+            this.supportedValues = supportedValues;
             return this;
         }
         public Builder supportedValues(String... supportedValues) {
@@ -65,14 +69,17 @@ public final class FilterablePropertyResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            if (type == null) {
+              throw new MissingRequiredPropertyException("FilterablePropertyResponse", "type");
+            }
+            this.type = type;
             return this;
         }
         public FilterablePropertyResponse build() {
-            final var o = new FilterablePropertyResponse();
-            o.supportedValues = supportedValues;
-            o.type = type;
-            return o;
+            final var _resultValue = new FilterablePropertyResponse();
+            _resultValue.supportedValues = supportedValues;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

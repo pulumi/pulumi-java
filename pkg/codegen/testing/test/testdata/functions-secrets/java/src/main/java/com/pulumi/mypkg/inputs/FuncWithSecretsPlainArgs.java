@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,8 +63,12 @@ public final class FuncWithSecretsPlainArgs extends com.pulumi.resources.InvokeA
         }
 
         public FuncWithSecretsPlainArgs build() {
-            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-            $.plaintext = Objects.requireNonNull($.plaintext, "expected parameter 'plaintext' to be non-null");
+            if ($.cryptoKey == null) {
+                throw new MissingRequiredPropertyException("FuncWithSecretsPlainArgs", "cryptoKey");
+            }
+            if ($.plaintext == null) {
+                throw new MissingRequiredPropertyException("FuncWithSecretsPlainArgs", "plaintext");
+            }
             return $;
         }
     }

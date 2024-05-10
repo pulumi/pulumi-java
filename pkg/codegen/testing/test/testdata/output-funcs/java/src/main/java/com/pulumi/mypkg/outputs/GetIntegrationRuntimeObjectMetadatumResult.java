@@ -64,11 +64,13 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
 
         @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
+
             this.nextLink = nextLink;
             return this;
         }
         @CustomType.Setter
         public Builder value(@Nullable List<Object> value) {
+
             this.value = value;
             return this;
         }
@@ -76,10 +78,10 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             return value(List.of(value));
         }
         public GetIntegrationRuntimeObjectMetadatumResult build() {
-            final var o = new GetIntegrationRuntimeObjectMetadatumResult();
-            o.nextLink = nextLink;
-            o.value = value;
-            return o;
+            final var _resultValue = new GetIntegrationRuntimeObjectMetadatumResult();
+            _resultValue.nextLink = nextLink;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }
