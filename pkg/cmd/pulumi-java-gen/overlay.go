@@ -24,17 +24,20 @@ func readOverlays(rootDir string, overlays []string) (map[string][]byte, error) 
 	result := map[string][]byte{}
 	for _, overlay := range overlays {
 		overlayDir := filepath.Join(rootDir, overlay)
-		err := filepath.WalkDir(overlayDir, func(_ string, entry fs.DirEntry, err error) error {
+		err := filepath.WalkDir(overlayDir, func(path string, entry fs.DirEntry, err error) error {
 			if err != nil {
 				return err
 			}
 			if !entry.IsDir() {
-				sourcePath := filepath.Join(overlayDir, entry.Name())
-				bytes, err := os.ReadFile(sourcePath)
+				relativePath, err := filepath.Rel(overlayDir, path)
 				if err != nil {
 					return err
 				}
-				result[entry.Name()] = bytes
+				bytes, err := os.ReadFile(path)
+				if err != nil {
+					return err
+				}
+				result[relativePath] = bytes
 			}
 			return err
 		})
