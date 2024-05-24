@@ -1781,7 +1781,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 			return javaUtilitiesTemplate.Execute(ctx.writer, javaUtilitiesTemplateContext{
 				Name:        pkgName.String(),
-				VersionPath: strings.ReplaceAll(ensureEndsWithDot(defaultBasePackage)+mod.pkg.Name(), ".", "/"),
+				VersionPath: strings.ReplaceAll(ensureEndsWithDot(mod.basePackageName)+mod.pkg.Name(), ".", "/"),
 				ClassName:   "Utilities",
 				Tool:        mod.tool,
 			})
