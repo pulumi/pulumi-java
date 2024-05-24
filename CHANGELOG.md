@@ -1,6 +1,17 @@
 CHANGELOG
 =========
 
+## 0.12.0 (2024-05-24)
+
+### Improvements
+
+- Plugin: will now automatically use the Gradle executor if build.gradle.kts is present
+- Codegen: support for overlays
+
+### Bug Fixes
+
+- Generated Utilities.java will use the correct basePackage
+
 ## 0.11.0 (2024-05-09)
 
 ### Bug Fixes
