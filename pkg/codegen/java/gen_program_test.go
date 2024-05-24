@@ -37,7 +37,7 @@ func TestGenerateJavaProgram(t *testing.T) {
 	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
 		Language:   "java",
 		Extension:  "java",
-		OutputFile: "MyStack.java",
+		OutputFile: "generated_program/App.java",
 		GenProgram: GenerateProgram,
 		TestCases:  tests,
 	})
