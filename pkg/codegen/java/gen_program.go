@@ -27,6 +27,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/codebase"
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
@@ -169,46 +170,48 @@ func containsRangeExpr(nodes []pcl.Node) bool {
 }
 
 func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, error) {
-	pcl.MapProvidersAsResources(program)
-	// Linearize the nodes into an order appropriate for procedural code generation.
-	nodes := pcl.Linearize(program)
+	return codebase.GenerateProgram(program)
 
-	// Import Java-specific schema info.
-	// FIX ME: not sure what this is doing...
-	packages, err := program.PackageSnapshots()
-	if err != nil {
-		return nil, nil, err
-	}
-	for _, p := range packages {
-		if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
-			return nil, nil, err
-		}
-	}
+	//pcl.MapProvidersAsResources(program)
+	//// Linearize the nodes into an order appropriate for procedural code generation.
+	//nodes := pcl.Linearize(program)
 
-	g := &generator{
-		program:         program,
-		functionInvokes: map[string]*schema.Function{},
-	}
+	//// Import Java-specific schema info.
+	//// FIX ME: not sure what this is doing...
+	//packages, err := program.PackageSnapshots()
+	//if err != nil {
+	//	return nil, nil, err
+	//}
+	//for _, p := range packages {
+	//	if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
+	//		return nil, nil, err
+	//	}
+	//}
 
-	g.Formatter = format.NewFormatter(g)
+	//g := &generator{
+	//	program:         program,
+	//	functionInvokes: map[string]*schema.Function{},
+	//}
 
-	var index bytes.Buffer
-	g.genPreamble(&index, nodes)
+	// g.Formatter = format.NewFormatter(g)
 
-	g.Indented(func() {
-		g.Indented(func() {
-			for _, n := range nodes {
-				g.genNode(&index, n)
-			}
-		})
-	})
+	// var index bytes.Buffer
+	// g.genPreamble(&index, nodes)
 
-	g.genPostamble(&index, nodes)
+	//g.Indented(func() {
+	//	g.Indented(func() {
+	//		for _, n := range nodes {
+	//			g.genNode(&index, n)
+	//		}
+	//	})
+	//})
 
-	files := map[string][]byte{
-		"MyStack.java": index.Bytes(),
-	}
-	return files, g.diagnostics, nil
+	// g.genPostamble(&index, nodes)
+
+	//files := map[string][]byte{
+	//	"MyStack.java": index.Bytes(),
+	//}
+	//return files, g.diagnostics, nil
 }
 
 func GenerateProject(
@@ -240,7 +243,7 @@ func GenerateProject(
 		if fileName == "MyStack.java" {
 			fileName = "App.java"
 		}
-		fileWithPackage := fmt.Sprintf("src/main/java/generated_program/%s", fileName)
+		fileWithPackage := fmt.Sprintf("src/main/java/%s", fileName)
 		filesWithPackages[fileWithPackage] = fileContents
 	}
 

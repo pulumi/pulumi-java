@@ -171,6 +171,7 @@ var expectedFailures = map[string]string{
 	"l2-failed-create-continue-on-error":    "unimplemented for Java",
 	"l2-invoke-dependencies":                "unimplemented for Java",
 	"l2-invoke-options":                     "unimplemented for Java",
+	"l2-invoke-options-depends-on":          "unimplemented for Java",
 	"l2-invoke-secrets":                     "unimplemented for Java",
 	"l2-invoke-simple":                      "unimplemented for Java",
 	"l2-invoke-variants":                    "unimplemented for Java",
@@ -186,6 +187,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-asset-archive":             "unimplemented for Java",
 	"l2-resource-config":                    "unimplemented for Java",
 	"l2-resource-primitives":                "unimplemented for Java",
+	"l2-resource-secret":                    "unimplemented for Java",
 	"l2-target-up-with-new-dependency":      "unimplemented for Java",
 }
 
