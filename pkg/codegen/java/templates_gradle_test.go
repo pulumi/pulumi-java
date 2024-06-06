@@ -75,6 +75,7 @@ func TestIsPublishedByPulumi(t *testing.T) {
 		{"", "https://pulumi.io", true},
 		{"Pulumiverse", "https://example.com", false},
 		{"Pulumi fan", "https://pulumi.co", false},
+		{"Acmecorp", "invalid url!", false},
 	}
 
 	for _, tc := range testCases {
