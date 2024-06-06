@@ -6,6 +6,7 @@ import (
 	"bytes"
 	_ "embed"
 	"fmt"
+	"net/url"
 	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
@@ -123,10 +124,7 @@ func newGradleTemplateContext(
 		ctx.GroupID = "com.pulumi"
 	}
 
-	if pkg.Publisher == "Pulumi" ||
-		pkg.Homepage == "https://pulumi.com" ||
-		pkg.Homepage == "https://pulumi.io" {
-
+	if isPublishedByPulumi(pkg) {
 		ctx.GroupID = "com.pulumi"
 		ctx.DeveloperID = "pulumi"
 		ctx.DeveloperName = "Pulumi"
@@ -140,6 +138,21 @@ func newGradleTemplateContext(
 	}
 
 	return ctx
+}
+
+func isPublishedByPulumi(pkg *schema.Package) bool {
+	if strings.EqualFold(pkg.Publisher, "pulumi") {
+		return true
+	}
+
+	u, err := url.Parse(pkg.Homepage)
+	if err == nil {
+		if strings.HasSuffix(u.Host, "pulumi.com") || u.Host == "pulumi.io" {
+			return true
+		}
+	}
+
+	return false
 }
 
 func formatGitURL(url string) string {
