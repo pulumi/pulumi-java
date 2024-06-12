@@ -57,3 +57,33 @@ func eksExample() (*schema.Package, *PackageInfo) {
 	info := &PackageInfo{Dependencies: deps}
 	return pkg, info
 }
+
+func TestIsPublishedByPulumi(t *testing.T) {
+	type testCase struct {
+		publisher string
+		homepage  string
+		expected  bool
+	}
+
+	testCases := []testCase{
+		{"Pulumi", "", true},
+		{"pulumi", "", true},
+		{"", "https://pulumi.com", true},
+		{"", "https://www.pulumi.com", true},
+		{"", "http://www.pulumi.com", true},
+		{"", "https://www.pulumi.com/registry/packages/xyz/", true},
+		{"", "https://pulumi.io", true},
+		{"Pulumiverse", "https://example.com", false},
+		{"Pulumi fan", "https://pulumi.co", false},
+		{"Acmecorp", "invalid url!", false},
+	}
+
+	for _, tc := range testCases {
+		pkg := &schema.Package{
+			Publisher: tc.publisher,
+			Homepage:  tc.homepage,
+		}
+		result := isPublishedByPulumi(pkg)
+		assert.Equal(t, tc.expected, result)
+	}
+}
