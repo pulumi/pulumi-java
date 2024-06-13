@@ -71,6 +71,7 @@ def genPulumiResources = tasks.register('genPulumiResources') {
         def info = new Object()
         info.metaClass.resource = true
         info.metaClass.name = "jumbo"
+        info.metaClass.server = "example.com"
         info.metaClass.version = resolvedVersion
         def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
