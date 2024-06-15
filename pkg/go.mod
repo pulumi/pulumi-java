@@ -15,7 +15,7 @@ require (
 	github.com/pulumi/pulumi/pkg/v3 v3.112.1-0.20240412162127-8ff72bf9fa84
 	github.com/pulumi/pulumi/sdk/v3 v3.112.1-0.20240412162127-8ff72bf9fa84
 	github.com/spf13/cobra v1.8.0
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/zclconf/go-cty v1.13.2
 	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.33.0
