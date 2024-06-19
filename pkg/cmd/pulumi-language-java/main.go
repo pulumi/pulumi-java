@@ -28,7 +28,6 @@ import (
 
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
-	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -442,7 +441,7 @@ func (host *javaLanguageHost) GetProgramDependencies(
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 
-func (host *javaLanguageHost) About(_ context.Context, _ *emptypb.Empty) (*pulumirpc.AboutResponse, error) {
+func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest) (*pulumirpc.AboutResponse, error) {
 	getResponse := func(execString string, args ...string) (string, string, error) {
 		ex, err := executable.FindExecutable(execString)
 		if err != nil {
