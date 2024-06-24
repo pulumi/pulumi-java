@@ -441,9 +441,7 @@ func (host *javaLanguageHost) GetProgramDependencies(
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 
-func (host *javaLanguageHost) RuntimeOptionsPrompts(ctx context.Context,
-	req *pulumirpc.RuntimeOptionsRequest,
-) (*pulumirpc.RuntimeOptionsResponse, error) {
+func (host *javaLanguageHost) RuntimeOptionsPrompts(_ context.Context, _ *pulumirpc.RuntimeOptionsRequest) (*pulumirpc.RuntimeOptionsResponse, error) {
 	return &pulumirpc.RuntimeOptionsResponse{}, nil
 }
 
