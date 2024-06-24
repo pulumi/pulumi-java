@@ -7,8 +7,8 @@ replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
 require (
-	github.com/pulumi/pulumi/pkg/v3 v3.120.0
-	github.com/pulumi/pulumi/sdk/v3 v3.120.0
+	github.com/pulumi/pulumi/pkg/v3 v3.121.0
+	github.com/pulumi/pulumi/sdk/v3 v3.121.0
 	github.com/stretchr/testify v1.9.0
 )
 
@@ -28,6 +28,7 @@ require (
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/azkeys v0.10.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.7.1 // indirect
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.2.2 // indirect
+	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/ProtonMail/go-crypto v1.0.0 // indirect
 	github.com/aead/chacha20 v0.0.0-20180709150244-8b13a72661da // indirect
