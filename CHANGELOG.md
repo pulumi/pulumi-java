@@ -5,7 +5,7 @@ CHANGELOG
 
 ### Improvements
 
-- Update pulumi/pulumi to v3.120.0.
+- Update pulumi/pulumi to v3.121.0.
 
 ## 0.12.0 (2024-05-24)
 

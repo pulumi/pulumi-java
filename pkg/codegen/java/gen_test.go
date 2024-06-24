@@ -180,6 +180,10 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // python-only
 	case "array-of-enum-map":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "python-typed-dict-setuppy":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "python-typed-dict-pyproject":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
 	}
 
 	if hasExtras {
