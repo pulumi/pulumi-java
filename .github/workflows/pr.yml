@@ -57,7 +57,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@8d49e559aae34d3e0eb16cde532684bc9702762b
+        uses: gradle/wrapper-validation-action@88425854a36845f9c881450d9660b5fd46bee142
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
@@ -129,7 +129,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@8d49e559aae34d3e0eb16cde532684bc9702762b
+        uses: gradle/wrapper-validation-action@88425854a36845f9c881450d9660b5fd46bee142
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
@@ -211,7 +211,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@8d49e559aae34d3e0eb16cde532684bc9702762b
+        uses: gradle/wrapper-validation-action@88425854a36845f9c881450d9660b5fd46bee142
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
@@ -323,7 +323,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@8d49e559aae34d3e0eb16cde532684bc9702762b
+        uses: gradle/wrapper-validation-action@88425854a36845f9c881450d9660b5fd46bee142
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
