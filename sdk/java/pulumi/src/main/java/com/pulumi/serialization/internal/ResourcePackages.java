@@ -24,10 +24,13 @@ import com.pulumi.resources.ResourceOptions;
 import pulumirpc.EngineGrpc;
 
 import javax.annotation.Nullable;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.Properties;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -63,15 +66,18 @@ public class ResourcePackages {
             throw new IllegalStateException(String.format("Failed to read class path: %s", e.getMessage()), e);
         }
 
+
         return classpath.getAllClasses().stream()
                 // exclude early our dependencies and common packages almost certain to not contain what we want
                 .filter(ResourcePackages::excludePackages)
                 .map(c -> {
+                    //System.out.println("test for change");
                     try {
+
                         return c.load();
                     } catch (LinkageError e) {
                         throw new IllegalStateException(String.format(
-                                "Failed to load class '%s' (package: '%s') from class path: %s",
+                                "Failed to load class '%s' (package: '%s') from class path: %s, but it was fun to try",
                                 c, c.getPackageName(), e.getMessage()
                         ), e);
                     }
@@ -158,8 +164,51 @@ public class ResourcePackages {
                 && !c.getPackageName().equals("net.bytebuddy")
                 && !c.getPackageName().startsWith("net.bytebuddy.")
                 && !c.getPackageName().startsWith(Resource.class.getPackageName())
-                && !c.getPackageName().startsWith(EngineGrpc.class.getPackageName());
+                && !c.getPackageName().startsWith(EngineGrpc.class.getPackageName())
+                && !excludePackagesFromProperties(c);
     }
+
+    private static boolean excludePackagesFromProperties(ClassInfo c) {
+//        System.out.println("Hello there");
+//        System.err.println("sadf");
+        Properties properties = new Properties();
+        //throw new Exception("we got to this path");
+//        try (InputStream input = this.getClass().getClassLoader().getResourceAsStream("prop.properties")) {
+        try (InputStream input = ResourcePackages.class.getClassLoader().getResourceAsStream("prop.properties")) {
+            if (input == null) {
+                //System.out.println("No input detected");
+                return false;
+            }
+//            String rootPath = System.getProperty("user.dir");
+//            System.err.println(rootPath);
+//            String iconConfigPath = rootPath + "pom.xml";
+//            Properties iconProps = new Properties();
+//            iconProps.loadFromXML(new FileInputStream(iconConfigPath));
+//
+//            System.err.println(iconProps);
+            properties.load(input);
+            String listProperty = properties.getProperty("my.list");
+
+            if (listProperty != null) {
+//                System.out.println(listProperty);
+                String[] items = listProperty.split(",");
+                for (String item : items){
+                    if (c.getPackageName().startsWith(item)) {
+                        System.out.println("Detected that t is unwanted");
+                        return true;
+                    }
+                }
+            }
+
+            //String rootPath = requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
+
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
+
 
     public ResourcePackages(Log log) {
         this.log = requireNonNull(log);
@@ -167,6 +216,8 @@ public class ResourcePackages {
 
     @InternalUse
     Optional<Resource> tryConstruct(String type, String version, String urn) {
+        //log.error("HEJ Jessi");
+
         this.log.excessive(
                 "Deserialize/ResourcePackages: searching for type=%s version=%s urn=%s",
                 type, version, urn
