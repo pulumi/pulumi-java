@@ -163,10 +163,10 @@ public class ResourcePackages {
     }
 
     private static boolean excludePackagesFromProperties(ClassInfo c) {
-        String packages = System.getProperty("ADDITIONAL_EXCLUDES");
+        String packages = System.getProperty("pulumi.resourcepackages.excludes");
         if (packages != null) {
             String[] items = packages.split(",");
-            for (String item : items){
+            for (String item: items){
                 if (c.getPackageName().startsWith(item)) {
                     return true;
                 }
