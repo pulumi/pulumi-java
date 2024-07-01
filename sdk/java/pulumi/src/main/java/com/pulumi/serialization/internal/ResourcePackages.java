@@ -179,22 +179,16 @@ public class ResourcePackages {
     }
 
     private static boolean excludePackagesFromProperties(ClassInfo c) {
-        // Get the path to the pom.xml file in the root of the project
         String pomPath = "pom.xml";
-
-        // Create a File object
         File pomFile = new File(pomPath);
 
-        // Check if the file exists
         if (pomFile.exists()) {
-
             try {
                 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
                 Document doc = dBuilder.parse(pomFile);
                 doc.getDocumentElement().normalize();
 
-                // Get the <properties> element
                 NodeList propertiesList = doc.getElementsByTagName("properties");
                 if (propertiesList.getLength() > 0) {
 
@@ -203,25 +197,22 @@ public class ResourcePackages {
 
                         Element propertiesElement = (Element) propertiesNode;
 
-                        // Get the <something> element within <properties>
-                        NodeList somethingList = propertiesElement.getElementsByTagName("my.list");
+                        NodeList excludePackagesList = propertiesElement.getElementsByTagName("excludePackagesList");
 
-                        if (somethingList.getLength() > 0) {
+                        if (excludePackagesList.getLength() > 0) {
 
-                            Node somethingNode = somethingList.item(0);
-                            if (somethingNode.getNodeType() == Node.ELEMENT_NODE) {
+                            Node excludePackagesListNode = excludePackagesList.item(0);
+                            if (excludePackagesListNode.getNodeType() == Node.ELEMENT_NODE) {
 
-                                Element somethingElement = (Element) somethingNode;
-                                String value = somethingElement.getTextContent();
+                                Element excludePackagesListElement = (Element) excludePackagesListNode;
+                                String value = excludePackagesListElement.getTextContent();
 
                                 String[] items = value.split(",");
                                 for (String item : items){
                                     if (c.getPackageName().startsWith(item)) {
-//                                        System.out.println("Detected that t is unwanted");
                                         return true;
                                     }
                                 }
-
                             }
                         }
                     }
@@ -229,61 +220,8 @@ public class ResourcePackages {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-//            try {
-//                // Read the contents of the file
-//                String content = new String(Files.readAllBytes(Paths.get(pomPath)), StandardCharsets.UTF_8);
-//                log.error("pom.xml contents:\n" + content);
-//            } catch (IOException e) {
-//                log.error("Error reading pom.xml file: " + e.getMessage());
-//            }
-        } else {
-//            log.error("pom.xml file not found in the project root.");
         }
-
-
         return false;
-
-
-////        System.out.println("Hello there");
-////        System.err.println("sadf");
-//        Properties properties = new Properties();
-//        //throw new Exception("we got to this path");
-////        try (InputStream input = this.getClass().getClassLoader().getResourceAsStream("prop.properties")) {
-//        try (InputStream input = ResourcePackages.class.getClassLoader().getResourceAsStream("prop.properties")) {
-//            if (input == null) {
-//                //System.out.println("No input detected");
-//                return false;
-//            }
-//
-////            String rootPath = System.getProperty("user.dir");
-////            System.err.println(rootPath);
-////            String iconConfigPath = rootPath + "pom.xml";
-////            Properties iconProps = new Properties();
-////            iconProps.loadFromXML(new FileInputStream(iconConfigPath));
-////
-////            System.err.println(iconProps);
-//            properties.load(input);
-//            String listProperty = properties.getProperty("my.list");
-//
-//            if (listProperty != null) {
-//                //System.out.println(listProperty);
-//                String[] items = listProperty.split(",");
-//                for (String item : items){
-//                    if (c.getPackageName().startsWith(item)) {
-//                        System.out.println("Detected that t is unwanted");
-//                        return true;
-//                    }
-//                }
-//            }
-//
-//            //String rootPath = requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
-//
-//
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
-//        return false;
     }
 
 
@@ -293,161 +231,6 @@ public class ResourcePackages {
 
     @InternalUse
     Optional<Resource> tryConstruct(String type, String version, String urn) {
-//        log.error("HEJ Jessi");
-//
-//
-//
-//
-//
-//        log.error("this is before xml");
-//        log.error("test of xml");
-
-//        // Get the path to the pom.xml file in the root of the project
-//        String pomPath = "pom.xml";
-//
-//        // Create a File object
-//        File pomFile = new File(pomPath);
-//
-//
-//
-//
-//
-//
-//
-//
-//        // Check if the file exists
-//        if (pomFile.exists()) {
-//            log.error("Found pom.xml at: " + pomFile.getAbsolutePath());
-//
-//            try {
-////                File xmlFile = new File("path/to/your/file.xml");
-//                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-//                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-//                Document doc = dBuilder.parse(pomFile);
-//                doc.getDocumentElement().normalize();
-//
-//                log.error("Root element: " + doc.getDocumentElement().getNodeName());
-//
-//                log.error("Root element: " + doc.getDocumentElement().getElementsByTagName("my.list").getClass());
-//
-//                log.error("Root element1: " + doc.getDocumentElement().getChildNodes().getLength());
-//
-////                for (int i = 0; i < doc.getDocumentElement().getChildNodes().getLength(); i++) {
-////                    log.error("Root element: " + doc.getDocumentElement().getChildNodes().item(i).getNodeName());
-////                }
-//
-//                log.error("start of listing");
-//                // Get the <properties> element
-//                NodeList propertiesList = doc.getElementsByTagName("properties");
-//                if (propertiesList.getLength() > 0) {
-//                    log.error("test 1");
-//                    Node propertiesNode = propertiesList.item(0);
-//                    if (propertiesNode.getNodeType() == Node.ELEMENT_NODE) {
-//                        log.error("test 2");
-//                        Element propertiesElement = (Element) propertiesNode;
-//                        log.error(propertiesElement.getTagName());
-//                        // Get the <something> element within <properties>
-//                        NodeList somethingList = propertiesElement.getElementsByTagName("my.list");
-//                        log.error(somethingList.toString());
-//                        if (somethingList.getLength() > 0) {
-//                            log.error("test3");
-//                            Node somethingNode = somethingList.item(0);
-//                            if (somethingNode.getNodeType() == Node.ELEMENT_NODE) {
-//                                log.error("test4");
-//                                Element somethingElement = (Element) somethingNode;
-//                                String value = somethingElement.getTextContent();
-//                                log.error("Value of <something>: " + value);
-//
-//
-//
-//                            }
-//                        }
-//                    }
-//                }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-////                log.error("Root element value: " + doc.getDocumentElement().getChildNodes().item(13).getFirstChild().getNodeName());
-//
-////                log.error("Root element lenght: " + doc.getDocumentElement().getChildNodes().item(13).getChildNodes().item(1));
-//
-//
-//                //log.error("Root element2: " + doc.getAttributes().getNamedItem("my.list"));
-//              //  log.error("Root element3: " + doc.getAttributes().getNamedItem("my.list").getNodeValue());
-//                // You can now process the XML document as needed
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//
-//
-//
-//
-////            String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-////            String iconConfigPath = rootPath + "icons.xml";
-////            Properties iconProps = new Properties();
-////            try {
-////                iconProps.loadFromXML(new FileInputStream(pomFile.getAbsolutePath()));
-////                log.error(iconProps.getProperty("my.list"));
-////            } catch (IOException e) {
-////                throw new RuntimeException(e);
-////            }
-//
-////            assertEquals("icon1.jpg", iconProps.getProperty("fileIcon"));
-//
-//            try {
-//                // Read the contents of the file
-//                String content = new String(Files.readAllBytes(Paths.get(pomPath)), StandardCharsets.UTF_8);
-//                log.error("pom.xml contents:\n" + content);
-//            } catch (IOException e) {
-//                log.error("Error reading pom.xml file: " + e.getMessage());
-//            }
-//        } else {
-//            log.error("pom.xml file not found in the project root.");
-//        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         this.log.excessive(
                 "Deserialize/ResourcePackages: searching for type=%s version=%s urn=%s",
                 type, version, urn
@@ -480,11 +263,6 @@ public class ResourcePackages {
         var urnParsed = Urn.parse(urn);
         var urnName = urnParsed.name;
 
-        // Looking for a constructor with the following signature:
-        //
-        //     (String name, SomeResourceArgs args, CustomResourceOptions options)
-        //
-        // The search is approximate. We may need to consider using annotations instead in future versions.
         var constructorInfo =
                 Arrays.stream(resourceType.get().getDeclaredConstructors())
                         .filter(c -> c.getParameterCount() == 3)
