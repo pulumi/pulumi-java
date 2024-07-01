@@ -21,13 +21,20 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceOptions;
+import org.w3c.dom.Document;
 import pulumirpc.EngineGrpc;
 
 import javax.annotation.Nullable;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Properties;
@@ -179,6 +186,7 @@ public class ResourcePackages {
                 //System.out.println("No input detected");
                 return false;
             }
+
 //            String rootPath = System.getProperty("user.dir");
 //            System.err.println(rootPath);
 //            String iconConfigPath = rootPath + "pom.xml";
@@ -190,7 +198,7 @@ public class ResourcePackages {
             String listProperty = properties.getProperty("my.list");
 
             if (listProperty != null) {
-//                System.out.println(listProperty);
+                //System.out.println(listProperty);
                 String[] items = listProperty.split(",");
                 for (String item : items){
                     if (c.getPackageName().startsWith(item)) {
@@ -216,7 +224,94 @@ public class ResourcePackages {
 
     @InternalUse
     Optional<Resource> tryConstruct(String type, String version, String urn) {
-        //log.error("HEJ Jessi");
+        log.error("HEJ Jessi");
+
+
+
+
+
+        log.error("this is before xml");
+        log.error("test of xml");
+
+        // Get the path to the pom.xml file in the root of the project
+        String pomPath = "pom.xml";
+
+        // Create a File object
+        File pomFile = new File(pomPath);
+
+
+
+
+
+
+
+
+        // Check if the file exists
+        if (pomFile.exists()) {
+            log.error("Found pom.xml at: " + pomFile.getAbsolutePath());
+
+            try {
+//                File xmlFile = new File("path/to/your/file.xml");
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                Document doc = dBuilder.parse(pomFile);
+                doc.getDocumentElement().normalize();
+
+                log.error("Root element: " + doc.getDocumentElement().getNodeName());
+
+                log.error("Root element: " + doc.getDocumentElement().getElementsByTagName("my.list"));
+
+                log.error("Root element: " + doc.getDocumentElement().getAttribute("my.list"));
+                // You can now process the XML document as needed
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
+
+//            String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+//            String iconConfigPath = rootPath + "icons.xml";
+//            Properties iconProps = new Properties();
+//            try {
+//                iconProps.loadFromXML(new FileInputStream(pomFile.getAbsolutePath()));
+//                log.error(iconProps.getProperty("my.list"));
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+
+//            assertEquals("icon1.jpg", iconProps.getProperty("fileIcon"));
+
+            try {
+                // Read the contents of the file
+                String content = new String(Files.readAllBytes(Paths.get(pomPath)), StandardCharsets.UTF_8);
+                log.error("pom.xml contents:\n" + content);
+            } catch (IOException e) {
+                log.error("Error reading pom.xml file: " + e.getMessage());
+            }
+        } else {
+            log.error("pom.xml file not found in the project root.");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         this.log.excessive(
                 "Deserialize/ResourcePackages: searching for type=%s version=%s urn=%s",
