@@ -1407,11 +1407,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setVersion(options.getVersion().orElse(""))
                                 .setAcceptSecrets(true)
                                 .setAcceptResources(!this.disableResourceReferences)
-                                .setPackageRef(packageRef == null ? "" : packageRef);
-
-                        for (int i = 0; i < prepareResult.allDirectDependencyUrns.size(); i++) {
-                            request.setDependencies(i, prepareResult.allDirectDependencyUrns.asList().get(i));
-                        }
+                                .setPackageRef(packageRef == null ? "" : packageRef)
+                                .addAllDependencies(prepareResult.allDirectDependencyUrns);
 
                         // Now run the operation, serializing the invocation if necessary.
                         return this.monitor.readResourceAsync(resource, request.build())
