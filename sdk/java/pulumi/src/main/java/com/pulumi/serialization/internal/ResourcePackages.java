@@ -6,7 +6,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
 import com.google.common.reflect.ClassPath.ClassInfo;
-import com.google.common.reflect.Parameter;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.ResourceType;
@@ -22,26 +21,13 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceOptions;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Element;
 import pulumirpc.EngineGrpc;
 
 import javax.annotation.Nullable;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.Properties;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -72,18 +58,16 @@ public class ResourcePackages {
         );
         final ClassPath classpath;
         try {
-                   classpath = ClassPath.from(loader);
+            classpath = ClassPath.from(loader);
         } catch (IOException e) {
             throw new IllegalStateException(String.format("Failed to read class path: %s", e.getMessage()), e);
         }
-
 
         return classpath.getAllClasses().stream()
                 // exclude early our dependencies and common packages almost certain to not contain what we want
                 .filter(ResourcePackages::excludePackages)
                 .map(c -> {
                     try {
-
                         return c.load();
                     } catch (LinkageError e) {
                         throw new IllegalStateException(String.format(
@@ -190,7 +174,6 @@ public class ResourcePackages {
         }
         return false;
     }
-
 
     public ResourcePackages(Log log) {
         this.log = requireNonNull(log);
