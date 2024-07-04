@@ -6,6 +6,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
 import com.google.common.reflect.ClassPath.ClassInfo;
+import com.google.common.reflect.Parameter;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.ResourceType;
@@ -71,7 +72,7 @@ public class ResourcePackages {
         );
         final ClassPath classpath;
         try {
-            classpath = ClassPath.from(loader);
+                   classpath = ClassPath.from(loader);
         } catch (IOException e) {
             throw new IllegalStateException(String.format("Failed to read class path: %s", e.getMessage()), e);
         }
@@ -81,13 +82,12 @@ public class ResourcePackages {
                 // exclude early our dependencies and common packages almost certain to not contain what we want
                 .filter(ResourcePackages::excludePackages)
                 .map(c -> {
-                    //System.out.println("test for change");
                     try {
 
                         return c.load();
                     } catch (LinkageError e) {
                         throw new IllegalStateException(String.format(
-                                "Failed to load class '%s' (package: '%s') from class path: %s, but it was fun to try",
+                                "Failed to load class '%s' (package: '%s') from class path: %s",
                                 c, c.getPackageName(), e.getMessage()
                         ), e);
                     }
@@ -179,46 +179,13 @@ public class ResourcePackages {
     }
 
     private static boolean excludePackagesFromProperties(ClassInfo c) {
-        String pomPath = "pom.xml";
-        File pomFile = new File(pomPath);
-
-        if (pomFile.exists()) {
-            try {
-                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-                Document doc = dBuilder.parse(pomFile);
-                doc.getDocumentElement().normalize();
-
-                NodeList propertiesList = doc.getElementsByTagName("properties");
-                if (propertiesList.getLength() > 0) {
-
-                    Node propertiesNode = propertiesList.item(0);
-                    if (propertiesNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                        Element propertiesElement = (Element) propertiesNode;
-
-                        NodeList excludePackagesList = propertiesElement.getElementsByTagName("excludePackagesList");
-
-                        if (excludePackagesList.getLength() > 0) {
-
-                            Node excludePackagesListNode = excludePackagesList.item(0);
-                            if (excludePackagesListNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                                Element excludePackagesListElement = (Element) excludePackagesListNode;
-                                String value = excludePackagesListElement.getTextContent();
-
-                                String[] items = value.split(",");
-                                for (String item : items){
-                                    if (c.getPackageName().startsWith(item)) {
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
+        String packages = System.getProperty("ADDITIONAL_EXCLUDES");
+        if (packages != null) {
+            String[] items = packages.split(",");
+            for (String item : items){
+                if (c.getPackageName().startsWith(item)) {
+                    return true;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         }
         return false;
