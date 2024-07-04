@@ -213,6 +213,11 @@ public class ResourcePackages {
         var urnParsed = Urn.parse(urn);
         var urnName = urnParsed.name;
 
+        // Looking for a constructor with the following signature:
+        //
+        //     (String name, SomeResourceArgs args, CustomResourceOptions options)
+        //
+        // The search is approximate. We may need to consider using annotations instead in future versions.
         var constructorInfo =
                 Arrays.stream(resourceType.get().getDeclaredConstructors())
                         .filter(c -> c.getParameterCount() == 3)
