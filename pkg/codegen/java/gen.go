@@ -1054,11 +1054,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		tok = mod.pkg.Name()
 	}
 
-	argsOverride := fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
-	if hasConstInputs {
-		argsOverride = "makeArgs(args)"
-	}
-
 	// Name only constructor
 	fprintf(w, "    /**\n")
 	fprintf(w, "     *\n")
@@ -1093,8 +1088,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
-	fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty())%s);\n",
-		tok, argsOverride, ctx.imports.Ref(names.Codegen), isComponent)
+	fprintf(w, "        super(\"%s\", name, makeArgs(args, options), makeResourceOptions(options, %s.empty())%s);\n",
+		tok, ctx.imports.Ref(names.Codegen), isComponent)
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
@@ -1111,10 +1106,17 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "    }\n")
 	}
 
+	// Write the method that will calculate the resource arguments.
+	fprintf(w, "\n")
+	fprintf(w, "    private static %s makeArgs(%s args, @%s %s options) {\n",
+		ctx.ref(argsFQN), argsType, ctx.ref(names.Nullable), optionsType)
+	fprintf(w,
+		"        if (options != null && options.getUrn().isPresent()) {\n")
+	fprintf(w,
+		"            return args;\n")
+	fprintf(w,
+		"        }\n")
 	if hasConstInputs {
-		// Write the method that will calculate the resource arguments.
-		fprintf(w, "\n")
-		fprintf(w, "    private static %s makeArgs(%s args) {\n", ctx.ref(argsFQN), argsType)
 		fprintf(w,
 			"        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
 		fprintf(w, "        return builder\n")
@@ -1129,8 +1131,11 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			}
 		}
 		fprintf(w, "            .build();\n")
-		fprintf(w, "    }\n")
+	} else {
+		fprintf(w,
+			"        return args == null ? %s.Empty : args;\n", ctx.ref(argsFQN))
 	}
+	fprintf(w, "    }\n")
 
 	// Write the method that will calculate the resource options.
 	fprintf(w, "\n")
