@@ -57,11 +57,18 @@ public class BotmanChallengeAction extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanChallengeAction(String name, BotmanChallengeActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanChallengeAction:BotmanChallengeAction", name, args == null ? BotmanChallengeActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanChallengeAction:BotmanChallengeAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanChallengeAction(String name, Output<String> id, @Nullable BotmanChallengeActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanChallengeAction:BotmanChallengeAction", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanChallengeActionArgs makeArgs(BotmanChallengeActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanChallengeActionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

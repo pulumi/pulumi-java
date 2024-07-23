@@ -166,11 +166,18 @@ public class CloudletsPolicy extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudletsPolicy(String name, CloudletsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudletsPolicy:CloudletsPolicy", name, args == null ? CloudletsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cloudletsPolicy:CloudletsPolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudletsPolicy(String name, Output<String> id, @Nullable CloudletsPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/cloudletsPolicy:CloudletsPolicy", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CloudletsPolicyArgs makeArgs(CloudletsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CloudletsPolicyArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

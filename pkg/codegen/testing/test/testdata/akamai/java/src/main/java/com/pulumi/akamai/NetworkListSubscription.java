@@ -51,11 +51,18 @@ public class NetworkListSubscription extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkListSubscription(String name, NetworkListSubscriptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/networkListSubscription:NetworkListSubscription", name, args == null ? NetworkListSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/networkListSubscription:NetworkListSubscription", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkListSubscription(String name, Output<String> id, @Nullable NetworkListSubscriptionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/networkListSubscription:NetworkListSubscription", name, state, makeResourceOptions(options, id));
+    }
+
+    private static NetworkListSubscriptionArgs makeArgs(NetworkListSubscriptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? NetworkListSubscriptionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

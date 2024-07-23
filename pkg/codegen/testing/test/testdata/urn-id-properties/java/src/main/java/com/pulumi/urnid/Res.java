@@ -48,11 +48,18 @@ public class Res extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Res(String name, @Nullable ResArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("urnid:index:Res", name, args == null ? ResArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("urnid:index:Res", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Res(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("urnid:index:Res", name, null, makeResourceOptions(options, id));
+    }
+
+    private static ResArgs makeArgs(@Nullable ResArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ResArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

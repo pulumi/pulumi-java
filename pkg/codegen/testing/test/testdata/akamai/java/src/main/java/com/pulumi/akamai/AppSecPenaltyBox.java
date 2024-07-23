@@ -96,11 +96,18 @@ public class AppSecPenaltyBox extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecPenaltyBox(String name, AppSecPenaltyBoxArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecPenaltyBox:AppSecPenaltyBox", name, args == null ? AppSecPenaltyBoxArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecPenaltyBox:AppSecPenaltyBox", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecPenaltyBox(String name, Output<String> id, @Nullable AppSecPenaltyBoxState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecPenaltyBox:AppSecPenaltyBox", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecPenaltyBoxArgs makeArgs(AppSecPenaltyBoxArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecPenaltyBoxArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -94,11 +94,18 @@ public class ImagingPolicySet extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImagingPolicySet(String name, ImagingPolicySetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/imagingPolicySet:ImagingPolicySet", name, args == null ? ImagingPolicySetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/imagingPolicySet:ImagingPolicySet", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImagingPolicySet(String name, Output<String> id, @Nullable ImagingPolicySetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/imagingPolicySet:ImagingPolicySet", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ImagingPolicySetArgs makeArgs(ImagingPolicySetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ImagingPolicySetArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

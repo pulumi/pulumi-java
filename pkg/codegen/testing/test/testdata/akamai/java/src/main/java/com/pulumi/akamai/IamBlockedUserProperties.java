@@ -82,11 +82,18 @@ public class IamBlockedUserProperties extends com.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public IamBlockedUserProperties(String name, IamBlockedUserPropertiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, args == null ? IamBlockedUserPropertiesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamBlockedUserProperties(String name, Output<String> id, @Nullable IamBlockedUserPropertiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, state, makeResourceOptions(options, id));
+    }
+
+    private static IamBlockedUserPropertiesArgs makeArgs(IamBlockedUserPropertiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IamBlockedUserPropertiesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

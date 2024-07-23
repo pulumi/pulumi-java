@@ -57,11 +57,18 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanConditionalAction(String name, BotmanConditionalActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, args == null ? BotmanConditionalActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanConditionalAction(String name, Output<String> id, @Nullable BotmanConditionalActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanConditionalActionArgs makeArgs(BotmanConditionalActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanConditionalActionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

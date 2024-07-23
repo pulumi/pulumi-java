@@ -63,11 +63,18 @@ public class BotmanAkamaiBotCategoryAction extends com.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanAkamaiBotCategoryAction(String name, BotmanAkamaiBotCategoryActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, args == null ? BotmanAkamaiBotCategoryActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanAkamaiBotCategoryAction(String name, Output<String> id, @Nullable BotmanAkamaiBotCategoryActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanAkamaiBotCategoryActionArgs makeArgs(BotmanAkamaiBotCategoryActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanAkamaiBotCategoryActionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

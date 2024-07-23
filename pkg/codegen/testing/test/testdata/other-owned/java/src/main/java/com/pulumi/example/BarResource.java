@@ -44,7 +44,14 @@ public class BarResource extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BarResource(String name, @Nullable BarResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("bar::BarResource", name, args == null ? BarResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+        super("bar::BarResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
+    }
+
+    private static BarResourceArgs makeArgs(@Nullable BarResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BarResourceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

@@ -111,11 +111,18 @@ public class AppSecAdvancedSettingsPrefetch extends com.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecAdvancedSettingsPrefetch(String name, AppSecAdvancedSettingsPrefetchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, args == null ? AppSecAdvancedSettingsPrefetchArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecAdvancedSettingsPrefetch(String name, Output<String> id, @Nullable AppSecAdvancedSettingsPrefetchState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecAdvancedSettingsPrefetchArgs makeArgs(AppSecAdvancedSettingsPrefetchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecAdvancedSettingsPrefetchArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

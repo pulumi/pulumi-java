@@ -59,11 +59,18 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Example_resource(String name, @Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("legacy_names:index:example_resource", name, args == null ? Example_resourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("legacy_names:index:example_resource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Example_resource(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("legacy_names:index:example_resource", name, null, makeResourceOptions(options, id));
+    }
+
+    private static Example_resourceArgs makeArgs(@Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? Example_resourceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -81,11 +81,18 @@ public class AppSecThreatIntel extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecThreatIntel(String name, AppSecThreatIntelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecThreatIntel:AppSecThreatIntel", name, args == null ? AppSecThreatIntelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecThreatIntel:AppSecThreatIntel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecThreatIntel(String name, Output<String> id, @Nullable AppSecThreatIntelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecThreatIntel:AppSecThreatIntel", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecThreatIntelArgs makeArgs(AppSecThreatIntelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecThreatIntelArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

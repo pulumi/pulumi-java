@@ -314,11 +314,18 @@ public class CpsDvEnrollment extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CpsDvEnrollment(String name, CpsDvEnrollmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, args == null ? CpsDvEnrollmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CpsDvEnrollment(String name, Output<String> id, @Nullable CpsDvEnrollmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CpsDvEnrollmentArgs makeArgs(CpsDvEnrollmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CpsDvEnrollmentArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

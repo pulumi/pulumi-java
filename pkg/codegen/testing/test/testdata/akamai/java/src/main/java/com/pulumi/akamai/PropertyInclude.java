@@ -208,11 +208,18 @@ public class PropertyInclude extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PropertyInclude(String name, PropertyIncludeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/propertyInclude:PropertyInclude", name, args == null ? PropertyIncludeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/propertyInclude:PropertyInclude", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PropertyInclude(String name, Output<String> id, @Nullable PropertyIncludeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/propertyInclude:PropertyInclude", name, state, makeResourceOptions(options, id));
+    }
+
+    private static PropertyIncludeArgs makeArgs(PropertyIncludeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PropertyIncludeArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

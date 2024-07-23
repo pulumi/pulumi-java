@@ -44,11 +44,18 @@ public class ExampleServer extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExampleServer(String name, @Nullable ExampleServerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:index:ExampleServer", name, args == null ? ExampleServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("example:index:ExampleServer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExampleServer(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("example:index:ExampleServer", name, null, makeResourceOptions(options, id));
+    }
+
+    private static ExampleServerArgs makeArgs(@Nullable ExampleServerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ExampleServerArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

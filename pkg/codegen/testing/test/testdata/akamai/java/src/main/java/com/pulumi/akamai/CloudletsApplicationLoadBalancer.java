@@ -137,11 +137,18 @@ public class CloudletsApplicationLoadBalancer extends com.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudletsApplicationLoadBalancer(String name, CloudletsApplicationLoadBalancerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, args == null ? CloudletsApplicationLoadBalancerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudletsApplicationLoadBalancer(String name, Output<String> id, @Nullable CloudletsApplicationLoadBalancerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CloudletsApplicationLoadBalancerArgs makeArgs(CloudletsApplicationLoadBalancerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CloudletsApplicationLoadBalancerArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

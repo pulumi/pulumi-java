@@ -171,11 +171,18 @@ public class GtmDatacenter extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GtmDatacenter(String name, GtmDatacenterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmDatacenter:GtmDatacenter", name, args == null ? GtmDatacenterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/gtmDatacenter:GtmDatacenter", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private GtmDatacenter(String name, Output<String> id, @Nullable GtmDatacenterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmDatacenter:GtmDatacenter", name, state, makeResourceOptions(options, id));
+    }
+
+    private static GtmDatacenterArgs makeArgs(GtmDatacenterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? GtmDatacenterArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -52,11 +52,18 @@ public class Person extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Person(String name, @Nullable PersonArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Person", name, args == null ? PersonArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("example::Person", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Person(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("example::Person", name, null, makeResourceOptions(options, id));
+    }
+
+    private static PersonArgs makeArgs(@Nullable PersonArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PersonArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -81,11 +81,18 @@ public class AppSecReputationProfile extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecReputationProfile(String name, AppSecReputationProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProfile:AppSecReputationProfile", name, args == null ? AppSecReputationProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecReputationProfile:AppSecReputationProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecReputationProfile(String name, Output<String> id, @Nullable AppSecReputationProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecReputationProfile:AppSecReputationProfile", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecReputationProfileArgs makeArgs(AppSecReputationProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecReputationProfileArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

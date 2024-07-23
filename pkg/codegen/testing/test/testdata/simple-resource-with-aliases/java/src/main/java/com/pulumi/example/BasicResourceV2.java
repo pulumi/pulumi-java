@@ -45,11 +45,18 @@ public class BasicResourceV2 extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BasicResourceV2(String name, BasicResourceV2Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:index:BasicResourceV2", name, args == null ? BasicResourceV2Args.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("example:index:BasicResourceV2", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BasicResourceV2(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("example:index:BasicResourceV2", name, null, makeResourceOptions(options, id));
+    }
+
+    private static BasicResourceV2Args makeArgs(BasicResourceV2Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BasicResourceV2Args.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

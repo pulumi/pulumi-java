@@ -79,7 +79,14 @@ public class MemberB2 extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MemberB2(String name, @Nullable MemberB2Args args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("myPkg:myMod/childB:MemberB2", name, args == null ? MemberB2Args.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+        super("myPkg:myMod/childB:MemberB2", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
+    }
+
+    private static MemberB2Args makeArgs(@Nullable MemberB2Args args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? MemberB2Args.Empty : args;
     }
 
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

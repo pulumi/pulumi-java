@@ -182,11 +182,18 @@ public class CpsUploadCertificate extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CpsUploadCertificate(String name, CpsUploadCertificateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpsUploadCertificate:CpsUploadCertificate", name, args == null ? CpsUploadCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cpsUploadCertificate:CpsUploadCertificate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CpsUploadCertificate(String name, Output<String> id, @Nullable CpsUploadCertificateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/cpsUploadCertificate:CpsUploadCertificate", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CpsUploadCertificateArgs makeArgs(CpsUploadCertificateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CpsUploadCertificateArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

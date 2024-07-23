@@ -377,11 +377,18 @@ public class IamUser extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamUser(String name, IamUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamUser:IamUser", name, args == null ? IamUserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/iamUser:IamUser", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamUser(String name, Output<String> id, @Nullable IamUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/iamUser:IamUser", name, state, makeResourceOptions(options, id));
+    }
+
+    private static IamUserArgs makeArgs(IamUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IamUserArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

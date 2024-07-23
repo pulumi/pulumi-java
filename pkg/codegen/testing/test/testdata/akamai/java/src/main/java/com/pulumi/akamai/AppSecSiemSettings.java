@@ -126,11 +126,18 @@ public class AppSecSiemSettings extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecSiemSettings(String name, AppSecSiemSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecSiemSettings:AppSecSiemSettings", name, args == null ? AppSecSiemSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecSiemSettings:AppSecSiemSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecSiemSettings(String name, Output<String> id, @Nullable AppSecSiemSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecSiemSettings:AppSecSiemSettings", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecSiemSettingsArgs makeArgs(AppSecSiemSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecSiemSettingsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

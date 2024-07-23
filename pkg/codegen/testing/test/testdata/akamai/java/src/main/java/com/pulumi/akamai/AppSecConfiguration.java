@@ -153,11 +153,18 @@ public class AppSecConfiguration extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecConfiguration(String name, AppSecConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecConfiguration:AppSecConfiguration", name, args == null ? AppSecConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecConfiguration:AppSecConfiguration", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecConfiguration(String name, Output<String> id, @Nullable AppSecConfigurationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecConfiguration:AppSecConfiguration", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecConfigurationArgs makeArgs(AppSecConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecConfigurationArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

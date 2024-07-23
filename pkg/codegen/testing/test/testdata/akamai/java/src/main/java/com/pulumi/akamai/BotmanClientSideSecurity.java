@@ -51,11 +51,18 @@ public class BotmanClientSideSecurity extends com.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanClientSideSecurity(String name, BotmanClientSideSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, args == null ? BotmanClientSideSecurityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanClientSideSecurity(String name, Output<String> id, @Nullable BotmanClientSideSecurityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanClientSideSecurityArgs makeArgs(BotmanClientSideSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanClientSideSecurityArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
