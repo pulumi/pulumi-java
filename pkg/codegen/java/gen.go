@@ -1113,7 +1113,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w,
 		"        if (options != null && options.getUrn().isPresent()) {\n")
 	fprintf(w,
-		"            return args;\n")
+		"            return null;\n")
 	fprintf(w,
 		"        }\n")
 	if hasConstInputs {
