@@ -193,6 +193,7 @@ jobs:
         - azure-java-appservice-sql
         - azure-java-static-website
         - gcp-java-gke-hello-world
+        - kubernetes
         - minimal
         - minimalsbt
         - random
