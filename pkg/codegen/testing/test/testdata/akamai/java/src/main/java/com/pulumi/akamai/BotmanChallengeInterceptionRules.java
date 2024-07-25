@@ -51,11 +51,18 @@ public class BotmanChallengeInterceptionRules extends com.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanChallengeInterceptionRules(String name, BotmanChallengeInterceptionRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanChallengeInterceptionRules:BotmanChallengeInterceptionRules", name, args == null ? BotmanChallengeInterceptionRulesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanChallengeInterceptionRules:BotmanChallengeInterceptionRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanChallengeInterceptionRules(String name, Output<String> id, @Nullable BotmanChallengeInterceptionRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanChallengeInterceptionRules:BotmanChallengeInterceptionRules", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanChallengeInterceptionRulesArgs makeArgs(BotmanChallengeInterceptionRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanChallengeInterceptionRulesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

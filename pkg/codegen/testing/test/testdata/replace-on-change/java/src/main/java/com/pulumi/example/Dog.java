@@ -44,11 +44,18 @@ public class Dog extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dog(String name, @Nullable DogArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Dog", name, args == null ? DogArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("example::Dog", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dog(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("example::Dog", name, null, makeResourceOptions(options, id));
+    }
+
+    private static DogArgs makeArgs(@Nullable DogArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DogArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

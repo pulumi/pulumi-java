@@ -74,11 +74,18 @@ public class GtmAsmap extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GtmAsmap(String name, GtmAsmapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmAsmap:GtmAsmap", name, args == null ? GtmAsmapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/gtmAsmap:GtmAsmap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private GtmAsmap(String name, Output<String> id, @Nullable GtmAsmapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmAsmap:GtmAsmap", name, state, makeResourceOptions(options, id));
+    }
+
+    private static GtmAsmapArgs makeArgs(GtmAsmapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? GtmAsmapArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

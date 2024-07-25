@@ -196,11 +196,18 @@ public class Property extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Property(String name, PropertyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/property:Property", name, args == null ? PropertyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/property:Property", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Property(String name, Output<String> id, @Nullable PropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/property:Property", name, state, makeResourceOptions(options, id));
+    }
+
+    private static PropertyArgs makeArgs(PropertyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PropertyArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

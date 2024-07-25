@@ -133,6 +133,14 @@ func TestExamples(t *testing.T) {
 		integration.ProgramTest(t, &test)
 	})
 
+	t.Run("kubernetes", func(t *testing.T) {
+		t.SkipNow()
+		test := getJavaBase(t, "kubernetes", integration.ProgramTestOptions{
+			Config: map[string]string{},
+		})
+		integration.ProgramTest(t, &test)
+	})
+
 	t.Run("minimal", func(t *testing.T) {
 		test := getJavaBase(t, "minimal", integration.ProgramTestOptions{
 			PrepareProject: func(info *engine.Projinfo) error {

@@ -59,11 +59,18 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlResourceSqlContainer(String name, @Nullable SqlResourceSqlContainerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlContainer", name, args == null ? SqlResourceSqlContainerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("azure-native:documentdb:SqlResourceSqlContainer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SqlResourceSqlContainer(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:SqlResourceSqlContainer", name, null, makeResourceOptions(options, id));
+    }
+
+    private static SqlResourceSqlContainerArgs makeArgs(@Nullable SqlResourceSqlContainerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SqlResourceSqlContainerArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

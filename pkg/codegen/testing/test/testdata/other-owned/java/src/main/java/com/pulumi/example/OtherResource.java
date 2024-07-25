@@ -44,7 +44,14 @@ public class OtherResource extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OtherResource(String name, @Nullable OtherResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("example::OtherResource", name, args == null ? OtherResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+        super("example::OtherResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
+    }
+
+    private static OtherResourceArgs makeArgs(@Nullable OtherResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? OtherResourceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

@@ -82,11 +82,18 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public AppsecAdvancedSettingsAttackPayloadLogging(String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, args == null ? AppsecAdvancedSettingsAttackPayloadLoggingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppsecAdvancedSettingsAttackPayloadLogging(String name, Output<String> id, @Nullable AppsecAdvancedSettingsAttackPayloadLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppsecAdvancedSettingsAttackPayloadLoggingArgs makeArgs(AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppsecAdvancedSettingsAttackPayloadLoggingArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

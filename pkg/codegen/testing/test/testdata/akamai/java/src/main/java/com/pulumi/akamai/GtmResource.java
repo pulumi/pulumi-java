@@ -135,11 +135,18 @@ public class GtmResource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GtmResource(String name, GtmResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmResource:GtmResource", name, args == null ? GtmResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/gtmResource:GtmResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private GtmResource(String name, Output<String> id, @Nullable GtmResourceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmResource:GtmResource", name, state, makeResourceOptions(options, id));
+    }
+
+    private static GtmResourceArgs makeArgs(GtmResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? GtmResourceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -111,11 +111,18 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BatchDeployment(String name, BatchDeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:BatchDeployment", name, args == null ? BatchDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("azure-native:machinelearningservices:BatchDeployment", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BatchDeployment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:BatchDeployment", name, null, makeResourceOptions(options, id));
+    }
+
+    private static BatchDeploymentArgs makeArgs(BatchDeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BatchDeploymentArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -82,11 +82,18 @@ public class AppSecSelectedHostnames extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecSelectedHostnames(String name, AppSecSelectedHostnamesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecSelectedHostnames:AppSecSelectedHostnames", name, args == null ? AppSecSelectedHostnamesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecSelectedHostnames:AppSecSelectedHostnames", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecSelectedHostnames(String name, Output<String> id, @Nullable AppSecSelectedHostnamesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecSelectedHostnames:AppSecSelectedHostnames", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecSelectedHostnamesArgs makeArgs(AppSecSelectedHostnamesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecSelectedHostnamesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

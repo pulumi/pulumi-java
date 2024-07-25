@@ -34,11 +34,18 @@ public class Universe extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Universe(String name, @Nullable UniverseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("world::Universe", name, args == null ? UniverseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("world::Universe", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Universe(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("world::Universe", name, null, makeResourceOptions(options, id));
+    }
+
+    private static UniverseArgs makeArgs(@Nullable UniverseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? UniverseArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

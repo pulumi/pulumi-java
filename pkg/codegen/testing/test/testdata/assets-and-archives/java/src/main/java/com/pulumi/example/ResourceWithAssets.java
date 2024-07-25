@@ -58,11 +58,18 @@ public class ResourceWithAssets extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceWithAssets(String name, ResourceWithAssetsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:index:ResourceWithAssets", name, args == null ? ResourceWithAssetsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("example:index:ResourceWithAssets", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceWithAssets(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("example:index:ResourceWithAssets", name, null, makeResourceOptions(options, id));
+    }
+
+    private static ResourceWithAssetsArgs makeArgs(ResourceWithAssetsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ResourceWithAssetsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

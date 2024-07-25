@@ -63,11 +63,18 @@ public class BotmanBotDetectionAction extends com.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanBotDetectionAction(String name, BotmanBotDetectionActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanBotDetectionAction:BotmanBotDetectionAction", name, args == null ? BotmanBotDetectionActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanBotDetectionAction:BotmanBotDetectionAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanBotDetectionAction(String name, Output<String> id, @Nullable BotmanBotDetectionActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanBotDetectionAction:BotmanBotDetectionAction", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanBotDetectionActionArgs makeArgs(BotmanBotDetectionActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanBotDetectionActionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

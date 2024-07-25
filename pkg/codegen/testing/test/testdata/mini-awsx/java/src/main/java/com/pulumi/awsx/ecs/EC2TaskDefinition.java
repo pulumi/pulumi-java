@@ -40,7 +40,14 @@ public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EC2TaskDefinition(String name, @Nullable EC2TaskDefinitionArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("awsx:ecs:EC2TaskDefinition", name, args == null ? EC2TaskDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+        super("awsx:ecs:EC2TaskDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
+    }
+
+    private static EC2TaskDefinitionArgs makeArgs(@Nullable EC2TaskDefinitionArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? EC2TaskDefinitionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

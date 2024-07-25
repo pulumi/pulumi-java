@@ -57,11 +57,18 @@ public class BotmanJavascriptInjection extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanJavascriptInjection(String name, BotmanJavascriptInjectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanJavascriptInjection:BotmanJavascriptInjection", name, args == null ? BotmanJavascriptInjectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanJavascriptInjection:BotmanJavascriptInjection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanJavascriptInjection(String name, Output<String> id, @Nullable BotmanJavascriptInjectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanJavascriptInjection:BotmanJavascriptInjection", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanJavascriptInjectionArgs makeArgs(BotmanJavascriptInjectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanJavascriptInjectionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

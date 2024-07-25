@@ -95,11 +95,18 @@ public class AppSecCustomRuleAction extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecCustomRuleAction(String name, AppSecCustomRuleActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecCustomRuleAction:AppSecCustomRuleAction", name, args == null ? AppSecCustomRuleActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecCustomRuleAction:AppSecCustomRuleAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecCustomRuleAction(String name, Output<String> id, @Nullable AppSecCustomRuleActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecCustomRuleAction:AppSecCustomRuleAction", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecCustomRuleActionArgs makeArgs(AppSecCustomRuleActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecCustomRuleActionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -44,14 +44,17 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ModuleResource(String name, ModuleResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("foobar::ModuleResource", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
+        super("foobar::ModuleResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ModuleResource(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("foobar::ModuleResource", name, null, makeResourceOptions(options, id));
     }
 
-    private static ModuleResourceArgs makeArgs(ModuleResourceArgs args) {
+    private static ModuleResourceArgs makeArgs(ModuleResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
         var builder = args == null ? ModuleResourceArgs.builder() : ModuleResourceArgs.builder(args);
         return builder
             .optionalConst("val")

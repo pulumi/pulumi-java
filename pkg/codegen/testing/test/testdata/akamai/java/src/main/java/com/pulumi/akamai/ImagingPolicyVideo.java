@@ -129,11 +129,18 @@ public class ImagingPolicyVideo extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImagingPolicyVideo(String name, ImagingPolicyVideoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, args == null ? ImagingPolicyVideoArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImagingPolicyVideo(String name, Output<String> id, @Nullable ImagingPolicyVideoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ImagingPolicyVideoArgs makeArgs(ImagingPolicyVideoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ImagingPolicyVideoArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

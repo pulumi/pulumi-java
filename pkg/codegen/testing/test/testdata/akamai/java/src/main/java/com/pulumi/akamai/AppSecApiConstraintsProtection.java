@@ -96,11 +96,18 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecApiConstraintsProtection(String name, AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, args == null ? AppSecApiConstraintsProtectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecApiConstraintsProtection(String name, Output<String> id, @Nullable AppSecApiConstraintsProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecApiConstraintsProtectionArgs makeArgs(AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecApiConstraintsProtectionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

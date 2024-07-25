@@ -58,11 +58,18 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppRelayServiceConnection(String name, @Nullable WebAppRelayServiceConnectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppRelayServiceConnection", name, args == null ? WebAppRelayServiceConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("azure-native:web:WebAppRelayServiceConnection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppRelayServiceConnection(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppRelayServiceConnection", name, null, makeResourceOptions(options, id));
+    }
+
+    private static WebAppRelayServiceConnectionArgs makeArgs(@Nullable WebAppRelayServiceConnectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WebAppRelayServiceConnectionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

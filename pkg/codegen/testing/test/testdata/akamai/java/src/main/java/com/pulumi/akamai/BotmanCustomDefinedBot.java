@@ -57,11 +57,18 @@ public class BotmanCustomDefinedBot extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanCustomDefinedBot(String name, BotmanCustomDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanCustomDefinedBot:BotmanCustomDefinedBot", name, args == null ? BotmanCustomDefinedBotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanCustomDefinedBot:BotmanCustomDefinedBot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanCustomDefinedBot(String name, Output<String> id, @Nullable BotmanCustomDefinedBotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanCustomDefinedBot:BotmanCustomDefinedBot", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanCustomDefinedBotArgs makeArgs(BotmanCustomDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanCustomDefinedBotArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

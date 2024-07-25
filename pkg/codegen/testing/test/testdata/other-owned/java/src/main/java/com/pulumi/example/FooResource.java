@@ -44,7 +44,14 @@ public class FooResource extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FooResource(String name, @Nullable FooResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("foo::FooResource", name, args == null ? FooResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+        super("foo::FooResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
+    }
+
+    private static FooResourceArgs makeArgs(@Nullable FooResourceArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? FooResourceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

@@ -52,11 +52,18 @@ public class BotmanCustomClientSequence extends com.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanCustomClientSequence(String name, BotmanCustomClientSequenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanCustomClientSequence:BotmanCustomClientSequence", name, args == null ? BotmanCustomClientSequenceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanCustomClientSequence:BotmanCustomClientSequence", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotmanCustomClientSequence(String name, Output<String> id, @Nullable BotmanCustomClientSequenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanCustomClientSequence:BotmanCustomClientSequence", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BotmanCustomClientSequenceArgs makeArgs(BotmanCustomClientSequenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanCustomClientSequenceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -183,11 +183,18 @@ public class NetworkList extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkList(String name, NetworkListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/networkList:NetworkList", name, args == null ? NetworkListArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/networkList:NetworkList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkList(String name, Output<String> id, @Nullable NetworkListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/networkList:NetworkList", name, state, makeResourceOptions(options, id));
+    }
+
+    private static NetworkListArgs makeArgs(NetworkListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? NetworkListArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

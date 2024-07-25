@@ -82,11 +82,18 @@ public class IamGroup extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamGroup(String name, IamGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamGroup:IamGroup", name, args == null ? IamGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/iamGroup:IamGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamGroup(String name, Output<String> id, @Nullable IamGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/iamGroup:IamGroup", name, state, makeResourceOptions(options, id));
+    }
+
+    private static IamGroupArgs makeArgs(IamGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IamGroupArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

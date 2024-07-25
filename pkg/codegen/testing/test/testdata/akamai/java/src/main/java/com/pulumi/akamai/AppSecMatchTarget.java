@@ -81,11 +81,18 @@ public class AppSecMatchTarget extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecMatchTarget(String name, AppSecMatchTargetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecMatchTarget:AppSecMatchTarget", name, args == null ? AppSecMatchTargetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecMatchTarget:AppSecMatchTarget", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppSecMatchTarget(String name, Output<String> id, @Nullable AppSecMatchTargetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecMatchTarget:AppSecMatchTarget", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AppSecMatchTargetArgs makeArgs(AppSecMatchTargetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecMatchTargetArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

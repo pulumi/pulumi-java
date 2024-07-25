@@ -73,11 +73,18 @@ public class RubberTree extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RubberTree(String name, RubberTreeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("plant:tree/v1:RubberTree", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private RubberTree(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("plant:tree/v1:RubberTree", name, state, makeResourceOptions(options, id));
+    }
+
+    private static RubberTreeArgs makeArgs(RubberTreeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? RubberTreeArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

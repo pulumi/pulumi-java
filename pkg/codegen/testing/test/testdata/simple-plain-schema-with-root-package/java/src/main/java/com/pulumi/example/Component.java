@@ -96,7 +96,14 @@ public class Component extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Component(String name, ComponentArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("example::Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+        super("example::Component", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
+    }
+
+    private static ComponentArgs makeArgs(ComponentArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ComponentArgs.Empty : args;
     }
 
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
