@@ -1,11 +1,16 @@
 CHANGELOG
 =========
 
-## Unreleased
+## 0.13.0 (2024-07-29)
 
 ### Improvements
 
-- Update pulumi/pulumi to v3.121.0.
+- Codegen: pluginDownloadURL is now supported through the automatically generated build.gradle
+- Update pulumi/pulumi to v3.121.0
+
+### Bug Fixes
+
+- Unable to rehydrate a resource that has required inputs
 
 ## 0.12.0 (2024-05-24)
 
