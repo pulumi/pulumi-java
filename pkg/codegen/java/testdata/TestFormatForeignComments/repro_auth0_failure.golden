@@ -702,20 +702,20 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of an Email connection.
  *         var passwordlessEmail = new Connection("passwordlessEmail", ConnectionArgs.builder()        
  *             .strategy("email")
  *             .name("email")
  *             .options(ConnectionOptionsArgs.builder()
  *                 .name("email")
- *                 .from("{{ application.name }} \u003croot{@literal @}auth0.com\u003e")
- *                 .subject("Welcome to {{ application.name }}")
+ *                 .from("}{{{@code  application.name }}}{@code  \u003croot}{@literal @}{@code auth0.com\u003e")
+ *                 .subject("Welcome to }{{{@code  application.name }}}{@code ")
  *                 .syntax("liquid")
  *                 .template("\u003chtml\u003eThis is the body of the email\u003c/html\u003e")
  *                 .disableSignup(false)
@@ -733,8 +733,8 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
@@ -763,12 +763,12 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of a SAML connection.
  *         var samlp = new Connection("samlp", ConnectionArgs.builder()        
  *             .name("SAML-Connection")
@@ -786,11 +786,11 @@
  *                 .protocolBinding("urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST")
  *                 .requestTemplate("""
  * \u003csamlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
- * {@literal @@}AssertServiceURLAndDestination{@literal @@}
- *     ID="{@literal @@}ID{@literal @@}"
- *     IssueInstant="{@literal @@}IssueInstant{@literal @@}"
- *     ProtocolBinding="{@literal @@}ProtocolBinding{@literal @@}" Version="2.0"\u003e
- *     \u003csaml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\u003e{@literal @@}Issuer{@literal @@}\u003c/saml:Issuer\u003e
+ * }{@literal @@}{@code AssertServiceURLAndDestination}{@literal @@}{@code
+ *     ID="}{@literal @@}{@code ID}{@literal @@}{@code "
+ *     IssueInstant="}{@literal @@}{@code IssueInstant}{@literal @@}{@code "
+ *     ProtocolBinding="}{@literal @@}{@code ProtocolBinding}{@literal @@}{@code " Version="2.0"\u003e
+ *     \u003csaml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\u003e}{@literal @@}{@code Issuer}{@literal @@}{@code \u003c/saml:Issuer\u003e
  * \u003c/samlp:AuthnRequest\u003e                """)
  *                 .userIdAttribute("https://saml.provider/imi/ns/identity-200810")
  *                 .signatureAlgorithm("rsa-sha256")
@@ -822,21 +822,21 @@
  *                 .signingKey(ConnectionOptionsSigningKeyArgs.builder()
  *                     .key("""
  * -----BEGIN PRIVATE KEY-----
- * ...{your private key here}...
+ * ...}{{@code your private key here}}{@code ...
  * -----END PRIVATE KEY-----                    """)
  *                     .cert("""
  * -----BEGIN CERTIFICATE-----
- * ...{your public key cert here}...
+ * ...}{{@code your public key cert here}}{@code ...
  * -----END CERTIFICATE-----                    """)
  *                     .build())
  *                 .decryptionKey(ConnectionOptionsDecryptionKeyArgs.builder()
  *                     .key("""
  * -----BEGIN PRIVATE KEY-----
- * ...{your private key here}...
+ * ...}{{@code your private key here}}{@code ...
  * -----END PRIVATE KEY-----                    """)
  *                     .cert("""
  * -----BEGIN CERTIFICATE-----
- * ...{your public key cert here}...
+ * ...}{{@code your public key cert here}}{@code ...
  * -----END CERTIFICATE-----                    """)
  *                     .build())
  *                 .idpInitiated(ConnectionOptionsIdpInitiatedArgs.builder()
@@ -847,8 +847,8 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * \u003c!--End PulumiCodeChooser --\u003e
