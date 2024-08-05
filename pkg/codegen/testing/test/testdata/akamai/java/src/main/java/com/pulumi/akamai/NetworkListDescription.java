@@ -46,7 +46,7 @@ public class NetworkListDescription extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public NetworkListDescription(String name, NetworkListDescriptionArgs args) {
+    public NetworkListDescription(java.lang.String name, NetworkListDescriptionArgs args) {
         this(name, args, null);
     }
     /**
@@ -56,11 +56,11 @@ public class NetworkListDescription extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkListDescription(java.lang.String name, NetworkListDescriptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/networkListDescription:NetworkListDescription", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/networkListDescription:NetworkListDescription", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private NetworkListDescription(java.lang.String name, Output<java.lang.String> id, @Nullable NetworkListDescriptionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/networkListDescription:NetworkListDescription", name, state, makeResourceOptions(options, id));
+        super("akamai:index/networkListDescription:NetworkListDescription", name, state, makeResourceOptions(options, id), false);
     }
 
     private static NetworkListDescriptionArgs makeArgs(NetworkListDescriptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -77,6 +77,10 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 				"org.mockito:mockito-core",
 			),
 		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "parameterized",
+			Description: "Tests for parameterized providers",
+		}),
 	}
 }
 
@@ -184,6 +188,8 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // python-only
 	case "python-typed-dict-pyproject":
 		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "overlay-supported-languages":
+		t.Skip = codegen.NewStringSet("java/any") // docs-only
 	}
 
 	if hasExtras {

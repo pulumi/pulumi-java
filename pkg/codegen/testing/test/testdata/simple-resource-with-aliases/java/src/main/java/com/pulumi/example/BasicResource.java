@@ -33,7 +33,7 @@ public class BasicResource extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BasicResource(String name, BasicResourceArgs args) {
+    public BasicResource(java.lang.String name, BasicResourceArgs args) {
         this(name, args, null);
     }
     /**
@@ -43,11 +43,11 @@ public class BasicResource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BasicResource(java.lang.String name, BasicResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:index:BasicResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("example:index:BasicResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BasicResource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:index:BasicResource", name, null, makeResourceOptions(options, id));
+        super("example:index:BasicResource", name, null, makeResourceOptions(options, id), false);
     }
 
     private static BasicResourceArgs makeArgs(BasicResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -84,7 +84,7 @@ public class TypeUses extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TypeUses(String name, @Nullable TypeUsesArgs args) {
+    public TypeUses(java.lang.String name, @Nullable TypeUsesArgs args) {
         this(name, args, null);
     }
     /**
@@ -94,11 +94,11 @@ public class TypeUses extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TypeUses(java.lang.String name, @Nullable TypeUsesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::TypeUses", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("example::TypeUses", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private TypeUses(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::TypeUses", name, null, makeResourceOptions(options, id));
+        super("example::TypeUses", name, null, makeResourceOptions(options, id), false);
     }
 
     private static TypeUsesArgs makeArgs(@Nullable TypeUsesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

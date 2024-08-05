@@ -47,7 +47,7 @@ public class BotmanRecategorizedAkamaiDefinedBot extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanRecategorizedAkamaiDefinedBot(String name, BotmanRecategorizedAkamaiDefinedBotArgs args) {
+    public BotmanRecategorizedAkamaiDefinedBot(java.lang.String name, BotmanRecategorizedAkamaiDefinedBotArgs args) {
         this(name, args, null);
     }
     /**
@@ -57,11 +57,11 @@ public class BotmanRecategorizedAkamaiDefinedBot extends com.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanRecategorizedAkamaiDefinedBot(java.lang.String name, BotmanRecategorizedAkamaiDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BotmanRecategorizedAkamaiDefinedBot(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanRecategorizedAkamaiDefinedBotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, state, makeResourceOptions(options, id));
+        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BotmanRecategorizedAkamaiDefinedBotArgs makeArgs(BotmanRecategorizedAkamaiDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

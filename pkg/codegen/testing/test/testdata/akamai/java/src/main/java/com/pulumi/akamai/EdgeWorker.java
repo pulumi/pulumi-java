@@ -143,7 +143,7 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EdgeWorker(String name, EdgeWorkerArgs args) {
+    public EdgeWorker(java.lang.String name, EdgeWorkerArgs args) {
         this(name, args, null);
     }
     /**
@@ -153,11 +153,11 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EdgeWorker(java.lang.String name, EdgeWorkerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeWorker:EdgeWorker", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/edgeWorker:EdgeWorker", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private EdgeWorker(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeWorkerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeWorker:EdgeWorker", name, state, makeResourceOptions(options, id));
+        super("akamai:index/edgeWorker:EdgeWorker", name, state, makeResourceOptions(options, id), false);
     }
 
     private static EdgeWorkerArgs makeArgs(EdgeWorkerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

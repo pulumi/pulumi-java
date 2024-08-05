@@ -34,7 +34,7 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Resource(String name, @Nullable ResourceArgs args) {
+    public Resource(java.lang.String name, @Nullable ResourceArgs args) {
         this(name, args, null);
     }
     /**
@@ -44,11 +44,11 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(java.lang.String name, @Nullable ResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("nestedTypes:index:Resource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("nestedTypes:index:Resource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Resource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("nestedTypes:index:Resource", name, null, makeResourceOptions(options, id));
+        super("nestedTypes:index:Resource", name, null, makeResourceOptions(options, id), false);
     }
 
     private static ResourceArgs makeArgs(@Nullable ResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

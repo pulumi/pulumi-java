@@ -71,7 +71,7 @@ public class AppSecSecurityPolicyRename extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecSecurityPolicyRename(String name, AppSecSecurityPolicyRenameArgs args) {
+    public AppSecSecurityPolicyRename(java.lang.String name, AppSecSecurityPolicyRenameArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,11 +81,11 @@ public class AppSecSecurityPolicyRename extends com.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecSecurityPolicyRename(java.lang.String name, AppSecSecurityPolicyRenameArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecSecurityPolicyRename:AppSecSecurityPolicyRename", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecSecurityPolicyRename:AppSecSecurityPolicyRename", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecSecurityPolicyRename(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecSecurityPolicyRenameState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecSecurityPolicyRename:AppSecSecurityPolicyRename", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecSecurityPolicyRename:AppSecSecurityPolicyRename", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecSecurityPolicyRenameArgs makeArgs(AppSecSecurityPolicyRenameArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

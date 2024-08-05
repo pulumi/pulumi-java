@@ -49,6 +49,16 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
     boolean isDryRun();
 
     /**
+     * Same as @see {@link #invoke(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}
+     */
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args);
+
+    /**
+     * Same as @see {@link #invoke(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}
+     */
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options);
+
+    /**
      * Dynamically invokes the function {@code token}, which is offered by a provider plugin.
      * <p>
      * The result of {@code invoke} will be an @see {@link Output}{@literal <T>} resolved to the
@@ -57,12 +67,27 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
      * The {@code args} inputs can be a bag of computed values
      * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link com.pulumi.core.Output}s, etc.)
      */
-    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options);
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options, CompletableFuture<String> packageRef);
 
     /**
-     * Same as @see {@link #invoke(String, TypeShape, InvokeArgs, InvokeOptions)}
+     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}, however the return value is ignored.
      */
-    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args);
+    CompletableFuture<Void> invokeAsync(String token, InvokeArgs args);
+
+    /**
+     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}, however the return value is ignored.
+     */
+    CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options);
+
+    /**
+     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}
+     */
+    <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args);
+
+    /**
+     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}
+     */
+    <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options);
 
     /**
      * Dynamically invokes the function {@code token}, which is offered by a provider plugin.
@@ -73,22 +98,7 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
      * The {@code args} inputs can be a bag of computed values
      * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link com.pulumi.core.Output}s, etc.).
      */
-    <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options);
-
-    /**
-     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}
-     */
-    <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args);
-
-    /**
-     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}, however the return value is ignored.
-     */
-    CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options);
-
-    /**
-     * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}, however the return value is ignored.
-     */
-    CompletableFuture<Void> invokeAsync(String token, InvokeArgs args);
+    <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef);
 
     /**
      * Dynamically calls the function {@code token}, which is offered by a provider plugin.
@@ -125,4 +135,26 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
      * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
      */
     void call(String token, CallArgs args);
+
+    /**
+     * Registers a parameterization of a given provider, returning a package reference that can be used to instantiate
+     * resources and call functions against it.
+     *
+     * @param baseProviderName        The name of the base provider being parameterized
+     * @param baseProviderVersion     The version of the base provider being parameterized
+     * @param baseProviderDownloadUrl The download URL of the base provider being parameterized
+     * @param packageName             The name of the package being registered
+     * @param packageVersion          The version of the package being registered
+     * @param base64Parameter         The base64-encoded parameterization of the base provider
+     *
+     * @return A future that resolves to the package reference
+     */
+    CompletableFuture<String> registerPackage(
+        String baseProviderName,
+        String baseProviderVersion,
+        String baseProviderDownloadUrl,
+        String packageName,
+        String packageVersion,
+        String base64Parameter
+    );
 }

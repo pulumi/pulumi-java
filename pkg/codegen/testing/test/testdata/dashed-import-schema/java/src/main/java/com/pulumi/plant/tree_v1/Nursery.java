@@ -24,7 +24,7 @@ public class Nursery extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Nursery(String name, NurseryArgs args) {
+    public Nursery(java.lang.String name, NurseryArgs args) {
         this(name, args, null);
     }
     /**
@@ -34,11 +34,11 @@ public class Nursery extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Nursery(java.lang.String name, NurseryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:Nursery", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("plant:tree/v1:Nursery", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Nursery(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:Nursery", name, null, makeResourceOptions(options, id));
+        super("plant:tree/v1:Nursery", name, null, makeResourceOptions(options, id), false);
     }
 
     private static NurseryArgs makeArgs(NurseryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -1571,7 +1571,7 @@ public class ACustomResource extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ACustomResource(String name, @Nullable ACustomResourceArgs args) {
+    public ACustomResource(java.lang.String name, @Nullable ACustomResourceArgs args) {
         this(name, args, null);
     }
     /**
@@ -1581,11 +1581,11 @@ public class ACustomResource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ACustomResource(java.lang.String name, @Nullable ACustomResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("jumbo::ACustomResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("jumbo::ACustomResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private ACustomResource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("jumbo::ACustomResource", name, null, makeResourceOptions(options, id));
+        super("jumbo::ACustomResource", name, null, makeResourceOptions(options, id), false);
     }
 
     private static ACustomResourceArgs makeArgs(@Nullable ACustomResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

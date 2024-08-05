@@ -85,7 +85,7 @@ public class AppsecSecurityPolicyDefaultProtections extends com.pulumi.resources
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppsecSecurityPolicyDefaultProtections(String name, AppsecSecurityPolicyDefaultProtectionsArgs args) {
+    public AppsecSecurityPolicyDefaultProtections(java.lang.String name, AppsecSecurityPolicyDefaultProtectionsArgs args) {
         this(name, args, null);
     }
     /**
@@ -95,11 +95,11 @@ public class AppsecSecurityPolicyDefaultProtections extends com.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public AppsecSecurityPolicyDefaultProtections(java.lang.String name, AppsecSecurityPolicyDefaultProtectionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppsecSecurityPolicyDefaultProtections(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecSecurityPolicyDefaultProtectionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppsecSecurityPolicyDefaultProtectionsArgs makeArgs(AppsecSecurityPolicyDefaultProtectionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

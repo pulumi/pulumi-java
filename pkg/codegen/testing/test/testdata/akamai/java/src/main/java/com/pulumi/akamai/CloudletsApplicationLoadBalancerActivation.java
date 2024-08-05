@@ -85,7 +85,7 @@ public class CloudletsApplicationLoadBalancerActivation extends com.pulumi.resou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CloudletsApplicationLoadBalancerActivation(String name, CloudletsApplicationLoadBalancerActivationArgs args) {
+    public CloudletsApplicationLoadBalancerActivation(java.lang.String name, CloudletsApplicationLoadBalancerActivationArgs args) {
         this(name, args, null);
     }
     /**
@@ -95,11 +95,11 @@ public class CloudletsApplicationLoadBalancerActivation extends com.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudletsApplicationLoadBalancerActivation(java.lang.String name, CloudletsApplicationLoadBalancerActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudletsApplicationLoadBalancerActivation:CloudletsApplicationLoadBalancerActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cloudletsApplicationLoadBalancerActivation:CloudletsApplicationLoadBalancerActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private CloudletsApplicationLoadBalancerActivation(java.lang.String name, Output<java.lang.String> id, @Nullable CloudletsApplicationLoadBalancerActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudletsApplicationLoadBalancerActivation:CloudletsApplicationLoadBalancerActivation", name, state, makeResourceOptions(options, id));
+        super("akamai:index/cloudletsApplicationLoadBalancerActivation:CloudletsApplicationLoadBalancerActivation", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CloudletsApplicationLoadBalancerActivationArgs makeArgs(CloudletsApplicationLoadBalancerActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

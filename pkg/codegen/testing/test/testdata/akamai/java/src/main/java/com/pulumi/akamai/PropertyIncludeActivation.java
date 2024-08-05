@@ -173,7 +173,7 @@ public class PropertyIncludeActivation extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public PropertyIncludeActivation(String name, PropertyIncludeActivationArgs args) {
+    public PropertyIncludeActivation(java.lang.String name, PropertyIncludeActivationArgs args) {
         this(name, args, null);
     }
     /**
@@ -183,11 +183,11 @@ public class PropertyIncludeActivation extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public PropertyIncludeActivation(java.lang.String name, PropertyIncludeActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/propertyIncludeActivation:PropertyIncludeActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/propertyIncludeActivation:PropertyIncludeActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private PropertyIncludeActivation(java.lang.String name, Output<java.lang.String> id, @Nullable PropertyIncludeActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/propertyIncludeActivation:PropertyIncludeActivation", name, state, makeResourceOptions(options, id));
+        super("akamai:index/propertyIncludeActivation:PropertyIncludeActivation", name, state, makeResourceOptions(options, id), false);
     }
 
     private static PropertyIncludeActivationArgs makeArgs(PropertyIncludeActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

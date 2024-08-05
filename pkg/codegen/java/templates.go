@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 import com.pulumi.core.internal.Environment;
 import com.pulumi.deployment.InvokeOptions;
-
+{{ .AdditionalImports }}
 public class {{ .ClassName }} {
 
 	public static Optional<java.lang.String> getEnv(java.lang.String... names) {
@@ -105,17 +105,18 @@ public class {{ .ClassName }} {
                 .lines()
                 .collect(Collectors.joining("\n"))
                 .trim();
-    }
+    }{{ .PackageReferenceUtilities }}
 }
 `
 
 var javaUtilitiesTemplate = Template("JavaUtilities", javaUtilitiesTemplateText)
 
 type javaUtilitiesTemplateContext struct {
-	Name        string
-	VersionPath string
-	ClassName   string
-	Tool        string
+	VersionPath               string
+	ClassName                 string
+	Tool                      string
+	AdditionalImports         string
+	PackageReferenceUtilities string
 }
 
 const getterTemplateText = `{{ .Indent }}public {{ .GetterType }} {{ .GetterName }}() {

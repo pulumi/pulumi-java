@@ -72,7 +72,7 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppsecAdvancedSettingsAttackPayloadLogging(String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args) {
+    public AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args) {
         this(name, args, null);
     }
     /**
@@ -82,11 +82,11 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsAttackPayloadLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppsecAdvancedSettingsAttackPayloadLoggingArgs makeArgs(AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

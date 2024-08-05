@@ -86,7 +86,7 @@ public class AppSecIPGeoProtection extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecIPGeoProtection(String name, AppSecIPGeoProtectionArgs args) {
+    public AppSecIPGeoProtection(java.lang.String name, AppSecIPGeoProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,11 +96,11 @@ public class AppSecIPGeoProtection extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecIPGeoProtection(java.lang.String name, AppSecIPGeoProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecIPGeoProtection:AppSecIPGeoProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecIPGeoProtection:AppSecIPGeoProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecIPGeoProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecIPGeoProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecIPGeoProtection:AppSecIPGeoProtection", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecIPGeoProtection:AppSecIPGeoProtection", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecIPGeoProtectionArgs makeArgs(AppSecIPGeoProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

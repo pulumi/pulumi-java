@@ -87,7 +87,7 @@ public class AppSecWapSelectedHostnames extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecWapSelectedHostnames(String name, AppSecWapSelectedHostnamesArgs args) {
+    public AppSecWapSelectedHostnames(java.lang.String name, AppSecWapSelectedHostnamesArgs args) {
         this(name, args, null);
     }
     /**
@@ -97,11 +97,11 @@ public class AppSecWapSelectedHostnames extends com.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecWapSelectedHostnames(java.lang.String name, AppSecWapSelectedHostnamesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecWapSelectedHostnames:AppSecWapSelectedHostnames", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecWapSelectedHostnames:AppSecWapSelectedHostnames", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecWapSelectedHostnames(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecWapSelectedHostnamesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecWapSelectedHostnames:AppSecWapSelectedHostnames", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecWapSelectedHostnames:AppSecWapSelectedHostnames", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecWapSelectedHostnamesArgs makeArgs(AppSecWapSelectedHostnamesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

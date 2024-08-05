@@ -142,7 +142,7 @@ public class AppSecEval extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecEval(String name, AppSecEvalArgs args) {
+    public AppSecEval(java.lang.String name, AppSecEvalArgs args) {
         this(name, args, null);
     }
     /**
@@ -152,11 +152,11 @@ public class AppSecEval extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecEval(java.lang.String name, AppSecEvalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEval:AppSecEval", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecEval:AppSecEval", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecEval(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecEvalState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEval:AppSecEval", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecEval:AppSecEval", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecEvalArgs makeArgs(AppSecEvalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

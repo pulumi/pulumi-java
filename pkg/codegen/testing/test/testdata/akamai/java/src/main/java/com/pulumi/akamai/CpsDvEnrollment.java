@@ -304,7 +304,7 @@ public class CpsDvEnrollment extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CpsDvEnrollment(String name, CpsDvEnrollmentArgs args) {
+    public CpsDvEnrollment(java.lang.String name, CpsDvEnrollmentArgs args) {
         this(name, args, null);
     }
     /**
@@ -314,11 +314,11 @@ public class CpsDvEnrollment extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CpsDvEnrollment(java.lang.String name, CpsDvEnrollmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private CpsDvEnrollment(java.lang.String name, Output<java.lang.String> id, @Nullable CpsDvEnrollmentState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, state, makeResourceOptions(options, id));
+        super("akamai:index/cpsDvEnrollment:CpsDvEnrollment", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CpsDvEnrollmentArgs makeArgs(CpsDvEnrollmentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

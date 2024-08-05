@@ -35,7 +35,7 @@ public class Foo extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Foo(String name, @Nullable FooArgs args) {
+    public Foo(java.lang.String name, @Nullable FooArgs args) {
         this(name, args, null);
     }
     /**
@@ -45,11 +45,11 @@ public class Foo extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Foo(java.lang.String name, @Nullable FooArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("repro:index:Foo", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("repro:index:Foo", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Foo(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("repro:index:Foo", name, null, makeResourceOptions(options, id));
+        super("repro:index:Foo", name, null, makeResourceOptions(options, id), false);
     }
 
     private static FooArgs makeArgs(@Nullable FooArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

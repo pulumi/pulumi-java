@@ -73,7 +73,7 @@ public class CpsDvValidation extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CpsDvValidation(String name, CpsDvValidationArgs args) {
+    public CpsDvValidation(java.lang.String name, CpsDvValidationArgs args) {
         this(name, args, null);
     }
     /**
@@ -83,11 +83,11 @@ public class CpsDvValidation extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CpsDvValidation(java.lang.String name, CpsDvValidationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpsDvValidation:CpsDvValidation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cpsDvValidation:CpsDvValidation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private CpsDvValidation(java.lang.String name, Output<java.lang.String> id, @Nullable CpsDvValidationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpsDvValidation:CpsDvValidation", name, state, makeResourceOptions(options, id));
+        super("akamai:index/cpsDvValidation:CpsDvValidation", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CpsDvValidationArgs makeArgs(CpsDvValidationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

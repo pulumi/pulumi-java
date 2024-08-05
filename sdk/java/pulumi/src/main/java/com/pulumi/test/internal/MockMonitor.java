@@ -18,6 +18,8 @@ import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.ReadResourceResponse;
+import pulumirpc.Resource.RegisterPackageRequest;
+import pulumirpc.Resource.RegisterPackageResponse;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.RegisterResourceResponse;
@@ -230,5 +232,10 @@ public class MockMonitor implements Monitor {
                             }
                         }
                 );
+    }
+
+    @Override
+    public CompletableFuture<RegisterPackageResponse> registerPackageAsync(RegisterPackageRequest request) {
+        return CompletableFuture.completedFuture(RegisterPackageResponse.newBuilder().build());
     }
 }

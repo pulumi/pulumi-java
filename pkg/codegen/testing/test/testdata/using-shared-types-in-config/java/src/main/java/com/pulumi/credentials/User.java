@@ -39,7 +39,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public User(String name, UserArgs args) {
+    public User(java.lang.String name, UserArgs args) {
         this(name, args, null);
     }
     /**
@@ -49,11 +49,11 @@ public class User extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(java.lang.String name, UserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("credentials:index:User", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("credentials:index:User", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private User(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("credentials:index:User", name, null, makeResourceOptions(options, id));
+        super("credentials:index:User", name, null, makeResourceOptions(options, id), false);
     }
 
     private static UserArgs makeArgs(UserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -71,7 +71,7 @@ public class AppSecRatePolicy extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecRatePolicy(String name, AppSecRatePolicyArgs args) {
+    public AppSecRatePolicy(java.lang.String name, AppSecRatePolicyArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,11 +81,11 @@ public class AppSecRatePolicy extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecRatePolicy(java.lang.String name, AppSecRatePolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecRatePolicy:AppSecRatePolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecRatePolicy:AppSecRatePolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecRatePolicy(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecRatePolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecRatePolicy:AppSecRatePolicy", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecRatePolicy:AppSecRatePolicy", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecRatePolicyArgs makeArgs(AppSecRatePolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

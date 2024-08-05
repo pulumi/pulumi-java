@@ -1,0 +1,16 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/pkg/Echo.java",
+    "src/main/java/com/pulumi/pkg/EchoArgs.java",
+    "src/main/java/com/pulumi/pkg/PkgFunctions.java",
+    "src/main/java/com/pulumi/pkg/Provider.java",
+    "src/main/java/com/pulumi/pkg/ProviderArgs.java",
+    "src/main/java/com/pulumi/pkg/Utilities.java",
+    "src/main/java/com/pulumi/pkg/inputs/DoEchoArgs.java",
+    "src/main/java/com/pulumi/pkg/inputs/DoEchoPlainArgs.java",
+    "src/main/java/com/pulumi/pkg/outputs/DoEchoResult.java"
+  ]
+}

@@ -86,7 +86,7 @@ public class AppSecEvalPenaltyBox extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecEvalPenaltyBox(String name, AppSecEvalPenaltyBoxArgs args) {
+    public AppSecEvalPenaltyBox(java.lang.String name, AppSecEvalPenaltyBoxArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,11 +96,11 @@ public class AppSecEvalPenaltyBox extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecEvalPenaltyBox(java.lang.String name, AppSecEvalPenaltyBoxArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEvalPenaltyBox:AppSecEvalPenaltyBox", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecEvalPenaltyBox:AppSecEvalPenaltyBox", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecEvalPenaltyBox(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecEvalPenaltyBoxState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEvalPenaltyBox:AppSecEvalPenaltyBox", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecEvalPenaltyBox:AppSecEvalPenaltyBox", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecEvalPenaltyBoxArgs makeArgs(AppSecEvalPenaltyBoxArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

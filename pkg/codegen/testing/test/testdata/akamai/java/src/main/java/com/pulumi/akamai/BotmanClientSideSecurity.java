@@ -41,7 +41,7 @@ public class BotmanClientSideSecurity extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanClientSideSecurity(String name, BotmanClientSideSecurityArgs args) {
+    public BotmanClientSideSecurity(java.lang.String name, BotmanClientSideSecurityArgs args) {
         this(name, args, null);
     }
     /**
@@ -51,11 +51,11 @@ public class BotmanClientSideSecurity extends com.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanClientSideSecurity(java.lang.String name, BotmanClientSideSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BotmanClientSideSecurity(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanClientSideSecurityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, state, makeResourceOptions(options, id));
+        super("akamai:index/botmanClientSideSecurity:BotmanClientSideSecurity", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BotmanClientSideSecurityArgs makeArgs(BotmanClientSideSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

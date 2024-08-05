@@ -34,7 +34,7 @@ public class God extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public God(String name, @Nullable GodArgs args) {
+    public God(java.lang.String name, @Nullable GodArgs args) {
         this(name, args, null);
     }
     /**
@@ -44,11 +44,11 @@ public class God extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public God(java.lang.String name, @Nullable GodArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::God", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("example::God", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private God(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::God", name, null, makeResourceOptions(options, id));
+        super("example::God", name, null, makeResourceOptions(options, id), false);
     }
 
     private static GodArgs makeArgs(@Nullable GodArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

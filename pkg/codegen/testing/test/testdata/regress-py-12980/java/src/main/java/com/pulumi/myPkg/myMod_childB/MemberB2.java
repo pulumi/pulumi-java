@@ -69,7 +69,7 @@ public class MemberB2 extends com.pulumi.resources.ComponentResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public MemberB2(String name, @Nullable MemberB2Args args) {
+    public MemberB2(java.lang.String name, @Nullable MemberB2Args args) {
         this(name, args, null);
     }
     /**

@@ -60,6 +60,11 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options, CompletableFuture<String> packageRef) {
+        return deployment.invoke(token, targetType, args, options, packageRef);
+    }
+
+    @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options) {
         return deployment.invoke(token, targetType, args, options);
     }
@@ -67,6 +72,11 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
         return deployment.invoke(token, targetType, args);
+    }
+
+    @Override
+    public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
+        return deployment.invokeAsync(token, targetType, args, options, packageRef);
     }
 
     @Override
@@ -120,13 +130,32 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
-    public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy) {
-        this.deployment.readOrRegisterResource(resource, remote, newDependency, args, options, lazy);
+    public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy, CompletableFuture<String> packageRef) {
+        this.deployment.readOrRegisterResource(resource, remote, newDependency, args, options, lazy, packageRef);
     }
 
     @Override
     public void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs) {
         this.deployment.registerResourceOutputs(resource, outputs);
+    }
+
+    @Override
+    public CompletableFuture<String> registerPackage(
+        String baseProviderName,
+        String baseProviderVersion,
+        String baseProviderDownloadUrl,
+        String packageName,
+        String packageVersion,
+        String base64Parameter
+    ) {
+        return this.deployment.registerPackage(
+            baseProviderName,
+            baseProviderVersion,
+            baseProviderDownloadUrl,
+            packageName,
+            packageVersion,
+            base64Parameter
+        );
     }
 
     @InternalUse

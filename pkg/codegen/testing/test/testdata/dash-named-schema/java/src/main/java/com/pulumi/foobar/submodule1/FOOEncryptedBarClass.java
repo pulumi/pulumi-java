@@ -24,7 +24,7 @@ public class FOOEncryptedBarClass extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FOOEncryptedBarClass(String name, @Nullable FOOEncryptedBarClassArgs args) {
+    public FOOEncryptedBarClass(java.lang.String name, @Nullable FOOEncryptedBarClassArgs args) {
         this(name, args, null);
     }
     /**
@@ -34,11 +34,11 @@ public class FOOEncryptedBarClass extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FOOEncryptedBarClass(java.lang.String name, @Nullable FOOEncryptedBarClassArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("foo-bar:submodule1:FOOEncryptedBarClass", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("foo-bar:submodule1:FOOEncryptedBarClass", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private FOOEncryptedBarClass(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("foo-bar:submodule1:FOOEncryptedBarClass", name, null, makeResourceOptions(options, id));
+        super("foo-bar:submodule1:FOOEncryptedBarClass", name, null, makeResourceOptions(options, id), false);
     }
 
     private static FOOEncryptedBarClassArgs makeArgs(@Nullable FOOEncryptedBarClassArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

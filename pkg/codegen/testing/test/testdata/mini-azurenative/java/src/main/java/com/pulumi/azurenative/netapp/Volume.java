@@ -48,7 +48,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Volume(String name, VolumeArgs args) {
+    public Volume(java.lang.String name, VolumeArgs args) {
         this(name, args, null);
     }
     /**
@@ -58,11 +58,11 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Volume(java.lang.String name, VolumeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:netapp:Volume", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("azure-native:netapp:Volume", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Volume(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:netapp:Volume", name, null, makeResourceOptions(options, id));
+        super("azure-native:netapp:Volume", name, null, makeResourceOptions(options, id), false);
     }
 
     private static VolumeArgs makeArgs(VolumeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

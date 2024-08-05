@@ -350,7 +350,7 @@ public class Datastream extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Datastream(String name, DatastreamArgs args) {
+    public Datastream(java.lang.String name, DatastreamArgs args) {
         this(name, args, null);
     }
     /**
@@ -360,11 +360,11 @@ public class Datastream extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Datastream(java.lang.String name, DatastreamArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/datastream:Datastream", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/datastream:Datastream", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Datastream(java.lang.String name, Output<java.lang.String> id, @Nullable DatastreamState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/datastream:Datastream", name, state, makeResourceOptions(options, id));
+        super("akamai:index/datastream:Datastream", name, state, makeResourceOptions(options, id), false);
     }
 
     private static DatastreamArgs makeArgs(DatastreamArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

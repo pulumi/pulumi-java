@@ -86,7 +86,7 @@ public class AppSecReputationProfileAnalysis extends com.pulumi.resources.Custom
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecReputationProfileAnalysis(String name, AppSecReputationProfileAnalysisArgs args) {
+    public AppSecReputationProfileAnalysis(java.lang.String name, AppSecReputationProfileAnalysisArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,11 +96,11 @@ public class AppSecReputationProfileAnalysis extends com.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecReputationProfileAnalysis(java.lang.String name, AppSecReputationProfileAnalysisArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProfileAnalysis:AppSecReputationProfileAnalysis", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecReputationProfileAnalysis:AppSecReputationProfileAnalysis", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecReputationProfileAnalysis(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecReputationProfileAnalysisState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProfileAnalysis:AppSecReputationProfileAnalysis", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecReputationProfileAnalysis:AppSecReputationProfileAnalysis", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecReputationProfileAnalysisArgs makeArgs(AppSecReputationProfileAnalysisArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

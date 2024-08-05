@@ -64,7 +64,7 @@ public class GtmGeomap extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public GtmGeomap(String name, GtmGeomapArgs args) {
+    public GtmGeomap(java.lang.String name, GtmGeomapArgs args) {
         this(name, args, null);
     }
     /**
@@ -74,11 +74,11 @@ public class GtmGeomap extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GtmGeomap(java.lang.String name, GtmGeomapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmGeomap:GtmGeomap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/gtmGeomap:GtmGeomap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private GtmGeomap(java.lang.String name, Output<java.lang.String> id, @Nullable GtmGeomapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmGeomap:GtmGeomap", name, state, makeResourceOptions(options, id));
+        super("akamai:index/gtmGeomap:GtmGeomap", name, state, makeResourceOptions(options, id), false);
     }
 
     private static GtmGeomapArgs makeArgs(GtmGeomapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

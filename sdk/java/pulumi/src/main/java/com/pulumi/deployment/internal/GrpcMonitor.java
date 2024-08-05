@@ -4,7 +4,6 @@ import io.grpc.ManagedChannelBuilder;
 import com.pulumi.resources.Resource;
 import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Provider.CallResponse;
-import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.*;
 import pulumirpc.ResourceMonitorGrpc;
@@ -57,5 +56,10 @@ public class GrpcMonitor implements Monitor {
     @Override
     public CompletableFuture<Void> registerResourceOutputsAsync(RegisterResourceOutputsRequest request) {
         return toCompletableFuture(this.monitor.registerResourceOutputs(request)).thenApply(empty -> null);
+    }
+
+    @Override
+    public CompletableFuture<RegisterPackageResponse> registerPackageAsync(RegisterPackageRequest request) {
+        return toCompletableFuture(this.monitor.registerPackage(request));
     }
 }
