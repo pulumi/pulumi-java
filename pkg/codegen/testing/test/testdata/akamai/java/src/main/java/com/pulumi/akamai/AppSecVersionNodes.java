@@ -63,7 +63,7 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecVersionNodes(String name) {
+    public AppSecVersionNodes(java.lang.String name) {
         this(name, AppSecVersionNodesArgs.Empty);
     }
     /**
@@ -80,11 +80,11 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecVersionNodes(String name, AppSecVersionNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppSecVersionNodes(java.lang.String name, AppSecVersionNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecVersionNodes:AppSecVersionNodes", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppSecVersionNodes(String name, Output<String> id, @Nullable AppSecVersionNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppSecVersionNodes(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecVersionNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecVersionNodes:AppSecVersionNodes", name, state, makeResourceOptions(options, id));
     }
 
@@ -95,7 +95,7 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
         return args == null ? AppSecVersionNodesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -111,7 +111,7 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecVersionNodes get(String name, Output<String> id, @Nullable AppSecVersionNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecVersionNodes get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecVersionNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecVersionNodes(name, id, state, options);
     }
 }

@@ -233,7 +233,7 @@ public class GtmProperty extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public GtmProperty(String name) {
+    public GtmProperty(java.lang.String name) {
         this(name, GtmPropertyArgs.Empty);
     }
     /**
@@ -250,11 +250,11 @@ public class GtmProperty extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GtmProperty(String name, GtmPropertyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GtmProperty(java.lang.String name, GtmPropertyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmProperty:GtmProperty", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GtmProperty(String name, Output<String> id, @Nullable GtmPropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GtmProperty(java.lang.String name, Output<java.lang.String> id, @Nullable GtmPropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmProperty:GtmProperty", name, state, makeResourceOptions(options, id));
     }
 
@@ -265,7 +265,7 @@ public class GtmProperty extends com.pulumi.resources.CustomResource {
         return args == null ? GtmPropertyArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -284,7 +284,7 @@ public class GtmProperty extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GtmProperty get(String name, Output<String> id, @Nullable GtmPropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GtmProperty get(java.lang.String name, Output<java.lang.String> id, @Nullable GtmPropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new GtmProperty(name, id, state, options);
     }
 }

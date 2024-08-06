@@ -108,7 +108,7 @@ public class AppSecSlowPost extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecSlowPost(String name) {
+    public AppSecSlowPost(java.lang.String name) {
         this(name, AppSecSlowPostArgs.Empty);
     }
     /**
@@ -125,11 +125,11 @@ public class AppSecSlowPost extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecSlowPost(String name, AppSecSlowPostArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppSecSlowPost(java.lang.String name, AppSecSlowPostArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecSlowPost:AppSecSlowPost", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppSecSlowPost(String name, Output<String> id, @Nullable AppSecSlowPostState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppSecSlowPost(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecSlowPostState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecSlowPost:AppSecSlowPost", name, state, makeResourceOptions(options, id));
     }
 
@@ -140,7 +140,7 @@ public class AppSecSlowPost extends com.pulumi.resources.CustomResource {
         return args == null ? AppSecSlowPostArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -156,7 +156,7 @@ public class AppSecSlowPost extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecSlowPost get(String name, Output<String> id, @Nullable AppSecSlowPostState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecSlowPost get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecSlowPostState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecSlowPost(name, id, state, options);
     }
 }

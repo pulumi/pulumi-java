@@ -33,7 +33,7 @@ public class BotmanBotAnalyticsCookie extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanBotAnalyticsCookie(String name) {
+    public BotmanBotAnalyticsCookie(java.lang.String name) {
         this(name, BotmanBotAnalyticsCookieArgs.Empty);
     }
     /**
@@ -50,11 +50,11 @@ public class BotmanBotAnalyticsCookie extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanBotAnalyticsCookie(String name, BotmanBotAnalyticsCookieArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BotmanBotAnalyticsCookie(java.lang.String name, BotmanBotAnalyticsCookieArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanBotAnalyticsCookie:BotmanBotAnalyticsCookie", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BotmanBotAnalyticsCookie(String name, Output<String> id, @Nullable BotmanBotAnalyticsCookieState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BotmanBotAnalyticsCookie(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanBotAnalyticsCookieState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanBotAnalyticsCookie:BotmanBotAnalyticsCookie", name, state, makeResourceOptions(options, id));
     }
 
@@ -65,7 +65,7 @@ public class BotmanBotAnalyticsCookie extends com.pulumi.resources.CustomResourc
         return args == null ? BotmanBotAnalyticsCookieArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -81,7 +81,7 @@ public class BotmanBotAnalyticsCookie extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanBotAnalyticsCookie get(String name, Output<String> id, @Nullable BotmanBotAnalyticsCookieState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanBotAnalyticsCookie get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanBotAnalyticsCookieState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanBotAnalyticsCookie(name, id, state, options);
     }
 }

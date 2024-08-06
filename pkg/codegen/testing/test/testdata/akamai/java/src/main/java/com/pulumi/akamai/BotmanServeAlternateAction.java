@@ -39,7 +39,7 @@ public class BotmanServeAlternateAction extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanServeAlternateAction(String name) {
+    public BotmanServeAlternateAction(java.lang.String name) {
         this(name, BotmanServeAlternateActionArgs.Empty);
     }
     /**
@@ -56,11 +56,11 @@ public class BotmanServeAlternateAction extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanServeAlternateAction(String name, BotmanServeAlternateActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BotmanServeAlternateAction(java.lang.String name, BotmanServeAlternateActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanServeAlternateAction:BotmanServeAlternateAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BotmanServeAlternateAction(String name, Output<String> id, @Nullable BotmanServeAlternateActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BotmanServeAlternateAction(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanServeAlternateActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanServeAlternateAction:BotmanServeAlternateAction", name, state, makeResourceOptions(options, id));
     }
 
@@ -71,7 +71,7 @@ public class BotmanServeAlternateAction extends com.pulumi.resources.CustomResou
         return args == null ? BotmanServeAlternateActionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -87,7 +87,7 @@ public class BotmanServeAlternateAction extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanServeAlternateAction get(String name, Output<String> id, @Nullable BotmanServeAlternateActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanServeAlternateAction get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanServeAlternateActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanServeAlternateAction(name, id, state, options);
     }
 }

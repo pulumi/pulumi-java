@@ -92,7 +92,7 @@ public class AppSecAttackGroup extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecAttackGroup(String name) {
+    public AppSecAttackGroup(java.lang.String name) {
         this(name, AppSecAttackGroupArgs.Empty);
     }
     /**
@@ -109,11 +109,11 @@ public class AppSecAttackGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecAttackGroup(String name, AppSecAttackGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppSecAttackGroup(java.lang.String name, AppSecAttackGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecAttackGroup:AppSecAttackGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppSecAttackGroup(String name, Output<String> id, @Nullable AppSecAttackGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppSecAttackGroup(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecAttackGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecAttackGroup:AppSecAttackGroup", name, state, makeResourceOptions(options, id));
     }
 
@@ -124,7 +124,7 @@ public class AppSecAttackGroup extends com.pulumi.resources.CustomResource {
         return args == null ? AppSecAttackGroupArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -140,7 +140,7 @@ public class AppSecAttackGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecAttackGroup get(String name, Output<String> id, @Nullable AppSecAttackGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecAttackGroup get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecAttackGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecAttackGroup(name, id, state, options);
     }
 }

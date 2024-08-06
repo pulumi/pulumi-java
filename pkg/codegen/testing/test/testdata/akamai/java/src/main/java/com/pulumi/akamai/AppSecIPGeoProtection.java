@@ -78,7 +78,7 @@ public class AppSecIPGeoProtection extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecIPGeoProtection(String name) {
+    public AppSecIPGeoProtection(java.lang.String name) {
         this(name, AppSecIPGeoProtectionArgs.Empty);
     }
     /**
@@ -95,11 +95,11 @@ public class AppSecIPGeoProtection extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecIPGeoProtection(String name, AppSecIPGeoProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppSecIPGeoProtection(java.lang.String name, AppSecIPGeoProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecIPGeoProtection:AppSecIPGeoProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppSecIPGeoProtection(String name, Output<String> id, @Nullable AppSecIPGeoProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppSecIPGeoProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecIPGeoProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecIPGeoProtection:AppSecIPGeoProtection", name, state, makeResourceOptions(options, id));
     }
 
@@ -110,7 +110,7 @@ public class AppSecIPGeoProtection extends com.pulumi.resources.CustomResource {
         return args == null ? AppSecIPGeoProtectionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -126,7 +126,7 @@ public class AppSecIPGeoProtection extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecIPGeoProtection get(String name, Output<String> id, @Nullable AppSecIPGeoProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecIPGeoProtection get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecIPGeoProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecIPGeoProtection(name, id, state, options);
     }
 }

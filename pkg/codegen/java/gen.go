@@ -1059,7 +1059,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     *\n")
 	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
 	fprintf(w, "     */\n")
-	fprintf(w, "    public %s(String name) {\n", className)
+	fprintf(w, "    public %s(java.lang.String name) {\n", className)
 	fprintf(w, "        this(name, %s.Empty);\n", ctx.ref(argsFQN))
 	fprintf(w, "    }\n")
 
@@ -1086,7 +1086,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     * @param options A bag of options that control this resource's behavior.\n")
 	fprintf(w, "     */\n")
 
-	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
+	fprintf(w, "    public %s(java.lang.String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w, "        super(\"%s\", name, makeArgs(args, options), makeResourceOptions(options, %s.empty())%s);\n",
 		tok, ctx.imports.Ref(names.Codegen), isComponent)
@@ -1100,7 +1100,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		}
 
 		fprintf(w, "\n")
-		fprintf(w, "    private %s(String name, %s<String> id, %s@%s %s options) {\n",
+		fprintf(w, "    private %s(java.lang.String name, %s<java.lang.String> id, %s@%s %s options) {\n",
 			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
 		fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id));\n", tok, stateRef)
 		fprintf(w, "    }\n")
@@ -1140,7 +1140,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	// Write the method that will calculate the resource options.
 	fprintf(w, "\n")
 	fprintf(w,
-		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
+		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<java.lang.String> id) {\n",
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
@@ -1197,7 +1197,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "     * @param options Optional settings to control the behavior of the CustomResource.\n")
 		fprintf(w, "     */\n")
 
-		fprintf(w, "    public static %s get(String name, %s<String> id, %s@%s %s options) {\n",
+		fprintf(w, "    public static %s get(java.lang.String name, %s<java.lang.String> id, %s@%s %s options) {\n",
 			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
 		fprintf(w, "        return new %s(name, id, %soptions);\n", className, stateRef)
 		fprintf(w, "    }\n")
@@ -1547,7 +1547,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 
 		// toString override
 		fprintf(w, "%s@Override\n", indent)
-		fprintf(w, "%spublic String toString() {\n", indent)
+		fprintf(w, "%spublic java.lang.String toString() {\n", indent)
 		fprintf(w, "%s    return new %s(\", \", \"%s[\", \"]\")\n", indent, ctx.ref(names.StringJoiner), enumName)
 		fprintf(w, "%s        .add(\"value='\" + this.value + \"'\")\n", indent)
 		fprintf(w, "%s        .toString();\n", indent)

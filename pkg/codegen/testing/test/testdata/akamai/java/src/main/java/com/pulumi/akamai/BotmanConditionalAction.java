@@ -39,7 +39,7 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanConditionalAction(String name) {
+    public BotmanConditionalAction(java.lang.String name) {
         this(name, BotmanConditionalActionArgs.Empty);
     }
     /**
@@ -56,11 +56,11 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanConditionalAction(String name, BotmanConditionalActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BotmanConditionalAction(java.lang.String name, BotmanConditionalActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BotmanConditionalAction(String name, Output<String> id, @Nullable BotmanConditionalActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BotmanConditionalAction(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanConditionalActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, state, makeResourceOptions(options, id));
     }
 
@@ -71,7 +71,7 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
         return args == null ? BotmanConditionalActionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -87,7 +87,7 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanConditionalAction get(String name, Output<String> id, @Nullable BotmanConditionalActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanConditionalAction get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanConditionalActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanConditionalAction(name, id, state, options);
     }
 }

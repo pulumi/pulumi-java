@@ -56,7 +56,7 @@ public class GtmCidrmap extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public GtmCidrmap(String name) {
+    public GtmCidrmap(java.lang.String name) {
         this(name, GtmCidrmapArgs.Empty);
     }
     /**
@@ -73,11 +73,11 @@ public class GtmCidrmap extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GtmCidrmap(String name, GtmCidrmapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GtmCidrmap(java.lang.String name, GtmCidrmapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmCidrmap:GtmCidrmap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GtmCidrmap(String name, Output<String> id, @Nullable GtmCidrmapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GtmCidrmap(java.lang.String name, Output<java.lang.String> id, @Nullable GtmCidrmapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmCidrmap:GtmCidrmap", name, state, makeResourceOptions(options, id));
     }
 
@@ -88,7 +88,7 @@ public class GtmCidrmap extends com.pulumi.resources.CustomResource {
         return args == null ? GtmCidrmapArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -107,7 +107,7 @@ public class GtmCidrmap extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GtmCidrmap get(String name, Output<String> id, @Nullable GtmCidrmapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GtmCidrmap get(java.lang.String name, Output<java.lang.String> id, @Nullable GtmCidrmapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new GtmCidrmap(name, id, state, options);
     }
 }

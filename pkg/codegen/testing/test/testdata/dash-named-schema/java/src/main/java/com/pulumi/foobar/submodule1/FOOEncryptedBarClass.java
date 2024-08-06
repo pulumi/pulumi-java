@@ -16,7 +16,7 @@ public class FOOEncryptedBarClass extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FOOEncryptedBarClass(String name) {
+    public FOOEncryptedBarClass(java.lang.String name) {
         this(name, FOOEncryptedBarClassArgs.Empty);
     }
     /**
@@ -33,11 +33,11 @@ public class FOOEncryptedBarClass extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FOOEncryptedBarClass(String name, @Nullable FOOEncryptedBarClassArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public FOOEncryptedBarClass(java.lang.String name, @Nullable FOOEncryptedBarClassArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("foo-bar:submodule1:FOOEncryptedBarClass", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private FOOEncryptedBarClass(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private FOOEncryptedBarClass(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("foo-bar:submodule1:FOOEncryptedBarClass", name, null, makeResourceOptions(options, id));
     }
 
@@ -48,7 +48,7 @@ public class FOOEncryptedBarClass extends com.pulumi.resources.CustomResource {
         return args == null ? FOOEncryptedBarClassArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -63,7 +63,7 @@ public class FOOEncryptedBarClass extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FOOEncryptedBarClass get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FOOEncryptedBarClass get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FOOEncryptedBarClass(name, id, options);
     }
 }

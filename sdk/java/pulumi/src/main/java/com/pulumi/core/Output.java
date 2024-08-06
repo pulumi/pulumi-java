@@ -331,7 +331,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     /**
      * @param json the json value to wrap
      * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
-     * @throws com.google.gson.JsonSyntaxException – if json is not valid
+     * @throws com.google.gson.JsonSyntaxException if json is not valid
      * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> parseJson(String json) {
@@ -342,7 +342,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     /**
      * @param json the json value wrapped in an {@link Output}{@literal <String>}
      * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
-     * @throws com.google.gson.JsonSyntaxException – if json is not valid
+     * @throws com.google.gson.JsonSyntaxException if json is not valid
      * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> parseJson(Output<String> json) {

@@ -22,7 +22,7 @@ public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public EC2TaskDefinition(String name) {
+    public EC2TaskDefinition(java.lang.String name) {
         this(name, EC2TaskDefinitionArgs.Empty);
     }
     /**
@@ -39,7 +39,7 @@ public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EC2TaskDefinition(String name, @Nullable EC2TaskDefinitionArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public EC2TaskDefinition(java.lang.String name, @Nullable EC2TaskDefinitionArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
         super("awsx:ecs:EC2TaskDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
     }
 
@@ -50,7 +50,7 @@ public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
         return args == null ? EC2TaskDefinitionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();

@@ -39,7 +39,7 @@ public class BotmanChallengeAction extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanChallengeAction(String name) {
+    public BotmanChallengeAction(java.lang.String name) {
         this(name, BotmanChallengeActionArgs.Empty);
     }
     /**
@@ -56,11 +56,11 @@ public class BotmanChallengeAction extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanChallengeAction(String name, BotmanChallengeActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BotmanChallengeAction(java.lang.String name, BotmanChallengeActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanChallengeAction:BotmanChallengeAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BotmanChallengeAction(String name, Output<String> id, @Nullable BotmanChallengeActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BotmanChallengeAction(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanChallengeActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanChallengeAction:BotmanChallengeAction", name, state, makeResourceOptions(options, id));
     }
 
@@ -71,7 +71,7 @@ public class BotmanChallengeAction extends com.pulumi.resources.CustomResource {
         return args == null ? BotmanChallengeActionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -87,7 +87,7 @@ public class BotmanChallengeAction extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanChallengeAction get(String name, Output<String> id, @Nullable BotmanChallengeActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanChallengeAction get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanChallengeActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanChallengeAction(name, id, state, options);
     }
 }

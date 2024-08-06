@@ -178,7 +178,7 @@ public class Property extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Property(String name) {
+    public Property(java.lang.String name) {
         this(name, PropertyArgs.Empty);
     }
     /**
@@ -195,11 +195,11 @@ public class Property extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Property(String name, PropertyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Property(java.lang.String name, PropertyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/property:Property", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private Property(String name, Output<String> id, @Nullable PropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private Property(java.lang.String name, Output<java.lang.String> id, @Nullable PropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/property:Property", name, state, makeResourceOptions(options, id));
     }
 
@@ -210,7 +210,7 @@ public class Property extends com.pulumi.resources.CustomResource {
         return args == null ? PropertyArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -229,7 +229,7 @@ public class Property extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Property get(String name, Output<String> id, @Nullable PropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Property get(java.lang.String name, Output<java.lang.String> id, @Nullable PropertyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Property(name, id, state, options);
     }
 }
