@@ -12,22 +12,29 @@ import (
 	"os"
 	"os/exec"
 	"os/signal"
+	"path/filepath"
 	"strings"
 	"time"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
 
+	codegen "github.com/pulumi/pulumi-java/pkg/codegen/java"
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	hclsyntax "github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -309,6 +316,8 @@ func (host *javaLanguageHost) Run(_ context.Context, req *pulumirpc.RunRequest) 
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
 	if executor.Dir != "" {
 		cmd.Dir = executor.Dir
+	} else {
+		cmd.Dir = req.Info.ProgramDirectory
 	}
 
 	var stdoutBuf bytes.Buffer
@@ -421,6 +430,8 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	cmd := exec.Command(executor.Cmd, executor.BuildArgs...) // nolint: gas
 	if executor.Dir != "" {
 		cmd.Dir = executor.Dir
+	} else {
+		cmd.Dir = req.Info.ProgramDirectory
 	}
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
@@ -435,9 +446,12 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 }
 
 func (host *javaLanguageHost) GetProgramDependencies(
-	_ context.Context, _ *pulumirpc.GetProgramDependenciesRequest,
+	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest,
 ) (*pulumirpc.GetProgramDependenciesResponse, error) {
-	// TODO: Implement dependency fetcher for Java
+	if host.currentExecutor.GetProgramDependencies != nil {
+		return host.currentExecutor.GetProgramDependencies(ctx, req)
+	}
+
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 
@@ -495,4 +509,157 @@ func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest
 		Version:    version,
 		Metadata:   metadata,
 	}, nil
+}
+
+func (host *javaLanguageHost) GenerateProject(
+	_ context.Context,
+	req *pulumirpc.GenerateProjectRequest,
+) (*pulumirpc.GenerateProjectResponse, error) {
+	loader, err := schema.NewLoaderClient(req.LoaderTarget)
+	if err != nil {
+		return nil, err
+	}
+
+	var extraOptions []pcl.BindOption
+	if !req.Strict {
+		extraOptions = append(extraOptions, pcl.NonStrictBindOptions()...)
+	}
+
+	program, diags, err := pcl.BindDirectory(req.SourceDirectory, loader, extraOptions...)
+	if err != nil {
+		return nil, err
+	}
+
+	if diags.HasErrors() {
+		rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+		return &pulumirpc.GenerateProjectResponse{
+			Diagnostics: rpcDiagnostics,
+		}, nil
+	}
+
+	if program == nil {
+		return nil, errors.New("internal error: program was nil")
+	}
+
+	var project workspace.Project
+	if err := json.Unmarshal([]byte(req.Project), &project); err != nil {
+		return nil, err
+	}
+
+	err = codegen.GenerateProject(req.TargetDirectory, project, program)
+	if err != nil {
+		return nil, err
+	}
+
+	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+	return &pulumirpc.GenerateProjectResponse{
+		Diagnostics: rpcDiagnostics,
+	}, nil
+}
+
+func (host *javaLanguageHost) GenerateProgram(
+	_ context.Context,
+	req *pulumirpc.GenerateProgramRequest,
+) (*pulumirpc.GenerateProgramResponse, error) {
+	loader, err := schema.NewLoaderClient(req.LoaderTarget)
+	if err != nil {
+		return nil, err
+	}
+
+	parser := hclsyntax.NewParser()
+	// Load all .pp files in the directory
+	for path, contents := range req.Source {
+		err = parser.ParseFile(strings.NewReader(contents), path)
+		if err != nil {
+			return nil, err
+		}
+		diags := parser.Diagnostics
+		if diags.HasErrors() {
+			return nil, diags
+		}
+	}
+
+	program, diags, err := pcl.BindProgram(parser.Files, pcl.Loader(loader))
+	if err != nil {
+		return nil, err
+	}
+
+	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+	if diags.HasErrors() {
+		return &pulumirpc.GenerateProgramResponse{
+			Diagnostics: rpcDiagnostics,
+		}, nil
+	}
+	if program == nil {
+		return nil, errors.New("internal error: program was nil")
+	}
+
+	files, diags, err := codegen.GenerateProgram(program)
+	if err != nil {
+		return nil, err
+	}
+	rpcDiagnostics = append(rpcDiagnostics, plugin.HclDiagnosticsToRPCDiagnostics(diags)...)
+
+	return &pulumirpc.GenerateProgramResponse{
+		Source:      files,
+		Diagnostics: rpcDiagnostics,
+	}, nil
+}
+
+func (host *javaLanguageHost) GeneratePackage(
+	_ context.Context,
+	req *pulumirpc.GeneratePackageRequest,
+) (*pulumirpc.GeneratePackageResponse, error) {
+	loader, err := schema.NewLoaderClient(req.LoaderTarget)
+	if err != nil {
+		return nil, err
+	}
+
+	var spec schema.PackageSpec
+	err = json.Unmarshal([]byte(req.Schema), &spec)
+	if err != nil {
+		return nil, err
+	}
+
+	pkg, diags, err := schema.BindSpec(spec, loader)
+	if err != nil {
+		return nil, err
+	}
+	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+	if diags.HasErrors() {
+		return &pulumirpc.GeneratePackageResponse{
+			Diagnostics: rpcDiagnostics,
+		}, nil
+	}
+
+	files, err := codegen.GeneratePackage("pulumi-language-java", pkg, req.ExtraFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	for filename, data := range files {
+		outPath := filepath.Join(req.Directory, filename)
+		err := os.MkdirAll(filepath.Dir(outPath), 0o700)
+		if err != nil {
+			return nil, fmt.Errorf("could not create output directory %s: %w", filepath.Dir(filename), err)
+		}
+
+		err = os.WriteFile(outPath, data, 0o600)
+		if err != nil {
+			return nil, fmt.Errorf("could not write output file %s: %w", filename, err)
+		}
+	}
+
+	return &pulumirpc.GeneratePackageResponse{
+		Diagnostics: rpcDiagnostics,
+	}, nil
+}
+
+func (host *javaLanguageHost) Pack(_ context.Context, req *pulumirpc.PackRequest) (*pulumirpc.PackResponse, error) {
+	err := fsutil.CopyFile(req.DestinationDirectory, req.PackageDirectory, nil)
+	if err != nil {
+		return nil, fmt.Errorf("copy package: %w", err)
+	}
+
+	return &pulumirpc.PackResponse{ArtifactPath: req.DestinationDirectory}, nil
 }

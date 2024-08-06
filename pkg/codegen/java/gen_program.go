@@ -71,21 +71,14 @@ func (g *generator) genTrivia(w io.Writer, token syntax.Token) {
 }
 
 func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpression) {
-	multiLine := false
 	expressions := false
 	for _, expr := range expr.Parts {
-		if lit, ok := expr.(*model.LiteralValueExpression); ok && model.StringType.AssignableFrom(lit.Type()) {
-			if strings.Contains(lit.Value.AsString(), "\n") {
-				multiLine = true
-			}
-		} else {
+		if lit, ok := expr.(*model.LiteralValueExpression); !(ok && model.StringType.AssignableFrom(lit.Type())) {
 			expressions = true
 		}
 	}
 
-	if multiLine {
-		g.Fgen(w, "\"\"\"\n")
-	} else if expressions {
+	if expressions {
 		g.Fgen(w, "String.format(\"")
 	} else {
 		g.Fgen(w, "\"")
@@ -93,12 +86,7 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 	var args []model.Expression
 	for _, expr := range expr.Parts {
 		if lit, ok := expr.(*model.LiteralValueExpression); ok && model.StringType.AssignableFrom(lit.Type()) {
-			if multiLine {
-				// no need to escape
-				g.Fgen(w, lit.Value.AsString())
-			} else {
-				g.Fgen(w, g.escapeString(lit.Value.AsString(), false, expressions))
-			}
+			g.Fgen(w, g.escapeString(lit.Value.AsString(), false, expressions))
 		} else {
 			args = append(args, expr)
 			g.Fgen(w, g.escapeString("%s", false, expressions))
@@ -118,8 +106,6 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 				g.Fgenf(w, "%.v,", arg)
 			}
 		}
-	} else if multiLine {
-		g.Fgenf(w, "%s\"\"\"", g.Indent)
 	} else {
 		g.Fgen(w, "\"")
 	}
@@ -1093,10 +1079,43 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 }
 
 func (g *generator) genOutputAssignment(w io.Writer, outputVariable *pcl.OutputVariable) {
+	value, destType := liftValueToOutput(outputVariable.Value)
 	g.genIndent(w)
-	rewrittenOutVar := g.lowerExpression(outputVariable.Value, outputVariable.Type())
+	rewrittenOutVar := g.lowerExpression(value, destType)
 	g.Fgenf(w, "ctx.export(\"%s\", %v);", outputVariable.Name(), rewrittenOutVar)
 	g.genNewline(w)
+}
+
+func isOutput(t model.Type) bool {
+	_, ok := t.(*model.OutputType)
+	return ok
+}
+
+func liftValueToOutput(value model.Expression) (model.Expression, model.Type) {
+	destType := value.Type()
+	if !isOutput(destType) {
+		destType = model.NewOutputType(destType)
+	}
+
+	switch expr := value.(type) {
+	case *model.TupleConsExpression:
+		// if the value is a tuple, then lift each element to Output[T] as well
+		for i, elem := range expr.Expressions {
+			lifted, _ := liftValueToOutput(elem)
+			expr.Expressions[i] = lifted
+		}
+	}
+
+	return &model.FunctionCallExpression{
+		Name: intrinsicOutput,
+		Signature: model.StaticFunctionSignature{
+			Parameters: []model.Parameter{
+				{Name: "v", Type: value.Type()},
+			},
+			ReturnType: destType,
+		},
+		Args: []model.Expression{value},
+	}, destType
 }
 
 func (g *generator) genNode(w io.Writer, n pcl.Node) {

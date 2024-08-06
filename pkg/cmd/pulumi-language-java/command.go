@@ -11,7 +11,6 @@ import (
 
 // Like `cmd.Run()` but issues friendlier errors.
 func runCommand(cmd *exec.Cmd) error {
-	name := cmd.Path
 	commandStr := strings.Join(cmd.Args, " ")
 	if err := cmd.Run(); err != nil {
 		if exiterr, ok := err.(*exec.ExitError); ok {
@@ -20,16 +19,16 @@ func runCommand(cmd *exec.Cmd) error {
 			// So, the error message should look as nice as possible.
 			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
 				code := status.ExitStatus()
-				return fmt.Errorf("'%v %v' exited with non-zero exit code: %d", name, commandStr, code)
+				return fmt.Errorf("'%v' exited with non-zero exit code: %d", commandStr, code)
 			}
-			return fmt.Errorf("'%v %v' exited unexpectedly: %w", name, commandStr, exiterr)
+			return fmt.Errorf("'%v' exited unexpectedly: %w", commandStr, exiterr)
 		}
 
 		// Otherwise, we didn't even get to run the program.
 		// This ought to never happen unless there's a bug or
 		// system condition that prevented us from running the
 		// language exec. Issue a scarier error.
-		return fmt.Errorf("Problem executing '%v %v': %w", name, commandStr, err)
+		return fmt.Errorf("Problem executing '%v': %w", commandStr, err)
 	}
 	return nil
 }
