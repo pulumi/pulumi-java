@@ -49,7 +49,7 @@ public class AppsecAdvancedSettingsPiiLearning extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppsecAdvancedSettingsPiiLearning(String name) {
+    public AppsecAdvancedSettingsPiiLearning(java.lang.String name) {
         this(name, AppsecAdvancedSettingsPiiLearningArgs.Empty);
     }
     /**
@@ -66,11 +66,11 @@ public class AppsecAdvancedSettingsPiiLearning extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppsecAdvancedSettingsPiiLearning(String name, AppsecAdvancedSettingsPiiLearningArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppsecAdvancedSettingsPiiLearning(java.lang.String name, AppsecAdvancedSettingsPiiLearningArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appsecAdvancedSettingsPiiLearning:AppsecAdvancedSettingsPiiLearning", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppsecAdvancedSettingsPiiLearning(String name, Output<String> id, @Nullable AppsecAdvancedSettingsPiiLearningState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppsecAdvancedSettingsPiiLearning(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsPiiLearningState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appsecAdvancedSettingsPiiLearning:AppsecAdvancedSettingsPiiLearning", name, state, makeResourceOptions(options, id));
     }
 
@@ -81,7 +81,7 @@ public class AppsecAdvancedSettingsPiiLearning extends com.pulumi.resources.Cust
         return args == null ? AppsecAdvancedSettingsPiiLearningArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -97,7 +97,7 @@ public class AppsecAdvancedSettingsPiiLearning extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppsecAdvancedSettingsPiiLearning get(String name, Output<String> id, @Nullable AppsecAdvancedSettingsPiiLearningState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppsecAdvancedSettingsPiiLearning get(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsPiiLearningState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppsecAdvancedSettingsPiiLearning(name, id, state, options);
     }
 }

@@ -164,7 +164,7 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ClientlistList(String name) {
+    public ClientlistList(java.lang.String name) {
         this(name, ClientlistListArgs.Empty);
     }
     /**
@@ -181,11 +181,11 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClientlistList(String name, ClientlistListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ClientlistList(java.lang.String name, ClientlistListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/clientlistList:ClientlistList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ClientlistList(String name, Output<String> id, @Nullable ClientlistListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ClientlistList(java.lang.String name, Output<java.lang.String> id, @Nullable ClientlistListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/clientlistList:ClientlistList", name, state, makeResourceOptions(options, id));
     }
 
@@ -196,7 +196,7 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
         return args == null ? ClientlistListArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -212,7 +212,7 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClientlistList get(String name, Output<String> id, @Nullable ClientlistListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClientlistList get(java.lang.String name, Output<java.lang.String> id, @Nullable ClientlistListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ClientlistList(name, id, state, options);
     }
 }

@@ -93,7 +93,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BatchDeployment(String name) {
+    public BatchDeployment(java.lang.String name) {
         this(name, BatchDeploymentArgs.Empty);
     }
     /**
@@ -110,11 +110,11 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BatchDeployment(String name, BatchDeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BatchDeployment(java.lang.String name, BatchDeploymentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:BatchDeployment", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BatchDeployment(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BatchDeployment(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:BatchDeployment", name, null, makeResourceOptions(options, id));
     }
 
@@ -125,7 +125,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
         return args == null ? BatchDeploymentArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -143,7 +143,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BatchDeployment get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BatchDeployment get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BatchDeployment(name, id, options);
     }
 }

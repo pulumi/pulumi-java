@@ -111,7 +111,7 @@ public class ImagingPolicyImage extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ImagingPolicyImage(String name) {
+    public ImagingPolicyImage(java.lang.String name) {
         this(name, ImagingPolicyImageArgs.Empty);
     }
     /**
@@ -128,11 +128,11 @@ public class ImagingPolicyImage extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ImagingPolicyImage(String name, ImagingPolicyImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ImagingPolicyImage(java.lang.String name, ImagingPolicyImageArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/imagingPolicyImage:ImagingPolicyImage", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ImagingPolicyImage(String name, Output<String> id, @Nullable ImagingPolicyImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ImagingPolicyImage(java.lang.String name, Output<java.lang.String> id, @Nullable ImagingPolicyImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/imagingPolicyImage:ImagingPolicyImage", name, state, makeResourceOptions(options, id));
     }
 
@@ -143,7 +143,7 @@ public class ImagingPolicyImage extends com.pulumi.resources.CustomResource {
         return args == null ? ImagingPolicyImageArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -159,7 +159,7 @@ public class ImagingPolicyImage extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ImagingPolicyImage get(String name, Output<String> id, @Nullable ImagingPolicyImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ImagingPolicyImage get(java.lang.String name, Output<java.lang.String> id, @Nullable ImagingPolicyImageState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ImagingPolicyImage(name, id, state, options);
     }
 }

@@ -153,7 +153,7 @@ public class GtmDatacenter extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public GtmDatacenter(String name) {
+    public GtmDatacenter(java.lang.String name) {
         this(name, GtmDatacenterArgs.Empty);
     }
     /**
@@ -170,11 +170,11 @@ public class GtmDatacenter extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GtmDatacenter(String name, GtmDatacenterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public GtmDatacenter(java.lang.String name, GtmDatacenterArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmDatacenter:GtmDatacenter", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private GtmDatacenter(String name, Output<String> id, @Nullable GtmDatacenterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private GtmDatacenter(java.lang.String name, Output<java.lang.String> id, @Nullable GtmDatacenterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/gtmDatacenter:GtmDatacenter", name, state, makeResourceOptions(options, id));
     }
 
@@ -185,7 +185,7 @@ public class GtmDatacenter extends com.pulumi.resources.CustomResource {
         return args == null ? GtmDatacenterArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -204,7 +204,7 @@ public class GtmDatacenter extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GtmDatacenter get(String name, Output<String> id, @Nullable GtmDatacenterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GtmDatacenter get(java.lang.String name, Output<java.lang.String> id, @Nullable GtmDatacenterState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new GtmDatacenter(name, id, state, options);
     }
 }

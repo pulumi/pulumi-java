@@ -34,7 +34,7 @@ public class BotmanCustomBotCategorySequence extends com.pulumi.resources.Custom
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanCustomBotCategorySequence(String name) {
+    public BotmanCustomBotCategorySequence(java.lang.String name) {
         this(name, BotmanCustomBotCategorySequenceArgs.Empty);
     }
     /**
@@ -51,11 +51,11 @@ public class BotmanCustomBotCategorySequence extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanCustomBotCategorySequence(String name, BotmanCustomBotCategorySequenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public BotmanCustomBotCategorySequence(java.lang.String name, BotmanCustomBotCategorySequenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanCustomBotCategorySequence:BotmanCustomBotCategorySequence", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private BotmanCustomBotCategorySequence(String name, Output<String> id, @Nullable BotmanCustomBotCategorySequenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private BotmanCustomBotCategorySequence(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanCustomBotCategorySequenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/botmanCustomBotCategorySequence:BotmanCustomBotCategorySequence", name, state, makeResourceOptions(options, id));
     }
 
@@ -66,7 +66,7 @@ public class BotmanCustomBotCategorySequence extends com.pulumi.resources.Custom
         return args == null ? BotmanCustomBotCategorySequenceArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -82,7 +82,7 @@ public class BotmanCustomBotCategorySequence extends com.pulumi.resources.Custom
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanCustomBotCategorySequence get(String name, Output<String> id, @Nullable BotmanCustomBotCategorySequenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanCustomBotCategorySequence get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanCustomBotCategorySequenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanCustomBotCategorySequence(name, id, state, options);
     }
 }

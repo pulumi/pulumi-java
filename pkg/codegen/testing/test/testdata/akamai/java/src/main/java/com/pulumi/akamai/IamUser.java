@@ -359,7 +359,7 @@ public class IamUser extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IamUser(String name) {
+    public IamUser(java.lang.String name) {
         this(name, IamUserArgs.Empty);
     }
     /**
@@ -376,11 +376,11 @@ public class IamUser extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IamUser(String name, IamUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public IamUser(java.lang.String name, IamUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/iamUser:IamUser", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private IamUser(String name, Output<String> id, @Nullable IamUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private IamUser(java.lang.String name, Output<java.lang.String> id, @Nullable IamUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/iamUser:IamUser", name, state, makeResourceOptions(options, id));
     }
 
@@ -391,7 +391,7 @@ public class IamUser extends com.pulumi.resources.CustomResource {
         return args == null ? IamUserArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -407,7 +407,7 @@ public class IamUser extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IamUser get(String name, Output<String> id, @Nullable IamUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IamUser get(java.lang.String name, Output<java.lang.String> id, @Nullable IamUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IamUser(name, id, state, options);
     }
 }

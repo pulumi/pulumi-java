@@ -107,7 +107,7 @@ public class AppSecActivations extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecActivations(String name) {
+    public AppSecActivations(java.lang.String name) {
         this(name, AppSecActivationsArgs.Empty);
     }
     /**
@@ -124,11 +124,11 @@ public class AppSecActivations extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecActivations(String name, AppSecActivationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppSecActivations(java.lang.String name, AppSecActivationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecActivations:AppSecActivations", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private AppSecActivations(String name, Output<String> id, @Nullable AppSecActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private AppSecActivations(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/appSecActivations:AppSecActivations", name, state, makeResourceOptions(options, id));
     }
 
@@ -139,7 +139,7 @@ public class AppSecActivations extends com.pulumi.resources.CustomResource {
         return args == null ? AppSecActivationsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +155,7 @@ public class AppSecActivations extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecActivations get(String name, Output<String> id, @Nullable AppSecActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecActivations get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecActivations(name, id, state, options);
     }
 }

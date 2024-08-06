@@ -16,7 +16,7 @@ public class MemberB1 extends com.pulumi.resources.ComponentResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public MemberB1(String name) {
+    public MemberB1(java.lang.String name) {
         this(name, MemberB1Args.Empty);
     }
     /**
@@ -33,7 +33,7 @@ public class MemberB1 extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MemberB1(String name, @Nullable MemberB1Args args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+    public MemberB1(java.lang.String name, @Nullable MemberB1Args args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
         super("myPkg:myMod/childB:MemberB1", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
     }
 
@@ -44,7 +44,7 @@ public class MemberB1 extends com.pulumi.resources.ComponentResource {
         return args == null ? MemberB1Args.Empty : args;
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();

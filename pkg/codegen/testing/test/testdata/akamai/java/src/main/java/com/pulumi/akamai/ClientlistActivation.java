@@ -121,7 +121,7 @@ public class ClientlistActivation extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ClientlistActivation(String name) {
+    public ClientlistActivation(java.lang.String name) {
         this(name, ClientlistActivationArgs.Empty);
     }
     /**
@@ -138,11 +138,11 @@ public class ClientlistActivation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClientlistActivation(String name, ClientlistActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ClientlistActivation(java.lang.String name, ClientlistActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/clientlistActivation:ClientlistActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
-    private ClientlistActivation(String name, Output<String> id, @Nullable ClientlistActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private ClientlistActivation(java.lang.String name, Output<java.lang.String> id, @Nullable ClientlistActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("akamai:index/clientlistActivation:ClientlistActivation", name, state, makeResourceOptions(options, id));
     }
 
@@ -153,7 +153,7 @@ public class ClientlistActivation extends com.pulumi.resources.CustomResource {
         return args == null ? ClientlistActivationArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -169,7 +169,7 @@ public class ClientlistActivation extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClientlistActivation get(String name, Output<String> id, @Nullable ClientlistActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClientlistActivation get(java.lang.String name, Output<java.lang.String> id, @Nullable ClientlistActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ClientlistActivation(name, id, state, options);
     }
 }
