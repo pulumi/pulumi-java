@@ -404,19 +404,72 @@ func (g *generator) GenIndexExpression(w io.Writer, expr *model.IndexExpression)
 }
 
 func (g *generator) escapeString(v string, verbatim, expressions bool) string {
-	builder := strings.Builder{}
+	parts := []string{}
+
+	partBuilder := strings.Builder{}
+	partLength := 0
+	multilinePart := false
+
 	for _, c := range v {
 		if !verbatim {
+			if c == '\n' {
+				partBuilder.WriteString("\\n\"+\"")
+				partLength++
+				multilinePart = true
+				continue
+			}
+
 			if c == '"' || c == '\\' {
-				builder.WriteRune('\\')
+				partBuilder.WriteRune('\\')
+				partLength++
 			}
 		}
 		if expressions && (c == '{' || c == '}') {
-			builder.WriteRune(c)
+			partBuilder.WriteRune(c)
+			partLength++
 		}
-		builder.WriteRune(c)
+
+		partBuilder.WriteRune(c)
+		partLength++
+
+		if partLength > 2^15 {
+			if multilinePart {
+				parts = append(parts, "("+partBuilder.String()+")")
+			} else {
+				parts = append(parts, partBuilder.String())
+			}
+
+			partBuilder.Reset()
+			partLength = 0
+			multilinePart = false
+		}
 	}
-	return builder.String()
+
+	if partLength > 0 {
+		if multilinePart {
+			parts = append(parts, "("+partBuilder.String()+")")
+		} else {
+			parts = append(parts, partBuilder.String())
+		}
+	}
+
+	if len(parts) == 0 {
+		return ""
+	} else if len(parts) == 1 {
+		return parts[0]
+	} else {
+		var builder strings.Builder
+		for i, part := range parts {
+			if i > 0 {
+				builder.WriteString("\".concat(\"")
+			}
+			builder.WriteString(part)
+			if i > 0 {
+				builder.WriteString("\")")
+			}
+		}
+		return builder.String()
+	}
 }
 
 func (g *generator) genStringLiteral(w io.Writer, v string) {

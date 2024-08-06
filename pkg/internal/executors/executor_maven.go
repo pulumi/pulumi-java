@@ -3,9 +3,16 @@
 package executors
 
 import (
+	"bufio"
+	"context"
+	"fmt"
+	"os"
+	"os/exec"
+	"regexp"
 	"strings"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 type maven struct{}
@@ -61,5 +68,70 @@ func (maven) newMavenExecutor(cmd string) (*JavaExecutor, error) {
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
 			"-DmainArgs=packages",
 		},
+		GetProgramDependencies: func(
+			_ context.Context,
+			req *pulumirpc.GetProgramDependenciesRequest,
+		) (*pulumirpc.GetProgramDependenciesResponse, error) {
+			tgfFile, err := os.CreateTemp("", "maven-dependencies.tgf")
+			if err != nil {
+				return nil, err
+			}
+
+			//nolint:gosec
+			command := exec.Command(
+				cmd,
+				"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
+				"--no-transfer-progress",
+				"dependency:tree",
+				"-DoutputType=tgf",
+				"-DoutputFile="+tgfFile.Name(),
+			)
+			command.Dir = req.Info.ProgramDirectory
+			err = command.Run()
+			if err != nil {
+				return nil, err
+			}
+
+			dependencies := []*pulumirpc.DependencyInfo{}
+
+			scanner := bufio.NewScanner(tgfFile)
+			for scanner.Scan() {
+				line := scanner.Text()
+				if line[0] == '#' {
+					break
+				}
+
+				parts := tgfDependencyPattern.FindStringSubmatch(line)
+				if len(parts) != 5 {
+					return nil, fmt.Errorf("unexpected dependency encountered: %s", line)
+				}
+
+				groupID := parts[1]
+				artifactID := parts[2]
+				// parts[3] will be the type of artifact, such as `jar`
+				// version := parts[4]
+
+				dependencies = append(dependencies, &pulumirpc.DependencyInfo{
+					Name:    fmt.Sprintf("%s:%s", groupID, artifactID),
+					Version: "",
+				})
+			}
+
+			err = tgfFile.Close()
+			if err != nil {
+				return nil, err
+			}
+
+			err = os.Remove(tgfFile.Name())
+			if err != nil {
+				return nil, err
+			}
+
+			return &pulumirpc.GetProgramDependenciesResponse{
+				Dependencies: dependencies,
+			}, nil
+		},
 	}, nil
 }
+
+var tgfDependencyPattern = regexp.MustCompile("[^ ]+ ([^:]+):([^:]+):([^:]+):([^:]+)")
