@@ -129,7 +129,7 @@ public class ClientlistActivation extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ClientlistActivation(String name, ClientlistActivationArgs args) {
+    public ClientlistActivation(java.lang.String name, ClientlistActivationArgs args) {
         this(name, args, null);
     }
     /**
@@ -139,11 +139,11 @@ public class ClientlistActivation extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientlistActivation(java.lang.String name, ClientlistActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/clientlistActivation:ClientlistActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/clientlistActivation:ClientlistActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private ClientlistActivation(java.lang.String name, Output<java.lang.String> id, @Nullable ClientlistActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/clientlistActivation:ClientlistActivation", name, state, makeResourceOptions(options, id));
+        super("akamai:index/clientlistActivation:ClientlistActivation", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ClientlistActivationArgs makeArgs(ClientlistActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -19,28 +19,28 @@ import static java.util.Objects.requireNonNull;
 public class ComponentResource extends Resource {
 
     /**
-     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
+     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean, CompletableFuture)}.
      *
      * @param type The type of the resource
      * @param name The unique name of the resource
      */
     public ComponentResource(String type, String name) {
-        this(type, name, null /* no options */);
+        this(type, name, ResourceArgs.Empty, null /* no options */, false, null);
     }
 
     /**
-     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
+     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean, CompletableFuture)}.
      *
      * @param type    The type of the resource
      * @param name    The unique name of the resource
      * @param options A bag of options that control this resource's behavior
      */
     public ComponentResource(String type, String name, @Nullable ComponentResourceOptions options) {
-        this(type, name, options, false);
+        this(type, name, ResourceArgs.Empty, options, false, null);
     }
 
     /**
-     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
+     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean, CompletableFuture)}.
      *
      * @param type    The type of the resource
      * @param name    The unique name of the resource
@@ -48,11 +48,11 @@ public class ComponentResource extends Resource {
      * @param remote  True if this is a remote component resource
      */
     public ComponentResource(String type, String name, @Nullable ComponentResourceOptions options, boolean remote) {
-        this(type, name, ResourceArgs.Empty, options, remote);
+        this(type, name, ResourceArgs.Empty, options, remote, null);
     }
 
     /**
-     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
+     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean, CompletableFuture)}.
      *
      * @param type    The type of the resource
      * @param name    The unique name of the resource
@@ -60,7 +60,20 @@ public class ComponentResource extends Resource {
      * @param options A bag of options that control this resource's behavior
      */
     public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options) {
-        this(type, name, args, options, false);
+        this(type, name, args, options, false, null);
+    }
+
+    /**
+     * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean, CompletableFuture)}.
+     *
+     * @param type    The type of the resource
+     * @param name    The unique name of the resource
+     * @param args    The arguments to use to populate the new resource
+     * @param remote  True if this is a remote component resource
+     * @param options A bag of options that control this resource's behavior
+     */
+    public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote) {
+        this(type, name, args, options, remote, null);
     }
 
     /**
@@ -71,17 +84,18 @@ public class ComponentResource extends Resource {
      * and "options.dependsOn" is an optional list of other resources that
      * this resource depends on, controlling the order in which we perform resource operations.
      *
-     * @param type    The type of the resource
-     * @param name    The unique name of the resource
-     * @param args    The arguments to use to populate the new resource
-     * @param options A bag of options that control this resource's behavior
-     * @param remote  True if this is a remote component resource
+     * @param type       The type of the resource
+     * @param name       The unique name of the resource
+     * @param args       The arguments to use to populate the new resource
+     * @param options    A bag of options that control this resource's behavior
+     * @param remote     True if this is a remote component resource
+     * @param packageRef The package reference to use for this resource
      */
-    public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote) {
+    public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote, CompletableFuture<String> packageRef) {
         super(type, name, false,
                 args == null ? ResourceArgs.Empty : args,
                 options == null ? ComponentResourceOptions.Empty : options,
-                remote, false
+                remote, false, packageRef
         );
     }
 

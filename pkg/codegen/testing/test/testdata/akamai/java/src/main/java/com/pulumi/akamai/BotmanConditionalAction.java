@@ -47,7 +47,7 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanConditionalAction(String name, BotmanConditionalActionArgs args) {
+    public BotmanConditionalAction(java.lang.String name, BotmanConditionalActionArgs args) {
         this(name, args, null);
     }
     /**
@@ -57,11 +57,11 @@ public class BotmanConditionalAction extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanConditionalAction(java.lang.String name, BotmanConditionalActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BotmanConditionalAction(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanConditionalActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, state, makeResourceOptions(options, id));
+        super("akamai:index/botmanConditionalAction:BotmanConditionalAction", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BotmanConditionalActionArgs makeArgs(BotmanConditionalActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

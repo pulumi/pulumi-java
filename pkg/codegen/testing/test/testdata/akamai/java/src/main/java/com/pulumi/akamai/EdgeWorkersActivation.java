@@ -85,7 +85,7 @@ public class EdgeWorkersActivation extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EdgeWorkersActivation(String name, EdgeWorkersActivationArgs args) {
+    public EdgeWorkersActivation(java.lang.String name, EdgeWorkersActivationArgs args) {
         this(name, args, null);
     }
     /**
@@ -95,11 +95,11 @@ public class EdgeWorkersActivation extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EdgeWorkersActivation(java.lang.String name, EdgeWorkersActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeWorkersActivation:EdgeWorkersActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/edgeWorkersActivation:EdgeWorkersActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private EdgeWorkersActivation(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeWorkersActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeWorkersActivation:EdgeWorkersActivation", name, state, makeResourceOptions(options, id));
+        super("akamai:index/edgeWorkersActivation:EdgeWorkersActivation", name, state, makeResourceOptions(options, id), false);
     }
 
     private static EdgeWorkersActivationArgs makeArgs(EdgeWorkersActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

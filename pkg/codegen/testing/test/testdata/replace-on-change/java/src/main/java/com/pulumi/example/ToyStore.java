@@ -55,7 +55,7 @@ public class ToyStore extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ToyStore(String name, @Nullable ToyStoreArgs args) {
+    public ToyStore(java.lang.String name, @Nullable ToyStoreArgs args) {
         this(name, args, null);
     }
     /**
@@ -65,11 +65,11 @@ public class ToyStore extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ToyStore(java.lang.String name, @Nullable ToyStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::ToyStore", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("example::ToyStore", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private ToyStore(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::ToyStore", name, null, makeResourceOptions(options, id));
+        super("example::ToyStore", name, null, makeResourceOptions(options, id), false);
     }
 
     private static ToyStoreArgs makeArgs(@Nullable ToyStoreArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -127,7 +127,7 @@ public class CloudletsApplicationLoadBalancer extends com.pulumi.resources.Custo
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CloudletsApplicationLoadBalancer(String name, CloudletsApplicationLoadBalancerArgs args) {
+    public CloudletsApplicationLoadBalancer(java.lang.String name, CloudletsApplicationLoadBalancerArgs args) {
         this(name, args, null);
     }
     /**
@@ -137,11 +137,11 @@ public class CloudletsApplicationLoadBalancer extends com.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudletsApplicationLoadBalancer(java.lang.String name, CloudletsApplicationLoadBalancerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private CloudletsApplicationLoadBalancer(java.lang.String name, Output<java.lang.String> id, @Nullable CloudletsApplicationLoadBalancerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, state, makeResourceOptions(options, id));
+        super("akamai:index/cloudletsApplicationLoadBalancer:CloudletsApplicationLoadBalancer", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CloudletsApplicationLoadBalancerArgs makeArgs(CloudletsApplicationLoadBalancerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

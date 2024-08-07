@@ -41,7 +41,7 @@ public class BotmanChallengeInjectionRules extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanChallengeInjectionRules(String name, BotmanChallengeInjectionRulesArgs args) {
+    public BotmanChallengeInjectionRules(java.lang.String name, BotmanChallengeInjectionRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -51,11 +51,11 @@ public class BotmanChallengeInjectionRules extends com.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanChallengeInjectionRules(java.lang.String name, BotmanChallengeInjectionRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanChallengeInjectionRules:BotmanChallengeInjectionRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanChallengeInjectionRules:BotmanChallengeInjectionRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BotmanChallengeInjectionRules(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanChallengeInjectionRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanChallengeInjectionRules:BotmanChallengeInjectionRules", name, state, makeResourceOptions(options, id));
+        super("akamai:index/botmanChallengeInjectionRules:BotmanChallengeInjectionRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BotmanChallengeInjectionRulesArgs makeArgs(BotmanChallengeInjectionRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

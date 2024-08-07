@@ -58,7 +58,7 @@ public class AppSecMatchTargetSequence extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecMatchTargetSequence(String name, AppSecMatchTargetSequenceArgs args) {
+    public AppSecMatchTargetSequence(java.lang.String name, AppSecMatchTargetSequenceArgs args) {
         this(name, args, null);
     }
     /**
@@ -68,11 +68,11 @@ public class AppSecMatchTargetSequence extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecMatchTargetSequence(java.lang.String name, AppSecMatchTargetSequenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecMatchTargetSequence:AppSecMatchTargetSequence", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecMatchTargetSequence:AppSecMatchTargetSequence", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecMatchTargetSequence(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecMatchTargetSequenceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecMatchTargetSequence:AppSecMatchTargetSequence", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecMatchTargetSequence:AppSecMatchTargetSequence", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecMatchTargetSequenceArgs makeArgs(AppSecMatchTargetSequenceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

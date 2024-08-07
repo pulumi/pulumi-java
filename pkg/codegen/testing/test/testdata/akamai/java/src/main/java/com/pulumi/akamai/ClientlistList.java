@@ -172,7 +172,7 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ClientlistList(String name, ClientlistListArgs args) {
+    public ClientlistList(java.lang.String name, ClientlistListArgs args) {
         this(name, args, null);
     }
     /**
@@ -182,11 +182,11 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientlistList(java.lang.String name, ClientlistListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/clientlistList:ClientlistList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/clientlistList:ClientlistList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private ClientlistList(java.lang.String name, Output<java.lang.String> id, @Nullable ClientlistListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/clientlistList:ClientlistList", name, state, makeResourceOptions(options, id));
+        super("akamai:index/clientlistList:ClientlistList", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ClientlistListArgs makeArgs(ClientlistListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

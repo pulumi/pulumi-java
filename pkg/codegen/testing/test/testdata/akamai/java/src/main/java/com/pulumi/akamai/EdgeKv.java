@@ -120,7 +120,7 @@ public class EdgeKv extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EdgeKv(String name, EdgeKvArgs args) {
+    public EdgeKv(java.lang.String name, EdgeKvArgs args) {
         this(name, args, null);
     }
     /**
@@ -130,11 +130,11 @@ public class EdgeKv extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EdgeKv(java.lang.String name, EdgeKvArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeKv:EdgeKv", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/edgeKv:EdgeKv", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private EdgeKv(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeKvState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeKv:EdgeKv", name, state, makeResourceOptions(options, id));
+        super("akamai:index/edgeKv:EdgeKv", name, state, makeResourceOptions(options, id), false);
     }
 
     private static EdgeKvArgs makeArgs(EdgeKvArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -114,7 +114,7 @@ public class AppSecRuleUpgrade extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecRuleUpgrade(String name, AppSecRuleUpgradeArgs args) {
+    public AppSecRuleUpgrade(java.lang.String name, AppSecRuleUpgradeArgs args) {
         this(name, args, null);
     }
     /**
@@ -124,11 +124,11 @@ public class AppSecRuleUpgrade extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecRuleUpgrade(java.lang.String name, AppSecRuleUpgradeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecRuleUpgrade:AppSecRuleUpgrade", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecRuleUpgrade:AppSecRuleUpgrade", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecRuleUpgrade(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecRuleUpgradeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecRuleUpgrade:AppSecRuleUpgrade", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecRuleUpgrade:AppSecRuleUpgrade", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecRuleUpgradeArgs makeArgs(AppSecRuleUpgradeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -34,7 +34,7 @@ public class OtherResource extends com.pulumi.resources.ComponentResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public OtherResource(String name, @Nullable OtherResourceArgs args) {
+    public OtherResource(java.lang.String name, @Nullable OtherResourceArgs args) {
         this(name, args, null);
     }
     /**

@@ -86,7 +86,7 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecApiConstraintsProtection(String name, AppSecApiConstraintsProtectionArgs args) {
+    public AppSecApiConstraintsProtection(java.lang.String name, AppSecApiConstraintsProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,11 +96,11 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecApiConstraintsProtection(java.lang.String name, AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecApiConstraintsProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecApiConstraintsProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecApiConstraintsProtectionArgs makeArgs(AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

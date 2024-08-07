@@ -49,7 +49,7 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SqlResourceSqlContainer(String name, @Nullable SqlResourceSqlContainerArgs args) {
+    public SqlResourceSqlContainer(java.lang.String name, @Nullable SqlResourceSqlContainerArgs args) {
         this(name, args, null);
     }
     /**
@@ -59,11 +59,11 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlResourceSqlContainer(java.lang.String name, @Nullable SqlResourceSqlContainerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlContainer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("azure-native:documentdb:SqlResourceSqlContainer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private SqlResourceSqlContainer(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlContainer", name, null, makeResourceOptions(options, id));
+        super("azure-native:documentdb:SqlResourceSqlContainer", name, null, makeResourceOptions(options, id), false);
     }
 
     private static SqlResourceSqlContainerArgs makeArgs(@Nullable SqlResourceSqlContainerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

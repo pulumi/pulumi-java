@@ -54,7 +54,7 @@ public class CpCode extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CpCode(String name, CpCodeArgs args) {
+    public CpCode(java.lang.String name, CpCodeArgs args) {
         this(name, args, null);
     }
     /**
@@ -64,11 +64,11 @@ public class CpCode extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CpCode(java.lang.String name, CpCodeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpCode:CpCode", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cpCode:CpCode", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private CpCode(java.lang.String name, Output<java.lang.String> id, @Nullable CpCodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpCode:CpCode", name, state, makeResourceOptions(options, id));
+        super("akamai:index/cpCode:CpCode", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CpCodeArgs makeArgs(CpCodeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

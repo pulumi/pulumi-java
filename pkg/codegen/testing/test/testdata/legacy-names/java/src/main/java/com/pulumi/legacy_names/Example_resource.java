@@ -49,7 +49,7 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Example_resource(String name, @Nullable Example_resourceArgs args) {
+    public Example_resource(java.lang.String name, @Nullable Example_resourceArgs args) {
         this(name, args, null);
     }
     /**
@@ -59,11 +59,11 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Example_resource(java.lang.String name, @Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("legacy_names:index:example_resource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("legacy_names:index:example_resource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Example_resource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("legacy_names:index:example_resource", name, null, makeResourceOptions(options, id));
+        super("legacy_names:index:example_resource", name, null, makeResourceOptions(options, id), false);
     }
 
     private static Example_resourceArgs makeArgs(@Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

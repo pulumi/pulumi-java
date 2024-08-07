@@ -34,7 +34,7 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ModuleResource(String name, ModuleResourceArgs args) {
+    public ModuleResource(java.lang.String name, ModuleResourceArgs args) {
         this(name, args, null);
     }
     /**
@@ -44,11 +44,11 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ModuleResource(java.lang.String name, ModuleResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("foobar::ModuleResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("foobar::ModuleResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private ModuleResource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("foobar::ModuleResource", name, null, makeResourceOptions(options, id));
+        super("foobar::ModuleResource", name, null, makeResourceOptions(options, id), false);
     }
 
     private static ModuleResourceArgs makeArgs(ModuleResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

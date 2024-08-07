@@ -72,7 +72,7 @@ public class AppSecAdvancedSettingsLogging extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecAdvancedSettingsLogging(String name, AppSecAdvancedSettingsLoggingArgs args) {
+    public AppSecAdvancedSettingsLogging(java.lang.String name, AppSecAdvancedSettingsLoggingArgs args) {
         this(name, args, null);
     }
     /**
@@ -82,11 +82,11 @@ public class AppSecAdvancedSettingsLogging extends com.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecAdvancedSettingsLogging(java.lang.String name, AppSecAdvancedSettingsLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsLogging:AppSecAdvancedSettingsLogging", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecAdvancedSettingsLogging:AppSecAdvancedSettingsLogging", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecAdvancedSettingsLogging(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecAdvancedSettingsLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsLogging:AppSecAdvancedSettingsLogging", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecAdvancedSettingsLogging:AppSecAdvancedSettingsLogging", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecAdvancedSettingsLoggingArgs makeArgs(AppSecAdvancedSettingsLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

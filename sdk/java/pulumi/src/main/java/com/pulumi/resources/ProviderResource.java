@@ -45,7 +45,23 @@ public class ProviderResource extends CustomResource {
      */
     protected ProviderResource(String aPackage, String name,
                                ResourceArgs args, @Nullable CustomResourceOptions options, boolean dependency) {
-        super(providerResourceType(aPackage), name, args, options, dependency);
+        this(aPackage, name, args, options, dependency, null);
+    }
+
+    /**
+     * Creates and registers a new provider resource for a particular package.
+     *
+     * @param aPackage   The package associated with this provider
+     * @param name       The unique name of the provider
+     * @param args       The configuration to use for this provider
+     * @param options    A bag of options that control this provider's behavior
+     * @param dependency True if this is a synthetic resource used internally for dependency tracking
+     * @param packageRef The package reference to use for this provider
+     */
+    protected ProviderResource(String aPackage, String name,
+                               ResourceArgs args, @Nullable CustomResourceOptions options, boolean dependency,
+                               @Nullable CompletableFuture<String> packageRef) {
+        super(providerResourceType(aPackage), name, args, options, dependency, packageRef);
         this.aPackage = aPackage;
         this.registrationId = registrationIdAsync();
     }

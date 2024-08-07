@@ -118,7 +118,7 @@ public class DnsZone extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DnsZone(String name, DnsZoneArgs args) {
+    public DnsZone(java.lang.String name, DnsZoneArgs args) {
         this(name, args, null);
     }
     /**
@@ -128,11 +128,11 @@ public class DnsZone extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DnsZone(java.lang.String name, DnsZoneArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/dnsZone:DnsZone", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/dnsZone:DnsZone", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private DnsZone(java.lang.String name, Output<java.lang.String> id, @Nullable DnsZoneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/dnsZone:DnsZone", name, state, makeResourceOptions(options, id));
+        super("akamai:index/dnsZone:DnsZone", name, state, makeResourceOptions(options, id), false);
     }
 
     private static DnsZoneArgs makeArgs(DnsZoneArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

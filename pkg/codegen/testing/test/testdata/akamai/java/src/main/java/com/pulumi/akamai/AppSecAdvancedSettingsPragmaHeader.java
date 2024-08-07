@@ -72,7 +72,7 @@ public class AppSecAdvancedSettingsPragmaHeader extends com.pulumi.resources.Cus
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecAdvancedSettingsPragmaHeader(String name, AppSecAdvancedSettingsPragmaHeaderArgs args) {
+    public AppSecAdvancedSettingsPragmaHeader(java.lang.String name, AppSecAdvancedSettingsPragmaHeaderArgs args) {
         this(name, args, null);
     }
     /**
@@ -82,11 +82,11 @@ public class AppSecAdvancedSettingsPragmaHeader extends com.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecAdvancedSettingsPragmaHeader(java.lang.String name, AppSecAdvancedSettingsPragmaHeaderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsPragmaHeader:AppSecAdvancedSettingsPragmaHeader", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecAdvancedSettingsPragmaHeader:AppSecAdvancedSettingsPragmaHeader", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecAdvancedSettingsPragmaHeader(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecAdvancedSettingsPragmaHeaderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsPragmaHeader:AppSecAdvancedSettingsPragmaHeader", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecAdvancedSettingsPragmaHeader:AppSecAdvancedSettingsPragmaHeader", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecAdvancedSettingsPragmaHeaderArgs makeArgs(AppSecAdvancedSettingsPragmaHeaderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

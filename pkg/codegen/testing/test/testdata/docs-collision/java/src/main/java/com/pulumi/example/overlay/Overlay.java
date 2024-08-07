@@ -35,7 +35,7 @@ public class Overlay extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Overlay(String name, @Nullable OverlayArgs args) {
+    public Overlay(java.lang.String name, @Nullable OverlayArgs args) {
         this(name, args, null);
     }
     /**
@@ -45,11 +45,11 @@ public class Overlay extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Overlay(java.lang.String name, @Nullable OverlayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:overlay:Overlay", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("example:overlay:Overlay", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Overlay(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example:overlay:Overlay", name, null, makeResourceOptions(options, id));
+        super("example:overlay:Overlay", name, null, makeResourceOptions(options, id), false);
     }
 
     private static OverlayArgs makeArgs(@Nullable OverlayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

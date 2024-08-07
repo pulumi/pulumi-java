@@ -47,7 +47,7 @@ public class BotmanBotCategoryException extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanBotCategoryException(String name, BotmanBotCategoryExceptionArgs args) {
+    public BotmanBotCategoryException(java.lang.String name, BotmanBotCategoryExceptionArgs args) {
         this(name, args, null);
     }
     /**
@@ -57,11 +57,11 @@ public class BotmanBotCategoryException extends com.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanBotCategoryException(java.lang.String name, BotmanBotCategoryExceptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanBotCategoryException:BotmanBotCategoryException", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanBotCategoryException:BotmanBotCategoryException", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BotmanBotCategoryException(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanBotCategoryExceptionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanBotCategoryException:BotmanBotCategoryException", name, state, makeResourceOptions(options, id));
+        super("akamai:index/botmanBotCategoryException:BotmanBotCategoryException", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BotmanBotCategoryExceptionArgs makeArgs(BotmanBotCategoryExceptionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

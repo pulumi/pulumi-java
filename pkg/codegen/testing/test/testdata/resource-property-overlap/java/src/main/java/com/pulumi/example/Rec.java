@@ -33,7 +33,7 @@ public class Rec extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Rec(String name, @Nullable RecArgs args) {
+    public Rec(java.lang.String name, @Nullable RecArgs args) {
         this(name, args, null);
     }
     /**
@@ -43,11 +43,11 @@ public class Rec extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Rec(java.lang.String name, @Nullable RecArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Rec", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("example::Rec", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private Rec(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Rec", name, null, makeResourceOptions(options, id));
+        super("example::Rec", name, null, makeResourceOptions(options, id), false);
     }
 
     private static RecArgs makeArgs(@Nullable RecArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -41,7 +41,7 @@ public class BotmanTransactionalEndpointProtection extends com.pulumi.resources.
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanTransactionalEndpointProtection(String name, BotmanTransactionalEndpointProtectionArgs args) {
+    public BotmanTransactionalEndpointProtection(java.lang.String name, BotmanTransactionalEndpointProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -51,11 +51,11 @@ public class BotmanTransactionalEndpointProtection extends com.pulumi.resources.
      * @param options A bag of options that control this resource's behavior.
      */
     public BotmanTransactionalEndpointProtection(java.lang.String name, BotmanTransactionalEndpointProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanTransactionalEndpointProtection:BotmanTransactionalEndpointProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/botmanTransactionalEndpointProtection:BotmanTransactionalEndpointProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private BotmanTransactionalEndpointProtection(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanTransactionalEndpointProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanTransactionalEndpointProtection:BotmanTransactionalEndpointProtection", name, state, makeResourceOptions(options, id));
+        super("akamai:index/botmanTransactionalEndpointProtection:BotmanTransactionalEndpointProtection", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BotmanTransactionalEndpointProtectionArgs makeArgs(BotmanTransactionalEndpointProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

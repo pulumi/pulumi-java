@@ -65,7 +65,7 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CloudwrapperActivation(String name, CloudwrapperActivationArgs args) {
+    public CloudwrapperActivation(java.lang.String name, CloudwrapperActivationArgs args) {
         this(name, args, null);
     }
     /**
@@ -75,11 +75,11 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudwrapperActivation(java.lang.String name, CloudwrapperActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private CloudwrapperActivation(java.lang.String name, Output<java.lang.String> id, @Nullable CloudwrapperActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, state, makeResourceOptions(options, id));
+        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CloudwrapperActivationArgs makeArgs(CloudwrapperActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -238,7 +238,7 @@ public class GtmDomain extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public GtmDomain(String name, GtmDomainArgs args) {
+    public GtmDomain(java.lang.String name, GtmDomainArgs args) {
         this(name, args, null);
     }
     /**
@@ -248,11 +248,11 @@ public class GtmDomain extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GtmDomain(java.lang.String name, GtmDomainArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmDomain:GtmDomain", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/gtmDomain:GtmDomain", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private GtmDomain(java.lang.String name, Output<java.lang.String> id, @Nullable GtmDomainState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmDomain:GtmDomain", name, state, makeResourceOptions(options, id));
+        super("akamai:index/gtmDomain:GtmDomain", name, state, makeResourceOptions(options, id), false);
     }
 
     private static GtmDomainArgs makeArgs(GtmDomainArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

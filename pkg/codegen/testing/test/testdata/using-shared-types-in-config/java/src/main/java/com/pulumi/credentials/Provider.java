@@ -57,7 +57,7 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Provider(String name, ProviderArgs args) {
+    public Provider(java.lang.String name, ProviderArgs args) {
         this(name, args, null);
     }
     /**
@@ -67,7 +67,7 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Provider(java.lang.String name, ProviderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("credentials", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("credentials", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private static ProviderArgs makeArgs(ProviderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

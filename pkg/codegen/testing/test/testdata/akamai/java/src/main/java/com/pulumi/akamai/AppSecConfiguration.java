@@ -143,7 +143,7 @@ public class AppSecConfiguration extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecConfiguration(String name, AppSecConfigurationArgs args) {
+    public AppSecConfiguration(java.lang.String name, AppSecConfigurationArgs args) {
         this(name, args, null);
     }
     /**
@@ -153,11 +153,11 @@ public class AppSecConfiguration extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecConfiguration(java.lang.String name, AppSecConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecConfiguration:AppSecConfiguration", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecConfiguration:AppSecConfiguration", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecConfiguration(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecConfigurationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecConfiguration:AppSecConfiguration", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecConfiguration:AppSecConfiguration", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecConfigurationArgs makeArgs(AppSecConfigurationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -34,7 +34,7 @@ public class WorldMap extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WorldMap(String name, @Nullable WorldMapArgs args) {
+    public WorldMap(java.lang.String name, @Nullable WorldMapArgs args) {
         this(name, args, null);
     }
     /**
@@ -44,11 +44,11 @@ public class WorldMap extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorldMap(java.lang.String name, @Nullable WorldMapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("world::WorldMap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("world::WorldMap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private WorldMap(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("world::WorldMap", name, null, makeResourceOptions(options, id));
+        super("world::WorldMap", name, null, makeResourceOptions(options, id), false);
     }
 
     private static WorldMapArgs makeArgs(@Nullable WorldMapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

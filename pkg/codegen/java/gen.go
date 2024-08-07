@@ -5,6 +5,7 @@ package java
 
 import (
 	"bytes"
+	"encoding/base64"
 	"fmt"
 	"path"
 	"reflect"
@@ -1070,14 +1071,32 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
 	fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
 	fprintf(w, "     */\n")
-	fprintf(w, "    public %s(String name, %s args) {\n", className, argsType)
+	fprintf(w, "    public %s(java.lang.String name, %s args) {\n", className, argsType)
 	fprintf(w, "        this(name, args, null);\n")
 	fprintf(w, "    }\n")
 
 	// Constructor
-	isComponent := ""
+	remoteOrDependency := ""
 	if r.IsComponent {
-		isComponent = ", true"
+		// Component resources in SDKs will be remote, so we pass `true` to the parent (ComponentResource) for the
+		// `remote` argument.
+		remoteOrDependency = ", true"
+	} else {
+		// In order to supply the optional package reference argument, we need to supply a value for the `dependency`
+		// parameter, which is true if and only if the resource is a synthetic one for dependency tracking. This is not
+		// the case for the resources we are generating, so we can pass `false` to enable us to hit the overload we
+		// want.
+		remoteOrDependency = ", false"
+	}
+
+	pkg, err := mod.pkg.Definition()
+	if err != nil {
+		return err
+	}
+
+	param := ""
+	if pkg.Parameterization != nil {
+		param = fmt.Sprintf(", %s.getPackageRef()", mod.utilitiesRef(ctx))
 	}
 	fprintf(w, "    /**\n")
 	fprintf(w, "     *\n")
@@ -1088,8 +1107,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	fprintf(w, "    public %s(java.lang.String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
-	fprintf(w, "        super(\"%s\", name, makeArgs(args, options), makeResourceOptions(options, %s.empty())%s);\n",
-		tok, ctx.imports.Ref(names.Codegen), isComponent)
+	fprintf(w, "        super(\"%s\", name, makeArgs(args, options), makeResourceOptions(options, %s.empty())%s%s);\n",
+		tok, ctx.imports.Ref(names.Codegen), remoteOrDependency, param)
+
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
@@ -1102,7 +1122,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "\n")
 		fprintf(w, "    private %s(java.lang.String name, %s<java.lang.String> id, %s@%s %s options) {\n",
 			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
-		fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id));\n", tok, stateRef)
+		fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id)%s%s);\n",
+			tok, stateRef, remoteOrDependency, param)
 		fprintf(w, "    }\n")
 	}
 
@@ -1376,8 +1397,19 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+
+		pkg, err := mod.pkg.Definition()
+		if err != nil {
+			return err
+		}
+
+		if pkg.Parameterization != nil {
+			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
+		}
+
+		fprintf(w, ");\n")
 		fprintf(w, "    }\n")
 
 		// CompletableFuture version: add full invoke
@@ -1386,8 +1418,14 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+
+		if pkg.Parameterization != nil {
+			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
+		}
+
+		fprintf(w, ");\n")
 		fprintf(w, "    }\n")
 
 		// Emit the args and result types, if any.
@@ -1780,15 +1818,57 @@ func (mod *modContext) gen(fs fs) error {
 	switch mod.mod {
 	case "":
 		if err := addClass(mod.rootPackage(), names.Ident("Utilities"), func(ctx *classFileContext) error {
-			pkgName, err := parsePackageName(packageName(mod.packages, mod.pkg.Name()))
+			pkg, err := mod.pkg.Definition()
 			if err != nil {
 				return err
 			}
+
+			var additionalImports, packageReferenceUtilities string
+			if pkg.Parameterization != nil {
+				additionalImports = `
+import java.util.concurrent.CompletableFuture;
+import com.pulumi.deployment.Deployment;
+
+`
+
+				packageReferenceUtilities = fmt.Sprintf(`
+
+	private static final CompletableFuture<java.lang.String> packageRef;
+	public static CompletableFuture<java.lang.String> getPackageRef() {
+		return packageRef;
+	}
+
+	static {
+		packageRef = Deployment.getInstance().registerPackage(
+			// Base provider name
+			"%s",
+			// Base provider version
+			"%s",
+			// Base provider download URL
+			"%s",
+			// Package name
+			"%s",
+			// Package version
+			getVersion(),
+			// Parameter
+			"%s"
+		);
+	}
+`,
+					pkg.Parameterization.BaseProvider.Name,
+					pkg.Parameterization.BaseProvider.Version,
+					pkg.Parameterization.BaseProvider.PluginDownloadURL,
+					pkg.Name,
+					base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
+				)
+			}
+
 			return javaUtilitiesTemplate.Execute(ctx.writer, javaUtilitiesTemplateContext{
-				Name:        pkgName.String(),
-				VersionPath: strings.ReplaceAll(ensureEndsWithDot(mod.basePackageName)+mod.pkg.Name(), ".", "/"),
-				ClassName:   "Utilities",
-				Tool:        mod.tool,
+				VersionPath:               strings.ReplaceAll(ensureEndsWithDot(mod.basePackageName)+mod.pkg.Name(), ".", "/"),
+				ClassName:                 "Utilities",
+				Tool:                      mod.tool,
+				AdditionalImports:         additionalImports,
+				PackageReferenceUtilities: packageReferenceUtilities,
 			})
 		}); err != nil {
 			return err

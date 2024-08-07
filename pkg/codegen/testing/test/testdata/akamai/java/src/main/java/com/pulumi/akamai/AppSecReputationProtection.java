@@ -86,7 +86,7 @@ public class AppSecReputationProtection extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecReputationProtection(String name, AppSecReputationProtectionArgs args) {
+    public AppSecReputationProtection(java.lang.String name, AppSecReputationProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,11 +96,11 @@ public class AppSecReputationProtection extends com.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecReputationProtection(java.lang.String name, AppSecReputationProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProtection:AppSecReputationProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecReputationProtection:AppSecReputationProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecReputationProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecReputationProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProtection:AppSecReputationProtection", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecReputationProtection:AppSecReputationProtection", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecReputationProtectionArgs makeArgs(AppSecReputationProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

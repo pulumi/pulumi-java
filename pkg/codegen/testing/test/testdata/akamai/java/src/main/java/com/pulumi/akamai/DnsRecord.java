@@ -399,7 +399,7 @@ public class DnsRecord extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DnsRecord(String name, DnsRecordArgs args) {
+    public DnsRecord(java.lang.String name, DnsRecordArgs args) {
         this(name, args, null);
     }
     /**
@@ -409,11 +409,11 @@ public class DnsRecord extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DnsRecord(java.lang.String name, DnsRecordArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/dnsRecord:DnsRecord", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/dnsRecord:DnsRecord", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private DnsRecord(java.lang.String name, Output<java.lang.String> id, @Nullable DnsRecordState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/dnsRecord:DnsRecord", name, state, makeResourceOptions(options, id));
+        super("akamai:index/dnsRecord:DnsRecord", name, state, makeResourceOptions(options, id), false);
     }
 
     private static DnsRecordArgs makeArgs(DnsRecordArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

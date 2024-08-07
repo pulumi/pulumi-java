@@ -48,7 +48,7 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WebAppRelayServiceConnection(String name, @Nullable WebAppRelayServiceConnectionArgs args) {
+    public WebAppRelayServiceConnection(java.lang.String name, @Nullable WebAppRelayServiceConnectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -58,11 +58,11 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppRelayServiceConnection(java.lang.String name, @Nullable WebAppRelayServiceConnectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppRelayServiceConnection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("azure-native:web:WebAppRelayServiceConnection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private WebAppRelayServiceConnection(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppRelayServiceConnection", name, null, makeResourceOptions(options, id));
+        super("azure-native:web:WebAppRelayServiceConnection", name, null, makeResourceOptions(options, id), false);
     }
 
     private static WebAppRelayServiceConnectionArgs makeArgs(@Nullable WebAppRelayServiceConnectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {

@@ -71,7 +71,7 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecVersionNodes(String name, AppSecVersionNodesArgs args) {
+    public AppSecVersionNodes(java.lang.String name, AppSecVersionNodesArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,11 +81,11 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppSecVersionNodes(java.lang.String name, AppSecVersionNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecVersionNodes:AppSecVersionNodes", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+        super("akamai:index/appSecVersionNodes:AppSecVersionNodes", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
     private AppSecVersionNodes(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecVersionNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecVersionNodes:AppSecVersionNodes", name, state, makeResourceOptions(options, id));
+        super("akamai:index/appSecVersionNodes:AppSecVersionNodes", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AppSecVersionNodesArgs makeArgs(AppSecVersionNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
