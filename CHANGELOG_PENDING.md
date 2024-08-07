@@ -8,3 +8,5 @@
 - Bugfix: Fully qualify `java.lang` types in codegen.
 
 - Add support for parameterized providers.
+
+- Add support for local SDK generation.
