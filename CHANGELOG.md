@@ -1,6 +1,18 @@
 CHANGELOG
 =========
 
+## 0.14.0 (2024-08-08)
+
+### Improvements
+
+- Add support for parameterized providers
+- Add support for local SDK generation
+
+### Bug fixes
+
+- Correctly escape special characters in generated Javadocs
+- Fully qualify `java.lang` types in codegen
+
 ## 0.13.0 (2024-07-29)
 
 ### Improvements
@@ -65,7 +77,7 @@ CHANGELOG
 
 ### Improvements
 
- - [sdk] Bumps com.google.guava:guava from 31.1-jre to 32.1.2-jre. 
+ - [sdk] Bumps com.google.guava:guava from 31.1-jre to 32.1.2-jre.
    [#1188](https://github.com/pulumi/pulumi-java/pull/1188)
 
 
@@ -113,7 +125,7 @@ CHANGELOG
 ### Improvements
 
   - [java/sdk] Delegate alias computation to the engine. [#966](https://github.com/pulumi/pulumi-java/pull/966)
- 
+
 ### Bug Fixes
 
   - [codegen] Generate build.gradle files compatible with Gradle 8.0.
