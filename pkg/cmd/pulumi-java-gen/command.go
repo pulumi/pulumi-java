@@ -77,6 +77,7 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 
 	var versionArg, javaSdkVersionArg, schemaArg, outArg, overrideArg, buildArg string
 	var overlays []string
+	var local bool
 
 	cmd.Flags().StringVar(&versionArg, "version", "",
 		"default semantic version for the generated package")
@@ -106,6 +107,9 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 	cmd.Flags().StringArrayVar(&overlays, "overlay", nil,
 		"path(s) to folders to mix into the generated code by copying")
 
+	cmd.Flags().BoolVar(&local, "local", false,
+		"generate an SDK suitable for local consumption")
+
 	cmd.Run = cmdutil.RunFunc(func(_ *cobra.Command, _ []string) error {
 		rootDir, err := os.Getwd()
 		if err != nil {
@@ -127,6 +131,7 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 			RootDir:   rootDir,
 			OutputDir: outArg,
 			Overlays:  overlays,
+			Local:     local,
 		}
 
 		if overrideArg != "" {

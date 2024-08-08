@@ -2196,7 +2196,12 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 	return resources, nil
 }
 
-func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
+func GeneratePackage(
+	tool string,
+	pkg *schema.Package,
+	extraFiles map[string][]byte,
+	local bool,
+) (map[string][]byte, error) {
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err
@@ -2214,14 +2219,33 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
-	// Finally, emit the build files if requested.
+	// Currently, packages come bundled with a version.txt resource that is used by generated code to report a version.
+	// When a build tool is configured, we defer the generation of this file to the build process so that e.g. CI
+	// processes can set the version to be used when releasing or publishing a package, as opposed to when the code for
+	// that package is generated. In the case that we are generating a package without a build tool, or a local package
+	// to be incorporated into a program with an existing build process, we need to emit the version.txt file explicitly
+	// as part of code generation.
+	if info.BuildFiles == "" || local {
+		pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
+		pkgPath := strings.ReplaceAll(pkgName, ".", "/")
+
+		var version string
+		if pkg.Version != nil {
+			version = pkg.Version.String()
+		} else {
+			version = "0.0.1"
+		}
+
+		files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
+		return files, nil
+	}
+
+	// If we are emitting a publishable package with a configured build system, emit those files now.
 	switch info.BuildFiles {
 	case "gradle":
 		if err := genGradleProject(pkg, info, files); err != nil {
 			return nil, err
 		}
-		return files, nil
-	case "":
 		return files, nil
 	default:
 		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",

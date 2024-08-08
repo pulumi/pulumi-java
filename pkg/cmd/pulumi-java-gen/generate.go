@@ -42,6 +42,9 @@ type generateJavaOptions struct {
 
 	// Optional version to set on the package.
 	Version *semver.Version
+
+	// True if the generator should generate an SDK suitable for local consumption as opposed to a publishable package.
+	Local bool
 }
 
 func generateJava(cfg generateJavaOptions) error {
@@ -77,7 +80,7 @@ func generateJava(cfg generateJavaOptions) error {
 	if err != nil {
 		return err
 	}
-	files, err := javagen.GeneratePackage("pulumi-java-gen", pkg, extraFiles)
+	files, err := javagen.GeneratePackage("pulumi-java-gen", pkg, extraFiles, cfg.Local)
 	if err != nil {
 		return err
 	}
