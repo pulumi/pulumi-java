@@ -96,10 +96,12 @@ func TestFormatForeignComments(t *testing.T) {
 - @Foo @ bar
 - Foo @ bar
 - Foo bar @@
+- Foo @<this> works?
 `,
 			expected: autogold.Expect(` * - {@literal @}Foo {@literal @} bar
  * - Foo {@literal @} bar
  * - Foo bar {@literal @@}
+ * - Foo {@literal @}&lt;this&gt; works?
  * `),
 		},
 		{

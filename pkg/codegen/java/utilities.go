@@ -148,7 +148,7 @@ func (w *plainJavadocWriter) WriteRune(r rune) {
 			w.b.WriteRune('@')
 		} else {
 			w.b.WriteRune('}')
-			w.b.WriteRune(r)
+			w.b.WriteString(html.EscapeString(string(r)))
 			w.state = plainJavadocText
 		}
 	}
