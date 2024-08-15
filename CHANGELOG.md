@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 0.15.0 (2024-08-15)
+
+### Bug fixes
+
+- Fix HTML escaping after `{@literal ...}` blocks in Javadocs
+
 ## 0.14.0 (2024-08-08)
 
 ### Improvements
