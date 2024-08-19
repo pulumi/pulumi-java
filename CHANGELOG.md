@@ -1,11 +1,34 @@
 CHANGELOG
 =========
 
-## Unreleased
+## 0.15.0 (2024-08-15)
+
+### Bug fixes
+
+- Fix HTML escaping after `{@literal ...}` blocks in Javadocs
+
+## 0.14.0 (2024-08-08)
 
 ### Improvements
 
-- Update pulumi/pulumi to v3.120.0.
+- Add support for parameterized providers
+- Add support for local SDK generation
+
+### Bug fixes
+
+- Correctly escape special characters in generated Javadocs
+- Fully qualify `java.lang` types in codegen
+
+## 0.13.0 (2024-07-29)
+
+### Improvements
+
+- Codegen: pluginDownloadURL is now supported through the automatically generated build.gradle
+- Update pulumi/pulumi to v3.121.0
+
+### Bug Fixes
+
+- Unable to rehydrate a resource that has required inputs
 
 ## 0.12.0 (2024-05-24)
 
@@ -60,7 +83,7 @@ CHANGELOG
 
 ### Improvements
 
- - [sdk] Bumps com.google.guava:guava from 31.1-jre to 32.1.2-jre. 
+ - [sdk] Bumps com.google.guava:guava from 31.1-jre to 32.1.2-jre.
    [#1188](https://github.com/pulumi/pulumi-java/pull/1188)
 
 
@@ -108,7 +131,7 @@ CHANGELOG
 ### Improvements
 
   - [java/sdk] Delegate alias computation to the engine. [#966](https://github.com/pulumi/pulumi-java/pull/966)
- 
+
 ### Bug Fixes
 
   - [codegen] Generate build.gradle files compatible with Gradle 8.0.

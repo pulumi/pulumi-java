@@ -441,6 +441,12 @@ func (host *javaLanguageHost) GetProgramDependencies(
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 
+func (host *javaLanguageHost) RuntimeOptionsPrompts(_ context.Context,
+	_ *pulumirpc.RuntimeOptionsRequest,
+) (*pulumirpc.RuntimeOptionsResponse, error) {
+	return &pulumirpc.RuntimeOptionsResponse{}, nil
+}
+
 func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest) (*pulumirpc.AboutResponse, error) {
 	getResponse := func(execString string, args ...string) (string, string, error) {
 		ex, err := executable.FindExecutable(execString)

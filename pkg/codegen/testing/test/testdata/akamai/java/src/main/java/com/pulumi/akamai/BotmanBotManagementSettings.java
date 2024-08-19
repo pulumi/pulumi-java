@@ -39,7 +39,7 @@ public class BotmanBotManagementSettings extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanBotManagementSettings(String name) {
+    public BotmanBotManagementSettings(java.lang.String name) {
         this(name, BotmanBotManagementSettingsArgs.Empty);
     }
     /**
@@ -47,7 +47,7 @@ public class BotmanBotManagementSettings extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanBotManagementSettings(String name, BotmanBotManagementSettingsArgs args) {
+    public BotmanBotManagementSettings(java.lang.String name, BotmanBotManagementSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -56,15 +56,22 @@ public class BotmanBotManagementSettings extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanBotManagementSettings(String name, BotmanBotManagementSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanBotManagementSettings:BotmanBotManagementSettings", name, args == null ? BotmanBotManagementSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public BotmanBotManagementSettings(java.lang.String name, BotmanBotManagementSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/botmanBotManagementSettings:BotmanBotManagementSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private BotmanBotManagementSettings(String name, Output<String> id, @Nullable BotmanBotManagementSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanBotManagementSettings:BotmanBotManagementSettings", name, state, makeResourceOptions(options, id));
+    private BotmanBotManagementSettings(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanBotManagementSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/botmanBotManagementSettings:BotmanBotManagementSettings", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static BotmanBotManagementSettingsArgs makeArgs(BotmanBotManagementSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanBotManagementSettingsArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -80,7 +87,7 @@ public class BotmanBotManagementSettings extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanBotManagementSettings get(String name, Output<String> id, @Nullable BotmanBotManagementSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanBotManagementSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanBotManagementSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanBotManagementSettings(name, id, state, options);
     }
 }

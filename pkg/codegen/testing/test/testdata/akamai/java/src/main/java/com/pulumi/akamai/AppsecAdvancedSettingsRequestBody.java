@@ -64,7 +64,7 @@ public class AppsecAdvancedSettingsRequestBody extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppsecAdvancedSettingsRequestBody(String name) {
+    public AppsecAdvancedSettingsRequestBody(java.lang.String name) {
         this(name, AppsecAdvancedSettingsRequestBodyArgs.Empty);
     }
     /**
@@ -72,7 +72,7 @@ public class AppsecAdvancedSettingsRequestBody extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppsecAdvancedSettingsRequestBody(String name, AppsecAdvancedSettingsRequestBodyArgs args) {
+    public AppsecAdvancedSettingsRequestBody(java.lang.String name, AppsecAdvancedSettingsRequestBodyArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,15 +81,22 @@ public class AppsecAdvancedSettingsRequestBody extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppsecAdvancedSettingsRequestBody(String name, AppsecAdvancedSettingsRequestBodyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsRequestBody:AppsecAdvancedSettingsRequestBody", name, args == null ? AppsecAdvancedSettingsRequestBodyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppsecAdvancedSettingsRequestBody(java.lang.String name, AppsecAdvancedSettingsRequestBodyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appsecAdvancedSettingsRequestBody:AppsecAdvancedSettingsRequestBody", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppsecAdvancedSettingsRequestBody(String name, Output<String> id, @Nullable AppsecAdvancedSettingsRequestBodyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsRequestBody:AppsecAdvancedSettingsRequestBody", name, state, makeResourceOptions(options, id));
+    private AppsecAdvancedSettingsRequestBody(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsRequestBodyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appsecAdvancedSettingsRequestBody:AppsecAdvancedSettingsRequestBody", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppsecAdvancedSettingsRequestBodyArgs makeArgs(AppsecAdvancedSettingsRequestBodyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppsecAdvancedSettingsRequestBodyArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -105,7 +112,7 @@ public class AppsecAdvancedSettingsRequestBody extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppsecAdvancedSettingsRequestBody get(String name, Output<String> id, @Nullable AppsecAdvancedSettingsRequestBodyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppsecAdvancedSettingsRequestBody get(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsRequestBodyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppsecAdvancedSettingsRequestBody(name, id, state, options);
     }
 }

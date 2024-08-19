@@ -26,7 +26,7 @@ public class Pet extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Pet(String name) {
+    public Pet(java.lang.String name) {
         this(name, PetArgs.Empty);
     }
     /**
@@ -34,7 +34,7 @@ public class Pet extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Pet(String name, @Nullable PetArgs args) {
+    public Pet(java.lang.String name, @Nullable PetArgs args) {
         this(name, args, null);
     }
     /**
@@ -43,15 +43,22 @@ public class Pet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Pet(String name, @Nullable PetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Pet", name, args == null ? PetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Pet(java.lang.String name, @Nullable PetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("example::Pet", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Pet(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Pet", name, null, makeResourceOptions(options, id));
+    private Pet(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("example::Pet", name, null, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static PetArgs makeArgs(@Nullable PetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PetArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -66,7 +73,7 @@ public class Pet extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Pet get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Pet get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Pet(name, id, options);
     }
 }

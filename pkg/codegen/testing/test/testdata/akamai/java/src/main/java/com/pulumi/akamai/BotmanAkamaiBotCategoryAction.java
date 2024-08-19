@@ -45,7 +45,7 @@ public class BotmanAkamaiBotCategoryAction extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanAkamaiBotCategoryAction(String name) {
+    public BotmanAkamaiBotCategoryAction(java.lang.String name) {
         this(name, BotmanAkamaiBotCategoryActionArgs.Empty);
     }
     /**
@@ -53,7 +53,7 @@ public class BotmanAkamaiBotCategoryAction extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanAkamaiBotCategoryAction(String name, BotmanAkamaiBotCategoryActionArgs args) {
+    public BotmanAkamaiBotCategoryAction(java.lang.String name, BotmanAkamaiBotCategoryActionArgs args) {
         this(name, args, null);
     }
     /**
@@ -62,15 +62,22 @@ public class BotmanAkamaiBotCategoryAction extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanAkamaiBotCategoryAction(String name, BotmanAkamaiBotCategoryActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, args == null ? BotmanAkamaiBotCategoryActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public BotmanAkamaiBotCategoryAction(java.lang.String name, BotmanAkamaiBotCategoryActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private BotmanAkamaiBotCategoryAction(String name, Output<String> id, @Nullable BotmanAkamaiBotCategoryActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, state, makeResourceOptions(options, id));
+    private BotmanAkamaiBotCategoryAction(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanAkamaiBotCategoryActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/botmanAkamaiBotCategoryAction:BotmanAkamaiBotCategoryAction", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static BotmanAkamaiBotCategoryActionArgs makeArgs(BotmanAkamaiBotCategoryActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanAkamaiBotCategoryActionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -86,7 +93,7 @@ public class BotmanAkamaiBotCategoryAction extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanAkamaiBotCategoryAction get(String name, Output<String> id, @Nullable BotmanAkamaiBotCategoryActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanAkamaiBotCategoryAction get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanAkamaiBotCategoryActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanAkamaiBotCategoryAction(name, id, state, options);
     }
 }

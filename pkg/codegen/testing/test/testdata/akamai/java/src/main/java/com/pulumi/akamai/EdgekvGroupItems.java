@@ -77,7 +77,7 @@ public class EdgekvGroupItems extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public EdgekvGroupItems(String name) {
+    public EdgekvGroupItems(java.lang.String name) {
         this(name, EdgekvGroupItemsArgs.Empty);
     }
     /**
@@ -85,7 +85,7 @@ public class EdgekvGroupItems extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EdgekvGroupItems(String name, EdgekvGroupItemsArgs args) {
+    public EdgekvGroupItems(java.lang.String name, EdgekvGroupItemsArgs args) {
         this(name, args, null);
     }
     /**
@@ -94,15 +94,22 @@ public class EdgekvGroupItems extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EdgekvGroupItems(String name, EdgekvGroupItemsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgekvGroupItems:EdgekvGroupItems", name, args == null ? EdgekvGroupItemsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public EdgekvGroupItems(java.lang.String name, EdgekvGroupItemsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/edgekvGroupItems:EdgekvGroupItems", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private EdgekvGroupItems(String name, Output<String> id, @Nullable EdgekvGroupItemsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgekvGroupItems:EdgekvGroupItems", name, state, makeResourceOptions(options, id));
+    private EdgekvGroupItems(java.lang.String name, Output<java.lang.String> id, @Nullable EdgekvGroupItemsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/edgekvGroupItems:EdgekvGroupItems", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static EdgekvGroupItemsArgs makeArgs(EdgekvGroupItemsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? EdgekvGroupItemsArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -118,7 +125,7 @@ public class EdgekvGroupItems extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EdgekvGroupItems get(String name, Output<String> id, @Nullable EdgekvGroupItemsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EdgekvGroupItems get(java.lang.String name, Output<java.lang.String> id, @Nullable EdgekvGroupItemsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new EdgekvGroupItems(name, id, state, options);
     }
 }

@@ -46,7 +46,7 @@ public class CpCode extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CpCode(String name) {
+    public CpCode(java.lang.String name) {
         this(name, CpCodeArgs.Empty);
     }
     /**
@@ -54,7 +54,7 @@ public class CpCode extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CpCode(String name, CpCodeArgs args) {
+    public CpCode(java.lang.String name, CpCodeArgs args) {
         this(name, args, null);
     }
     /**
@@ -63,15 +63,22 @@ public class CpCode extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CpCode(String name, CpCodeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpCode:CpCode", name, args == null ? CpCodeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CpCode(java.lang.String name, CpCodeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/cpCode:CpCode", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CpCode(String name, Output<String> id, @Nullable CpCodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cpCode:CpCode", name, state, makeResourceOptions(options, id));
+    private CpCode(java.lang.String name, Output<java.lang.String> id, @Nullable CpCodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/cpCode:CpCode", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CpCodeArgs makeArgs(CpCodeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CpCodeArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -90,7 +97,7 @@ public class CpCode extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CpCode get(String name, Output<String> id, @Nullable CpCodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CpCode get(java.lang.String name, Output<java.lang.String> id, @Nullable CpCodeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CpCode(name, id, state, options);
     }
 }

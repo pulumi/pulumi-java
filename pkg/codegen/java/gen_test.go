@@ -77,6 +77,10 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 				"org.mockito:mockito-core",
 			),
 		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "parameterized",
+			Description: "Tests for parameterized providers",
+		}),
 	}
 }
 
@@ -180,6 +184,12 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // python-only
 	case "array-of-enum-map":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "python-typed-dict-setuppy":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "python-typed-dict-pyproject":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
+	case "overlay-supported-languages":
+		t.Skip = codegen.NewStringSet("java/any") // docs-only
 	}
 
 	if hasExtras {
@@ -213,7 +223,7 @@ func TestGeneratePackage(t *testing.T) {
 				pkg.Language = map[string]interface{}{
 					"java": testCase.packageInfo,
 				}
-				return GeneratePackage(tool, pkg, extraFiles)
+				return GeneratePackage(tool, pkg, extraFiles, false)
 			},
 			Language:  "java",
 			TestCases: []*test.SDKTest{testCase.sdkTest},

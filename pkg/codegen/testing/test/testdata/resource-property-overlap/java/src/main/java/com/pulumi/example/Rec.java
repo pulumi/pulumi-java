@@ -25,7 +25,7 @@ public class Rec extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Rec(String name) {
+    public Rec(java.lang.String name) {
         this(name, RecArgs.Empty);
     }
     /**
@@ -33,7 +33,7 @@ public class Rec extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Rec(String name, @Nullable RecArgs args) {
+    public Rec(java.lang.String name, @Nullable RecArgs args) {
         this(name, args, null);
     }
     /**
@@ -42,15 +42,22 @@ public class Rec extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Rec(String name, @Nullable RecArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Rec", name, args == null ? RecArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Rec(java.lang.String name, @Nullable RecArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("example::Rec", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Rec(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("example::Rec", name, null, makeResourceOptions(options, id));
+    private Rec(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("example::Rec", name, null, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static RecArgs makeArgs(@Nullable RecArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? RecArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -65,7 +72,7 @@ public class Rec extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Rec get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Rec get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Rec(name, id, options);
     }
 }

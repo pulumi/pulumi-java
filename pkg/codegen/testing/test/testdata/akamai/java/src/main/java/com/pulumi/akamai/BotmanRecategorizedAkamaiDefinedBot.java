@@ -39,7 +39,7 @@ public class BotmanRecategorizedAkamaiDefinedBot extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BotmanRecategorizedAkamaiDefinedBot(String name) {
+    public BotmanRecategorizedAkamaiDefinedBot(java.lang.String name) {
         this(name, BotmanRecategorizedAkamaiDefinedBotArgs.Empty);
     }
     /**
@@ -47,7 +47,7 @@ public class BotmanRecategorizedAkamaiDefinedBot extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BotmanRecategorizedAkamaiDefinedBot(String name, BotmanRecategorizedAkamaiDefinedBotArgs args) {
+    public BotmanRecategorizedAkamaiDefinedBot(java.lang.String name, BotmanRecategorizedAkamaiDefinedBotArgs args) {
         this(name, args, null);
     }
     /**
@@ -56,15 +56,22 @@ public class BotmanRecategorizedAkamaiDefinedBot extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BotmanRecategorizedAkamaiDefinedBot(String name, BotmanRecategorizedAkamaiDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, args == null ? BotmanRecategorizedAkamaiDefinedBotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public BotmanRecategorizedAkamaiDefinedBot(java.lang.String name, BotmanRecategorizedAkamaiDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private BotmanRecategorizedAkamaiDefinedBot(String name, Output<String> id, @Nullable BotmanRecategorizedAkamaiDefinedBotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, state, makeResourceOptions(options, id));
+    private BotmanRecategorizedAkamaiDefinedBot(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanRecategorizedAkamaiDefinedBotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/botmanRecategorizedAkamaiDefinedBot:BotmanRecategorizedAkamaiDefinedBot", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static BotmanRecategorizedAkamaiDefinedBotArgs makeArgs(BotmanRecategorizedAkamaiDefinedBotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BotmanRecategorizedAkamaiDefinedBotArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -80,7 +87,7 @@ public class BotmanRecategorizedAkamaiDefinedBot extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotmanRecategorizedAkamaiDefinedBot get(String name, Output<String> id, @Nullable BotmanRecategorizedAkamaiDefinedBotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BotmanRecategorizedAkamaiDefinedBot get(java.lang.String name, Output<java.lang.String> id, @Nullable BotmanRecategorizedAkamaiDefinedBotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BotmanRecategorizedAkamaiDefinedBot(name, id, state, options);
     }
 }

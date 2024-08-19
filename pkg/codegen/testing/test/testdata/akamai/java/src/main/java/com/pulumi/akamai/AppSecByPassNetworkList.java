@@ -64,7 +64,7 @@ public class AppSecByPassNetworkList extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecByPassNetworkList(String name) {
+    public AppSecByPassNetworkList(java.lang.String name) {
         this(name, AppSecByPassNetworkListArgs.Empty);
     }
     /**
@@ -72,7 +72,7 @@ public class AppSecByPassNetworkList extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecByPassNetworkList(String name, AppSecByPassNetworkListArgs args) {
+    public AppSecByPassNetworkList(java.lang.String name, AppSecByPassNetworkListArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,15 +81,22 @@ public class AppSecByPassNetworkList extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecByPassNetworkList(String name, AppSecByPassNetworkListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecByPassNetworkList:AppSecByPassNetworkList", name, args == null ? AppSecByPassNetworkListArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecByPassNetworkList(java.lang.String name, AppSecByPassNetworkListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecByPassNetworkList:AppSecByPassNetworkList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecByPassNetworkList(String name, Output<String> id, @Nullable AppSecByPassNetworkListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecByPassNetworkList:AppSecByPassNetworkList", name, state, makeResourceOptions(options, id));
+    private AppSecByPassNetworkList(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecByPassNetworkListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecByPassNetworkList:AppSecByPassNetworkList", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecByPassNetworkListArgs makeArgs(AppSecByPassNetworkListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecByPassNetworkListArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -105,7 +112,7 @@ public class AppSecByPassNetworkList extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecByPassNetworkList get(String name, Output<String> id, @Nullable AppSecByPassNetworkListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecByPassNetworkList get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecByPassNetworkListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecByPassNetworkList(name, id, state, options);
     }
 }

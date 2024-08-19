@@ -111,7 +111,7 @@ public class ImagingPolicyVideo extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ImagingPolicyVideo(String name) {
+    public ImagingPolicyVideo(java.lang.String name) {
         this(name, ImagingPolicyVideoArgs.Empty);
     }
     /**
@@ -119,7 +119,7 @@ public class ImagingPolicyVideo extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ImagingPolicyVideo(String name, ImagingPolicyVideoArgs args) {
+    public ImagingPolicyVideo(java.lang.String name, ImagingPolicyVideoArgs args) {
         this(name, args, null);
     }
     /**
@@ -128,15 +128,22 @@ public class ImagingPolicyVideo extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ImagingPolicyVideo(String name, ImagingPolicyVideoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, args == null ? ImagingPolicyVideoArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ImagingPolicyVideo(java.lang.String name, ImagingPolicyVideoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ImagingPolicyVideo(String name, Output<String> id, @Nullable ImagingPolicyVideoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, state, makeResourceOptions(options, id));
+    private ImagingPolicyVideo(java.lang.String name, Output<java.lang.String> id, @Nullable ImagingPolicyVideoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/imagingPolicyVideo:ImagingPolicyVideo", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ImagingPolicyVideoArgs makeArgs(ImagingPolicyVideoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ImagingPolicyVideoArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +159,7 @@ public class ImagingPolicyVideo extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ImagingPolicyVideo get(String name, Output<String> id, @Nullable ImagingPolicyVideoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ImagingPolicyVideo get(java.lang.String name, Output<java.lang.String> id, @Nullable ImagingPolicyVideoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ImagingPolicyVideo(name, id, state, options);
     }
 }

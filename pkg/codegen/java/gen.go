@@ -5,6 +5,7 @@ package java
 
 import (
 	"bytes"
+	"encoding/base64"
 	"fmt"
 	"path"
 	"reflect"
@@ -1054,17 +1055,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		tok = mod.pkg.Name()
 	}
 
-	argsOverride := fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
-	if hasConstInputs {
-		argsOverride = "makeArgs(args)"
-	}
-
 	// Name only constructor
 	fprintf(w, "    /**\n")
 	fprintf(w, "     *\n")
 	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
 	fprintf(w, "     */\n")
-	fprintf(w, "    public %s(String name) {\n", className)
+	fprintf(w, "    public %s(java.lang.String name) {\n", className)
 	fprintf(w, "        this(name, %s.Empty);\n", ctx.ref(argsFQN))
 	fprintf(w, "    }\n")
 
@@ -1075,14 +1071,32 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
 	fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
 	fprintf(w, "     */\n")
-	fprintf(w, "    public %s(String name, %s args) {\n", className, argsType)
+	fprintf(w, "    public %s(java.lang.String name, %s args) {\n", className, argsType)
 	fprintf(w, "        this(name, args, null);\n")
 	fprintf(w, "    }\n")
 
 	// Constructor
-	isComponent := ""
+	remoteOrDependency := ""
 	if r.IsComponent {
-		isComponent = ", true"
+		// Component resources in SDKs will be remote, so we pass `true` to the parent (ComponentResource) for the
+		// `remote` argument.
+		remoteOrDependency = ", true"
+	} else {
+		// In order to supply the optional package reference argument, we need to supply a value for the `dependency`
+		// parameter, which is true if and only if the resource is a synthetic one for dependency tracking. This is not
+		// the case for the resources we are generating, so we can pass `false` to enable us to hit the overload we
+		// want.
+		remoteOrDependency = ", false"
+	}
+
+	pkg, err := mod.pkg.Definition()
+	if err != nil {
+		return err
+	}
+
+	param := ""
+	if pkg.Parameterization != nil {
+		param = fmt.Sprintf(", %s.getPackageRef()", mod.utilitiesRef(ctx))
 	}
 	fprintf(w, "    /**\n")
 	fprintf(w, "     *\n")
@@ -1091,10 +1105,11 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     * @param options A bag of options that control this resource's behavior.\n")
 	fprintf(w, "     */\n")
 
-	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
+	fprintf(w, "    public %s(java.lang.String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
-	fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty())%s);\n",
-		tok, argsOverride, ctx.imports.Ref(names.Codegen), isComponent)
+	fprintf(w, "        super(\"%s\", name, makeArgs(args, options), makeResourceOptions(options, %s.empty())%s%s);\n",
+		tok, ctx.imports.Ref(names.Codegen), remoteOrDependency, param)
+
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
@@ -1105,16 +1120,24 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		}
 
 		fprintf(w, "\n")
-		fprintf(w, "    private %s(String name, %s<String> id, %s@%s %s options) {\n",
+		fprintf(w, "    private %s(java.lang.String name, %s<java.lang.String> id, %s@%s %s options) {\n",
 			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
-		fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id));\n", tok, stateRef)
+		fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id)%s%s);\n",
+			tok, stateRef, remoteOrDependency, param)
 		fprintf(w, "    }\n")
 	}
 
+	// Write the method that will calculate the resource arguments.
+	fprintf(w, "\n")
+	fprintf(w, "    private static %s makeArgs(%s args, @%s %s options) {\n",
+		ctx.ref(argsFQN), argsType, ctx.ref(names.Nullable), optionsType)
+	fprintf(w,
+		"        if (options != null && options.getUrn().isPresent()) {\n")
+	fprintf(w,
+		"            return null;\n")
+	fprintf(w,
+		"        }\n")
 	if hasConstInputs {
-		// Write the method that will calculate the resource arguments.
-		fprintf(w, "\n")
-		fprintf(w, "    private static %s makeArgs(%s args) {\n", ctx.ref(argsFQN), argsType)
 		fprintf(w,
 			"        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
 		fprintf(w, "        return builder\n")
@@ -1129,13 +1152,16 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			}
 		}
 		fprintf(w, "            .build();\n")
-		fprintf(w, "    }\n")
+	} else {
+		fprintf(w,
+			"        return args == null ? %s.Empty : args;\n", ctx.ref(argsFQN))
 	}
+	fprintf(w, "    }\n")
 
 	// Write the method that will calculate the resource options.
 	fprintf(w, "\n")
 	fprintf(w,
-		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
+		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<java.lang.String> id) {\n",
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
@@ -1192,7 +1218,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "     * @param options Optional settings to control the behavior of the CustomResource.\n")
 		fprintf(w, "     */\n")
 
-		fprintf(w, "    public static %s get(String name, %s<String> id, %s@%s %s options) {\n",
+		fprintf(w, "    public static %s get(java.lang.String name, %s<java.lang.String> id, %s@%s %s options) {\n",
 			className, ctx.ref(names.Output), stateParam, ctx.ref(names.Nullable), optionsType)
 		fprintf(w, "        return new %s(name, id, %soptions);\n", className, stateRef)
 		fprintf(w, "    }\n")
@@ -1371,8 +1397,19 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+
+		pkg, err := mod.pkg.Definition()
+		if err != nil {
+			return err
+		}
+
+		if pkg.Parameterization != nil {
+			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
+		}
+
+		fprintf(w, ");\n")
 		fprintf(w, "    }\n")
 
 		// CompletableFuture version: add full invoke
@@ -1381,8 +1418,14 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+
+		if pkg.Parameterization != nil {
+			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
+		}
+
+		fprintf(w, ");\n")
 		fprintf(w, "    }\n")
 
 		// Emit the args and result types, if any.
@@ -1542,7 +1585,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 
 		// toString override
 		fprintf(w, "%s@Override\n", indent)
-		fprintf(w, "%spublic String toString() {\n", indent)
+		fprintf(w, "%spublic java.lang.String toString() {\n", indent)
 		fprintf(w, "%s    return new %s(\", \", \"%s[\", \"]\")\n", indent, ctx.ref(names.StringJoiner), enumName)
 		fprintf(w, "%s        .add(\"value='\" + this.value + \"'\")\n", indent)
 		fprintf(w, "%s        .toString();\n", indent)
@@ -1775,15 +1818,57 @@ func (mod *modContext) gen(fs fs) error {
 	switch mod.mod {
 	case "":
 		if err := addClass(mod.rootPackage(), names.Ident("Utilities"), func(ctx *classFileContext) error {
-			pkgName, err := parsePackageName(packageName(mod.packages, mod.pkg.Name()))
+			pkg, err := mod.pkg.Definition()
 			if err != nil {
 				return err
 			}
+
+			var additionalImports, packageReferenceUtilities string
+			if pkg.Parameterization != nil {
+				additionalImports = `
+import java.util.concurrent.CompletableFuture;
+import com.pulumi.deployment.Deployment;
+
+`
+
+				packageReferenceUtilities = fmt.Sprintf(`
+
+	private static final CompletableFuture<java.lang.String> packageRef;
+	public static CompletableFuture<java.lang.String> getPackageRef() {
+		return packageRef;
+	}
+
+	static {
+		packageRef = Deployment.getInstance().registerPackage(
+			// Base provider name
+			"%s",
+			// Base provider version
+			"%s",
+			// Base provider download URL
+			"%s",
+			// Package name
+			"%s",
+			// Package version
+			getVersion(),
+			// Parameter
+			"%s"
+		);
+	}
+`,
+					pkg.Parameterization.BaseProvider.Name,
+					pkg.Parameterization.BaseProvider.Version,
+					pkg.Parameterization.BaseProvider.PluginDownloadURL,
+					pkg.Name,
+					base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
+				)
+			}
+
 			return javaUtilitiesTemplate.Execute(ctx.writer, javaUtilitiesTemplateContext{
-				Name:        pkgName.String(),
-				VersionPath: strings.ReplaceAll(ensureEndsWithDot(mod.basePackageName)+mod.pkg.Name(), ".", "/"),
-				ClassName:   "Utilities",
-				Tool:        mod.tool,
+				VersionPath:               strings.ReplaceAll(ensureEndsWithDot(mod.basePackageName)+mod.pkg.Name(), ".", "/"),
+				ClassName:                 "Utilities",
+				Tool:                      mod.tool,
+				AdditionalImports:         additionalImports,
+				PackageReferenceUtilities: packageReferenceUtilities,
 			})
 		}); err != nil {
 			return err
@@ -2111,7 +2196,12 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 	return resources, nil
 }
 
-func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
+func GeneratePackage(
+	tool string,
+	pkg *schema.Package,
+	extraFiles map[string][]byte,
+	local bool,
+) (map[string][]byte, error) {
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err
@@ -2129,14 +2219,33 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
-	// Finally, emit the build files if requested.
+	// Currently, packages come bundled with a version.txt resource that is used by generated code to report a version.
+	// When a build tool is configured, we defer the generation of this file to the build process so that e.g. CI
+	// processes can set the version to be used when releasing or publishing a package, as opposed to when the code for
+	// that package is generated. In the case that we are generating a package without a build tool, or a local package
+	// to be incorporated into a program with an existing build process, we need to emit the version.txt file explicitly
+	// as part of code generation.
+	if info.BuildFiles == "" || local {
+		pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
+		pkgPath := strings.ReplaceAll(pkgName, ".", "/")
+
+		var version string
+		if pkg.Version != nil {
+			version = pkg.Version.String()
+		} else {
+			version = "0.0.1"
+		}
+
+		files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
+		return files, nil
+	}
+
+	// If we are emitting a publishable package with a configured build system, emit those files now.
 	switch info.BuildFiles {
 	case "gradle":
 		if err := genGradleProject(pkg, info, files); err != nil {
 			return nil, err
 		}
-		return files, nil
-	case "":
 		return files, nil
 	default:
 		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",

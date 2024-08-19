@@ -121,7 +121,7 @@ public class AppSecIPGeo extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecIPGeo(String name) {
+    public AppSecIPGeo(java.lang.String name) {
         this(name, AppSecIPGeoArgs.Empty);
     }
     /**
@@ -129,7 +129,7 @@ public class AppSecIPGeo extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecIPGeo(String name, AppSecIPGeoArgs args) {
+    public AppSecIPGeo(java.lang.String name, AppSecIPGeoArgs args) {
         this(name, args, null);
     }
     /**
@@ -138,15 +138,22 @@ public class AppSecIPGeo extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecIPGeo(String name, AppSecIPGeoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecIPGeo:AppSecIPGeo", name, args == null ? AppSecIPGeoArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecIPGeo(java.lang.String name, AppSecIPGeoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecIPGeo:AppSecIPGeo", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecIPGeo(String name, Output<String> id, @Nullable AppSecIPGeoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecIPGeo:AppSecIPGeo", name, state, makeResourceOptions(options, id));
+    private AppSecIPGeo(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecIPGeoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecIPGeo:AppSecIPGeo", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecIPGeoArgs makeArgs(AppSecIPGeoArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecIPGeoArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -162,7 +169,7 @@ public class AppSecIPGeo extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecIPGeo get(String name, Output<String> id, @Nullable AppSecIPGeoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecIPGeo get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecIPGeoState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecIPGeo(name, id, state, options);
     }
 }

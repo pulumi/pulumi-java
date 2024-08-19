@@ -78,7 +78,7 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecApiConstraintsProtection(String name) {
+    public AppSecApiConstraintsProtection(java.lang.String name) {
         this(name, AppSecApiConstraintsProtectionArgs.Empty);
     }
     /**
@@ -86,7 +86,7 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecApiConstraintsProtection(String name, AppSecApiConstraintsProtectionArgs args) {
+    public AppSecApiConstraintsProtection(java.lang.String name, AppSecApiConstraintsProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -95,15 +95,22 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecApiConstraintsProtection(String name, AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, args == null ? AppSecApiConstraintsProtectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecApiConstraintsProtection(java.lang.String name, AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecApiConstraintsProtection(String name, Output<String> id, @Nullable AppSecApiConstraintsProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, state, makeResourceOptions(options, id));
+    private AppSecApiConstraintsProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecApiConstraintsProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecApiConstraintsProtection:AppSecApiConstraintsProtection", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecApiConstraintsProtectionArgs makeArgs(AppSecApiConstraintsProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecApiConstraintsProtectionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -119,7 +126,7 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecApiConstraintsProtection get(String name, Output<String> id, @Nullable AppSecApiConstraintsProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecApiConstraintsProtection get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecApiConstraintsProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecApiConstraintsProtection(name, id, state, options);
     }
 }

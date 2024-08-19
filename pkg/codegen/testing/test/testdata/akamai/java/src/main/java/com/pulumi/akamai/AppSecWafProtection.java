@@ -78,7 +78,7 @@ public class AppSecWafProtection extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecWafProtection(String name) {
+    public AppSecWafProtection(java.lang.String name) {
         this(name, AppSecWafProtectionArgs.Empty);
     }
     /**
@@ -86,7 +86,7 @@ public class AppSecWafProtection extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecWafProtection(String name, AppSecWafProtectionArgs args) {
+    public AppSecWafProtection(java.lang.String name, AppSecWafProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -95,15 +95,22 @@ public class AppSecWafProtection extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecWafProtection(String name, AppSecWafProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecWafProtection:AppSecWafProtection", name, args == null ? AppSecWafProtectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecWafProtection(java.lang.String name, AppSecWafProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecWafProtection:AppSecWafProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecWafProtection(String name, Output<String> id, @Nullable AppSecWafProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecWafProtection:AppSecWafProtection", name, state, makeResourceOptions(options, id));
+    private AppSecWafProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecWafProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecWafProtection:AppSecWafProtection", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecWafProtectionArgs makeArgs(AppSecWafProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecWafProtectionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -119,7 +126,7 @@ public class AppSecWafProtection extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecWafProtection get(String name, Output<String> id, @Nullable AppSecWafProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecWafProtection get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecWafProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecWafProtection(name, id, state, options);
     }
 }

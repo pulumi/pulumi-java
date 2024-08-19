@@ -135,7 +135,7 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public EdgeWorker(String name) {
+    public EdgeWorker(java.lang.String name) {
         this(name, EdgeWorkerArgs.Empty);
     }
     /**
@@ -143,7 +143,7 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EdgeWorker(String name, EdgeWorkerArgs args) {
+    public EdgeWorker(java.lang.String name, EdgeWorkerArgs args) {
         this(name, args, null);
     }
     /**
@@ -152,15 +152,22 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EdgeWorker(String name, EdgeWorkerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeWorker:EdgeWorker", name, args == null ? EdgeWorkerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public EdgeWorker(java.lang.String name, EdgeWorkerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/edgeWorker:EdgeWorker", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private EdgeWorker(String name, Output<String> id, @Nullable EdgeWorkerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeWorker:EdgeWorker", name, state, makeResourceOptions(options, id));
+    private EdgeWorker(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeWorkerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/edgeWorker:EdgeWorker", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static EdgeWorkerArgs makeArgs(EdgeWorkerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? EdgeWorkerArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -176,7 +183,7 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EdgeWorker get(String name, Output<String> id, @Nullable EdgeWorkerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EdgeWorker get(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeWorkerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new EdgeWorker(name, id, state, options);
     }
 }

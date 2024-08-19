@@ -63,7 +63,7 @@ public class AppSecCustomDeny extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecCustomDeny(String name) {
+    public AppSecCustomDeny(java.lang.String name) {
         this(name, AppSecCustomDenyArgs.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public class AppSecCustomDeny extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecCustomDeny(String name, AppSecCustomDenyArgs args) {
+    public AppSecCustomDeny(java.lang.String name, AppSecCustomDenyArgs args) {
         this(name, args, null);
     }
     /**
@@ -80,15 +80,22 @@ public class AppSecCustomDeny extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecCustomDeny(String name, AppSecCustomDenyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecCustomDeny:AppSecCustomDeny", name, args == null ? AppSecCustomDenyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecCustomDeny(java.lang.String name, AppSecCustomDenyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecCustomDeny:AppSecCustomDeny", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecCustomDeny(String name, Output<String> id, @Nullable AppSecCustomDenyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecCustomDeny:AppSecCustomDeny", name, state, makeResourceOptions(options, id));
+    private AppSecCustomDeny(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecCustomDenyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecCustomDeny:AppSecCustomDeny", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecCustomDenyArgs makeArgs(AppSecCustomDenyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecCustomDenyArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -104,7 +111,7 @@ public class AppSecCustomDeny extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecCustomDeny get(String name, Output<String> id, @Nullable AppSecCustomDenyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecCustomDeny get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecCustomDenyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecCustomDeny(name, id, state, options);
     }
 }

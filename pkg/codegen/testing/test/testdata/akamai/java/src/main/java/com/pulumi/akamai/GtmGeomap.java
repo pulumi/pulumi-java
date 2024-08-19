@@ -56,7 +56,7 @@ public class GtmGeomap extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public GtmGeomap(String name) {
+    public GtmGeomap(java.lang.String name) {
         this(name, GtmGeomapArgs.Empty);
     }
     /**
@@ -64,7 +64,7 @@ public class GtmGeomap extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public GtmGeomap(String name, GtmGeomapArgs args) {
+    public GtmGeomap(java.lang.String name, GtmGeomapArgs args) {
         this(name, args, null);
     }
     /**
@@ -73,15 +73,22 @@ public class GtmGeomap extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GtmGeomap(String name, GtmGeomapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmGeomap:GtmGeomap", name, args == null ? GtmGeomapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public GtmGeomap(java.lang.String name, GtmGeomapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/gtmGeomap:GtmGeomap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private GtmGeomap(String name, Output<String> id, @Nullable GtmGeomapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/gtmGeomap:GtmGeomap", name, state, makeResourceOptions(options, id));
+    private GtmGeomap(java.lang.String name, Output<java.lang.String> id, @Nullable GtmGeomapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/gtmGeomap:GtmGeomap", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static GtmGeomapArgs makeArgs(GtmGeomapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? GtmGeomapArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -100,7 +107,7 @@ public class GtmGeomap extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GtmGeomap get(String name, Output<String> id, @Nullable GtmGeomapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GtmGeomap get(java.lang.String name, Output<java.lang.String> id, @Nullable GtmGeomapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new GtmGeomap(name, id, state, options);
     }
 }

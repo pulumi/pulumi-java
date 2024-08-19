@@ -69,11 +69,22 @@ public abstract class Resource {
     private final String version;
 
     /**
-     * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
+     * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean, CompletableFuture)
      */
     protected Resource(String type, String name, boolean custom,
                        ResourceArgs args, ResourceOptions options) {
-        this(type, name, custom, args, options, false, false);
+        this(type, name, custom, args, options, false, false, null);
+    }
+
+    /**
+     * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean, CompletableFuture)
+     */
+    protected Resource(
+            String type, String name, boolean custom,
+            ResourceArgs args, ResourceOptions options,
+            boolean remote, boolean dependency
+    ) {
+        this(type, name, custom, args, options, remote, dependency, null);
     }
 
     /**
@@ -89,11 +100,13 @@ public abstract class Resource {
      * @param options    a bag of options that control this resource's behavior
      * @param remote     true if this is a remote component resource
      * @param dependency true if this is a synthetic resource used internally for dependency tracking
+     * @param packageRef the package reference to use if this resource belongs to a parameterized provider
      */
     protected Resource(
             String type, String name, boolean custom,
             ResourceArgs args, ResourceOptions options,
-            boolean remote, boolean dependency
+            boolean remote, boolean dependency,
+            CompletableFuture<String> packageRef
     ) {
         var lazy = new LazyFields(
                 () -> this.urnFuture,
@@ -227,7 +240,8 @@ public abstract class Resource {
 
         // Finish initialisation with reflection asynchronously
         DeploymentInternal.getInstance().readOrRegisterResource(
-                this, remote, DependencyResource::new, args, options, lazy
+                this, remote, DependencyResource::new, args, options, lazy,
+                packageRef
         );
     }
 

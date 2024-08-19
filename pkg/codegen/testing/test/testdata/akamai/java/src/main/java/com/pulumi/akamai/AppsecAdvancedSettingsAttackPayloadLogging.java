@@ -64,7 +64,7 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppsecAdvancedSettingsAttackPayloadLogging(String name) {
+    public AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name) {
         this(name, AppsecAdvancedSettingsAttackPayloadLoggingArgs.Empty);
     }
     /**
@@ -72,7 +72,7 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppsecAdvancedSettingsAttackPayloadLogging(String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args) {
+    public AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,15 +81,22 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppsecAdvancedSettingsAttackPayloadLogging(String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, args == null ? AppsecAdvancedSettingsAttackPayloadLoggingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppsecAdvancedSettingsAttackPayloadLogging(String name, Output<String> id, @Nullable AppsecAdvancedSettingsAttackPayloadLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, state, makeResourceOptions(options, id));
+    private AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsAttackPayloadLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appsecAdvancedSettingsAttackPayloadLogging:AppsecAdvancedSettingsAttackPayloadLogging", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppsecAdvancedSettingsAttackPayloadLoggingArgs makeArgs(AppsecAdvancedSettingsAttackPayloadLoggingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppsecAdvancedSettingsAttackPayloadLoggingArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -105,7 +112,7 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppsecAdvancedSettingsAttackPayloadLogging get(String name, Output<String> id, @Nullable AppsecAdvancedSettingsAttackPayloadLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppsecAdvancedSettingsAttackPayloadLogging get(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecAdvancedSettingsAttackPayloadLoggingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppsecAdvancedSettingsAttackPayloadLogging(name, id, state, options);
     }
 }

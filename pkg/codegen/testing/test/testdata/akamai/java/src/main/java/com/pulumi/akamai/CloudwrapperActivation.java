@@ -57,7 +57,7 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CloudwrapperActivation(String name) {
+    public CloudwrapperActivation(java.lang.String name) {
         this(name, CloudwrapperActivationArgs.Empty);
     }
     /**
@@ -65,7 +65,7 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CloudwrapperActivation(String name, CloudwrapperActivationArgs args) {
+    public CloudwrapperActivation(java.lang.String name, CloudwrapperActivationArgs args) {
         this(name, args, null);
     }
     /**
@@ -74,15 +74,22 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CloudwrapperActivation(String name, CloudwrapperActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, args == null ? CloudwrapperActivationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CloudwrapperActivation(java.lang.String name, CloudwrapperActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CloudwrapperActivation(String name, Output<String> id, @Nullable CloudwrapperActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, state, makeResourceOptions(options, id));
+    private CloudwrapperActivation(java.lang.String name, Output<java.lang.String> id, @Nullable CloudwrapperActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/cloudwrapperActivation:CloudwrapperActivation", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CloudwrapperActivationArgs makeArgs(CloudwrapperActivationArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CloudwrapperActivationArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -98,7 +105,7 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CloudwrapperActivation get(String name, Output<String> id, @Nullable CloudwrapperActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CloudwrapperActivation get(java.lang.String name, Output<java.lang.String> id, @Nullable CloudwrapperActivationState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CloudwrapperActivation(name, id, state, options);
     }
 }

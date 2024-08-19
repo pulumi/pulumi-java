@@ -92,7 +92,7 @@ public class AppSecEvalRule extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecEvalRule(String name) {
+    public AppSecEvalRule(java.lang.String name) {
         this(name, AppSecEvalRuleArgs.Empty);
     }
     /**
@@ -100,7 +100,7 @@ public class AppSecEvalRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecEvalRule(String name, AppSecEvalRuleArgs args) {
+    public AppSecEvalRule(java.lang.String name, AppSecEvalRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -109,15 +109,22 @@ public class AppSecEvalRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecEvalRule(String name, AppSecEvalRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEvalRule:AppSecEvalRule", name, args == null ? AppSecEvalRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecEvalRule(java.lang.String name, AppSecEvalRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecEvalRule:AppSecEvalRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecEvalRule(String name, Output<String> id, @Nullable AppSecEvalRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEvalRule:AppSecEvalRule", name, state, makeResourceOptions(options, id));
+    private AppSecEvalRule(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecEvalRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecEvalRule:AppSecEvalRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecEvalRuleArgs makeArgs(AppSecEvalRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecEvalRuleArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -133,7 +140,7 @@ public class AppSecEvalRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecEvalRule get(String name, Output<String> id, @Nullable AppSecEvalRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecEvalRule get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecEvalRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecEvalRule(name, id, state, options);
     }
 }

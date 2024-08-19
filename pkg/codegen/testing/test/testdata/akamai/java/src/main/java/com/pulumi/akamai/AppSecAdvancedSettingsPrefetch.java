@@ -93,7 +93,7 @@ public class AppSecAdvancedSettingsPrefetch extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecAdvancedSettingsPrefetch(String name) {
+    public AppSecAdvancedSettingsPrefetch(java.lang.String name) {
         this(name, AppSecAdvancedSettingsPrefetchArgs.Empty);
     }
     /**
@@ -101,7 +101,7 @@ public class AppSecAdvancedSettingsPrefetch extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecAdvancedSettingsPrefetch(String name, AppSecAdvancedSettingsPrefetchArgs args) {
+    public AppSecAdvancedSettingsPrefetch(java.lang.String name, AppSecAdvancedSettingsPrefetchArgs args) {
         this(name, args, null);
     }
     /**
@@ -110,15 +110,22 @@ public class AppSecAdvancedSettingsPrefetch extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecAdvancedSettingsPrefetch(String name, AppSecAdvancedSettingsPrefetchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, args == null ? AppSecAdvancedSettingsPrefetchArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecAdvancedSettingsPrefetch(java.lang.String name, AppSecAdvancedSettingsPrefetchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecAdvancedSettingsPrefetch(String name, Output<String> id, @Nullable AppSecAdvancedSettingsPrefetchState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, state, makeResourceOptions(options, id));
+    private AppSecAdvancedSettingsPrefetch(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecAdvancedSettingsPrefetchState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecAdvancedSettingsPrefetch:AppSecAdvancedSettingsPrefetch", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecAdvancedSettingsPrefetchArgs makeArgs(AppSecAdvancedSettingsPrefetchArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecAdvancedSettingsPrefetchArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -134,7 +141,7 @@ public class AppSecAdvancedSettingsPrefetch extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecAdvancedSettingsPrefetch get(String name, Output<String> id, @Nullable AppSecAdvancedSettingsPrefetchState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecAdvancedSettingsPrefetch get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecAdvancedSettingsPrefetchState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecAdvancedSettingsPrefetch(name, id, state, options);
     }
 }

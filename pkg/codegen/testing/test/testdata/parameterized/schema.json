@@ -1,0 +1,59 @@
+{
+  "name": "pkg",
+  "description": "Parameterized package",
+  "repository": "https://example.com",
+  "version": "1.0.0",
+  "meta": {
+    "moduleFormat": "(.*)"
+  },
+  "config": {},
+  "provider": {
+    "type": "object"
+  },
+  "resources": {
+    "pkg:index:Echo": {
+      "description": "A test resource that echoes its input.",
+      "properties": {
+        "echo": {
+          "$ref": "pulumi.json#/Any",
+          "description": "Input to echo."
+        }
+      },
+      "type": "object",
+      "inputProperties": {
+        "echo": {
+          "$ref": "pulumi.json#/Any",
+          "description": "An echoed input."
+        }
+      }
+    }
+  },
+  "functions": {
+    "pkg:index:doEcho": {
+      "description": "A test invoke that echoes its input.",
+      "inputs": {
+        "properties": {
+          "echo": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "outputs": {
+        "properties": {
+          "echo": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "parameterization": {
+    "baseProvider": {
+      "name": "testprovider",
+      "version": "0.0.1"
+    },
+    "parameter": "cGtn"
+  }
+}

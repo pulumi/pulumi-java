@@ -27,7 +27,7 @@ public class CustomResource extends Resource {
     private Output<String> id; // effectively final, lazy init
 
     /**
-     * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
+     * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean, CompletableFuture)}
      *
      * @param type       The type of the resource.
      * @param name       The unique name of the resource.
@@ -39,7 +39,7 @@ public class CustomResource extends Resource {
     }
 
     /**
-     * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
+     * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean, CompletableFuture)}
      *
      * @param type    The type of the resource.
      * @param name    The unique name of the resource.
@@ -48,6 +48,25 @@ public class CustomResource extends Resource {
      */
     public CustomResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
         this(type, name, args, options, false);
+    }
+
+    /**
+     * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean, CompletableFuture)}
+     *
+     * @param type    The type of the resource.
+     * @param name    The unique name of the resource.
+     * @param args    The arguments to use to populate the new resource.
+     * @param options A bag of options that control this resource's behavior.
+     * @param dependency True if this is a synthetic resource used internally for dependency tracking.
+     */
+    protected CustomResource(
+            String type,
+            String name,
+            @Nullable ResourceArgs args,
+            @Nullable CustomResourceOptions options,
+            boolean dependency
+    ) {
+        this(type, name, args, options, dependency, null);
     }
 
     /**
@@ -65,18 +84,20 @@ public class CustomResource extends Resource {
      * @param args       The arguments to use to populate the new resource.
      * @param options    A bag of options that control this resource's behavior.
      * @param dependency True if this is a synthetic resource used internally for dependency tracking.
+     * @param packageRef The package reference to use for this resource.
      */
     protected CustomResource(
             String type,
             String name,
             @Nullable ResourceArgs args,
             @Nullable CustomResourceOptions options,
-            boolean dependency
+            boolean dependency,
+            @Nullable CompletableFuture<String> packageRef
     ) {
         super(type, name, true,
                 args == null ? ResourceArgs.Empty : args,
                 options == null ? CustomResourceOptions.Empty : options,
-                false, dependency);
+                false, dependency, packageRef);
     }
 
     protected Optional<CompletableFuture<Output<String>>> idFuture() {

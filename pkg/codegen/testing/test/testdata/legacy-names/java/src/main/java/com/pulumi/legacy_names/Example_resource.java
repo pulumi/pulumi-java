@@ -41,7 +41,7 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Example_resource(String name) {
+    public Example_resource(java.lang.String name) {
         this(name, Example_resourceArgs.Empty);
     }
     /**
@@ -49,7 +49,7 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Example_resource(String name, @Nullable Example_resourceArgs args) {
+    public Example_resource(java.lang.String name, @Nullable Example_resourceArgs args) {
         this(name, args, null);
     }
     /**
@@ -58,15 +58,22 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Example_resource(String name, @Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("legacy_names:index:example_resource", name, args == null ? Example_resourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Example_resource(java.lang.String name, @Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("legacy_names:index:example_resource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Example_resource(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("legacy_names:index:example_resource", name, null, makeResourceOptions(options, id));
+    private Example_resource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("legacy_names:index:example_resource", name, null, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static Example_resourceArgs makeArgs(@Nullable Example_resourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? Example_resourceArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -81,7 +88,7 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Example_resource get(String name, Output<String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Example_resource get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Example_resource(name, id, options);
     }
 }

@@ -23,7 +23,7 @@ import static java.util.Objects.requireNonNull;
  * <p>
  * Each resource registered with the Pulumi engine is logically identified
  * by its uniform resource name (URN).
- * A resource’s URN is derived from its type, parent type, and user-supplied name.
+ * A resource's URN is derived from its type, parent type, and user-supplied name.
  * </p>
  * <br>
  * The structure of a URN is defined by the grammar below:

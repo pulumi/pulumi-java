@@ -8,6 +8,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
+import com.google.protobuf.ByteString;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.pulumi.Log;
@@ -53,8 +54,10 @@ import com.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
+import pulumirpc.Resource.Parameterization;
 import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Resource.ReadResourceRequest;
+import pulumirpc.Resource.RegisterPackageRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
@@ -64,12 +67,12 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.time.Duration;
+import java.util.Base64;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -96,10 +99,9 @@ import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
 
 @InternalUse
-public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
+public class DeploymentImpl extends DeploymentInstanceHolder implements DeploymentInternal {
 
     private final DeploymentState state;
     private final Log log;
@@ -409,6 +411,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
+        return this.invoke.invoke(token, targetType, args, options, packageRef);
+    }
+
+    @Override
     public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options) {
         return this.invoke.invokeAsync(token, args, options);
     }
@@ -416,6 +423,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Override
     public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args) {
         return this.invoke.invokeAsync(token, args);
+    }
+
+    @Override
+    public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
+        return this.invoke.invokeAsync(token, targetType, args, options, packageRef);
     }
 
     @Override
@@ -459,6 +471,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+            return invoke(token, targetType, args, options, null);
+        }
+
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -466,12 +482,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
+            final CompletableFuture<String> packageRefFuture = packageRef == null
+                ? CompletableFuture.completedFuture(null)
+                : packageRef;
+
             // Wait for all values to be available, and then perform the RPC.
             return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
                     .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
                     .thenCompose(serializedArgs -> {
                         if (!serializedArgs.containsUnknowns) {
-                            return this.invokeRawAsync(token, serializedArgs, options)
+                            return packageRefFuture
+                                    .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
                                     .thenApply(result -> parseInvokeResponse(token, targetType, result));
                         } else {
                             return CompletableFuture.completedFuture(OutputData.unknown());
@@ -493,7 +514,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private <T> CompletableFuture<OutputData<T>> rawInvoke(
-                String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+                String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRefFuture) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -532,7 +553,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // tracking, which is a good future direction also for
             // `invoke`.
 
-            return invokeRawAsync(token, args, options)
+            packageRefFuture = packageRefFuture == null
+                ? CompletableFuture.completedFuture(null)
+                : packageRefFuture;
+
+            return packageRefFuture
+                    .thenCompose(packageRef -> invokeRawAsync(token, args, options, packageRef))
                     .thenApply(result -> parseInvokeResponse(token, targetType, result));
         }
 
@@ -541,7 +567,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options) {
-            return invokeRawAsync(token, args, options).thenApply(unused -> null);
+            return invokeRawAsync(token, args, options, null).thenApply(unused -> null);
         }
 
         public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args) {
@@ -549,11 +575,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return this.rawInvoke(token, targetType, args, options).thenApply(OutputData::getValueNullable);
+            return invokeAsync(token, targetType, args, options, null);
+        }
+
+        public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
+            return this.rawInvoke(token, targetType, args, options, packageRef).thenApply(OutputData::getValueNullable);
         }
 
         private CompletableFuture<SerializationResult> invokeRawAsync(
-                String token, InvokeArgs args, InvokeOptions options) {
+                String token, InvokeArgs args, InvokeOptions options, String packageRef) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
@@ -561,11 +591,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // Wait for all values to be available, and then perform the RPC.
             return this.featureSupport.monitorSupportsResourceReferences()
                     .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
-                    .thenCompose(serializedArgs -> this.invokeRawAsync(token, serializedArgs, options));
+                    .thenCompose(serializedArgs -> this.invokeRawAsync(token, serializedArgs, options, packageRef));
         }
 
         private CompletableFuture<SerializationResult> invokeRawAsync(
-                String token, SerializationResult invokeArgs, InvokeOptions options) {
+                String token, SerializationResult invokeArgs, InvokeOptions options, String packageRef) {
             CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
                     () -> {
                         var provider = Internal.from(options).getNestedProvider(token);
@@ -584,6 +614,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         .setVersion(version.orElse(""))
                         .setArgs(invokeArgs.serialized)
                         .setAcceptResources(!this.disableResourceReferences)
+                        .setPackageRef(packageRef == null ? "" : packageRef)
                         .build()
                 ).thenApply(response -> {
                     // Handle failures.
@@ -804,6 +835,32 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public CallException(String message) {
             super(message);
         }
+    }
+
+    @Override
+    public CompletableFuture<String> registerPackage(
+        String baseProviderName,
+        String baseProviderVersion,
+        String baseProviderDownloadUrl,
+        String packageName,
+        String packageVersion,
+        String base64Parameter
+    ) {
+        var request = RegisterPackageRequest.newBuilder()
+            .setName(baseProviderName)
+            .setVersion(baseProviderVersion)
+            .setDownloadUrl(baseProviderDownloadUrl)
+            .setParameterization(
+                Parameterization.newBuilder()
+                    .setName(packageName)
+                    .setVersion(packageVersion)
+                    .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
+                    .build()
+            )
+            .build();
+
+        return this.state.monitor.registerPackageAsync(request)
+            .thenApply(response -> response.getRef());
     }
 
     private static final class Prepare {
@@ -1061,9 +1118,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Override
     public void readOrRegisterResource(
             Resource resource, boolean remote, Function<String, Resource> newDependency,
-            ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
+            ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy,
+            CompletableFuture<String> packageRef
     ) {
-        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options, lazy);
+        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options, lazy, packageRef);
     }
 
     private static final class RawResourceResult {
@@ -1111,7 +1169,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @Override
         public void readOrRegisterResource(
                 Resource resource, boolean remote, Function<String, Resource> newDependency,
-                ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
+                ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy,
+                CompletableFuture<String> packageRef
         ) {
             // readOrRegisterResource is called in a fire-and-forget manner. Make sure we keep
             // track of this task so that the application will not quit until this async work
@@ -1131,7 +1190,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             this.runner.registerTask(
                     String.format("readOrRegisterResource: %s-%s", resource.pulumiResourceType(), resource.pulumiResourceName()),
-                    completeResourceAsync(resource, remote, newDependency, args, options, completionSources, lazy)
+                    completeResourceAsync(resource, remote, newDependency, args, options, completionSources, lazy, packageRef)
             );
         }
 
@@ -1144,9 +1203,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Resource resource, boolean remote, Function<String, Resource> newDependency,
                 ResourceArgs args, ResourceOptions options,
                 ImmutableMap<String, OutputCompletionSource<?>> completionSources,
-                Resource.LazyFields lazy
+                Resource.LazyFields lazy, CompletableFuture<String> packageRefFuture
         ) {
-            return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
+            packageRefFuture = packageRefFuture == null
+                ? CompletableFuture.completedFuture(null)
+                : packageRefFuture;
+
+            return packageRefFuture
+                    .thenCompose(packageRef -> readOrRegisterResourceAsync(
+                        resource,
+                        remote,
+                        newDependency,
+                        args,
+                        options,
+                        packageRef
+                    ))
                     .thenApplyAsync(response -> {
                         var urn = response.urn;
                         var id = response.id;
@@ -1231,7 +1302,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private CompletableFuture<RawResourceResult> readOrRegisterResourceAsync(
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
-                ResourceOptions options
+                ResourceOptions options, String packageRef
         ) {
             if (options.getUrn().isPresent()) {
                 // This is a resource that already exists. Read its state from the engine.
@@ -1244,7 +1315,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 return this.invoke.invokeRawAsync(
                         "pulumi:pulumi:getResource",
                         new GetResourceInvokeArgs(options.getUrn().get()),
-                        InvokeOptions.Empty
+                        InvokeOptions.Empty,
+                        packageRef
                 ).thenApply(invokeResult -> {
                     var result = invokeResult.serialized;
                     var urn = result.getFieldsMap().get(Constants.UrnPropertyName).getStringValue();
@@ -1264,10 +1336,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 }
 
                                 // If this resource already exists, read its state rather than registering it anew.
-                                return this.readResource.readResourceAsync(resource, id, args, options);
+                                return this.readResource.readResourceAsync(resource, id, args, options, packageRef);
                             }
                             // see comment at the end of the method below
-                            return this.registerResource.registerResourceAsync(resource, remote, newDependency, args, options);
+                            return this.registerResource.registerResourceAsync(resource, remote, newDependency, args, options, packageRef);
                         });
             }
 
@@ -1275,7 +1347,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // this resource's properties will be resolved asynchronously after the operation completes,
             // so that dependent computations resolve normally.
             // If we are just planning, on the other hand, values will never resolve.
-            return this.registerResource.registerResourceAsync(resource, remote, newDependency, args, options);
+            return this.registerResource.registerResourceAsync(resource, remote, newDependency, args, options, packageRef);
         }
     }
 
@@ -1309,7 +1381,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<RawResourceResult> readResourceAsync(
-                Resource resource, String id, ResourceArgs args, ResourceOptions options
+                Resource resource, String id, ResourceArgs args, ResourceOptions options,
+                String packageRef
         ) {
             var name = resource.pulumiResourceName();
             var type = resource.pulumiResourceType();
@@ -1333,7 +1406,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setProperties(prepareResult.serializedProps)
                                 .setVersion(options.getVersion().orElse(""))
                                 .setAcceptSecrets(true)
-                                .setAcceptResources(!this.disableResourceReferences);
+                                .setAcceptResources(!this.disableResourceReferences)
+                                .setPackageRef(packageRef == null ? "" : packageRef);
 
                         for (int i = 0; i < prepareResult.allDirectDependencyUrns.size(); i++) {
                             request.setDependencies(i, prepareResult.allDirectDependencyUrns.asList().get(i));
@@ -1365,7 +1439,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private CompletableFuture<RawResourceResult> registerResourceAsync(
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
-                ResourceOptions options) {
+                ResourceOptions options, String packageRef) {
             var name = resource.pulumiResourceName();
             var type = resource.pulumiResourceType();
             var custom = resource instanceof CustomResource;
@@ -1383,7 +1457,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         ));
 
                         var request = createRegisterResourceRequest(
-                                type, name, custom, remote, options, prepareResult
+                                type, name, custom, remote, options, prepareResult, packageRef
                         );
 
                         log.debug(String.format(
@@ -1411,7 +1485,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private RegisterResourceRequest createRegisterResourceRequest(
-                String type, String name, boolean custom, boolean remote, ResourceOptions options, PrepareResult prepareResult
+                String type, String name, boolean custom, boolean remote, ResourceOptions options, PrepareResult prepareResult,
+                String packageRef
         ) {
             var customOpts = options instanceof CustomResourceOptions;
 
@@ -1442,7 +1517,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     .build()
                     )
                     .setRemote(remote)
-                    .setRetainOnDelete(options.isRetainOnDelete());
+                    .setRetainOnDelete(options.isRetainOnDelete())
+                    .setPackageRef(packageRef == null ? "" : packageRef);
 
             if (customOpts) {
                 request.addAllAdditionalSecretOutputs(((CustomResourceOptions) options).getAdditionalSecretOutputs());

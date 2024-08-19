@@ -92,7 +92,7 @@ public class AppSecEvalGroup extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecEvalGroup(String name) {
+    public AppSecEvalGroup(java.lang.String name) {
         this(name, AppSecEvalGroupArgs.Empty);
     }
     /**
@@ -100,7 +100,7 @@ public class AppSecEvalGroup extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecEvalGroup(String name, AppSecEvalGroupArgs args) {
+    public AppSecEvalGroup(java.lang.String name, AppSecEvalGroupArgs args) {
         this(name, args, null);
     }
     /**
@@ -109,15 +109,22 @@ public class AppSecEvalGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecEvalGroup(String name, AppSecEvalGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEvalGroup:AppSecEvalGroup", name, args == null ? AppSecEvalGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecEvalGroup(java.lang.String name, AppSecEvalGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecEvalGroup:AppSecEvalGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecEvalGroup(String name, Output<String> id, @Nullable AppSecEvalGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecEvalGroup:AppSecEvalGroup", name, state, makeResourceOptions(options, id));
+    private AppSecEvalGroup(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecEvalGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecEvalGroup:AppSecEvalGroup", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecEvalGroupArgs makeArgs(AppSecEvalGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecEvalGroupArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -133,7 +140,7 @@ public class AppSecEvalGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecEvalGroup get(String name, Output<String> id, @Nullable AppSecEvalGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecEvalGroup get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecEvalGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecEvalGroup(name, id, state, options);
     }
 }

@@ -70,7 +70,7 @@ public class AppSecRateProtection extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecRateProtection(String name) {
+    public AppSecRateProtection(java.lang.String name) {
         this(name, AppSecRateProtectionArgs.Empty);
     }
     /**
@@ -78,7 +78,7 @@ public class AppSecRateProtection extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecRateProtection(String name, AppSecRateProtectionArgs args) {
+    public AppSecRateProtection(java.lang.String name, AppSecRateProtectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -87,15 +87,22 @@ public class AppSecRateProtection extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecRateProtection(String name, AppSecRateProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecRateProtection:AppSecRateProtection", name, args == null ? AppSecRateProtectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecRateProtection(java.lang.String name, AppSecRateProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecRateProtection:AppSecRateProtection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecRateProtection(String name, Output<String> id, @Nullable AppSecRateProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecRateProtection:AppSecRateProtection", name, state, makeResourceOptions(options, id));
+    private AppSecRateProtection(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecRateProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecRateProtection:AppSecRateProtection", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecRateProtectionArgs makeArgs(AppSecRateProtectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecRateProtectionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -111,7 +118,7 @@ public class AppSecRateProtection extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecRateProtection get(String name, Output<String> id, @Nullable AppSecRateProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecRateProtection get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecRateProtectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecRateProtection(name, id, state, options);
     }
 }

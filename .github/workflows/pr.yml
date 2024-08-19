@@ -83,11 +83,11 @@ jobs:
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-java
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: versions.txt
           path: versions.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: go-binaries
           path: bin/
@@ -96,7 +96,7 @@ jobs:
         with:
           arguments: publishToMavenLocal
           build-root-directory: sdk/java
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
@@ -135,7 +135,7 @@ jobs:
         with:
           go-version: stable
       - name: Download go-binaries
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: go-binaries
           path: ~/bin
@@ -144,7 +144,7 @@ jobs:
           chmod a+x ~/bin/pulumi-language-java
           chmod a+x ~/bin/pulumi-java-gen
       - name: Download versions.txt
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: versions.txt
           path: artifacts
@@ -172,7 +172,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-test-go-${{ hashFiles('**/go.sum') }}
       - name: Download Java SDK
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
@@ -193,6 +193,7 @@ jobs:
         - azure-java-appservice-sql
         - azure-java-static-website
         - gcp-java-gke-hello-world
+        - kubernetes
         - minimal
         - minimalsbt
         - random
@@ -232,14 +233,14 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/actions@v4
       - name: Download versions.txt
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Download Java SDK
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
@@ -344,14 +345,14 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Download versions.txt
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Download Java SDK
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
@@ -397,14 +398,14 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-templates-${{ hashFiles('**/go.sum') }}
       - name: Download versions.txt
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Download Java SDK
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi

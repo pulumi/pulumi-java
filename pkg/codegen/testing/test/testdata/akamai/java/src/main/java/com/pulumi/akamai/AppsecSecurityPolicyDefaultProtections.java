@@ -77,7 +77,7 @@ public class AppsecSecurityPolicyDefaultProtections extends com.pulumi.resources
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppsecSecurityPolicyDefaultProtections(String name) {
+    public AppsecSecurityPolicyDefaultProtections(java.lang.String name) {
         this(name, AppsecSecurityPolicyDefaultProtectionsArgs.Empty);
     }
     /**
@@ -85,7 +85,7 @@ public class AppsecSecurityPolicyDefaultProtections extends com.pulumi.resources
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppsecSecurityPolicyDefaultProtections(String name, AppsecSecurityPolicyDefaultProtectionsArgs args) {
+    public AppsecSecurityPolicyDefaultProtections(java.lang.String name, AppsecSecurityPolicyDefaultProtectionsArgs args) {
         this(name, args, null);
     }
     /**
@@ -94,15 +94,22 @@ public class AppsecSecurityPolicyDefaultProtections extends com.pulumi.resources
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppsecSecurityPolicyDefaultProtections(String name, AppsecSecurityPolicyDefaultProtectionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, args == null ? AppsecSecurityPolicyDefaultProtectionsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppsecSecurityPolicyDefaultProtections(java.lang.String name, AppsecSecurityPolicyDefaultProtectionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppsecSecurityPolicyDefaultProtections(String name, Output<String> id, @Nullable AppsecSecurityPolicyDefaultProtectionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, state, makeResourceOptions(options, id));
+    private AppsecSecurityPolicyDefaultProtections(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecSecurityPolicyDefaultProtectionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appsecSecurityPolicyDefaultProtections:AppsecSecurityPolicyDefaultProtections", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppsecSecurityPolicyDefaultProtectionsArgs makeArgs(AppsecSecurityPolicyDefaultProtectionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppsecSecurityPolicyDefaultProtectionsArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -118,7 +125,7 @@ public class AppsecSecurityPolicyDefaultProtections extends com.pulumi.resources
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppsecSecurityPolicyDefaultProtections get(String name, Output<String> id, @Nullable AppsecSecurityPolicyDefaultProtectionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppsecSecurityPolicyDefaultProtections get(java.lang.String name, Output<java.lang.String> id, @Nullable AppsecSecurityPolicyDefaultProtectionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppsecSecurityPolicyDefaultProtections(name, id, state, options);
     }
 }

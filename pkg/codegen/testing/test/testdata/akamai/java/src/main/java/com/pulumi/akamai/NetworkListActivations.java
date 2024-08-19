@@ -107,7 +107,7 @@ public class NetworkListActivations extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public NetworkListActivations(String name) {
+    public NetworkListActivations(java.lang.String name) {
         this(name, NetworkListActivationsArgs.Empty);
     }
     /**
@@ -115,7 +115,7 @@ public class NetworkListActivations extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public NetworkListActivations(String name, NetworkListActivationsArgs args) {
+    public NetworkListActivations(java.lang.String name, NetworkListActivationsArgs args) {
         this(name, args, null);
     }
     /**
@@ -124,15 +124,22 @@ public class NetworkListActivations extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public NetworkListActivations(String name, NetworkListActivationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/networkListActivations:NetworkListActivations", name, args == null ? NetworkListActivationsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public NetworkListActivations(java.lang.String name, NetworkListActivationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/networkListActivations:NetworkListActivations", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private NetworkListActivations(String name, Output<String> id, @Nullable NetworkListActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/networkListActivations:NetworkListActivations", name, state, makeResourceOptions(options, id));
+    private NetworkListActivations(java.lang.String name, Output<java.lang.String> id, @Nullable NetworkListActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/networkListActivations:NetworkListActivations", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static NetworkListActivationsArgs makeArgs(NetworkListActivationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? NetworkListActivationsArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -148,7 +155,7 @@ public class NetworkListActivations extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkListActivations get(String name, Output<String> id, @Nullable NetworkListActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkListActivations get(java.lang.String name, Output<java.lang.String> id, @Nullable NetworkListActivationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new NetworkListActivations(name, id, state, options);
     }
 }

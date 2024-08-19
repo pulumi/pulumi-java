@@ -77,7 +77,7 @@ public class AppSecReputationProfileAction extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecReputationProfileAction(String name) {
+    public AppSecReputationProfileAction(java.lang.String name) {
         this(name, AppSecReputationProfileActionArgs.Empty);
     }
     /**
@@ -85,7 +85,7 @@ public class AppSecReputationProfileAction extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecReputationProfileAction(String name, AppSecReputationProfileActionArgs args) {
+    public AppSecReputationProfileAction(java.lang.String name, AppSecReputationProfileActionArgs args) {
         this(name, args, null);
     }
     /**
@@ -94,15 +94,22 @@ public class AppSecReputationProfileAction extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecReputationProfileAction(String name, AppSecReputationProfileActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProfileAction:AppSecReputationProfileAction", name, args == null ? AppSecReputationProfileActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecReputationProfileAction(java.lang.String name, AppSecReputationProfileActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecReputationProfileAction:AppSecReputationProfileAction", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecReputationProfileAction(String name, Output<String> id, @Nullable AppSecReputationProfileActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecReputationProfileAction:AppSecReputationProfileAction", name, state, makeResourceOptions(options, id));
+    private AppSecReputationProfileAction(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecReputationProfileActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecReputationProfileAction:AppSecReputationProfileAction", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecReputationProfileActionArgs makeArgs(AppSecReputationProfileActionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecReputationProfileActionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -118,7 +125,7 @@ public class AppSecReputationProfileAction extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecReputationProfileAction get(String name, Output<String> id, @Nullable AppSecReputationProfileActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecReputationProfileAction get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecReputationProfileActionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecReputationProfileAction(name, id, state, options);
     }
 }

@@ -39,7 +39,7 @@ public class ConfigGroup extends com.pulumi.resources.ComponentResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ConfigGroup(String name) {
+    public ConfigGroup(java.lang.String name) {
         this(name, ConfigGroupArgs.Empty);
     }
     /**
@@ -47,7 +47,7 @@ public class ConfigGroup extends com.pulumi.resources.ComponentResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ConfigGroup(String name, @Nullable ConfigGroupArgs args) {
+    public ConfigGroup(java.lang.String name, @Nullable ConfigGroupArgs args) {
         this(name, args, null);
     }
     /**
@@ -56,11 +56,18 @@ public class ConfigGroup extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConfigGroup(String name, @Nullable ConfigGroupArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("kubernetes:yaml/v2:ConfigGroup", name, args == null ? ConfigGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
+    public ConfigGroup(java.lang.String name, @Nullable ConfigGroupArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        super("kubernetes:yaml/v2:ConfigGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true);
     }
 
-    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {
+    private static ConfigGroupArgs makeArgs(@Nullable ConfigGroupArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ConfigGroupArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();

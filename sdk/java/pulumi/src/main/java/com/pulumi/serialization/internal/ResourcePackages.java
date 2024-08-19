@@ -248,7 +248,7 @@ public class ResourcePackages {
             throw new IllegalArgumentException(String.format(
                     "Couldn't instantiate class '%s' using constructor: '%s', for resource type: '%s'",
                     resourceType.get().getTypeName(), constructorInfo, type
-            ));
+            ), e);
         } finally {
             constructorInfo.setAccessible(false);
         }

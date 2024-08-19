@@ -46,7 +46,7 @@ class StackTest {
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
         verify(test.readOrRegisterResource(), times(1))
-                .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any());
+                .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any(), any());
         assertThat(resourceCaptor.getAllValues())
                 .hasSize(1)
                 .hasExactlyElementsOfTypes(Stack.class);
@@ -88,7 +88,7 @@ class StackTest {
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
         verify(test.readOrRegisterResource(), times(1))
-                .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any());
+                .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any(), any());
         assertThat(resourceCaptor.getAllValues())
                 .hasSize(1)
                 .hasExactlyElementsOfTypes(Stack.class);
@@ -133,7 +133,7 @@ class StackTest {
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
         verify(test.readOrRegisterResource(), times(2))
-                .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any());
+                .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any(), any());
         assertThat(resourceCaptor.getAllValues())
                 .hasSize(2)
                 .hasExactlyElementsOfTypes(Stack.class, StackReference.class);

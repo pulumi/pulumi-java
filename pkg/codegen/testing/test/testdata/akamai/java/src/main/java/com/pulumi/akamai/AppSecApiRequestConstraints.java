@@ -78,7 +78,7 @@ public class AppSecApiRequestConstraints extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppSecApiRequestConstraints(String name) {
+    public AppSecApiRequestConstraints(java.lang.String name) {
         this(name, AppSecApiRequestConstraintsArgs.Empty);
     }
     /**
@@ -86,7 +86,7 @@ public class AppSecApiRequestConstraints extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppSecApiRequestConstraints(String name, AppSecApiRequestConstraintsArgs args) {
+    public AppSecApiRequestConstraints(java.lang.String name, AppSecApiRequestConstraintsArgs args) {
         this(name, args, null);
     }
     /**
@@ -95,15 +95,22 @@ public class AppSecApiRequestConstraints extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppSecApiRequestConstraints(String name, AppSecApiRequestConstraintsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiRequestConstraints:AppSecApiRequestConstraints", name, args == null ? AppSecApiRequestConstraintsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppSecApiRequestConstraints(java.lang.String name, AppSecApiRequestConstraintsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecApiRequestConstraints:AppSecApiRequestConstraints", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppSecApiRequestConstraints(String name, Output<String> id, @Nullable AppSecApiRequestConstraintsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/appSecApiRequestConstraints:AppSecApiRequestConstraints", name, state, makeResourceOptions(options, id));
+    private AppSecApiRequestConstraints(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecApiRequestConstraintsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/appSecApiRequestConstraints:AppSecApiRequestConstraints", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppSecApiRequestConstraintsArgs makeArgs(AppSecApiRequestConstraintsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppSecApiRequestConstraintsArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -119,7 +126,7 @@ public class AppSecApiRequestConstraints extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppSecApiRequestConstraints get(String name, Output<String> id, @Nullable AppSecApiRequestConstraintsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppSecApiRequestConstraints get(java.lang.String name, Output<java.lang.String> id, @Nullable AppSecApiRequestConstraintsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppSecApiRequestConstraints(name, id, state, options);
     }
 }

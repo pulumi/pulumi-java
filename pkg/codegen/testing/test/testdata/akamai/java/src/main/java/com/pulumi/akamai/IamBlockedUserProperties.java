@@ -64,7 +64,7 @@ public class IamBlockedUserProperties extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IamBlockedUserProperties(String name) {
+    public IamBlockedUserProperties(java.lang.String name) {
         this(name, IamBlockedUserPropertiesArgs.Empty);
     }
     /**
@@ -72,7 +72,7 @@ public class IamBlockedUserProperties extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public IamBlockedUserProperties(String name, IamBlockedUserPropertiesArgs args) {
+    public IamBlockedUserProperties(java.lang.String name, IamBlockedUserPropertiesArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,15 +81,22 @@ public class IamBlockedUserProperties extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IamBlockedUserProperties(String name, IamBlockedUserPropertiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, args == null ? IamBlockedUserPropertiesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public IamBlockedUserProperties(java.lang.String name, IamBlockedUserPropertiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private IamBlockedUserProperties(String name, Output<String> id, @Nullable IamBlockedUserPropertiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, state, makeResourceOptions(options, id));
+    private IamBlockedUserProperties(java.lang.String name, Output<java.lang.String> id, @Nullable IamBlockedUserPropertiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/iamBlockedUserProperties:IamBlockedUserProperties", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static IamBlockedUserPropertiesArgs makeArgs(IamBlockedUserPropertiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IamBlockedUserPropertiesArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -105,7 +112,7 @@ public class IamBlockedUserProperties extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IamBlockedUserProperties get(String name, Output<String> id, @Nullable IamBlockedUserPropertiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IamBlockedUserProperties get(java.lang.String name, Output<java.lang.String> id, @Nullable IamBlockedUserPropertiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IamBlockedUserProperties(name, id, state, options);
     }
 }

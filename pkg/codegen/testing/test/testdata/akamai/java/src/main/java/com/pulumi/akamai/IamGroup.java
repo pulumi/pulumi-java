@@ -64,7 +64,7 @@ public class IamGroup extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IamGroup(String name) {
+    public IamGroup(java.lang.String name) {
         this(name, IamGroupArgs.Empty);
     }
     /**
@@ -72,7 +72,7 @@ public class IamGroup extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public IamGroup(String name, IamGroupArgs args) {
+    public IamGroup(java.lang.String name, IamGroupArgs args) {
         this(name, args, null);
     }
     /**
@@ -81,15 +81,22 @@ public class IamGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IamGroup(String name, IamGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamGroup:IamGroup", name, args == null ? IamGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public IamGroup(java.lang.String name, IamGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/iamGroup:IamGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private IamGroup(String name, Output<String> id, @Nullable IamGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/iamGroup:IamGroup", name, state, makeResourceOptions(options, id));
+    private IamGroup(java.lang.String name, Output<java.lang.String> id, @Nullable IamGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/iamGroup:IamGroup", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static IamGroupArgs makeArgs(IamGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IamGroupArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -105,7 +112,7 @@ public class IamGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IamGroup get(String name, Output<String> id, @Nullable IamGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IamGroup get(java.lang.String name, Output<java.lang.String> id, @Nullable IamGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IamGroup(name, id, state, options);
     }
 }

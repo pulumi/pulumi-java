@@ -88,7 +88,7 @@ public class EdgeHostName extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public EdgeHostName(String name) {
+    public EdgeHostName(java.lang.String name) {
         this(name, EdgeHostNameArgs.Empty);
     }
     /**
@@ -96,7 +96,7 @@ public class EdgeHostName extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EdgeHostName(String name, EdgeHostNameArgs args) {
+    public EdgeHostName(java.lang.String name, EdgeHostNameArgs args) {
         this(name, args, null);
     }
     /**
@@ -105,15 +105,22 @@ public class EdgeHostName extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EdgeHostName(String name, EdgeHostNameArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeHostName:EdgeHostName", name, args == null ? EdgeHostNameArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public EdgeHostName(java.lang.String name, EdgeHostNameArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/edgeHostName:EdgeHostName", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private EdgeHostName(String name, Output<String> id, @Nullable EdgeHostNameState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("akamai:index/edgeHostName:EdgeHostName", name, state, makeResourceOptions(options, id));
+    private EdgeHostName(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeHostNameState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("akamai:index/edgeHostName:EdgeHostName", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static EdgeHostNameArgs makeArgs(EdgeHostNameArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? EdgeHostNameArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
@@ -132,7 +139,7 @@ public class EdgeHostName extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EdgeHostName get(String name, Output<String> id, @Nullable EdgeHostNameState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EdgeHostName get(java.lang.String name, Output<java.lang.String> id, @Nullable EdgeHostNameState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new EdgeHostName(name, id, state, options);
     }
 }
