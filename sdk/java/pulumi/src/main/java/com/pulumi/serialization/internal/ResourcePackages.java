@@ -158,7 +158,21 @@ public class ResourcePackages {
                 && !c.getPackageName().equals("net.bytebuddy")
                 && !c.getPackageName().startsWith("net.bytebuddy.")
                 && !c.getPackageName().startsWith(Resource.class.getPackageName())
-                && !c.getPackageName().startsWith(EngineGrpc.class.getPackageName());
+                && !c.getPackageName().startsWith(EngineGrpc.class.getPackageName())
+                && !excludePackagesFromProperties(c);
+    }
+
+    private static boolean excludePackagesFromProperties(ClassInfo c) {
+        String packages = System.getProperty("pulumi.resourcepackages.excludes");
+        if (packages != null) {
+            String[] items = packages.split(",");
+            for (String item: items){
+                if (c.getPackageName().startsWith(item)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public ResourcePackages(Log log) {
