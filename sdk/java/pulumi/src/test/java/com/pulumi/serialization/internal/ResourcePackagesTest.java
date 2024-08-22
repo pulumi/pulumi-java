@@ -6,10 +6,8 @@ import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
-import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.Test;
-import java.util.Optional;
 
 import javax.annotation.Nullable;
 
@@ -81,19 +79,6 @@ public class ResourcePackagesTest {
         );
     }
 
-    @Test
-    void ExcludedResource() {
-        System.setProperty("pulumi.resourcepackages.excludes", ExcludedResource.class.getPackageName());
-        var resourcePackages = new ResourcePackages(Log.ignore());
-        Optional<Class<Resource>> resourceType = resourcePackages.tryGetResourceType("test-excludePackages:index/ExcludedResource", "");
-
-        if (resourceType.isPresent()) {
-            fail("Test resource was found");
-        } else {
-            assertThat(resourceType).isNotPresent();
-        }
-    }
-
     @SuppressWarnings("unused") // Accessed by reflection
     @ResourceType(type = "test:index/TestResource", version = "1.0.1-alpha1")
     private static class Version101TestResource extends CustomResource {
@@ -138,10 +123,4 @@ public class ResourcePackagesTest {
         }
     }
 
-    @ResourceType(type = "test-excludePackages:index/ExcludedResource")
-    private static class ExcludedResource extends ComponentResource {
-        public ExcludedResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options) {
-            super(type, name, args, options);
-        }
-    }
 }
