@@ -39,10 +39,10 @@ to make sure your issue is unique, to lighten the triage burden on our maintaine
 
 You will want to install the following on your machine:
 
-- JDK 11 or higher
-- Gradle Build Tool 7.4
+- JDK 17
+- Gradle Build Tool 8.8
 - Apache Maven 3.8.4
-- Go 1.17
+- Go 1.22
 - Pulumi CLI 3.30.0 or higher
 
 ### Preparing a pull request
