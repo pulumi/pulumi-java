@@ -114,7 +114,7 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 	if overrides.BasePackage != "" {
 		result.BasePackage = ""
 	}
-	if overrides.Packages != nil && len(overrides.Packages) > 0 {
+	if len(overrides.Packages) > 0 {
 		if result.Packages == nil {
 			result.Packages = map[string]string{}
 		}
@@ -122,7 +122,7 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 			result.Packages[k] = v
 		}
 	}
-	if overrides.Dependencies != nil && len(overrides.Dependencies) > 0 {
+	if len(overrides.Dependencies) > 0 {
 		if result.Dependencies == nil {
 			result.Dependencies = map[string]string{}
 		}
