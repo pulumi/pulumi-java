@@ -121,8 +121,17 @@ sourceSets {
     }
 }
 
-test {
+task isolatedTest(type: Test) {
     useJUnitPlatform()
+
+    // Include only the specific test class you want to run in isolation
+    include '**/ResourcePackagesIsolatedTest.class'
+
+    // Fork a new JVM process for this specific test
+    forkEvery = 1
+    maxParallelForks = 1
+
+    // Set up test logging if needed
     testLogging {
         showStandardStreams = true
         exceptionFormat = 'full'
@@ -141,6 +150,36 @@ test {
 
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 }
+
+test {
+    useJUnitPlatform()
+
+    // Run general tests, excluding the isolated test
+    filter {
+        excludeTestsMatching "com.pulumi.serialization.internal.ResourcePackagesIsolatedTest"
+    }
+
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = 'full'
+
+        events = ['failed']
+
+        info {
+            events = ['failed', 'skipped']
+        }
+
+        debug {
+            events = ['started', 'skipped', 'failed']
+        }
+    }
+
+    systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
+
+    // Ensure isolatedTest runs after the main tests
+    finalizedBy isolatedTest
+}
+
 
 def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
 def ossrhPassword = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
