@@ -32,7 +32,7 @@ jobs:
 
   prerequisites:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     outputs:
       gotcloudcreds: ${{ steps.gotcloudcreds.outputs.gotcloudcreds }}
     steps:
