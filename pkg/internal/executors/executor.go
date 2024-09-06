@@ -3,6 +3,7 @@
 package executors
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
@@ -49,7 +50,20 @@ type javaExecutorFactory interface {
 	NewJavaExecutor(JavaExecutorOptions) (*JavaExecutor, error)
 }
 
-func NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func NewJavaExecutor(opts JavaExecutorOptions, attachDebugger bool) (*JavaExecutor, error) {
+	if attachDebugger {
+		opts.UseExecutor = "mvnDebug"
+		e, err := combineJavaExecutorFactories(
+			&maven{},
+		).NewJavaExecutor(opts)
+		if e == nil {
+			return nil, errors.New("failed to configure executor.  For debugging only the maven executor is supported.")
+		}
+		if err != nil {
+			return nil, err
+		}
+		return e, nil
+	}
 	e, err := combineJavaExecutorFactories(
 		&jarexec{},
 		&maven{},
@@ -63,7 +77,7 @@ func NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	if e == nil {
 		return nil, fmt.Errorf("failed to configure executor, tried: jar, maven, gradle, jbang, sbt")
 	}
-	return e, nil
+	return e, err
 }
 
 type combinedJavaExecutorFactory []javaExecutorFactory
