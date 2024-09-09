@@ -347,7 +347,11 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 
 	cmd.Env = host.constructEnv(req, config, configSecretKeys)
 	go func() {
-		WaitForDebuggerReady(ctx, tr)
+		err := WaitForDebuggerReady(tr)
+		if err != nil {
+			logging.Errorf("failed to wait for debugger: %v", err)
+			contract.IgnoreError(cmd.Process.Kill())
+		}
 
 		// emit a debug configuration
 		debugConfig, err := structpb.NewStruct(map[string]interface{}{
@@ -363,7 +367,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 		}
 		_, err = engineClient.StartDebugging(ctx, &pulumirpc.StartDebuggingRequest{
 			Config:  debugConfig,
-			Message: fmt.Sprintf("on port 8000"),
+			Message: "on port 8000",
 		})
 		if err != nil {
 			logging.Errorf("unable to start debugging: %v", err)
@@ -500,7 +504,7 @@ func (host *javaLanguageHost) RuntimeOptionsPrompts(_ context.Context,
 	return &pulumirpc.RuntimeOptionsResponse{}, nil
 }
 
-func WaitForDebuggerReady(ctx context.Context, out io.Reader) error {
+func WaitForDebuggerReady(out io.Reader) error {
 	scanner := bufio.NewScanner(out)
 	for scanner.Scan() {
 		if strings.Contains(scanner.Text(), "Listening for transport dt_socket at address") {
