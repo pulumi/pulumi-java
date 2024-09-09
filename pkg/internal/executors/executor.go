@@ -57,7 +57,9 @@ func NewJavaExecutor(opts JavaExecutorOptions, attachDebugger bool) (*JavaExecut
 			&maven{},
 		).NewJavaExecutor(opts)
 		if e == nil {
-			return nil, errors.New("failed to configure executor.  For debugging only the maven executor is supported, and mvnDebug must be installed")
+			return nil, errors.New(
+				"failed to configure executor.  For debugging only the maven executor is supported, " +
+					"and mvnDebug must be installed")
 		}
 		if err != nil {
 			return nil, err
