@@ -338,6 +338,8 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	var stdoutBuf bytes.Buffer
 	var stderrBuf bytes.Buffer
 
+	// We need to process the output of the command to determine when the debugger is ready, but
+	// also want to tee the output to the engine so that it can be displayed to the user.
 	pr, pw := io.Pipe()
 
 	cmd.Stdout = pw
@@ -504,6 +506,9 @@ func (host *javaLanguageHost) RuntimeOptionsPrompts(_ context.Context,
 	return &pulumirpc.RuntimeOptionsResponse{}, nil
 }
 
+// WaitForDebuggerReady waits for the debugger to be ready by scanning the output of the process.
+// Note that we currently only support `mvnDebug` as debugger.  If we support more debuggers in the
+// future this will need to be updated.
 func WaitForDebuggerReady(out io.Reader) error {
 	scanner := bufio.NewScanner(out)
 	for scanner.Scan() {

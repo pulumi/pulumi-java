@@ -50,6 +50,7 @@ type javaExecutorFactory interface {
 	NewJavaExecutor(JavaExecutorOptions) (*JavaExecutor, error)
 }
 
+// Create a new java executor. Note that when a debugger is being attached the only executor that is supported is the maven executor.
 func NewJavaExecutor(opts JavaExecutorOptions, attachDebugger bool) (*JavaExecutor, error) {
 	if attachDebugger {
 		opts.UseExecutor = "mvnDebug"
