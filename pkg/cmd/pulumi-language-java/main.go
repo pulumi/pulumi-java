@@ -3,6 +3,7 @@
 package main
 
 import (
+	"bufio"
 	"bytes"
 	"context"
 	"encoding/json"
@@ -19,12 +20,15 @@ import (
 	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/protobuf/types/known/structpb"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
@@ -138,9 +142,9 @@ func newLanguageHost(execOptions executors.JavaExecutorOptions,
 	}
 }
 
-func (host *javaLanguageHost) Executor() (*executors.JavaExecutor, error) {
-	if host.currentExecutor == nil {
-		executor, err := executors.NewJavaExecutor(host.execOptions)
+func (host *javaLanguageHost) Executor(attachDebugger bool) (*executors.JavaExecutor, error) {
+	if host.currentExecutor == nil || attachDebugger {
+		executor, err := executors.NewJavaExecutor(host.execOptions, attachDebugger)
 		if err != nil {
 			return nil, err
 		}
@@ -194,7 +198,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 ) ([]plugin.PulumiPluginJSON, error) {
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
-	exec, err := host.Executor()
+	exec, err := host.Executor(false)
 	if err != nil {
 		return nil, err
 	}
@@ -275,9 +279,29 @@ func (host *javaLanguageHost) runJavaCommand(
 	}, err
 }
 
+func (host *javaLanguageHost) connectToEngine() (pulumirpc.EngineClient, io.Closer, error) {
+	conn, err := grpc.Dial(
+		host.engineAddress,
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
+		rpcutil.GrpcChannelOptions(),
+	)
+	if err != nil {
+		return nil, nil, fmt.Errorf("language host could not make connection to engine: %w", err)
+	}
+
+	engineClient := pulumirpc.NewEngineClient(conn)
+	return engineClient, conn, nil
+}
+
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
-func (host *javaLanguageHost) Run(_ context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
+func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
 	logging.V(5).Infof("Run: program=%v", req.GetProgram()) //nolint:staticcheck
+
+	engineClient, closer, err := host.connectToEngine()
+	if err != nil {
+		return nil, err
+	}
+	defer contract.IgnoreClose(closer)
 
 	config, err := host.constructConfig(req)
 	if err != nil {
@@ -290,7 +314,7 @@ func (host *javaLanguageHost) Run(_ context.Context, req *pulumirpc.RunRequest) 
 		return nil, err
 	}
 
-	executor, err := host.Executor()
+	executor, err := host.Executor(req.GetAttachDebugger())
 	if err != nil {
 		return nil, err
 	}
@@ -314,9 +338,44 @@ func (host *javaLanguageHost) Run(_ context.Context, req *pulumirpc.RunRequest) 
 	var stdoutBuf bytes.Buffer
 	var stderrBuf bytes.Buffer
 
-	cmd.Stdout = &stdoutBuf
+	// We need to process the output of the command to determine when the debugger is ready, but
+	// also want to tee the output to the engine so that it can be displayed to the user.
+	pr, pw := io.Pipe()
+
+	cmd.Stdout = pw
 	cmd.Stderr = &stderrBuf
+
+	tr := io.TeeReader(pr, &stdoutBuf)
+
 	cmd.Env = host.constructEnv(req, config, configSecretKeys)
+	go func() {
+		err := WaitForDebuggerReady(tr)
+		if err != nil {
+			logging.Errorf("failed to wait for debugger: %v", err)
+			contract.IgnoreError(cmd.Process.Kill())
+		}
+
+		// emit a debug configuration
+		debugConfig, err := structpb.NewStruct(map[string]interface{}{
+			"name":     "Pulumi: Program (Java)",
+			"type":     "java",
+			"request":  "attach",
+			"hostName": "localhost",
+			"port":     8000,
+		})
+		if err != nil {
+			logging.Errorf("failed to serialize debug configuration: %v", err)
+			contract.IgnoreError(cmd.Process.Kill())
+		}
+		_, err = engineClient.StartDebugging(ctx, &pulumirpc.StartDebuggingRequest{
+			Config:  debugConfig,
+			Message: "on port 8000",
+		})
+		if err != nil {
+			logging.Errorf("unable to start debugging: %v", err)
+			contract.IgnoreError(cmd.Process.Kill())
+		}
+	}()
 	if err := runCommand(cmd); err != nil {
 
 		// The command failed. Dump any data we collected to
@@ -398,7 +457,7 @@ func (host *javaLanguageHost) GetPluginInfo(_ context.Context, _ *pbempty.Empty)
 func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer,
 ) error {
-	executor, err := host.Executor()
+	executor, err := host.Executor(false)
 	if err != nil {
 		return err
 	}
@@ -445,6 +504,19 @@ func (host *javaLanguageHost) RuntimeOptionsPrompts(_ context.Context,
 	_ *pulumirpc.RuntimeOptionsRequest,
 ) (*pulumirpc.RuntimeOptionsResponse, error) {
 	return &pulumirpc.RuntimeOptionsResponse{}, nil
+}
+
+// WaitForDebuggerReady waits for the debugger to be ready by scanning the output of the process.
+// Note that we currently only support `mvnDebug` as debugger.  If we support more debuggers in the
+// future this will need to be updated.
+func WaitForDebuggerReady(out io.Reader) error {
+	scanner := bufio.NewScanner(out)
+	for scanner.Scan() {
+		if strings.Contains(scanner.Text(), "Listening for transport dt_socket at address") {
+			return nil
+		}
+	}
+	return scanner.Err()
 }
 
 func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest) (*pulumirpc.AboutResponse, error) {

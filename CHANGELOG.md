@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## Unreleased
+
+### Improvements
+
+- Add support for attaching debuggers
+
 ## 0.15.0 (2024-08-15)
 
 ### Bug fixes
