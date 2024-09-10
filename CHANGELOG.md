@@ -1,11 +1,16 @@
 CHANGELOG
 =========
 
-## Unreleased
+## 0.16.0 (2024-09-11)
 
 ### Improvements
 
+- Classloader: now supports dynamic exclusions of packages from system property
 - Add support for attaching debuggers
+
+### Bug Fixes
+
+- Fix issue with direct dependencies causing IndexOutOfBoundsException
 
 ## 0.15.0 (2024-08-15)
 

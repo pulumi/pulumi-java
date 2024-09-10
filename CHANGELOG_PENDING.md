@@ -1,8 +1,8 @@
 ### Improvements
 
-- Classloader: now supports dynamic exclusions of packages from system property.
+- Classloader: now supports dynamic exclusions of packages from system property
+- Add support for attaching debuggers
 
 ### Bug Fixes
 
-- Fix HTML escaping after `{@literal ...}` blocks in Javadocs
 - Fix issue with direct dependencies causing IndexOutOfBoundsException
