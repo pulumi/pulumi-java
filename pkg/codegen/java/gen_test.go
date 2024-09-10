@@ -190,6 +190,8 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // python-only
 	case "overlay-supported-languages":
 		t.Skip = codegen.NewStringSet("java/any") // docs-only
+	case "python-typed-dict-disabled-setuppy":
+		t.Skip = codegen.NewStringSet("java/any") // python-only
 	}
 
 	if hasExtras {
