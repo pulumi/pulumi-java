@@ -2,7 +2,7 @@
 #
 # Example:
 #
-# ./scripts/release.h v0.5.2
+# ./scripts/release.sh v0.5.2
 
 set -euo pipefail
 
