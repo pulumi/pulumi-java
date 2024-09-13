@@ -4,4 +4,6 @@
 
 - Feature flag parameterized provider support
 
+- Upgrade Golang and Java dependencies
+
 ### Bug Fixes
