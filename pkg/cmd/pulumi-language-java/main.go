@@ -37,24 +37,29 @@ import (
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
 // LanguageRuntimeServer RPC endpoint.
 func main() {
-	var tracing string
+
+	logging.InitLogging(false, 0, false)
+
+	rc, err := rpcCmd.NewRpcCmd(&rpcCmd.RpcCmdConfig{
+		TracingName:  "pulumi-language-java",
+		RootSpanName: "pulumi-language-java",
+	})
+	if err != nil {
+		cmdutil.Exit(err)
+	}
+
 	var root string
 	var binary string
-	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
 	flag.StringVar(&root, "root", "", "Project root path to use")
 	flag.StringVar(&binary, "binary", "", "JAR or a JBang entry-point file to execute")
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
-	var useExecutor string
-	flag.StringVar(&useExecutor, "use-executor", "",
+	var givenExecutor string
+	rc.Flag.StringVar(&givenExecutor, "use-executor", "",
 		"Use the given program as the executor instead of looking for one on PATH")
 
-	flag.Parse()
-	var cancelChannel chan bool
-	args := flag.Args()
-	logging.InitLogging(false, 0, false)
-	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
+	rc.Flag.Parse(os.Args[1:])
 
 	wd, err := os.Getwd()
 	if err != nil {
@@ -63,40 +68,15 @@ func main() {
 
 	javaExecOptions := executors.JavaExecutorOptions{
 		Binary:      binary,
-		UseExecutor: useExecutor,
+		UseExecutor: givenExecutor,
 		WD:          fsys.DirFS(wd),
 	}
 
-	// Optionally pluck out the engine so we can do logging, etc.
-	var engineAddress string
-	if len(args) > 0 {
-		engineAddress = args[0]
-		var err error
-		cancelChannel, err = setupHealthChecks(engineAddress)
-		if err != nil {
-			cmdutil.Exit(errors.Wrapf(err, "could not start health check host RPC server"))
-		}
-	}
-
-	// Fire up a gRPC server, letting the kernel choose a free port.
-	port, done, err := rpcutil.Serve(0, cancelChannel, []func(*grpc.Server) error{
-		func(srv *grpc.Server) error {
-			host := newLanguageHost(javaExecOptions, engineAddress, tracing)
-			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
-			return nil
-		},
-	}, nil)
-	if err != nil {
-		cmdutil.Exit(errors.Wrapf(err, "could not start language host RPC server"))
-	}
-
-	// Otherwise, print out the port so that the spawner knows how to reach us.
-	fmt.Printf("%d\n", port)
-
-	// And finally wait for the server to stop serving.
-	if err := <-done; err != nil {
-		cmdutil.Exit(errors.Wrapf(err, "language host RPC stopped serving"))
-	}
+	rc.Run(func(srv *grpc.Server) error {
+		host := newLanguageHost(javaExecOptions, rc.EngineAddress, rc.Tracing)
+		pulumirpc.RegisterLanguageRuntimeServer(srv, host)
+		return nil
+	}, func() {})
 }
 
 func setupHealthChecks(engineAddress string) (chan bool, error) {
