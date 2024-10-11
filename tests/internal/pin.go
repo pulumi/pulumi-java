@@ -173,7 +173,7 @@ func editFile(path string, edit func([]byte) []byte) (FileEdit, error) {
 	if err != nil {
 		return nil, err
 	}
-	err = ioutil.WriteFile(path, edit(bytes), 0600)
+	err = ioutil.WriteFile(path, edit(bytes), 0o600)
 	return revertFile{path, bytes}, err
 }
 
@@ -183,5 +183,5 @@ type revertFile struct {
 }
 
 func (rf revertFile) Revert() error {
-	return ioutil.WriteFile(rf.path, rf.bytes, 0600)
+	return ioutil.WriteFile(rf.path, rf.bytes, 0o600)
 }
