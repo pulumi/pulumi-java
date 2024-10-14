@@ -91,6 +91,8 @@ tidy::
 
 clone_templates::
 	git clone https://github.com/pulumi/templates.git
+	git checkout d73ca1d9175b5763a1ccd982930f4cea48c8d7c9
 
 clone_examples::
 	git clone https://github.com/pulumi/examples.git
+	git checkout 14aa33704324571cc5807afaa71f2e1e007892dd
