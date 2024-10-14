@@ -253,6 +253,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         CompletableFuture<Boolean> monitorSupportsResourceReferences() {
             return monitorSupportsFeature("resourceReferences");
         }
+
+        @InternalUse
+        CompletableFuture<Boolean> monitorSupportsParameterization() {
+            return monitorSupportsFeature("parameterization");
+        }
     }
 
     @ParametersAreNonnullByDefault
@@ -846,21 +851,27 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         String packageVersion,
         String base64Parameter
     ) {
-        var request = RegisterPackageRequest.newBuilder()
-            .setName(baseProviderName)
-            .setVersion(baseProviderVersion)
-            .setDownloadUrl(baseProviderDownloadUrl)
-            .setParameterization(
-                Parameterization.newBuilder()
-                    .setName(packageName)
-                    .setVersion(packageVersion)
-                    .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
-                    .build()
-            )
-            .build();
+        return this.featureSupport.monitorSupportsParameterization().thenCompose(supportsParameterization -> {
+            if (!supportsParameterization) {
+                throw new UnsupportedOperationException("The Pulumi CLI does not support parameterization. Please update the Pulumi CLI.");
+            }
 
-        return this.state.monitor.registerPackageAsync(request)
-            .thenApply(response -> response.getRef());
+            var request = RegisterPackageRequest.newBuilder()
+                .setName(baseProviderName)
+                .setVersion(baseProviderVersion)
+                .setDownloadUrl(baseProviderDownloadUrl)
+                .setParameterization(
+                    Parameterization.newBuilder()
+                        .setName(packageName)
+                        .setVersion(packageVersion)
+                        .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
+                        .build()
+                )
+                .build();
+
+            return this.state.monitor.registerPackageAsync(request)
+                .thenApply(response -> response.getRef());
+        });
     }
 
     private static final class Prepare {

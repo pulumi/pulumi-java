@@ -30,34 +30,41 @@ const previewOnly = true
 
 func TestExamples(t *testing.T) {
 	t.Run("random", func(t *testing.T) {
-		test := getJavaBase(t, "random", integration.ProgramTestOptions{
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				assert.Greater(t, o["randomInteger"].(float64), -0.1)
-				assert.Len(t, o["randomString"].(string), 10)
-				assert.Len(t, o["randomUuid"].(string), 36)
-				assert.Len(t, o["randomIdHex"].(string), 20)
+		test := makeJavaProgramTestOptions(
+			t,
+			"tests/examples/random",
+			[]string{"random"},
+			integration.ProgramTestOptions{
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					assert.Greater(t, o["randomInteger"].(float64), -0.1)
+					assert.Len(t, o["randomString"].(string), 10)
+					assert.Len(t, o["randomUuid"].(string), 36)
+					assert.Len(t, o["randomIdHex"].(string), 20)
 
-				for _, s := range o["shuffled"].([]interface{}) {
-					s := s.(string)
-					assert.Contains(t, []string{"A", "B", "C"}, s)
-				}
-
-				hasCipherText := false
-				for k := range o["randomPassword"].(map[string]interface{}) {
-					if k == "ciphertext" {
-						hasCipherText = true
+					for _, s := range o["shuffled"].([]interface{}) {
+						s := s.(string)
+						assert.Contains(t, []string{"A", "B", "C"}, s)
 					}
-				}
-				assert.True(t, hasCipherText)
+
+					hasCipherText := false
+					for k := range o["randomPassword"].(map[string]interface{}) {
+						if k == "ciphertext" {
+							hasCipherText = true
+						}
+					}
+					assert.True(t, hasCipherText)
+				},
 			},
-		})
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"azure-java-static-website",
+		test := makeJavaProgramTestOptions(
+			t,
+			"examples/azure-java-static-website",
 			[]string{"azure-native"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -70,13 +77,15 @@ func TestExamples(t *testing.T) {
 					assert.True(t, strings.HasPrefix(cdnEndpoint, "https"))
 					assert.True(t, strings.HasPrefix(staticEndpoint, "https"))
 				},
-			})
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"aws-java-webserver",
+		test := makeJavaProgramTestOptions(t,
+			"examples/aws-java-webserver",
 			[]string{"aws"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -89,38 +98,44 @@ func TestExamples(t *testing.T) {
 					assert.True(t, strings.Contains(publicIp, "."))
 					assert.True(t, strings.Contains(publicHostName, "."))
 				},
-			})
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("azure-java-appservice-sql", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"azure-java-appservice-sql",
+		test := makeJavaProgramTestOptions(t,
+			"examples/azure-java-appservice-sql",
 			[]string{"azure-native"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
 					"azure-native:location":                 "westus",
 					"azure-java-appservice-sql:sqlPassword": "not-a-real-password",
 				},
-			})
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("aws-java-eks-minimal", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"aws-java-eks-minimal",
+		test := makeJavaProgramTestOptions(t,
+			"examples/aws-java-eks-minimal",
 			[]string{"eks", "aws", "kubernetes"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
 					"aws:region": "us-west-1",
 				},
-			})
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"gcp-java-gke-hello-world",
+		test := makeJavaProgramTestOptions(t,
+			"examples/gcp-java-gke-hello-world",
 			[]string{"gcp"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -128,70 +143,88 @@ func TestExamples(t *testing.T) {
 					"gcp:project": "pulumi-ci-gcp-provider",
 					"gcp:zone":    "us-west1-a",
 				},
-			})
+			},
+		)
 
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("kubernetes", func(t *testing.T) {
 		t.SkipNow()
-		test := getJavaBase(t, "kubernetes", integration.ProgramTestOptions{
-			Config: map[string]string{},
-		})
+		test := makeJavaProgramTestOptions(
+			t,
+			"tests/examples/kubernetes",
+			[]string{"kubernetes"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{},
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("minimal", func(t *testing.T) {
-		test := getJavaBase(t, "minimal", integration.ProgramTestOptions{
-			PrepareProject: func(info *engine.Projinfo) error {
-				cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
-					"--no-transfer-progress", "package")
-				cmd.Dir = info.Root
-				var buf bytes.Buffer
-				cmd.Stdout = &buf
-				cmd.Stderr = &buf
-				err := cmd.Run()
+		test := makeJavaProgramTestOptions(
+			t,
+			"tests/examples/minimal",
+			[]string{}, /*providers*/
+			integration.ProgramTestOptions{
+				PrepareProject: func(info *engine.Projinfo) error {
+					cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
+						"--no-transfer-progress", "package")
+					cmd.Dir = info.Root
+					var buf bytes.Buffer
+					cmd.Stdout = &buf
+					cmd.Stderr = &buf
+					err := cmd.Run()
+					if err != nil {
+						t.Logf("mvwn --no-transfer-progress package: %v", err)
+						t.Log(buf.String())
+					}
 
-				if err != nil {
-					t.Logf("mvwn --no-transfer-progress package: %v", err)
-					t.Log(buf.String())
-				}
+					return err
+				},
+				Config: map[string]string{
+					"name": "Pulumi",
+				},
+				Secrets: map[string]string{
+					"secret": "this is my secret message",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					// Simple runtime validation that just ensures the checkpoint was written and read.
+					assert.NotNil(t, stackInfo.Deployment)
+				},
+			},
+		)
 
-				return err
-			},
-			Config: map[string]string{
-				"name": "Pulumi",
-			},
-			Secrets: map[string]string{
-				"secret": "this is my secret message",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				// Simple runtime validation that just ensures the checkpoint was written and read.
-				assert.NotNil(t, stackInfo.Deployment)
-			},
-		})
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("minimalsbt", func(t *testing.T) {
-		test := getJavaBase(t, "minimalsbt", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"name": "Pulumi",
+		test := makeJavaProgramTestOptions(
+			t,
+			"tests/examples/minimalsbt",
+			[]string{}, /*providers*/
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"name": "Pulumi",
+				},
+				Secrets: map[string]string{
+					"secret": "this is my secret message",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					// Simple runtime validation that just ensures the checkpoint was written and read.
+					assert.NotNil(t, stackInfo.Deployment)
+				},
 			},
-			Secrets: map[string]string{
-				"secret": "this is my secret message",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				// Simple runtime validation that just ensures the checkpoint was written and read.
-				assert.NotNil(t, stackInfo.Deployment)
-			},
-		})
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"aws-native-java-s3-folder",
+		test := makeJavaProgramTestOptions(t,
+			"tests/examples/aws-native-java-s3-folder",
 			[]string{"aws", "aws-native"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -203,13 +236,15 @@ func TestExamples(t *testing.T) {
 				// provider bug. We need to recheck
 				// after upgrading to latest.
 				SkipRefresh: true,
-			})
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("azure-java-function-graal-spring", func(t *testing.T) {
-		test := getJavaBaseNew(t,
-			"azure-java-function-graal-spring",
+		test := makeJavaProgramTestOptions(t,
+			"examples/azure-java-function-graal-spring",
 			[]string{"azure-native"},
 			integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -238,41 +273,66 @@ func TestExamples(t *testing.T) {
 					}
 					return err
 				},
-			})
+			},
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("minimal-jbang", func(t *testing.T) {
-		test := getJavaBase(t, "minimal-jbang", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"minimal:name":   "minimal-name",
-				"minimal:secret": "minimal-secret",
+		test := makeJavaProgramTestOptions(
+			t,
+			"tests/examples/minimal-jbang",
+			[]string{}, /*providers*/
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"minimal:name":   "minimal-name",
+					"minimal:secret": "minimal-secret",
+				},
 			},
-		})
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("testing-unit-java", func(t *testing.T) {
-		test := getJavaBase(t, "testing-unit-java", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region": "us-east-2",
+		test := makeJavaProgramTestOptions(
+			t,
+			"tests/examples/testing-unit-java",
+			[]string{}, /*providers*/
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-east-2",
+				},
 			},
-		})
+		)
+
 		integration.ProgramTest(t, &test)
 	})
 }
 
-func getJavaBaseNew(
+// Constructs a set of integration.ProgramTestOptions for running a Java example test. The supplied directory will be
+// resolved relative to the repository root, and is typically one of the following:
+//
+//   - tests/examples/<example> if the example being tested is vendored into this repository.
+//   - examples/<example> if the example being tested is in the Pulumi examples repository, which is cloned into this one
+//     as part of running this test suite.
+func makeJavaProgramTestOptions(
 	t *testing.T,
 	dir string,
 	providers []string,
-	testSpecificOptions integration.ProgramTestOptions,
+	overrides integration.ProgramTestOptions,
 ) integration.ProgramTestOptions {
 	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
 	if err != nil {
 		panic(err)
 	}
+
 	prepareProject := func(info *engine.Projinfo) error {
+		if len(providers) == 0 {
+			return nil
+		}
+
 		deps, err := jtests.ParsePinVersionsFromEnv(t, providers)
 		if err != nil {
 			return err
@@ -280,17 +340,17 @@ func getJavaBaseNew(
 		_, err = jtests.Pin(info.Root, deps)
 		return err
 	}
-	opts := integration.ProgramTestOptions{
-		Dir: filepath.Join(repoRoot, "examples", dir),
-	}
-	opts = opts.With(getBaseOptions()).
-		With(testSpecificOptions).
+
+	opts := integration.ProgramTestOptions{Dir: filepath.Join(repoRoot, dir)}.
+		With(getBaseOptions()).
+		With(overrides).
 		With(integration.ProgramTestOptions{
 			PrepareProject: combinePrepareProject(
 				prepareProject,
-				testSpecificOptions.PrepareProject,
+				overrides.PrepareProject,
 			),
 		})
+
 	if previewOnly {
 		opts = opts.With(integration.ProgramTestOptions{
 			SkipRefresh:            true,
@@ -300,6 +360,7 @@ func getJavaBaseNew(
 		})
 		opts.ExtraRuntimeValidation = nil
 	}
+
 	return opts
 }
 
@@ -317,26 +378,6 @@ func combinePrepareProject(f1, f2 func(info *engine.Projinfo) error) func(info *
 	}
 }
 
-func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
-	opts := integration.ProgramTestOptions{
-		Dir: filepath.Join(getCwd(t), dir),
-		PrepareProject: func(*engine.Projinfo) error {
-			return nil // needed because defaultPrepareProject does not know about java
-		},
-	}
-	opts = opts.With(getBaseOptions()).With(testSpecificOptions)
-	if previewOnly {
-		opts = opts.With(integration.ProgramTestOptions{
-			SkipRefresh:            true,
-			SkipEmptyPreviewUpdate: true,
-			SkipExportImport:       true,
-			SkipUpdate:             true,
-		})
-		opts.ExtraRuntimeValidation = nil
-	}
-	return opts
-}
-
 // Copied from: https://github.com/pulumi/examples/blob/4fb1f146409ace4af1945f84ee9c90c643430e9d/misc/test/examples_test.go
 
 func assertHTTPResult(t *testing.T, output interface{}, headers map[string]string, check func(string) bool) bool {
@@ -348,7 +389,8 @@ func assertHTTPResultWithRetry(t *testing.T, output interface{}, headers map[str
 }
 
 func assertHTTPResultShapeWithRetry(t *testing.T, output interface{}, headers map[string]string, maxWait time.Duration,
-	ready func(string) bool, check func(string) bool) bool {
+	ready func(string) bool, check func(string) bool,
+) bool {
 	hostname, ok := output.(string)
 	if !assert.True(t, ok, fmt.Sprintf("expected `%s` output", output)) {
 		return false
