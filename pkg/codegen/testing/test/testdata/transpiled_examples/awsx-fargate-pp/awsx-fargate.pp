@@ -1,9 +1,17 @@
 resource cluster "aws:ecs/cluster:Cluster" {
 	__logicalName = "cluster"
+
+	options {
+		version = "5.16.2"
+	}
 }
 
 resource lb "awsx:lb:ApplicationLoadBalancer" {
 	__logicalName = "lb"
+
+	options {
+		version = "1.0.0-beta.5"
+	}
 }
 
 resource nginx "awsx:ecs:FargateService" {
@@ -19,6 +27,10 @@ resource nginx "awsx:ecs:FargateService" {
 				targetGroup = lb.defaultTargetGroup
 			}]
 		}
+	}
+
+	options {
+		version = "1.0.0-beta.5"
 	}
 }
 
