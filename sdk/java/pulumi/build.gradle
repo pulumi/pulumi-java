@@ -2,7 +2,7 @@ plugins {
     id("signing")
     id("java-library")
     id("maven-publish")
-    id("com.google.protobuf") version "0.9.3"
+    id("com.google.protobuf") version "0.9.4"
 }
 
 version = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
@@ -22,13 +22,13 @@ repositories {
     mavenLocal()
 }
 
-def grpcVersion = "1.54.1"
-def protobufVersion = "3.24.1"
+def grpcVersion = "1.57.2"
+def protobufVersion = "3.25.5"
 def protocVersion = protobufVersion
 def guavaVersion = "32.1.2-jre"
 def assertjCoreVersion = "3.23.1"
-def junitVersion = "5.9.3"
-def mockitoCoreVersion = "5.3.1"
+def junitVersion = "5.10.0"
+def mockitoCoreVersion = "5.14.2"
 
 dependencies {
     implementation("io.grpc:grpc-protobuf:${grpcVersion}") {
