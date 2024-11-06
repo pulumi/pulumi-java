@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+## 0.17.0 (2024-11-05)
+
+### Improvements
+
+- Feature flag parameterized provider support
+
+- Upgrade Golang and Java dependencies
+
+- Update to Pulumi 3.137.0
+
 ## 0.16.1 (2024-09-13)
 
 ### Improvements
