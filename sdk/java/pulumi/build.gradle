@@ -26,7 +26,7 @@ def grpcVersion = "1.57.2"
 def protobufVersion = "3.25.5"
 def protocVersion = protobufVersion
 def guavaVersion = "32.1.2-jre"
-def assertjCoreVersion = "3.23.1"
+def assertjCoreVersion = "3.26.3"
 def junitVersion = "5.10.0"
 def mockitoCoreVersion = "5.14.2"
 
