@@ -9,9 +9,11 @@ import (
 	"io"
 	"os"
 	"path"
+	"slices"
 	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
+	"golang.org/x/exp/maps"
 
 	"github.com/zclconf/go-cty/cty"
 
@@ -209,7 +211,12 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	return files, g.diagnostics, nil
 }
 
-func GenerateProject(directory string, project workspace.Project, program *pcl.Program) error {
+func GenerateProject(
+	directory string,
+	project workspace.Project,
+	program *pcl.Program,
+	localDependencies map[string]string,
+) error {
 	files, diagnostics, err := GenerateProgram(program)
 	if err != nil {
 		return err
@@ -248,14 +255,55 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 		if version != nil {
 			dependencySection := fmt.Sprintf(
 				`<dependency>
-            		<groupId>com.pulumi</groupId>
-            		<artifactId>%s</artifactId>
-            		<version>%s</version>
-        		</dependency>`,
+					<groupId>com.pulumi</groupId>
+					<artifactId>%s</artifactId>
+					<version>%s</version>
+				</dependency>`,
 				packageName, version.String(),
 			)
 			mavenDependenciesXML.WriteString(dependencySection)
 		}
+	}
+
+	repositories := make(map[string]bool)
+	coreSDKVersion := "(,1.0]"
+	for name, dep := range localDependencies {
+		parts := strings.Split(dep, ":")
+		if len(parts) < 3 {
+			return fmt.Errorf(
+				"invalid dependency for %s %s; must be of the form groupId:artifactId:version[:repositoryPath]",
+				name, dep,
+			)
+		}
+
+		if name == "pulumi" {
+			coreSDKVersion = parts[2]
+		}
+
+		if len(parts) == 4 {
+			repositories[parts[3]] = true
+		}
+	}
+
+	repositoryURLs := maps.Keys(repositories)
+	slices.Sort(repositoryURLs)
+
+	var repositoriesXML bytes.Buffer
+	if len(repositoryURLs) > 0 {
+		repositoriesXML.WriteString(`
+			<repositories>`)
+
+		for id, url := range repositoryURLs {
+			repositoriesXML.WriteString(fmt.Sprintf(`
+				<repository>
+					<id>repository-%d</id>
+					<url>file://%s</url>
+				</repository>`, id, url))
+		}
+
+		repositoriesXML.WriteString(`
+			</repositories>
+`)
 	}
 
 	mavenPomXML := bytes.NewBufferString(fmt.Sprintf(
@@ -277,12 +325,12 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 				<mainClass>generated_program.App</mainClass>
 				<mainArgs/>
 			</properties>
-
+			%s
 			<dependencies>
 				<dependency>
 					<groupId>com.pulumi</groupId>
 					<artifactId>pulumi</artifactId>
-					<version>(,1.0]</version>
+					<version>%s</version>
 				</dependency>
 				%s
 			</dependencies>
@@ -347,7 +395,10 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 				</plugins>
 			</build>
 		</project>`,
-		project.Name.String(), mavenDependenciesXML.String(),
+		project.Name.String(),
+		repositoriesXML.String(),
+		coreSDKVersion,
+		mavenDependenciesXML.String(),
 	))
 	filesWithPackages["pom.xml"] = mavenPomXML.Bytes()
 

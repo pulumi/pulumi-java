@@ -18,6 +18,8 @@ import (
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
@@ -25,13 +27,16 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/types/known/structpb"
 
+	codegen "github.com/pulumi/pulumi-java/pkg/codegen/java"
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	hclsyntax "github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -562,5 +567,111 @@ func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest
 		Executable: java,
 		Version:    version,
 		Metadata:   metadata,
+	}, nil
+}
+
+// Implements the `LanguageRuntime.GenerateProject` RPC method, which generates a Java project for the given request.
+// This is just a thin RPC wrapper around the `pkg/codegen` implementation of `GenerateProject`. A project encompasses a
+// program (that is, Java source code) and any other pieces needed to build, run and package that program (e.g. build
+// system files, dependencies, etc.). Presently Java project generation uses Maven to this end.
+func (host *javaLanguageHost) GenerateProject(
+	_ context.Context,
+	req *pulumirpc.GenerateProjectRequest,
+) (*pulumirpc.GenerateProjectResponse, error) {
+	loader, err := schema.NewLoaderClient(req.LoaderTarget)
+	if err != nil {
+		return nil, err
+	}
+
+	var extraOptions []pcl.BindOption
+	if !req.Strict {
+		extraOptions = append(extraOptions, pcl.NonStrictBindOptions()...)
+	}
+
+	program, diags, err := pcl.BindDirectory(req.SourceDirectory, loader, extraOptions...)
+	if err != nil {
+		return nil, err
+	}
+
+	if diags.HasErrors() {
+		rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+		return &pulumirpc.GenerateProjectResponse{
+			Diagnostics: rpcDiagnostics,
+		}, nil
+	}
+
+	if program == nil {
+		return nil, errors.New("internal error: program was nil")
+	}
+
+	var project workspace.Project
+	if err := json.Unmarshal([]byte(req.Project), &project); err != nil {
+		return nil, err
+	}
+
+	err = codegen.GenerateProject(
+		req.TargetDirectory,
+		project,
+		program,
+		req.LocalDependencies,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+	return &pulumirpc.GenerateProjectResponse{
+		Diagnostics: rpcDiagnostics,
+	}, nil
+}
+
+// Implements the `LanguageRuntime.GenerateProgram` RPC method, which generates a Java program for the given request.
+// This is just a thin RPC wrapper around the `pkg/codegen` implementation of programgen.
+func (host *javaLanguageHost) GenerateProgram(
+	_ context.Context,
+	req *pulumirpc.GenerateProgramRequest,
+) (*pulumirpc.GenerateProgramResponse, error) {
+	loader, err := schema.NewLoaderClient(req.LoaderTarget)
+	if err != nil {
+		return nil, err
+	}
+
+	parser := hclsyntax.NewParser()
+	// Load all .pp files in the directory
+	for path, contents := range req.Source {
+		err = parser.ParseFile(strings.NewReader(contents), path)
+		if err != nil {
+			return nil, err
+		}
+		diags := parser.Diagnostics
+		if diags.HasErrors() {
+			return nil, diags
+		}
+	}
+
+	program, diags, err := pcl.BindProgram(parser.Files, pcl.Loader(loader))
+	if err != nil {
+		return nil, err
+	}
+
+	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+	if diags.HasErrors() {
+		return &pulumirpc.GenerateProgramResponse{
+			Diagnostics: rpcDiagnostics,
+		}, nil
+	}
+	if program == nil {
+		return nil, errors.New("internal error: program was nil")
+	}
+
+	files, diags, err := codegen.GenerateProgram(program)
+	if err != nil {
+		return nil, err
+	}
+	rpcDiagnostics = append(rpcDiagnostics, plugin.HclDiagnosticsToRPCDiagnostics(diags)...)
+
+	return &pulumirpc.GenerateProgramResponse{
+		Source:      files,
+		Diagnostics: rpcDiagnostics,
 	}, nil
 }
