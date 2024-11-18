@@ -1,9 +1,5 @@
 ### Improvements
 
-- Feature flag parameterized provider support
-
-- Upgrade Golang and Java dependencies
-
-- Update to Pulumi 3.137.0
+- Update to Pulumi 3.139.0
 
 ### Bug Fixes
