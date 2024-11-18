@@ -126,10 +126,9 @@ func setupHealthChecks(engineAddress string) (chan bool, error) {
 type javaLanguageHost struct {
 	pulumirpc.UnimplementedLanguageRuntimeServer
 
-	currentExecutor *executors.JavaExecutor
-	execOptions     executors.JavaExecutorOptions
-	engineAddress   string
-	tracing         string
+	execOptions   executors.JavaExecutorOptions
+	engineAddress string
+	tracing       string
 }
 
 func newLanguageHost(execOptions executors.JavaExecutorOptions,
@@ -143,14 +142,11 @@ func newLanguageHost(execOptions executors.JavaExecutorOptions,
 }
 
 func (host *javaLanguageHost) Executor(attachDebugger bool) (*executors.JavaExecutor, error) {
-	if host.currentExecutor == nil || attachDebugger {
-		executor, err := executors.NewJavaExecutor(host.execOptions, attachDebugger)
-		if err != nil {
-			return nil, err
-		}
-		host.currentExecutor = executor
+	executor, err := executors.NewJavaExecutor(host.execOptions, attachDebugger)
+	if err != nil {
+		return nil, err
 	}
-	return host.currentExecutor, nil
+	return executor, nil
 }
 
 // GetRequiredPlugins computes the complete set of anticipated plugins required by a program.
