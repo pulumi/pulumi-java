@@ -166,7 +166,7 @@ func (host *javaLanguageHost) GetRequiredPlugins(
 	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram()) //nolint:staticcheck
 
 	// now, introspect the user project to see which pulumi resource packages it references.
-	pulumiPackages, err := host.determinePulumiPackages(ctx)
+	pulumiPackages, err := host.determinePulumiPackages(ctx, req)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host could not determine Pulumi packages")
 	}
@@ -200,6 +200,7 @@ func (host *javaLanguageHost) GetRequiredPlugins(
 
 func (host *javaLanguageHost) determinePulumiPackages(
 	ctx context.Context,
+	req *pulumirpc.GetRequiredPluginsRequest,
 ) ([]plugin.PulumiPluginJSON, error) {
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
@@ -212,7 +213,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	cmd := exec.Cmd
 	args := exec.PluginArgs
 	quiet := true
-	output, err := host.runJavaCommand(ctx, exec.Dir, cmd, args, quiet)
+	output, err := host.runJavaCommand(ctx, req.Info.ProgramDirectory, cmd, args, quiet)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
@@ -336,9 +337,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
-	if executor.Dir != "" {
-		cmd.Dir = executor.Dir
-	}
+	cmd.Dir = req.Info.ProgramDirectory
 
 	var stdoutBuf bytes.Buffer
 	var stderrBuf bytes.Buffer
@@ -483,9 +482,7 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	// intentionally running dynamic program name.
 	cmd := exec.Command(executor.Cmd, executor.BuildArgs...) // nolint: gas
-	if executor.Dir != "" {
-		cmd.Dir = executor.Dir
-	}
+	cmd.Dir = req.Info.ProgramDirectory
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
 
@@ -499,9 +496,18 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 }
 
 func (host *javaLanguageHost) GetProgramDependencies(
-	_ context.Context, _ *pulumirpc.GetProgramDependenciesRequest,
+	ctx context.Context,
+	req *pulumirpc.GetProgramDependenciesRequest,
 ) (*pulumirpc.GetProgramDependenciesResponse, error) {
-	// TODO: Implement dependency fetcher for Java
+	executor, err := host.Executor(false)
+	if err != nil {
+		return nil, err
+	}
+
+	if executor.GetProgramDependencies != nil {
+		return executor.GetProgramDependencies(ctx, req)
+	}
+
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 

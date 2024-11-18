@@ -8,4 +8,6 @@
 
 - Implement the `Pack` RPC endpoint for Java
 
+- Enable language conformance tests for Java
+
 ### Bug Fixes
