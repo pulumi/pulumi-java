@@ -6,4 +6,6 @@
 
 - Implement the `GeneratePackage` RPC endpoint for Java
 
+- Implement the `Pack` RPC endpoint for Java
+
 ### Bug Fixes
