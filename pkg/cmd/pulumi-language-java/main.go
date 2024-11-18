@@ -13,6 +13,7 @@ import (
 	"os"
 	"os/exec"
 	"os/signal"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -29,6 +30,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
+	"golang.org/x/exp/maps"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/types/known/structpb"
@@ -672,6 +674,96 @@ func (host *javaLanguageHost) GenerateProgram(
 
 	return &pulumirpc.GenerateProgramResponse{
 		Source:      files,
+		Diagnostics: rpcDiagnostics,
+	}, nil
+}
+
+// Implements the `LanguageRuntime.GeneratePackage` RPC method, which generates a Java SDK package from a supplied
+// schema.
+func (host *javaLanguageHost) GeneratePackage(
+	_ context.Context,
+	req *pulumirpc.GeneratePackageRequest,
+) (*pulumirpc.GeneratePackageResponse, error) {
+	loader, err := schema.NewLoaderClient(req.LoaderTarget)
+	if err != nil {
+		return nil, err
+	}
+
+	var spec schema.PackageSpec
+	err = json.Unmarshal([]byte(req.Schema), &spec)
+	if err != nil {
+		return nil, err
+	}
+
+	pkg, diags, err := schema.BindSpec(spec, loader)
+	if err != nil {
+		return nil, err
+	}
+	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
+	if diags.HasErrors() {
+		return &pulumirpc.GeneratePackageResponse{
+			Diagnostics: rpcDiagnostics,
+		}, nil
+	}
+
+	if pkg.Description == "" {
+		pkg.Description = " "
+	}
+	if pkg.Repository == "" {
+		pkg.Repository = "https://example.com"
+	}
+
+	// Presently, we only support generating Java SDKs which use Gradle as a build system. Specify that here, as well as
+	// the set of dependencies that all generated SDKs rely on.
+	pkgInfo := codegen.PackageInfo{
+		BuildFiles: "gradle",
+		Dependencies: map[string]string{
+			"com.google.code.gson:gson":       "2.8.9",
+			"com.google.code.findbugs:jsr305": "3.0.2",
+		},
+	}
+
+	repositories := map[string]bool{}
+
+	for name, dep := range req.LocalDependencies {
+		parts := strings.Split(dep, ":")
+		if len(parts) < 3 {
+			return nil, fmt.Errorf(
+				"invalid dependency for %s %s; must be of the form groupId:artifactId:version[:repositoryPath]",
+				name, dep,
+			)
+		}
+
+		k := parts[0] + ":" + parts[1]
+		pkgInfo.Dependencies[k] = parts[2]
+
+		if len(parts) == 4 {
+			repositories[parts[3]] = true
+		}
+	}
+
+	pkgInfo.Repositories = maps.Keys(repositories)
+	pkg.Language["java"] = pkgInfo
+
+	files, err := codegen.GeneratePackage("pulumi-language-java", pkg, req.ExtraFiles, req.Local)
+	if err != nil {
+		return nil, err
+	}
+
+	for filename, data := range files {
+		outPath := filepath.Join(req.Directory, filename)
+		err := os.MkdirAll(filepath.Dir(outPath), 0o700)
+		if err != nil {
+			return nil, fmt.Errorf("could not create output directory %s: %w", filepath.Dir(filename), err)
+		}
+
+		err = os.WriteFile(outPath, data, 0o600)
+		if err != nil {
+			return nil, fmt.Errorf("could not write output file %s: %w", filename, err)
+		}
+	}
+
+	return &pulumirpc.GeneratePackageResponse{
 		Diagnostics: rpcDiagnostics,
 	}, nil
 }

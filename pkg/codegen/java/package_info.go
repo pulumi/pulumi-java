@@ -76,6 +76,11 @@ type PackageInfo struct {
 	// Gradle build files.
 	BuildFiles string `json:"buildFiles"`
 
+	// If non-empty, specifies a list of Maven repositories that should be
+	// referenced by the generated package. This can be useful for specifying
+	// the locations of e.g. local or private dependencies.
+	Repositories []string `json:"repositories,omitempty"`
+
 	// Specifies Maven-style dependencies for the generated code.
 	//
 	// The dependency on Java SDK (com.pulumi:pulumi) is special
