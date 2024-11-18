@@ -7,6 +7,7 @@ import (
 	_ "embed"
 	"fmt"
 	"net/url"
+	"slices"
 	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
@@ -74,6 +75,7 @@ type gradleTemplateContext struct {
 	ProjectGitURL                   string
 	ProjectDescription              string
 	ProjectInceptionYear            string
+	Repositories                    []string
 	Dependencies                    map[string]string
 	DeveloperID                     string
 	DeveloperName                   string
@@ -108,6 +110,13 @@ func newGradleTemplateContext(
 		ctx.Version = pkg.Version.String()
 	} else {
 		ctx.Version = "0.0.1"
+	}
+
+	if packageInfo.Repositories != nil {
+		ctx.Repositories = packageInfo.Repositories
+		slices.Sort(ctx.Repositories)
+	} else {
+		ctx.Repositories = []string{}
 	}
 
 	if packageInfo.Dependencies != nil {

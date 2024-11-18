@@ -4,4 +4,6 @@
 
 - Implement `GenerateProgram` and `GenerateProject` RPC endpoints for Java
 
+- Implement the `GeneratePackage` RPC endpoint for Java
+
 ### Bug Fixes
