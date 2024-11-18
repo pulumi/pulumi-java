@@ -1664,7 +1664,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 if (rootResource == null) {
                     try {
                         var stack = DeploymentInternal.getInstance().getStack();
-                        rootResource = setRootResourceWorkerAsync(stack);
+                        rootResource = Internal.of(stack.urn()).getValueOptional();
                     } catch (IllegalStateException ex) {
                         throw new IllegalStateException("Calling getRootResourceAsync before the stack was registered!");
                     }
@@ -1672,22 +1672,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             }
 
             return this.rootResource;
-        }
-
-        private CompletableFuture<Optional<String>> setRootResourceWorkerAsync(Stack stack) {
-            return Internal.of(stack.urn())
-                    .getValueNullable()
-                    .thenCompose(
-                            resUrn -> this.engine.setRootResourceAsync(
-                                    EngineOuterClass.SetRootResourceRequest.newBuilder()
-                                            .setUrn(resUrn)
-                                            .build()
-                            ).thenCompose(
-                                    ignore -> this.engine.getRootResourceAsync(
-                                            EngineOuterClass.GetRootResourceRequest.newBuilder().build()
-                                    ).thenApply(EngineOuterClass.GetRootResourceResponse::getUrn)
-                            )
-                    ).thenApply(Optional::ofNullable);
         }
     }
 
