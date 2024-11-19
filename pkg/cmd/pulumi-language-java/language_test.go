@@ -186,7 +186,6 @@ var expectedFailures = map[string]string{
 	"l2-resource-asset-archive":             "unimplemented for Java",
 	"l2-resource-config":                    "unimplemented for Java",
 	"l2-resource-primitives":                "unimplemented for Java",
-	"l2-resource-simple":                    "unimplemented for Java",
 	"l2-target-up-with-new-dependency":      "unimplemented for Java",
 }
 
