@@ -3,10 +3,12 @@
 package executors
 
 import (
+	"context"
 	"errors"
 	"fmt"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 )
 
 // Abstracts interactions with a Java project, ability to build, run
@@ -28,6 +30,13 @@ type JavaExecutor struct {
 	// Command to autodetect and print Pulumi plugins depended on
 	// by the Java program.
 	PluginArgs []string
+
+	// Returns a list of program dependencies as configured for the executor (e.g. in a `pom.xml` for Maven, or a
+	// `build.gradle` for Gradle).
+	GetProgramDependencies func(
+		ctx context.Context,
+		req *pulumirpc.GetProgramDependenciesRequest,
+	) (*pulumirpc.GetProgramDependenciesResponse, error)
 }
 
 // Information available to pick an executor.

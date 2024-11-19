@@ -9,8 +9,8 @@ replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
 require (
-	github.com/pulumi/pulumi/pkg/v3 v3.139.0
-	github.com/pulumi/pulumi/sdk/v3 v3.139.0
+	github.com/pulumi/pulumi/pkg/v3 v3.140.0
+	github.com/pulumi/pulumi/sdk/v3 v3.140.0
 	github.com/stretchr/testify v1.9.0
 )
 

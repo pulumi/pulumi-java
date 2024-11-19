@@ -14,8 +14,8 @@ require (
 	github.com/hashicorp/hcl/v2 v2.22.0
 	github.com/hexops/autogold/v2 v2.2.1
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.139.0
-	github.com/pulumi/pulumi/sdk/v3 v3.139.0
+	github.com/pulumi/pulumi/pkg/v3 v3.140.0
+	github.com/pulumi/pulumi/sdk/v3 v3.140.0
 	github.com/spf13/cobra v1.8.0
 	github.com/stretchr/testify v1.9.0
 	github.com/zclconf/go-cty v1.13.2
