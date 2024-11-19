@@ -7,6 +7,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"encoding/xml"
 	"flag"
 	"fmt"
 	"io"
@@ -25,6 +26,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
@@ -766,4 +768,135 @@ func (host *javaLanguageHost) GeneratePackage(
 	return &pulumirpc.GeneratePackageResponse{
 		Diagnostics: rpcDiagnostics,
 	}, nil
+}
+
+// Implements the `LanguageRuntime.Pack` RPC method, which packs a package (SDK) into a language-specific artifact. In
+// the case of Java, the artifacts in question are *Java Archives* (or JARs/`.jar` files).
+//
+// The incoming `PackRequest` specifies the directory to be packaged and where the packed artifact should be produced.
+// Since we expect that our packed artifacts will be consumed by other Java libraries and programs, this implementation
+// creates a Maven artifact repository at the specified location and publishes a `.jar` there using the
+// `publishToMavenLocal` Gradle target (generated SDKs, which is what we expect to be packing, currently use Gradle as
+// their build system). We then return in the `PackResponse` the path to the `.jar` we published.
+func (host *javaLanguageHost) Pack(_ context.Context, req *pulumirpc.PackRequest) (*pulumirpc.PackResponse, error) {
+	buildPath, err := os.MkdirTemp("", "pulumi-java-pack")
+	if err != nil {
+		return nil, fmt.Errorf("failed to create build directory: %w", err)
+	}
+
+	repoPath := filepath.Join(req.DestinationDirectory, "repo")
+
+	err = fsutil.CopyFile(buildPath, req.PackageDirectory, nil)
+	if err != nil {
+		return nil, fmt.Errorf("copy package: %w", err)
+	}
+
+	name, err := getGradleProperty(buildPath, "name")
+	if err != nil {
+		return nil, fmt.Errorf("get gradle project name: %w", err)
+	}
+
+	// Generated SDKs reside at the top level of the generated directory tree. Due to the layout of this repository,
+	// however, the core Pulumi SDK resides under a `pulumi` subdirectory. We thus implement a hack here to handle this
+	// case and adjust the build path accordingly.
+	gradleWd := buildPath
+
+	publication := "mainPublication"
+	generatePOMTask := "generatePomFileForMainPublicationPublication"
+
+	if name == "pulumi" {
+		gradleWd = filepath.Join(buildPath, "pulumi")
+
+		publication = "gpr"
+		generatePOMTask = "generatePomFileForGprPublication"
+	}
+
+	gradleGeneratePOMCmd := exec.Command(
+		"gradle",
+		generatePOMTask,
+	)
+	gradleGeneratePOMCmd.Dir = gradleWd
+	gradleGeneratePOMCmd.Stdout = os.Stdout
+	gradleGeneratePOMCmd.Stderr = os.Stderr
+	err = gradleGeneratePOMCmd.Run()
+	if err != nil {
+		return nil, fmt.Errorf("gradle generatePom: %w", err)
+	}
+
+	var pomProject POMProject
+	pomPath := filepath.Join(gradleWd, "build", "publications", publication, "pom-default.xml")
+	pomFile, err := os.ReadFile(pomPath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read generated POM file: %w", err)
+	}
+
+	err = xml.Unmarshal(pomFile, &pomProject)
+	if err != nil {
+		return nil, fmt.Errorf("failed to unmarshal generated POM file: %w", err)
+	}
+
+	//nolint:gosec
+	gradlePublishCmd := exec.Command(
+		"gradle",
+		"-Dmaven.repo.local="+repoPath, //nolint:gosec
+		"publishToMavenLocal",
+	)
+	gradlePublishCmd.Dir = gradleWd
+	gradlePublishCmd.Stdout = os.Stdout
+	gradlePublishCmd.Stderr = os.Stderr
+	err = gradlePublishCmd.Run()
+	if err != nil {
+		return nil, fmt.Errorf("gradle publish: %w", err)
+	}
+
+	artifactPath := fmt.Sprintf(
+		"%s:%s:%s:%s",
+		pomProject.Group,
+		pomProject.Artifact,
+		pomProject.Version,
+		repoPath,
+	)
+
+	err = os.RemoveAll(buildPath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to remove build path: %w", err)
+	}
+
+	return &pulumirpc.PackResponse{ArtifactPath: artifactPath}, nil
+}
+
+func getGradleProperty(projectDir string, property string) (string, error) {
+	var stdout bytes.Buffer
+	cmd := exec.Command("gradle", "properties")
+	cmd.Dir = projectDir
+	cmd.Stdout = &stdout
+	cmd.Stderr = os.Stderr
+	err := cmd.Run()
+	if err != nil {
+		return "", fmt.Errorf("gradle properties: %w", err)
+	}
+
+	scanner := bufio.NewScanner(&stdout)
+	prefix := fmt.Sprintf("%s: ", property)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if strings.HasPrefix(line, prefix) {
+			return strings.TrimPrefix(line, prefix), nil
+		}
+	}
+
+	return "", fmt.Errorf("could not find property %s in gradle properties", property)
+}
+
+// POMProject represents a subset of the Maven Project Object Model (POM) file specification. It is used in this module
+// for decoding key information from a `pom.xml` file.
+type POMProject struct {
+	// The top-level `<project>` tag in the POM file.
+	XMLName xml.Name `xml:"project"`
+	// The ID of the group or company that created the project, encoded in the `<groupId>` tag.
+	Group string `xml:"groupId"`
+	// The ID of the artifact produced by the project, encoded in the `<artifactId>` tag.
+	Artifact string `xml:"artifactId"`
+	// The version of the artifact produced by the project, encoded in the `<version>` tag.
+	Version string `xml:"version"`
 }
