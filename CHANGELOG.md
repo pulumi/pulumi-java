@@ -1,12 +1,6 @@
 CHANGELOG
 =========
 
-## Unreleased
-
-### Improvements
-
-- Update `io.github.gradle-nexus.publish-plugin` to 2.0.0 from 1.1.0.
-
 ## 0.17.0 (2024-11-05)
 
 ### Improvements

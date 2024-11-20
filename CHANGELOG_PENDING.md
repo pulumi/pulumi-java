@@ -10,4 +10,6 @@
 
 - Enable language conformance tests for Java
 
+- Update `io.github.gradle-nexus.publish-plugin` to 2.0.0 from 1.1.0.
+
 ### Bug Fixes
