@@ -174,7 +174,7 @@ func parseBuildOption(buildOption string) (java.PackageInfo, error) {
 	case "gradle-nexus":
 		return java.PackageInfo{
 			BuildFiles:                      "gradle",
-			GradleNexusPublishPluginVersion: "1.1.0",
+			GradleNexusPublishPluginVersion: "2.0.0",
 		}, nil
 	}
 	if strings.HasPrefix(buildOption, "gradle-nexus:") {
