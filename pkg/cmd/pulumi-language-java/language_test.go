@@ -168,7 +168,6 @@ var expectedFailures = map[string]string{
 	"l1-output-number":                      "unimplemented for Java",
 	"l1-output-string":                      "unimplemented for Java",
 	"l1-stack-reference":                    "unimplemented for Java",
-	"l2-explicit-provider":                  "unimplemented for Java",
 	"l2-failed-create-continue-on-error":    "unimplemented for Java",
 	"l2-invoke-dependencies":                "unimplemented for Java",
 	"l2-invoke-options":                     "unimplemented for Java",
