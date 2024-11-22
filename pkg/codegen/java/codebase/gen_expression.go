@@ -199,6 +199,9 @@ func (g *generator) generateBinaryOpExpression(e *model.BinaryOpExpression) Expr
 
 func (g *generator) generateFunctionCallExpression(e *model.FunctionCallExpression) Expression {
 	switch e.Name {
+	case "__output":
+		return g.compilationUnit.Import(JPulumiOutput).AsExpression().
+			Method("of", g.generateExpressions(e.Args...)...)
 	case pcl.IntrinsicApply:
 		args, then := pcl.ParseApplyCall(e)
 		if len(args) == 1 {
@@ -215,7 +218,7 @@ func (g *generator) generateFunctionCallExpression(e *model.FunctionCallExpressi
 				Method("get", g.generateExpressions(e.Args...)...),
 		)
 	case pcl.IntrinsicConvert:
-		return g.generateExpression(e.Args[0])
+		return g.generateConvertExpression(e)
 	case pcl.Invoke:
 		return g.generateInvokeFunctionCallExpression(e)
 	case "join":
@@ -263,6 +266,29 @@ func (g *generator) generateIndexExpression(e *model.IndexExpression) Expression
 	target := g.generateExpression(e.Collection)
 	key := g.generateExpression(e.Key)
 	return target.Method("get", key)
+}
+
+func (g *generator) generateConvertExpression(e *model.FunctionCallExpression) Expression {
+	from := e.Args[0]
+	to := pcl.LowerConversion(from, e.Signature.ReturnType)
+
+	switch from := from.(type) {
+	case *model.LiteralValueExpression:
+		return g.compilationUnit.Import(JPulumiOutput).AsExpression().
+			Method("of", g.generateLiteralValueExpression(from))
+	}
+
+	g.diagnostics = append(g.diagnostics, &hcl.Diagnostic{
+		Severity: hcl.DiagError,
+		Summary: fmt.Sprintf(
+			"Unexpected conversion from %T (%v) to %T (%v)",
+			from, from.SyntaxNode().Range().Ptr(),
+			to, e.SyntaxNode().Range().Ptr(),
+		),
+		Subject: e.SyntaxNode().Range().Ptr(),
+	})
+
+	return NullE
 }
 
 func (g *generator) generateLiteralValueExpression(e *model.LiteralValueExpression) Expression {
@@ -458,6 +484,32 @@ func (g *generator) generateUnaryOpExpression(e *model.UnaryOpExpression) Expres
 
 		return NullE
 	}
+}
+
+func (g *generator) toOutput(e model.Expression) (model.Expression, model.Type) {
+	resultT := e.Type()
+	_, isOutput := resultT.(*model.OutputType)
+	if !isOutput {
+		resultT = model.NewOutputType(resultT)
+	}
+
+	switch expr := e.(type) {
+	case *model.TupleConsExpression:
+		for i, e := range expr.Expressions {
+			eo, _ := g.toOutput(e)
+			expr.Expressions[i] = eo
+		}
+	case *model.ObjectConsExpression:
+		for i, item := range expr.Items {
+			eo, _ := g.toOutput(item.Value)
+			expr.Items[i] = model.ObjectConsItem{
+				Key:   item.Key,
+				Value: eo,
+			}
+		}
+	}
+
+	return pcl.NewConvertCall(e, resultT), resultT
 }
 
 func (g *generator) applyPclRewrites(e model.Expression, t model.Type) model.Expression {

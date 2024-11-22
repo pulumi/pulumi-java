@@ -161,7 +161,6 @@ func TestLanguage(t *testing.T) {
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
 	"l1-builtin-info":                       "unimplemented for Java",
-	"l1-main":                               "unimplemented for Java",
 	"l1-output-array":                       "unimplemented for Java",
 	"l1-output-bool":                        "unimplemented for Java",
 	"l1-output-map":                         "unimplemented for Java",

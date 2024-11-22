@@ -138,7 +138,9 @@ func (g *generator) generateLocalVariable(v *pcl.LocalVariable) []Statement {
 
 func (g *generator) generateOutputVariable(v *pcl.OutputVariable) []Statement {
 	ctx := NewSymbol("", "ctx")
-	e := g.applyPclRewrites(v.Value, v.Type())
+
+	e, ty := g.toOutput(v.Value)
+	e = g.applyPclRewrites(e, ty)
 
 	return []Statement{
 		ExprS(
