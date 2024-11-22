@@ -29,6 +29,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.exceptions.LogException;
 import com.pulumi.exceptions.ResourceException;
 import com.pulumi.exceptions.RunException;
@@ -129,12 +130,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.serialization = new PropertiesSerializer(this.log);
         this.deserializer = new Deserializer(this.log);
         this.converter = new Converter(this.log, this.deserializer);
-        this.invoke = new Invoke(
-                this.log, state.monitor, this.featureSupport, this.serialization, this.converter,
-                DeploymentState.DisableResourceReferences
-        );
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
+        this.invoke = new Invoke(
+                this.log, state.monitor, this.featureSupport, this.serialization, this.converter, this.prepare,
+                DeploymentState.DisableResourceReferences
+        );
         this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
         this.readResource = new ReadResource(
                 this.log, this.prepare, state.monitor,
@@ -419,6 +420,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
         return this.invoke.invoke(token, targetType, args, options, packageRef);
     }
+    
+    @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options) {
+        return this.invoke.invoke(token, targetType, args, options);
+    }
+
+    @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options, CompletableFuture<String> packageRef) {
+        return this.invoke.invoke(token, targetType, args, options, packageRef);
+    }
 
     @Override
     public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options) {
@@ -454,6 +465,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final PropertiesSerializer serialization;
         private final Converter converter;
         private final boolean disableResourceReferences;
+        private final Prepare prepare;
 
         private Invoke(
                 Log log,
@@ -461,6 +473,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 FeatureSupport featureSupport,
                 PropertiesSerializer serialization,
                 Converter converter,
+                Prepare prepare,
                 boolean disableResourceReferences
         ) {
             this.log = Objects.requireNonNull(log);
@@ -468,6 +481,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.featureSupport = Objects.requireNonNull(featureSupport);
             this.serialization = Objects.requireNonNull(serialization);
             this.converter = Objects.requireNonNull(converter);
+            this.prepare = Objects.requireNonNull(prepare);
             this.disableResourceReferences = disableResourceReferences;
         }
 
@@ -476,6 +490,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+            return invoke(token, targetType, args, options, null);
+        }
+
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options) {
             return invoke(token, targetType, args, options, null);
         }
 
@@ -505,6 +523,32 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     }));
         }
 
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options, CompletableFuture<String> packageRef) {
+            Objects.requireNonNull(token);
+            Objects.requireNonNull(targetType);
+            Objects.requireNonNull(args);
+            Objects.requireNonNull(options);
+
+            log.debug(String.format("Invoking function: token='%s' asynchronously", token));
+
+            final CompletableFuture<String> packageRefFuture = packageRef == null
+                ? CompletableFuture.completedFuture(null)
+                : packageRef;
+
+            // Wait for all values to be available, and then perform the RPC.
+            return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
+                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
+                    .thenCompose(serializedArgs -> {
+                        if (!serializedArgs.containsUnknowns) {
+                            return packageRefFuture
+                                    .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
+                                    .thenApply(result -> parseInvokeResponse(token, targetType, result));
+                        } else {
+                            return CompletableFuture.completedFuture(OutputData.unknown());
+                        }
+                    }));
+        }
+        
         private <T> OutputData<T> parseInvokeResponse(
                 String token, TypeShape<T> targetType, SerializationResult result) {
             return this.converter.convertValue(
@@ -635,6 +679,59 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             });
         }
 
+        
+        private CompletableFuture<SerializationResult> invokeRawAsync(
+                String token, InvokeArgs args, InvokeOutputOptions options, String packageRef) {
+            Objects.requireNonNull(token);
+            Objects.requireNonNull(args);
+            Objects.requireNonNull(options);
+            log.debug(String.format("Invoking function: token='%s' asynchronously", token));
+            // Wait for all values to be available, and then perform the RPC.
+            return this.featureSupport.monitorSupportsResourceReferences()
+                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
+                    .thenCompose(serializedArgs -> this.invokeRawAsync(token, serializedArgs, options, packageRef));
+        }
+        
+        private CompletableFuture<SerializationResult> invokeRawAsync(
+                String token, SerializationResult invokeArgs, InvokeOutputOptions options, String packageRef) {
+            CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
+                    () -> {
+                        var provider = Internal.from(options).getNestedProvider(token);
+                        return provider.map(p -> Internal.from(p).getRegistrationId());
+                    }
+            );
+
+            // Wait for all the resource dependencies to be available before we call the invoke
+            this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn())).join();
+            
+            return providerFuture.thenCompose(provider -> {
+                var version = options.getVersion();
+                log.debugOrExcessive(
+                        String.format("Invoke RPC prepared: token='%s'", token),
+                        String.format(", obj='%s'", invokeArgs)
+                );
+                return this.monitor.invokeAsync(pulumirpc.Resource.ResourceInvokeRequest.newBuilder()
+                        .setTok(token)
+                        .setProvider(provider.orElse(""))
+                        .setVersion(version.orElse(""))
+                        .setArgs(invokeArgs.serialized)
+                        .setAcceptResources(!this.disableResourceReferences)
+                        .setPackageRef(packageRef == null ? "" : packageRef)
+                        .build()
+                ).thenApply(response -> {
+                    // Handle failures.
+                    if (response.getFailuresCount() > 0) {
+                        var reasons = response.getFailuresList().stream()
+                                .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
+                                .collect(Collectors.joining("; "));
+                        throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
+                    }
+                    return new SerializationResult(response.getReturn(),
+                            invokeArgs.propertyToDependentResources);
+                });
+            });
+        }
+        
         private CompletableFuture<SerializationResult> serializeInvokeArgs(
                 String token, InvokeArgs args, boolean keepResources) {
             return Internal.from(args).toMapAsync(this.log).thenCompose(argsDict ->

@@ -6,6 +6,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.DeploymentInstance;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
@@ -65,7 +66,18 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOutputOptions options, CompletableFuture<String> packageRef) {
+        return deployment.invoke(token, targetType, args, options, packageRef);
+    }
+
+    @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options) {
+        return deployment.invoke(token, targetType, args, options);
+    }
+
+    
+    @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOutputOptions options) {
         return deployment.invoke(token, targetType, args, options);
     }
 

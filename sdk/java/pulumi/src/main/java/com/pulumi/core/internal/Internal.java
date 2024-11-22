@@ -8,6 +8,8 @@ import com.pulumi.deployment.CallOptions.CallOptionsInternal;
 import com.pulumi.deployment.DeploymentInstance;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.InvokeOptions.InvokeOptionsInternal;
+import com.pulumi.deployment.InvokeOutputOptions;
+import com.pulumi.deployment.InvokeOutputOptions.InvokeOutputOptionsInternal;
 import com.pulumi.deployment.internal.DeploymentInstanceInternal;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResource.ComponentResourceInternal;
@@ -40,6 +42,10 @@ public class Internal {
 
     public static InvokeOptionsInternal from(InvokeOptions o) {
         return InvokeOptionsInternal.from(o);
+    }
+    
+    public static InvokeOutputOptionsInternal from(InvokeOutputOptions o) {
+        return InvokeOutputOptionsInternal.from(o);
     }
 
     public static InputArgsInternal from(InputArgs a) {

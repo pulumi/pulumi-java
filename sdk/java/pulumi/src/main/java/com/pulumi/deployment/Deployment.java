@@ -69,6 +69,9 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
      */
     <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options, CompletableFuture<String> packageRef);
 
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOutputOptions options);
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOutputOptions options, CompletableFuture<String> packageRef);
+
     /**
      * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)}, however the return value is ignored.
      */
