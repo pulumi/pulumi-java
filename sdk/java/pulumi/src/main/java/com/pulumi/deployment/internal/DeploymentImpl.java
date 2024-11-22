@@ -164,6 +164,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @Override
     @Nonnull
+    public String getOrganizationName() {
+        return "foo";
+    }
+
+    @Override
+    @Nonnull
     public String getStackName() {
         return this.state.stackName;
     }

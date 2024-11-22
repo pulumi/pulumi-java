@@ -202,6 +202,12 @@ func (g *generator) generateFunctionCallExpression(e *model.FunctionCallExpressi
 	case "__output":
 		return g.compilationUnit.Import(JPulumiOutput).AsExpression().
 			Method("of", g.generateExpressions(e.Args...)...)
+	case "fileAsset":
+		return NewE(
+			g.compilationUnit.Import(JPulumiFileAsset).AsType(),
+			g.compilationUnit.Import(JPaths).AsExpression().
+				Method("get", g.generateExpressions(e.Args...)...),
+		)
 	case pcl.IntrinsicApply:
 		args, then := pcl.ParseApplyCall(e)
 		if len(args) == 1 {
@@ -211,12 +217,6 @@ func (g *generator) generateFunctionCallExpression(e *model.FunctionCallExpressi
 				Method("tuple", g.generateExpressions(args...)...).
 				Method("applyValue", g.generateExpression(then))
 		}
-	case "fileAsset":
-		return NewE(
-			g.compilationUnit.Import(JPulumiFileAsset).AsType(),
-			g.compilationUnit.Import(JPaths).AsExpression().
-				Method("get", g.generateExpressions(e.Args...)...),
-		)
 	case pcl.IntrinsicConvert:
 		return g.generateConvertExpression(e)
 	case pcl.Invoke:
@@ -229,6 +229,9 @@ func (g *generator) generateFunctionCallExpression(e *model.FunctionCallExpressi
 	case "mimeType":
 		return g.compilationUnit.Import(JFiles).AsExpression().
 			Method("probeContentType", g.generateExpressions(e.Args...)...)
+	case "organization":
+		return g.compilationUnit.Import(JPulumiDeployment).AsExpression().
+			Method("getInstance").Method("getOrganizationName")
 	case "project":
 		return g.compilationUnit.Import(JPulumiDeployment).AsExpression().
 			Method("getInstance").Method("getProjectName")
@@ -270,12 +273,19 @@ func (g *generator) generateIndexExpression(e *model.IndexExpression) Expression
 
 func (g *generator) generateConvertExpression(e *model.FunctionCallExpression) Expression {
 	from := e.Args[0]
+
 	to := pcl.LowerConversion(from, e.Signature.ReturnType)
 
-	switch from := from.(type) {
-	case *model.LiteralValueExpression:
+	_, isFromOutput := from.Type().(*model.OutputType)
+	_, isToOutput := to.(*model.OutputType)
+
+	if isToOutput {
+		if isFromOutput {
+			return g.generateExpression(from)
+		}
+
 		return g.compilationUnit.Import(JPulumiOutput).AsExpression().
-			Method("of", g.generateLiteralValueExpression(from))
+			Method("of", g.generateExpression(from))
 	}
 
 	g.diagnostics = append(g.diagnostics, &hcl.Diagnostic{

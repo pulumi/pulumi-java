@@ -160,7 +160,6 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
-	"l1-builtin-info":                       "unimplemented for Java",
 	"l1-output-array":                       "unimplemented for Java",
 	"l1-output-bool":                        "unimplemented for Java",
 	"l1-output-map":                         "unimplemented for Java",

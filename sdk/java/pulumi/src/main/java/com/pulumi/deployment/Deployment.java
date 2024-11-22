@@ -30,6 +30,12 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
     }
 
     /**
+     * @return the current organization name
+     */
+    @Nonnull
+    String getOrganizationName();
+
+    /**
      * @return the current stack name
      */
     @Nonnull

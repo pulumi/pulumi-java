@@ -39,6 +39,12 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
 
     @Nonnull
     @Override
+    public String getOrganizationName() {
+        return deployment.getOrganizationName();
+    }
+
+    @Nonnull
+    @Override
     public String getStackName() {
         return deployment.getStackName();
     }

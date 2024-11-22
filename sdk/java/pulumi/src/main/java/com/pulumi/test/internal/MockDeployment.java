@@ -39,6 +39,12 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
 
     @Nonnull
     @Override
+    public String getOrganizationName() {
+        return "foo";
+    }
+
+    @Nonnull
+    @Override
     public String getStackName() {
         return this.state.stackName;
     }
