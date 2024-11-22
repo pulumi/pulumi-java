@@ -21,6 +21,11 @@ Pulumi.*.yaml
 # VSCode creates this binary when running tests in the debugger
 **/debug.test
 
+# LSP
+**/.classpath
+**/.project
+**/.settings
+
 # Go tests run "in tree" and this folder will linger if they fail (the integration test framework cleans
 # it up when they pass.)
 **/command-output/
