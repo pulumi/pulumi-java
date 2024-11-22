@@ -1,5 +1,7 @@
 ### Improvements
 
+- Allow specifiying dependencies for output invokes
+
 - Update to Pulumi 3.139.0
 
 - Implement `GenerateProgram` and `GenerateProject` RPC endpoints for Java
