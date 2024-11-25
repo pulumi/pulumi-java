@@ -535,7 +535,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ? CompletableFuture.completedFuture(null)
                 : packageRef;
 
-            // Wait for all values to be available, and then perform the RPC.
+            // Wait for all values from args to be available, and then perform the RPC.
             return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
                     .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
                     .thenCompose(serializedArgs -> {
@@ -701,7 +701,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     }
             );
 
-            // Wait for all the resource dependencies to be available before we call the invoke
+            // Wait for all the resource dependencies from dependsOn to be available before we call the invoke
             this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn())).join();
             
             return providerFuture.thenCompose(provider -> {
@@ -844,7 +844,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             log.debug(String.format("Calling function: token='%s' asynchronously", token));
 
-            // Wait for all values to be available, and then perform the RPC.
+            // Wait for all values from args to be available, and then perform the RPC.
             var serializedFuture = Internal.from(args).toMapAsync(this.log)
                     .thenApply(argsDict -> self == null
                             ? argsDict
