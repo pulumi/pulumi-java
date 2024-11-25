@@ -69,7 +69,18 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
      */
     <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options, CompletableFuture<String> packageRef);
 
+    /**
+     * Same as @see {@link #invoke(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)} but takes
+     * {@link InvokeOutputOptions} as options, which allows setting {@link InvokeOutputOptions#dependsOn} to specify
+     * additional resource dependencies besides the ones that are automatically detected from the {@link InvokeArgs}.
+     */
     <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOutputOptions options);
+
+    /**
+     * Same as @see {@link #invoke(String, TypeShape, InvokeArgs, InvokeOptions, CompletableFuture)} but takes
+     * {@link InvokeOutputOptions} as options, which allows setting {@link InvokeOutputOptions#dependsOn} to specify
+     * additional resource dependencies besides the ones that are automatically detected from the {@link InvokeArgs}.
+     */
     <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOutputOptions options, CompletableFuture<String> packageRef);
 
     /**
