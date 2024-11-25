@@ -19,17 +19,10 @@ import static java.util.Objects.requireNonNull;
  * {@link Deployment#invoke(String, TypeShape, InvokeArgs, InvokeOutputOptions)}.
  */
 @ParametersAreNonnullByDefault
-public final class InvokeOutputOptions {
+public class InvokeOutputOptions extends InvokeOptions {
 
-    public static InvokeOptions Empty = new InvokeOptions();
+    public static InvokeOutputOptions Empty = new InvokeOutputOptions();
 
-    @Nullable
-    private final Resource parent;
-    @Nullable
-    private final ProviderResource provider;
-    @Nullable
-    private final String version;
-    @Nullable
     private final List<Resource> dependsOn;
 
     public InvokeOutputOptions() {
@@ -38,38 +31,13 @@ public final class InvokeOutputOptions {
 
     public InvokeOutputOptions(@Nullable Resource parent, @Nullable ProviderResource provider, @Nullable String version,
             @Nullable List<Resource> dependsOn) {
-        this.parent = parent;
-        this.provider = provider;
-        this.version = version;
+        super(parent, provider, version);
         this.dependsOn = dependsOn;
     }
 
     /**
-     * An optional parent to use for default options for this invoke (e.g. the
-     * default provider to use).
-     */
-    public Optional<Resource> getParent() {
-        return Optional.ofNullable(parent);
-    }
-
-    /*
-     * An optional provider to use for this invocation. If no provider is supplied,
-     * the default provider for the invoked function's package will be used.
-     */
-    public Optional<ProviderResource> getProvider() {
-        return Optional.ofNullable(this.provider);
-    }
-
-    /**
-     * An optional version, corresponding to the version of the provider plugin that
-     * should be used when performing this invoke.
-     */
-    public Optional<String> getVersion() {
-        return Optional.ofNullable(version);
-    }
-
-    /**
-     * Optional resources that this invoke depends on. The invoke will wait for these
+     * Optional resources that this invoke depends on. The invoke will wait for
+     * these
      * resources to be resolved before executing.
      */
     public List<Resource> getDependsOn() {

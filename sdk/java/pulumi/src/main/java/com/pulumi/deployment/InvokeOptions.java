@@ -17,7 +17,7 @@ import static java.util.Objects.requireNonNull;
  * Options to help control the behavior of @see {@link Deployment#invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}.
  */
 @ParametersAreNonnullByDefault
-public final class InvokeOptions {
+public class InvokeOptions {
 
     public static InvokeOptions Empty = new InvokeOptions();
 
