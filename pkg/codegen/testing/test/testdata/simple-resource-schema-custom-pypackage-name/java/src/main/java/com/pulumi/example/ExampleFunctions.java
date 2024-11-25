@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.inputs.ArgFunctionArgs;
 import com.pulumi.example.inputs.ArgFunctionPlainArgs;
@@ -28,6 +29,9 @@ public final class ExampleFunctions {
     }
     public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
     }
     public static CompletableFuture<ArgFunctionResult> argFunctionPlain(ArgFunctionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));

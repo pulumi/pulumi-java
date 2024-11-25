@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.inputs.GetAssetsArgs;
 import com.pulumi.example.inputs.GetAssetsPlainArgs;
@@ -22,6 +23,9 @@ public final class ExampleFunctions {
     }
     public static Output<GetAssetsResult> getAssets(GetAssetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<GetAssetsResult> getAssets(GetAssetsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
     }
     public static CompletableFuture<GetAssetsResult> getAssetsPlain(GetAssetsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));

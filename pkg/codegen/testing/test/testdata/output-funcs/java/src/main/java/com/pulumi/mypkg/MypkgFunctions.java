@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.mypkg.Utilities;
 import com.pulumi.mypkg.inputs.FuncWithAllOptionalInputsArgs;
 import com.pulumi.mypkg.inputs.FuncWithAllOptionalInputsPlainArgs;
@@ -78,6 +79,13 @@ public final class MypkgFunctions {
      * Check codegen of functions with all optional inputs.
      * 
      */
+    public static Output<FuncWithAllOptionalInputsResult> funcWithAllOptionalInputs(FuncWithAllOptionalInputsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithAllOptionalInputs", TypeShape.of(FuncWithAllOptionalInputsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+    }
+    /**
+     * Check codegen of functions with all optional inputs.
+     * 
+     */
     public static CompletableFuture<FuncWithAllOptionalInputsResult> funcWithAllOptionalInputsPlain(FuncWithAllOptionalInputsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::funcWithAllOptionalInputs", TypeShape.of(FuncWithAllOptionalInputsResult.class), args, Utilities.withVersion(options));
     }
@@ -120,6 +128,13 @@ public final class MypkgFunctions {
      * Codegen demo with const inputs
      * 
      */
+    public static Output<Void> funcWithConstInput(FuncWithConstInputArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithConstInput", TypeShape.of(Void.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+    }
+    /**
+     * Codegen demo with const inputs
+     * 
+     */
     public static CompletableFuture<Void> funcWithConstInputPlain(FuncWithConstInputPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::funcWithConstInput", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
@@ -143,6 +158,13 @@ public final class MypkgFunctions {
      */
     public static Output<FuncWithDefaultValueResult> funcWithDefaultValue(FuncWithDefaultValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("mypkg::funcWithDefaultValue", TypeShape.of(FuncWithDefaultValueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Check codegen of functions with default values.
+     * 
+     */
+    public static Output<FuncWithDefaultValueResult> funcWithDefaultValue(FuncWithDefaultValueArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithDefaultValue", TypeShape.of(FuncWithDefaultValueResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
     }
     /**
      * Check codegen of functions with default values.
@@ -190,6 +212,13 @@ public final class MypkgFunctions {
      * Check codegen of functions with a Dict&lt;str,str&gt; parameter.
      * 
      */
+    public static Output<FuncWithDictParamResult> funcWithDictParam(FuncWithDictParamArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithDictParam", TypeShape.of(FuncWithDictParamResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+    }
+    /**
+     * Check codegen of functions with a Dict&lt;str,str&gt; parameter.
+     * 
+     */
     public static CompletableFuture<FuncWithDictParamResult> funcWithDictParamPlain(FuncWithDictParamPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::funcWithDictParam", TypeShape.of(FuncWithDictParamResult.class), args, Utilities.withVersion(options));
     }
@@ -213,6 +242,13 @@ public final class MypkgFunctions {
      */
     public static Output<Void> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("mypkg::funcWithEmptyOutputs", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * n/a
+     * 
+     */
+    public static Output<Void> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithEmptyOutputs", TypeShape.of(Void.class), args, Utilities.invokeOutputOptionsWithVersion(options));
     }
     /**
      * n/a
@@ -260,6 +296,13 @@ public final class MypkgFunctions {
      * Check codegen of functions with a List parameter.
      * 
      */
+    public static Output<FuncWithListParamResult> funcWithListParam(FuncWithListParamArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithListParam", TypeShape.of(FuncWithListParamResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+    }
+    /**
+     * Check codegen of functions with a List parameter.
+     * 
+     */
     public static CompletableFuture<FuncWithListParamResult> funcWithListParamPlain(FuncWithListParamPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::funcWithListParam", TypeShape.of(FuncWithListParamResult.class), args, Utilities.withVersion(options));
     }
@@ -286,6 +329,14 @@ public final class MypkgFunctions {
      */
     public static Output<GetBastionShareableLinkResult> getBastionShareableLink(GetBastionShareableLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("mypkg::getBastionShareableLink", TypeShape.of(GetBastionShareableLinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response for all the Bastion Shareable Link endpoints.
+     * API Version: 2020-11-01.
+     * 
+     */
+    public static Output<GetBastionShareableLinkResult> getBastionShareableLink(GetBastionShareableLinkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::getBastionShareableLink", TypeShape.of(GetBastionShareableLinkResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
     }
     /**
      * Response for all the Bastion Shareable Link endpoints.
@@ -334,6 +385,13 @@ public final class MypkgFunctions {
      * Failing example taken from azure-native. Original doc: Use this function to access the current configuration of the native Azure provider.
      * 
      */
+    public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+    }
+    /**
+     * Failing example taken from azure-native. Original doc: Use this function to access the current configuration of the native Azure provider.
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfigPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -366,6 +424,14 @@ public final class MypkgFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static Output<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+    }
+    /**
+     * Another failing example. A list of SSIS object metadata.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatumPlain(GetIntegrationRuntimeObjectMetadatumPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
     }
@@ -392,6 +458,14 @@ public final class MypkgFunctions {
      */
     public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response from the ListKeys operation.
+     * API Version: 2021-02-01.
+     * 
+     */
+    public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
     }
     /**
      * The response from the ListKeys operation.
