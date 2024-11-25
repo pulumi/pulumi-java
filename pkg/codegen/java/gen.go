@@ -1857,7 +1857,7 @@ import com.pulumi.deployment.Deployment;
 `,
 					pkg.Parameterization.BaseProvider.Name,
 					pkg.Parameterization.BaseProvider.Version,
-					pkg.Parameterization.BaseProvider.PluginDownloadURL,
+					pkg.PluginDownloadURL,
 					pkg.Name,
 					base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
 				)
