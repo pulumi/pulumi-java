@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### Unreleased
+
+- Reduce binary size by stripping debug information
+
 ## 0.18.0 (2024-11-26)
 
 ### Improvements
