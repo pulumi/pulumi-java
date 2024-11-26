@@ -39,9 +39,9 @@ public class DeploymentInvokeDependsOnTest {
     }
 
     @Test
-    void testCustomInvokesDependsOntestCustomInvokesDependsOn() {
+    void testInvokesDependsOn() {
         var marker = new ResolveMarker();
-        
+
         var test = PulumiTestInternal.builder()
                 .options(TestOptions.builder().preview(true).build())
                 .mocks(new Mocks() {
@@ -57,7 +57,7 @@ public class DeploymentInvokeDependsOnTest {
                                 Thread.currentThread().interrupt();
                                 throw new RuntimeException(e);
                             }
-                            return ResourceResult.of(Optional.of(args.id + "_id"), ImmutableMap.of("prop", "some value")); 
+                            return ResourceResult.of(Optional.of(args.id + "_id"), ImmutableMap.of("prop", "some value"));
                         });
                         return result;
                     }
@@ -85,10 +85,10 @@ public class DeploymentInvokeDependsOnTest {
                 assertThat(r).contains(ImmutableMap.of("root", ImmutableMap.of("test1", ImmutableList.of("1", "2", "3"))));
                 return (Void) null;
             });
-            
+
             // Check that the resource was resolved when we called the invoke
             assertThat(marker.resolved).isTrue();
-    
+
             Internal.of(out).getDataAsync().join();
         });
 
@@ -99,10 +99,10 @@ public class DeploymentInvokeDependsOnTest {
     public static final class MyArgs extends ResourceArgs {
         // Empty
     }
-    
+
     public static final class ResolveMarker {
         public boolean resolved;
-        
+
         public ResolveMarker() {
             this.resolved = false;
         }
