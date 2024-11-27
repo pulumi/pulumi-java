@@ -683,56 +683,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 });
             });
         }
-
-        
-        private CompletableFuture<SerializationResult> invokeRawAsync(
-                String token, InvokeArgs args, InvokeOutputOptions options, String packageRef) {
-            Objects.requireNonNull(token);
-            Objects.requireNonNull(args);
-            Objects.requireNonNull(options);
-            log.debug(String.format("Invoking function: token='%s' asynchronously", token));
-            // Wait for all values to be available, and then perform the RPC.
-            return this.featureSupport.monitorSupportsResourceReferences()
-                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
-                    .thenCompose(serializedArgs -> this.invokeRawAsync(token, serializedArgs, options, packageRef));
-        }
-        
-        private CompletableFuture<SerializationResult> invokeRawAsync(
-                String token, SerializationResult invokeArgs, InvokeOutputOptions options, String packageRef) {
-            CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
-                    () -> {
-                        var provider = Internal.from(options).getNestedProvider(token);
-                        return provider.map(p -> Internal.from(p).getRegistrationId());
-                    }
-            );
-
-            return providerFuture.thenCompose(provider -> {
-                var version = options.getVersion();
-                log.debugOrExcessive(
-                        String.format("Invoke RPC prepared: token='%s'", token),
-                        String.format(", obj='%s'", invokeArgs)
-                );
-                return this.monitor.invokeAsync(pulumirpc.Resource.ResourceInvokeRequest.newBuilder()
-                        .setTok(token)
-                        .setProvider(provider.orElse(""))
-                        .setVersion(version.orElse(""))
-                        .setArgs(invokeArgs.serialized)
-                        .setAcceptResources(!this.disableResourceReferences)
-                        .setPackageRef(packageRef == null ? "" : packageRef)
-                        .build()
-                ).thenApply(response -> {
-                    // Handle failures.
-                    if (response.getFailuresCount() > 0) {
-                        var reasons = response.getFailuresList().stream()
-                                .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
-                                .collect(Collectors.joining("; "));
-                        throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
-                    }
-                    return new SerializationResult(response.getReturn(),
-                            invokeArgs.propertyToDependentResources);
-                });
-            });
-        }
         
         private CompletableFuture<SerializationResult> serializeInvokeArgs(
                 String token, InvokeArgs args, boolean keepResources) {
