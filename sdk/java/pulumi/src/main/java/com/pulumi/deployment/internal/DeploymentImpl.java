@@ -535,14 +535,19 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ? CompletableFuture.completedFuture(null)
                 : packageRef;
 
+            // Find all the resource dependencies from dependsOn, we need to wait for this task to complete
+            // before calling the invoke.
+            var depsFuture = this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn()));
+
             // Wait for all values from args to be available, and then perform the RPC.
             return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
                     .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
                     .thenCompose(serializedArgs -> {
                         if (!serializedArgs.containsUnknowns) {
-                            return packageRefFuture
-                                    .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
-                                    .thenApply(result -> parseInvokeResponse(token, targetType, result));
+                            return CompletableFuture.allOf(depsFuture, packageRefFuture)
+                                    .thenCompose(v -> this.invokeRawAsync(token, serializedArgs, options, packageRefFuture.join()))
+                                    .thenApply(result -> parseInvokeResponse(token, targetType, result))
+                                    .thenApply(output -> output.withDependencies(options.getDependsOn()));
                         } else {
                             return CompletableFuture.completedFuture(OutputData.unknown());
                         }
@@ -701,9 +706,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     }
             );
 
-            // Wait for all the resource dependencies from dependsOn to be available before we call the invoke
-            this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn())).join();
-            
             return providerFuture.thenCompose(provider -> {
                 var version = options.getVersion();
                 log.debugOrExcessive(
