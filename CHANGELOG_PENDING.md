@@ -1,6 +1,6 @@
 ### Improvements
 
-- Allow specifiying dependencies for output invokes
+- Allow specifying dependencies for output invokes
 
 - Update to Pulumi 3.139.0
 
