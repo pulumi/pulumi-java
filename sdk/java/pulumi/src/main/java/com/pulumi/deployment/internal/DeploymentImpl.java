@@ -535,7 +535,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ? CompletableFuture.completedFuture(null)
                 : packageRef;
 
-            // Find all the resource dependencies from dependsOn, we need to wait for this task to complete
+            // Find all the resource dependencies from dependsOn. We need to wait for these futures to complete
             // before calling the invoke.
             var depsFuture = this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn()));
 
