@@ -31,7 +31,7 @@ public final class X_iamFunctions {
         return Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
     }
     public static Output<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocumentPlain(GetPolicyDocumentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));

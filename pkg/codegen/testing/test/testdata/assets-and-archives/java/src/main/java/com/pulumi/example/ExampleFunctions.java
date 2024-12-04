@@ -25,7 +25,7 @@ public final class ExampleFunctions {
         return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
     }
     public static Output<GetAssetsResult> getAssets(GetAssetsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<GetAssetsResult> getAssetsPlain(GetAssetsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));

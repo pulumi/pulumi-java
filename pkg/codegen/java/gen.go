@@ -1418,7 +1418,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, argsType, invokeOutputOptions)
 		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.invokeOutputOptionsWithVersion(options)",
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
 
 		if pkg.Parameterization != nil {

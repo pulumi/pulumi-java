@@ -45,7 +45,7 @@ public final class LogicFunctions {
      * 
      */
     public static Output<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Collection of key vault keys.

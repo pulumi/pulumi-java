@@ -60,7 +60,7 @@ public final class MypkgFunctions {
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
     public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Taken from pulumi-AWS to regress an issue
@@ -103,7 +103,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The response from the ListKeys operation.

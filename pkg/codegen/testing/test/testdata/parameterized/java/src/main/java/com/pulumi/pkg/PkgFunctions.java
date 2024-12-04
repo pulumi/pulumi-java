@@ -55,7 +55,7 @@ public final class PkgFunctions {
      * 
      */
     public static Output<DoEchoResult> doEcho(DoEchoArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.invokeOutputOptionsWithVersion(options), Utilities.getPackageRef());
+        return Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
     }
     /**
      * A test invoke that echoes its input.

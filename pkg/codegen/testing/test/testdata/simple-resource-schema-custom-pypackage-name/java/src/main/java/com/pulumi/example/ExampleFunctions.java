@@ -31,7 +31,7 @@ public final class ExampleFunctions {
         return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
     }
     public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<ArgFunctionResult> argFunctionPlain(ArgFunctionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));

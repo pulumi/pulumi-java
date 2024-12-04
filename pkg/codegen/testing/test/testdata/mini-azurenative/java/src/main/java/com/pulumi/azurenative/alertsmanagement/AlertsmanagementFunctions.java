@@ -45,7 +45,7 @@ public final class AlertsmanagementFunctions {
      * 
      */
     public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Action rule object containing target scope, conditions and suppression logic

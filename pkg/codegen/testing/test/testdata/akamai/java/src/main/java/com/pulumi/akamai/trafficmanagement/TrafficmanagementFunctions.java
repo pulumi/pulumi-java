@@ -53,7 +53,7 @@ public final class TrafficmanagementFunctions {
      */
     @Deprecated /* akamai.trafficmanagement/getgtmdefaultdatacenter.getGtmDefaultDatacenter has been deprecated in favor of akamai.index/getgtmdefaultdatacenter.getGtmDefaultDatacenter */
     public static Output<GetGtmDefaultDatacenterResult> getGtmDefaultDatacenter(GetGtmDefaultDatacenterArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * 

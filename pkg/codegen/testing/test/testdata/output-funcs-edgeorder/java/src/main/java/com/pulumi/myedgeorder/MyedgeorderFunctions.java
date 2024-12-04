@@ -48,7 +48,7 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of configurations.
@@ -88,7 +88,7 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of product families.

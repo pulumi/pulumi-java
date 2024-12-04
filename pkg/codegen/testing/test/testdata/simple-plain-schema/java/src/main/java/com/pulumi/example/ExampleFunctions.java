@@ -25,7 +25,7 @@ public final class ExampleFunctions {
         return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     public static Output<Void> doFoo(DoFooArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<Void> doFooPlain(DoFooPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));

@@ -80,7 +80,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<FuncWithAllOptionalInputsResult> funcWithAllOptionalInputs(FuncWithAllOptionalInputsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithAllOptionalInputs", TypeShape.of(FuncWithAllOptionalInputsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithAllOptionalInputs", TypeShape.of(FuncWithAllOptionalInputsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Check codegen of functions with all optional inputs.
@@ -129,7 +129,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<Void> funcWithConstInput(FuncWithConstInputArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithConstInput", TypeShape.of(Void.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithConstInput", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     /**
      * Codegen demo with const inputs
@@ -164,7 +164,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<FuncWithDefaultValueResult> funcWithDefaultValue(FuncWithDefaultValueArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithDefaultValue", TypeShape.of(FuncWithDefaultValueResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithDefaultValue", TypeShape.of(FuncWithDefaultValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Check codegen of functions with default values.
@@ -213,7 +213,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<FuncWithDictParamResult> funcWithDictParam(FuncWithDictParamArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithDictParam", TypeShape.of(FuncWithDictParamResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithDictParam", TypeShape.of(FuncWithDictParamResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Check codegen of functions with a Dict&lt;str,str&gt; parameter.
@@ -248,7 +248,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<Void> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithEmptyOutputs", TypeShape.of(Void.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithEmptyOutputs", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     /**
      * n/a
@@ -297,7 +297,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<FuncWithListParamResult> funcWithListParam(FuncWithListParamArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithListParam", TypeShape.of(FuncWithListParamResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithListParam", TypeShape.of(FuncWithListParamResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Check codegen of functions with a List parameter.
@@ -336,7 +336,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<GetBastionShareableLinkResult> getBastionShareableLink(GetBastionShareableLinkArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::getBastionShareableLink", TypeShape.of(GetBastionShareableLinkResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::getBastionShareableLink", TypeShape.of(GetBastionShareableLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response for all the Bastion Shareable Link endpoints.
@@ -386,7 +386,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Failing example taken from azure-native. Original doc: Use this function to access the current configuration of the native Azure provider.
@@ -425,7 +425,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Another failing example. A list of SSIS object metadata.
@@ -465,7 +465,7 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The response from the ListKeys operation.

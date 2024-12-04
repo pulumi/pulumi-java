@@ -45,7 +45,7 @@ public final class WebFunctions {
      * 
      */
     public static Output<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A web app, a mobile app backend, or an API app.

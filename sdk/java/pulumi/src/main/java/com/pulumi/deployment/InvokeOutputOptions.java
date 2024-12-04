@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Optional;
 import java.util.List;
+import java.util.ArrayList;
 
 import static java.util.Objects.requireNonNull;
 
 /**
- * Options to help control the behavior of @see
- * {@link Deployment#invoke(String, TypeShape, InvokeArgs, InvokeOutputOptions)}.
+ * Options to help control the behavior of {@link Deployment#invoke(String, TypeShape, InvokeArgs, InvokeOutputOptions)}.
  */
 @ParametersAreNonnullByDefault
 public class InvokeOutputOptions extends InvokeOptions {
@@ -36,12 +36,11 @@ public class InvokeOutputOptions extends InvokeOptions {
     }
 
     /**
-     * Optional resources that this invoke depends on. The invoke will wait for
-     * these
-     * resources to be resolved before executing.
+     * Optional resources that this invoke depends on. The invoke will wait for these resources
+     * to be resolved before executing.
      */
     public List<Resource> getDependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+        return this.dependsOn == null ? List.of() : new ArrayList<>(this.dependsOn);
     }
 
     @InternalUse

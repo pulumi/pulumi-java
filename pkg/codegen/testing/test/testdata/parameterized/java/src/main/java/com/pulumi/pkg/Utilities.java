@@ -73,7 +73,7 @@ public class Utilities {
         );
     }
 
-    public static InvokeOutputOptions invokeOutputOptionsWithVersion(@Nullable InvokeOutputOptions options) {
+    public static InvokeOutputOptions withVersion(@Nullable InvokeOutputOptions options) {
         if (options != null && options.getVersion().isPresent()) {
             return options;
         }

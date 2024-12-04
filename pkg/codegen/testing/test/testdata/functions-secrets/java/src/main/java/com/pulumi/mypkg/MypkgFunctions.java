@@ -25,7 +25,7 @@ public final class MypkgFunctions {
         return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
     }
     public static Output<FuncWithSecretsResult> funcWithSecrets(FuncWithSecretsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.invokeOutputOptionsWithVersion(options));
+        return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<FuncWithSecretsResult> funcWithSecretsPlain(FuncWithSecretsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
