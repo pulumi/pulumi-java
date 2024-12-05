@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.pkg.Utilities;
 import com.pulumi.pkg.inputs.DoEchoArgs;
 import com.pulumi.pkg.inputs.DoEchoPlainArgs;
@@ -47,6 +48,13 @@ public final class PkgFunctions {
      * 
      */
     public static Output<DoEchoResult> doEcho(DoEchoArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+    }
+    /**
+     * A test invoke that echoes its input.
+     * 
+     */
+    public static Output<DoEchoResult> doEcho(DoEchoArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
     }
     /**

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.myedgeorder.Utilities;
 import com.pulumi.myedgeorder.inputs.ListConfigurationsArgs;
 import com.pulumi.myedgeorder.inputs.ListConfigurationsPlainArgs;
@@ -46,6 +47,14 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
+    public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of configurations.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
     public static CompletableFuture<ListConfigurationsResult> listConfigurationsPlain(ListConfigurationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +80,14 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of product families.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
     }
     /**

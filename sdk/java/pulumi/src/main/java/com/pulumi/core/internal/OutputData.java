@@ -20,6 +20,7 @@ import com.pulumi.resources.Resource;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -152,6 +153,14 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         var newDependencies = Sets.union(
                 this.resources,
                 ImmutableSet.of(resource)
+        ).immutableCopy();
+        return ofNullable(newDependencies, this.value, this.known, this.secret);
+    }
+
+    public OutputData<T> withDependencies(List<Resource> resources) {
+        var newDependencies = Sets.union(
+            this.resources,
+            ImmutableSet.copyOf(resources)
         ).immutableCopy();
         return ofNullable(newDependencies, this.value, this.known, this.secret);
     }

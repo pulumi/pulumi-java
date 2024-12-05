@@ -11,6 +11,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class AlertsmanagementFunctions {
@@ -36,6 +37,14 @@ public final class AlertsmanagementFunctions {
      * 
      */
     public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Action rule object containing target scope, conditions and suppression logic
+     * API Version: 2019-05-05-preview.
+     * 
+     */
+    public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
     }
     /**

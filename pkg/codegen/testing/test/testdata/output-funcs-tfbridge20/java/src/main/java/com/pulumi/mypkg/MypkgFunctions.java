@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.mypkg.Utilities;
 import com.pulumi.mypkg.inputs.GetAmiIdsArgs;
 import com.pulumi.mypkg.inputs.GetAmiIdsPlainArgs;
@@ -58,6 +59,17 @@ public final class MypkgFunctions {
      * 
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Taken from pulumi-AWS to regress an issue
+     * 
+     * @deprecated
+     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * 
+     */
+    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
     public static CompletableFuture<GetAmiIdsResult> getAmiIdsPlain(GetAmiIdsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
@@ -83,6 +95,14 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response from the ListKeys operation.
+     * API Version: 2021-02-01.
+     * 
+     */
+    public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**

@@ -1392,7 +1392,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			plainMethodName, invokeOptions)
 		fprintf(w, "    }\n")
 
-		// Output version: add full invoke
+		// Output version: add full invoke with InvokeOptions
 		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
@@ -1404,6 +1404,22 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		if err != nil {
 			return err
 		}
+
+		if pkg.Parameterization != nil {
+			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
+		}
+
+		fprintf(w, ");\n")
+		fprintf(w, "    }\n")
+
+		// Output version: add full invoke with InvokeOutputOptions
+		invokeOutputOptions := ctx.ref(names.InvokeOutputOptions)
+		printCommentFunction(ctx, fun, indent)
+		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
+			ctx.ref(names.Output), returnType, methodName, argsType, invokeOutputOptions)
+		fprintf(w,
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
 
 		if pkg.Parameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))

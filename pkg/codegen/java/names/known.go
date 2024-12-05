@@ -72,6 +72,8 @@ var Deployment = PulumiDeployment.Dot("Deployment")
 
 var InvokeOptions = PulumiDeployment.Dot("InvokeOptions")
 
+var InvokeOutputOptions = PulumiDeployment.Dot("InvokeOutputOptions")
+
 var CompletableFuture = JavaUtil.Dot("concurrent").Dot("CompletableFuture")
 
 var TypeShape = PulumiCore.Dot("TypeShape")

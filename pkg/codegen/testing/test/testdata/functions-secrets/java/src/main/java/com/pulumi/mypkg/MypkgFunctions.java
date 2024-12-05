@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.mypkg.Utilities;
 import com.pulumi.mypkg.inputs.FuncWithSecretsArgs;
 import com.pulumi.mypkg.inputs.FuncWithSecretsPlainArgs;
@@ -21,6 +22,9 @@ public final class MypkgFunctions {
         return funcWithSecretsPlain(args, InvokeOptions.Empty);
     }
     public static Output<FuncWithSecretsResult> funcWithSecrets(FuncWithSecretsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<FuncWithSecretsResult> funcWithSecrets(FuncWithSecretsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<FuncWithSecretsResult> funcWithSecretsPlain(FuncWithSecretsPlainArgs args, InvokeOptions options) {

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.inputs.DoFooArgs;
 import com.pulumi.example.inputs.DoFooPlainArgs;
@@ -21,6 +22,9 @@ public final class ExampleFunctions {
         return doFooPlain(args, InvokeOptions.Empty);
     }
     public static Output<Void> doFoo(DoFooArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+    }
+    public static Output<Void> doFoo(DoFooArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<Void> doFooPlain(DoFooPlainArgs args, InvokeOptions options) {

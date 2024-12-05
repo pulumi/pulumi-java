@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.urnid.Utilities;
 import com.pulumi.urnid.inputs.TestArgs;
 import com.pulumi.urnid.inputs.TestPlainArgs;
@@ -33,6 +34,13 @@ public final class UrnidFunctions {
      * 
      */
     public static Output<TestResult> test(TestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * It&#39;s fine for invokes to use urn and id
+     * 
+     */
+    public static Output<TestResult> test(TestArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
     }
     /**

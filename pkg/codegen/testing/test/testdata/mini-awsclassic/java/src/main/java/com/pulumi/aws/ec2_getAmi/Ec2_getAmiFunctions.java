@@ -11,6 +11,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class Ec2_getAmiFunctions {
@@ -21,6 +22,9 @@ public final class Ec2_getAmiFunctions {
         return getAmiPlain(args, InvokeOptions.Empty);
     }
     public static Output<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<GetAmiResult> getAmi(GetAmiArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<GetAmiResult> getAmiPlain(GetAmiPlainArgs args, InvokeOptions options) {
