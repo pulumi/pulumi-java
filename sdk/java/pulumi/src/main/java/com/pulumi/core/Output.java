@@ -58,7 +58,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * The result remains an {@link Output}{@literal <T>} so that dependent resources
      * can be properly tracked.
      * <p>
-     * {@code func} is not allowed to make resources.
+     * {@code func} should not be used to create resources unless necessary as `func` may not be run during some program executions.
      * <p>
      * {@code func} can return other {@link Output}{@literal <T>}s.  This can be handy if
      * you have an <code>Output&lt;SomeType&gt;</code> and you want to get a transitive dependency of it.  i.e.:
