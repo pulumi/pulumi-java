@@ -91,7 +91,6 @@ version.
 ```shell
 make submodule_update # downloads pulumi/pulumi for protobuf definitions
 make install_sdk # installs com.pulumi:pulumi into ~/.m2 maven repo
-make providers_all # installs all com.pulumi:pulumi-* providers into ~/.m2 maven repo
 make bin/pulumi-language-java # builds bin/pulumi-language-java language host
 export PATH="${PATH}:${PWD}/bin" # add bin/pulumi-language-java to PATH
 ```
