@@ -12,10 +12,25 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	ptesting "github.com/pulumi/pulumi/sdk/v3/go/common/testing"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 )
 
 func TestIntegrations(t *testing.T) {
+	t.Run("about", func(t *testing.T) {
+		t.Parallel()
+
+		e := ptesting.NewEnvironment(t)
+		defer e.DeleteIfNotFailed()
+
+		e.ImportDirectory(filepath.Join(getCwd(t), "about"))
+
+		stdout, stderr := e.RunCommand("pulumi", "about")
+		// There should be no "unknown" plugin versions.
+		assert.NotContains(t, stdout, "unknown")
+		assert.NotContains(t, stderr, "unknown")
+	})
+
 	t.Run("stack-reference", func(t *testing.T) {
 		dir := filepath.Join(getCwd(t), "stack-reference")
 		test := getJavaBase(t, integration.ProgramTestOptions{
