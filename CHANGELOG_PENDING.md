@@ -15,3 +15,5 @@
 - Update `io.github.gradle-nexus.publish-plugin` to 2.0.0 from 1.1.0.
 
 ### Bug Fixes
+
+- Fix the language plugin to return a version

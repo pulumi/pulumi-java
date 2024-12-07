@@ -17,11 +17,15 @@ test_go:: build_go submodule_update
 
 bin/pulumi-language-java: ${PKG_FILES}
 	mkdir -p bin
-	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-java
+	cd pkg && go build -o ../bin \
+		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" \
+		github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-java
 
 bin/pulumi-java-gen: ${PKG_FILES}
 	mkdir -p bin
-	cd pkg && go build -o ../bin -ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
+	cd pkg && go build -o ../bin \
+		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" \
+		github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
 
 # Java SDK is a gradle project rooted at `sdk/java`
 
