@@ -22,7 +22,7 @@ import (
 )
 
 // This should be bumped as required at the point of release.
-var DEFAULT_SDK_VERSION = semver.Version{Major: 0, Minor: 18, Patch: 0}
+var DefaultSdkVersion = semver.Version{Major: 0, Minor: 18, Patch: 0}
 
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
@@ -2045,7 +2045,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 			}
 			javaInfo = javaInfo.
 				WithDefaultDependencies().
-				WithJavaSdkDependencyDefault(DEFAULT_SDK_VERSION)
+				WithJavaSdkDependencyDefault(DefaultSdkVersion)
 			info = &javaInfo
 			infos[def] = info
 		}
