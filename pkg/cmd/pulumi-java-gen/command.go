@@ -147,8 +147,7 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 			return err
 		}
 
-		opts.PackageInfo = opts.PackageInfo.With(buildArgOverrides).
-			WithDefaultDependencies()
+		opts.PackageInfo = opts.PackageInfo.With(buildArgOverrides)
 
 		if javaSdkVersionArg != "" {
 			parsedVersion, err := semver.ParseTolerant(javaSdkVersionArg)
