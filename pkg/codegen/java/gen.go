@@ -2039,10 +2039,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"java\"]`=%v to `PackageInfo`", raw))
 				}
 			}
+			javaInfo = javaInfo.WithDefaultDependencies()
 			info = &javaInfo
 			infos[def] = info
 		}
-		info.WithDefaultDependencies()
 		return info
 	}
 	infos[pkg] = getPackageInfo(pkg.Reference())

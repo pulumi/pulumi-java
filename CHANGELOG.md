@@ -5,6 +5,8 @@ CHANGELOG
 
 - Reduce binary size by stripping debug information
 
+- Apply default dependencies consistently.
+
 ## 0.18.0 (2024-11-26)
 
 ### Improvements
