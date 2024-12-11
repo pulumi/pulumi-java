@@ -2042,6 +2042,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 			info = &javaInfo
 			infos[def] = info
 		}
+		info.WithDefaultDependencies()
 		return info
 	}
 	infos[pkg] = getPackageInfo(pkg.Reference())
