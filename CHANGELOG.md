@@ -1,11 +1,19 @@
 CHANGELOG
 =========
 
-### Unreleased
+### 0.19.0 (2024-12-11)
+
+### Improvements
+
+- Allow specifying dependencies for output invokes
 
 - Reduce binary size by stripping debug information
 
-- Apply default dependencies consistently.
+- Apply default dependencies consistently
+
+### Bug Fixes
+
+- Fix the language plugin to return a version
 
 ## 0.18.0 (2024-11-26)
 
