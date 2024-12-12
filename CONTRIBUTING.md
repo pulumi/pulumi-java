@@ -149,3 +149,15 @@ If you want to talk with other folks in the Pulumi community
 (including members of the Pulumi team) come hang out in the
 `#contribute` channel on the
 [Pulumi Community Slack](https://slack.pulumi.com/).
+
+## Release Process
+
+To release a new version of `pulumi-java`, create a new pull request that
+updates [CHANGELOG.md](./CHANGELOG.md) and [CHANGLOG_PENDING.md](./CHANGLOG_PENDING.md).
+
+After the pull request is merged, push the release tags to the `main` branch by
+running the [`release.sh`](./scripts/release.sh) script:
+
+```shell
+./scripts/release.sh v0.20.0
+```
