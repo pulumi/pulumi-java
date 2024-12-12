@@ -152,12 +152,22 @@ If you want to talk with other folks in the Pulumi community
 
 ## Release Process
 
-To release a new version of `pulumi-java`, create a new pull request that
-updates [CHANGELOG.md](./CHANGELOG.md) and [CHANGLOG_PENDING.md](./CHANGLOG_PENDING.md).
+To release a new version of `pulumi-java`, follow these steps:
 
-After the pull request is merged, push the release tags to the `main` branch by
-running the [`release.sh`](./scripts/release.sh) script:
+1. Create a new pull request that updates [CHANGELOG.md](./CHANGELOG.md) with
+  the pending changes from [CHANGLOG_PENDING.md](./CHANGLOG_PENDING.md). Do *not*
+  remove the pending changes from [CHANGLOG_PENDING.md](./CHANGLOG_PENDING.md)
+  yet. Merge the PR.
 
-```shell
-./scripts/release.sh v0.20.0
-```
+2. After the pull request is merged, push the release tags to the `main` branch
+  by running the [`release.sh`](./scripts/release.sh) script. Make sure you have
+  updated your local checkout of `origin/main` first.
+
+  ```shell
+  git checkout main
+  git pull origin main
+  ./scripts/release.sh v0.20.0
+  ```
+
+3. Create a new pull request that emptries the pending changelog in
+  [CHANGELOG_PENDING.md](./CHANGELOG_PENDING.md).
