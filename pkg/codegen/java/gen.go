@@ -22,7 +22,7 @@ import (
 )
 
 // This should be bumped as required at the point of release.
-var DefaultSdkVersion = semver.Version{Major: 0, Minor: 18, Patch: 0}
+var DefaultSdkVersion = semver.Version{Major: 0, Minor: 19, Patch: 0}
 
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
