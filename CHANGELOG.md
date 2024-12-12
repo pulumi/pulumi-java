@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### 0.20.0 (2024-12-12)
+
+### Bug Fixes
+
+- Update SDK version used for codegen to 0.19
+
 ### 0.19.0 (2024-12-11)
 
 ### Improvements
