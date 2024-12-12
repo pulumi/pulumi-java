@@ -2225,6 +2225,10 @@ func GeneratePackage(
 	extraFiles map[string][]byte,
 	local bool,
 ) (map[string][]byte, error) {
+	pkg, err := DedupTypes(pkg)
+	if err != nil {
+		return nil, err
+	}
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err

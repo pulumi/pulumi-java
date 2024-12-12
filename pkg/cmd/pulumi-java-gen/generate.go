@@ -53,7 +53,7 @@ func generateJava(cfg generateJavaOptions) error {
 		return fmt.Errorf("failed to read schema from %s: %w", cfg.Schema, err)
 	}
 
-	pkgSpec, err := dedupTypes(rawPkgSpec)
+	pkgSpec, err := javagen.DedupTypes(rawPkgSpec)
 	if err != nil {
 		return fmt.Errorf("failed to dedup types in schema from %s: %w", cfg.Schema, err)
 	}

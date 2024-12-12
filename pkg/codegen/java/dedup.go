@@ -1,6 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package main
+package java
 
 import (
 	"bytes"
@@ -17,7 +17,7 @@ import (
 // `azure-native:network:IPAllocationMethod`, deterministically picks
 // one of these names, and rewrites the schema as if there was only
 // one such type.
-func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
+func DedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 	normalizedTokens := map[string]string{}
 	for typeToken := range spec.Types {
 		key := strings.ToUpper(typeToken)
