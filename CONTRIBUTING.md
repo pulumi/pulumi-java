@@ -169,5 +169,5 @@ To release a new version of `pulumi-java`, follow these steps:
   ./scripts/release.sh v0.20.0
   ```
 
-3. Create a new pull request that emptries the pending changelog in
-  [CHANGELOG_PENDING.md](./CHANGELOG_PENDING.md).
+3. Create a new pull request that empties the pending changelog in
+  [CHANGELOG_PENDING.md](./CHANGELOG_PENDING.md) and merge it.
