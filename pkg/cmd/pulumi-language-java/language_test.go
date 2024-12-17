@@ -168,9 +168,11 @@ var expectedFailures = map[string]string{
 	"l1-output-number":                      "unimplemented for Java",
 	"l1-output-string":                      "unimplemented for Java",
 	"l1-stack-reference":                    "unimplemented for Java",
+	"l2-explicit-parameterized-provider":    "unimplemented for Java",
 	"l2-failed-create-continue-on-error":    "unimplemented for Java",
 	"l2-invoke-dependencies":                "unimplemented for Java",
 	"l2-invoke-options":                     "unimplemented for Java",
+	"l2-invoke-options-depends-on":          "unimplemented for Java",
 	"l2-invoke-secrets":                     "unimplemented for Java",
 	"l2-invoke-simple":                      "unimplemented for Java",
 	"l2-invoke-variants":                    "unimplemented for Java",
@@ -185,7 +187,9 @@ var expectedFailures = map[string]string{
 	"l2-ref-ref":                            "unimplemented for Java",
 	"l2-resource-asset-archive":             "unimplemented for Java",
 	"l2-resource-config":                    "unimplemented for Java",
+	"l2-resource-parent-inheritance":        "unimplemented for Java",
 	"l2-resource-primitives":                "unimplemented for Java",
+	"l2-resource-secret":                    "unimplemented for Java",
 	"l2-target-up-with-new-dependency":      "unimplemented for Java",
 }
 
