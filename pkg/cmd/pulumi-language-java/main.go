@@ -714,26 +714,17 @@ func (host *javaLanguageHost) GeneratePackage(
 		}, nil
 	}
 
-	if pkg.Description == "" {
-		pkg.Description = " "
-	}
-	if pkg.Repository == "" {
-		pkg.Repository = "https://example.com"
-	}
+	// While the consumer can specify a PackageInfo object (e.g. from the schema, or a set of manual specifications), we
+	// need to ensure that local dependencies are reflected in the lists of dependencies and repositories. We'll do this
+	// here before calling into the codegen package.
+	pkgOverrides := codegen.PackageInfo{}
 
-	// Presently, we only support generating Java SDKs which use Gradle as a build system. Specify that here, as well as
-	// the set of dependencies that all generated SDKs rely on.
-	pkgInfo := codegen.PackageInfo{
-		BuildFiles: "gradle",
-		Dependencies: map[string]string{
-			"com.google.code.gson:gson":       "2.8.9",
-			"com.google.code.findbugs:jsr305": "3.0.2",
-		},
-	}
-
+	dependencies := map[string]string{}
 	repositories := map[string]bool{}
-
 	for name, dep := range req.LocalDependencies {
+		// A local dependency has the form groupId:artifactId:version[:repositoryPath]. We'll parse this and add an
+		// entry to the dependency map for groupId:artifactId -> version, and add the repositoryPath to the list of
+		// repositories if it's present.
 		parts := strings.Split(dep, ":")
 		if len(parts) < 3 {
 			return nil, fmt.Errorf(
@@ -743,15 +734,22 @@ func (host *javaLanguageHost) GeneratePackage(
 		}
 
 		k := parts[0] + ":" + parts[1]
-		pkgInfo.Dependencies[k] = parts[2]
+		dependencies[k] = parts[2]
 
 		if len(parts) == 4 {
 			repositories[parts[3]] = true
 		}
 	}
 
-	pkgInfo.Repositories = maps.Keys(repositories)
-	pkg.Language["java"] = pkgInfo
+	pkgOverrides.Dependencies = dependencies
+	pkgOverrides.Repositories = maps.Keys(repositories)
+
+	var pkgInfo codegen.PackageInfo
+	if javaInfo, ok := pkg.Language["java"].(codegen.PackageInfo); ok {
+		pkgInfo = javaInfo
+	}
+
+	pkg.Language["java"] = pkgInfo.With(pkgOverrides)
 
 	files, err := codegen.GeneratePackage("pulumi-language-java", pkg, req.ExtraFiles, req.Local)
 	if err != nil {
