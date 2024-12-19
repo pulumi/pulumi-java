@@ -16,12 +16,16 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"path/filepath"
 
 	"github.com/blang/semver"
+	"github.com/hashicorp/hcl/v2"
 
 	javagen "github.com/pulumi/pulumi-java/pkg/codegen/java"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/diag"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 )
 
 type generateJavaOptions struct {
@@ -53,10 +57,11 @@ func generateJava(cfg generateJavaOptions) error {
 		return fmt.Errorf("failed to read schema from %s: %w", cfg.Schema, err)
 	}
 
-	pkgSpec, err := dedupTypes(rawPkgSpec)
+	pkgSpec, diags, err := javagen.DeduplicateTypes(rawPkgSpec)
 	if err != nil {
 		return fmt.Errorf("failed to dedup types in schema from %s: %w", cfg.Schema, err)
 	}
+	printDiagnostics(diags)
 
 	pkg, err := pschema.ImportSpec(*pkgSpec, nil)
 	if err != nil {
@@ -80,7 +85,13 @@ func generateJava(cfg generateJavaOptions) error {
 	if err != nil {
 		return err
 	}
-	files, err := javagen.GeneratePackage("pulumi-java-gen", pkg, extraFiles, cfg.Local)
+	files, err := javagen.GeneratePackage(
+		"pulumi-java-gen",
+		pkg,
+		extraFiles,
+		nil, /*localDependencies*/
+		cfg.Local,
+	)
 	if err != nil {
 		return err
 	}
@@ -98,4 +109,16 @@ func generateJava(cfg generateJavaOptions) error {
 	}
 
 	return nil
+}
+
+// printDiagnostics prints the given diagnostics to stdout and stderr.
+func printDiagnostics(diagnostics hcl.Diagnostics) {
+	sink := diag.DefaultSink(os.Stdout, os.Stderr, diag.FormatOptions{Color: cmdutil.GetGlobalColorization()})
+	for _, diagnostic := range diagnostics {
+		if diagnostic.Severity == hcl.DiagError {
+			sink.Errorf(diag.Message("", "%s"), diagnostic)
+		} else {
+			sink.Warningf(diag.Message("", "%s"), diagnostic)
+		}
+	}
 }

@@ -19,6 +19,7 @@ import (
 	"time"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
+	"github.com/hashicorp/hcl/v2"
 	"github.com/pkg/errors"
 	hclsyntax "github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
@@ -32,7 +33,6 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
-	"golang.org/x/exp/maps"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/types/known/structpb"
@@ -703,57 +703,40 @@ func (host *javaLanguageHost) GeneratePackage(
 		return nil, err
 	}
 
-	pkg, diags, err := schema.BindSpec(spec, loader)
+	diags := hcl.Diagnostics{}
+
+	// Historically, Java has "deduplicated" PackageSpecs to reduce sets of multiple types whose names differ only in
+	// case down to just one type that is then shared (assuming that, apart from name, the types are otherwise
+	// identical). We thus perform that deduplication here before we bind the schema and resolve any references.
+	dedupedSpec, dedupeDiags, err := codegen.DeduplicateTypes(&spec)
 	if err != nil {
 		return nil, err
 	}
-	rpcDiagnostics := plugin.HclDiagnosticsToRPCDiagnostics(diags)
-	if diags.HasErrors() {
+	diags = diags.Extend(dedupeDiags)
+	if dedupeDiags.HasErrors() {
 		return &pulumirpc.GeneratePackageResponse{
-			Diagnostics: rpcDiagnostics,
+			Diagnostics: plugin.HclDiagnosticsToRPCDiagnostics(diags),
 		}, nil
 	}
 
-	if pkg.Description == "" {
-		pkg.Description = " "
+	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, loader)
+	if err != nil {
+		return nil, err
 	}
-	if pkg.Repository == "" {
-		pkg.Repository = "https://example.com"
-	}
-
-	// Presently, we only support generating Java SDKs which use Gradle as a build system. Specify that here, as well as
-	// the set of dependencies that all generated SDKs rely on.
-	pkgInfo := codegen.PackageInfo{
-		BuildFiles: "gradle",
-		Dependencies: map[string]string{
-			"com.google.code.gson:gson":       "2.8.9",
-			"com.google.code.findbugs:jsr305": "3.0.2",
-		},
+	diags = diags.Extend(bindDiags)
+	if bindDiags.HasErrors() {
+		return &pulumirpc.GeneratePackageResponse{
+			Diagnostics: plugin.HclDiagnosticsToRPCDiagnostics(diags),
+		}, nil
 	}
 
-	repositories := map[string]bool{}
-
-	for name, dep := range req.LocalDependencies {
-		parts := strings.Split(dep, ":")
-		if len(parts) < 3 {
-			return nil, fmt.Errorf(
-				"invalid dependency for %s %s; must be of the form groupId:artifactId:version[:repositoryPath]",
-				name, dep,
-			)
-		}
-
-		k := parts[0] + ":" + parts[1]
-		pkgInfo.Dependencies[k] = parts[2]
-
-		if len(parts) == 4 {
-			repositories[parts[3]] = true
-		}
-	}
-
-	pkgInfo.Repositories = maps.Keys(repositories)
-	pkg.Language["java"] = pkgInfo
-
-	files, err := codegen.GeneratePackage("pulumi-language-java", pkg, req.ExtraFiles, req.Local)
+	files, err := codegen.GeneratePackage(
+		"pulumi-language-java",
+		pkg,
+		req.ExtraFiles,
+		req.LocalDependencies,
+		req.Local,
+	)
 	if err != nil {
 		return nil, err
 	}
@@ -772,7 +755,7 @@ func (host *javaLanguageHost) GeneratePackage(
 	}
 
 	return &pulumirpc.GeneratePackageResponse{
-		Diagnostics: rpcDiagnostics,
+		Diagnostics: plugin.HclDiagnosticsToRPCDiagnostics(diags),
 	}, nil
 }
 
