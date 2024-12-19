@@ -2043,9 +2043,19 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"java\"]`=%v to `PackageInfo`", raw))
 				}
 			}
+
 			javaInfo = javaInfo.
 				WithDefaultDependencies().
 				WithJavaSdkDependencyDefault(DefaultSdkVersion)
+
+			// All packages that SupportPack (which in some sense reflects the latest version of the schema) should use
+			// Gradle if no build system has been explicitly specified.
+			if p.SupportPack() {
+				if javaInfo.BuildFiles == "" {
+					javaInfo.BuildFiles = "gradle"
+				}
+			}
+
 			info = &javaInfo
 			infos[def] = info
 		}
@@ -2225,6 +2235,16 @@ func GeneratePackage(
 	extraFiles map[string][]byte,
 	local bool,
 ) (map[string][]byte, error) {
+	// Presently, Gradle is the primary build system we support for generated SDKs. Later on, when we validate the
+	// package in order to produce build system artifacts, we'll need a description and repository. To this end, we
+	// ensure there are non-empty values for these fields here.
+	if pkg.Description == "" {
+		pkg.Description = " "
+	}
+	if pkg.Repository == "" {
+		pkg.Repository = "https://example.com"
+	}
+
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err
