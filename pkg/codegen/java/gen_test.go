@@ -227,7 +227,7 @@ func TestGeneratePackage(t *testing.T) {
 				pkg.Language = map[string]interface{}{
 					"java": testCase.packageInfo,
 				}
-				return GeneratePackage(tool, pkg, extraFiles, false)
+				return GeneratePackage(tool, pkg, extraFiles, nil, false)
 			},
 			Language:  "java",
 			TestCases: []*test.SDKTest{testCase.sdkTest},

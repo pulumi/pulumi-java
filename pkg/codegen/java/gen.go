@@ -17,6 +17,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"golang.org/x/exp/maps"
 
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
@@ -2043,9 +2044,19 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"java\"]`=%v to `PackageInfo`", raw))
 				}
 			}
+
 			javaInfo = javaInfo.
 				WithDefaultDependencies().
 				WithJavaSdkDependencyDefault(DefaultSdkVersion)
+
+			// All packages that SupportPack (which in some sense reflects the latest version of the schema) should use
+			// Gradle if no build system has been explicitly specified.
+			if p.SupportPack() {
+				if javaInfo.BuildFiles == "" {
+					javaInfo.BuildFiles = "gradle"
+				}
+			}
+
 			info = &javaInfo
 			infos[def] = info
 		}
@@ -2223,12 +2234,57 @@ func GeneratePackage(
 	tool string,
 	pkg *schema.Package,
 	extraFiles map[string][]byte,
+	localDependencies map[string]string,
 	local bool,
 ) (map[string][]byte, error) {
+	// Presently, Gradle is the primary build system we support for generated SDKs. Later on, when we validate the
+	// package in order to produce build system artifacts, we'll need a description and repository. To this end, we
+	// ensure there are non-empty values for these fields here.
+	if pkg.Description == "" {
+		pkg.Description = " "
+	}
+	if pkg.Repository == "" {
+		pkg.Repository = "https://example.com"
+	}
+
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err
 	}
+
+	// We need to ensure that local dependencies are reflected in the lists of dependencies and repositories in the Java
+	// PackageInfo.
+	pkgOverrides := PackageInfo{}
+
+	dependencies := map[string]string{}
+	repositories := map[string]bool{}
+	for name, dep := range localDependencies {
+		// A local dependency has the form groupId:artifactId:version[:repositoryPath]. We'll parse this and add an
+		// entry to the dependency map for groupId:artifactId -> version, and add the repositoryPath to the list of
+		// repositories if it's present.
+		parts := strings.Split(dep, ":")
+		if len(parts) < 3 {
+			return nil, fmt.Errorf(
+				"invalid dependency for %s %s; must be of the form groupId:artifactId:version[:repositoryPath]",
+				name, dep,
+			)
+		}
+
+		k := parts[0] + ":" + parts[1]
+		dependencies[k] = parts[2]
+
+		if len(parts) == 4 {
+			repositories[parts[3]] = true
+		}
+	}
+
+	pkgOverrides.Dependencies = dependencies
+	pkgOverrides.Repositories = maps.Keys(repositories)
+
+	overriddenInfo := info.With(pkgOverrides)
+	info = &overriddenInfo
+
+	pkg.Language["java"] = info
 
 	// Generate each module.
 	files := fs{}

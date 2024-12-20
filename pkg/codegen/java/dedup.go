@@ -1,6 +1,6 @@
-// Copyright 2022, Pulumi Corporation.  All rights reserved.
+// Copyright 2024, Pulumi Corporation.  All rights reserved.
 
-package main
+package java
 
 import (
 	"bytes"
@@ -9,15 +9,16 @@ import (
 	"reflect"
 	"strings"
 
-	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/hashicorp/hcl/v2"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
-// Detects cases when identical types have similar names modulo case
-// such as `azure-native:network:IpAllocationMethod` vs
-// `azure-native:network:IPAllocationMethod`, deterministically picks
-// one of these names, and rewrites the schema as if there was only
-// one such type.
-func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
+// DeduplicateTypes detects multiple types in a PackageSpec whose names are the same modulo case, such as
+// `azure-native:network:IpAllocationMethod` and `azure-native:network:IPAllocationMethod`, deterministically picks one
+// of these names, and rewrites the schema as if there was only one such type.
+func DeduplicateTypes(spec *schema.PackageSpec) (*schema.PackageSpec, hcl.Diagnostics, error) {
+	diags := hcl.Diagnostics{}
+
 	normalizedTokens := map[string]string{}
 	for typeToken := range spec.Types {
 		key := strings.ToUpper(typeToken)
@@ -41,12 +42,12 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 
 	var buf bytes.Buffer
 	if err := json.NewEncoder(&buf).Encode(spec); err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 
 	var rawSchema interface{}
 	if err := json.NewDecoder(bytes.NewReader(buf.Bytes())).Decode(&rawSchema); err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 
 	types := map[string]interface{}{}
@@ -64,13 +65,19 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 			transformJSONTree(stripDescription, types[newToken]),
 		)
 		if eq {
-			fmt.Printf("WARN renaming %s to %s in the schema\n",
-				oldToken, newToken)
+			diags = append(diags, &hcl.Diagnostic{
+				Severity: hcl.DiagWarning,
+				Summary:  fmt.Sprintf("Renaming '%s' to '%s' in the schema", oldToken, newToken),
+			})
 			delete(types, oldToken)
 		} else {
-			fmt.Printf("WARN not renaming %s to %s in the schema "+
-				"because they differ structurally\n",
-				oldToken, newToken)
+			diags = append(diags, &hcl.Diagnostic{
+				Severity: hcl.DiagWarning,
+				Summary: fmt.Sprintf(
+					"Not renaming '%s' to '%s' in the schema because they differ structurally",
+					oldToken, newToken,
+				),
+			})
 		}
 	}
 
@@ -89,7 +96,10 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 			return node
 		}
 		if r, isRenamed := renamedRefs[s]; isRenamed {
-			fmt.Printf("Rewritten %s to %s\n", s, r)
+			diags = append(diags, &hcl.Diagnostic{
+				Severity: hcl.DiagWarning,
+				Summary:  fmt.Sprintf("Rewrote reference '%s' to '%s'", s, r),
+			})
 			return r
 		}
 		return node
@@ -100,15 +110,15 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 	buf.Reset()
 
 	if err := json.NewEncoder(&buf).Encode(&rawSchema); err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 
-	var fixedSpec pschema.PackageSpec
+	var fixedSpec schema.PackageSpec
 	if err := json.NewDecoder(bytes.NewReader(buf.Bytes())).Decode(&fixedSpec); err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 
-	return &fixedSpec, nil
+	return &fixedSpec, diags, nil
 }
 
 func transformJSONTree(t func(interface{}) interface{}, tree interface{}) interface{} {

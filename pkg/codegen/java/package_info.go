@@ -16,6 +16,7 @@ package java
 
 import (
 	"github.com/blang/semver"
+	"golang.org/x/exp/maps"
 )
 
 const defaultBasePackage = "com.pulumi."
@@ -134,6 +135,17 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 		for k, v := range overrides.Dependencies {
 			result.Dependencies[k] = v
 		}
+	}
+	if len(overrides.Repositories) > 0 {
+		repositories := map[string]bool{}
+		for _, repo := range result.Repositories {
+			repositories[repo] = true
+		}
+		for _, repo := range overrides.Repositories {
+			repositories[repo] = true
+		}
+
+		result.Repositories = maps.Keys(repositories)
 	}
 	if overrides.GradleNexusPublishPluginVersion != "" {
 		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
