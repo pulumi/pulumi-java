@@ -654,6 +654,10 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType)...)
 			}
 		}
+	case "stack", "projectName":
+		// stack() and projectName() functions are pulumi built-ins
+		// they require the Deployment class
+		imports = append(imports, "com.pulumi.deployment.Deployment")
 	}
 
 	return imports
@@ -678,24 +682,33 @@ func removeDuplicates(inputs []string) []string {
 // configuration or used in function calls
 func (g *generator) collectImports(nodes []pcl.Node) []string {
 	imports := make([]string, 0)
+
+	visitFunctionCalls := func(expr model.Expression) (model.Expression, hcl.Diagnostics) {
+		switch expr := expr.(type) {
+		case *model.FunctionCallExpression:
+			imports = append(imports, g.collectFunctionCallImports(expr)...)
+		}
+		return expr, nil
+	}
+
 	for _, node := range nodes {
 		switch node := node.(type) {
 		case *pcl.Resource:
 			// collect resource imports
 			resource := node
 			imports = append(imports, collectResourceImports(resource)...)
+			for _, prop := range resource.Inputs {
+				_, diags := model.VisitExpression(prop.Value, model.IdentityVisitor, visitFunctionCalls)
+				g.diagnostics = append(g.diagnostics, diags...)
+			}
 		case *pcl.LocalVariable:
 			localVariable := node
-			switch localVariable.Definition.Value.(type) {
-			case *model.FunctionCallExpression:
-				// collect function invoke imports
-				// traverse the args and inner objects recursively
-				functionCall := localVariable.Definition.Value.(*model.FunctionCallExpression)
-				_, isInvokeCall := g.isFunctionInvoke(localVariable)
-				if isInvokeCall {
-					imports = append(imports, g.collectFunctionCallImports(functionCall)...)
-				}
-			}
+			_, diags := model.VisitExpression(localVariable.Definition.Value, model.IdentityVisitor, visitFunctionCalls)
+			g.diagnostics = append(g.diagnostics, diags...)
+		case *pcl.OutputVariable:
+			outputVariable := node
+			_, diags := model.VisitExpression(outputVariable.Value, model.IdentityVisitor, visitFunctionCalls)
+			g.diagnostics = append(g.diagnostics, diags...)
 		}
 	}
 
