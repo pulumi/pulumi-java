@@ -43,12 +43,12 @@ repositories {
 dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("com.google.code.gson:gson:2.8.9")
-    implementation("com.google.protobuf:protobuf-java:3.25.5")
-    implementation("com.google.protobuf:protobuf-java-util:3.25.5")
+    implementation("com.google.protobuf:protobuf-java:4.29.2")
+    implementation("com.google.protobuf:protobuf-java-util:4.29.2")
     implementation("com.pulumi:pulumi:0.0.1")
-    implementation("org.assertj:assertj-core:3.23.1")
-    implementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
-    implementation("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+    implementation("org.assertj:assertj-core:3.27.0")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.11.4")
+    implementation("org.junit.jupiter:junit-jupiter-engine:5.11.4")
 }
 
 task sourcesJar(type: Jar) {

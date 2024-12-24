@@ -262,7 +262,7 @@ func newGeneratePackageTestConfigWithExtras(test *test.SDKTest, info *PackageInf
 		GradleTest: "JUnitPlatform",
 		Dependencies: map[string]string{
 			"com.pulumi:pulumi":                      "0.0.1",
-			"org.junit.jupiter:junit-jupiter-engine": "5.9.0",
+			"org.junit.jupiter:junit-jupiter-engine": "5.11.4",
 		},
 	}).WithDefaultDependencies()
 	return generatePackageTestConfig{
