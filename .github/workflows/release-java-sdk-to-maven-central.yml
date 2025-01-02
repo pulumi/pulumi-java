@@ -48,7 +48,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat versions.txt | tee $GITHUB_ENV
       - name: Set up JDK 11
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '11'
           distribution: 'temurin'
