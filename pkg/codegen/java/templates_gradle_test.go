@@ -16,7 +16,7 @@ func TestNewGradleTemplateContext(t *testing.T) {
 	tctx := newGradleTemplateContext(pkg, info)
 	assert.Equal(t, "0.37.1", tctx.Version)
 	assert.Equal(t, "com.pulumi", tctx.GroupID)
-	assert.Equal(t, "eks", tctx.ArtifactID)
+	assert.Equal(t, "eks", tctx.Name)
 	assert.Equal(t, "https://github.com/pulumi/pulumi-eks", tctx.ProjectURL)
 	assert.Equal(t, "git@github.com/pulumi/pulumi-eks.git", tctx.ProjectGitURL)
 	assert.Equal(t, "Pulumi Amazon Web Services (AWS) EKS Components.", tctx.ProjectDescription)

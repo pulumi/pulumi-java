@@ -5,6 +5,7 @@ package java
 import (
 	"bytes"
 	_ "embed"
+	"encoding/base64"
 	"fmt"
 	"net/url"
 	"slices"
@@ -66,9 +67,9 @@ var settingsGradleTemplate string
 var buildGradleTemplate string
 
 type gradleTemplateContext struct {
+	Name                            string
 	Version                         string
 	GroupID                         string
-	ArtifactID                      string
 	ProjectName                     string
 	RootProjectName                 string
 	ProjectURL                      string
@@ -86,6 +87,13 @@ type gradleTemplateContext struct {
 	GradleNexusPublishPluginVersion string
 	GradleTestJUnitPlatformEnabled  bool
 	PluginDownloadURL               string
+	Parameterization                *gradleTemplateParameterization
+}
+
+type gradleTemplateParameterization struct {
+	Name    string
+	Version string
+	Value   string
 }
 
 func newGradleTemplateContext(
@@ -93,7 +101,7 @@ func newGradleTemplateContext(
 	packageInfo *PackageInfo,
 ) gradleTemplateContext {
 	ctx := gradleTemplateContext{
-		ArtifactID:                     pkg.Name,
+		Name:                           pkg.Name,
 		ProjectDescription:             pkg.Description,
 		ProjectURL:                     pkg.Repository,
 		ProjectGitURL:                  formatGitURL(pkg.Repository),
@@ -101,15 +109,26 @@ func newGradleTemplateContext(
 		PluginDownloadURL:              pkg.PluginDownloadURL,
 	}
 
-	if packageInfo.GradleNexusPublishPluginVersion != "" {
-		ctx.GradleNexusPublishPluginEnabled = true
-		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
-	}
-
 	if pkg.Version != nil {
 		ctx.Version = pkg.Version.String()
 	} else {
 		ctx.Version = "0.0.1"
+	}
+
+	if pkg.Parameterization != nil {
+		ctx.Parameterization = &gradleTemplateParameterization{
+			Name:    ctx.Name,
+			Version: ctx.Version,
+			Value:   base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
+		}
+
+		ctx.Name = pkg.Parameterization.BaseProvider.Name
+		ctx.Version = pkg.Parameterization.BaseProvider.Version.String()
+	}
+
+	if packageInfo.GradleNexusPublishPluginVersion != "" {
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
 	}
 
 	if packageInfo.Repositories != nil {
@@ -141,7 +160,7 @@ func newGradleTemplateContext(
 		ctx.DeveloperName = "Pulumi"
 		ctx.DeveloperEmail = "support@pulumi.com"
 		ctx.ProjectInceptionYear = "2022"
-		ctx.ProjectName = fmt.Sprintf("pulumi-%s", ctx.ArtifactID)
+		ctx.ProjectName = fmt.Sprintf("pulumi-%s", ctx.Name)
 	}
 
 	if ctx.RootProjectName == "" {

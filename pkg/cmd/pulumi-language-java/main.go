@@ -34,7 +34,9 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/structpb"
 
 	codegen "github.com/pulumi/pulumi-java/pkg/codegen/java"
@@ -158,49 +160,57 @@ func (host *javaLanguageHost) Executor(attachDebugger bool) (*executors.JavaExec
 	return executor, nil
 }
 
-// GetRequiredPlugins computes the complete set of anticipated plugins required by a program.
-func (host *javaLanguageHost) GetRequiredPlugins(
+// GetRequiredPackages computes the complete set of anticipated packages required by a program.
+func (host *javaLanguageHost) GetRequiredPackages(
 	ctx context.Context,
-	req *pulumirpc.GetRequiredPluginsRequest,
-) (*pulumirpc.GetRequiredPluginsResponse, error) {
-	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram()) //nolint:staticcheck
+	req *pulumirpc.GetRequiredPackagesRequest,
+) (*pulumirpc.GetRequiredPackagesResponse, error) {
+	logging.V(5).Infof("GetRequiredPackages: programDirectory=%v", req.Info.ProgramDirectory)
 
-	// now, introspect the user project to see which pulumi resource packages it references.
-	pulumiPackages, err := host.determinePulumiPackages(ctx, req)
+	pulumiPackages, err := host.determinePulumiPackages(ctx, req.Info.ProgramDirectory)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host could not determine Pulumi packages")
 	}
 
-	// Now that we know the set of pulumi packages referenced, and we know where packages have been restored to,
-	// we can examine each package to determine the corresponding resource-plugin for it.
-
-	plugins := []*pulumirpc.PluginDependency{}
+	pkgs := []*pulumirpc.PackageDependency{}
 	for _, pulumiPackage := range pulumiPackages {
-		logging.V(3).Infof(
-			"GetRequiredPlugins: Determining plugin dependency: %v, %v",
-			pulumiPackage.Name, pulumiPackage.Version,
-		)
-
+		// Skip over any packages that don't correspond to Pulumi resource plugins.
 		if !pulumiPackage.Resource {
-			continue // the package has no associated resource plugin
+			continue
 		}
 
-		plugins = append(plugins, &pulumirpc.PluginDependency{
+		pkg := &pulumirpc.PackageDependency{
+			Kind:    "resource",
 			Name:    pulumiPackage.Name,
 			Version: pulumiPackage.Version,
 			Server:  pulumiPackage.Server,
-			Kind:    "resource",
-		})
+		}
+		if pulumiPackage.Parameterization != nil {
+			pkg.Parameterization = &pulumirpc.PackageParameterization{
+				Name:    pulumiPackage.Parameterization.Name,
+				Version: pulumiPackage.Parameterization.Version,
+				Value:   pulumiPackage.Parameterization.Value,
+			}
+		}
+
+		pkgs = append(pkgs, pkg)
 	}
 
-	logging.V(5).Infof("GetRequiredPlugins: plugins=%v", plugins)
+	logging.V(5).Infof("GetRequiredPackages: packages=%v", pkgs)
+	return &pulumirpc.GetRequiredPackagesResponse{Packages: pkgs}, nil
+}
 
-	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
+// GetRequiredPlugins computes the complete set of anticipated plugins required by a program.
+func (host *javaLanguageHost) GetRequiredPlugins(
+	context.Context,
+	*pulumirpc.GetRequiredPluginsRequest,
+) (*pulumirpc.GetRequiredPluginsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRequiredPlugins not implemented")
 }
 
 func (host *javaLanguageHost) determinePulumiPackages(
 	ctx context.Context,
-	req *pulumirpc.GetRequiredPluginsRequest,
+	programDirectory string,
 ) ([]plugin.PulumiPluginJSON, error) {
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
@@ -213,7 +223,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	cmd := exec.Cmd
 	args := exec.PluginArgs
 	quiet := true
-	output, err := host.runJavaCommand(ctx, req.Info.ProgramDirectory, cmd, args, quiet)
+	output, err := host.runJavaCommand(ctx, programDirectory, cmd, args, quiet)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
