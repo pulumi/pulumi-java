@@ -364,6 +364,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                 this.state = new DeploymentImpl.DeploymentState(
                         this.config,
                         this.standardLogger,
+                        this.options.organizationName(),
                         this.options.projectName(),
                         this.options.stackName(),
                         this.options.preview(),
@@ -386,6 +387,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             var outputsContext = new OutputContextInternal(outputFactory);
 
             var context = new ContextInternal(
+                    this.options.organizationName(),
                     this.options.projectName(),
                     this.options.stackName(),
                     loggingContext, configContext, outputsContext,

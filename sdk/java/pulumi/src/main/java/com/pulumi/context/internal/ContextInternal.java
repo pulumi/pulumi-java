@@ -15,11 +15,13 @@ import java.util.Map;
 
 import static com.pulumi.core.internal.Objects.require;
 import static java.util.Objects.requireNonNull;
+import static java.util.Objects.requireNonNullElse;
 
 @InternalUse
 @ParametersAreNonnullByDefault
 public class ContextInternal implements Context {
 
+    private final String organizationName;
     private final String projectName;
     private final String stackName;
     private final LoggingContextInternal logging;
@@ -29,6 +31,7 @@ public class ContextInternal implements Context {
     private final List<ResourceTransformation> resourceTransformations;
 
     public ContextInternal(
+            String organizationName,
             String projectName,
             String stackName,
             LoggingContextInternal logging,
@@ -36,6 +39,7 @@ public class ContextInternal implements Context {
             OutputContextInternal outputs,
             List<ResourceTransformation> resourceTransformations
     ) {
+        this.organizationName = requireNonNullElse(organizationName, "organization");
         this.projectName = require(Strings::isNonEmptyOrNull, projectName, () -> "expected a project name, got empty string or null");
         this.stackName = require(Strings::isNonEmptyOrNull, stackName, () -> "expected a stack name, got empty string or null");
         this.logging = requireNonNull(logging);
@@ -43,6 +47,11 @@ public class ContextInternal implements Context {
         this.outputs = requireNonNull(outputs);
         this.resourceTransformations = requireNonNull(resourceTransformations);
         this.exports = ImmutableMap.builder();
+    }
+
+    @Override
+    public String organizationName() {
+        return this.organizationName;
     }
 
     @Override
