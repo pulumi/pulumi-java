@@ -17,7 +17,11 @@ group = "{{ .GroupID }}"
 
 def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
+         {{- if .Parameterization }}
+         ? "{{ .Parameterization.Version }}"
+         {{- else }}
          ? "{{ .Version }}"
+         {{- end }}
          : project.version)
 
 def signingKey = System.getenv("SIGNING_KEY")
@@ -79,14 +83,25 @@ def genPulumiResources = tasks.register('genPulumiResources') {
         def outDir = file("$resourcesDir/$subDir")
         outDir.mkdirs()
         new File(outDir, "version.txt").text = resolvedVersion
-        def info = new Object()
-        info.metaClass.resource = true
-        info.metaClass.name = "{{ .ArtifactID }}"
-        {{- if .PluginDownloadURL }}
-        info.metaClass.server = "{{ .PluginDownloadURL }}"
-        {{- end }}
-        info.metaClass.version = resolvedVersion
-        def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
+        def builder = new groovy.json.JsonBuilder()
+        builder {
+            resource true
+            name "{{ .Name }}"
+            {{- if .PluginDownloadURL }}
+            server "{{ .PluginDownloadURL }}"
+            {{- end }}
+            {{- if .Parameterization }}
+            version "{{ .Version }}"
+            parameterization {
+                name "{{ .Parameterization.Name }}"
+                version resolvedVersion
+                value "{{ .Parameterization.Value }}"
+            }
+            {{- else }}
+            version resolvedVersion
+            {{- end }}
+        }
+        def infoJson = builder.toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
     }
 }
@@ -99,7 +114,11 @@ publishing {
     publications {
         mainPublication(MavenPublication) {
             groupId = "{{ .GroupID }}"
-            artifactId = "{{ .ArtifactID }}"
+            {{- if .Parameterization }}
+            artifactId = "{{ .Parameterization.Name }}"
+            {{- else }}
+            artifactId = "{{ .Name }}"
+            {{- end }}
             version = resolvedVersion
             from components.java
             artifact sourcesJar

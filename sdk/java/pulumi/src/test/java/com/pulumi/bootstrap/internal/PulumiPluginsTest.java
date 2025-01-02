@@ -17,7 +17,7 @@ class PulumiPluginsTest {
         var packages = PulumiPlugins.fromClasspath(PulumiPluginsTest.class);
         assertThat(packages).hasSize(1).containsEntry(
                 // minimal example, it derives both name and version
-                "com/pulumi/unittest", new PulumiPlugin(true, "unittest", "1.1.1", null)
+                "com/pulumi/unittest", new PulumiPlugin(true, "unittest", "1.1.1", null, null)
         );
     }
 }

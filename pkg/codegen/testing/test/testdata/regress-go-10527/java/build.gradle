@@ -64,11 +64,13 @@ def genPulumiResources = tasks.register('genPulumiResources') {
         def outDir = file("$resourcesDir/$subDir")
         outDir.mkdirs()
         new File(outDir, "version.txt").text = resolvedVersion
-        def info = new Object()
-        info.metaClass.resource = true
-        info.metaClass.name = "world"
-        info.metaClass.version = resolvedVersion
-        def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
+        def builder = new groovy.json.JsonBuilder()
+        builder {
+            resource true
+            name "world"
+            version resolvedVersion
+        }
+        def infoJson = builder.toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
     }
 }
