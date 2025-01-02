@@ -1,6 +1,6 @@
 ### Improvements
 
-- Update to Pulumi 3.143.0
+- Update to Pulumi 3.144.1
 
 - Implement `GetRequiredPackages` for the Java language host
 
