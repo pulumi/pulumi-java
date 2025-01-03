@@ -343,6 +343,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgen(w, "Deployment.getInstance().getStackName()")
 	case "project":
 		g.Fgen(w, "Deployment.getInstance().getProjectName()")
+	case "getOutput":
+		g.Fgenf(w, "%v.getOutput(%v)", expr.Args[0], expr.Args[1])
 	default:
 		g.genNYI(w, "call %v", expr.Name)
 	}
