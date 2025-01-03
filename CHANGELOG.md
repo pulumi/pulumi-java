@@ -1,13 +1,31 @@
 CHANGELOG
 =========
 
-### 0.20.0 (2024-12-12)
+## 0.21.0
+
+### Improvements
+
+- Update to Pulumi 3.144.1
+
+- Implement `GetRequiredPackages` for the Java language host
+
+- Support exporting plain stack output values with `Context.export`
+
+- Support `StackReference.getOutput` from generated programs
+
+- Implement `getOrganizationName` on `Deployment` and `Context`
+
+### Bug Fixes
+
+- [Convert] Emit the `Deployment` class when using Pulumi built-in functions in PCL `stack()` and `projectName()`
+
+## 0.20.0 (2024-12-12)
 
 ### Bug Fixes
 
 - Update SDK version used for codegen to 0.19
 
-### 0.19.0 (2024-12-11)
+## 0.19.0 (2024-12-11)
 
 ### Improvements
 
