@@ -47,7 +47,7 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java-util:3.25.5")
     implementation("com.pulumi:pulumi:0.0.1")
     implementation("org.assertj:assertj-core:3.23.1")
-    implementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.11.4")
     implementation("org.junit.jupiter:junit-jupiter-engine:5.9.0")
 }
 
