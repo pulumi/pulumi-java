@@ -181,7 +181,6 @@ var expectedFailures = map[string]string{
 	"l2-resource-parent-inheritance":        "unimplemented for Java",
 	"l2-resource-primitives":                "unimplemented for Java",
 	"l2-resource-secret":                    "unimplemented for Java",
-	"l2-target-up-with-new-dependency":      "unimplemented for Java",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
