@@ -252,6 +252,13 @@ func GenerateProject(
 	for _, p := range packages {
 		packageName := p.Name
 		version := p.Version
+
+		// Skip the pulumi package itself, as that is already included by default
+		// and listing it twice leads to build errors.
+		if packageName == "pulumi" {
+			continue
+		}
+
 		if version != nil {
 			dependencySection := fmt.Sprintf(
 				`<dependency>
@@ -474,6 +481,9 @@ func sanitizeImport(name string) string {
 
 func pulumiImport(pkg string, module string, member string) string {
 	module = cleanModule(module)
+	if pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs") {
+		return "com.pulumi.resources." + member
+	}
 	if ignoreModule(module) {
 		return "com.pulumi." + sanitizeImport(pkg) + "." + member
 	} else if module == "" {
