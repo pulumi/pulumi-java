@@ -9,6 +9,7 @@ import (
 	"io"
 	"os"
 	"path"
+	"path/filepath"
 	"slices"
 	"strings"
 
@@ -225,6 +226,16 @@ func GenerateProject(
 		return diagnostics
 	}
 
+	rootDirectory := directory
+	if project.Main != "" {
+		directory = filepath.Join(rootDirectory, project.Main)
+		// mkdir -p the subdirectory
+		err = os.MkdirAll(directory, 0o700)
+		if err != nil {
+			return fmt.Errorf("create main directory: %w", err)
+		}
+	}
+
 	// Set the runtime to "java" then marshal to Pulumi.yaml
 	project.Runtime = workspace.NewProjectRuntimeInfo("java", nil)
 	projectBytes, err := encoding.YAML.Marshal(project)
@@ -234,13 +245,13 @@ func GenerateProject(
 
 	filesWithPackages := make(map[string][]byte)
 
-	filesWithPackages["Pulumi.yaml"] = projectBytes
+	filesWithPackages[filepath.Join(rootDirectory, "Pulumi.yaml")] = projectBytes
 
 	for fileName, fileContents := range files {
 		if fileName == "MyStack.java" {
 			fileName = "App.java"
 		}
-		fileWithPackage := fmt.Sprintf("src/main/java/generated_program/%s", fileName)
+		fileWithPackage := filepath.Join(directory, "src", "main", "java", "generated_program", fileName)
 		filesWithPackages[fileWithPackage] = fileContents
 	}
 
@@ -407,15 +418,14 @@ func GenerateProject(
 		coreSDKVersion,
 		mavenDependenciesXML.String(),
 	))
-	filesWithPackages["pom.xml"] = mavenPomXML.Bytes()
+	filesWithPackages[filepath.Join(directory, "pom.xml")] = mavenPomXML.Bytes()
 
 	for filePath, data := range filesWithPackages {
-		outPath := path.Join(directory, filePath)
-		err := os.MkdirAll(path.Dir(outPath), os.ModePerm)
+		err := os.MkdirAll(path.Dir(filePath), os.ModePerm)
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
-		err = os.WriteFile(outPath, data, 0o600)
+		err = os.WriteFile(filePath, data, 0o600)
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
