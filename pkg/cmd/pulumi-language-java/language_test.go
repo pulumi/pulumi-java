@@ -178,8 +178,6 @@ var expectedFailures = map[string]string{
 	"l2-invoke-variants":                    "unimplemented for Java",
 	"l2-large-string":                       "unimplemented for Java",
 	"l2-map-keys":                           "unimplemented for Java",
-	"l2-plain":                              "unimplemented for Java",
-	"l2-primitive-ref":                      "unimplemented for Java",
 	"l2-provider-grpc-config-schema-secret": "unimplemented for Java",
 	"l2-provider-grpc-config-secret":        "unimplemented for Java",
 	"l2-provider-grpc-config":               "unimplemented for Java",
