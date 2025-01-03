@@ -737,6 +737,8 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 
 // genPreamble generates import statements, main class and stack definition.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
+	javaStringType := "String"
+
 	g.Fgen(w, "package generated_program;")
 	g.genNewline(w)
 	g.genNewline(w)
@@ -745,6 +747,12 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.genImport(w, "com.pulumi.core.Output")
 	// Write out the specific imports from used nodes
 	for _, importDef := range g.collectImports(nodes) {
+		if strings.HasSuffix(importDef, ".String") {
+			// A type named `String` is being imported so we need to fully qualify our
+			// use of the built-in `java.lang.String` type to avoid the conflict.
+			javaStringType = "java.lang.String"
+		}
+
 		g.genImport(w, importDef)
 	}
 
@@ -789,7 +797,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	// Emit Stack class signature
 	g.Fprint(w, "public class App {")
 	g.genNewline(w)
-	g.Fprint(w, "    public static void main(String[] args) {\n")
+	g.Fprintf(w, "    public static void main(%s[] args) {\n", javaStringType)
 	g.Fgen(w, "        Pulumi.run(App::stack);\n")
 	g.Fgen(w, "    }\n")
 	g.genNewline(w)
