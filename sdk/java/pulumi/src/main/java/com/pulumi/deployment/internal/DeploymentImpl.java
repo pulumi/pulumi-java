@@ -176,6 +176,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
+    @Nonnull
+    public String getOrganizationName() {
+        return this.state.organizationName;
+    }
+
+    @Override
     public boolean isDryRun() {
         return this.state.isDryRun;
     }
@@ -1731,6 +1737,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
 
         public final DeploymentImpl.Config config;
+        public final String organizationName;
         public final String projectName;
         public final String stackName;
         public final boolean isDryRun;
@@ -1746,6 +1753,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public DeploymentState(
                 DeploymentImpl.Config config,
                 Logger standardLogger,
+                String organizationName,
                 String projectName,
                 String stackName,
                 boolean isDryRun,
@@ -1753,6 +1761,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Monitor monitor) {
             this.config = Objects.requireNonNull(config);
             this.standardLogger = Objects.requireNonNull(standardLogger);
+            this.organizationName = Objects.requireNonNullElse(organizationName, "organization");
             this.projectName = Objects.requireNonNull(projectName);
             this.stackName = Objects.requireNonNull(stackName);
             this.isDryRun = isDryRun;
@@ -1778,6 +1787,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             try {
                 var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
                 var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
+                var organization = getEnvironmentVariable("PULUMI_ORGANIZATION").or("organization");
                 var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
                 var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
                 var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
@@ -1793,7 +1803,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var monitor = new GrpcMonitor(monitorTarget);
                 standardLogger.log(Level.FINEST, "Created deployment monitor");
 
-                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
+                return new DeploymentState(config, standardLogger, organization, project, stack, dryRun, engine, monitor);
             } catch (NullPointerException ex) {
                 throw new IllegalStateException(
                         "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);

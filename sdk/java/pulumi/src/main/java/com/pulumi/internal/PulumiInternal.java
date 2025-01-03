@@ -40,6 +40,7 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
         var instance = Deployment.getInstance();
+        var organizationName = deployment.getOrganizationName();
         var projectName = deployment.getProjectName();
         var stackName = deployment.getStackName();
         var runner = deployment.getRunner();
@@ -52,7 +53,7 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
         var outputs = new OutputContextInternal(outputFactory);
 
         var ctx = new ContextInternal(
-                projectName, stackName, logging, config, outputs, options.resourceTransformations()
+                organizationName, projectName, stackName, logging, config, outputs, options.resourceTransformations()
         );
         return new PulumiInternal(runner, ctx);
     }

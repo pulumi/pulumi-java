@@ -50,6 +50,12 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
         return deployment.getProjectName();
     }
 
+    @Nonnull
+    @Override
+    public String getOrganizationName() {
+        return deployment.getOrganizationName();
+    }
+
     @Override
     public boolean isDryRun() {
         return deployment.isDryRun();

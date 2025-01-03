@@ -10,16 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
             ctx.log().info("step2");
-            var isLocal = ctx.config().getBoolean("local").orElse(false);
-            final String slug;
-            if (isLocal) {
-                slug = ctx.stackName();
-            } else {
-                var org = ctx.config().require("org");
-                slug = String.format(
-                        "%s/%s/%s", org, ctx.projectName(), ctx.stackName()
-                );
-            }
+            var slug = String.format(
+                    "%s/%s/%s", ctx.organizationName(), ctx.projectName(), ctx.stackName()
+            );
             var a = new StackReference(slug);
 
             var gotExpectedError = false;

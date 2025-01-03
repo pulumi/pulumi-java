@@ -8,6 +8,8 @@
 
 - Support `StackReference.getOutput` from generated programs
 
+- Implement `getOrganizationName` on `Deployment` and `Context`
+
 ### Bug Fixes
 
 - [Convert] Emit the `Deployment` class when using Pulumi built-in functions in PCL `stack()` and `projectName()`

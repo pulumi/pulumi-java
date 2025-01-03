@@ -19,5 +19,6 @@ public class App {
     public static void stack(Context ctx) {
         ctx.export("stackName", Deployment.getInstance().getStackName());
         ctx.export("projectName", Deployment.getInstance().getProjectName());
+        ctx.export("organizationName", Deployment.getInstance().getOrganizationName());
     }
 }

@@ -20,9 +20,6 @@ func getCwd(t *testing.T) string {
 
 func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
 	opts := integration.ProgramTestOptions{
-		Config: map[string]string{
-			"org": "pulumi-bot",
-		},
 		PrepareProject: func(*engine.Projinfo) error {
 			return nil // needed because defaultPrepareProject does not know about java
 		},

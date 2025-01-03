@@ -5,6 +5,7 @@ import com.pulumi.resources.ResourceTransformation;
 import java.util.List;
 
 import static java.util.Objects.requireNonNull;
+import static java.util.Objects.requireNonNullElse;
 
 /**
  * Optional settings for tests.
@@ -13,6 +14,7 @@ public class TestOptions {
 
     public static final TestOptions Empty = builder().build();
 
+    private final String organizationName;
     private final String projectName;
     private final String stackName;
     private final boolean preview;
@@ -30,10 +32,35 @@ public class TestOptions {
             boolean preview,
             List<ResourceTransformation> resourceTransformations
     ) {
+        this(projectName, stackName, preview, resourceTransformations, null);
+    }
+
+    /**
+     * @param projectName             the test project name to use
+     * @param stackName               the test stack name to use
+     * @param preview                 is the test a preview or a normal execution
+     * @param resourceTransformations the test stack resource transformations
+     * @param organizationName        the test organization name to use
+     */
+    public TestOptions(
+            String projectName,
+            String stackName,
+            boolean preview,
+            List<ResourceTransformation> resourceTransformations,
+            String organizationName
+    ) {
         this.projectName = requireNonNull(projectName);
         this.stackName = requireNonNull(stackName);
         this.preview = preview;
         this.resourceTransformations = requireNonNull(resourceTransformations);
+        this.organizationName = requireNonNullElse(organizationName, "organization");
+    }
+
+    /**
+     * @return the test organization name
+     */
+    public String organizationName() {
+        return this.organizationName;
     }
 
     /**
@@ -76,16 +103,29 @@ public class TestOptions {
      * The builder for {@link TestOptions}
      */
     public static class Builder {
+        private String organizationName;
         private String projectName;
         private String stackName;
         private boolean preview;
         private List<ResourceTransformation> resourceTransformations;
 
         public Builder() {
+            this.organizationName = "organization";
             this.projectName = "project";
             this.stackName = "stack";
             this.preview = false;
             this.resourceTransformations = List.of();
+        }
+
+        /**
+         * The organization name. Defaults to <b>"organization"</b> if not specified.
+         *
+         * @param organizationName the organization name to use in the test
+         * @return this {@link Builder}
+         */
+        public Builder organizationName(String organizationName) {
+            this.organizationName = organizationName;
+            return this;
         }
 
         /**
@@ -138,7 +178,7 @@ public class TestOptions {
          */
         public TestOptions build() {
             return new TestOptions(
-                    this.projectName, this.stackName, this.preview, this.resourceTransformations
+                    this.projectName, this.stackName, this.preview, this.resourceTransformations, this.organizationName
             );
         }
     }

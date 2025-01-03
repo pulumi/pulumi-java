@@ -22,6 +22,13 @@ public interface Context extends OutputContext, ConfigContext {
     String stackName();
 
     /**
+     * @return the name of the current organization
+     */
+    default String organizationName() {
+        return "organization";
+    }
+
+    /**
      * @return the logger context
      */
     LoggingContext log();
