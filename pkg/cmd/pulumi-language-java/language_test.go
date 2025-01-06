@@ -174,7 +174,6 @@ var expectedFailures = map[string]string{
 	"l2-provider-grpc-config-schema-secret": "unimplemented for Java",
 	"l2-provider-grpc-config-secret":        "unimplemented for Java",
 	"l2-provider-grpc-config":               "unimplemented for Java",
-	"l2-ref-ref":                            "unimplemented for Java",
 	"l2-resource-asset-archive":             "unimplemented for Java",
 	"l2-resource-config":                    "unimplemented for Java",
 	"l2-resource-primitives":                "unimplemented for Java",
