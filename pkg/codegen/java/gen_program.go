@@ -753,7 +753,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		return importDef[strings.LastIndex(importDef, ".")+1:]
 	}
 
-	// if we two imports such as the following:
+	// if we have two imports such as the following:
 	// - com.pulumi.my_package.ResourceType
 	// - com.pulumi.your_package.ResourceType
 	// then we shouldn't generate import statements for them
