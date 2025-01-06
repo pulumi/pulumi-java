@@ -49,7 +49,8 @@ type generator struct {
 	//
 	// later on when apply a traversal sush as resourceGroup.getName(),
 	// we should rewrite it as resourceGroup.thenApply(getResourceGroupResult -> getResourceGroupResult.getName())
-	functionInvokes map[string]*schema.Function
+	functionInvokes  map[string]*schema.Function
+	importStatements []string
 }
 
 // genComment generates a comment into the output.
@@ -583,14 +584,14 @@ func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
 	}
 }
 
-func collectResourceImports(resource *pcl.Resource) []string {
+func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 	imports := make([]string, 0)
 	pkg, module, name, _ := resource.DecomposeToken()
 	resourceImport := pulumiImport(pkg, module, name)
 	imports = append(imports, resourceImport)
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
 		// import args type name
-		argsTypeName := resourceArgsTypeName(resource)
+		argsTypeName := g.resourceArgsTypeName(resource)
 		resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
 		imports = append(imports, resourceArgsImport)
 		resourceProperties := typedResourceProperties(resource)
@@ -716,7 +717,7 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 		case *pcl.Resource:
 			// collect resource imports
 			resource := node
-			imports = append(imports, collectResourceImports(resource)...)
+			imports = append(imports, g.collectResourceImports(resource)...)
 			for _, prop := range resource.Inputs {
 				_, diags := model.VisitExpression(prop.Value, model.IdentityVisitor, visitFunctionCalls)
 				g.diagnostics = append(g.diagnostics, diags...)
@@ -745,16 +746,44 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.genImport(w, "com.pulumi.Context")
 	g.genImport(w, "com.pulumi.Pulumi")
 	g.genImport(w, "com.pulumi.core.Output")
+
+	importStatements := g.collectImports(nodes)
+
+	importMember := func(importDef string) string {
+		return importDef[strings.LastIndex(importDef, ".")+1:]
+	}
+
+	// if we two imports such as the following:
+	// - com.pulumi.my_package.ResourceType
+	// - com.pulumi.your_package.ResourceType
+	// then we shouldn't generate import statements for them
+	// instead, we use the fully qualified name at the usage site
+	importsWithDuplicateName := codegen.NewStringSet()
+	for _, importDefA := range importStatements {
+		for _, importDefB := range importStatements {
+			if importMember(importDefA) == importMember(importDefB) && importDefA != importDefB {
+				importsWithDuplicateName.Add(importDefA)
+				importsWithDuplicateName.Add(importDefB)
+			}
+		}
+	}
+
 	// Write out the specific imports from used nodes
-	for _, importDef := range g.collectImports(nodes) {
+	for _, importDef := range importStatements {
 		if strings.HasSuffix(importDef, ".String") {
 			// A type named `String` is being imported so we need to fully qualify our
 			// use of the built-in `java.lang.String` type to avoid the conflict.
 			javaStringType = "java.lang.String"
 		}
 
-		g.genImport(w, importDef)
+		if !importsWithDuplicateName.Has(importDef) {
+			// do not generate import statements for symbols with duplicate members
+			// because those will require full qualification at the usage site
+			g.genImport(w, importDef)
+		}
 	}
+
+	g.importStatements = importStatements
 
 	if containsFunctionCall("toJSON", nodes) {
 		// import static functions from the Serialization class
@@ -817,7 +846,7 @@ func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 }
 
 // resourceTypeName computes the Java resource class name for the given resource.
-func resourceTypeName(resource *pcl.Resource) string {
+func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, diags := resource.DecomposeToken()
 	contract.Assertf(len(diags) == 0, "failed to decompose resource token: %v", diags)
@@ -825,12 +854,20 @@ func resourceTypeName(resource *pcl.Resource) string {
 		member = "Provider"
 	}
 
+	for _, importStatement := range g.importStatements {
+		// if there is an import statement that ends with the same member name
+		// return the fully qualified resource name
+		if strings.HasSuffix(importStatement, "."+member) && pulumiImport(pkg, module, member) != importStatement {
+			return pulumiImport(pkg, module, member)
+		}
+	}
+
 	return names.Title(member)
 }
 
 // resourceArgsTypeName computes the Java arguments class name for the given resource.
-func resourceArgsTypeName(r *pcl.Resource) string {
-	return fmt.Sprintf("%sArgs", resourceTypeName(r))
+func (g *generator) resourceArgsTypeName(r *pcl.Resource) string {
+	return fmt.Sprintf("%sArgs", g.resourceTypeName(r))
 }
 
 // Returns the expression that should be emitted for a resource's "name" parameter given its base name
@@ -987,8 +1024,8 @@ func typedResourceProperties(resource *pcl.Resource) map[string]schema.Type {
 }
 
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
-	resourceTypeName := resourceTypeName(resource)
-	resourceArgs := resourceArgsTypeName(resource)
+	resourceTypeName := g.resourceTypeName(resource)
+	resourceArgs := g.resourceArgsTypeName(resource)
 	variableName := names.LowerCamelCase(names.MakeValidIdentifier(resource.Name()))
 	g.genTrivia(w, resource.Definition.Tokens.GetType(""))
 	for _, l := range resource.Definition.Tokens.GetLabels(nil) {
