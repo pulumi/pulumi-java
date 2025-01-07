@@ -163,7 +163,6 @@ var expectedFailures = map[string]string{
 	"l1-output-array":                       "#1560 Empty array literals are not generated correctly",
 	"l1-output-map":                         "#1561 Map literals are not generated correctly",
 	"l1-output-string":                      "#1562 Large string literals are not generated correctly",
-	"l2-invoke-dependencies":                "#1563 Invoke argument and result handling",
 	"l2-invoke-options":                     "#1563 Invoke argument and result handling",
 	"l2-invoke-options-depends-on":          "#1563 Invoke argument and result handling",
 	"l2-invoke-secrets":                     "#1563 Invoke argument and result handling",
