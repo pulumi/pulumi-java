@@ -2270,6 +2270,13 @@ func GeneratePackage(
 			)
 		}
 
+		// local dependencies should only be using the pulumi core sdk
+		// in the future we will be adding local dependencies to component providers
+		// but for non-component providers, we should only be using the pulumi core sdk
+		if parts[1] != "pulumi" {
+			continue
+		}
+
 		k := parts[0] + ":" + parts[1]
 		dependencies[k] = parts[2]
 
