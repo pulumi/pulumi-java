@@ -192,19 +192,6 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
-func (g *generator) functionName(tokenArg model.Expression) string {
-	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
-	tokenRange := tokenArg.SyntaxNode().Range()
-
-	// Compute the resource type from the Pulumi type token.
-	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
-	if module == "index" || module == "" {
-		return names.Title(pkg) + "Functions" + "." + member
-	}
-
-	return names.Title(module) + "Functions" + "." + member
-}
-
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
@@ -277,20 +264,34 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method
 		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
-		fullyQualifiedName := g.functionName(expr.Args[0])
+		fullyQualifiedType, funcName := g.functionImportDef(expr.Args[0])
+		if !g.emittedTypeImportSymbols.Has(fullyQualifiedType) {
+			// the fully qualified name isn't emitted
+			// this means we need to use the fully qualified function name at call site
+			funcName = fullyQualifiedType
+		} else {
+			parts := strings.Split(fullyQualifiedType, ".")
+			funcName = parts[len(parts)-1] + "." + funcName
+		}
+
 		functionSchema, foundFunction := g.findFunctionSchema(expr.Args[0])
 		if foundFunction {
-			g.Fprintf(w, "%s(", fullyQualifiedName)
+			g.Fprintf(w, "%s(", funcName)
 			invokeArgumentsExpr := expr.Args[1]
 			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
 				argumentsExpr := invokeArgumentsExpr
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
+			case *model.FunctionCallExpression:
+				convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression)
+				if ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
+					g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
+				}
 			}
 			g.Fprint(w, ")")
 			return
 		}
-		g.Fprintf(w, "%s(", fullyQualifiedName)
+		g.Fprintf(w, "%s(", funcName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
 		if isOutput {
 			// typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")

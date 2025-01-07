@@ -1244,7 +1244,11 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 
 func (g *generator) genOutputAssignment(w io.Writer, outputVariable *pcl.OutputVariable) {
 	g.genIndent(w)
-	rewrittenOutVar := g.lowerExpression(outputVariable.Value, outputVariable.Type())
+	targetType := outputVariable.Value.Type()
+	if _, ok := targetType.(*model.OutputType); !ok {
+		targetType = model.NewOutputType(targetType)
+	}
+	rewrittenOutVar := g.lowerExpression(outputVariable.Value, targetType)
 	g.Fgenf(w, "ctx.export(\"%s\", %v);", outputVariable.Name(), rewrittenOutVar)
 	g.genNewline(w)
 }
