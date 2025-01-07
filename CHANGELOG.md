@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+## 1.0.0
+
+### Improvements
+
+- Fix emitted import statements in generated programs such that imports with the same symbol are fully qualified
+
+- Fix args and result handling of invokes in generated programs
+
+### Bug Fixes
+
 ## 0.21.0
 
 ### Improvements
