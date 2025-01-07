@@ -192,19 +192,6 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
-func (g *generator) functionName(tokenArg model.Expression) string {
-	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
-	tokenRange := tokenArg.SyntaxNode().Range()
-
-	// Compute the resource type from the Pulumi type token.
-	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
-	if module == "index" || module == "" {
-		return names.Title(pkg) + "Functions" + "." + member
-	}
-
-	return names.Title(module) + "Functions" + "." + member
-}
-
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
@@ -296,7 +283,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 				argumentsExpr := invokeArgumentsExpr
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
 			case *model.FunctionCallExpression:
-				if convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression); ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
+				convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression)
+				if ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
 					g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
 				}
 			}
