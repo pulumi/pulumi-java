@@ -277,20 +277,33 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method
 		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
-		fullyQualifiedName := g.functionName(expr.Args[0])
+		fullyQualifiedType, funcName := g.functionImportDef(expr.Args[0])
+		if !g.emittedTypeImportSymbols.Has(fullyQualifiedType) {
+			// the fully qualified name isn't emitted
+			// this means we need to use the fully qualified function name at call site
+			funcName = fullyQualifiedType
+		} else {
+			parts := strings.Split(fullyQualifiedType, ".")
+			funcName = parts[len(parts)-1] + "." + funcName
+		}
+
 		functionSchema, foundFunction := g.findFunctionSchema(expr.Args[0])
 		if foundFunction {
-			g.Fprintf(w, "%s(", fullyQualifiedName)
+			g.Fprintf(w, "%s(", funcName)
 			invokeArgumentsExpr := expr.Args[1]
 			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
 				argumentsExpr := invokeArgumentsExpr
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
+			case *model.FunctionCallExpression:
+				if convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression); ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
+					g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
+				}
 			}
 			g.Fprint(w, ")")
 			return
 		}
-		g.Fprintf(w, "%s(", fullyQualifiedName)
+		g.Fprintf(w, "%s(", funcName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
 		if isOutput {
 			// typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")

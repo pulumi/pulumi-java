@@ -609,6 +609,8 @@ func (host *javaLanguageHost) GenerateProject(
 		extraOptions = append(extraOptions, pcl.NonStrictBindOptions()...)
 	}
 
+	extraOptions = append(extraOptions, pcl.PreferOutputVersionedInvokes)
+
 	program, diags, err := pcl.BindDirectory(req.SourceDirectory, loader, extraOptions...)
 	if err != nil {
 		return nil, err
@@ -670,7 +672,7 @@ func (host *javaLanguageHost) GenerateProgram(
 		}
 	}
 
-	program, diags, err := pcl.BindProgram(parser.Files, pcl.Loader(loader))
+	program, diags, err := pcl.BindProgram(parser.Files, pcl.Loader(loader), pcl.PreferOutputVersionedInvokes)
 	if err != nil {
 		return nil, err
 	}
