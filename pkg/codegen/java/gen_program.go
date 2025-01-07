@@ -49,8 +49,8 @@ type generator struct {
 	//
 	// later on when apply a traversal sush as resourceGroup.getName(),
 	// we should rewrite it as resourceGroup.thenApply(getResourceGroupResult -> getResourceGroupResult.getName())
-	functionInvokes  map[string]*schema.Function
-	importStatements []string
+	functionInvokes          map[string]*schema.Function
+	emittedTypeImportSymbols codegen.StringSet
 }
 
 // genComment generates a comment into the output.
@@ -188,8 +188,9 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	}
 
 	g := &generator{
-		program:         program,
-		functionInvokes: map[string]*schema.Function{},
+		program:                  program,
+		functionInvokes:          map[string]*schema.Function{},
+		emittedTypeImportSymbols: codegen.NewStringSet(),
 	}
 
 	g.Formatter = format.NewFormatter(g)
@@ -747,10 +748,26 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.genImport(w, "com.pulumi.Pulumi")
 	g.genImport(w, "com.pulumi.core.Output")
 
-	importStatements := g.collectImports(nodes)
+	imports := g.collectImports(nodes)
 
 	importMember := func(importDef string) string {
 		return importDef[strings.LastIndex(importDef, ".")+1:]
+	}
+
+	// a map to keep track of member names of imports
+	// e.g. ResourceType -> [
+	//     com.pulumi.my_package.ResourceType
+	//     com.pulumi.your_package.ResourceType
+	// ]
+	importsByMember := map[string]codegen.StringSet{}
+	for _, importDef := range imports {
+		importMember := importMember(importDef)
+		if _, ok := importsByMember[importMember]; !ok {
+			// initialize the set
+			importsByMember[importMember] = codegen.NewStringSet()
+		}
+
+		importsByMember[importMember].Add(importDef)
 	}
 
 	// if we have two imports such as the following:
@@ -759,31 +776,31 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	// then we shouldn't generate import statements for them
 	// instead, we use the fully qualified name at the usage site
 	importsWithDuplicateName := codegen.NewStringSet()
-	for _, importDefA := range importStatements {
-		for _, importDefB := range importStatements {
-			if importMember(importDefA) == importMember(importDefB) && importDefA != importDefB {
-				importsWithDuplicateName.Add(importDefA)
-				importsWithDuplicateName.Add(importDefB)
-			}
+	emittedTypeImportSymbols := codegen.NewStringSet()
+	for _, importDef := range imports {
+		if len(importsByMember[importMember(importDef)]) > 1 {
+			importsWithDuplicateName.Add(importDef)
+		} else {
+			emittedTypeImportSymbols.Add(importDef)
 		}
 	}
 
 	// Write out the specific imports from used nodes
-	for _, importDef := range importStatements {
+	for _, importDef := range imports {
 		if strings.HasSuffix(importDef, ".String") {
 			// A type named `String` is being imported so we need to fully qualify our
 			// use of the built-in `java.lang.String` type to avoid the conflict.
 			javaStringType = "java.lang.String"
 		}
 
-		if !importsWithDuplicateName.Has(importDef) {
+		if emittedTypeImportSymbols.Has(importDef) {
 			// do not generate import statements for symbols with duplicate members
 			// because those will require full qualification at the usage site
 			g.genImport(w, importDef)
 		}
 	}
 
-	g.importStatements = importStatements
+	g.emittedTypeImportSymbols = emittedTypeImportSymbols
 
 	if containsFunctionCall("toJSON", nodes) {
 		// import static functions from the Serialization class
@@ -854,12 +871,11 @@ func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 		member = "Provider"
 	}
 
-	for _, importStatement := range g.importStatements {
-		// if there is an import statement that ends with the same member name
-		// return the fully qualified resource name
-		if strings.HasSuffix(importStatement, "."+member) && pulumiImport(pkg, module, member) != importStatement {
-			return pulumiImport(pkg, module, member)
-		}
+	if !g.emittedTypeImportSymbols.Has(pulumiImport(pkg, module, member)) {
+		// if we didn't emit an import statement for this symbol
+		// it means that there was a duplicate member name in the imports
+		// so return the fully qualified resource name
+		return pulumiImport(pkg, module, member)
 	}
 
 	return names.Title(member)
