@@ -593,8 +593,13 @@ func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
 		// import args type name
 		argsTypeName := g.resourceArgsTypeName(resource)
-		resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
-		imports = append(imports, resourceArgsImport)
+		alreadyFullyQualified := strings.Contains(argsTypeName, ".")
+		if !alreadyFullyQualified {
+			resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
+			imports = append(imports, resourceArgsImport)
+		} else {
+			imports = append(imports, argsTypeName)
+		}
 		resourceProperties := typedResourceProperties(resource)
 		for _, inputProperty := range resource.Inputs {
 			inputType := resourceProperties[inputProperty.Name]
