@@ -169,7 +169,6 @@ var expectedFailures = map[string]string{
 	"l2-provider-grpc-config-schema-secret": "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config-secret":        "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config":               "#1568 Don't generate duplicate files",
-	"l2-resource-asset-archive":             "#1567 Implement remoteAsset and assetArchive",
 	"l2-resource-config":                    "#1566 Fix l2-resource-config / plugin download URL code generation",
 	"l2-resource-secret":                    "#1564 Fix l2-resource-secret",
 }
