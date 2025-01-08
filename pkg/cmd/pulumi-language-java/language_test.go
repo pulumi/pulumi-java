@@ -166,6 +166,7 @@ var expectedFailures = map[string]string{
 	"l2-invoke-options":                     "#1563 Invoke argument and result handling",
 	"l2-invoke-options-depends-on":          "#1563 Invoke argument and result handling",
 	"l2-invoke-secrets":                     "#1563 Invoke argument and result handling",
+	"l2-map-keys":                           "#1561 Map literals are not generated correctly",
 	"l2-provider-grpc-config-schema-secret": "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config-secret":        "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config":               "#1568 Don't generate duplicate files",
