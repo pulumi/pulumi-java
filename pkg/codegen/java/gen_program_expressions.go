@@ -227,7 +227,11 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case pcl.IntrinsicConvert:
 		switch arg := expr.Args[0].(type) {
 		case *model.ObjectConsExpression:
-			g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			if schemaType, ok := pcl.GetSchemaForType(expr.Signature.ReturnType); ok {
+				g.genObjectConsExpression(w, arg, schemaType)
+			} else {
+				g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			}
 		default:
 			g.genIntrinsic(w, expr.Args[0], expr.Signature.ReturnType)
 		}
