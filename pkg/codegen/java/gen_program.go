@@ -837,6 +837,14 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		g.genImport(w, "com.pulumi.asset.StringAsset")
 	}
 
+	if containsFunctionCall("remoteAsset", nodes) {
+		g.genImport(w, "com.pulumi.asset.RemoteAsset")
+	}
+
+	if containsFunctionCall("assetArchive", nodes) {
+		g.genImport(w, "com.pulumi.asset.AssetArchive")
+	}
+
 	g.genImport(w, "java.util.List")
 	g.genImport(w, "java.util.ArrayList")
 	g.genImport(w, "java.util.Map")
