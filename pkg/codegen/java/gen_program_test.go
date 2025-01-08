@@ -29,7 +29,6 @@ func TestGenerateJavaProgram(t *testing.T) {
 		if !strings.HasSuffix(name, "-pp") {
 			continue
 		}
-
 		tests = append(tests, test.ProgramTest{
 			Directory:   strings.TrimSuffix(name, "-pp"),
 			BindOptions: []pcl.BindOption{pcl.SkipResourceTypechecking},
