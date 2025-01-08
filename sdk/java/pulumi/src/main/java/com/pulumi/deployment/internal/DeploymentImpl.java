@@ -91,6 +91,7 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
@@ -541,23 +542,37 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ? CompletableFuture.completedFuture(null)
                 : packageRef;
 
-            // Find all the resource dependencies from dependsOn. We need to wait for these futures to complete
-            // before calling the invoke.
-            var depsFuture = this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn()));
+            // The expanded set of dependencies, including children of components.
+            var transitiveDeps = this.prepare.getAllTransitivelyReferencedResources(ImmutableSet.copyOf(options.getDependsOn()));
+            // If we depend on any CustomResources, we need to ensure that their
+            // ID is known before proceeding. If it is not known, we will return
+            // an unknown result.
+            var hasUnknownIDs = CompletableFutures.allOf(transitiveDeps
+                .filter(r -> r instanceof CustomResource)
+                .map(r -> (CustomResource) r)
+                .map(r -> Internal.of(r.id()).isKnown())
+                .collect(ImmutableSet.toImmutableSet())
+            ).thenApply(s -> s.stream().anyMatch(b -> !b));
 
             // Wait for all values from args to be available, and then perform the RPC.
-            return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
-                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
-                    .thenCompose(serializedArgs -> {
-                        if (!serializedArgs.containsUnknowns) {
-                            return CompletableFuture.allOf(depsFuture, packageRefFuture)
-                                    .thenCompose(v -> this.invokeRawAsync(token, serializedArgs, options, packageRefFuture.join()))
-                                    .thenApply(result -> parseInvokeResponse(token, targetType, result))
-                                    .thenApply(output -> output.withDependencies(options.getDependsOn()));
-                        } else {
-                            return CompletableFuture.completedFuture(OutputData.unknown());
-                        }
-                    }));
+            return new OutputInternal<>(CompletableFuture.allOf(
+                    this.featureSupport.monitorSupportsResourceReferences(),
+                    hasUnknownIDs)
+                .thenCompose(ignored -> {
+                    boolean keepResources = this.featureSupport.monitorSupportsResourceReferences().join();
+                    boolean hasUnknown = hasUnknownIDs.join();
+                    
+                    return this.serializeInvokeArgs(token, args, keepResources)
+                        .thenCompose(serializedArgs -> {
+                            if (serializedArgs.containsUnknowns || hasUnknown) {
+                                return CompletableFuture.completedFuture(OutputData.unknown());
+                            } else {
+                                return packageRefFuture
+                                    .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
+                                    .thenApply(result -> parseInvokeResponse(token, targetType, result));
+                            }
+                        });
+                }));
         }
         
         private <T> OutputData<T> parseInvokeResponse(
@@ -1073,7 +1088,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return Internal.of(resources).getValueOrDefault(List.of());
         }
 
-        private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
+        private Stream<Resource> getAllTransitivelyReferencedResources(
                 ImmutableSet<Resource> resources
         ) {
             // Go through 'resources', but transitively walk through **Component** resources, collecting any
@@ -1112,14 +1127,18 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             return Internal.from(resource).getRemote();
                         }
                         return false; // Unreachable
-                    })
-                    .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""))
-                    .collect(toImmutableSet());
-            return CompletableFutures.allOf(transitivelyReachableCustomResources)
-                    .thenApply(ts -> ts.stream()
-                            .filter(Strings::isNonEmptyOrNull)
-                            .collect(toImmutableSet())
-                    );
+                    });
+            return transitivelyReachableCustomResources;
+        }
+
+        private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
+                ImmutableSet<Resource> resources) {
+            var urns = getAllTransitivelyReferencedResources(resources)
+                .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""));
+            return CompletableFutures.allOf(urns.collect(ImmutableSet.toImmutableSet()))
+                .thenApply(strings -> strings.stream().filter(Strings::isNonEmptyOrNull))
+                .thenApply(urn ->  urn.collect(ImmutableSet.toImmutableSet())
+            );
         }
 
         /**
