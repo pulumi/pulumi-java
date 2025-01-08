@@ -13,6 +13,7 @@ import com.pulumi.resources.Resource;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.test.Mocks;
 import com.pulumi.test.TestOptions;
@@ -111,8 +112,10 @@ public class DeploymentInvokeDependsOnTest {
                 .build();
 
         var result = test.runTest(ctx -> {
-            var res = new MyCustomResource("r1", null, CustomResourceOptions.builder().build());
             var deps = new ArrayList<Resource>();
+            var remote = new DependencyResource("some:urn");
+            deps.add(remote);
+            var res = new MyCustomResource("r1", null, CustomResourceOptions.builder().build());
             deps.add(res);
 
             var opts = new InvokeOutputOptions(null, null, null, deps);
