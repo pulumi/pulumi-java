@@ -549,10 +549,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // an unknown result.
             var hasUnknownIDs = CompletableFutures.allOf(transitiveDeps
                 .filter(r -> r instanceof CustomResource)
-                .map(r -> (CustomResource) r)
-                .map(r -> Internal.of(r.id()).isKnown())
+                .map(r -> Internal.of(((CustomResource) r).id()).isKnown())
                 .collect(ImmutableSet.toImmutableSet())
-            ).thenApply(s -> s.stream().anyMatch(b -> !b));
+            ).thenApply(s -> s.stream().anyMatch(known -> !known));
 
             // Wait for all values from args to be available, and then perform the RPC.
             return new OutputInternal<>(CompletableFuture.allOf(
@@ -561,7 +560,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 .thenCompose(ignored -> {
                     boolean keepResources = this.featureSupport.monitorSupportsResourceReferences().join();
                     boolean hasUnknown = hasUnknownIDs.join();
-                    
+
                     return this.serializeInvokeArgs(token, args, keepResources)
                         .thenCompose(serializedArgs -> {
                             if (serializedArgs.containsUnknowns || hasUnknown) {
