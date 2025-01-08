@@ -1,10 +1,6 @@
 CHANGELOG
 =========
 
-## Unreleased
-
-- Avoid calling invokes with dependencies on unknown resources
-
 ## 1.0.0
 
 ### Improvements
