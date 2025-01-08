@@ -1061,9 +1061,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			// latter will typically be a union of the type we've computed and one or more output types. This may result
 			// in inaccurate code generation later on. Arguably this is a bug in the generator, but this will have to do
 			// for now.
-			_, diagnostics := resource.InputType.Traverse(hcl.TraverseAttr{Name: input.Name})
+			targetType, diagnostics := resource.InputType.Traverse(hcl.TraverseAttr{Name: input.Name})
 			g.diagnostics = append(g.diagnostics, diagnostics...)
-			value := g.lowerExpression(input.Value, input.Type())
+			value := g.lowerExpression(input.Value, targetType.(model.Type))
 			input.Value = value
 		}
 	}
