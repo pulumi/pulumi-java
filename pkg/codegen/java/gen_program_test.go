@@ -8,6 +8,8 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/utils"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -29,9 +31,22 @@ func TestGenerateJavaProgram(t *testing.T) {
 		if !strings.HasSuffix(name, "-pp") {
 			continue
 		}
+
+		var pluginHost plugin.Host
+		if name == "azure-native-pp" {
+			pluginHost = utils.NewHostWithProviders(testdataPath,
+				utils.NewSchemaProvider("azure-native", "1.56.0"))
+		}
+
+		bindOptions := []pcl.BindOption{pcl.SkipResourceTypechecking}
+
+		if pluginHost != nil {
+			bindOptions = append(bindOptions, pcl.PluginHost(pluginHost))
+		}
+
 		tests = append(tests, test.ProgramTest{
 			Directory:   strings.TrimSuffix(name, "-pp"),
-			BindOptions: []pcl.BindOption{pcl.SkipResourceTypechecking},
+			BindOptions: bindOptions,
 		})
 	}
 	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
