@@ -8,7 +8,6 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.InvokeArgs;
@@ -30,6 +29,7 @@ import java.util.Optional;
 import java.lang.Thread;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class DeploymentInvokeDependsOnTest {
 
@@ -43,7 +43,7 @@ public class DeploymentInvokeDependsOnTest {
         var marker = new ResolveMarker();
 
         var test = PulumiTestInternal.builder()
-                .options(TestOptions.builder().preview(true).build())
+                .options(TestOptions.builder().build())
                 .mocks(new Mocks() {
                     @Override
                     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
@@ -84,6 +84,40 @@ public class DeploymentInvokeDependsOnTest {
                 assertThat(r).hasSize(1);
                 assertThat(r)
                         .contains(ImmutableMap.of("root", ImmutableMap.of("test1", ImmutableList.of("1", "2", "3"))));
+                return r;
+            });
+        });
+
+        assertThat(result.exceptions()).hasSize(0);
+        assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedSuccessfully);
+    }
+
+    @Test
+    void testInvokesDependsOnUnknown() {
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new Mocks() {
+                    @Override
+                    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+                        return CompletableFuture
+                                .supplyAsync(() -> ResourceResult.of(Optional.empty(), ImmutableMap.of()));
+                    }
+
+                    @Override
+                    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
+                        return CompletableFuture.completedFuture(ImmutableMap.of());
+                    }
+                })
+                .build();
+
+        var result = test.runTest(ctx -> {
+            var res = new MyCustomResource("r1", null, CustomResourceOptions.builder().build());
+            var deps = new ArrayList<Resource>();
+            deps.add(res);
+
+            var opts = new InvokeOutputOptions(null, null, null, deps);
+            CustomInvokes.doStuff(CustomArgs.Empty, opts).applyValue(r -> {
+                assertFalse(true, "invoke should not be called!");
                 return r;
             });
         });
