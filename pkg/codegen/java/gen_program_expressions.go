@@ -192,14 +192,48 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
+func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Type) {
+	targetType := pcl.LowerConversion(from, to)
+	output, isOutput := targetType.(*model.OutputType)
+	if isOutput {
+		targetType = output.ElementType
+	}
+
+	if targetType.Equals(model.NumberType) {
+		if schemaType, ok := pcl.GetSchemaForType(to); ok {
+			if inputType, ok := schemaType.(*schema.InputType); ok {
+				schemaType = inputType.ElementType
+			}
+
+			if expr, ok := from.(*model.LiteralValueExpression); ok && schemaType == schema.NumberType {
+				bf := expr.Value.AsBigFloat()
+				if i, acc := bf.Int64(); acc == big.Exact {
+					g.Fgenf(w, "%d.0", i)
+					return
+				}
+
+				f, _ := bf.Float64()
+				g.Fgenf(w, "%g", f)
+				return
+			}
+		}
+	}
+
+	g.Fgenf(w, "%.v", from)
+}
+
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
 		switch arg := expr.Args[0].(type) {
 		case *model.ObjectConsExpression:
-			g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			if schemaType, ok := pcl.GetSchemaForType(expr.Signature.ReturnType); ok {
+				g.genObjectConsExpression(w, arg, schemaType)
+			} else {
+				g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			}
 		default:
-			g.Fgenf(w, "%.v", expr.Args[0]) // <- probably wrong w.r.t. precedence
+			g.genIntrinsic(w, expr.Args[0], expr.Signature.ReturnType)
 		}
 	case pcl.IntrinsicApply:
 		g.genApply(w, expr)
