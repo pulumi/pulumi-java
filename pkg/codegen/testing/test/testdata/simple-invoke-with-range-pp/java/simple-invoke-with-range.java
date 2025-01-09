@@ -21,7 +21,8 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        final var zones = AwsFunctions.getAvailabilityZones();
+        final var zones = AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+            .build());
 
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();

@@ -192,14 +192,48 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
+func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Type) {
+	targetType := pcl.LowerConversion(from, to)
+	output, isOutput := targetType.(*model.OutputType)
+	if isOutput {
+		targetType = output.ElementType
+	}
+
+	if targetType.Equals(model.NumberType) {
+		if schemaType, ok := pcl.GetSchemaForType(to); ok {
+			if inputType, ok := schemaType.(*schema.InputType); ok {
+				schemaType = inputType.ElementType
+			}
+
+			if expr, ok := from.(*model.LiteralValueExpression); ok && schemaType == schema.NumberType {
+				bf := expr.Value.AsBigFloat()
+				if i, acc := bf.Int64(); acc == big.Exact {
+					g.Fgenf(w, "%d.0", i)
+					return
+				}
+
+				f, _ := bf.Float64()
+				g.Fgenf(w, "%g", f)
+				return
+			}
+		}
+	}
+
+	g.Fgenf(w, "%.v", from)
+}
+
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
 		switch arg := expr.Args[0].(type) {
 		case *model.ObjectConsExpression:
-			g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			if schemaType, ok := pcl.GetSchemaForType(expr.Signature.ReturnType); ok {
+				g.genObjectConsExpression(w, arg, schemaType)
+			} else {
+				g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			}
 		default:
-			g.Fgenf(w, "%.v", expr.Args[0]) // <- probably wrong w.r.t. precedence
+			g.genIntrinsic(w, expr.Args[0], expr.Signature.ReturnType)
 		}
 	case pcl.IntrinsicApply:
 		g.genApply(w, expr)
@@ -479,10 +513,6 @@ func (g *generator) GenObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 }
 
 func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsExpression, destType schema.Type) {
-	if len(expr.Items) == 0 {
-		return
-	}
-
 	g.genObjectConsExpressionWithTypeName(w, expr, destType)
 }
 
@@ -561,13 +591,9 @@ func pickTypeFromUnion(union *schema.UnionType, expr *model.ObjectConsExpression
 func (g *generator) genObjectConsExpressionWithTypeName(
 	w io.Writer, expr *model.ObjectConsExpression, destType schema.Type,
 ) {
-	if len(expr.Items) == 0 {
-		return
-	}
-
-	destTypeName := typeName(destType)
 	switch destType := destType.(type) {
 	case *schema.ObjectType:
+		destTypeName := typeName(destType)
 		objectProperties := make(map[string]schema.Type)
 		for _, property := range destType.Properties {
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
@@ -769,30 +795,49 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		}
 	}
 
-	if len(expr.Expressions) > 0 {
-		if len(expr.Expressions) == 1 {
-			// simple case, just write the first element
-			g.Fgenf(w, "%.v", expr.Expressions[0])
-			return
+	closeList := func() {
+		if g.currentResourcePropertyType == nil {
+			g.Fgen(w, ")")
 		}
-
-		// Write multiple list elements
-		g.Fgenf(w, "%s\n", g.Indent)
-		g.Indented(func() {
-			for index, value := range expr.Expressions {
-				if index == 0 {
-					// first expression, no need for a new line
-					g.Fgenf(w, "%s%.v,", g.Indent, value)
-				} else if index == len(expr.Expressions)-1 {
-					// last element, no trailing comma
-					g.Fgenf(w, "\n%s%.v", g.Indent, value)
-				} else {
-					// elements in between: new line and trailing comma
-					g.Fgenf(w, "\n%s%.v,", g.Indent, value)
-				}
-			}
-		})
 	}
+
+	if g.currentResourcePropertyType == nil {
+		// we are dealing with an untyped array
+		// generate `List.of(...)`
+		g.Fgen(w, "List.of(")
+	}
+
+	if len(expr.Expressions) == 0 {
+		// empty list
+		closeList()
+		return
+	}
+
+	if len(expr.Expressions) == 1 {
+		// simple case, just write the first element
+		g.Fgenf(w, "%.v", expr.Expressions[0])
+		closeList()
+		return
+	}
+
+	// Write multiple list elements
+	g.Fgenf(w, "%s\n", g.Indent)
+	g.Indented(func() {
+		for index, value := range expr.Expressions {
+			if index == 0 {
+				// first expression, no need for a new line
+				g.Fgenf(w, "%s%.v,", g.Indent, value)
+			} else if index == len(expr.Expressions)-1 {
+				// last element, no trailing comma
+				g.Fgenf(w, "\n%s%.v", g.Indent, value)
+			} else {
+				// elements in between: new line and trailing comma
+				g.Fgenf(w, "\n%s%.v,", g.Indent, value)
+			}
+		}
+	})
+
+	closeList()
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {
