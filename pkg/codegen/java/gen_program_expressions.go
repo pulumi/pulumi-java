@@ -513,10 +513,6 @@ func (g *generator) GenObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 }
 
 func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsExpression, destType schema.Type) {
-	if len(expr.Items) == 0 {
-		return
-	}
-
 	g.genObjectConsExpressionWithTypeName(w, expr, destType)
 }
 
@@ -595,13 +591,9 @@ func pickTypeFromUnion(union *schema.UnionType, expr *model.ObjectConsExpression
 func (g *generator) genObjectConsExpressionWithTypeName(
 	w io.Writer, expr *model.ObjectConsExpression, destType schema.Type,
 ) {
-	if len(expr.Items) == 0 {
-		return
-	}
-
-	destTypeName := typeName(destType)
 	switch destType := destType.(type) {
 	case *schema.ObjectType:
+		destTypeName := typeName(destType)
 		objectProperties := make(map[string]schema.Type)
 		for _, property := range destType.Properties {
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
@@ -803,30 +795,49 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		}
 	}
 
-	if len(expr.Expressions) > 0 {
-		if len(expr.Expressions) == 1 {
-			// simple case, just write the first element
-			g.Fgenf(w, "%.v", expr.Expressions[0])
-			return
+	closeList := func() {
+		if g.currentResourcePropertyType == nil {
+			g.Fgen(w, ")")
 		}
-
-		// Write multiple list elements
-		g.Fgenf(w, "%s\n", g.Indent)
-		g.Indented(func() {
-			for index, value := range expr.Expressions {
-				if index == 0 {
-					// first expression, no need for a new line
-					g.Fgenf(w, "%s%.v,", g.Indent, value)
-				} else if index == len(expr.Expressions)-1 {
-					// last element, no trailing comma
-					g.Fgenf(w, "\n%s%.v", g.Indent, value)
-				} else {
-					// elements in between: new line and trailing comma
-					g.Fgenf(w, "\n%s%.v,", g.Indent, value)
-				}
-			}
-		})
 	}
+
+	if g.currentResourcePropertyType == nil {
+		// we are dealing with an untyped array
+		// generate `List.of(...)`
+		g.Fgen(w, "List.of(")
+	}
+
+	if len(expr.Expressions) == 0 {
+		// empty list
+		closeList()
+		return
+	}
+
+	if len(expr.Expressions) == 1 {
+		// simple case, just write the first element
+		g.Fgenf(w, "%.v", expr.Expressions[0])
+		closeList()
+		return
+	}
+
+	// Write multiple list elements
+	g.Fgenf(w, "%s\n", g.Indent)
+	g.Indented(func() {
+		for index, value := range expr.Expressions {
+			if index == 0 {
+				// first expression, no need for a new line
+				g.Fgenf(w, "%s%.v,", g.Indent, value)
+			} else if index == len(expr.Expressions)-1 {
+				// last element, no trailing comma
+				g.Fgenf(w, "\n%s%.v", g.Indent, value)
+			} else {
+				// elements in between: new line and trailing comma
+				g.Fgenf(w, "\n%s%.v,", g.Indent, value)
+			}
+		}
+	})
+
+	closeList()
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {

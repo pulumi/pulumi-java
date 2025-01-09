@@ -28,6 +28,7 @@ public class App {
         ctx.export("outputInput", SimpleinvokeFunctions.myInvoke(MyInvokeArgs.builder()
             .value(res.text())
             .build()).applyValue(invoke -> invoke.result()));
-        ctx.export("unit", SimpleinvokeFunctions.unit().applyValue(invoke -> invoke.result()));
+        ctx.export("unit", SimpleinvokeFunctions.unit(UnitArgs.builder()
+            .build()).applyValue(invoke -> invoke.result()));
     }
 }

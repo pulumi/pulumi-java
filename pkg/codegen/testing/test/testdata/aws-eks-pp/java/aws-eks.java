@@ -68,7 +68,8 @@ public class App {
             .build());
 
         // Subnets, one for each AZ in a region
-        final var zones = AwsFunctions.getAvailabilityZones();
+        final var zones = AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+            .build());
 
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
