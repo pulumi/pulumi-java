@@ -152,6 +152,23 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 	return foundRangeCall
 }
 
+func inspectFunctionCall(nodes []pcl.Node, inspect func(*model.FunctionCallExpression)) {
+	for _, node := range nodes {
+		diags := node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
+			// Ignore the node if it is not a call to invoke.
+			call, ok := x.(*model.FunctionCallExpression)
+			if !ok {
+				return x, nil
+			}
+
+			inspect(call)
+			return x, nil
+		})
+
+		contract.Assertf(len(diags) == 0, "unexpected diagnostics: %v", diags)
+	}
+}
+
 func hasIterableResources(nodes []pcl.Node) bool {
 	for _, node := range nodes {
 		switch node := node.(type) {
@@ -742,6 +759,19 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 	return removeDuplicates(imports)
 }
 
+// checks whether the input expression is an object that has a property "dependsOn"
+func containsDependsOnInvokeOption(expr model.Expression) bool {
+	if invokeOptions, ok := expr.(*model.ObjectConsExpression); ok {
+		for _, item := range invokeOptions.Items {
+			if key, ok := literalExprText(item.Key); ok && key == "dependsOn" {
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
 // genPreamble generates import statements, main class and stack definition.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	javaStringType := "String"
@@ -807,9 +837,37 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	g.emittedTypeImportSymbols = emittedTypeImportSymbols
 
-	if containsFunctionCall("toJSON", nodes) {
-		// import static functions from the Serialization class
-		g.Fgen(w, "import static com.pulumi.codegen.internal.Serialization.*;\n")
+	functionImports := codegen.NewStringSet()
+
+	inspectFunctionCall(nodes, func(call *model.FunctionCallExpression) {
+		switch call.Name {
+		case "toJSON":
+			functionImports.Add("static com.pulumi.codegen.internal.Serialization.*")
+		case "readDir":
+			functionImports.Add("static com.pulumi.codegen.internal.Files.readDir")
+		case "fileAsset":
+			functionImports.Add("com.pulumi.asset.FileArchive")
+		case "fileArchive":
+			functionImports.Add("com.pulumi.asset.FileArchive")
+		case "stringAsset":
+			functionImports.Add("com.pulumi.asset.StringAsset")
+		case "remoteAsset":
+			functionImports.Add("com.pulumi.asset.RemoteAsset")
+		case "assetArchive":
+			functionImports.Add("com.pulumi.asset.AssetArchive")
+		case pcl.Invoke:
+			if len(call.Args) == 3 && containsDependsOnInvokeOption(call.Args[2]) {
+				// import the builder class because we want to new it up at call site
+				// i.e. (new InvokeOutputOptionsBuilder()).dependsOn(resource).build()
+				functionImports.Add("com.pulumi.deployment.InvokeOutputOptionsBuilder")
+			} else {
+				functionImports.Add("com.pulumi.deployment.InvokeOptions")
+			}
+		}
+	})
+
+	for _, functionImport := range functionImports.SortedValues() {
+		g.genImport(w, functionImport)
 	}
 
 	if containsRangeExpr(nodes) {
@@ -819,30 +877,6 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	if requiresImportingCustomResourceOptions(nodes) {
 		g.genImport(w, "com.pulumi.resources.CustomResourceOptions")
-	}
-
-	if containsFunctionCall("readDir", nodes) {
-		g.genImport(w, "static com.pulumi.codegen.internal.Files.readDir")
-	}
-
-	if containsFunctionCall("fileAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.FileAsset")
-	}
-
-	if containsFunctionCall("fileArchive", nodes) {
-		g.genImport(w, "com.pulumi.asset.FileArchive")
-	}
-
-	if containsFunctionCall("stringAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.StringAsset")
-	}
-
-	if containsFunctionCall("remoteAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.RemoteAsset")
-	}
-
-	if containsFunctionCall("assetArchive", nodes) {
-		g.genImport(w, "com.pulumi.asset.AssetArchive")
 	}
 
 	g.genImport(w, "java.util.List")

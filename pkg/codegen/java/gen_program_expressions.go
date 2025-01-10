@@ -83,7 +83,21 @@ func (g *generator) GenAnonymousFunctionExpression(w io.Writer, expr *model.Anon
 	case 0:
 		g.Fgen(w, "()")
 	case 1:
-		g.Fgenf(w, "%s", expr.Signature.Parameters[0].Name)
+		// rename the parameter to avoid conflicts existing variables
+		// for example we could have data.applyValue(data -> data.result())
+		// in this case we rename the parameter to _data
+		// it becomes data.applyValue(_data -> _data.result())
+		paramName := expr.Signature.Parameters[0].Name
+		modifiedParamName := "_" + paramName
+		modifier := func(x model.Expression) (model.Expression, hcl.Diagnostics) {
+			if x, ok := x.(*model.ScopeTraversalExpression); ok && x.RootName == paramName {
+				x.RootName = modifiedParamName
+			}
+			return x, nil
+		}
+
+		model.VisitExpression(expr.Body, modifier, nil)
+		g.Fgenf(w, "%s", modifiedParamName)
 		g.Fgenf(w, " -> %v", expr.Body)
 	default:
 		g.Fgen(w, "values -> {\n")
@@ -312,6 +326,37 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 			funcName = parts[len(parts)-1] + "." + funcName
 		}
 
+		generateInvokeOptions := func() {
+			if len(expr.Args) == 3 {
+				if options, ok := expr.Args[2].(*model.ObjectConsExpression); ok {
+					builderName := "InvokeOptions.builder()"
+					if containsDependsOnInvokeOption(options) {
+						// TODO: replace with `InvokeOutputOptions.builder()` once it's implemented
+						// for that we need InvokeOutputOptions to not extend InvokeOptions
+						builderName = "(new InvokeOutputOptionsBuilder())"
+					}
+					g.Fgenf(w, ", %s", builderName)
+					g.genNewline(w)
+					g.Indented(func() {
+						for _, item := range options.Items {
+							lit := item.Key.(*model.LiteralValueExpression)
+							key := lit.Value.AsString()
+							if key == "pluginDownloadUrl" {
+								key = "pluginDownloadURL"
+							}
+
+							g.genIndent(w)
+							g.Fgenf(w, "    .%s(%.v)", key, item.Value)
+							g.genNewline(w)
+						}
+
+						g.genIndent(w)
+						g.Fgenf(w, "    .build()")
+					})
+				}
+			}
+		}
+
 		functionSchema, foundFunction := g.findFunctionSchema(expr.Args[0])
 		if foundFunction {
 			g.Fprintf(w, "%s(", funcName)
@@ -326,6 +371,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 					g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
 				}
 			}
+			generateInvokeOptions()
 			g.Fprint(w, ")")
 			return
 		}
@@ -342,7 +388,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, &schema.MapType{ElementType: schema.StringType})
 			}
 		}
-
+		generateInvokeOptions()
 		g.Fprint(w, ")")
 	case "join":
 		g.Fgenf(w, "String.join(%v, %v)", expr.Args[0], expr.Args[1])
@@ -695,17 +741,7 @@ func (g *generator) GenRelativeTraversalExpression(w io.Writer, expr *model.Rela
 
 func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTraversalExpression) {
 	rootName := names.MakeValidIdentifier(expr.RootName)
-
 	g.Fgen(w, rootName)
-
-	invokedFunctionSchema, isFunctionInvoke := g.functionInvokes[rootName]
-
-	if isFunctionInvoke {
-		lambdaArg := names.LowerCamelCase(typeName(invokedFunctionSchema.Outputs))
-		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
-		g.Fgenf(w, ".applyValue(%s -> %s", lambdaArg, lambdaArg)
-	}
-
 	var objType *schema.ObjectType
 	if resource, ok := expr.Parts[0].(*pcl.Resource); ok {
 		if schemaType, ok := pcl.GetSchemaForType(resource.InputType); ok {
@@ -713,10 +749,6 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 		}
 	}
 	g.genRelativeTraversal(w, expr.Traversal.SimpleSplit().Rel, expr.Parts, objType)
-
-	if isFunctionInvoke {
-		g.Fgenf(w, ")")
-	}
 }
 
 func (g *generator) GenSplatExpression(w io.Writer, expr *model.SplatExpression) {
