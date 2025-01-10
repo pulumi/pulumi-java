@@ -27,15 +27,32 @@ public class InvokeOptions {
     private final ProviderResource provider;
     @Nullable
     private final String version;
+    @Nullable
+    private final String pluginDownloadURL;
 
     public InvokeOptions() {
-        this(null, null, null);
+        this(null, null, null, null);
     }
 
-    public InvokeOptions(@Nullable Resource parent, @Nullable ProviderResource provider, @Nullable String version) {
+    public InvokeOptions(
+        @Nullable Resource parent, 
+        @Nullable ProviderResource provider, 
+        @Nullable String version) {
         this.parent = parent;
         this.provider = provider;
         this.version = version;
+        this.pluginDownloadURL = null;
+    }
+
+    public InvokeOptions(
+        @Nullable Resource parent, 
+        @Nullable ProviderResource provider, 
+        @Nullable String version,
+        @Nullable String pluginDownloadURL) {
+        this.parent = parent;
+        this.provider = provider;
+        this.version = version;
+        this.pluginDownloadURL = pluginDownloadURL;
     }
 
     /**
@@ -60,6 +77,19 @@ public class InvokeOptions {
      */
     public Optional<String> getVersion() {
         return Optional.ofNullable(version);
+    }
+
+    /**
+     * An optional URL, corresponding to the url from which the provider plugin that should be
+     * used when operating on this resource is downloaded from. This URL overrides the download URL
+     * inferred from the current package and should rarely be used.
+     */
+    public Optional<String> getPluginDownloadURL() {
+        return Optional.ofNullable(pluginDownloadURL);
+    }
+
+    public static InvokeOptionsBuilder builder() {
+        return new InvokeOptionsBuilder();
     }
 
     @InternalUse

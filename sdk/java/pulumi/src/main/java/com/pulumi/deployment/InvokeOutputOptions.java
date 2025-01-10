@@ -26,12 +26,25 @@ public class InvokeOutputOptions extends InvokeOptions {
     private final List<Resource> dependsOn;
 
     public InvokeOutputOptions() {
-        this(null, null, null, null);
+        this(null, null, null, null, null);
     }
 
-    public InvokeOutputOptions(@Nullable Resource parent, @Nullable ProviderResource provider, @Nullable String version,
-            @Nullable List<Resource> dependsOn) {
-        super(parent, provider, version);
+    public InvokeOutputOptions(
+        @Nullable Resource parent, 
+        @Nullable ProviderResource provider, 
+        @Nullable String version,
+        @Nullable String pluginDownloadURL,
+        @Nullable List<Resource> dependsOn) {
+        super(parent, provider, version, pluginDownloadURL);
+        this.dependsOn = dependsOn;
+    }
+
+    public InvokeOutputOptions(
+        @Nullable Resource parent, 
+        @Nullable ProviderResource provider, 
+        @Nullable String version,
+        @Nullable List<Resource> dependsOn) {
+        super(parent, provider, version, null);
         this.dependsOn = dependsOn;
     }
 
