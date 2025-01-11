@@ -846,7 +846,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		case "readDir":
 			functionImports.Add("static com.pulumi.codegen.internal.Files.readDir")
 		case "fileAsset":
-			functionImports.Add("com.pulumi.asset.FileArchive")
+			functionImports.Add("com.pulumi.asset.FileAsset")
 		case "fileArchive":
 			functionImports.Add("com.pulumi.asset.FileArchive")
 		case "stringAsset":

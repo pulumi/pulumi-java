@@ -10,7 +10,7 @@ import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
 import com.pulumi.aws.s3.BucketPolicy;
 import com.pulumi.aws.s3.BucketPolicyArgs;
-import com.pulumi.asset.FileArchive;
+import com.pulumi.asset.FileAsset;
 import static com.pulumi.codegen.internal.Files.readDir;
 import static com.pulumi.codegen.internal.Serialization.*;
 import com.pulumi.codegen.internal.KeyedValue;
