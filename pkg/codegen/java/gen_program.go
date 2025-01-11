@@ -860,7 +860,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 				// import the builder class because we want to new it up at call site
 				// i.e. (new InvokeOutputOptionsBuilder()).dependsOn(resource).build()
 				functionImports.Add("com.pulumi.deployment.InvokeOutputOptionsBuilder")
-			} else {
+			} else if len(call.Args) == 3 {
 				functionImports.Add("com.pulumi.deployment.InvokeOptions")
 			}
 		}

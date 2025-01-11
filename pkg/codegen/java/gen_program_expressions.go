@@ -93,6 +93,11 @@ func (g *generator) GenAnonymousFunctionExpression(w io.Writer, expr *model.Anon
 			if x, ok := x.(*model.ScopeTraversalExpression); ok && x.RootName == paramName {
 				x.RootName = modifiedParamName
 			}
+			if x, ok := x.(*model.RelativeTraversalExpression); ok {
+				if scope, ok := x.Source.(*model.ScopeTraversalExpression); ok && scope.RootName == paramName {
+					scope.RootName = modifiedParamName
+				}
+			}
 			return x, nil
 		}
 
