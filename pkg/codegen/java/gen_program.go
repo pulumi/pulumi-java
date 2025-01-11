@@ -1274,9 +1274,9 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 	g.genIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
-		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
-		// functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
-		g.Fgenf(w, "final var %s = %v;\n", variableName, localVariable.Definition.Value)
+		invokeCall := localVariable.Definition.Value.(*model.FunctionCallExpression)
+		functionDefinitionWithApplies := g.lowerExpression(invokeCall, invokeCall.Signature.ReturnType)
+		g.Fgenf(w, "final var %s = %v;\n", variableName, functionDefinitionWithApplies)
 	} else {
 		variable := localVariable.Definition.Value
 		g.Fgenf(w, "final var %s = %v;\n", variableName, g.lowerExpression(variable, variable.Type()))

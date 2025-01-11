@@ -101,7 +101,7 @@ func (g *generator) GenAnonymousFunctionExpression(w io.Writer, expr *model.Anon
 			return x, nil
 		}
 
-		_, diags := model.VisitExpression(expr.Body, modifier, nil)
+		_, diags := model.VisitExpression(expr.Body, model.IdentityVisitor, modifier)
 		contract.Assertf(len(diags) == 0, "unexpected diagnostics when rewriting parameter name")
 		g.Fgenf(w, "%s", modifiedParamName)
 		g.Fgenf(w, " -> %v", expr.Body)

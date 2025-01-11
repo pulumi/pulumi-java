@@ -10,10 +10,10 @@ import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
 import com.pulumi.aws.s3.BucketPolicy;
 import com.pulumi.aws.s3.BucketPolicyArgs;
+import com.pulumi.asset.FileArchive;
+import static com.pulumi.codegen.internal.Files.readDir;
 import static com.pulumi.codegen.internal.Serialization.*;
 import com.pulumi.codegen.internal.KeyedValue;
-import static com.pulumi.codegen.internal.Files.readDir;
-import com.pulumi.asset.FileAsset;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -50,14 +50,14 @@ public class App {
         // Set the access policy for the bucket so all objects are readable
         var bucketPolicy = new BucketPolicy("bucketPolicy", BucketPolicyArgs.builder()
             .bucket(siteBucket.id())
-            .policy(siteBucket.id().applyValue(id -> serializeJson(
+            .policy(siteBucket.id().applyValue(_id -> serializeJson(
                 jsonObject(
                     jsonProperty("Version", "2012-10-17"),
                     jsonProperty("Statement", jsonArray(jsonObject(
                         jsonProperty("Effect", "Allow"),
                         jsonProperty("Principal", "*"),
                         jsonProperty("Action", jsonArray("s3:GetObject")),
-                        jsonProperty("Resource", jsonArray(String.format("arn:aws:s3:::%s/*", id)))
+                        jsonProperty("Resource", jsonArray(String.format("arn:aws:s3:::%s/*", _id)))
                     )))
                 ))))
             .build());
