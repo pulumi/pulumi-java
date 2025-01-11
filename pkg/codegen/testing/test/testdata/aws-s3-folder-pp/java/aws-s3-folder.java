@@ -37,7 +37,7 @@ public class App {
         final var siteDir = "www";
 
         // For each file in the directory, create an S3 object stored in `siteBucket`
-        for (var range : readDir(siteDir)) {
+        for (var range : KeyedValue.of(readDir(siteDir))) {
             new BucketObject("files-" + range.key(), BucketObjectArgs.builder()
                 .bucket(siteBucket.id())
                 .key(range.value())

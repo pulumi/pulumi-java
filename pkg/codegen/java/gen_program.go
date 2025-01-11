@@ -1160,56 +1160,42 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 
 		} else {
 			// for each-loop through the elements to creates a resource from each one
-			switch rangeExpr.(type) {
-			case *model.FunctionCallExpression:
-				funcCall := rangeExpr.(*model.FunctionCallExpression)
-				switch funcCall.Name {
-				case pcl.IntrinsicConvert:
-					firstArg := funcCall.Args[0]
-					switch firstArg := firstArg.(type) {
-					case *model.ScopeTraversalExpression:
-						traversalExpr := firstArg
-						if len(traversalExpr.Parts) == 2 {
-							// Meaning here we have {root}.{part} expression which the most common
-							// check whether {root} is actually a variable name that holds the result
-							// of a function invoke
-							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
-								resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
-								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
-								g.genIndent(w)
-								g.Fgenf(w, "final var %s = ", resource.Name())
-								g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
-								g.Indented(func() {
-									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
-									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s()) {\n", g.Indent, resultTypeName, part)
-									g.Indented(func() {
-										suffix := "range.key()"
-										g.Fgenf(w, "%svar resource = ", g.Indent)
-										instantiate(makeResourceName(resource.Name(), suffix))
-										g.Fgenf(w, ";\n\n")
-										g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
-									})
-									g.Fgenf(w, "%s}\n\n", g.Indent)
-									g.Fgenf(w, "%sreturn resources;\n", g.Indent)
-								})
-								g.Fgenf(w, "%s});\n\n", g.Indent)
-								return
-							}
-							// not an async function invoke
-							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-						} else {
-							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-						}
+			switch expr := resource.Options.Range.(type) {
+			case *model.ScopeTraversalExpression:
+				traversalExpr := expr
+				if len(traversalExpr.Parts) == 2 {
+					// Meaning here we have {root}.{part} expression which the most common
+					// check whether {root} is actually a variable name that holds the result
+					// of a function invoke
+					if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
+						resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
+						part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
+						g.genIndent(w)
+						g.Fgenf(w, "final var %s = ", resource.Name())
+						g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
+						g.Indented(func() {
+							g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
+							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s())) {\n", g.Indent, resultTypeName, part)
+							g.Indented(func() {
+								suffix := "range.key()"
+								g.Fgenf(w, "%svar resource = ", g.Indent)
+								instantiate(makeResourceName(resource.Name(), suffix))
+								g.Fgenf(w, ";\n\n")
+								g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
+							})
+							g.Fgenf(w, "%s}\n\n", g.Indent)
+							g.Fgenf(w, "%sreturn resources;\n", g.Indent)
+						})
+						g.Fgenf(w, "%s});\n\n", g.Indent)
+						return
 					}
+					// not an async function invoke
 					// wrap into range collection
 					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-				default:
-					// assume function call returns a Range<T>
-					g.Fgenf(w, "%sfor (var range : %.12o) {\n", g.Indent, rangeExpr)
+				} else {
+					// wrap into range collection
+					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 				}
-
 			default:
 				// wrap into range collection
 				g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)

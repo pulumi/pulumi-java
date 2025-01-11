@@ -71,23 +71,37 @@ public class App {
         final var zones = AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
             .build());
 
-        for (var range : KeyedValue.of(zones.applyValue(_zones -> _zones.names()))) {
-            new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()
-                .assignIpv6AddressOnCreation(false)
-                .vpcId(eksVpc.id())
-                .mapPublicIpOnLaunch(true)
-                .cidrBlock(String.format("10.100.%s.0/24", range.key()))
-                .availabilityZone(range.value())
-                .tags(Map.of("Name", String.format("pulumi-sn-%s", range.value())))
-                .build());
-        }
+        final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
+            final var resources = new ArrayList<Subnet>();
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names())) {
+                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()
+                    .assignIpv6AddressOnCreation(false)
+                    .vpcId(eksVpc.id())
+                    .mapPublicIpOnLaunch(true)
+                    .cidrBlock(String.format("10.100.%s.0/24", range.key()))
+                    .availabilityZone(range.value())
+                    .tags(Map.of("Name", String.format("pulumi-sn-%s", range.value())))
+                    .build());
 
-        for (var range : KeyedValue.of(zones.applyValue(_zones -> _zones.names()))) {
-            new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()
-                .routeTableId(eksRouteTable.id())
-                .subnetId(vpcSubnet.applyValue(_vpcSubnet -> _vpcSubnet[range.key()].id()))
-                .build());
-        }
+                resources.add(resource);
+            }
+
+            return resources;
+        });
+
+        final var rta = zones.applyValue(getAvailabilityZonesResult -> {
+            final var resources = new ArrayList<RouteTableAssociation>();
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names())) {
+                var resource = new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()
+                    .routeTableId(eksRouteTable.id())
+                    .subnetId(vpcSubnet.applyValue(_vpcSubnet -> _vpcSubnet[range.key()].id()))
+                    .build());
+
+                resources.add(resource);
+            }
+
+            return resources;
+        });
 
         final var subnetIds = vpcSubnet.applyValue(_vpcSubnet -> _vpcSubnet.stream().map(element -> element.id()).collect(toList()));
 
