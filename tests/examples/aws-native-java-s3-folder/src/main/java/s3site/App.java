@@ -32,14 +32,14 @@ public class App {
         final String siteDir = "www/";
         forEachFileInTree(siteDir, (path, contentType) -> {
             new BucketObject(path.toString().replace(siteDir, ""),
-                    BucketObjectArgs.builder().bucket(siteBucket.getId())
+                    BucketObjectArgs.builder().bucket(siteBucket.id())
                             .source(new FileAsset(path.toAbsolutePath().toString()))
                             .contentType(contentType).build()
             );
         });
 
         final var bucketPolicy = new BucketPolicy("bucketPolicy",
-                BucketPolicyArgs.builder().bucket(siteBucket.getId())
+                BucketPolicyArgs.builder().bucket(siteBucket.id())
                         .policy(siteBucket.arn()
                                 .applyValue(bucketArn -> """
                                             {
