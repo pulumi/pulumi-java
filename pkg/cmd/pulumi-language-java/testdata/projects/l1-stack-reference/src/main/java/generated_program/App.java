@@ -22,7 +22,7 @@ public class App {
             .name("organization/other/dev")
             .build());
 
-        ctx.export("plain", ref.getOutput("plain"));
-        ctx.export("secret", ref.getOutput("secret"));
+        ctx.export("plain", ref.output("plain"));
+        ctx.export("secret", ref.output("secret"));
     }
 }
