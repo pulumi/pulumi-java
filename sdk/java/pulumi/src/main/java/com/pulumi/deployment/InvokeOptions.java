@@ -27,15 +27,29 @@ public class InvokeOptions {
     private final ProviderResource provider;
     @Nullable
     private final String version;
+    @Nullable
+    private final String pluginDownloadURL;
 
     public InvokeOptions() {
-        this(null, null, null);
+        this(null, null, null, null);
     }
 
-    public InvokeOptions(@Nullable Resource parent, @Nullable ProviderResource provider, @Nullable String version) {
+    public InvokeOptions(
+        @Nullable Resource parent, 
+        @Nullable ProviderResource provider, 
+        @Nullable String version) {
+        this(parent, provider, version, null);
+    }
+
+    public InvokeOptions(
+        @Nullable Resource parent, 
+        @Nullable ProviderResource provider, 
+        @Nullable String version,
+        @Nullable String pluginDownloadURL) {
         this.parent = parent;
         this.provider = provider;
         this.version = version;
+        this.pluginDownloadURL = pluginDownloadURL;
     }
 
     /**
@@ -60,6 +74,67 @@ public class InvokeOptions {
      */
     public Optional<String> getVersion() {
         return Optional.ofNullable(version);
+    }
+
+    /**
+     * An optional URL, corresponding to the url from which the provider plugin that should be
+     * used when operating on this resource is downloaded from. This URL overrides the download URL
+     * inferred from the current package and should rarely be used.
+     */
+    public Optional<String> getPluginDownloadURL() {
+        return Optional.ofNullable(pluginDownloadURL);
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+        private @Nullable Resource parent;
+        private @Nullable ProviderResource provider;
+        private @Nullable String version;
+        private @Nullable String pluginDownloadURL;
+
+        /**
+         * An optional parent resource to which this invoke belongs.
+         */
+        public Builder parent(Resource parent) {
+            this.parent = parent;
+            return this;
+        }
+    
+        /**
+         * An optional provider to use for this invoke. If no provider is
+         * supplied, the default provider for the invoke package will be used.
+         */
+        public Builder provider(ProviderResource provider) {
+            this.provider = provider;
+            return this;
+        }
+
+        /**
+         * An optional version, corresponding to the version of the provider plugin that should be
+         * used when operating on this invoke. This version overrides the version information
+         * inferred from the current package and should rarely be used.
+         */
+        public Builder version(String version) {
+            this.version = version;
+            return this;
+        }
+
+        /**
+         * An optional URL, corresponding to the url from which the provider plugin that should be
+         * used when operating on this invoke is downloaded from. This URL overrides the download URL
+         * inferred from the current package and should rarely be used.
+         */
+        public Builder pluginDownloadURL(String pluginDownloadURL) {
+            this.pluginDownloadURL = pluginDownloadURL;
+            return this;
+        }
+    
+        public InvokeOptions build() {
+            return new InvokeOptions(parent, provider, version, pluginDownloadURL);
+        }
     }
 
     @InternalUse
