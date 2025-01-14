@@ -339,7 +339,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 					if containsDependsOnInvokeOption(options) {
 						// TODO: replace with `InvokeOutputOptions.builder()` once it's implemented
 						// for that we need InvokeOutputOptions to not extend InvokeOptions
-						builderName = "(new InvokeOutputOptionsBuilder())"
+						builderName = "(new InvokeOutputOptions.Builder())"
 					}
 					g.Fgenf(w, ", %s", builderName)
 					g.genNewline(w)

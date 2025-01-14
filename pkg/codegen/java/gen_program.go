@@ -857,9 +857,9 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 			functionImports.Add("com.pulumi.asset.AssetArchive")
 		case pcl.Invoke:
 			if len(call.Args) == 3 && containsDependsOnInvokeOption(call.Args[2]) {
-				// import the builder class because we want to new it up at call site
-				// i.e. (new InvokeOutputOptionsBuilder()).dependsOn(resource).build()
-				functionImports.Add("com.pulumi.deployment.InvokeOutputOptionsBuilder")
+				// for invoke output options, instantiate the builder from its parent class
+				// i.e. (new InvokeOutputOptions.Builder()).dependsOn(resource).build()
+				functionImports.Add("com.pulumi.deployment.InvokeOutputOptions")
 			} else if len(call.Args) == 3 {
 				functionImports.Add("com.pulumi.deployment.InvokeOptions")
 			}
