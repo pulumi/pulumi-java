@@ -152,10 +152,12 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 	return foundRangeCall
 }
 
+// inspectFunctionCall visits the provided nodes and calls the inspect function
+// for every function call expression it encounters.
 func inspectFunctionCall(nodes []pcl.Node, inspect func(*model.FunctionCallExpression)) {
 	for _, node := range nodes {
 		diags := node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
-			// Ignore the node if it is not a call to invoke.
+			// Ignore the node if it is not a function call.
 			call, ok := x.(*model.FunctionCallExpression)
 			if !ok {
 				return x, nil
@@ -856,12 +858,15 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		case "assetArchive":
 			functionImports.Add("com.pulumi.asset.AssetArchive")
 		case pcl.Invoke:
-			if len(call.Args) == 3 && containsDependsOnInvokeOption(call.Args[2]) {
-				// for invoke output options, instantiate the builder from its parent class
-				// i.e. (new InvokeOutputOptions.Builder()).dependsOn(resource).build()
-				functionImports.Add("com.pulumi.deployment.InvokeOutputOptions")
-			} else if len(call.Args) == 3 {
-				functionImports.Add("com.pulumi.deployment.InvokeOptions")
+			hasInvokeOptions := len(call.Args) == 3
+			if hasInvokeOptions {
+				if containsDependsOnInvokeOption(call.Args[2]) {
+					// for invoke output options, instantiate the builder from its parent class
+					// i.e. (new InvokeOutputOptions.Builder()).dependsOn(resource).build()
+					functionImports.Add("com.pulumi.deployment.InvokeOutputOptions")
+				} else {
+					functionImports.Add("com.pulumi.deployment.InvokeOptions")
+				}
 			}
 		}
 	})
