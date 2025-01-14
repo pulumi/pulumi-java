@@ -152,6 +152,25 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 	return foundRangeCall
 }
 
+// inspectFunctionCall visits the provided nodes and calls the inspect function
+// for every function call expression it encounters.
+func inspectFunctionCall(nodes []pcl.Node, inspect func(*model.FunctionCallExpression)) {
+	for _, node := range nodes {
+		diags := node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
+			// Ignore the node if it is not a function call.
+			call, ok := x.(*model.FunctionCallExpression)
+			if !ok {
+				return x, nil
+			}
+
+			inspect(call)
+			return x, nil
+		})
+
+		contract.Assertf(len(diags) == 0, "unexpected diagnostics: %v", diags)
+	}
+}
+
 func hasIterableResources(nodes []pcl.Node) bool {
 	for _, node := range nodes {
 		switch node := node.(type) {
@@ -742,6 +761,19 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 	return removeDuplicates(imports)
 }
 
+// checks whether the input expression is an object that has a property "dependsOn"
+func containsDependsOnInvokeOption(expr model.Expression) bool {
+	if invokeOptions, ok := expr.(*model.ObjectConsExpression); ok {
+		for _, item := range invokeOptions.Items {
+			if key, ok := literalExprText(item.Key); ok && key == "dependsOn" {
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
 // genPreamble generates import statements, main class and stack definition.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	javaStringType := "String"
@@ -807,9 +839,40 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	g.emittedTypeImportSymbols = emittedTypeImportSymbols
 
-	if containsFunctionCall("toJSON", nodes) {
-		// import static functions from the Serialization class
-		g.Fgen(w, "import static com.pulumi.codegen.internal.Serialization.*;\n")
+	functionImports := codegen.NewStringSet()
+
+	inspectFunctionCall(nodes, func(call *model.FunctionCallExpression) {
+		switch call.Name {
+		case "toJSON":
+			functionImports.Add("static com.pulumi.codegen.internal.Serialization.*")
+		case "readDir":
+			functionImports.Add("static com.pulumi.codegen.internal.Files.readDir")
+		case "fileAsset":
+			functionImports.Add("com.pulumi.asset.FileAsset")
+		case "fileArchive":
+			functionImports.Add("com.pulumi.asset.FileArchive")
+		case "stringAsset":
+			functionImports.Add("com.pulumi.asset.StringAsset")
+		case "remoteAsset":
+			functionImports.Add("com.pulumi.asset.RemoteAsset")
+		case "assetArchive":
+			functionImports.Add("com.pulumi.asset.AssetArchive")
+		case pcl.Invoke:
+			hasInvokeOptions := len(call.Args) == 3
+			if hasInvokeOptions {
+				if containsDependsOnInvokeOption(call.Args[2]) {
+					// for invoke output options, instantiate the builder from its parent class
+					// i.e. (new InvokeOutputOptions.Builder()).dependsOn(resource).build()
+					functionImports.Add("com.pulumi.deployment.InvokeOutputOptions")
+				} else {
+					functionImports.Add("com.pulumi.deployment.InvokeOptions")
+				}
+			}
+		}
+	})
+
+	for _, functionImport := range functionImports.SortedValues() {
+		g.genImport(w, functionImport)
 	}
 
 	if containsRangeExpr(nodes) {
@@ -819,30 +882,6 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	if requiresImportingCustomResourceOptions(nodes) {
 		g.genImport(w, "com.pulumi.resources.CustomResourceOptions")
-	}
-
-	if containsFunctionCall("readDir", nodes) {
-		g.genImport(w, "static com.pulumi.codegen.internal.Files.readDir")
-	}
-
-	if containsFunctionCall("fileAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.FileAsset")
-	}
-
-	if containsFunctionCall("fileArchive", nodes) {
-		g.genImport(w, "com.pulumi.asset.FileArchive")
-	}
-
-	if containsFunctionCall("stringAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.StringAsset")
-	}
-
-	if containsFunctionCall("remoteAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.RemoteAsset")
-	}
-
-	if containsFunctionCall("assetArchive", nodes) {
-		g.genImport(w, "com.pulumi.asset.AssetArchive")
 	}
 
 	g.genImport(w, "java.util.List")
@@ -1126,56 +1165,42 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 
 		} else {
 			// for each-loop through the elements to creates a resource from each one
-			switch rangeExpr.(type) {
-			case *model.FunctionCallExpression:
-				funcCall := rangeExpr.(*model.FunctionCallExpression)
-				switch funcCall.Name {
-				case pcl.IntrinsicConvert:
-					firstArg := funcCall.Args[0]
-					switch firstArg := firstArg.(type) {
-					case *model.ScopeTraversalExpression:
-						traversalExpr := firstArg
-						if len(traversalExpr.Parts) == 2 {
-							// Meaning here we have {root}.{part} expression which the most common
-							// check whether {root} is actually a variable name that holds the result
-							// of a function invoke
-							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
-								resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
-								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
-								g.genIndent(w)
-								g.Fgenf(w, "final var %s = ", resource.Name())
-								g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
-								g.Indented(func() {
-									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
-									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s()) {\n", g.Indent, resultTypeName, part)
-									g.Indented(func() {
-										suffix := "range.key()"
-										g.Fgenf(w, "%svar resource = ", g.Indent)
-										instantiate(makeResourceName(resource.Name(), suffix))
-										g.Fgenf(w, ";\n\n")
-										g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
-									})
-									g.Fgenf(w, "%s}\n\n", g.Indent)
-									g.Fgenf(w, "%sreturn resources;\n", g.Indent)
-								})
-								g.Fgenf(w, "%s});\n\n", g.Indent)
-								return
-							}
-							// not an async function invoke
-							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-						} else {
-							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-						}
+			switch expr := resource.Options.Range.(type) {
+			case *model.ScopeTraversalExpression:
+				traversalExpr := expr
+				if len(traversalExpr.Parts) == 2 {
+					// Meaning here we have {root}.{part} expression which the most common
+					// check whether {root} is actually a variable name that holds the result
+					// of a function invoke
+					if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
+						resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
+						part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
+						g.genIndent(w)
+						g.Fgenf(w, "final var %s = ", resource.Name())
+						g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
+						g.Indented(func() {
+							g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
+							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s())) {\n", g.Indent, resultTypeName, part)
+							g.Indented(func() {
+								suffix := "range.key()"
+								g.Fgenf(w, "%svar resource = ", g.Indent)
+								instantiate(makeResourceName(resource.Name(), suffix))
+								g.Fgenf(w, ";\n\n")
+								g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
+							})
+							g.Fgenf(w, "%s}\n\n", g.Indent)
+							g.Fgenf(w, "%sreturn resources;\n", g.Indent)
+						})
+						g.Fgenf(w, "%s});\n\n", g.Indent)
+						return
 					}
+					// not an async function invoke
 					// wrap into range collection
 					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-				default:
-					// assume function call returns a Range<T>
-					g.Fgenf(w, "%sfor (var range : %.12o) {\n", g.Indent, rangeExpr)
+				} else {
+					// wrap into range collection
+					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 				}
-
 			default:
 				// wrap into range collection
 				g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
@@ -1240,9 +1265,9 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 	g.genIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
-		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
-		// functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
-		g.Fgenf(w, "final var %s = %v;\n", variableName, localVariable.Definition.Value)
+		invokeCall := localVariable.Definition.Value.(*model.FunctionCallExpression)
+		functionDefinitionWithApplies := g.lowerExpression(invokeCall, invokeCall.Signature.ReturnType)
+		g.Fgenf(w, "final var %s = %v;\n", variableName, functionDefinitionWithApplies)
 	} else {
 		variable := localVariable.Definition.Value
 		g.Fgenf(w, "final var %s = %v;\n", variableName, g.lowerExpression(variable, variable.Type()))

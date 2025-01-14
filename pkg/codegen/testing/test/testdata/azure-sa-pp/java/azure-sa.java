@@ -27,7 +27,7 @@ public class App {
             .name(resourceGroupNameParam)
             .build());
 
-        final var locationParam = config.get("locationParam").orElse(resourceGroupVar.applyValue(getResourceGroupResult -> getResourceGroupResult.location()));
+        final var locationParam = config.get("locationParam").orElse(resourceGroupVar.location());
         final var storageAccountTierParam = config.get("storageAccountTierParam").orElse("Standard");
         final var storageAccountTypeReplicationParam = config.get("storageAccountTypeReplicationParam").orElse("LRS");
         var storageAccountResource = new Account("storageAccountResource", AccountArgs.builder()

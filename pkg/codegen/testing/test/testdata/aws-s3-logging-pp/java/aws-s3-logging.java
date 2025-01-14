@@ -34,6 +34,6 @@ public class App {
             .source(Files.readString(Paths.get("./index.html")))
             .build());
 
-        ctx.export("targetBucket", bucket.loggings().applyValue(loggings -> loggings[0].targetBucket()));
+        ctx.export("targetBucket", bucket.loggings().applyValue(_loggings -> _loggings[0].targetBucket()));
     }
 }
