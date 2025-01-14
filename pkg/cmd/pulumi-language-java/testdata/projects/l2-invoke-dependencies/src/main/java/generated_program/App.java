@@ -30,7 +30,7 @@ public class App {
             .value(SimpleinvokeFunctions.secretInvoke(SecretInvokeArgs.builder()
                 .value("hello")
                 .secretResponse(first.value())
-                .build()).applyValue(invoke -> invoke.secret()))
+                .build()).applyValue(_invoke -> _invoke.secret()))
             .build());
 
     }

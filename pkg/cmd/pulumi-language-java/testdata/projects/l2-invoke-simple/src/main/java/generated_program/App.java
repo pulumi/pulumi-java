@@ -20,9 +20,9 @@ public class App {
     public static void stack(Context ctx) {
         ctx.export("hello", SimpleinvokeFunctions.myInvoke(MyInvokeArgs.builder()
             .value("hello")
-            .build()).applyValue(invoke -> invoke.result()));
+            .build()).applyValue(_invoke -> _invoke.result()));
         ctx.export("goodbye", SimpleinvokeFunctions.myInvoke(MyInvokeArgs.builder()
             .value("goodbye")
-            .build()).applyValue(invoke -> invoke.result()));
+            .build()).applyValue(_invoke -> _invoke.result()));
     }
 }

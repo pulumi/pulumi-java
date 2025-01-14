@@ -30,8 +30,11 @@ func TestGenerateJavaProgram(t *testing.T) {
 			continue
 		}
 		tests = append(tests, test.ProgramTest{
-			Directory:   strings.TrimSuffix(name, "-pp"),
-			BindOptions: []pcl.BindOption{pcl.SkipResourceTypechecking},
+			Directory: strings.TrimSuffix(name, "-pp"),
+			BindOptions: []pcl.BindOption{
+				pcl.SkipResourceTypechecking,
+				pcl.PreferOutputVersionedInvokes,
+			},
 		})
 	}
 	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
