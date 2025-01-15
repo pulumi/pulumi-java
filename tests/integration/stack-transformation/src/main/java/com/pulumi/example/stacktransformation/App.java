@@ -48,7 +48,7 @@ public class App {
         var res2 = new MyComponent("res2",
                 ComponentResourceOptions.builder()
                         .resourceTransformations(args -> {
-                            if (Objects.equals(args.resource().getResourceType(), RandomStringType)
+                            if (Objects.equals(args.resource().pulumiResourceType(), RandomStringType)
                                     && args.args() instanceof RandomStringArgs) {
                                 var oldArgs = (RandomStringArgs) args.args();
                                 var resultArgs = RandomStringArgs.builder()
@@ -95,7 +95,7 @@ public class App {
 
     // Scenario #3 - apply a transformation to the Stack to transform all (future) resources in the stack
     private static Optional<ResourceTransformation.Result> scenario3(ResourceTransformation.Args args) {
-        if (Objects.equals(args.resource().getResourceType(), RandomStringType)
+        if (Objects.equals(args.resource().pulumiResourceType(), RandomStringType)
                 && args.args() instanceof RandomStringArgs) {
             var oldArgs = (RandomStringArgs) args.args();
             var resultArgs = RandomStringArgs.builder()
@@ -109,7 +109,7 @@ public class App {
     }
 
     private static Optional<ResourceTransformation.Result> scenario4(ResourceTransformation.Args args, String v) {
-        if (Objects.equals(args.resource().getResourceType(), RandomStringType)
+        if (Objects.equals(args.resource().pulumiResourceType(), RandomStringType)
                 && args.args() instanceof RandomStringArgs) {
             var oldArgs = (RandomStringArgs) args.args();
             var resultArgs = RandomStringArgs.builder()
@@ -133,7 +133,7 @@ public class App {
             // will resolve that promise when it finds child2.
             if (args.args() instanceof RandomStringArgs) {
                 var resourceArgs = (RandomStringArgs) args.args();
-                var resourceName = args.resource().getResourceName();
+                var resourceName = args.resource().pulumiResourceName();
                 if (resourceName.endsWith("-child2")) {
                     // Resolve the child2 promise with the child2 resource.
                     child2ArgsSource.complete(resourceArgs);

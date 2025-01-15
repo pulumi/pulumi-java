@@ -85,17 +85,6 @@ public class StackReference extends CustomResource {
      * The name of the referenced stack.
      *
      * @return the stack name
-     * @deprecated use {@link #name()}
-     */
-    @Deprecated
-    public Output<String> getName() {
-        return name();
-    }
-
-    /**
-     * The name of the referenced stack.
-     *
-     * @return the stack name
      */
     public Output<String> name() {
         return name;
@@ -105,31 +94,9 @@ public class StackReference extends CustomResource {
      * The outputs of the referenced stack.
      *
      * @return the stack outputs
-     * @deprecated use {@link #outputs()}
-     */
-    @Deprecated
-    public Output<Map<String, Object>> getOutputs() {
-        return outputs();
-    }
-
-    /**
-     * The outputs of the referenced stack.
-     *
-     * @return the stack outputs
      */
     public Output<Map<String, Object>> outputs() {
         return outputs.applyValue(ImmutableMap::copyOf);
-    }
-
-    /**
-     * The secret output names of the referenced stack.
-     *
-     * @return the names of the secret outputs
-     * @deprecated use {@link #secretOutputNames()}
-     */
-    @Deprecated
-    public Output<List<String>> getSecretOutputNames() {
-        return secretOutputNames();
     }
 
     /**
@@ -147,35 +114,9 @@ public class StackReference extends CustomResource {
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
-     * @deprecated use {@link #output(String)}
-     */
-    @Deprecated
-    public Output<?> getOutput(String name) {
-        return output(name);
-    }
-
-    /**
-     * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
-     * <p>
-     *
-     * @param name The name of the stack output to fetch.
-     * @return An {@link Output} containing the requested value.
      */
     public Output<?> output(String name) {
         return output(Output.of(name));
-    }
-
-    /**
-     * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
-     * <p>
-     *
-     * @param name The name of the stack output to fetch.
-     * @return An {@link Output} containing the requested value.
-     * @deprecated use {@link #output(Output)}
-     */
-    @Deprecated
-    public Output<?> getOutput(Output<String> name) {
-        return output(name);
     }
 
     /**

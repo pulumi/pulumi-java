@@ -558,7 +558,7 @@ class JumboTest {
         }).throwOnError();
 
         var resource = result.resources().stream()
-                .filter(r -> r.getResourceName().equals("testResource"))
+                .filter(r -> r.pulumiResourceName().equals("testResource"))
                 .filter(r -> r instanceof ACustomResource)
                 .map(r -> (ACustomResource) r)
                 .findFirst()

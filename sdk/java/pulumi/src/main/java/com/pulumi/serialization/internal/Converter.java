@@ -281,92 +281,6 @@ public class Converter {
             return tryConvertMap(context, value, targetType);
         }
 
-        var hasAnnotatedConstructor = targetType.hasAnnotatedConstructor(CustomType.Constructor.class);
-        if (hasAnnotatedConstructor) {
-            var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
-
-            //noinspection unchecked
-            var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class), Map.of());
-            var constructorParameters = constructor.getParameters();
-            var arguments = new Object[constructorParameters.length];
-
-            // Validate that we can decode the argument we've received
-            var expectedParameterNames = Arrays.stream(constructorParameters)
-                    .map(p -> Optional.ofNullable(p.getAnnotation(CustomType.Parameter.class)))
-                    .filter(Optional::isPresent)
-                    .map(p -> p.get().value())
-                    .collect(toSet());
-            for (var argumentName : argumentsMap.keySet()) {
-                if (!expectedParameterNames.contains(argumentName)) {
-                    throw new IllegalArgumentException(String.format(
-                            "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
-                                    "and the parameter names in the annotation matching the parameters being deserialized. " +
-                                    "Constructor '%s' expects parameter names of: '%s', " +
-                                    "but does not expect: '%s'. Unable to deserialize.",
-                            targetType.getTypeName(),
-                            CustomType.class.getTypeName(),
-                            CustomType.Constructor.class.getTypeName(),
-                            constructor,
-                            String.join(",", expectedParameterNames),
-                            argumentName
-                    ));
-                }
-            }
-            for (int i = 0, n = constructorParameters.length; i < n; i++) {
-                var parameter = constructorParameters[i];
-                var parameterName = extractParameterName(parameter);
-                if (parameterName.isEmpty()) {
-                    throw new IllegalArgumentException(String.format(
-                            "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
-                                    "and the parameter names in the parameter annotation matching the parameters being deserialized. " +
-                                    "Constructor '%s' parameter nr %d (starting from 0) lacks @%s annotation, " +
-                                    "but it is required to deserialize.",
-                            targetType.getTypeName(),
-                            CustomType.class.getTypeName(),
-                            CustomType.Constructor.class.getTypeName(),
-                            constructor,
-                            i,
-                            CustomType.Parameter.class.getSimpleName()
-                    ));
-                }
-
-                // Note: tryGetValue may not find a value here.
-                // That can happen for things like unknown values.
-                // That's ok. We'll set the argument as null.
-                var argValue = Maps.tryGetValue(argumentsMap, parameterName.get());
-                if (argValue.isPresent()) {
-                    arguments[i] = tryConvertObjectInner(
-                            String.format("%s(%s)", targetType.getTypeName(), parameterName.get()),
-                            argValue,
-                            TypeShape.extract(parameter)
-                    );
-                } else {
-                    arguments[i] = null;
-                    if (!parameter.isAnnotationPresent(Nullable.class)) {
-                        log.debug(String.format(
-                                "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
-                                        "and the parameter names in the parameter annotation matching the parameters being deserialized. " +
-                                        "Constructor '%s' parameter named '%s' (nr %d starting from 0) lacks @%s annotation, " +
-                                        "so the value is required, but there is no value to deserialize.",
-                                targetType.getTypeName(),
-                                CustomType.class.getTypeName(),
-                                CustomType.Constructor.class.getTypeName(),
-                                constructor,
-                                parameterName.get(),
-                                i,
-                                Nullable.class.getTypeName()
-                        ));
-                    }
-                }
-            }
-
-            try {
-                return constructor.newInstance(arguments);
-            } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-                throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
-            }
-        }
-
         var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
         if (hasAnnotatedBuilder) {
             var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
@@ -793,37 +707,7 @@ public class Converter {
 
         var propertyTypeAnnotation = targetType.getAnnotation(CustomType.class);
         if (propertyTypeAnnotation.isPresent()) {
-            var hasAnnotatedConstructor = targetType.hasAnnotatedConstructor(CustomType.Constructor.class);
             var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
-            if (hasAnnotatedConstructor && hasAnnotatedBuilder) {
-                throw new IllegalArgumentException(String.format(
-                        "%s; Invalid custom type '%s' while deserializing. " +
-                                "Expected a constructor annotated with %s " +
-                                "or a builder annotated with %s, but got both.",
-                        context, targetType.getTypeName(),
-                        CustomType.Constructor.class.getTypeName(),
-                        CustomType.Builder.class.getTypeName()
-                ));
-            }
-            if (!hasAnnotatedConstructor && !hasAnnotatedBuilder) {
-                throw new IllegalArgumentException(String.format(
-                        "%s; Invalid custom type '%s' while deserializing. " +
-                                "Expected a constructor annotated with %s " +
-                                "or a builder annotated with %s, but got none.",
-                        context, targetType.getTypeName(),
-                        CustomType.Constructor.class.getTypeName(),
-                        CustomType.Builder.class.getTypeName()
-                ));
-            }
-            if (hasAnnotatedConstructor) {
-                var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
-                Arrays.stream(constructor.getParameters()).forEach(parameter -> checkTargetType(
-                        String.format("%s(%s)", targetType.getTypeName(), parameter.getName()),
-                        TypeShape.extract(parameter), // check nested target type
-                        seenTypes
-                ));
-                return;
-            }
             if (hasAnnotatedBuilder) {
                 var builder = targetType.getAnnotatedClass(CustomType.Builder.class);
                 collectSetters(builder).forEach((name, parameter) -> checkTargetType(
@@ -833,6 +717,13 @@ public class Converter {
                 ));
                 return;
             }
+
+            throw new IllegalArgumentException(String.format(
+                    "%s; Invalid custom type '%s' while deserializing. " +
+                            "Expected a builder annotated with %s, but found none.",
+                    context, targetType.getTypeName(),
+                    CustomType.Builder.class.getTypeName()
+            ));
         }
 
         throw new UnsupportedOperationException(String.format(
@@ -861,14 +752,6 @@ public class Converter {
                         method.getName(), CustomType.Setter.class.getSimpleName()
                 ))
         ));
-    }
-
-    private static Optional<String> extractParameterName(Parameter parameter) {
-        // we cannot just use parameter.getName(),
-        // because it will be different at runtime e.g. 'arg0', 'arg1', etc.
-        return Optional.ofNullable(
-                parameter.getAnnotation(CustomType.Parameter.class)
-        ).map(CustomType.Parameter::value);
     }
 
     private static String extractSetterName(Method method) {

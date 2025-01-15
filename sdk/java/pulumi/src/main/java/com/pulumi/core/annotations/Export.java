@@ -28,21 +28,6 @@ public @interface Export {
     String name() default "";
 
     /**
-     * @return the generic type parameter of the annotated @see {@link com.pulumi.core.Output}
-     * @deprecated use {@link #tree()} and {@link #refs()}
-     */
-    @Deprecated
-    Class<?> type() default Object.class;
-
-    /**
-     * @return the generic type parameters of the @see {@link #type()}
-     * If not set, the assumption is that the @see {@link #type()} is not a generic type.
-     * @deprecated use {@link #tree()} and {@link #refs()}
-     */
-    @Deprecated
-    Class<?>[] parameters() default {};
-
-    /**
      * @return the generic type parameter tree shape of the annotated @see {@link com.pulumi.core.Output}
      */
     String tree() default "";
