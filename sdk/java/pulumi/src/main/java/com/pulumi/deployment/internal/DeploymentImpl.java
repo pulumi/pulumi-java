@@ -568,7 +568,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             } else {
                                 return packageRefFuture
                                     .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
-                                    .thenApply(result -> parseInvokeResponse(token, targetType, result));
+                                    .thenApply(result -> parseInvokeResponse(token, targetType, result).withDependencies(options.getDependsOn()));
                             }
                         });
                 }));

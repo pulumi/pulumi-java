@@ -6,5 +6,6 @@
  - Fix generation of untyped maps and array literals
  - Implement `InvokeOptionsBuilder` and `InvokeOutputOptionsBuilder`
  - Emit invoke options and invoke output options in generated programs
+ - Include explicit dependencies of invokes in their resulting output
 
 ### Bug Fixes
