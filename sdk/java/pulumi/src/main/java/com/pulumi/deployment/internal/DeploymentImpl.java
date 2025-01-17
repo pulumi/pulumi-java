@@ -541,37 +541,45 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             final CompletableFuture<String> packageRefFuture = packageRef == null
                 ? CompletableFuture.completedFuture(null)
                 : packageRef;
-
-            // The expanded set of dependencies, including children of components.
-            var transitiveDeps = this.prepare.getAllTransitivelyReferencedResources(ImmutableSet.copyOf(options.getDependsOn()));
-            // If we depend on any CustomResources, we need to ensure that their
-            // ID is known before proceeding. If it is not known, we will return
-            // an unknown result.
-            var hasUnknownIDs = CompletableFutures.allOf(transitiveDeps
-                .filter(r -> r instanceof CustomResource)
-                .map(r -> Internal.of(((CustomResource) r).id()).isKnown())
-                .collect(ImmutableSet.toImmutableSet())
-            ).thenApply(s -> s.stream().anyMatch(known -> !known));
-
-            // Wait for all values from args to be available, and then perform the RPC.
-            return new OutputInternal<>(CompletableFuture.allOf(
-                    this.featureSupport.monitorSupportsResourceReferences(),
-                    hasUnknownIDs)
-                .thenCompose(ignored -> {
-                    boolean keepResources = this.featureSupport.monitorSupportsResourceReferences().join();
-                    boolean hasUnknown = hasUnknownIDs.join();
-
-                    return this.serializeInvokeArgs(token, args, keepResources)
-                        .thenCompose(serializedArgs -> {
-                            if (serializedArgs.containsUnknowns || hasUnknown) {
-                                return CompletableFuture.completedFuture(OutputData.unknown());
-                            } else {
-                                return packageRefFuture
-                                    .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
-                                    .thenApply(result -> parseInvokeResponse(token, targetType, result).withDependencies(options.getDependsOn()));
-                            }
-                        });
-                }));
+                
+            return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences().thenCompose(
+                keepResources -> this.serializeInvokeArgs(token, args, keepResources)
+            ).thenCompose(serializedArgs -> {
+                if (serializedArgs.containsUnknowns) {
+                    return CompletableFuture.completedFuture(OutputData.unknown());
+                } else {
+                    // If we depend on any CustomResources, we need to ensure that their
+                    // ID is known before proceeding. If it is not known, we will return
+                    // an unknown result.
+                    var deps = new HashSet<Resource>(options.getDependsOn());
+                    // Add the dependencies from the inputs to the set of resources to wait for.
+                    var propertyDeps = serializedArgs.propertyToDependentResources.values().stream()
+                        .flatMap(Collection::stream)
+                        .collect(ImmutableSet.toImmutableSet());
+                    var depsSet = new ImmutableSet.Builder<Resource>()
+                        .addAll(deps)
+                        .addAll(propertyDeps)
+                        .build();
+                    // The expanded set of dependencies, including children of components.
+                    var transitiveDeps = this.prepare.getAllTransitivelyReferencedResources(depsSet);
+                    // Ensure that all resource IDs are known before proceeding.
+                    var hasUnknownIDs = CompletableFutures.allOf(transitiveDeps
+                        .filter(r -> r instanceof CustomResource)
+                        .map(r -> Internal.of(((CustomResource) r).id()).isKnown())
+                        .collect(ImmutableSet.toImmutableSet())
+                    ).thenApply(s -> s.stream().anyMatch(known -> !known));
+                    
+                    return hasUnknownIDs.thenCompose(hasUnknown -> {
+                        if (hasUnknown) {
+                            return CompletableFuture.completedFuture(OutputData.unknown());
+                        } else {
+                            return packageRefFuture
+                                .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
+                                .thenApply(result -> parseInvokeResponse(token, targetType, result).withDependencies(options.getDependsOn()));
+                        }
+                    });
+                }
+            }));
         }
         
         private <T> OutputData<T> parseInvokeResponse(
