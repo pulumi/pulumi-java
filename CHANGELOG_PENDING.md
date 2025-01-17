@@ -9,3 +9,5 @@
  - Include explicit dependencies of invokes in their resulting output
 
 ### Bug Fixes
+
+ - Panic when asked to generate SDKs involving multi-argument invokes
