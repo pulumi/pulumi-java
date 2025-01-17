@@ -305,7 +305,12 @@ func GenerateProject(
 	}
 
 	repositories := make(map[string]bool)
-	coreSDKVersion := "(,1.0]"
+
+	// If no version is specified for the pulumi package, use the default SDK version. In either case, presently we emit
+	// a "soft" dependency requirement, which essentially means that it will be used if no other preference is expressed
+	// in the dependency tree. See https://maven.apache.org/pom.html#Dependency_Version_Requirement_Specification for
+	// more information.
+	coreSDKVersion := DefaultSdkVersion.String()
 	for name, dep := range localDependencies {
 		parts := strings.Split(dep, ":")
 		if len(parts) < 3 {
