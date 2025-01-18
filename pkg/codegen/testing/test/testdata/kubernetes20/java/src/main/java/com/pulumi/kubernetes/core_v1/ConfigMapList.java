@@ -91,7 +91,7 @@ public class ConfigMapList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ConfigMapList(java.lang.String name, ConfigMapListArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

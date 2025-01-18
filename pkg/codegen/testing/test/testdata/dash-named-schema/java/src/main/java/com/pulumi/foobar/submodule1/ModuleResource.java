@@ -35,7 +35,7 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ModuleResource(java.lang.String name, @Nullable ModuleResourceArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -102,7 +102,7 @@ public class AppSecAdvancedSettingsPrefetch extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecAdvancedSettingsPrefetch(java.lang.String name, AppSecAdvancedSettingsPrefetchArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

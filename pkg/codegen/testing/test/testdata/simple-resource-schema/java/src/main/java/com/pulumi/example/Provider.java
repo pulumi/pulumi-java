@@ -25,7 +25,7 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public Provider(java.lang.String name, @Nullable ProviderArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *
@@ -47,6 +47,7 @@ public class Provider extends com.pulumi.resources.ProviderResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .pluginDownloadURL("example.com/download")
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

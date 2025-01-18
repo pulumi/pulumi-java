@@ -49,7 +49,7 @@ public class ResourceWithAssets extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ResourceWithAssets(java.lang.String name, ResourceWithAssetsArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -86,7 +86,7 @@ public class EdgekvGroupItems extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public EdgekvGroupItems(java.lang.String name, EdgekvGroupItemsArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

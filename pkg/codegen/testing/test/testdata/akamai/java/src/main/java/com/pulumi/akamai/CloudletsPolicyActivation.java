@@ -101,7 +101,7 @@ public class CloudletsPolicyActivation extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      */
     public CloudletsPolicyActivation(java.lang.String name, CloudletsPolicyActivationArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

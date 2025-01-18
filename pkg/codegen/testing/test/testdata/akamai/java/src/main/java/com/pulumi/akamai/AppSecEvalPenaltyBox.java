@@ -87,7 +87,7 @@ public class AppSecEvalPenaltyBox extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecEvalPenaltyBox(java.lang.String name, AppSecEvalPenaltyBoxArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

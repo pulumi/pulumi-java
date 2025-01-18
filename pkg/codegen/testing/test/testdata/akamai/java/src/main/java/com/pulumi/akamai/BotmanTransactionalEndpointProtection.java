@@ -42,7 +42,7 @@ public class BotmanTransactionalEndpointProtection extends com.pulumi.resources.
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanTransactionalEndpointProtection(java.lang.String name, BotmanTransactionalEndpointProtectionArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

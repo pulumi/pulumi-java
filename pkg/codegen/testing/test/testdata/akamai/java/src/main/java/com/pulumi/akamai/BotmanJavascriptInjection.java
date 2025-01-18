@@ -48,7 +48,7 @@ public class BotmanJavascriptInjection extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanJavascriptInjection(java.lang.String name, BotmanJavascriptInjectionArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

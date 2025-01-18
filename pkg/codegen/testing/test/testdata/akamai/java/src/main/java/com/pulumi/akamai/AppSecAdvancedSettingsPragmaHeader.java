@@ -73,7 +73,7 @@ public class AppSecAdvancedSettingsPragmaHeader extends com.pulumi.resources.Cus
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecAdvancedSettingsPragmaHeader(java.lang.String name, AppSecAdvancedSettingsPragmaHeaderArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

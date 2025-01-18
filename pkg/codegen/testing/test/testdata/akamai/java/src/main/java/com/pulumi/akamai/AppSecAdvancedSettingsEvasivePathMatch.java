@@ -74,7 +74,7 @@ public class AppSecAdvancedSettingsEvasivePathMatch extends com.pulumi.resources
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecAdvancedSettingsEvasivePathMatch(java.lang.String name, AppSecAdvancedSettingsEvasivePathMatchArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -161,14 +161,13 @@ func TestLanguage(t *testing.T) {
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
 	"l1-output-string":                      "#1562 Large string literals are not generated correctly",
-	"l2-invoke-options-depends-on":          "#1563 Invoke argument and result handling",
 	"l2-invoke-secrets":                     "#1563 Invoke argument and result handling",
 	"l2-map-keys":                           "#1561 Map literals are not generated correctly",
 	"l2-provider-grpc-config-schema-secret": "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config-secret":        "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config":               "#1568 Don't generate duplicate files",
-	"l2-resource-config":                    "#1566 Fix l2-resource-config / plugin download URL code generation",
-	"l2-resource-secret":                    "#1564 Fix l2-resource-secret",
+	"l2-component-component-resource-ref":   "components with resources as inputs/outputs not supported",
+	"l2-component-program-resource-ref":     "components with resources as inputs/outputs not supported",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

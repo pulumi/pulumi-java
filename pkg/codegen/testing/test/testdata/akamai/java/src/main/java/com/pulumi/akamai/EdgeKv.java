@@ -121,7 +121,7 @@ public class EdgeKv extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public EdgeKv(java.lang.String name, EdgeKvArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

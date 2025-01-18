@@ -87,7 +87,7 @@ public class AppSecApiRequestConstraints extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecApiRequestConstraints(java.lang.String name, AppSecApiRequestConstraintsArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

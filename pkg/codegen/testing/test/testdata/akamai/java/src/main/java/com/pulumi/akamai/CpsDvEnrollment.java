@@ -305,7 +305,7 @@ public class CpsDvEnrollment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public CpsDvEnrollment(java.lang.String name, CpsDvEnrollmentArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

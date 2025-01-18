@@ -73,7 +73,7 @@ public class AppsecAdvancedSettingsRequestBody extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppsecAdvancedSettingsRequestBody(java.lang.String name, AppsecAdvancedSettingsRequestBodyArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

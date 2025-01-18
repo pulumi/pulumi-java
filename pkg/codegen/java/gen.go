@@ -1077,7 +1077,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
 	fprintf(w, "     */\n")
 	fprintf(w, "    public %s(java.lang.String name, %s args) {\n", className, argsType)
-	fprintf(w, "        this(name, args, null);\n")
+	fprintf(w, "        this(name, args, makeResourceOptions(null, Codegen.empty()));\n")
 	fprintf(w, "    }\n")
 
 	// Constructor
@@ -1170,6 +1170,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
+	if url := pkg.PluginDownloadURL; url != "" {
+		fprintf(w, "            .pluginDownloadURL(%q)\n", url)
+	}
 
 	if len(r.Aliases) > 0 {
 		fprintf(w, "            .aliases(%s.of(\n", ctx.ref(names.List))

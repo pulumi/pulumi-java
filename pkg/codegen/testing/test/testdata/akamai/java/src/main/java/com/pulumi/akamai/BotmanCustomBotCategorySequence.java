@@ -43,7 +43,7 @@ public class BotmanCustomBotCategorySequence extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanCustomBotCategorySequence(java.lang.String name, BotmanCustomBotCategorySequenceArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

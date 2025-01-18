@@ -42,7 +42,7 @@ public class NetworkListSubscription extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      */
     public NetworkListSubscription(java.lang.String name, NetworkListSubscriptionArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -72,7 +72,7 @@ public class AppSecReputationProfile extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecReputationProfile(java.lang.String name, AppSecReputationProfileArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

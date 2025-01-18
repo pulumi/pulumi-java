@@ -54,7 +54,7 @@ public class BotmanAkamaiBotCategoryAction extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanAkamaiBotCategoryAction(java.lang.String name, BotmanAkamaiBotCategoryActionArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -239,7 +239,7 @@ public class GtmDomain extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public GtmDomain(java.lang.String name, GtmDomainArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

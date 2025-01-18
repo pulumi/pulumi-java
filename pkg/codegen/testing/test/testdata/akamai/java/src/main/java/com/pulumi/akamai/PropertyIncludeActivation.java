@@ -174,7 +174,7 @@ public class PropertyIncludeActivation extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      */
     public PropertyIncludeActivation(java.lang.String name, PropertyIncludeActivationArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -42,7 +42,7 @@ public class BotmanBotAnalyticsCookie extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanBotAnalyticsCookie(java.lang.String name, BotmanBotAnalyticsCookieArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

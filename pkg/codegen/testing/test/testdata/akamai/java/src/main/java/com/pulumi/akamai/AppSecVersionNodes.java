@@ -72,7 +72,7 @@ public class AppSecVersionNodes extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecVersionNodes(java.lang.String name, AppSecVersionNodesArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

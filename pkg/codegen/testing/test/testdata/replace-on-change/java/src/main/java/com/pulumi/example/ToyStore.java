@@ -56,7 +56,7 @@ public class ToyStore extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ToyStore(java.lang.String name, @Nullable ToyStoreArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -87,7 +87,7 @@ public class Component extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public Component(java.lang.String name, ComponentArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

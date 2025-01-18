@@ -42,7 +42,7 @@ public class BotmanClientSideSecurity extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanClientSideSecurity(java.lang.String name, BotmanClientSideSecurityArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

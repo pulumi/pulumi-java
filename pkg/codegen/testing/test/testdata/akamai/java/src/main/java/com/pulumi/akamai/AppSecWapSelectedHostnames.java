@@ -88,7 +88,7 @@ public class AppSecWapSelectedHostnames extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecWapSelectedHostnames(java.lang.String name, AppSecWapSelectedHostnamesArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -35,7 +35,7 @@ public class OtherResource extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public OtherResource(java.lang.String name, @Nullable OtherResourceArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *
@@ -57,6 +57,7 @@ public class OtherResource extends com.pulumi.resources.ComponentResource {
     private static com.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.ComponentResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.ComponentResourceOptions.builder()
             .version(Utilities.getVersion())
+            .pluginDownloadURL("example.com/download")
             .build();
         return com.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
     }

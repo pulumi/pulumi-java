@@ -86,7 +86,7 @@ public class EdgeWorkersActivation extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public EdgeWorkersActivation(java.lang.String name, EdgeWorkersActivationArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

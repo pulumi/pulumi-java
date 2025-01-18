@@ -87,7 +87,7 @@ public class AppSecSlowPostProtection extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecSlowPostProtection(java.lang.String name, AppSecSlowPostProtectionArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

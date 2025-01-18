@@ -48,7 +48,7 @@ public class BotmanBotCategoryException extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanBotCategoryException(java.lang.String name, BotmanBotCategoryExceptionArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

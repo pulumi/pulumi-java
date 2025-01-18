@@ -73,7 +73,7 @@ public class AppSecSelectedHostnames extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecSelectedHostnames(java.lang.String name, AppSecSelectedHostnamesArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

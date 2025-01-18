@@ -142,7 +142,7 @@ public class AppSecWafMode extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecWafMode(java.lang.String name, AppSecWafModeArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

@@ -173,7 +173,7 @@ public class ClientlistList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ClientlistList(java.lang.String name, ClientlistListArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *

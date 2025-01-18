@@ -43,7 +43,7 @@ public class BotmanCustomClientSequence extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanCustomClientSequence(java.lang.String name, BotmanCustomClientSequenceArgs args) {
-        this(name, args, null);
+        this(name, args, makeResourceOptions(null, Codegen.empty()));
     }
     /**
      *
