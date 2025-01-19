@@ -168,6 +168,7 @@ var expectedFailures = map[string]string{
 	"l2-provider-grpc-config":               "#1568 Don't generate duplicate files",
 	"l2-component-component-resource-ref":   "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":     "components with resources as inputs/outputs not supported",
+	"l2-resource-secret":                    "#1564 Fix l2-resource-secret",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
