@@ -87,7 +87,7 @@ public class AppSecApiConstraintsProtection extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecApiConstraintsProtection(java.lang.String name, AppSecApiConstraintsProtectionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

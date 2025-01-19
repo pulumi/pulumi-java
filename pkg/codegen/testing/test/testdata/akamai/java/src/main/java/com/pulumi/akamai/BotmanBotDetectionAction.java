@@ -54,7 +54,7 @@ public class BotmanBotDetectionAction extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanBotDetectionAction(java.lang.String name, BotmanBotDetectionActionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

@@ -31,7 +31,7 @@ public class EC2TaskDefinition extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public EC2TaskDefinition(java.lang.String name, @Nullable EC2TaskDefinitionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

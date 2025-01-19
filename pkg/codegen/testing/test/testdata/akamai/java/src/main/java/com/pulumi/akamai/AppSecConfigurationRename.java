@@ -72,7 +72,7 @@ public class AppSecConfigurationRename extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecConfigurationRename(java.lang.String name, AppSecConfigurationRenameArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

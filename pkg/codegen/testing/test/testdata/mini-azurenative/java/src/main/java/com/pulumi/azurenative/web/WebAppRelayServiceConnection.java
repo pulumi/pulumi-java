@@ -49,7 +49,7 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      */
     public WebAppRelayServiceConnection(java.lang.String name, @Nullable WebAppRelayServiceConnectionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

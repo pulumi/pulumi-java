@@ -162,7 +162,7 @@ public class GtmDatacenter extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public GtmDatacenter(java.lang.String name, GtmDatacenterArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

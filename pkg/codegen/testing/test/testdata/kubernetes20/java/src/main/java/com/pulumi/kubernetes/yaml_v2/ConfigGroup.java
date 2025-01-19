@@ -48,7 +48,7 @@ public class ConfigGroup extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ConfigGroup(java.lang.String name, @Nullable ConfigGroupArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

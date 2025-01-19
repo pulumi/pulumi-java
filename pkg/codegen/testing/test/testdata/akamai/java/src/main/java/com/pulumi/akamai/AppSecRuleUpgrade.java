@@ -115,7 +115,7 @@ public class AppSecRuleUpgrade extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecRuleUpgrade(java.lang.String name, AppSecRuleUpgradeArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

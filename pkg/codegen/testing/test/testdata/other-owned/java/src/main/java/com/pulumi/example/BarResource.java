@@ -35,7 +35,7 @@ public class BarResource extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public BarResource(java.lang.String name, @Nullable BarResourceArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

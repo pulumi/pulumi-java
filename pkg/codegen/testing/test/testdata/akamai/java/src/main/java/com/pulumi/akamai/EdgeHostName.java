@@ -97,7 +97,7 @@ public class EdgeHostName extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public EdgeHostName(java.lang.String name, EdgeHostNameArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

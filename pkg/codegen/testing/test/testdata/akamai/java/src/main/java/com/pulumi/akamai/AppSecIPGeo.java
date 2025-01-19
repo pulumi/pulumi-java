@@ -130,7 +130,7 @@ public class AppSecIPGeo extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecIPGeo(java.lang.String name, AppSecIPGeoArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

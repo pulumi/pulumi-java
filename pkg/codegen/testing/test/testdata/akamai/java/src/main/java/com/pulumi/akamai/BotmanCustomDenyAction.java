@@ -48,7 +48,7 @@ public class BotmanCustomDenyAction extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanCustomDenyAction(java.lang.String name, BotmanCustomDenyActionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

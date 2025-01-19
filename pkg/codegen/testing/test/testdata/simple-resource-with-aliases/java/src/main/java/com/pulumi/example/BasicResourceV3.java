@@ -36,7 +36,7 @@ public class BasicResourceV3 extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public BasicResourceV3(java.lang.String name, BasicResourceV3Args args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

@@ -167,7 +167,7 @@ public class CloudwrapperConfiguration extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      */
     public CloudwrapperConfiguration(java.lang.String name, CloudwrapperConfigurationArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

@@ -1572,7 +1572,7 @@ public class ACustomResource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ACustomResource(java.lang.String name, @Nullable ACustomResourceArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

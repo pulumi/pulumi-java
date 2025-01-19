@@ -35,7 +35,7 @@ public class FooResource extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public FooResource(java.lang.String name, @Nullable FooResourceArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

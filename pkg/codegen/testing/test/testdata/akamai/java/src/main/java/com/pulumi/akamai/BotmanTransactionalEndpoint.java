@@ -54,7 +54,7 @@ public class BotmanTransactionalEndpoint extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanTransactionalEndpoint(java.lang.String name, BotmanTransactionalEndpointArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

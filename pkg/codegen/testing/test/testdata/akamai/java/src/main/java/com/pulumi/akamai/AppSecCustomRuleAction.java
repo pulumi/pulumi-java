@@ -86,7 +86,7 @@ public class AppSecCustomRuleAction extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecCustomRuleAction(java.lang.String name, AppSecCustomRuleActionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

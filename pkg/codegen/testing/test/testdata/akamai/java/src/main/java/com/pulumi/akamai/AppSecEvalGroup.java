@@ -101,7 +101,7 @@ public class AppSecEvalGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecEvalGroup(java.lang.String name, AppSecEvalGroupArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

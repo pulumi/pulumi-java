@@ -128,7 +128,7 @@ public class CloudletsApplicationLoadBalancer extends com.pulumi.resources.Custo
      * @param args The arguments to use to populate this resource's properties.
      */
     public CloudletsApplicationLoadBalancer(java.lang.String name, CloudletsApplicationLoadBalancerArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

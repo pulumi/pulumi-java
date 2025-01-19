@@ -144,7 +144,7 @@ public class EdgeWorker extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public EdgeWorker(java.lang.String name, EdgeWorkerArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

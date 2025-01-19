@@ -73,7 +73,7 @@ public class AppsecAdvancedSettingsAttackPayloadLogging extends com.pulumi.resou
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppsecAdvancedSettingsAttackPayloadLogging(java.lang.String name, AppsecAdvancedSettingsAttackPayloadLoggingArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

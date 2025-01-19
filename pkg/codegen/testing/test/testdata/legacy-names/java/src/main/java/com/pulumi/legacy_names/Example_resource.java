@@ -50,7 +50,7 @@ public class Example_resource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public Example_resource(java.lang.String name, @Nullable Example_resourceArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

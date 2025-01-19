@@ -73,7 +73,7 @@ public class AppSecAdvancedSettingsLogging extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecAdvancedSettingsLogging(java.lang.String name, AppSecAdvancedSettingsLoggingArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

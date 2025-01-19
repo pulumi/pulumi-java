@@ -1077,7 +1077,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
 	fprintf(w, "     */\n")
 	fprintf(w, "    public %s(java.lang.String name, %s args) {\n", className, argsType)
-	fprintf(w, "        this(name, args, makeResourceOptions(null, Codegen.empty()));\n")
+	fprintf(w, "        this(name, args, null);\n")
 	fprintf(w, "    }\n")
 
 	// Constructor

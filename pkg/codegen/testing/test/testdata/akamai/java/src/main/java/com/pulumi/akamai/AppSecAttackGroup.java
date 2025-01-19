@@ -101,7 +101,7 @@ public class AppSecAttackGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecAttackGroup(java.lang.String name, AppSecAttackGroupArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

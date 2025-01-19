@@ -102,7 +102,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public BatchDeployment(java.lang.String name, BatchDeploymentArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

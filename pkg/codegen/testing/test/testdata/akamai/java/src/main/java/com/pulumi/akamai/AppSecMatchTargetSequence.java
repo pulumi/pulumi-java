@@ -59,7 +59,7 @@ public class AppSecMatchTargetSequence extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecMatchTargetSequence(java.lang.String name, AppSecMatchTargetSequenceArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

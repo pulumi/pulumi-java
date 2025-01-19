@@ -120,7 +120,7 @@ public class ImagingPolicyVideo extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public ImagingPolicyVideo(java.lang.String name, ImagingPolicyVideoArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

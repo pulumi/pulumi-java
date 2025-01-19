@@ -79,7 +79,7 @@ public class AppSecRateProtection extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecRateProtection(java.lang.String name, AppSecRateProtectionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

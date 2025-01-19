@@ -116,7 +116,7 @@ public class NetworkListActivations extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      */
     public NetworkListActivations(java.lang.String name, NetworkListActivationsArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

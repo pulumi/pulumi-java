@@ -275,7 +275,7 @@ public class CpsThirdPartyEnrollment extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      */
     public CpsThirdPartyEnrollment(java.lang.String name, CpsThirdPartyEnrollmentArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

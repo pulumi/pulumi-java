@@ -66,7 +66,7 @@ public class CloudwrapperActivation extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      */
     public CloudwrapperActivation(java.lang.String name, CloudwrapperActivationArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

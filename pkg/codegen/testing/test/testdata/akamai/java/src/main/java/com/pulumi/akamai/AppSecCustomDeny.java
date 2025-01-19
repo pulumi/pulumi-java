@@ -72,7 +72,7 @@ public class AppSecCustomDeny extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecCustomDeny(java.lang.String name, AppSecCustomDenyArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

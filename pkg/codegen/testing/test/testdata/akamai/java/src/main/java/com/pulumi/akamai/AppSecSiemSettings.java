@@ -117,7 +117,7 @@ public class AppSecSiemSettings extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppSecSiemSettings(java.lang.String name, AppSecSiemSettingsArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

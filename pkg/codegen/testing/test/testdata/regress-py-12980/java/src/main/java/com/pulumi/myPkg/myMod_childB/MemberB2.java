@@ -70,7 +70,7 @@ public class MemberB2 extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public MemberB2(java.lang.String name, @Nullable MemberB2Args args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

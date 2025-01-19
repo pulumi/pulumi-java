@@ -58,7 +58,7 @@ public class AppsecAdvancedSettingsPiiLearning extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      */
     public AppsecAdvancedSettingsPiiLearning(java.lang.String name, AppsecAdvancedSettingsPiiLearningArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

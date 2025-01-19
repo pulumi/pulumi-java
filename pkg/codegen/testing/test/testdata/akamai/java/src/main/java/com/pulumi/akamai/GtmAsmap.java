@@ -65,7 +65,7 @@ public class GtmAsmap extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public GtmAsmap(java.lang.String name, GtmAsmapArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

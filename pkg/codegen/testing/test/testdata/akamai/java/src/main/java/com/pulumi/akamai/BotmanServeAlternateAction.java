@@ -48,7 +48,7 @@ public class BotmanServeAlternateAction extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanServeAlternateAction(java.lang.String name, BotmanServeAlternateActionArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

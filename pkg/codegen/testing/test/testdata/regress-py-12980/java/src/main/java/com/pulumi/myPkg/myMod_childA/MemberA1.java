@@ -25,7 +25,7 @@ public class MemberA1 extends com.pulumi.resources.ComponentResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public MemberA1(java.lang.String name, @Nullable MemberA1Args args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

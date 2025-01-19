@@ -48,7 +48,7 @@ public class BotmanBotManagementSettings extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      */
     public BotmanBotManagementSettings(java.lang.String name, BotmanBotManagementSettingsArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *
