@@ -34,7 +34,7 @@ public class StringResource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public StringResource(java.lang.String name, StringResourceArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *

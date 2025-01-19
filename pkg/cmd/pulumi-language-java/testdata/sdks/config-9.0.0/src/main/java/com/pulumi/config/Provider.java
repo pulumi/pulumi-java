@@ -47,7 +47,7 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @param args The arguments to use to populate this resource's properties.
      */
     public Provider(java.lang.String name, ProviderArgs args) {
-        this(name, args, makeResourceOptions(null, Codegen.empty()));
+        this(name, args, null);
     }
     /**
      *
