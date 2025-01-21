@@ -8,5 +8,6 @@
  - Emit invoke options and invoke output options in generated programs
  - Include explicit dependencies of invokes in their resulting output
  - Bump core SDK versions in generated code
+ - Emit plugin download URL in default resource options of the generated SDKs
 
 ### Bug Fixes
