@@ -10,4 +10,7 @@
  - Bump core SDK versions in generated code
  - Emit plugin download URL in default resource options of the generated SDKs
 
+
 ### Bug Fixes
+
+ - Panic when asked to generate SDKs involving multi-argument invokes
