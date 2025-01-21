@@ -3,6 +3,7 @@
 package java
 
 import (
+	"fmt"
 	"io"
 	"math/big"
 	"strings"
@@ -322,6 +323,12 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method
 		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
+		if expr.Signature.MultiArgumentInputs {
+			err := fmt.Errorf("Java program-gen does not implement MultiArgumentInputs for function '%v'",
+				expr.Args[0])
+			panic(err)
+		}
+
 		fullyQualifiedType, funcName := g.functionImportDef(expr.Args[0])
 		if !g.emittedTypeImportSymbols.Has(fullyQualifiedType) {
 			// the fully qualified name isn't emitted

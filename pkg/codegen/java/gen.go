@@ -1170,6 +1170,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
+	if url := pkg.PluginDownloadURL; url != "" {
+		fprintf(w, "            .pluginDownloadURL(%q)\n", url)
+	}
 
 	if len(r.Aliases) > 0 {
 		fprintf(w, "            .aliases(%s.of(\n", ctx.ref(names.List))
