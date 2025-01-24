@@ -21,7 +21,7 @@ require (
 	github.com/zclconf/go-cty v1.15.1
 	golang.org/x/exp v0.0.0-20240604190554-fc45aab8b7f8
 	google.golang.org/grpc v1.67.1
-	google.golang.org/protobuf v1.36.1
+	google.golang.org/protobuf v1.36.4
 	gopkg.in/yaml.v3 v3.0.1
 )
 
