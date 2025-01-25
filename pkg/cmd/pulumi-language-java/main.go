@@ -16,6 +16,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"strings"
+	"syscall"
 	"time"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
@@ -402,6 +403,79 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	}
 
 	return &pulumirpc.RunResponse{Error: errResult}, nil
+}
+
+// RunPlugin executes a plugin program and returns its result.
+func (host *javaLanguageHost) RunPlugin(
+	req *pulumirpc.RunPluginRequest,
+	server pulumirpc.LanguageRuntime_RunPluginServer,
+) error {
+	logging.V(5).Infof("Attempting to run Java plugin in %s", req.Pwd)
+
+	closer, stdout, stderr, err := rpcutil.MakeRunPluginStreams(server, false)
+	if err != nil {
+		return err
+	}
+	// Best effort close, but we try an explicit close and error check at the end as well
+	defer closer.Close()
+
+	// Create new executor options with the plugin directory
+	pluginExecOptions := executors.JavaExecutorOptions{
+		Binary:      host.execOptions.Binary,
+		UseExecutor: host.execOptions.UseExecutor,
+		WD:          fsys.DirFS(req.Info.ProgramDirectory), // Use plugin directory instead of working directory
+	}
+
+	executor, err := executors.NewJavaExecutor(pluginExecOptions, false)
+	if err != nil {
+		return err
+	}
+
+	executable := executor.Cmd
+	args := executor.RunArgs
+
+	// Add on all the request args to start this plugin
+	args = append(args, req.Args...)
+
+	commandStr := strings.Join(args, " ")
+	logging.V(5).Infoln("Language host launching process: ", executable, commandStr)
+
+	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
+	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
+	if executor.Dir != "" {
+		cmd.Dir = executor.Dir
+	} else {
+		cmd.Dir = req.Pwd
+	}
+	cmd.Env = req.Env
+	cmd.Stdout = stdout
+	cmd.Stderr = stderr
+
+	if err = cmd.Run(); err != nil {
+		if exiterr, ok := err.(*exec.ExitError); ok {
+			// If the program ran, but exited with a non-zero error code. This will happen often, since user
+			// errors will trigger this. So, the error message should look as nice as possible.
+			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
+				err = errors.Errorf("Program exited with non-zero exit code: %d", status.ExitStatus())
+			} else {
+				err = errors.Wrapf(exiterr, "Program exited unexpectedly")
+			}
+		} else {
+			// Otherwise, we didn't even get to run the program. This ought to never happen unless there's
+			// a bug or system condition that prevented us from running the language exec. Issue a scarier error.
+			err = errors.Wrapf(err, "Problem executing plugin program (could not run language executor)")
+		}
+	}
+
+	if err != nil {
+		return err
+	}
+
+	if err := closer.Close(); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 // constructEnv constructs an environ for `pulumi-language-java`

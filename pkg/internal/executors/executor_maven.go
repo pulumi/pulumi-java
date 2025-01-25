@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"regexp"
 	"strings"
 
@@ -48,6 +49,7 @@ func (maven) isMavenProject(opts JavaExecutorOptions) (bool, error) {
 func (maven) newMavenExecutor(cmd string) (*JavaExecutor, error) {
 	return &JavaExecutor{
 		Cmd: cmd,
+		Dir: filepath.Dir(cmd),
 		BuildArgs: []string{
 			/* only output warning or higher to reduce noise */
 			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",

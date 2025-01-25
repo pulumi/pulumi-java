@@ -1,0 +1,11 @@
+name: java-yaml
+runtime: yaml
+plugins:
+  providers:
+    - name: javap
+      path: ..
+resources:
+  hello:
+    type: javap:index:HelloWorld
+    properties:
+      foo: bar
