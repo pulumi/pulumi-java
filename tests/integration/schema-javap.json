@@ -1,0 +1,16 @@
+{
+    "name": "javap",
+    "version": "0.1.0",
+    "resources": {
+        "javap:index:HelloWorld": {
+            "isComponent": true,
+            "inputProperties": {
+                "foo": {
+                    "type": "string"
+                }
+            },
+            "properties": {
+            }
+        }
+    }
+}
