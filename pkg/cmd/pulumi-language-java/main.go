@@ -423,7 +423,7 @@ func (host *javaLanguageHost) RunPlugin(
 	pluginExecOptions := executors.JavaExecutorOptions{
 		Binary:      host.execOptions.Binary,
 		UseExecutor: host.execOptions.UseExecutor,
-		WD:          fsys.DirFS(req.Info.ProgramDirectory), // Use plugin directory instead of working directory
+		WD:          fsys.DirFS(req.Info.ProgramDirectory),
 	}
 
 	executor, err := executors.NewJavaExecutor(pluginExecOptions, false)
@@ -434,17 +434,18 @@ func (host *javaLanguageHost) RunPlugin(
 	executable := executor.Cmd
 	args := executor.RunArgs
 
-	// Add on all the request args to start this plugin
-	args = append(args, req.Args...)
+	// Pass the address as a program argument via Maven
+	if len(req.Args) > 0 {
+		args = append(args, fmt.Sprintf("-Dexec.args=%s", req.Args[0]))
+	}
 
 	commandStr := strings.Join(args, " ")
-	logging.V(5).Infoln("Language host launching process: ", executable, commandStr)
+	logging.V(5).Infof("Language host launching process: %s %s", executable, commandStr)
 
-	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
-	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
-	if executor.Dir != "" {
-		cmd.Dir = executor.Dir
-	} else {
+	cmd := exec.Command(executable, args...)
+	cmd.Dir = req.Info.ProgramDirectory
+	if cmd.Dir == "" {
+		// Fallback to Pwd if ProgramDirectory is not set
 		cmd.Dir = req.Pwd
 	}
 	cmd.Env = req.Env

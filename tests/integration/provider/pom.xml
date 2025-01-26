@@ -16,6 +16,9 @@
         <mainClass>${project.groupId}.${project.artifactId}.App</mainClass>
         <mainArgs/>
         <pulumiSdkVersion>0.0.1</pulumiSdkVersion>
+        <grpc.version>1.67.1</grpc.version>
+        <protobuf.version>3.25.1</protobuf.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <profiles>
@@ -33,11 +36,11 @@
     </profiles>
 
     <dependencies>
-      <dependency>
-        <groupId>com.pulumi</groupId>
-        <artifactId>pulumi</artifactId>
-        <version>${pulumiSdkVersion}</version>
-      </dependency>
+        <dependency>
+            <groupId>com.pulumi</groupId>
+            <artifactId>pulumi</artifactId>
+            <version>(,1.0]</version>
+        </dependency>
       <dependency>
         <groupId>com.google.code.findbugs</groupId>
         <artifactId>jsr305</artifactId>
@@ -48,6 +51,31 @@
         <artifactId>random</artifactId>
         <version>4.8.1</version>
       </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty-shaded</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
