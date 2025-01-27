@@ -5,11 +5,14 @@
         "javap:index:HelloWorld": {
             "isComponent": true,
             "inputProperties": {
-                "foo": {
-                    "type": "string"
+                "length": {
+                    "type": "number"
                 }
             },
             "properties": {
+                "value": {
+                    "type": "string"
+                }
             }
         }
     }

@@ -7,6 +7,8 @@ import com.pulumi.deployment.InlineDeploymentSettings;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
+import java.util.function.Function;
+import com.pulumi.deployment.internal.Runner.Result;
 
 /**
  * Pulumi program entrypoint.
@@ -31,10 +33,11 @@ public interface Pulumi {
         withOptions(StackOptions.Empty).run(stack);
     }
 
-    static CompletableFuture<Integer> runInlineAsync(InlineDeploymentSettings settings, Consumer<Context> stack) {
+    static <T> CompletableFuture<T> runInlineAsyncWithResult(InlineDeploymentSettings settings, Function<Context, T> runnerFunc) {
         return PulumiInternal.fromInline(settings, StackOptions.Empty)
-                .runInlineAsyncResult(stack)
-                .thenApply(result -> result.exitCode());
+                .runInlineAsyncWithResult(runnerFunc)
+                .thenApply(result -> result.result()
+                        .orElseThrow(() -> new RuntimeException("No result available")));
     }
 
     /**

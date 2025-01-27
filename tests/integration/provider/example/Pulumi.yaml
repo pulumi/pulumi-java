@@ -5,7 +5,9 @@ plugins:
     - name: javap
       path: ..
 resources:
-  hello:
+  hello2:
     type: javap:index:HelloWorld
     properties:
-      foo: bar
+      length: 12
+outputs:
+  value: ${hello2.value}

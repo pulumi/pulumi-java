@@ -96,12 +96,11 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     }
 
     @InternalUse
-    public CompletableFuture<Result<Stack>> runInlineAsyncResult(Consumer<Context> stackCallback) {
-        // Stack must be created and set globally before running any user code
+    public <T> CompletableFuture<Result<T>> runInlineAsyncWithResult(Function<Context, T> runnerFunc) {
         return runner.runAsync(
             () -> {
-                stackCallback.accept(null);
-                return null;
+                var r = runnerFunc.apply(null);
+                return r;
             });
     }
 

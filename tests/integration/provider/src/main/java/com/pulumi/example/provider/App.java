@@ -11,6 +11,7 @@ import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import com.google.protobuf.Empty;
 import com.google.protobuf.Struct;
+import com.google.protobuf.Value;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.DependencyResource;
@@ -20,12 +21,32 @@ import java.security.Provider.Service;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 import io.grpc.Status;
+import com.pulumi.core.internal.Internal;
 
 public class App {
     private static final Logger logger = Logger.getLogger(App.class.getName());
 
     private Server server;
     private final String engineAddress;
+
+    // Add helper class for construct results
+    private static class ConstructResult {
+        private final String urn;
+        private final java.util.Map<String, String> outputs;
+
+        public ConstructResult(String urn, java.util.Map<String, String> outputs) {
+            this.urn = urn;
+            this.outputs = outputs;
+        }
+
+        public String getUrn() {
+            return urn;
+        }
+
+        public java.util.Map<String, String> getOutputs() {
+            return outputs;
+        }
+    }
 
     public App(String[] args) {
         // First argument should be the engine address
@@ -109,28 +130,8 @@ public class App {
                             StreamObserver<pulumirpc.Provider.ConstructResponse> responseObserver) {
             try {
                 // Extract inputs from the request
-                // Struct inputs = request.getInputs();
-                // String type = request.getType();
-                // String name = request.getName();
-                // String monitorEndpoint = request.getMonitorEndpoint();
-                // this.monitorAddress = monitorEndpoint;
-
-                // // Initialize Pulumi deployment settings
-                // // var settings = InlineDeploymentSettings.builder()
-                // //     .monitorAddr(monitorEndpoint)
-                // //     .engineAddr(this.engineAddress)
-                // //     .build();
-                
-                // // // Create deployment instance
-                // // var deployment = new DeploymentInstance(settings);
-                // // PulumiInternal.setDeployment(deployment);
-
-
-                // // Get the result and build properties
-                // //String result = randomString.result();
-                // Struct properties = Struct.newBuilder()
-                //     .putFields("result", com.google.protobuf.Value.newBuilder().setStringValue("result").build())
-                //     .build();
+                Struct inputs = request.getInputs();
+                String name = request.getName();
 
                 var inlineDeploymentSettings = InlineDeploymentSettings.builder()
                     .monitorAddr(request.getMonitorEndpoint())
@@ -159,15 +160,31 @@ public class App {
                     // .replaceOnChanges(request.getReplaceOnChangesList())
                     .build();
 
-                Pulumi.runInlineAsync(inlineDeploymentSettings, ctx -> {
-                    new HelloWorld("hello", opts);
+                // TODO: We need to implement proper deserialization from Struct to HelloWorldArgs
+                var length = (int)inputs.getFieldsOrThrow("length").getNumberValue();
+                var args = new HelloWorldArgs(Output.of(length));
+
+                var result = Pulumi.runInlineAsyncWithResult(inlineDeploymentSettings, ctx -> {
+                    var comp = new HelloWorld(name, args, opts);
+                    return new ConstructResult(
+                        Internal.of(comp.getUrn()).getValueNullable().join(),
+                        java.util.Map.of("value", "hello world2!") // TODO: comp.value
+                    );
                 }).join();
+
+                // Convert the outputs map to a Struct
+                var propertiesBuilder = Struct.newBuilder();
+                for (var entry : result.getOutputs().entrySet()) {
+                    propertiesBuilder.putFields(
+                        entry.getKey(),
+                        Value.newBuilder().setStringValue(entry.getValue()).build()
+                    );
+                }
 
                 // Build the response with the new resource state
                 pulumirpc.Provider.ConstructResponse response = pulumirpc.Provider.ConstructResponse.newBuilder()
-                    //.setUrn(String.format("urn:pulumi:stack::project::%s::%s", type, name))
-                    .setUrn("urn:pulumi:dev::java-yaml::javap:index:HelloWorld::hello")
-                    //.setState(properties)
+                    .setUrn(result.getUrn())
+                    .setState(propertiesBuilder.build())
                     .build();
 
                 responseObserver.onNext(response);
