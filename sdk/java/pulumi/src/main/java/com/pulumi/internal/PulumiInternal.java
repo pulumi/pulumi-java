@@ -10,6 +10,12 @@ import com.pulumi.context.internal.OutputContextInternal;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.DeploymentBuilder;
+import com.pulumi.deployment.internal.Engine;
+import com.pulumi.deployment.internal.Monitor;
+import com.pulumi.deployment.internal.GrpcEngine;
+import com.pulumi.deployment.internal.GrpcMonitor;
+import com.pulumi.deployment.InlineDeploymentSettings;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
@@ -58,12 +64,45 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
         return new PulumiInternal(runner, ctx);
     }
 
+    @InternalUse
+    public static PulumiInternal fromInline(InlineDeploymentSettings settings, StackOptions options) {
+        var builder = new GrpcDeploymentBuilder();
+        var deployment = DeploymentImpl.fromInline(builder, settings);
+        var instance = Deployment.getInstance();
+        var organizationName = deployment.getOrganizationName();
+        var projectName = deployment.getProjectName();
+        var stackName = deployment.getStackName();
+        var runner = deployment.getRunner();
+        var log = deployment.getLog();
+
+        Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
+        var config = new ConfigContextInternal(projectName, configFactory);
+        var logging = new LoggingContextInternal(log);
+        var outputFactory = new OutputFactory(runner);
+        var outputs = new OutputContextInternal(outputFactory);
+
+        var ctx = new ContextInternal(
+                organizationName, projectName, stackName, logging, config, outputs, options.resourceTransformations()
+        );
+        return new PulumiInternal(runner, ctx);
+    }
+
     public void run(Consumer<Context> stack) {
         System.exit(runAsync(stack).join());
     }
 
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
-        return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
+        return runAsyncResult(stackCallback).thenApply(r -> 1);
+    }
+
+    @InternalUse
+    public CompletableFuture<Result<Stack>> runInlineAsyncResult(Consumer<Context> stackCallback) {
+        // Stack must be created and set globally before running any user code
+        return runner.runAsync(
+            () -> {
+                stackCallback.accept(null);
+                return null;
+            });
     }
 
     protected CompletableFuture<Result<Stack>> runAsyncResult(Consumer<Context> stackCallback) {
@@ -80,5 +119,17 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
                     return this.stackContext.exports();
                 })
         );
+    }
+}
+
+class GrpcDeploymentBuilder implements com.pulumi.deployment.DeploymentBuilder {
+    @Override
+    public Engine buildEngine(String engineAddr) {
+        return new GrpcEngine(engineAddr);
+    }
+
+    @Override
+    public Monitor buildMonitor(String monitorAddr) {
+        return new GrpcMonitor(monitorAddr);
     }
 }

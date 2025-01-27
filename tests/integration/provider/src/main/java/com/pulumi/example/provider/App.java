@@ -2,15 +2,19 @@ package com.pulumi.example.provider;
 
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
+import com.pulumi.example.provider.HelloWorld;
+import com.pulumi.deployment.InlineDeploymentSettings;
+
+
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import com.google.protobuf.Empty;
 import com.google.protobuf.Struct;
 import com.pulumi.internal.PulumiInternal;
-import com.pulumi.random.RandomString;
-import com.pulumi.random.RandomStringArgs;
 import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.DependencyResource;
+import com.pulumi.resources.CustomTimeouts;
 import java.io.IOException;
 import java.security.Provider.Service;
 import java.util.concurrent.TimeUnit;
@@ -91,9 +95,10 @@ public class App {
                 responseObserver.onNext(response);
                 responseObserver.onCompleted();
             } catch (IOException e) {
-                logger.severe("Failed to read schema.json: " + e.getMessage());
+                String errorDetails = getDetailedErrorMessage(e, "Failed to read schema.json");
+                logger.severe(errorDetails);
                 responseObserver.onError(io.grpc.Status.INTERNAL
-                    .withDescription("Failed to read schema.json: " + e.getMessage())
+                    .withDescription(errorDetails)
                     .withCause(e)
                     .asException());
             }
@@ -120,12 +125,6 @@ public class App {
                 // // var deployment = new DeploymentInstance(settings);
                 // // PulumiInternal.setDeployment(deployment);
 
-                // // Create a RandomString resource
-                // var randomString = new com.pulumi.random.RandomString(name, 
-                //     com.pulumi.random.RandomStringArgs.builder()
-                //         .length(16)
-                //         .special(false)
-                //         .build());
 
                 // // Get the result and build properties
                 // //String result = randomString.result();
@@ -133,7 +132,36 @@ public class App {
                 //     .putFields("result", com.google.protobuf.Value.newBuilder().setStringValue("result").build())
                 //     .build();
 
-                new HelloWorld("hello", ComponentResourceOptions.builder().build());
+                var inlineDeploymentSettings = InlineDeploymentSettings.builder()
+                    .monitorAddr(request.getMonitorEndpoint())
+                    .engineAddr(this.engineAddress)
+                    .project(request.getProject())
+                    .stack(request.getStack())
+                    .organization(request.getOrganization())
+                    .isDryRun(request.getDryRun())
+                    .build();
+
+                var opts = ComponentResourceOptions.builder()
+                    .parent(request.getParent().isEmpty() 
+                        ? null 
+                        : new DependencyResource(request.getParent()))
+                    .protect(request.getProtect())
+                    //.dependsOn(request.getDependsOnList())
+                    //.aliases(request.getAliasesList())
+                    // .customTimeouts(request.getCustomTimeouts() != null 
+                    //     ? CustomTimeouts.deserialize(request.getCustomTimeouts()) 
+                    //     : null)
+                    // .deletedWith(request.getDeletedWith().isEmpty()
+                    //     ? null
+                    //     : new DependencyResource(request.getDeletedWith()))
+                    // .ignoreChanges(request.getIgnoreChangesList())
+                    // .retainOnDelete(request.getRetainOnDelete())
+                    // .replaceOnChanges(request.getReplaceOnChangesList())
+                    .build();
+
+                Pulumi.runInlineAsync(inlineDeploymentSettings, ctx -> {
+                    new HelloWorld("hello", opts);
+                }).join();
 
                 // Build the response with the new resource state
                 pulumirpc.Provider.ConstructResponse response = pulumirpc.Provider.ConstructResponse.newBuilder()
@@ -146,12 +174,12 @@ public class App {
                 responseObserver.onCompleted();
 
             } catch (Exception e) {
-                logger.severe("Construction failed: " + e.getMessage());
-                // Create a proper gRPC Status with the error details
-                io.grpc.Status status = io.grpc.Status.UNKNOWN
-                    .withDescription(e.getMessage())
-                    .withCause(e);
-                responseObserver.onError(status.asException());
+                String errorDetails = getDetailedErrorMessage(e, "Construction failed");
+                logger.severe(errorDetails);
+                responseObserver.onError(io.grpc.Status.UNKNOWN
+                    .withDescription(errorDetails)
+                    .withCause(e)
+                    .asException());
             }
         }
 
@@ -167,9 +195,10 @@ public class App {
                 responseObserver.onNext(info);
                 responseObserver.onCompleted();
             } catch (Exception e) {
-                logger.severe("Plugin info request failed: " + e.getMessage());
+                String errorDetails = getDetailedErrorMessage(e, "Plugin info request failed");
+                logger.severe(errorDetails);
                 responseObserver.onError(io.grpc.Status.INTERNAL
-                    .withDescription("Failed to get plugin info: " + e.getMessage())
+                    .withDescription(errorDetails)
                     .withCause(e)
                     .asException());
             }
@@ -189,12 +218,51 @@ public class App {
                 responseObserver.onNext(response);
                 responseObserver.onCompleted();
             } catch (Exception e) {
-                logger.severe("Configuration failed: " + e.getMessage());
+                String errorDetails = getDetailedErrorMessage(e, "Configuration failed");
+                logger.severe(errorDetails);
                 responseObserver.onError(io.grpc.Status.INTERNAL
-                    .withDescription("Configuration failed: " + e.getMessage())
+                    .withDescription(errorDetails)
                     .withCause(e)
                     .asException());
             }
+        }
+
+        @Override
+        public void attach(pulumirpc.Plugin.PluginAttach request,
+                          StreamObserver<Empty> responseObserver) {
+            try {                
+                // Return empty response to indicate successful attachment
+                responseObserver.onNext(Empty.getDefaultInstance());
+                responseObserver.onCompleted();
+            } catch (Exception e) {
+                String errorDetails = getDetailedErrorMessage(e, "Attach failed");
+                logger.severe(errorDetails);
+                responseObserver.onError(Status.INTERNAL
+                    .withDescription(errorDetails)
+                    .withCause(e)
+                    .asException());
+            }
+        }
+
+        private String getDetailedErrorMessage(Throwable t, String context) {
+            StringBuilder errorDetails = new StringBuilder();
+            errorDetails.append(context).append(":\n");
+            errorDetails.append("Exception class: ").append(t.getClass().getName()).append("\n");
+            errorDetails.append("Message: ").append(t.getMessage() != null ? t.getMessage() : "No message").append("\n");
+            errorDetails.append("Stack trace:\n");
+            for (StackTraceElement element : t.getStackTrace()) {
+                errorDetails.append("\tat ").append(element.toString()).append("\n");
+            }
+            
+            Throwable cause = t.getCause();
+            if (cause != null) {
+                errorDetails.append("Caused by: ").append(cause.getClass().getName()).append(": ")
+                          .append(cause.getMessage() != null ? cause.getMessage() : "No message").append("\n");
+                for (StackTraceElement element : cause.getStackTrace()) {
+                    errorDetails.append("\tat ").append(element.toString()).append("\n");
+                }
+            }
+            return errorDetails.toString();
         }
     }
 } 

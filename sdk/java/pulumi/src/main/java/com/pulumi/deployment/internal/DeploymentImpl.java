@@ -28,6 +28,8 @@ import com.pulumi.core.internal.Strings;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.DeploymentBuilder;
+import com.pulumi.deployment.InlineDeploymentSettings;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.exceptions.LogException;
@@ -159,6 +161,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @VisibleForTesting
     public static DeploymentImpl fromEnvironment() {
         var state = DeploymentState.fromEnvironment();
+        var impl = new DeploymentImpl(state);
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
+        return impl;
+    }
+
+    public static DeploymentImpl fromInline(DeploymentBuilder builder, 
+            InlineDeploymentSettings settings) {
+        var state = DeploymentState.fromInline(builder, settings);
         var impl = new DeploymentImpl(state);
         DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
         return impl;
@@ -1171,6 +1181,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @ParametersAreNonnullByDefault
+    @InternalUse
     private static class PrepareResult {
         public final Struct serializedProps;
         public final String parentUrn;
@@ -1826,6 +1837,46 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 throw new IllegalStateException(
                         "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
             }
+        }
+        
+        public static DeploymentState fromInline(
+            DeploymentBuilder builder, 
+            InlineDeploymentSettings settings) {
+            
+            Objects.requireNonNull(settings, "settings cannot be null");
+
+            String organizationName = settings.getOrganization().orElse("organization");
+            String projectName = settings.getProject();
+            String stackName = settings.getStack();
+            boolean isDryRun = settings.isDryRun();
+
+            if (Strings.isEmptyOrNull(settings.getMonitorAddr()) ||
+                Strings.isEmptyOrNull(settings.getEngineAddr()) ||
+                Strings.isEmptyOrNull(projectName) ||
+                Strings.isEmptyOrNull(stackName)) {
+                throw new IllegalStateException(
+                    "Inline execution was not provided the necessary parameters to run the Pulumi engine.");
+            }
+
+            Logger deploymentLogger = settings.getLogger()
+                .orElseGet(() -> Logger.getLogger(DeploymentImpl.class.getName()));
+            deploymentLogger.setLevel(GlobalLogging.GlobalLevel);
+
+            deploymentLogger.log(Level.FINEST, "Creating deployment engine");
+            Engine engine = builder.buildEngine(settings.getEngineAddr());
+            deploymentLogger.log(Level.FINEST, "Created deployment engine");
+
+            deploymentLogger.log(Level.FINEST, "Creating deployment monitor");
+            Monitor monitor = builder.buildMonitor(settings.getMonitorAddr());
+            deploymentLogger.log(Level.FINEST, "Created deployment monitor");
+
+            // Create config from settings
+            Config config = new Config(
+                settings.getConfig(),
+                settings.getConfigSecretKeys()
+            );
+
+            return new DeploymentState(config, deploymentLogger, organizationName, projectName, stackName, isDryRun, engine, monitor);
         }
     }
 

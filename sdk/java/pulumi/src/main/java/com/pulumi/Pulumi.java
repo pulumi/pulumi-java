@@ -2,6 +2,8 @@ package com.pulumi;
 
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.resources.StackOptions;
+import com.pulumi.deployment.DeploymentBuilder;
+import com.pulumi.deployment.InlineDeploymentSettings;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -27,6 +29,12 @@ public interface Pulumi {
      */
     static void run(Consumer<Context> stack) {
         withOptions(StackOptions.Empty).run(stack);
+    }
+
+    static CompletableFuture<Integer> runInlineAsync(InlineDeploymentSettings settings, Consumer<Context> stack) {
+        return PulumiInternal.fromInline(settings, StackOptions.Empty)
+                .runInlineAsyncResult(stack)
+                .thenApply(result -> result.exitCode());
     }
 
     /**
