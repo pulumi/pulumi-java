@@ -2052,14 +2052,6 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				WithDefaultDependencies().
 				WithJavaSdkDependencyDefault(DefaultSdkVersion)
 
-			// All packages that SupportPack (which in some sense reflects the latest version of the schema) should use
-			// Gradle if no build system has been explicitly specified.
-			if p.SupportPack() {
-				if javaInfo.BuildFiles == "" {
-					javaInfo.BuildFiles = "gradle"
-				}
-			}
-
 			info = &javaInfo
 			infos[def] = info
 		}
