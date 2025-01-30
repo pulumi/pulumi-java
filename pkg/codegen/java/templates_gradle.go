@@ -143,6 +143,9 @@ func newGradleTemplateContext(
 		}
 		ctx.GradleNexusPublishPluginEnabled = true
 		ctx.GradleNexusPublishPluginVersion = version
+	} else if packageInfo.BuildFiles == "gradle" && packageInfo.GradleNexusPublishPluginVersion != "" {
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
 	}
 
 	if packageInfo.Repositories != nil {
