@@ -14,16 +14,19 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
+const DefaultGradleNexusPublishPluginVersion = "2.0.0"
+
 func genGradleProject(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
 	files fs,
+	legacyBuildFiles bool,
 ) error {
 	if err := gradleValidatePackage(pkg); err != nil {
 		return err
 	}
 
-	ctx := newGradleTemplateContext(pkg, packageInfo)
+	ctx := newGradleTemplateContext(pkg, packageInfo, legacyBuildFiles)
 	templates := map[string]string{
 		"build.gradle":    buildGradleTemplate,
 		"settings.gradle": settingsGradleTemplate,
@@ -99,6 +102,7 @@ type gradleTemplateParameterization struct {
 func newGradleTemplateContext(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
+	legacyBuildFiles bool,
 ) gradleTemplateContext {
 	ctx := gradleTemplateContext{
 		Name:                           pkg.Name,
@@ -126,9 +130,19 @@ func newGradleTemplateContext(
 		ctx.Version = pkg.Parameterization.BaseProvider.Version.String()
 	}
 
-	if packageInfo.GradleNexusPublishPluginVersion != "" {
+	if legacyBuildFiles {
+		// In legacy mode, we require the user to provide the Gradle Nexus Publish Plugin version.
+		if packageInfo.GradleNexusPublishPluginVersion != "" {
+			ctx.GradleNexusPublishPluginEnabled = true
+			ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
+		}
+	} else if packageInfo.BuildFiles == "" || packageInfo.BuildFiles == "gradle-nexus" {
+		version := DefaultGradleNexusPublishPluginVersion
+		if packageInfo.GradleNexusPublishPluginVersion != "" {
+			version = packageInfo.GradleNexusPublishPluginVersion
+		}
 		ctx.GradleNexusPublishPluginEnabled = true
-		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
+		ctx.GradleNexusPublishPluginVersion = version
 	}
 
 	if packageInfo.Repositories != nil {

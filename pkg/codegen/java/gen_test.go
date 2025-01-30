@@ -81,6 +81,24 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 			Directory:   "parameterized",
 			Description: "Tests for parameterized providers",
 		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "build-files/none",
+			Description: "Tests for build-files = none",
+			// We don't generate a gradle file, so we can't compile.
+			SkipCompileCheck: codegen.NewStringSet("java"),
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "build-files/gradle",
+			Description: "Tests for build-files = gradle",
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "build-files/gradle-nexus",
+			Description: "Tests for build-files = gradle-nexus",
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "build-files/unspecified",
+			Description: "Tests for build-files not set",
+		}),
 	}
 }
 
@@ -224,10 +242,20 @@ func TestGeneratePackage(t *testing.T) {
 			) (map[string][]byte, error) {
 				pkg.Description = "test description"
 				pkg.Repository = "https://github.com/pulumi/pulumi-java"
-				pkg.Language = map[string]interface{}{
-					"java": testCase.packageInfo,
+
+				if pkg.Language == nil {
+					pkg.Language = map[string]interface{}{}
 				}
-				return GeneratePackage(tool, pkg, extraFiles, nil, false)
+				if pkg.Language["java"] == nil {
+					pkg.Language["java"] = testCase.packageInfo
+				} else {
+					if err := pkg.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
+						panic(err)
+					}
+					info := pkg.Language["java"].(PackageInfo)
+					pkg.Language["java"] = info.With(testCase.packageInfo)
+				}
+				return GeneratePackage(tool, pkg, extraFiles, nil, false /*local*/, false /*legacyBuildFiles*/)
 			},
 			Language:  "java",
 			TestCases: []*test.SDKTest{testCase.sdkTest},
@@ -239,7 +267,6 @@ func TestGeneratePackage(t *testing.T) {
 // Minimal test config that verifies code generation and compilation.
 func newGeneratePackageTestConfig(test *test.SDKTest) generatePackageTestConfig {
 	packageInfo := PackageInfo{
-		BuildFiles: "gradle",
 		Dependencies: map[string]string{
 			"com.pulumi:pulumi": "0.0.1",
 		},

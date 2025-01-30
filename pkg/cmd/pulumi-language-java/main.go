@@ -749,6 +749,7 @@ func (host *javaLanguageHost) GeneratePackage(
 		req.ExtraFiles,
 		req.LocalDependencies,
 		req.Local,
+		false, /*legacyBuildFiles*/
 	)
 	if err != nil {
 		return nil, err

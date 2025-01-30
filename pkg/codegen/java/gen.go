@@ -2239,6 +2239,7 @@ func GeneratePackage(
 	extraFiles map[string][]byte,
 	localDependencies map[string]string,
 	local bool,
+	legacyBuildFiles bool,
 ) (map[string][]byte, error) {
 	// Presently, Gradle is the primary build system we support for generated SDKs. Later on, when we validate the
 	// package in order to produce build system artifacts, we'll need a description and repository. To this end, we
@@ -2308,13 +2309,33 @@ func GeneratePackage(
 		}
 	}
 
+	// Unless we are generating a local package, we use gradle as the build
+	// system. Note that we do not support generating build files for any other
+	// system than gradle at this time.
+	//
+	// If the legacyBuildFiles is set to true, we will only use gradle if the
+	// BuildFiles field is explicitly set to `gradle`. This is to support the
+	// legacy behavior of `pulumi-java-gen`. Once `pulumi-java-gen` is
+	// deprecated, we can remove the legacyBuildFiles flag, and always use
+	// gradle if `local` is false.
+	useGradle := !local && // Only use gradle if we are not generating a local package.
+		// legacy behavior requires explicit gradle setting
+		(legacyBuildFiles && info.BuildFiles == "gradle") ||
+		// new behavior uses gradle by default, unless explicitly disabled
+		(!legacyBuildFiles && info.BuildFiles != "none")
+
 	// Currently, packages come bundled with a version.txt resource that is used by generated code to report a version.
 	// When a build tool is configured, we defer the generation of this file to the build process so that e.g. CI
 	// processes can set the version to be used when releasing or publishing a package, as opposed to when the code for
 	// that package is generated. In the case that we are generating a package without a build tool, or a local package
 	// to be incorporated into a program with an existing build process, we need to emit the version.txt file explicitly
 	// as part of code generation.
-	if info.BuildFiles == "" || local {
+	if useGradle {
+		if err := genGradleProject(pkg, info, files, legacyBuildFiles); err != nil {
+			return nil, err
+		}
+		return files, nil
+	} else {
 		pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
 		pkgPath := strings.ReplaceAll(pkgName, ".", "/")
 
@@ -2327,18 +2348,6 @@ func GeneratePackage(
 
 		files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
 		return files, nil
-	}
-
-	// If we are emitting a publishable package with a configured build system, emit those files now.
-	switch info.BuildFiles {
-	case "gradle":
-		if err := genGradleProject(pkg, info, files); err != nil {
-			return nil, err
-		}
-		return files, nil
-	default:
-		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",
-			info.BuildFiles)
 	}
 }
 
