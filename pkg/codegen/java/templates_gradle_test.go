@@ -81,6 +81,11 @@ func TestNewGradleTemplateContextBuildFiles(t *testing.T) {
 
 	// Legacy build files: true
 
+	info = &PackageInfo{BuildFiles: ""}
+	tctx = newGradleTemplateContext(pkg, info, true /*legacyBuildFiles*/)
+	assert.Equal(t, "", tctx.GradleNexusPublishPluginVersion)
+	assert.Equal(t, false, tctx.GradleNexusPublishPluginEnabled)
+
 	info = &PackageInfo{BuildFiles: "gradle"}
 	tctx = newGradleTemplateContext(pkg, info, true /*legacyBuildFiles*/)
 	assert.Equal(t, "", tctx.GradleNexusPublishPluginVersion)
