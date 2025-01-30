@@ -2327,20 +2327,20 @@ func GeneratePackage(
 			return nil, err
 		}
 		return files, nil
-	} else {
-		pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
-		pkgPath := strings.ReplaceAll(pkgName, ".", "/")
-
-		var version string
-		if pkg.Version != nil {
-			version = pkg.Version.String()
-		} else {
-			version = "0.0.1"
-		}
-
-		files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
-		return files, nil
 	}
+
+	pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
+	pkgPath := strings.ReplaceAll(pkgName, ".", "/")
+
+	var version string
+	if pkg.Version != nil {
+		version = pkg.Version.String()
+	} else {
+		version = "0.0.1"
+	}
+
+	files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
+	return files, nil
 }
 
 func isInputType(t schema.Type) bool {
