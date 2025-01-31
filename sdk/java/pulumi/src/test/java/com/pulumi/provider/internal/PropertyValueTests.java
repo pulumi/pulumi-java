@@ -37,7 +37,7 @@ public class PropertyValueTests {
         assertEquals(nullValue, unmarshaledNull);
 
         // Test boolean
-        var boolValue = new PropertyValue(true);
+        var boolValue = PropertyValue.of(true);
         var marshaledBool = boolValue.marshal();
         assertEquals(Value.KindCase.BOOL_VALUE, marshaledBool.getKindCase());
         assertTrue(marshaledBool.getBoolValue());
@@ -45,7 +45,7 @@ public class PropertyValueTests {
         assertEquals(boolValue, unmarshaledBool);
 
         // Test number
-        var numberValue = new PropertyValue(42.0);
+        var numberValue = PropertyValue.of(42.0);
         var marshaledNumber = numberValue.marshal();
         assertEquals(Value.KindCase.NUMBER_VALUE, marshaledNumber.getKindCase());
         assertEquals(42.0, marshaledNumber.getNumberValue(), 0.001);
@@ -53,7 +53,7 @@ public class PropertyValueTests {
         assertEquals(numberValue, unmarshaledNumber);
 
         // Test string
-        var stringValue = new PropertyValue("test");
+        var stringValue = PropertyValue.of("test");
         var marshaledString = stringValue.marshal();
         assertEquals(Value.KindCase.STRING_VALUE, marshaledString.getKindCase());
         assertEquals("test", marshaledString.getStringValue());
@@ -63,10 +63,10 @@ public class PropertyValueTests {
 
     @Test
     void testMarshalUnmarshalArrays() {
-        var arrayValue = new PropertyValue(Arrays.asList(
-            new PropertyValue("first"),
-            new PropertyValue(42.0),
-            new PropertyValue(true),
+        var arrayValue = PropertyValue.of(Arrays.asList(
+            PropertyValue.of("first"),
+            PropertyValue.of(42.0),
+            PropertyValue.of(true),
             PropertyValue.NULL,
             PropertyValue.COMPUTED
         ));
@@ -87,14 +87,14 @@ public class PropertyValueTests {
     @Test
     void testMarshalUnmarshalObjects() {
         Map<String, PropertyValue> map = new HashMap<>();
-        map.put("string", new PropertyValue("value"));
-        map.put("number", new PropertyValue(42.0));
-        map.put("bool", new PropertyValue(true));
+        map.put("string", PropertyValue.of("value"));
+        map.put("number", PropertyValue.of(42.0));
+        map.put("bool", PropertyValue.of(true));
         map.put("null", PropertyValue.NULL);
         map.put("computed", PropertyValue.COMPUTED);
-        map.put("nested", new PropertyValue(Map.of("key", new PropertyValue("nested-value"))));
+        map.put("nested", PropertyValue.of(Map.of("key", PropertyValue.of("nested-value"))));
         
-        var objectValue = new PropertyValue(map);
+        var objectValue = PropertyValue.of(map);
         var marshaledObject = objectValue.marshal();
         assertEquals(Value.KindCase.STRUCT_VALUE, marshaledObject.getKindCase());
         
@@ -112,30 +112,30 @@ public class PropertyValueTests {
     void testMarshalUnmarshalAssets() {
         // Test all asset types
         var assets = new PropertyValue[]{
-            new PropertyValue(new FileAsset("path/to/file")),
-            new PropertyValue(new StringAsset("asset content\nwith newlines")),
-            new PropertyValue(new RemoteAsset("https://example.com/asset?param=value")),
-            new PropertyValue(new RemoteAsset("https://example.com/asset"))
+            PropertyValue.of(new FileAsset("path/to/file")),
+            PropertyValue.of(new StringAsset("asset content\nwith newlines")),
+            PropertyValue.of(new RemoteAsset("https://example.com/asset?param=value")),
+            PropertyValue.of(new RemoteAsset("https://example.com/asset"))
         };
 
         for (var asset : assets) {
             var marshaled = asset.marshal();
             var unmarshaled = PropertyValue.unmarshal(marshaled);
-            assertAssetOrArchiveEquals(asset.getAssetValue(), unmarshaled.getAssetValue());
+            assertAssetOrArchiveEquals(asset.<Asset>getValue(), unmarshaled.<Asset>getValue());
         }
     }
 
     @Test
     void testMarshalUnmarshalArchives() {
         // Test all archive types
-        var fileArchive = new PropertyValue(new FileArchive("path/to/archive.zip"));
-        var remoteArchive = new PropertyValue(new RemoteArchive("https://example.com/archive.tar.gz"));
+        var fileArchive = PropertyValue.of(new FileArchive("path/to/archive.zip"));
+        var remoteArchive = PropertyValue.of(new RemoteArchive("https://example.com/archive.tar.gz"));
 
         // Test basic archives
         for (var archive : new PropertyValue[]{fileArchive, remoteArchive}) {
             var marshaled = archive.marshal();
             var unmarshaled = PropertyValue.unmarshal(marshaled);
-            assertAssetOrArchiveEquals(archive.getArchiveValue(), unmarshaled.getArchiveValue());
+            assertAssetOrArchiveEquals(archive.getValue(), unmarshaled.getValue());
         }
 
         // Test AssetArchive with mixed content
@@ -143,15 +143,15 @@ public class PropertyValueTests {
         assets.put("file1", new FileAsset("path/to/file1"));
         assets.put("file2", new StringAsset("content\nwith newlines"));
         assets.put("nested", new FileArchive("path/to/nested.zip"));
-        var assetArchive = new PropertyValue(new AssetArchive(assets));
+        var assetArchive = PropertyValue.of(new AssetArchive(assets));
         
         var marshaledAssetArchive = assetArchive.marshal();
         var unmarshaledAssetArchive = PropertyValue.unmarshal(marshaledAssetArchive);
         
         var originalMap = (Map<String, AssetOrArchive>)AssetOrArchive.AssetOrArchiveInternal
-            .from(assetArchive.getArchiveValue()).getValue();
+            .from(assetArchive.<Archive>getValue()).getValue();
         var unmarshaledMap = (Map<String, AssetOrArchive>)AssetOrArchive.AssetOrArchiveInternal
-            .from(unmarshaledAssetArchive.getArchiveValue()).getValue();
+            .from(unmarshaledAssetArchive.<Archive>getValue()).getValue();
         
         assertEquals(originalMap.size(), unmarshaledMap.size());
         
@@ -162,7 +162,7 @@ public class PropertyValueTests {
 
     @Test
     void testMarshalUnmarshalSecrets() {
-        var secret = new PropertyValue(new PropertyValue("secret value"));
+        var secret = PropertyValue.ofSecret(PropertyValue.of("secret value"));
         var marshaledSecret = secret.marshal();
         var unmarshaledSecret = PropertyValue.unmarshal(marshaledSecret);
         assertEquals(secret, unmarshaledSecret);
@@ -182,11 +182,11 @@ public class PropertyValueTests {
         
         // Test different output variants
         var outputs = new PropertyValue[]{
-            new PropertyValue(new PropertyValue.OutputReference(new PropertyValue("test value"), dependencies)),
-            new PropertyValue(new PropertyValue.OutputReference(null, dependencies)),
-            new PropertyValue(new PropertyValue.OutputReference(PropertyValue.COMPUTED, dependencies)),
-            new PropertyValue(new PropertyValue.OutputReference(
-                new PropertyValue(Map.of("nested", new PropertyValue("value"))), 
+            PropertyValue.of(new PropertyValue.OutputReference(PropertyValue.of("test value"), dependencies)),
+            PropertyValue.of(new PropertyValue.OutputReference(null, dependencies)),
+            PropertyValue.of(new PropertyValue.OutputReference(PropertyValue.COMPUTED, dependencies)),
+            PropertyValue.of(new PropertyValue.OutputReference(
+                PropertyValue.of(Map.of("nested", PropertyValue.of("value"))), 
                 dependencies
             ))
         };
@@ -202,19 +202,19 @@ public class PropertyValueTests {
     void testMarshalUnmarshalResource() {
         var resources = new PropertyValue[]{
             // Full resource
-            new PropertyValue(new PropertyValue.ResourceReference(
+            PropertyValue.of(new PropertyValue.ResourceReference(
                 "urn:pulumi:stack::project::type::name",
-                new PropertyValue("resource-id"),
+                PropertyValue.of("resource-id"),
                 "1.0.0"
             )),
             // Minimal resource
-            new PropertyValue(new PropertyValue.ResourceReference(
+            PropertyValue.of(new PropertyValue.ResourceReference(
                 "urn:pulumi:stack::project::type::name",
                 null,
                 ""
             )),
             // Resource with computed ID
-            new PropertyValue(new PropertyValue.ResourceReference(
+            PropertyValue.of(new PropertyValue.ResourceReference(
                 "urn:pulumi:stack::project::type::name",
                 PropertyValue.COMPUTED,
                 "2.0.0"
@@ -232,9 +232,9 @@ public class PropertyValueTests {
     void testMarshalUnmarshalProperties() {
         // Create a test properties map
         Map<String, PropertyValue> properties = new HashMap<>();
-        properties.put("string", new PropertyValue("value"));
-        properties.put("number", new PropertyValue(42.0));
-        properties.put("bool", new PropertyValue(true));
+        properties.put("string", PropertyValue.of("value"));
+        properties.put("number", PropertyValue.of(42.0));
+        properties.put("bool", PropertyValue.of(true));
         properties.put("null", PropertyValue.NULL);
         properties.put("computed", PropertyValue.COMPUTED);
         
@@ -274,65 +274,65 @@ public class PropertyValueTests {
     @Test
     void testPropertyValueEquality() {
         // Test equality of different types
-        assertNotEquals(new PropertyValue(true), new PropertyValue(42.0));
-        assertNotEquals(new PropertyValue("test"), new PropertyValue(true));
-        assertNotEquals(new PropertyValue(Arrays.asList()), new PropertyValue(new HashMap<>()));
+        assertNotEquals(PropertyValue.of(true), PropertyValue.of(42.0));
+        assertNotEquals(PropertyValue.of("test"), PropertyValue.of(true));
+        assertNotEquals(PropertyValue.of(Arrays.asList()), PropertyValue.of(new HashMap<>()));
         
         // Test equality of arrays with different lengths
         assertNotEquals(
-            new PropertyValue(Arrays.asList(new PropertyValue("test"))),
-            new PropertyValue(Arrays.asList())
+            PropertyValue.of(Arrays.asList(PropertyValue.of("test"))),
+            PropertyValue.of(Arrays.asList())
         );
 
         // Test equality of objects with different keys
         Map<String, PropertyValue> map1 = new HashMap<>();
-        map1.put("key1", new PropertyValue("value1"));
+        map1.put("key1", PropertyValue.of("value1"));
         Map<String, PropertyValue> map2 = new HashMap<>();
-        map2.put("key2", new PropertyValue("value1"));
-        assertNotEquals(new PropertyValue(map1), new PropertyValue(map2));
+        map2.put("key2", PropertyValue.of("value1"));
+        assertNotEquals(PropertyValue.of(map1), PropertyValue.of(map2));
     }
 
     @Test
     void testEquality() {
         // Test null equality
         assertEquals(PropertyValue.NULL, PropertyValue.NULL);
-        assertNotEquals(PropertyValue.NULL, new PropertyValue(true));
+        assertNotEquals(PropertyValue.NULL, PropertyValue.of(true));
         
         // Test computed equality
         assertEquals(PropertyValue.COMPUTED, PropertyValue.COMPUTED);
         assertNotEquals(PropertyValue.COMPUTED, PropertyValue.NULL);
         
         // Test same type but different values
-        assertNotEquals(new PropertyValue(true), new PropertyValue(false));
-        assertNotEquals(new PropertyValue(42.0), new PropertyValue(43.0));
-        assertNotEquals(new PropertyValue("test1"), new PropertyValue("test2"));
+        assertNotEquals(PropertyValue.of(true), PropertyValue.of(false));
+        assertNotEquals(PropertyValue.of(42.0), PropertyValue.of(43.0));
+        assertNotEquals(PropertyValue.of("test1"), PropertyValue.of("test2"));
         
         // Test array equality with same content
-        var array1 = new PropertyValue(Arrays.asList(new PropertyValue("test")));
-        var array2 = new PropertyValue(Arrays.asList(new PropertyValue("test")));
+        var array1 = PropertyValue.of(Arrays.asList(PropertyValue.of("test")));
+        var array2 = PropertyValue.of(Arrays.asList(PropertyValue.of("test")));
         assertEquals(array1, array2);
         
         // Test object equality with same content
         Map<String, PropertyValue> map1 = new HashMap<>();
-        map1.put("key", new PropertyValue("value"));
+        map1.put("key", PropertyValue.of("value"));
         Map<String, PropertyValue> map2 = new HashMap<>();
-        map2.put("key", new PropertyValue("value"));
-        assertEquals(new PropertyValue(map1), new PropertyValue(map2));
+        map2.put("key", PropertyValue.of("value"));
+        assertEquals(PropertyValue.of(map1), PropertyValue.of(map2));
         
         // Test non-PropertyValue objects
-        assertNotEquals(new PropertyValue(true), Boolean.TRUE);
+        assertNotEquals(PropertyValue.of(true), Boolean.TRUE);
     }
 
     @Test
     void testIsNull() {
         assertTrue(PropertyValue.NULL.isNull());
-        assertFalse(new PropertyValue(true).isNull());
-        assertFalse(new PropertyValue(42.0).isNull());
-        assertFalse(new PropertyValue("test").isNull());
-        assertFalse(new PropertyValue(Arrays.asList()).isNull());
-        assertFalse(new PropertyValue(new HashMap<>()).isNull());
-        assertFalse(new PropertyValue(new FileAsset("test")).isNull());
-        assertFalse(new PropertyValue(new FileArchive("test")).isNull());
+        assertFalse(PropertyValue.of(true).isNull());
+        assertFalse(PropertyValue.of(42.0).isNull());
+        assertFalse(PropertyValue.of("test").isNull());
+        assertFalse(PropertyValue.of(Arrays.asList()).isNull());
+        assertFalse(PropertyValue.of(new HashMap<>()).isNull());
+        assertFalse(PropertyValue.of(new FileAsset("test")).isNull());
+        assertFalse(PropertyValue.of(new FileArchive("test")).isNull());
         assertFalse(PropertyValue.COMPUTED.isNull());
     }
 
@@ -340,95 +340,91 @@ public class PropertyValueTests {
     void testHashCode() {
         // Test that equal objects have equal hash codes
         assertEquals(
-            new PropertyValue("test").hashCode(),
-            new PropertyValue("test").hashCode()
+            PropertyValue.of("test").hashCode(),
+            PropertyValue.of("test").hashCode()
         );
         
         assertEquals(
-            new PropertyValue(Arrays.asList(new PropertyValue("test"))).hashCode(),
-            new PropertyValue(Arrays.asList(new PropertyValue("test"))).hashCode()
+            PropertyValue.of(Arrays.asList(PropertyValue.of("test"))).hashCode(),
+            PropertyValue.of(Arrays.asList(PropertyValue.of("test"))).hashCode()
         );
         
         Map<String, PropertyValue> map1 = new HashMap<>();
-        map1.put("key", new PropertyValue("value"));
+        map1.put("key", PropertyValue.of("value"));
         Map<String, PropertyValue> map2 = new HashMap<>();
-        map2.put("key", new PropertyValue("value"));
+        map2.put("key", PropertyValue.of("value"));
         assertEquals(
-            new PropertyValue(map1).hashCode(),
-            new PropertyValue(map2).hashCode()
+            PropertyValue.of(map1).hashCode(),
+            PropertyValue.of(map2).hashCode()
         );
 
         // Test that different objects have different hash codes
         assertNotEquals(
-            new PropertyValue("test1").hashCode(),
-            new PropertyValue("test2").hashCode()
+            PropertyValue.of("test1").hashCode(),
+            PropertyValue.of("test2").hashCode()
         );
 
         // Test Asset hashCode consistency
-        var fileAsset = new PropertyValue(new FileAsset("path"));
+        var fileAsset = PropertyValue.of(new FileAsset("path"));
         assertEquals(fileAsset.hashCode(), fileAsset.hashCode());
 
         // Test Archive hashCode consistency
-        var fileArchive = new PropertyValue(new FileArchive("path"));
+        var fileArchive = PropertyValue.of(new FileArchive("path"));
         assertEquals(fileArchive.hashCode(), fileArchive.hashCode());
 
         // Test Resource hashCode consistency
         var ref = new PropertyValue.ResourceReference("urn", null, "");
-        var resource = new PropertyValue(ref);
+        var resource = PropertyValue.of(ref);
         assertEquals(resource.hashCode(), resource.hashCode());
 
         // Test Output hashCode consistency
         Set<String> deps = new HashSet<>(Arrays.asList("dep1"));
-        var outputRef = new PropertyValue.OutputReference(new PropertyValue("test"), deps);
-        var output = new PropertyValue(outputRef);
+        var outputRef = new PropertyValue.OutputReference(PropertyValue.of("test"), deps);
+        var output = PropertyValue.of(outputRef);
         assertEquals(output.hashCode(), output.hashCode());
-
-        // Test Secret hashCode consistency
-        var secret = new PropertyValue(new PropertyValue("secret"));
-        assertEquals(secret.hashCode(), secret.hashCode());
     }
 
     @Test
     void testToString() {
         // Test basic types
         assertEquals("null", PropertyValue.NULL.toString());
-        assertEquals("true", new PropertyValue(true).toString());
-        assertEquals("42.0", new PropertyValue(42.0).toString());
-        assertEquals("test", new PropertyValue("test").toString());
+        assertEquals("true", PropertyValue.of(true).toString());
+        assertEquals("42.0", PropertyValue.of(42.0).toString());
+        assertEquals("test", PropertyValue.of("test").toString());
         assertEquals("{unknown}", PropertyValue.COMPUTED.toString());
         
         // Test collections
-        assertEquals("[1.1,2.2,null]", new PropertyValue(Arrays.asList(
-            new PropertyValue(1.1),
-            new PropertyValue(2.2),
+        assertEquals("[1.1,2.2,null]", PropertyValue.of(Arrays.asList(
+            PropertyValue.of(1.1),
+            PropertyValue.of(2.2),
             PropertyValue.NULL
         )).toString());
         
         Map<String, PropertyValue> map = new HashMap<>();
-        map.put("key1", new PropertyValue("value1"));
+        map.put("key1", PropertyValue.of("value1"));
         map.put("key2", PropertyValue.NULL);
-        assertEquals("{key1:value1,key2:null}", new PropertyValue(map).toString());
+        assertEquals("{key1:value1,key2:null}", PropertyValue.of(map).toString());
         
         // Test special types
-        assertEquals("secret(test)", new PropertyValue(new PropertyValue("test")).toString());
+        assertEquals("secret(test)", PropertyValue.ofSecret(PropertyValue.of("test")).toString());
         
         // Test assets and archives
-        var fileAsset = new PropertyValue(new FileAsset("path/to/file"));
-        assertEquals(fileAsset.getAssetValue().toString(), fileAsset.toString());
+        var fileAsset = PropertyValue.of(new FileAsset("path/to/file"));
+        assertEquals(fileAsset.getValue().toString(), fileAsset.toString());
 
-        var fileArchive = new PropertyValue(new FileArchive("path/to/archive"));
-        assertEquals(fileArchive.getArchiveValue().toString(), fileArchive.toString());
+        var fileArchive = PropertyValue.of(new FileArchive("path/to/archive"));
+        assertEquals(fileArchive.getValue().toString(), fileArchive.toString());
 
         // Test resource and output
         var resourceRef = new PropertyValue.ResourceReference(
             "urn:pulumi:stack::project::type::name",
-            new PropertyValue("resource-id"),
+            PropertyValue.of("resource-id"),
             "1.0.0"
         );
-        assertEquals(resourceRef.toString(), new PropertyValue(resourceRef).toString());
+        assertEquals(resourceRef.toString(), PropertyValue.of(resourceRef).toString());
 
         Set<String> deps = new HashSet<>(Arrays.asList("dep1", "dep2"));
-        var outputRef = new PropertyValue.OutputReference(new PropertyValue("test"), deps);
-        assertEquals(outputRef.toString(), new PropertyValue(outputRef).toString());
+        var outputRef = new PropertyValue.OutputReference(PropertyValue.of("test"), deps);
+        assertEquals(outputRef.toString(), PropertyValue.of(outputRef).toString());
     }
 }

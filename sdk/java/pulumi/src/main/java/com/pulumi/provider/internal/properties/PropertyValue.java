@@ -17,20 +17,25 @@ import com.pulumi.asset.*;
 import com.pulumi.core.internal.Constants;
 
 public class PropertyValue {
-    // Property values will be one of these types.
-    public enum PropertyValueType {
-        Null,
-        Bool,
-        Number,
-        String,
-        Array,
-        Object,
-        Asset,
-        Archive,
-        Secret,
-        Resource,
-        Output,
-        Computed
+    public enum ValueType {
+        NULL(null),
+        BOOL(Boolean.class),
+        NUMBER(Double.class),
+        STRING(String.class),
+        ARRAY(List.class),
+        OBJECT(Map.class),
+        ASSET(Asset.class),
+        ARCHIVE(Archive.class),
+        SECRET(PropertyValue.class),
+        RESOURCE(ResourceReference.class),
+        OUTPUT(OutputReference.class),
+        COMPUTED(null);
+
+        private final Class<?> valueClass;
+
+        ValueType(Class<?> valueClass) {
+            this.valueClass = valueClass;
+        }
     }
 
     public static class ResourceReference {
@@ -99,182 +104,81 @@ public class PropertyValue {
     }
 
     // Static constants
-    public static final PropertyValue NULL = new PropertyValue(SpecialType.IsNull);
-    public static final PropertyValue COMPUTED = new PropertyValue(SpecialType.IsComputed);
+    public static final PropertyValue NULL = new PropertyValue(ValueType.NULL,  null);
+    public static final PropertyValue COMPUTED = new PropertyValue(ValueType.COMPUTED, null);
 
-    private enum SpecialType {
-        IsNull,
-        IsComputed
+    private final ValueType type;
+    private final Object value;
+
+    private PropertyValue(ValueType type, Object value) {
+        if (value != null && type.valueClass != null && !type.valueClass.isInstance(value)) {
+            throw new IllegalArgumentException(String.format(
+                "Value of type %s cannot be used for PropertyValue of type %s",
+                value.getClass().getName(),
+                type
+            ));
+        }
+        this.type = type;
+        this.value = value;
     }
 
-    // Fields for storing the actual value
-    private final Boolean boolValue;
-    private final Double numberValue;
-    private final String stringValue;
-    private final List<PropertyValue> arrayValue;
-    private final Map<String, PropertyValue> objectValue;
-    private final Asset assetValue;
-    private final Archive archiveValue;
-    private final PropertyValue secretValue;
-    private final ResourceReference resourceValue;
-    private final OutputReference outputValue;
-    private final boolean isComputed;
-
-    public PropertyValue(boolean value) {
-        this.boolValue = value;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
+    // Factory methods
+    public static PropertyValue of(boolean value) {
+        return new PropertyValue(ValueType.BOOL, value);
     }
 
-    public PropertyValue(double value) {
-        this.boolValue = null;
-        this.numberValue = value;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
+    public static PropertyValue of(double value) {
+        return new PropertyValue(ValueType.NUMBER, value);
     }
 
-    public PropertyValue(String value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = value;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
+    public static PropertyValue of(String value) {
+        return new PropertyValue(ValueType.STRING, value);
     }
 
-    public PropertyValue(List<PropertyValue> value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = Collections.unmodifiableList(new ArrayList<>(value));
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
+    public static PropertyValue of(List<PropertyValue> value) {
+        return new PropertyValue(ValueType.ARRAY, Collections.unmodifiableList(new ArrayList<>(value)));
     }
 
-    public PropertyValue(Map<String, PropertyValue> value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = Collections.unmodifiableMap(new HashMap<>(value));
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
+    public static PropertyValue of(Map<String, PropertyValue> value) {
+        return new PropertyValue(ValueType.OBJECT, Collections.unmodifiableMap(new HashMap<>(value)));
     }
 
-    private PropertyValue(SpecialType type) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = type == SpecialType.IsComputed;
+    public static PropertyValue of(Asset value) {
+        return new PropertyValue(ValueType.ASSET, value);
     }
 
-    public PropertyValueType getType() {
-        if (boolValue != null) return PropertyValueType.Bool;
-        if (numberValue != null) return PropertyValueType.Number;
-        if (stringValue != null) return PropertyValueType.String;
-        if (arrayValue != null) return PropertyValueType.Array;
-        if (objectValue != null) return PropertyValueType.Object;
-        if (assetValue != null) return PropertyValueType.Asset;
-        if (archiveValue != null) return PropertyValueType.Archive;
-        if (secretValue != null) return PropertyValueType.Secret;
-        if (resourceValue != null) return PropertyValueType.Resource;
-        if (outputValue != null) return PropertyValueType.Output;
-        if (isComputed) return PropertyValueType.Computed;
-        return PropertyValueType.Null;
+    public static PropertyValue of(Archive value) {
+        return new PropertyValue(ValueType.ARCHIVE, value);
+    }
+
+    public static PropertyValue ofSecret(PropertyValue value) {
+        return new PropertyValue(ValueType.SECRET, value);
+    }
+
+    public static PropertyValue of(ResourceReference value) {
+        return new PropertyValue(ValueType.RESOURCE, value);
+    }
+
+    public static PropertyValue of(OutputReference value) {
+        return new PropertyValue(ValueType.OUTPUT, value);
+    }
+
+    // Type-safe getters
+    @SuppressWarnings("unchecked")
+    public <T> T getValue() {
+        return (T) value;
+    }
+
+    public ValueType getType() {
+        return type;
     }
 
     public boolean isNull() {
-        return boolValue == null &&
-               numberValue == null &&
-               stringValue == null &&
-               arrayValue == null &&
-               objectValue == null &&
-               assetValue == null &&
-               archiveValue == null &&
-               secretValue == null &&
-               resourceValue == null &&
-               outputValue == null &&
-               !isComputed;
+        return type == ValueType.NULL;
     }
 
     public boolean isComputed() {
-        return isComputed;
-    }
-
-    public Asset getAssetValue() {
-        return assetValue;
-    }
-
-    public Archive getArchiveValue() {
-        return archiveValue;
-    }
-
-    public Boolean getBoolValue() {
-        return boolValue;
-    }
-
-    public Double getNumberValue() {
-        return numberValue;
-    }
-
-    public String getStringValue() {
-        return stringValue;
-    }
-
-    public List<PropertyValue> getArrayValue() {
-        return arrayValue;
-    }
-
-    public Map<String, PropertyValue> getObjectValue() {
-        return objectValue;
-    }
-
-    public PropertyValue getSecretValue() {
-        return secretValue;
-    }
-
-    public ResourceReference getResourceValue() {
-        return resourceValue;
-    }
-
-    public OutputReference getOutputValue() {
-        return outputValue;
+        return type == ValueType.COMPUTED;
     }
 
     @Override
@@ -283,149 +187,53 @@ public class PropertyValue {
         if (!(o instanceof PropertyValue)) return false;
         PropertyValue that = (PropertyValue) o;
         
-        if (boolValue != null && that.boolValue != null) {
-            return boolValue.equals(that.boolValue);
-        }
-        if (numberValue != null && that.numberValue != null) {
-            return numberValue.equals(that.numberValue);
-        }
-        if (stringValue != null && that.stringValue != null) {
-            return stringValue.equals(that.stringValue);
-        }
-        if (arrayValue != null && that.arrayValue != null) {
-            if (arrayValue.size() != that.arrayValue.size()) {
-                return false;
-            }
-            for (int i = 0; i < arrayValue.size(); i++) {
-                if (!arrayValue.get(i).equals(that.arrayValue.get(i))) {
-                    return false;
-                }
-            }
+        if (type != that.type) return false;
+        
+        // Handle special cases first
+        if (type == ValueType.NULL || type == ValueType.COMPUTED) {
             return true;
         }
-        if (objectValue != null && that.objectValue != null) {
-            if (objectValue.size() != that.objectValue.size()) {
-                return false;
-            }
-            for (Map.Entry<String, PropertyValue> entry : objectValue.entrySet()) {
-                PropertyValue theirValue = that.objectValue.get(entry.getKey());
-                if (theirValue == null || !entry.getValue().equals(theirValue)) {
-                    return false;
-                }
-            }
-            return true;
+        
+        // For collections, we need special handling
+        if (type == ValueType.ARRAY) {
+            List<PropertyValue> thisList = getValue();
+            List<PropertyValue> thatList = that.getValue();
+            return thisList.equals(thatList);
         }
-        if (assetValue != null && that.assetValue != null) {
-            return assetValue.equals(that.assetValue);
+        
+        if (type == ValueType.OBJECT) {
+            Map<String, PropertyValue> thisMap = getValue();
+            Map<String, PropertyValue> thatMap = that.getValue();
+            return thisMap.equals(thatMap);
         }
-        if (archiveValue != null && that.archiveValue != null) {
-            return archiveValue.equals(that.archiveValue);
-        }
-        if (secretValue != null && that.secretValue != null) {
-            return secretValue.equals(that.secretValue);
-        }
-        if (resourceValue != null && that.resourceValue != null) {
-            return resourceValue.equals(that.resourceValue);
-        }
-        if (outputValue != null && that.outputValue != null) {
-            return outputValue.equals(that.outputValue);
-        }
-        if (isComputed && that.isComputed) {
-            return true;
-        }        
-        if (isNull() && that.isNull()) {
-            return true;
-        }
-        return false;
+        
+        return Objects.equals(value, that.value);
     }
 
     @Override
     public int hashCode() {
-        if (boolValue != null) return boolValue.hashCode();
-        if (numberValue != null) return numberValue.hashCode();
-        if (stringValue != null) return stringValue.hashCode();
-        if (arrayValue != null) return arrayValue.hashCode();
-        if (objectValue != null) return objectValue.hashCode();
-        if (assetValue != null) return assetValue.hashCode();
-        if (archiveValue != null) return archiveValue.hashCode();
-        if (secretValue != null) {
-            // Combine boolean true with secretValue to differentiate from non-secret value
-            return Objects.hash(Boolean.TRUE, secretValue);
+        if (type == ValueType.NULL || type == ValueType.COMPUTED) {
+            return Objects.hash(type);
         }
-        if (resourceValue != null) return resourceValue.hashCode();
-        if (outputValue != null) return outputValue.hashCode();
-        if (isComputed) return SpecialType.IsComputed.hashCode();
-        return SpecialType.IsNull.hashCode();
-    }
-
-    public PropertyValue(Asset value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = value;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
-    }
-
-    public PropertyValue(Archive value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = value;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
-    }
-
-    public PropertyValue(PropertyValue secret) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = secret;
-        this.resourceValue = null;
-        this.outputValue = null;
-        this.isComputed = false;
-    }
-
-    public PropertyValue(ResourceReference value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = value;
-        this.outputValue = null;
-        this.isComputed = false;
-    }
-
-    public PropertyValue(OutputReference value) {
-        this.boolValue = null;
-        this.numberValue = null;
-        this.stringValue = null;
-        this.arrayValue = null;
-        this.objectValue = null;
-        this.assetValue = null;
-        this.archiveValue = null;
-        this.secretValue = null;
-        this.resourceValue = null;
-        this.outputValue = value;
-        this.isComputed = false;
+        
+        if (type == ValueType.SECRET) {
+            // Combine with TRUE for secrets
+            return Objects.hash(Boolean.TRUE, value);
+        }
+        
+        // Special handling for collections to ensure deep hash
+        if (type == ValueType.ARRAY) {
+            List<PropertyValue> list = getValue();
+            return Objects.hash(type, list);
+        }
+        
+        if (type == ValueType.OBJECT) {
+            Map<String, PropertyValue> map = getValue();
+            return Objects.hash(type, map);
+        }
+        
+        // Default case for all other types
+        return Objects.hash(type, value);
     }
 
     // Protobuf marshaling methods
@@ -434,21 +242,20 @@ public class PropertyValue {
             case NULL_VALUE:
                 return PropertyValue.NULL;
             case BOOL_VALUE:
-                return new PropertyValue(value.getBoolValue());
+                return of(value.getBoolValue());
             case NUMBER_VALUE:
-                return new PropertyValue(value.getNumberValue());
+                return of(value.getNumberValue());
             case STRING_VALUE:
-                // This could be the special unknown value
                 if (Constants.UnknownValue.equals(value.getStringValue())) {
                     return PropertyValue.COMPUTED;
                 }
-                return new PropertyValue(value.getStringValue());
+                return of(value.getStringValue());
             case LIST_VALUE:
                 List<PropertyValue> list = new ArrayList<>();
                 for (Value v : value.getListValue().getValuesList()) {
                     list.add(unmarshal(v));
                 }
-                return new PropertyValue(list);
+                return of(Collections.unmodifiableList(list));
             case STRUCT_VALUE:
                 return unmarshalStruct(value.getStructValue());
             default:
@@ -482,37 +289,37 @@ public class PropertyValue {
         for (Map.Entry<String, Value> entry : fields.entrySet()) {
             map.put(entry.getKey(), unmarshal(entry.getValue()));
         }
-        return new PropertyValue(map);
+        return of(Collections.unmodifiableMap(map));
     }
 
     private static PropertyValue unmarshalSecret(Map<String, Value> fields) {
         if (!fields.containsKey(Constants.SecretValueName)) {
             throw new IllegalArgumentException("Secrets must have a field called 'value'");
         }
-        return new PropertyValue(unmarshal(fields.get(Constants.SecretValueName)));
+        return ofSecret(unmarshal(fields.get(Constants.SecretValueName)));
     }
 
     private static PropertyValue unmarshalAsset(Map<String, Value> fields) {
+        Asset asset;
         if (fields.containsKey(Constants.AssetOrArchivePathName)) {
-            return new PropertyValue(new FileAsset(fields.get(Constants.AssetOrArchivePathName).getStringValue()));
+            asset = new FileAsset(fields.get(Constants.AssetOrArchivePathName).getStringValue());
+        } else if (fields.containsKey(Constants.AssetOrArchiveUriName)) {
+            asset = new RemoteAsset(fields.get(Constants.AssetOrArchiveUriName).getStringValue());
+        } else if (fields.containsKey(Constants.AssetTextName)) {
+            asset = new StringAsset(fields.get(Constants.AssetTextName).getStringValue());
+        } else {
+            throw new IllegalArgumentException("Asset must have either 'path', 'uri', or 'text' field");
         }
-        if (fields.containsKey(Constants.AssetOrArchiveUriName)) {
-            return new PropertyValue(new RemoteAsset(fields.get(Constants.AssetOrArchiveUriName).getStringValue()));
-        }
-        if (fields.containsKey(Constants.AssetTextName)) {
-            return new PropertyValue(new StringAsset(fields.get(Constants.AssetTextName).getStringValue()));
-        }
-        throw new IllegalArgumentException("Asset must have either 'path', 'uri', or 'text' field");
+        return of(asset);
     }
 
     private static PropertyValue unmarshalArchive(Map<String, Value> fields) {
+        Archive archive;
         if (fields.containsKey(Constants.AssetOrArchivePathName)) {
-            return new PropertyValue(new FileArchive(fields.get(Constants.AssetOrArchivePathName).getStringValue()));
-        }
-        if (fields.containsKey(Constants.AssetOrArchiveUriName)) {
-            return new PropertyValue(new RemoteArchive(fields.get(Constants.AssetOrArchiveUriName).getStringValue()));
-        }
-        if (fields.containsKey(Constants.ArchiveAssetsName)) {
+            archive = new FileArchive(fields.get(Constants.AssetOrArchivePathName).getStringValue());
+        } else if (fields.containsKey(Constants.AssetOrArchiveUriName)) {
+            archive = new RemoteArchive(fields.get(Constants.AssetOrArchiveUriName).getStringValue());
+        } else if (fields.containsKey(Constants.ArchiveAssetsName)) {
             Value assetsValue = fields.get(Constants.ArchiveAssetsName);
             if (assetsValue.getKindCase() != Value.KindCase.STRUCT_VALUE) {
                 throw new IllegalArgumentException("Archive assets must be an object");
@@ -521,17 +328,19 @@ public class PropertyValue {
             Map<String, AssetOrArchive> assets = new HashMap<>();
             for (Map.Entry<String, Value> entry : assetsValue.getStructValue().getFieldsMap().entrySet()) {
                 PropertyValue innerValue = unmarshal(entry.getValue());
-                if (innerValue.assetValue != null) {
-                    assets.put(entry.getKey(), innerValue.assetValue);
-                } else if (innerValue.archiveValue != null) {
-                    assets.put(entry.getKey(), innerValue.archiveValue);
+                if (innerValue.getType() == ValueType.ASSET) {
+                    assets.put(entry.getKey(), innerValue.<Asset>getValue());
+                } else if (innerValue.getType() == ValueType.ARCHIVE) {
+                    assets.put(entry.getKey(), innerValue.<Archive>getValue());
                 } else {
                     throw new IllegalArgumentException("AssetArchive can only contain Assets or Archives");
                 }
             }
-            return new PropertyValue(new AssetArchive(Collections.unmodifiableMap(assets)));
+            archive = new AssetArchive(Collections.unmodifiableMap(assets));
+        } else {
+            throw new IllegalArgumentException("Archive must have either 'path', 'uri', or 'assets' field");
         }
-        throw new IllegalArgumentException("Archive must have either 'path', 'uri', or 'assets' field");
+        return of(archive);
     }
 
     private static PropertyValue unmarshalResource(Map<String, Value> fields) {
@@ -547,7 +356,7 @@ public class PropertyValue {
         if (fields.containsKey(Constants.IdPropertyName)) {
             id = unmarshal(fields.get(Constants.IdPropertyName));
         }
-        return new PropertyValue(new ResourceReference(urn, id, version));
+        return of(new ResourceReference(urn, id, version));
     }
 
     private static PropertyValue unmarshalOutput(Map<String, Value> fields) {
@@ -579,56 +388,59 @@ public class PropertyValue {
             isSecret = secretValue.getBoolValue();
         }
 
-        PropertyValue output = new PropertyValue(new OutputReference(value, dependencies));
-        return isSecret ? new PropertyValue(output) : output;
+        PropertyValue output = of(new OutputReference(value, dependencies));
+        return isSecret ? ofSecret(output) : output;
     }
 
     // Marshal methods
     public Value marshal() {
-        switch (getType()) {
-            case Null:
+        switch (type) {
+            case NULL:
                 return Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
-            case Bool:
-                return Value.newBuilder().setBoolValue(boolValue).build();
-            case Number:
-                return Value.newBuilder().setNumberValue(numberValue).build();
-            case String:
-                return Value.newBuilder().setStringValue(stringValue).build();
-            case Array:
+            case BOOL:
+                return Value.newBuilder().setBoolValue(getValue()).build();
+            case NUMBER:
+                return Value.newBuilder().setNumberValue(getValue()).build();
+            case STRING:
+                return Value.newBuilder().setStringValue(getValue()).build();
+            case ARRAY:
                 ListValue.Builder listBuilder = ListValue.newBuilder();
-                for (PropertyValue item : arrayValue) {
+                List<PropertyValue> list = getValue();
+                for (PropertyValue item : list) {
                     listBuilder.addValues(item.marshal());
                 }
                 return Value.newBuilder().setListValue(listBuilder).build();
-            case Object:
+            case OBJECT:
                 return marshalObject();
-            case Asset:
+            case ASSET:
                 return marshalAsset();
-            case Archive:
+            case ARCHIVE:
                 return marshalArchive();
-            case Secret:
+            case SECRET:
                 return marshalSecret();
-            case Resource:
+            case RESOURCE:
                 return marshalResource();
-            case Output:
-                return marshalOutput(outputValue, false);
-            case Computed:
+            case OUTPUT:
+                return marshalOutput(getValue(), false);
+            case COMPUTED:
                 return Value.newBuilder().setStringValue(Constants.UnknownValue).build();
             default:
-                throw new IllegalStateException("Unknown property value type: " + getType());
+                throw new IllegalStateException("Unknown property value type: " + type);
         }
     }
 
     private Value marshalObject() {
         Struct.Builder structBuilder = Struct.newBuilder();
-        for (Map.Entry<String, PropertyValue> entry : objectValue.entrySet()) {
+        Map<String, PropertyValue> map = getValue();
+        for (Map.Entry<String, PropertyValue> entry : map.entrySet()) {
             structBuilder.putFields(entry.getKey(), entry.getValue().marshal());
         }
         return Value.newBuilder().setStructValue(structBuilder).build();
     }
 
     private Value marshalAsset() {
-        var internal = AssetOrArchive.AssetOrArchiveInternal.from(assetValue);
+        Asset asset = getValue();
+        var internal = AssetOrArchive.AssetOrArchiveInternal.from(asset);
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey, 
             Value.newBuilder().setStringValue(internal.getSigKey()).build());
@@ -638,7 +450,8 @@ public class PropertyValue {
     }
 
     private Value marshalArchive() {
-        var internal = AssetOrArchive.AssetOrArchiveInternal.from(archiveValue);
+        Archive archive = getValue();
+        var internal = AssetOrArchive.AssetOrArchiveInternal.from(archive);
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey,
             Value.newBuilder().setStringValue(internal.getSigKey()).build());
@@ -652,9 +465,9 @@ public class PropertyValue {
             Struct.Builder assetsBuilder = Struct.newBuilder();
             for (Map.Entry<String, AssetOrArchive> entry : assets.entrySet()) {
                 if (entry.getValue() instanceof Asset) {
-                    assetsBuilder.putFields(entry.getKey(), new PropertyValue((Asset)entry.getValue()).marshal());
+                    assetsBuilder.putFields(entry.getKey(), PropertyValue.of((Asset)entry.getValue()).marshal());
                 } else {
-                    assetsBuilder.putFields(entry.getKey(), new PropertyValue((Archive)entry.getValue()).marshal());
+                    assetsBuilder.putFields(entry.getKey(), PropertyValue.of((Archive)entry.getValue()).marshal());
                 }
             }
             structBuilder.putFields(internal.getPropName(),
@@ -664,9 +477,10 @@ public class PropertyValue {
     }
 
     private Value marshalSecret() {
+        PropertyValue secretValue = getValue();
         // Special case if our secret value is an output
-        if (secretValue.getType() == PropertyValueType.Output) {
-            return marshalOutput(secretValue.outputValue, true);
+        if (secretValue.getType() == ValueType.OUTPUT) {
+            return marshalOutput(secretValue.<OutputReference>getValue(), true);
         }
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey,
@@ -676,19 +490,20 @@ public class PropertyValue {
     }
 
     private Value marshalResource() {
+        ResourceReference resource = getValue();
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey,
             Value.newBuilder().setStringValue(Constants.SpecialResourceSig).build());
         structBuilder.putFields(Constants.UrnPropertyName,
-            Value.newBuilder().setStringValue(resourceValue.URN.toString()).build());
+            Value.newBuilder().setStringValue(resource.URN).build());
         
-        if (resourceValue.id != null) {
-            structBuilder.putFields(Constants.IdPropertyName, resourceValue.id.marshal());
+        if (resource.id != null) {
+            structBuilder.putFields(Constants.IdPropertyName, resource.id.marshal());
         }
         
-        if (!resourceValue.packageVersion.isEmpty()) {
+        if (!resource.packageVersion.isEmpty()) {
             structBuilder.putFields(Constants.ResourceVersionName,
-                Value.newBuilder().setStringValue(resourceValue.packageVersion).build());
+                Value.newBuilder().setStringValue(resource.packageVersion).build());
         }
 
         return Value.newBuilder().setStructValue(structBuilder).build();
@@ -699,15 +514,15 @@ public class PropertyValue {
         structBuilder.putFields(Constants.SpecialSigKey,
             Value.newBuilder().setStringValue(Constants.SpecialOutputSig).build());
 
-        if (output.value != null) {
-            structBuilder.putFields(Constants.SecretValueName, output.value.marshal());
+        if (output.getValue() != null) {
+            structBuilder.putFields(Constants.SecretValueName, output.getValue().marshal());
         }
 
         ListValue.Builder depsBuilder = ListValue.newBuilder();
-        List<String> sortedDeps = new ArrayList<>(output.dependencies);
+        List<String> sortedDeps = new ArrayList<>(output.getDependencies());
         sortedDeps.sort(String.CASE_INSENSITIVE_ORDER);
         for (String dep : sortedDeps) {
-            depsBuilder.addValues(Value.newBuilder().setStringValue(dep.toString()).build());
+            depsBuilder.addValues(Value.newBuilder().setStringValue(dep).build());
         }
         structBuilder.putFields(Constants.DependenciesName,
             Value.newBuilder().setListValue(depsBuilder).build());
@@ -720,36 +535,38 @@ public class PropertyValue {
 
     @Override
     public String toString() {
-        switch (getType()) {
-            case Null:
+        switch (type) {
+            case NULL:
                 return "null";
-            case Bool:
-                return boolValue.toString();
-            case Number:
-                return numberValue.toString();
-            case String:
-                return stringValue;
-            case Array:
+            case BOOL:
+                return getValue().toString();
+            case NUMBER:
+                return getValue().toString();
+            case STRING:
+                return getValue().toString();
+            case ARRAY:
+                List<PropertyValue> list = getValue();
                 return "[" + String.join(",", 
-                    arrayValue.stream()
+                    list.stream()
                         .map(Object::toString)
                         .collect(Collectors.toList())) + "]";
-            case Object:
+            case OBJECT:
+                Map<String, PropertyValue> map = getValue();
                 return "{" + String.join(",", 
-                    objectValue.entrySet().stream()
+                    map.entrySet().stream()
                         .map(e -> e.getKey() + ":" + e.getValue().toString())
                         .collect(Collectors.toList())) + "}";
-            case Asset:
-                return assetValue.toString();
-            case Archive:
-                return archiveValue.toString();
-            case Secret:
-                return "secret(" + secretValue.toString() + ")";
-            case Resource:
-                return resourceValue.toString();
-            case Output:
-                return outputValue.toString();
-            case Computed:
+            case ASSET:
+                return getValue().toString();
+            case ARCHIVE:
+                return getValue().toString();
+            case SECRET:
+                return "secret(" + getValue().toString() + ")";
+            case RESOURCE:
+                return getValue().toString();
+            case OUTPUT:
+                return getValue().toString();
+            case COMPUTED:
                 return "{unknown}";
             default:
                 return "unknown";
