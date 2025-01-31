@@ -121,7 +121,7 @@ public class PropertyValueTests {
         for (var asset : assets) {
             var marshaled = asset.marshal();
             var unmarshaled = PropertyValue.unmarshal(marshaled);
-            assertAssetOrArchiveEquals(asset.<Asset>getValue(), unmarshaled.<Asset>getValue());
+            assertAssetOrArchiveEquals(asset.getAssetValue(), unmarshaled.getAssetValue());
         }
     }
 
@@ -135,7 +135,7 @@ public class PropertyValueTests {
         for (var archive : new PropertyValue[]{fileArchive, remoteArchive}) {
             var marshaled = archive.marshal();
             var unmarshaled = PropertyValue.unmarshal(marshaled);
-            assertAssetOrArchiveEquals(archive.getValue(), unmarshaled.getValue());
+            assertAssetOrArchiveEquals(archive.getArchiveValue(), unmarshaled.getArchiveValue());
         }
 
         // Test AssetArchive with mixed content
@@ -149,9 +149,9 @@ public class PropertyValueTests {
         var unmarshaledAssetArchive = PropertyValue.unmarshal(marshaledAssetArchive);
         
         var originalMap = (Map<String, AssetOrArchive>)AssetOrArchive.AssetOrArchiveInternal
-            .from(assetArchive.<Archive>getValue()).getValue();
+            .from(assetArchive.getArchiveValue()).getValue();
         var unmarshaledMap = (Map<String, AssetOrArchive>)AssetOrArchive.AssetOrArchiveInternal
-            .from(unmarshaledAssetArchive.<Archive>getValue()).getValue();
+            .from(unmarshaledAssetArchive.getArchiveValue()).getValue();
         
         assertEquals(originalMap.size(), unmarshaledMap.size());
         
@@ -410,10 +410,10 @@ public class PropertyValueTests {
         
         // Test assets and archives
         var fileAsset = PropertyValue.of(new FileAsset("path/to/file"));
-        assertEquals(fileAsset.getValue().toString(), fileAsset.toString());
+        assertEquals(fileAsset.getAssetValue().toString(), fileAsset.toString());
 
         var fileArchive = PropertyValue.of(new FileArchive("path/to/archive"));
-        assertEquals(fileArchive.getValue().toString(), fileArchive.toString());
+        assertEquals(fileArchive.getArchiveValue().toString(), fileArchive.toString());
 
         // Test resource and output
         var resourceRef = new PropertyValue.ResourceReference(

@@ -164,9 +164,74 @@ public class PropertyValue {
     }
 
     // Type-safe getters
-    @SuppressWarnings("unchecked")
-    public <T> T getValue() {
-        return (T) value;
+    public <T> T getValue(Class<T> expectedType) {
+        if (value == null) {
+            if (!isNullable(expectedType)) {
+                throw new IllegalStateException(
+                    String.format("Cannot get null value as non-nullable type %s", expectedType.getName())
+                );
+            }
+            return null;
+        }
+
+        if (type == ValueType.COMPUTED) {
+            throw new IllegalStateException("Cannot get value of COMPUTED");
+        }
+
+        if (!expectedType.isInstance(value)) {
+            throw new IllegalStateException(
+                String.format("Cannot get value of type %s as %s", value.getClass().getName(), expectedType.getName())
+            );
+        }
+
+        return expectedType.cast(value);
+    }
+
+    // Convenience methods for common types
+    public String getStringValue() {
+        return getValue(String.class);
+    }
+
+    public Boolean getBooleanValue() {
+        return getValue(Boolean.class);
+    }
+
+    public Double getNumberValue() {
+        return getValue(Double.class);
+    }
+
+    @SuppressWarnings("unchecked") // Safe because of type checking in constructor
+    public List<PropertyValue> getArrayValue() {
+        return getValue(List.class);
+    }
+
+    @SuppressWarnings("unchecked") // Safe because of type checking in constructor
+    public Map<String, PropertyValue> getObjectValue() {
+        return getValue(Map.class);
+    }
+
+    public Asset getAssetValue() {
+        return getValue(Asset.class);
+    }
+
+    public Archive getArchiveValue() {
+        return getValue(Archive.class);
+    }
+
+    public PropertyValue getSecretValue() {
+        return getValue(PropertyValue.class);
+    }
+
+    public ResourceReference getResourceValue() {
+        return getValue(ResourceReference.class);
+    }
+
+    public OutputReference getOutputValue() {
+        return getValue(OutputReference.class);
+    }
+
+    private boolean isNullable(Class<?> type) {
+        return !type.isPrimitive();
     }
 
     public ValueType getType() {
@@ -196,14 +261,14 @@ public class PropertyValue {
         
         // For collections, we need special handling
         if (type == ValueType.ARRAY) {
-            List<PropertyValue> thisList = getValue();
-            List<PropertyValue> thatList = that.getValue();
+            List<PropertyValue> thisList = getArrayValue();
+            List<PropertyValue> thatList = that.getArrayValue();
             return thisList.equals(thatList);
         }
         
         if (type == ValueType.OBJECT) {
-            Map<String, PropertyValue> thisMap = getValue();
-            Map<String, PropertyValue> thatMap = that.getValue();
+            Map<String, PropertyValue> thisMap = getObjectValue();
+            Map<String, PropertyValue> thatMap = that.getObjectValue();
             return thisMap.equals(thatMap);
         }
         
@@ -223,12 +288,12 @@ public class PropertyValue {
         
         // Special handling for collections to ensure deep hash
         if (type == ValueType.ARRAY) {
-            List<PropertyValue> list = getValue();
+            List<PropertyValue> list = getArrayValue();
             return Objects.hash(type, list);
         }
         
         if (type == ValueType.OBJECT) {
-            Map<String, PropertyValue> map = getValue();
+            Map<String, PropertyValue> map = getObjectValue();
             return Objects.hash(type, map);
         }
         
@@ -329,9 +394,9 @@ public class PropertyValue {
             for (Map.Entry<String, Value> entry : assetsValue.getStructValue().getFieldsMap().entrySet()) {
                 PropertyValue innerValue = unmarshal(entry.getValue());
                 if (innerValue.getType() == ValueType.ASSET) {
-                    assets.put(entry.getKey(), innerValue.<Asset>getValue());
+                    assets.put(entry.getKey(), innerValue.getAssetValue());
                 } else if (innerValue.getType() == ValueType.ARCHIVE) {
-                    assets.put(entry.getKey(), innerValue.<Archive>getValue());
+                    assets.put(entry.getKey(), innerValue.getArchiveValue());
                 } else {
                     throw new IllegalArgumentException("AssetArchive can only contain Assets or Archives");
                 }
@@ -398,14 +463,14 @@ public class PropertyValue {
             case NULL:
                 return Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             case BOOL:
-                return Value.newBuilder().setBoolValue(getValue()).build();
+                return Value.newBuilder().setBoolValue(getValue(Boolean.class)).build();
             case NUMBER:
-                return Value.newBuilder().setNumberValue(getValue()).build();
+                return Value.newBuilder().setNumberValue(getValue(Double.class)).build();
             case STRING:
-                return Value.newBuilder().setStringValue(getValue()).build();
+                return Value.newBuilder().setStringValue(getValue(String.class)).build();
             case ARRAY:
                 ListValue.Builder listBuilder = ListValue.newBuilder();
-                List<PropertyValue> list = getValue();
+                List<PropertyValue> list = getArrayValue();
                 for (PropertyValue item : list) {
                     listBuilder.addValues(item.marshal());
                 }
@@ -421,7 +486,7 @@ public class PropertyValue {
             case RESOURCE:
                 return marshalResource();
             case OUTPUT:
-                return marshalOutput(getValue(), false);
+                return marshalOutput(getValue(OutputReference.class), false);
             case COMPUTED:
                 return Value.newBuilder().setStringValue(Constants.UnknownValue).build();
             default:
@@ -431,7 +496,7 @@ public class PropertyValue {
 
     private Value marshalObject() {
         Struct.Builder structBuilder = Struct.newBuilder();
-        Map<String, PropertyValue> map = getValue();
+        Map<String, PropertyValue> map = getObjectValue();
         for (Map.Entry<String, PropertyValue> entry : map.entrySet()) {
             structBuilder.putFields(entry.getKey(), entry.getValue().marshal());
         }
@@ -439,7 +504,7 @@ public class PropertyValue {
     }
 
     private Value marshalAsset() {
-        Asset asset = getValue();
+        Asset asset = getValue(Asset.class);
         var internal = AssetOrArchive.AssetOrArchiveInternal.from(asset);
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey, 
@@ -450,7 +515,7 @@ public class PropertyValue {
     }
 
     private Value marshalArchive() {
-        Archive archive = getValue();
+        Archive archive = getValue(Archive.class);
         var internal = AssetOrArchive.AssetOrArchiveInternal.from(archive);
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey,
@@ -477,10 +542,10 @@ public class PropertyValue {
     }
 
     private Value marshalSecret() {
-        PropertyValue secretValue = getValue();
+        PropertyValue secretValue = getValue(PropertyValue.class);
         // Special case if our secret value is an output
         if (secretValue.getType() == ValueType.OUTPUT) {
-            return marshalOutput(secretValue.<OutputReference>getValue(), true);
+            return marshalOutput(secretValue.getValue(OutputReference.class), true);
         }
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey,
@@ -490,7 +555,7 @@ public class PropertyValue {
     }
 
     private Value marshalResource() {
-        ResourceReference resource = getValue();
+        ResourceReference resource = getValue(ResourceReference.class);
         Struct.Builder structBuilder = Struct.newBuilder();
         structBuilder.putFields(Constants.SpecialSigKey,
             Value.newBuilder().setStringValue(Constants.SpecialResourceSig).build());
@@ -539,33 +604,33 @@ public class PropertyValue {
             case NULL:
                 return "null";
             case BOOL:
-                return getValue().toString();
+                return getValue(Boolean.class).toString();
             case NUMBER:
-                return getValue().toString();
+                return getValue(Double.class).toString();
             case STRING:
-                return getValue().toString();
+                return getValue(String.class);
             case ARRAY:
-                List<PropertyValue> list = getValue();
+                List<PropertyValue> list = getArrayValue();
                 return "[" + String.join(",", 
                     list.stream()
                         .map(Object::toString)
                         .collect(Collectors.toList())) + "]";
             case OBJECT:
-                Map<String, PropertyValue> map = getValue();
+                Map<String, PropertyValue> map = getObjectValue();
                 return "{" + String.join(",", 
                     map.entrySet().stream()
                         .map(e -> e.getKey() + ":" + e.getValue().toString())
                         .collect(Collectors.toList())) + "}";
             case ASSET:
-                return getValue().toString();
+                return getValue(Asset.class).toString();
             case ARCHIVE:
-                return getValue().toString();
+                return getValue(Archive.class).toString();
             case SECRET:
-                return "secret(" + getValue().toString() + ")";
+                return "secret(" + getValue(PropertyValue.class).toString() + ")";
             case RESOURCE:
-                return getValue().toString();
+                return getValue(ResourceReference.class).toString();
             case OUTPUT:
-                return getValue().toString();
+                return getValue(OutputReference.class).toString();
             case COMPUTED:
                 return "{unknown}";
             default:
