@@ -91,6 +91,7 @@ func generateJava(cfg generateJavaOptions) error {
 		extraFiles,
 		nil, /*localDependencies*/
 		cfg.Local,
+		true, /*legacyBuildFiles*/
 	)
 	if err != nil {
 		return err

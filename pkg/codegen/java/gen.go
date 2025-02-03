@@ -2052,14 +2052,6 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				WithDefaultDependencies().
 				WithJavaSdkDependencyDefault(DefaultSdkVersion)
 
-			// All packages that SupportPack (which in some sense reflects the latest version of the schema) should use
-			// Gradle if no build system has been explicitly specified.
-			if p.SupportPack() {
-				if javaInfo.BuildFiles == "" {
-					javaInfo.BuildFiles = "gradle"
-				}
-			}
-
 			info = &javaInfo
 			infos[def] = info
 		}
@@ -2239,6 +2231,7 @@ func GeneratePackage(
 	extraFiles map[string][]byte,
 	localDependencies map[string]string,
 	local bool,
+	legacyBuildFiles bool,
 ) (map[string][]byte, error) {
 	// Presently, Gradle is the primary build system we support for generated SDKs. Later on, when we validate the
 	// package in order to produce build system artifacts, we'll need a description and repository. To this end, we
@@ -2308,38 +2301,48 @@ func GeneratePackage(
 		}
 	}
 
+	var useGradle bool
+	if local {
+		// Local packages do not use gradle.
+		useGradle = false
+	} else {
+		// `legacyBuildFiles is set by `pulumi-java-gen`. When we remove the
+		// deprecated `pulumi-java-gen` executable, we can remove the
+		// legacyBuildFiles flag.
+		if legacyBuildFiles {
+			// The default for legacy invocations is "none", so we need to see an explicit "gradle" setting.
+			useGradle = info.BuildFiles == "gradle"
+		} else {
+			// The default for new invocations is to use gradle, unless "none" is specified explicitly.
+			useGradle = info.BuildFiles != "none"
+		}
+	}
+
 	// Currently, packages come bundled with a version.txt resource that is used by generated code to report a version.
 	// When a build tool is configured, we defer the generation of this file to the build process so that e.g. CI
 	// processes can set the version to be used when releasing or publishing a package, as opposed to when the code for
 	// that package is generated. In the case that we are generating a package without a build tool, or a local package
 	// to be incorporated into a program with an existing build process, we need to emit the version.txt file explicitly
 	// as part of code generation.
-	if info.BuildFiles == "" || local {
-		pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
-		pkgPath := strings.ReplaceAll(pkgName, ".", "/")
-
-		var version string
-		if pkg.Version != nil {
-			version = pkg.Version.String()
-		} else {
-			version = "0.0.1"
-		}
-
-		files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
-		return files, nil
-	}
-
-	// If we are emitting a publishable package with a configured build system, emit those files now.
-	switch info.BuildFiles {
-	case "gradle":
-		if err := genGradleProject(pkg, info, files); err != nil {
+	if useGradle {
+		if err := genGradleProject(pkg, info, files, legacyBuildFiles); err != nil {
 			return nil, err
 		}
 		return files, nil
-	default:
-		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",
-			info.BuildFiles)
 	}
+
+	pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
+	pkgPath := strings.ReplaceAll(pkgName, ".", "/")
+
+	var version string
+	if pkg.Version != nil {
+		version = pkg.Version.String()
+	} else {
+		version = "0.0.1"
+	}
+
+	files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
+	return files, nil
 }
 
 func isInputType(t schema.Type) bool {

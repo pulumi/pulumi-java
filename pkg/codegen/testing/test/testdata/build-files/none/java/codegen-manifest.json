@@ -1,0 +1,9 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/resources/com/pulumi/example/version.txt"
+  ]
+}
