@@ -68,6 +68,8 @@ dependencies {
         exclude group: 'com.google.errorprone', module: 'error_prone_annotations'
     }
 
+    implementation("com.github.zafarkhaja:java-semver:0.10.2")
+
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
