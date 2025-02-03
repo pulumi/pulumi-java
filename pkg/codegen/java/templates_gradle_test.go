@@ -3,10 +3,13 @@
 package java
 
 import (
+	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/blang/semver"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
@@ -102,13 +105,30 @@ func TestNewGradleTemplateContextBuildFiles(t *testing.T) {
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 }
 
-func TestGenGradleProject(t *testing.T) {
+func TestGenGradleProjectLegacyTrue(t *testing.T) {
 	pkg, info := eksExample()
 	files := fs{}
 	err := genGradleProject(pkg, info, files, true /*legacyBuildFiles*/)
 	if err != nil {
 		t.Error(err)
 	}
+	gradleFile := files["build.gradle"]
+	snapshot, err := os.ReadFile(filepath.Join("testdata", "gen-gradle-project-legacy-true", "build.gradle"))
+	require.NoError(t, err)
+	require.Equal(t, string(snapshot), string(gradleFile))
+}
+
+func TestGenGradleProjectLegacyFalse(t *testing.T) {
+	pkg, info := eksExample()
+	files := fs{}
+	err := genGradleProject(pkg, info, files, false /*legacyBuildFiles*/)
+	if err != nil {
+		t.Error(err)
+	}
+	gradleFile := files["build.gradle"]
+	snapshot, err := os.ReadFile(filepath.Join("testdata", "gen-gradle-project-legacy-false", "build.gradle"))
+	require.NoError(t, err)
+	require.Equal(t, string(snapshot), string(gradleFile))
 }
 
 func eksExample() (*schema.Package, *PackageInfo) {

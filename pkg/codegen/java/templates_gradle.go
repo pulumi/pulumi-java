@@ -130,6 +130,44 @@ func newGradleTemplateContext(
 		ctx.Version = pkg.Parameterization.BaseProvider.Version.String()
 	}
 
+	/*
+		For `legacyBuildFiles == true` we have the following behavior
+
+		|-----------------------------------------|--------------------------------------|
+		| PackageInfo                             | Behaviour                            |
+		|-----------------------------------------|--------------------------------------|
+		|                                         | no gradle file, default              |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file without nexus plugin     |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle,                     | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: 2.0.0  | default version of the plugin        |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle,                     | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | specified version of the plugin      |
+		|-----------------------------------------|--------------------------------------|
+
+		For `legacyBuildFiles == false` we have the following behavior, with the default
+		being `buildFiles: gradle-nexus`:
+
+		|-----------------------------------------|--------------------------------------|
+		| PackageInfo                             | Behaviour                            |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: none                        | no gradle file                       |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle-nexus                | gradle file with nexus plugin, using |
+		|                                         | the default version 2.0.0            |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle-nexus,               | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | version $VER                         |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file without nexus plugin     |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | specified version of the plugin      |
+		|-----------------------------------------|--------------------------------------|
+
+	*/
 	if legacyBuildFiles {
 		// In legacy mode, we require the user to provide the Gradle Nexus Publish Plugin version.
 		if packageInfo.GradleNexusPublishPluginVersion != "" {

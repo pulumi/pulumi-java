@@ -2301,20 +2301,22 @@ func GeneratePackage(
 		}
 	}
 
-	// Unless we are generating a local package, we use gradle as the build
-	// system. Note that we do not support generating build files for any other
-	// system than gradle at this time.
-	//
-	// If the legacyBuildFiles is set to true, we will only use gradle if the
-	// BuildFiles field is explicitly set to `gradle`. This is to support the
-	// legacy behavior of `pulumi-java-gen`. Once `pulumi-java-gen` is
-	// deprecated, we can remove the legacyBuildFiles flag, and always use
-	// gradle if `local` is false.
-	useGradle := !local && // Only use gradle if we are not generating a local package.
-		// legacy behavior requires explicit gradle setting
-		(legacyBuildFiles && info.BuildFiles == "gradle") ||
-		// new behavior uses gradle by default, unless explicitly disabled
-		(!legacyBuildFiles && info.BuildFiles != "none")
+	var useGradle bool
+	if local {
+		// Local packages do not use gradle.
+		useGradle = false
+	} else {
+		// `legacyBuildFiles is set by `pulumi-java-gen`. When we remove the
+		// deprecated `pulumi-java-gen` executable, we can remove the
+		// legacyBuildFiles flag.
+		if legacyBuildFiles {
+			// The default for legacy invocations is "none", so we need to see an explicit "gradle" setting.
+			useGradle = info.BuildFiles == "gradle"
+		} else {
+			// The default for new invocations is to use gradle, unless "none" is specified explicitly.
+			useGradle = info.BuildFiles != "none"
+		}
+	}
 
 	// Currently, packages come bundled with a version.txt resource that is used by generated code to report a version.
 	// When a build tool is configured, we defer the generation of this file to the build process so that e.g. CI
