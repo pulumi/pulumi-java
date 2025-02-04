@@ -8,6 +8,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"path"
+	"path/filepath"
 	"reflect"
 	"sort"
 	"strconv"
@@ -1797,13 +1798,13 @@ func (mod *modContext) utilitiesRef(ctx *classFileContext) string {
 }
 
 func gradleProjectPath() string {
-	return path.Join("src", "main", "java")
+	return filepath.Join("src", "main", "java")
 }
 
 func (mod *modContext) gen(fs fs) error {
 	pkgComponents := strings.Split(mod.packageName, ".")
 
-	dir := path.Join(gradleProjectPath(), path.Join(pkgComponents...))
+	dir := filepath.Join(gradleProjectPath(), filepath.Join(pkgComponents...))
 
 	var files []string
 	for p := range fs {
@@ -1818,8 +1819,8 @@ func (mod *modContext) gen(fs fs) error {
 
 	addClassFile := func(pkg names.FQN, className names.Ident, contents string) {
 		fqn := pkg.Dot(className)
-		relPath := path.Join(strings.Split(fqn.String(), ".")...)
-		path := path.Join(gradleProjectPath(), relPath) + ".java"
+		relPath := filepath.Join(strings.Split(fqn.String(), ".")...)
+		path := filepath.Join(gradleProjectPath(), relPath) + ".java"
 		files = append(files, path)
 		fs.add(path, []byte(contents))
 	}
