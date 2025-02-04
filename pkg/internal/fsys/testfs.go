@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io/fs"
 	"path"
-	"path/filepath"
 	"strings"
 	"testing/fstest"
 )
@@ -71,12 +70,12 @@ func (t testFS) Parent() ParentFS {
 
 func (t testFS) LookPath(exe string) (string, error) {
 	if strings.Contains(exe, "/") {
-		ok, err := FileExists(t.fs(), filepath.Join(".", exe))
+		ok, err := FileExists(t.fs(), path.Join(".", exe))
 		if err != nil {
 			return "", err
 		}
 		if ok {
-			return "./" + filepath.Join(t.Path(), exe), nil
+			return "./" + path.Join(t.Path(), exe), nil
 		}
 	}
 	if found, ok := t.exes[exe]; ok {

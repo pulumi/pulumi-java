@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path"
 	"path/filepath"
 	"slices"
 	"strings"
@@ -446,10 +447,9 @@ func GenerateProject(
 	filesWithPackages[filepath.Join(directory, "pom.xml")] = mavenPomXML.Bytes()
 
 	for filePath, data := range filesWithPackages {
-		dir := filepath.Dir(filePath)
-		err := os.MkdirAll(dir, os.ModePerm)
+		err := os.MkdirAll(path.Dir(filePath), os.ModePerm)
 		if err != nil {
-			return fmt.Errorf("could not create output directory %s: %w", dir, err)
+			return fmt.Errorf("could not write output program: %w", err)
 		}
 		err = os.WriteFile(filePath, data, 0o600)
 		if err != nil {
