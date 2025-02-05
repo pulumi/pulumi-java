@@ -38,7 +38,7 @@ public final class StackDeployment {
         try {
             var jsonObject = JsonParser.parseString(json).getAsJsonObject();
 
-            int version = jsonObject.get("version").getAsInt();
+            var version = jsonObject.get("version").getAsInt();
 
             var deploymentObject = jsonObject.get("deployment").getAsJsonObject();
             var gson = new Gson();
