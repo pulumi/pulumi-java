@@ -18,6 +18,33 @@ import (
 )
 
 func TestIntegrations(t *testing.T) {
+
+	t.Run("flaketown", func(t *testing.T) {
+		t.Parallel()
+		for i := 0; i < 10; i++ {
+			t.Run(fmt.Sprintf("attempt-%d", i), func(t *testing.T) {
+				e := ptesting.NewEnvironment(t)
+				// defer deleteIfNotFailed(e)
+
+				e.ImportDirectory("testdata/random_pp")
+
+				// Make sure random is installed
+				e.RunCommand("pulumi", "plugin", "install", "resource", "random", "4.13.0")
+
+				e.RunCommand("pulumi", "login", "--cloud-url", e.LocalURL())
+				e.RunCommand(
+					"pulumi", "convert", "--strict",
+					"--language", "java", "--from", "pcl", "--out", "out")
+				e.CWD = filepath.Join(e.RootPath, "out")
+				e.RunCommand("pulumi", "stack", "init", "test")
+
+				e.RunCommand("pulumi", "install")
+				e.RunCommand("pulumi", "up", "--yes")
+				e.RunCommand("pulumi", "destroy", "--yes")
+			})
+		}
+	})
+
 	t.Run("about", func(t *testing.T) {
 		t.Parallel()
 
@@ -208,33 +235,5 @@ func stackTransformationValidator() func(t *testing.T, stack integration.Runtime
 		assert.True(t, foundRes3)
 		assert.True(t, foundRes4Child)
 		assert.True(t, foundRes5Child)
-	}
-}
-
-// Flaketown in pu/pu, copy it here to debug
-func TestLanguageConvertSmoke(t *testing.T) {
-	t.Parallel()
-
-	for i := 0; i < 10; i++ {
-		t.Run(fmt.Sprintf("attempt-%d", i), func(t *testing.T) {
-			e := ptesting.NewEnvironment(t)
-			// defer deleteIfNotFailed(e)
-
-			e.ImportDirectory("testdata/random_pp")
-
-			// Make sure random is installed
-			e.RunCommand("pulumi", "plugin", "install", "resource", "random", "4.13.0")
-
-			e.RunCommand("pulumi", "login", "--cloud-url", e.LocalURL())
-			e.RunCommand(
-				"pulumi", "convert", "--strict",
-				"--language", "java", "--from", "pcl", "--out", "out")
-			e.CWD = filepath.Join(e.RootPath, "out")
-			e.RunCommand("pulumi", "stack", "init", "test")
-
-			e.RunCommand("pulumi", "install")
-			e.RunCommand("pulumi", "up", "--yes")
-			e.RunCommand("pulumi", "destroy", "--yes")
-		})
 	}
 }

@@ -317,14 +317,15 @@ jobs:
       fail-fast: false
       matrix:
         integration:
-          - stack-reference
-          - stack-transformation
-          - adopt-into-component
-          - rename
-          - rename-component
-          - rename-component-and-child
-          - retype-component
-          - retype-parents
+          # - stack-reference
+          # - stack-transformation
+          # - adopt-into-component
+          # - rename
+          # - rename-component
+          # - rename-component-and-child
+          # - retype-component
+          # - retype-parents
+          - flaketown
     steps:
       - uses: actions/checkout@v3
         with:
