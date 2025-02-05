@@ -6,6 +6,9 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+/**
+ * A Pulumi command.
+ */
 public interface PulumiCommand {
     /**
      * The version of the Pulumi CLI that is being used.

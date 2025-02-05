@@ -125,15 +125,7 @@ public final class CommandRunOptions {
     public CommandRunOptions withAdditionalEnv(Map<String, String> newEnv) {
         var mergedEnv = new HashMap<>(additionalEnv);
         mergedEnv.putAll(newEnv);
-
-        return CommandRunOptions.builder()
-                .workingDir(workingDir)
-                .additionalEnv(mergedEnv)
-                .stdIn(stdIn)
-                .onStandardOutput(onStandardOutput)
-                .onStandardError(onStandardError)
-                .onEngineEvent(onEngineEvent)
-                .build();
+        return toBuilder().additionalEnv(mergedEnv).build();
     }
 
     /**
@@ -143,14 +135,22 @@ public final class CommandRunOptions {
      * @return the new {@link CommandRunOptions}
      */
     public CommandRunOptions withWorkingDir(Path workingDir) {
+        return toBuilder().workingDir(workingDir).build();
+    }
+
+    /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    private Builder toBuilder() {
         return CommandRunOptions.builder()
                 .workingDir(workingDir)
-                .additionalEnv(additionalEnv.isEmpty() ? null : additionalEnv)
+                .additionalEnv(additionalEnv)
                 .stdIn(stdIn)
                 .onStandardOutput(onStandardOutput)
                 .onStandardError(onStandardError)
-                .onEngineEvent(onEngineEvent)
-                .build();
+                .onEngineEvent(onEngineEvent);
     }
 
     /**

@@ -2,6 +2,9 @@
 
 package com.pulumi.experimental.automation;
 
+/**
+ * Represents a stack output value.
+ */
 public final class OutputValue {
     private final Object value;
     private final boolean isSecret;
@@ -11,10 +14,20 @@ public final class OutputValue {
         this.isSecret = isSecret;
     }
 
+    /**
+     * Returns the value of the output.
+     *
+     * @return the value
+     */
     public Object getValue() {
         return value;
     }
 
+    /**
+     * Returns whether the output is a secret.
+     *
+     * @return true if the output is a secret
+     */
     public boolean isSecret() {
         return isSecret;
     }

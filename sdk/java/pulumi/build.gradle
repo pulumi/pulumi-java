@@ -69,7 +69,11 @@ dependencies {
         exclude group: 'com.google.errorprone', module: 'error_prone_annotations'
     }
 
+    implementation("org.yaml:snakeyaml:2.3")
+
     implementation("com.github.zafarkhaja:java-semver:0.10.2")
+
+    implementation("commons-io:commons-io:2.18.0")
 
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 

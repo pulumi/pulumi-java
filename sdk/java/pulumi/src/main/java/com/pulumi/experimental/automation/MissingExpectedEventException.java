@@ -2,6 +2,9 @@
 
 package com.pulumi.experimental.automation;
 
+/**
+ * An exception thrown when an expected event is missing.
+ */
 public class MissingExpectedEventException extends AutomationException {
     private final String name;
 
