@@ -1,14 +1,10 @@
 package com.pulumi;
 
-import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.deployment.internal.InlineDeploymentSettings;
-import com.pulumi.deployment.internal.Runner.Result;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.resources.StackOptions;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 /**
  * Pulumi program entrypoint.
@@ -31,18 +27,6 @@ public interface Pulumi {
      */
     static void run(Consumer<Context> stack) {
         withOptions(StackOptions.Empty).run(stack);
-    }
-
-    /**
-     * Spin up an inline deployment and run a resource creating callback in its context.
-     *
-     * @param settings inline deployment settings
-     * @param runner callback to run
-     */
-    @InternalUse
-    static <T> CompletableFuture<T> runInlineAsync(InlineDeploymentSettings settings,
-        Function<Context, CompletableFuture<T>> runner) {
-        return PulumiInternal.fromInline(settings, StackOptions.Empty).runInlineAsync(runner);
     }
 
     /**

@@ -6,9 +6,12 @@ import com.google.common.collect.ImmutableSet;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
+import com.pulumi.core.internal.annotations.InternalUse;
+
 /**
  * Settings for creating an inline deployment.
  */
+@InternalUse
 public class InlineDeploymentSettings {
     private final String monitorAddr;
     private final String engineAddr;
