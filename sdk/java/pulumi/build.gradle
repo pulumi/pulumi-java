@@ -3,6 +3,7 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("com.google.protobuf") version "0.9.4"
+    id("jacoco")
 }
 
 version = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
@@ -178,8 +179,18 @@ test {
 
     // Ensure isolatedTest runs after the main tests
     finalizedBy isolatedTest
+
+    finalizedBy jacocoTestReport
 }
 
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+        csv.required = false
+    }
+    dependsOn test
+}
 
 def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
 def ossrhPassword = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
