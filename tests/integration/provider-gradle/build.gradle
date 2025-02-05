@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+}
+
+group 'com.pulumi.example.provider'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    maven { // The google mirror is less flaky than mavenCentral()
+        url("https://maven-central.storage-download.googleapis.com/maven2/")
+    }
+    mavenCentral()
+}
+
+def grpcVersion = '1.67.1'
+def protobufVersion = '3.25.1'
+def pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
+
+dependencies {
+    implementation("com.pulumi:pulumi:$pulumiJavaSdkVersion") {
+        exclude group: 'io.grpc', module: 'grpc-netty-shaded'
+    }
+    implementation "io.grpc:grpc-netty-shaded:$grpcVersion"
+    implementation "io.grpc:grpc-protobuf:$grpcVersion"
+    implementation "io.grpc:grpc-stub:$grpcVersion"
+    implementation "javax.annotation:javax.annotation-api:1.3.2"
+    implementation "com.google.protobuf:protobuf-java:$protobufVersion"
+}
+
+application {
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : "${group}.Main"
+}
