@@ -1,6 +1,6 @@
 // Copyright 2025, Pulumi Corporation
 
-package com.pulumi.experimental.automation.exceptions;
+package com.pulumi.experimental.automation;
 
 import com.pulumi.experimental.automation.events.SummaryEvent;
 

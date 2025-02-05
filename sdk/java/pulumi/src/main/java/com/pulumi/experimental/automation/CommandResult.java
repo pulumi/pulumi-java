@@ -1,6 +1,6 @@
 // Copyright 2025, Pulumi Corporation
 
-package com.pulumi.experimental.automation.commands;
+package com.pulumi.experimental.automation;
 
 public final class CommandResult {
     private final int code;

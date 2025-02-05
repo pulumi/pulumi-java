@@ -7,7 +7,6 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
-import com.pulumi.experimental.automation.exceptions.AutomationException;
 
 /**
  * Represents the state of a stack deployment as used by

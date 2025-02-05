@@ -14,11 +14,6 @@ import java.util.logging.Logger;
 import javax.annotation.Nullable;
 
 import com.pulumi.Context;
-import com.pulumi.experimental.automation.commands.CommandResult;
-import com.pulumi.experimental.automation.commands.PulumiCommand;
-import com.pulumi.experimental.automation.commands.CommandRunOptions;
-import com.pulumi.experimental.automation.commands.exceptions.StackNotFoundException;
-import com.pulumi.experimental.automation.exceptions.AutomationException;
 
 /**
  * Workspace is the execution context containing a single Pulumi project, a

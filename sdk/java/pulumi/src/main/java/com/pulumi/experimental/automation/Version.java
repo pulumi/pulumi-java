@@ -1,6 +1,6 @@
 // Copyright 2025, Pulumi Corporation
 
-package com.pulumi.experimental.automation.commands;
+package com.pulumi.experimental.automation;
 
 import java.util.Objects;
 import java.util.Optional;

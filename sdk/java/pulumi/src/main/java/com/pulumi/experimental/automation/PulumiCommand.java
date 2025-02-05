@@ -1,12 +1,10 @@
 // Copyright 2025, Pulumi Corporation
 
-package com.pulumi.experimental.automation.commands;
+package com.pulumi.experimental.automation;
 
 import java.util.List;
 
 import javax.annotation.Nullable;
-
-import com.pulumi.experimental.automation.exceptions.AutomationException;
 
 public interface PulumiCommand {
     /**
