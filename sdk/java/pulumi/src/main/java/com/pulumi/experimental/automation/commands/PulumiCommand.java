@@ -8,25 +8,14 @@ import javax.annotation.Nullable;
 
 import com.pulumi.experimental.automation.exceptions.AutomationException;
 
-public abstract class PulumiCommand {
+public interface PulumiCommand {
     /**
      * The version of the Pulumi CLI that is being used.
      *
      * @return the version of the Pulumi CLI or {@code null}
      */
     @Nullable
-    public abstract PulumiVersion getVersion();
-
-    /**
-     * Runs the Pulumi command.
-     *
-     * @param args the arguments to pass to the command
-     * @return the command result
-     * @throws AutomationException if the command fails
-     */
-    public CommandResult run(List<String> args) throws AutomationException {
-        return run(args, CommandRunOptions.EMPTY);
-    }
+    PulumiVersion getVersion();
 
     /**
      * Runs the Pulumi command.
@@ -36,7 +25,18 @@ public abstract class PulumiCommand {
      * @return the command result
      * @throws AutomationException if the command fails
      */
-    public abstract CommandResult run(
+    CommandResult run(
             List<String> args,
             CommandRunOptions options) throws AutomationException;
+
+    /**
+     * Runs the Pulumi command with default options.
+     *
+     * @param args the arguments to pass to the command
+     * @return the command result
+     * @throws AutomationException if the command fails
+     */
+    default CommandResult run(List<String> args) throws AutomationException {
+        return run(args, CommandRunOptions.EMPTY);
+    }
 }
