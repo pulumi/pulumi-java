@@ -145,11 +145,10 @@ public class LocalWorkspaceTest {
                     assertThat(expSecretValue.getValue()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
-                    // TODO getting `NoSummaryEventException`
-                    // // pulumi preview
-                    // var previewResult = stack.preview();
-                    // var sameCount = previewResult.getChangeSummary().get(OperationType.SAME);
-                    // assertThat(sameCount).isEqualTo(1);
+                    // pulumi preview
+                    var previewResult = stack.preview();
+                    var sameCount = previewResult.getChangeSummary().get(OperationType.SAME);
+                    assertThat(sameCount).isEqualTo(1);
 
                     // pulumi refresh
                     var refreshResult = stack.refresh();

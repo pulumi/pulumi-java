@@ -2,17 +2,17 @@
 
 package com.pulumi.experimental.automation.events.internal;
 
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.Duration;
-import java.util.concurrent.Executors;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.experimental.automation.events.EngineEvent;
 import com.pulumi.experimental.automation.serialization.internal.LocalSerializer;
-
-import org.apache.commons.io.input.Tailer;
-import org.apache.commons.io.input.TailerListenerAdapter;
 
 /**
  * Watches a Pulumi engine log file for events and invokes a callback for each
@@ -20,37 +20,41 @@ import org.apache.commons.io.input.TailerListenerAdapter;
  */
 @InternalUse
 public final class EventLogWatcher implements AutoCloseable {
-    private final LocalSerializer serializer = new LocalSerializer();
-    private final Tailer tailer;
+    private final CompletableFuture<Void> future;
 
     public EventLogWatcher(Path logFile, Consumer<EngineEvent> onEvent) {
-        var listener = new TailerListenerAdapter() {
-            @Override
-            public void handle(String line) {
-                if (line != null && !line.isBlank()) {
-                    EngineEvent event = deserialize(line);
-                    if (event != null) {
-                        onEvent.accept(event);
+        this.future = CompletableFuture.runAsync(() -> {
+            var serializer = new LocalSerializer();
+            try (var reader = Files.newBufferedReader(logFile, StandardCharsets.UTF_8)) {
+                while (true) {
+                    var line = reader.readLine();
+                    if (line == null) {
+                        Thread.sleep(100);
+                        continue;
+                    }
+
+                    if (!line.isBlank()) {
+                        var event = serializer.deserializeJson(line, EngineEvent.class);
+                        if (event != null) {
+                            onEvent.accept(event);
+
+                            // When we see the cancel event, we can stop watching the log file.
+                            if (event.getCancelEvent() != null) {
+                                break;
+                            }
+                        }
                     }
                 }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new UncheckedIOException(e);
             }
-        };
-
-        this.tailer = Tailer.builder()
-                .setPath(logFile)
-                .setTailerListener(listener)
-                .setDelayDuration(Duration.ofMillis(100))
-                .setExecutorService(Executors.newSingleThreadExecutor())
-                .setStartThread(true)
-                .get();
+        });
     }
 
     @Override
     public void close() throws Exception {
-        this.tailer.close();
-    }
-
-    private EngineEvent deserialize(String json) {
-        return serializer.deserializeJson(json, EngineEvent.class);
+        future.join();
     }
 }

@@ -302,7 +302,8 @@ public class LocalPulumiCommand implements PulumiCommand {
 
         public EventLogFile(String command) throws IOException {
             var tempDir = Files.createTempDirectory("automation-logs-" + command + "-");
-            this.filePath = tempDir.resolve("eventlog.txt");
+            filePath = tempDir.resolve("eventlog.txt");
+            Files.createFile(filePath);
         }
 
         public Path getFilePath() {
