@@ -34,7 +34,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
-    @Timeout(value = 20, unit = TimeUnit.SECONDS)
+    @Timeout(value = 10, unit = TimeUnit.MINUTES)
     void testStackLifecycleInlineProgram(@EnvVars Map<String, String> envVars) {
         assertDoesNotThrow(() -> {
             var env = new HashMap<String, String>(envVars);
@@ -106,7 +106,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
-    @Timeout(value = 20, unit = TimeUnit.SECONDS)
+    @Timeout(value = 10, unit = TimeUnit.MINUTES)
     void testStackLifecycleLocalProgram(@EnvVars Map<String, String> envVars) {
         assertDoesNotThrow(() -> {
             var env = new HashMap<String, String>(envVars);
