@@ -84,6 +84,18 @@ public class ProjectPlugins {
     }
 
     /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    public Builder toBuilder() {
+        return new Builder()
+                .providers(providers.isEmpty() ? null : providers)
+                .languages(languages.isEmpty() ? null : languages)
+                .analyzers(analyzers.isEmpty() ? null : analyzers);
+    }
+
+    /**
      * Builder for {@link ProjectPlugins}.
      */
     public static class Builder {

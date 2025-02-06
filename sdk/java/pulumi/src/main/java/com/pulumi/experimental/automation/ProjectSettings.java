@@ -36,7 +36,6 @@ public class ProjectSettings {
     private final ProjectOptions options;
     @Nullable
     private final ProjectPlugins plugins;
-    private Map<String, Object> additionalKeys;
 
     private ProjectSettings(Builder builder) {
         name = builder.name;
@@ -54,9 +53,6 @@ public class ProjectSettings {
         backend = builder.backend;
         options = builder.options;
         plugins = builder.plugins;
-        additionalKeys = builder.additionalKeys == null
-                ? Collections.emptyMap()
-                : Collections.unmodifiableMap(builder.additionalKeys);
     }
 
     /**
@@ -228,15 +224,6 @@ public class ProjectSettings {
         return plugins;
     }
 
-    /**
-     * Handle additional keys for the project settings.
-     *
-     * @return the additional keys for the project settings
-     */
-    public Map<String, Object> getAdditionalKeys() {
-        return additionalKeys;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -258,14 +245,35 @@ public class ProjectSettings {
                 Objects.equals(template, that.template) &&
                 Objects.equals(backend, that.backend) &&
                 Objects.equals(options, that.options) &&
-                Objects.equals(plugins, that.plugins) &&
-                Objects.equals(additionalKeys, that.additionalKeys);
+                Objects.equals(plugins, that.plugins);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(name, runtime, main, description, author, website, license, config, stackConfigDir,
-                template, backend, options, plugins, additionalKeys);
+                template, backend, options, plugins);
+    }
+
+    /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    public Builder toBuilder() {
+        return new Builder()
+                .name(name)
+                .runtime(runtime)
+                .main(main)
+                .description(description)
+                .author(author)
+                .website(website)
+                .license(license)
+                .config(config.isEmpty() ? null : config)
+                .stackConfigDir(stackConfigDir)
+                .template(template)
+                .backend(backend)
+                .options(options)
+                .plugins(plugins);
     }
 
     /**
@@ -296,8 +304,6 @@ public class ProjectSettings {
         private ProjectOptions options;
         @Nullable
         private ProjectPlugins plugins;
-        @Nullable
-        private Map<String, Object> additionalKeys;
 
         private Builder() {
         }
@@ -454,17 +460,6 @@ public class ProjectSettings {
          */
         public Builder plugins(@Nullable ProjectPlugins plugins) {
             this.plugins = plugins;
-            return this;
-        }
-
-        /**
-         * Handle additional keys for the project settings.
-         *
-         * @param additionalKeys the additional keys for the project settings
-         * @return the builder
-         */
-        public Builder additionalKeys(Map<String, Object> additionalKeys) {
-            this.additionalKeys = additionalKeys;
             return this;
         }
 

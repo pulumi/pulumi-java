@@ -66,6 +66,17 @@ public class ProjectConfigItemsType {
     }
 
     /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    public Builder toBuilder() {
+        return new Builder()
+                .type(type)
+                .items(items);
+    }
+
+    /**
      * Builder for {@link ProjectConfigItemsType}.
      */
     public static class Builder {
