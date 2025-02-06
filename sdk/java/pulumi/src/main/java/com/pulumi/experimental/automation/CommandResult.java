@@ -2,6 +2,9 @@
 
 package com.pulumi.experimental.automation;
 
+/**
+ * {@link CommandResult} represents the result of a command execution.
+ */
 public final class CommandResult {
     private final int code;
     private final String standardOutput;
@@ -16,14 +19,29 @@ public final class CommandResult {
         this.standardError = standardError;
     }
 
+    /**
+     * Gets the exit code of the command.
+     *
+     * @return the exit code
+     */
     public int getCode() {
         return code;
     }
 
+    /**
+     * Gets the standard output of the command.
+     *
+     * @return the standard output
+     */
     public String getStandardOutput() {
         return standardOutput;
     }
 
+    /**
+     * Gets the standard error of the command.
+     *
+     * @return the standard error
+     */
     public String getStandardError() {
         return standardError;
     }

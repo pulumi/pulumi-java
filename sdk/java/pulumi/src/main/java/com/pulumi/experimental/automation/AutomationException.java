@@ -2,6 +2,10 @@
 
 package com.pulumi.experimental.automation;
 
+/**
+ * {@link AutomationException} is a base class for all exceptions thrown by the
+ * Automation API.
+ */
 public class AutomationException extends Exception {
     public AutomationException(String message) {
         super(message);

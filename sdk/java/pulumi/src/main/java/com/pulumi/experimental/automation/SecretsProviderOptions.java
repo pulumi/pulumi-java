@@ -4,6 +4,10 @@ package com.pulumi.experimental.automation;
 
 import javax.annotation.Nullable;
 
+/**
+ * Options to pass into
+ * {@link WorkspaceStack#changeSecretsProvider(String, SecretsProviderOptions)}.
+ */
 public class SecretsProviderOptions {
 
     private final String newPassphrase;

@@ -140,7 +140,7 @@ public abstract class Workspace implements AutoCloseable {
      * Provided with a stack name, returns a list of args to append to an invoked
      * command ["--config=...", ].
      * <p>
-     * LocalWorkspace does not utilize this extensibility point.
+     * {@link LocalWorkspace} does not utilize this extensibility point.
      *
      * @param stackName the name of the stack
      * @return the list of args to append
@@ -153,7 +153,7 @@ public abstract class Workspace implements AutoCloseable {
      * An extensibility point to perform workspace cleanup (CLI operations may
      * create/modify a Pulumi.stack.yaml).
      * <p>
-     * LocalWorkspace does not utilize this extensibility point.
+     * {@link LocalWorkspace} does not utilize this extensibility point.
      *
      * @param stackName the name of the stack
      * @throws AutomationException if there was an issue executing the post command
@@ -487,7 +487,7 @@ public abstract class Workspace implements AutoCloseable {
     public abstract List<PluginInfo> listPlugins() throws AutomationException;
 
     /**
-     * Gets the current set of Stack outputs from the last WorkspaceStack.up
+     * Gets the current set of Stack outputs from the last {@link WorkspaceStack#up()}
      * call.
      *
      * @param stackName the name of the stack

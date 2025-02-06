@@ -2,6 +2,9 @@
 
 package com.pulumi.experimental.automation;
 
+/**
+ * The type of operation being performed on a resource.
+ */
 public enum OperationType {
     UNKNOWN,
     SAME,

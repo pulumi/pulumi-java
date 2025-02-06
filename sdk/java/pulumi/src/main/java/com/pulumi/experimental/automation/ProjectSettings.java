@@ -60,16 +60,6 @@ public class ProjectSettings {
     }
 
     /**
-     * Creates a new default project settings.
-     *
-     * @param name the name of the project
-     * @return the project settings
-     */
-    static ProjectSettings createDefault(String name) {
-        return builder(name, ProjectRuntimeName.JAVA).build();
-    }
-
-    /**
      * Returns a new builder for {@link ProjectSettings}.
      *
      * @param name    the name of the project
@@ -89,6 +79,25 @@ public class ProjectSettings {
      */
     public static Builder builder(String name, ProjectRuntime runtime) {
         return new Builder().name(name).runtime(runtime);
+    }
+
+    /**
+     * Creates a new default project settings.
+     *
+     * @param name the name of the project
+     * @return the project settings
+     */
+    static ProjectSettings createDefault(String name) {
+        return builder(name, ProjectRuntimeName.JAVA).build();
+    }
+
+    /**
+     * Returns whether this is the default project settings.
+     *
+     * @return true if this is the default project settings
+     */
+    boolean isDefault() {
+        return Objects.equals(this, createDefault(name));
     }
 
     /**
