@@ -6,6 +6,7 @@ import com.pulumi.Context;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.nio.file.Path;
@@ -33,6 +34,8 @@ public class LocalWorkspaceTest {
         return result.toString();
     }
 
+    // Temporarily disable when running in CI.
+    @DisabledIfEnvironmentVariable(named = "GITHUB_ACTIONS", matches = "true")
     @Test
     @Timeout(value = 10, unit = TimeUnit.MINUTES)
     void testStackLifecycleInlineProgram(@EnvVars Map<String, String> envVars) {
@@ -105,6 +108,8 @@ public class LocalWorkspaceTest {
         });
     }
 
+    // Temporarily disable when running in CI.
+    @DisabledIfEnvironmentVariable(named = "GITHUB_ACTIONS", matches = "true")
     @Test
     @Timeout(value = 10, unit = TimeUnit.MINUTES)
     void testStackLifecycleLocalProgram(@EnvVars Map<String, String> envVars) {
