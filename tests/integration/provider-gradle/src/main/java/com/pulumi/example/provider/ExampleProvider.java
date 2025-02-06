@@ -5,7 +5,7 @@ import com.pulumi.provider.internal.models.*;
 import java.util.concurrent.CompletableFuture;
 import com.pulumi.provider.internal.Provider;
 
-public class ExampleProvider extends Provider {
+public class ExampleProvider implements Provider {
     @Override
     public CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request) {
         String schema = "{\n" +

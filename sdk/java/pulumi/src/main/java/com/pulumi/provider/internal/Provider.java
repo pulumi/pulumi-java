@@ -4,8 +4,11 @@ import java.util.concurrent.CompletableFuture;
 
 import com.pulumi.provider.internal.models.*;
 
-public abstract class Provider {
-    public CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request) {
-        throw new UnsupportedOperationException("Method 'getSchema' is not implemented");
-    }
+public interface Provider {
+    /**
+     * Returns the schema for this provider's package.
+     * @param request The schema request
+     * @return A future containing the schema response
+     */
+    CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request);
 }
