@@ -125,9 +125,7 @@ public final class LocalWorkspace extends Workspace {
     }
 
     /**
-     * Creates a workspace using the specified options. Used for maximal control and
-     * customization of the underlying environment before any stacks are created or
-     * selected.
+     * Creates a workspace.
      *
      * @return the workspace
      * @throws AutomationException if an error occurs
@@ -171,11 +169,9 @@ public final class LocalWorkspace extends Workspace {
     /**
      * Creates a stack with a {@link LocalWorkspace} utilizing the specified inline
      * (in process) {@code program}. This program is fully debuggable and runs in
-     * process. If no {@link LocalWorkspaceOptions#getProjectSettings()} option is
-     * specified, default project settings will be created on behalf of the user.
-     * Similarly, unless a {@link LocalWorkspaceOptions#getWorkDir()} option is
-     * specified, the working directory will default to a new temporary directory
-     * provided by the OS.
+     * process. Default project settings will be created on behalf of the user and
+     * the working directory will default to a new temporary directory provided by
+     * the OS.
      *
      * @param projectName the name of the project
      * @param stackName   the name of the stack
@@ -261,12 +257,9 @@ public final class LocalWorkspace extends Workspace {
     /**
      * Selects an existing Stack with a {@link LocalWorkspace} utilizing the
      * specified inline (in process) {@code program}. This program is fully
-     * debuggable and runs in process. If no
-     * {@link LocalWorkspaceOptions#getProjectSettings()} option is specified,
-     * default project settings will be created on behalf of the user. Similarly,
-     * unless a {@link LocalWorkspaceOptions#getWorkDir()} option is specified, the
-     * working directory will default to a new temporary directory provided by the
-     * OS.
+     * debuggable and runs in process. Default project settings will be created on
+     * behalf of the user and the working directory will default to a new temporary
+     * directory provided by the OS.
      *
      * @param projectName the name of the project
      * @param stackName   the name of the stack
@@ -353,12 +346,9 @@ public final class LocalWorkspace extends Workspace {
     /**
      * Creates or selects an existing Stack with a {@link LocalWorkspace} utilizing
      * the specified inline (in process) {@code program}. This program is fully
-     * debuggable and runs in process. If no
-     * {@link LocalWorkspaceOptions#getProjectSettings()} option is specified,
-     * default project settings will be created on behalf of the user. Similarly,
-     * unless a {@link LocalWorkspaceOptions#getWorkDir()} option is specified, the
-     * working directory will default to a new temporary directory provided by the
-     * OS.
+     * debuggable and runs in process. Default project settings will be created on
+     * behalf of the user and the working directory will default to a new temporary
+     * directory provided by the OS.
      *
      * @param projectName the name of the project
      * @param stackName   the name of the stack
