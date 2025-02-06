@@ -39,7 +39,14 @@ public class Constants {
      */
     public static final String SpecialResourceSig = "5cf8f73096256a8f31e491e813e4eb8e";
 
+    /**
+     * SpecialOutputSig is a randomly assigned hash used to identify outputs in maps.
+     */
+    public static final String SpecialOutputSig = "d0e6a833031e9bbcd3f4e8bde6ca49a4";
+
+    public static final String SecretName = "secret";
     public static final String SecretValueName = "value";
+    public static final String DependenciesName = "dependencies";
 
     public static final String AssetTextName = "text";
     public static final String ArchiveAssetsName = "assets";
