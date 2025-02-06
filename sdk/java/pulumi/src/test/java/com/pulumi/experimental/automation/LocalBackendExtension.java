@@ -28,9 +28,10 @@ public class LocalBackendExtension implements BeforeEachCallback, AfterEachCallb
     @Override
     public void beforeEach(ExtensionContext context) throws IOException {
         // If PULUMI_ACCESS_TOKEN is set we can use the service, but otherwise we need
-        // to make a
-        // temporary folder and set PULUMI_BACKEND_URL.
-        if (System.getenv("PULUMI_ACCESS_TOKEN") == null || System.getenv("PULUMI_ACCESS_TOKEN").isEmpty()) {
+        // to make a temporary folder and set PULUMI_BACKEND_URL.
+        // If running in CI, always use the local backend.
+        if (System.getenv("PULUMI_ACCESS_TOKEN") == null || System.getenv("PULUMI_ACCESS_TOKEN").isEmpty() ||
+                "true".equals(System.getenv("GITHUB_ACTIONS"))) {
             String methodName = context.getTestMethod()
                     .map(method -> method.getName())
                     .orElse("unknown");
