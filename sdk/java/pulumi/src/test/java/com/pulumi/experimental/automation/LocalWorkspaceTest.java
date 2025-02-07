@@ -45,10 +45,12 @@ public class LocalWorkspaceTest {
             var testPassed = false;
 
             Consumer<Context> program = ctx -> {
+                System.out.println("JVP: inline program: start");
                 var config = ctx.config();
                 ctx.export("exp_static", "foo");
                 ctx.export("exp_cfg", config.get("bar"));
                 ctx.export("exp_secret", config.getSecret("buzz"));
+                System.out.println("JVP: inline program: end");
             };
 
             var stackName = randomStackName();

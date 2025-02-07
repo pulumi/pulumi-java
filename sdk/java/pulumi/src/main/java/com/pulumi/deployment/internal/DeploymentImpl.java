@@ -1911,6 +1911,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @Override
         public <T> CompletableFuture<Result<T>> runAsync(Supplier<T> callback) {
+            System.out.println("JVP: DefaultRunner.runAsync: start");
             var valueFuture = CompletableFuture.supplyAsync(callback);
             // run the callback asynchronously in the context of the error handler
             registerTask("DefaultRunner#runAsync", valueFuture);
@@ -1945,6 +1946,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Objects.requireNonNull(description);
             Objects.requireNonNull(task);
             this.standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
+            System.out.println(String.format("JVP: DefaultRunner.registerTask: '%s', %s", description, task));
 
             // we don't need the result here, just the future itself
             CompletableFuture<Void> key = task.thenApply(__ -> null);
@@ -1993,6 +1995,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             descriptions = List.of();
                         }
                         this.standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", String.join(",", descriptions), task));
+                        System.out.println(String.format("JVP: DefaultRunner.whileRunningAsync handleCompletion: Completed task: '%s', %s", String.join(",", descriptions), task));
                     }
                 } catch (Exception e) {
                     this.standardLogger.log(Level.FINEST, String.format("Failed task: '%s', exception: %s", inFlightTasks.get(task), e));
@@ -2007,6 +2010,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 // Keep looping as long as there are outstanding tasks that are still running.
                 while (inFlightTasks.size() > 0) {
                     this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+                    System.out.println(String.format("JVP: DefaultRunner.whileRunningAsync loopUntilDone: Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
 
                     // Grab all the tasks we currently have running.
                     for (var task : inFlightTasks.keySet()) {
@@ -2017,6 +2021,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 handleCompletion.accept(task); // will remove from inFlightTasks
                             } else {
                                 this.standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
+                                //System.out.println(String.format("JVP: DefaultRunner.whileRunningAsync loopUntilDone: Tasks not done: %s", task));
                                 // will attempt again in the next iteration
                             }
                         } catch (Exception e) {
