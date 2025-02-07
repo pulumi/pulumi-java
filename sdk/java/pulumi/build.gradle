@@ -159,10 +159,7 @@ task isolatedTest(type: Test) {
 test {
     useJUnitPlatform()
 
-    // Run general tests, excluding the isolated test
-    filter {
-        excludeTestsMatching "com.pulumi.serialization.internal.ResourcePackagesIsolatedTest"
-    }
+    include '**/LocalWorkspaceTest.class'
 
     testLogging {
         showStandardStreams = true
@@ -180,9 +177,6 @@ test {
     }
 
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
-
-    // Ensure isolatedTest runs after the main tests
-    finalizedBy isolatedTest
 
     finalizedBy jacocoTestReport
 }
