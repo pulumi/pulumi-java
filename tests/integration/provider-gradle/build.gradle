@@ -21,6 +21,7 @@ dependencies {
     implementation("com.pulumi:pulumi:$pulumiJavaSdkVersion") {
         exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     }
+    implementation "com.pulumi:random:4.8.1"
     implementation "io.grpc:grpc-netty-shaded:$grpcVersion"
     implementation "io.grpc:grpc-protobuf:$grpcVersion"
     implementation "io.grpc:grpc-stub:$grpcVersion"

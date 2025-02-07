@@ -44,6 +44,11 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>com.pulumi</groupId>
+            <artifactId>random</artifactId>
+            <version>4.8.1</version>
+        </dependency>
+        <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty-shaded</artifactId>
             <version>${grpc.version}</version>
@@ -71,6 +76,14 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
