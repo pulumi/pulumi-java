@@ -165,15 +165,7 @@ test {
         showStandardStreams = true
         exceptionFormat = 'full'
 
-        events = ['failed']
-
-        info {
-            events = ['failed', 'skipped']
-        }
-
-        debug {
-            events = ['started', 'skipped', 'failed']
-        }
+        events = ['failed', 'skipped', 'passed', 'standardOut', 'standardError']
     }
 
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
