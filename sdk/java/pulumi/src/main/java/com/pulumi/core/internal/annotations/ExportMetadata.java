@@ -94,14 +94,8 @@ public final class ExportMetadata<T> extends ImportExportMetadata<Export, Output
                             )));
 
                     var fieldType = field.getType();
-                    if (export.refs().length == 0) {
-                        var exportType = export.type();
-                        var parameters = export.parameters();
-                        return of(field, export, fieldType, exportType, parameters);
-                    } else {
-                        var exportTypeNew = TypeShape.fromTree(export.refs(), export.tree());
-                        return of(field, export, fieldType, exportTypeNew);
-                    }
+                    var exportTypeNew = TypeShape.fromTree(export.refs(), export.tree());
+                    return of(field, export, fieldType, exportTypeNew);
                 })
                 .collect(toImmutableMap(
                         ImportExportMetadata::getName,

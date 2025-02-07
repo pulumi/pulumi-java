@@ -48,15 +48,6 @@ public interface ResourceTransformation {
         }
 
         /**
-         * @return the {@link Resource} instance that is being transformed.
-         * @deprecated use {@link #resource()}
-         */
-        @Deprecated
-        public Resource getResource() {
-            return this.resource;
-        }
-
-        /**
          * @return the original properties passed to the {@link Resource} constructor.
          */
         public ResourceArgs args() {
@@ -64,27 +55,9 @@ public interface ResourceTransformation {
         }
 
         /**
-         * @return the original properties passed to the {@link Resource} constructor.
-         * @deprecated use {@link #args()}
-         */
-        @Deprecated
-        public ResourceArgs getArgs() {
-            return this.args;
-        }
-
-        /**
          * @return the original resource options passed to the {@link Resource} constructor.
          */
         public ResourceOptions options() {
-            return this.options;
-        }
-
-        /**
-         * @return the original resource options passed to the {@link Resource} constructor.
-         * @deprecated use {@link #options()}
-         */
-        @Deprecated
-        public ResourceOptions getOptions() {
             return this.options;
         }
     }
@@ -113,27 +86,9 @@ public interface ResourceTransformation {
         }
 
         /**
-         * @return the original properties passed to the Resource constructor.
-         * @deprecated use {@link #args()}
-         */
-        @Deprecated
-        public ResourceArgs getArgs() {
-            return args;
-        }
-
-        /**
          * @return the original resource options passed to the Resource constructor.
          */
         public ResourceOptions options() {
-            return options;
-        }
-
-        /**
-         * @return the original resource options passed to the Resource constructor.
-         * @deprecated use {@link #options()}
-         */
-        @Deprecated
-        public ResourceOptions getOptions() {
             return options;
         }
     }

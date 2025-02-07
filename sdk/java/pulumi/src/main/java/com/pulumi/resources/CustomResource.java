@@ -109,18 +109,6 @@ public class CustomResource extends Resource {
     }
 
     /**
-     * ID is the provider-assigned unique ID for this managed resource. It is set during
-     * deployments and may be missing (unknown) during planning phases.
-     *
-     * @return the provider-assigned unique ID
-     * @deprecated use {@link #id()}
-     */
-    @Deprecated
-    public Output<String> getId() {
-        return id();
-    }
-
-    /**
      * Pulumi ID is the provider-assigned unique ID for this managed resource.
      * It is set during deployments and may be missing (unknown) during planning phases.
      *
