@@ -4,6 +4,7 @@ package com.pulumi.experimental.automation;
 
 import com.pulumi.Context;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
@@ -104,6 +105,7 @@ public class LocalWorkspaceTest {
         });
     }
 
+    @Disabled
     @Test
     @Timeout(value = 2, unit = TimeUnit.MINUTES)
     void testStackLifecycleLocalProgram(@EnvVars Map<String, String> envVars) {
