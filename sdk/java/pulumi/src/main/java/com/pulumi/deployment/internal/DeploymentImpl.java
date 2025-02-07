@@ -1920,6 +1920,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .thenCompose(value -> whileRunningAsync().thenApply(__ -> value))
                     .handle((value, throwable) -> {
                         if (throwable != null) {
+                            System.out.println("JVP: DefaultRunner.runAsync: valueFuture.handle: throwable != null: " + throwable.getMessage());
                             return handleExceptionAsync(throwable).thenApply(errorCode ->
                                     new Result<>(
                                             errorCode,
@@ -1932,6 +1933,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var code = this.engineLogger.hasLoggedErrors()
                                 ? ProcessExitedBeforeLoggingUserActionableMessage
                                 : ProcessExitedSuccessfully;
+                        System.out.println("JVP: DefaultRunner.runAsync: valueFuture.handle: code: " + code);
                         return CompletableFuture.completedFuture(new Result<>(
                                 code,
                                 ImmutableList.copyOf(this.swallowedExceptions),
