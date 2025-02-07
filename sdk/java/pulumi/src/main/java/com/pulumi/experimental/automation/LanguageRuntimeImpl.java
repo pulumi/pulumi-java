@@ -52,6 +52,9 @@ final class LanguageRuntimeImpl extends LanguageRuntimeImplBase {
             var args = request.getArgsList();
             var engineAddress = args != null && !args.isEmpty() ? args.get(0) : "";
 
+            System.out.println(String.format("JVP: LanguageRuntimeImpl.run: engineAddr: %s", engineAddress));
+            System.out.println(String.format("JVP: LanguageRuntimeImpl.run: monitorAddr: %s", request.getMonitorAddress()));
+
             var inlineDeploymentSettings = InlineDeploymentSettings.builder()
                     // .logger(logger) // TODO pass the logger
                     .engineAddr(engineAddress)
