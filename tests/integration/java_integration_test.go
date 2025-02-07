@@ -3,6 +3,8 @@
 package integration
 
 import (
+	"bytes"
+	"encoding/json"
 	"os/exec"
 	"path/filepath"
 	"testing"
@@ -115,6 +117,44 @@ func TestIntegrations(t *testing.T) {
 			SkipUpdate:             true,
 		})
 		integration.ProgramTest(t, &test)
+	})
+
+	t.Run("package-schema", func(t *testing.T) {
+		t.Parallel()
+
+		dir := getCwd(t)
+		pulumi, err := exec.LookPath("pulumi")
+		require.NoError(t, err)
+
+		providers := []string{"provider-maven", "provider-gradle"}
+		for _, provider := range providers {
+			provider := provider // Create new variable to avoid loop capture
+			t.Run(provider, func(t *testing.T) {
+				t.Parallel()
+
+				var stdout bytes.Buffer
+				var stderr bytes.Buffer
+				cmd := exec.Command(pulumi, "package", "get-schema", "./"+provider)
+				cmd.Dir = dir
+				cmd.Stdout = &stdout
+				cmd.Stderr = &stderr
+
+				err = cmd.Run()
+				require.NoError(t, err)
+
+				// Validate that the schema output is valid JSON
+				var schema map[string]interface{}
+				err = json.Unmarshal(stdout.Bytes(), &schema)
+				require.NoError(t, err, "schema should be valid JSON")
+
+				// Validate required schema fields
+				assert.Contains(t, schema, "name", "schema should have a name field")
+				assert.Equal(t, "example", schema["name"], "schema name should be 'example'")
+				assert.Contains(t, schema, "version", "schema should have a version field")
+				assert.Equal(t, "0.0.1", schema["version"], "schema version should be '0.0.1'")
+				assert.Contains(t, schema, "resources", "schema should have a resources field")
+			})
+		}
 	})
 
 	runAliasTest(t, "rename")

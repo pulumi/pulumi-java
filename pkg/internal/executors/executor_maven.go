@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"regexp"
 	"strings"
 
@@ -35,7 +36,8 @@ func (m maven) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) 
 	if err != nil {
 		return nil, err
 	}
-	return m.newMavenExecutor(cmd)
+	pomXMLPath := filepath.Join(opts.WD.Path(), "pom.xml")
+	return m.newMavenExecutor(cmd, opts.ProgramArgs, pomXMLPath)
 }
 
 func (maven) isMavenProject(opts JavaExecutorOptions) (bool, error) {
@@ -45,7 +47,7 @@ func (maven) isMavenProject(opts JavaExecutorOptions) (bool, error) {
 	return fsys.FileExists(opts.WD, "pom.xml")
 }
 
-func (maven) newMavenExecutor(cmd string) (*JavaExecutor, error) {
+func (maven) newMavenExecutor(cmd string, args []string, pomXMLPath string) (*JavaExecutor, error) {
 	return &JavaExecutor{
 		Cmd: cmd,
 		BuildArgs: []string{
@@ -67,6 +69,14 @@ func (maven) newMavenExecutor(cmd string) (*JavaExecutor, error) {
 			"--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
 			"-DmainArgs=packages",
+		},
+		RunPluginArgs: []string{
+			/* move normal output to STDERR, because we need STDOUT for port printed back */
+			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
+			"-Dorg.slf4j.simpleLogger.logFile=System.err",
+			"--no-transfer-progress", "compile", "exec:java",
+			"-f", pomXMLPath, // plugin's CWD is set to the Pulumi program's root
+			fmt.Sprintf("-Dexec.args=%s", strings.Join(args, " ")),
 		},
 
 		// Implements the GetProgramDependencies function to retrieve the dependencies of a Maven project.

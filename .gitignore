@@ -59,3 +59,5 @@ pulumi-analyzer-policy-python.cmd
 # Ignore user-provided go.work files.
 /go.work
 /go.work.sum
+**/build/
+**/target/
