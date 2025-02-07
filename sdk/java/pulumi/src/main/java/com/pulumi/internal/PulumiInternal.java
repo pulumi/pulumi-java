@@ -90,6 +90,7 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     }
 
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
+        System.out.println("JVP: PulumiInternal.runAsync: start");
         return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
     }
 
