@@ -44,6 +44,8 @@ class CustomTimeoutsTest {
                     assertThat(CustomTimeouts.parseTimeoutString("0")).isEqualTo(Duration.ZERO)),
 
             // Single unit cases
+            dynamicTest("zero seconds", () ->
+                    assertThat(CustomTimeouts.parseTimeoutString("0s")).isEqualTo(Duration.ZERO)),
             dynamicTest("nanoseconds", () ->
                     assertThat(CustomTimeouts.parseTimeoutString("100ns")).isEqualTo(Duration.ofNanos(100))),
             dynamicTest("microseconds", () ->
