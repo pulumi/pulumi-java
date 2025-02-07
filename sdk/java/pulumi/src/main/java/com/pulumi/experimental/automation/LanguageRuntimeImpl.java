@@ -70,6 +70,7 @@ final class LanguageRuntimeImpl extends LanguageRuntimeImplBase {
             try {
                 var pulumiInternal = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.Empty);
                 pulumiInternal.runAsync(program).handle((result, throwable) -> {
+                    System.out.println("JVP: LanguageRuntimeImpl.run: runAsync(program).handle: start");
                     try {
                         var responseBuilder = RunResponse.newBuilder();
                         if (throwable != null) {

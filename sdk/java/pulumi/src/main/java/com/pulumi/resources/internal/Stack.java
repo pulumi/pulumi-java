@@ -87,6 +87,7 @@ public final class Stack extends ComponentResource {
             String stackName,
             List<ResourceTransformation> resourceTransformations
     ) {
+        System.out.println("JVP: Stack.factory: start");
         /*
          * Stack initialization requires specific sequence of events because of cyclic dependencies.
          * We break the cycles using lazy initialization of the future that backs the Stack outputs Output.
@@ -115,6 +116,7 @@ public final class Stack extends ComponentResource {
          */
         var deployment = DeploymentInternal.getInstance(); // TODO: pass as a parameter after refactoring the Deployment initialization
         return (Supplier<Map<String, Output<?>>> callback) -> {
+            System.out.println("JVP: Stack.factory result: start");
             var lazyFuture = new CompletableFuture<Map<String, Output<?>>>();
             var lazyOutputs = Output.of(lazyFuture);
             var stack = new Stack(projectName, stackName, resourceTransformations, lazyOutputs);
@@ -130,6 +132,7 @@ public final class Stack extends ComponentResource {
                     lazyFuture.complete(value);
                 }
             });
+            System.out.println("JVP: Stack.factory result: end");
             return stack;
         };
     }

@@ -116,6 +116,7 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     }
 
     protected CompletableFuture<Result<Stack>> runAsyncResult(Consumer<Context> stackCallback) {
+        System.out.println("JVP: PulumiInternal.runAsyncResult: start");
         // Stack must be created and set globally before running any user code
         return runner.runAsync(
                 () -> Stack.factory(
@@ -123,9 +124,11 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
                         this.stackContext.stackName(),
                         this.stackContext.resourceTransformations()
                 ).apply(() -> {
+                    System.out.println("JVP: PulumiInternal.runAsyncResult: runner.runAsync.apply: start");
                     // before user code was executed
                     stackCallback.accept(this.stackContext); // MUST run before accessing mutable variables
                     // after user code was executed
+                    System.out.println("JVP: PulumiInternal.runAsyncResult: runner.runAsync.apply: end");
                     return this.stackContext.exports();
                 })
         );
