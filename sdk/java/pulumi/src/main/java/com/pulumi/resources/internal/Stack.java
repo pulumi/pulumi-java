@@ -127,8 +127,10 @@ public final class Stack extends ComponentResource {
             deployment.getRunner().registerTask("callback", callbackFuture);
             callbackFuture.whenComplete((value, throwable) -> {
                 if (throwable != null) {
+                    System.out.println("JVP: Stack.factory result: callbackFuture.whenComplete: throwable: " + throwable.getMessage());
                     lazyFuture.completeExceptionally(throwable);
                 } else {
+                    System.out.println("JVP: Stack.factory result: callbackFuture.whenComplete: complete");
                     lazyFuture.complete(value);
                 }
             });
