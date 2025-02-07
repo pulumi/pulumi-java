@@ -8,6 +8,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
 import java.util.function.Consumer;
 
 import com.pulumi.core.internal.annotations.InternalUse;
@@ -20,6 +22,7 @@ import com.pulumi.experimental.automation.serialization.internal.LocalSerializer
  */
 @InternalUse
 public final class EventLogWatcher implements AutoCloseable {
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
     private final CompletableFuture<Void> future;
 
     public EventLogWatcher(Path logFile, Consumer<EngineEvent> onEvent) {
@@ -50,11 +53,12 @@ public final class EventLogWatcher implements AutoCloseable {
             } catch (IOException e) {
                 throw new UncheckedIOException(e);
             }
-        });
+        }, executorService);
     }
 
     @Override
     public void close() throws Exception {
         future.join();
+        executorService.shutdown();
     }
 }

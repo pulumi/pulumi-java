@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
 
@@ -170,28 +172,22 @@ public class LocalPulumiCommand implements PulumiCommand {
         var debugCommands = eventLogFile != null;
         env.putAll(pulumiEnvironment(options.getAdditionalEnv(), command, debugCommands));
 
+        var executor = Executors.newFixedThreadPool(2);
+
         try {
             var process = processBuilder.start();
 
-            CompletableFuture<Void> stdinFuture = null;
+            var stdoutFuture = readStreamAsync(process.getInputStream(), executor, options.getOnStandardOutput());
+            var stderrFuture = readStreamAsync(process.getErrorStream(), executor, options.getOnStandardError());
+
             var stdIn = options.getStdIn();
             if (stdIn != null && !stdIn.isBlank()) {
-                stdinFuture = CompletableFuture.runAsync(() -> {
-                    try (var writer = new OutputStreamWriter(process.getOutputStream())) {
-                        writer.write(options.getStdIn());
-                        writer.flush();
-                    } catch (IOException e) {
-                        throw new UncheckedIOException(e);
-                    }
-                });
+                try (var writer = new OutputStreamWriter(process.getOutputStream())) {
+                    writer.write(stdIn);
+                    writer.flush();
+                }
             }
 
-            var stdoutFuture = readStreamAsync(process.getInputStream(), options.getOnStandardOutput());
-            var stderrFuture = readStreamAsync(process.getErrorStream(), options.getOnStandardError());
-
-            if (stdinFuture != null) {
-                stdinFuture.join();
-            }
             int exitCode = process.waitFor();
             String stdout = stdoutFuture.join();
             String stderr = stderrFuture.join();
@@ -210,10 +206,15 @@ public class LocalPulumiCommand implements PulumiCommand {
             throw new AutomationException(e);
         } catch (Exception e) {
             throw new AutomationException(e);
+        } finally {
+            executor.shutdown();
         }
     }
 
-    private CompletableFuture<String> readStreamAsync(InputStream in, @Nullable Consumer<String> lineConsumer) {
+    private CompletableFuture<String> readStreamAsync(
+            InputStream in,
+            Executor executor,
+            @Nullable Consumer<String> lineConsumer) {
         return CompletableFuture.supplyAsync(() -> {
             var sb = new StringBuilder();
             try (var reader = new BufferedReader(new InputStreamReader(in))) {
@@ -228,7 +229,7 @@ public class LocalPulumiCommand implements PulumiCommand {
             } catch (IOException e) {
                 throw new UncheckedIOException(e);
             }
-        });
+        }, executor);
     }
 
     static List<String> pulumiArgs(List<String> args, Path eventLogFile) {
