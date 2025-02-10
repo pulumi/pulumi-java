@@ -23,7 +23,7 @@ public class ResourceOutputsEvent {
      *
      * @return The step event metadata
      */
-    public StepEventMetadata getMetadata() {
+    public StepEventMetadata metadata() {
         return metadata;
     }
 
@@ -32,7 +32,7 @@ public class ResourceOutputsEvent {
      *
      * @return The planning flag
      */
-    public Boolean getPlanning() {
+    public Boolean planning() {
         return planning;
     }
 }
