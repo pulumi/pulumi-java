@@ -131,7 +131,7 @@ public class LocalPulumiCommand implements PulumiCommand {
 
     @Nullable
     @Override
-    public Version getVersion() {
+    public Version version() {
         return version;
     }
 
@@ -144,9 +144,9 @@ public class LocalPulumiCommand implements PulumiCommand {
             var firstArg = args != null && !args.isEmpty() ? args.get(0) : null;
             var commandName = sanitizeCommandName(firstArg);
             try (var eventLogFile = new EventLogFile(commandName);
-                    var eventLogWatcher = new EventLogWatcher(eventLogFile.getFilePath(),
+                    var eventLogWatcher = new EventLogWatcher(eventLogFile.filePath(),
                             options.onEngineEvent())) {
-                return runInternal(args, options, eventLogFile.getFilePath());
+                return runInternal(args, options, eventLogFile.filePath());
             } catch (AutomationException e) {
                 throw e;
             } catch (Exception e) {
@@ -307,7 +307,7 @@ public class LocalPulumiCommand implements PulumiCommand {
             Files.createFile(filePath);
         }
 
-        public Path getFilePath() {
+        public Path filePath() {
             return filePath;
         }
 

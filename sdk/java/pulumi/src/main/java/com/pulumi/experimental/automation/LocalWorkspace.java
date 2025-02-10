@@ -473,7 +473,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Override
     public String getPulumiVersion() {
-        var version = cmd.getVersion();
+        var version = cmd.version();
         if (version == null) {
             throw new IllegalStateException("Failed to get Pulumi version");
         }
