@@ -78,7 +78,7 @@ public final class PreviewOptions extends UpdateOptions {
 
     /**
      * Allows updating of dependent targets discovered but not specified
-     * {@link #getTargets()}
+     * {@link #targets()}
      *
      * @return true if dependent targets should be updated
      */
@@ -172,7 +172,7 @@ public final class PreviewOptions extends UpdateOptions {
 
         /**
          * Allows updating of dependent targets discovered but not specified
-         * {@link #getTargets()}
+         * {@link #targets()}
          *
          * @param targetDependents true if dependent targets should be updated
          * @return the builder

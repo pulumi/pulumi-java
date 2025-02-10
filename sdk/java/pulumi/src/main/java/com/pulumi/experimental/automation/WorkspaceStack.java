@@ -436,9 +436,9 @@ public final class WorkspaceStack implements AutoCloseable {
 
         InlineLanguageHost inlineHost = null;
 
-        Consumer<String> onStandardOutput = options != null ? options.getOnStandardOutput() : null;
-        Consumer<String> onStandardError = options != null ? options.getOnStandardError() : null;
-        Consumer<EngineEvent> onEvent = options != null ? options.getOnEvent() : null;
+        Consumer<String> onStandardOutput = options != null ? options.onStandardOutput() : null;
+        Consumer<String> onStandardError = options != null ? options.onStandardError() : null;
+        Consumer<EngineEvent> onEvent = options != null ? options.onEvent() : null;
 
         try {
             if (program != null) {
@@ -551,15 +551,15 @@ public final class WorkspaceStack implements AutoCloseable {
 
         InlineLanguageHost inlineHost = null;
 
-        Consumer<String> onStandardOutput = options != null ? options.getOnStandardOutput() : null;
-        Consumer<String> onStandardError = options != null ? options.getOnStandardError() : null;
+        Consumer<String> onStandardOutput = options != null ? options.onStandardOutput() : null;
+        Consumer<String> onStandardError = options != null ? options.onStandardError() : null;
 
         // Get the summary event from the event log.
         // Since Java requires effectively final variables for lambda captures,
         // and we want to update the value, we'll use a single-element array as
         // a workaround, updating the value at index 0.
         SummaryEvent[] summaryEvent = { null };
-        Consumer<EngineEvent> onEvent = options != null ? options.getOnEvent() : null;
+        Consumer<EngineEvent> onEvent = options != null ? options.onEvent() : null;
         Consumer<EngineEvent> onPreviewEvent = event -> {
             if (event.getSummaryEvent() != null) {
                 summaryEvent[0] = event.getSummaryEvent();
@@ -675,9 +675,9 @@ public final class WorkspaceStack implements AutoCloseable {
         args.add("--exec-kind");
         args.add(execKind);
 
-        Consumer<String> onStandardOutput = options != null ? options.getOnStandardOutput() : null;
-        Consumer<String> onStandardError = options != null ? options.getOnStandardError() : null;
-        Consumer<EngineEvent> onEvent = options != null ? options.getOnEvent() : null;
+        Consumer<String> onStandardOutput = options != null ? options.onStandardOutput() : null;
+        Consumer<String> onStandardError = options != null ? options.onStandardError() : null;
+        Consumer<EngineEvent> onEvent = options != null ? options.onEvent() : null;
 
         var result = runCommand(args, CommandRunOptions.builder()
                 .onStandardOutput(onStandardOutput)
@@ -734,9 +734,9 @@ public final class WorkspaceStack implements AutoCloseable {
         args.add("--exec-kind");
         args.add(execKind);
 
-        Consumer<String> onStandardOutput = options != null ? options.getOnStandardOutput() : null;
-        Consumer<String> onStandardError = options != null ? options.getOnStandardError() : null;
-        Consumer<EngineEvent> onEvent = options != null ? options.getOnEvent() : null;
+        Consumer<String> onStandardOutput = options != null ? options.onStandardOutput() : null;
+        Consumer<String> onStandardError = options != null ? options.onStandardError() : null;
+        Consumer<EngineEvent> onEvent = options != null ? options.onEvent() : null;
 
         var result = runCommand(args, CommandRunOptions.builder()
                 .onStandardOutput(onStandardOutput)
@@ -939,19 +939,19 @@ public final class WorkspaceStack implements AutoCloseable {
     }
 
     private static void applyUpdateOptions(UpdateOptions options, ArrayList<String> args) {
-        var parallel = options.getParallel();
+        var parallel = options.parallel();
         if (parallel != null) {
             args.add("--parallel");
             args.add(parallel.toString());
         }
 
-        var message = options.getMessage();
+        var message = options.Message();
         if (message != null && !message.isBlank()) {
             args.add("--message");
             args.add(message);
         }
 
-        var targets = options.getTargets();
+        var targets = options.targets();
         if (targets != null) {
             for (var item : targets) {
                 args.add("--target");
@@ -959,7 +959,7 @@ public final class WorkspaceStack implements AutoCloseable {
             }
         }
 
-        var policyPacks = options.getPolicyPacks();
+        var policyPacks = options.policyPacks();
         if (policyPacks != null) {
             for (var item : policyPacks) {
                 args.add("--policy-pack");
@@ -967,7 +967,7 @@ public final class WorkspaceStack implements AutoCloseable {
             }
         }
 
-        var policyPackConfigs = options.getPolicyPackConfigs();
+        var policyPackConfigs = options.policyPackConfigs();
         if (policyPackConfigs != null) {
             for (var item : policyPackConfigs) {
                 args.add("--policy-pack-configs");
@@ -975,37 +975,37 @@ public final class WorkspaceStack implements AutoCloseable {
             }
         }
 
-        var color = options.getColor();
+        var color = options.color();
         if (color != null && !color.isBlank()) {
             args.add("--color");
             args.add(color);
         }
 
-        if (options.isLogFlow()) {
+        if (options.logFlow()) {
             args.add("--logflow");
         }
 
-        var verbosity = options.getLogVerbosity();
+        var verbosity = options.logVerbosity();
         if (verbosity != null) {
             args.add("--verbose");
             args.add(verbosity.toString());
         }
 
-        if (options.isLogToStdErr()) {
+        if (options.logToStdErr()) {
             args.add("--logtostderr");
         }
 
-        var tracing = options.getTracing();
+        var tracing = options.tracing();
         if (tracing != null && !tracing.isBlank()) {
             args.add("--tracing");
             args.add(tracing);
         }
 
-        if (options.isDebug()) {
+        if (options.debug()) {
             args.add("--debug");
         }
 
-        if (options.isJson()) {
+        if (options.json()) {
             args.add("--json");
         }
     }
