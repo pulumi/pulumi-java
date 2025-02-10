@@ -65,15 +65,15 @@ public final class LocalWorkspace extends Workspace {
         Path dir = null;
 
         if (options != null) {
-            if (options.getWorkDir() != null) {
-                dir = options.getWorkDir();
+            if (options.workDir() != null) {
+                dir = options.workDir();
             }
 
-            this.pulumiHome = options.getPulumiHome();
-            this.program = options.getProgram();
-            this.logger = options.getLogger();
-            this.secretsProvider = options.getSecretsProvider();
-            this.environmentVariables = options.getEnvironmentVariables();
+            this.pulumiHome = options.pulumiHome();
+            this.program = options.program();
+            this.logger = options.logger();
+            this.secretsProvider = options.secretsProvider();
+            this.environmentVariables = options.environmentVariables();
         } else {
             this.pulumiHome = null;
             this.program = null;
@@ -96,12 +96,12 @@ public final class LocalWorkspace extends Workspace {
         this.workDir = dir;
 
         if (options != null) {
-            var projectSettings = options.getProjectSettings();
+            var projectSettings = options.projectSettings();
             if (projectSettings != null) {
                 initializeProjectSettings(projectSettings);
             }
 
-            var stackSettings = options.getStackSettings();
+            var stackSettings = options.stackSettings();
             if (stackSettings != null) {
                 for (var entry : stackSettings.entrySet()) {
                     saveStackSettings(entry.getKey(), entry.getValue());
@@ -150,11 +150,11 @@ public final class LocalWorkspace extends Workspace {
 
     private static PulumiCommand getOrCreatePulumiCommand(
             @Nullable LocalWorkspaceOptions options) throws AutomationException {
-        return options != null && options.getPulumiCommand() != null
-                ? options.getPulumiCommand()
+        return options != null && options.pulumiCommand() != null
+                ? options.pulumiCommand()
                 : LocalPulumiCommand.create(LocalPulumiCommandOptions.builder()
                         .skipVersionCheck(optOutOfVersionCheck(options != null
-                                ? options.getEnvironmentVariables()
+                                ? options.environmentVariables()
                                 : null))
                         .build());
     }
@@ -191,9 +191,9 @@ public final class LocalWorkspace extends Workspace {
     /**
      * Creates a stack with a {@link LocalWorkspace} utilizing the specified inline
      * (in process) {@code program}. This program is fully debuggable and runs in
-     * process. If no {@link LocalWorkspaceOptions#getProjectSettings()} option is
+     * process. If no {@link LocalWorkspaceOptions#projectSettings()} option is
      * specified, default project settings will be created on behalf of the user.
-     * Similarly, unless a {@link LocalWorkspaceOptions#getWorkDir()} option is
+     * Similarly, unless a {@link LocalWorkspaceOptions#workDir()} option is
      * specified, the working directory will default to a new temporary directory
      * provided by the OS.
      *
@@ -280,9 +280,9 @@ public final class LocalWorkspace extends Workspace {
      * Selects an existing Stack with a {@link LocalWorkspace} utilizing the
      * specified inline (in process) {@code program}. This program is fully
      * debuggable and runs in process. If no
-     * {@link LocalWorkspaceOptions#getProjectSettings()} option is specified,
+     * {@link LocalWorkspaceOptions#projectSettings()} option is specified,
      * default project settings will be created on behalf of the user. Similarly,
-     * unless a {@link LocalWorkspaceOptions#getWorkDir()} option is specified, the
+     * unless a {@link LocalWorkspaceOptions#workDir()} option is specified, the
      * working directory will default to a new temporary directory provided by the
      * OS.
      *
@@ -367,9 +367,9 @@ public final class LocalWorkspace extends Workspace {
      * Creates or selects an existing Stack with a {@link LocalWorkspace} utilizing
      * the specified inline (in process) {@code program}. This program is fully
      * debuggable and runs in process. If no
-     * {@link LocalWorkspaceOptions#getProjectSettings()} option is specified,
+     * {@link LocalWorkspaceOptions#projectSettings()} option is specified,
      * default project settings will be created on behalf of the user. Similarly,
-     * unless a {@link LocalWorkspaceOptions#getWorkDir()} option is specified, the
+     * unless a {@link LocalWorkspaceOptions#workDir()} option is specified, the
      * working directory will default to a new temporary directory provided by the
      * OS.
      *

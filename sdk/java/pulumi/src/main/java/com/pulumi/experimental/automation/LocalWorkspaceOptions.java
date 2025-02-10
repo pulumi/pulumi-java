@@ -97,7 +97,7 @@ public class LocalWorkspaceOptions {
      * @return the work directory
      */
     @Nullable
-    public Path getWorkDir() {
+    public Path workDir() {
         return workDir;
     }
 
@@ -107,7 +107,7 @@ public class LocalWorkspaceOptions {
      * @return the pulumi home directory
      */
     @Nullable
-    public Path getPulumiHome() {
+    public Path pulumiHome() {
         return pulumiHome;
     }
 
@@ -117,7 +117,7 @@ public class LocalWorkspaceOptions {
      * @return the pulumi command
      */
     @Nullable
-    public PulumiCommand getPulumiCommand() {
+    public PulumiCommand pulumiCommand() {
         return pulumiCommand;
     }
 
@@ -130,7 +130,7 @@ public class LocalWorkspaceOptions {
      * @return the secrets provider
      */
     @Nullable
-    public String getSecretsProvider() {
+    public String secretsProvider() {
         return secretsProvider;
     }
 
@@ -143,7 +143,7 @@ public class LocalWorkspaceOptions {
      * @return the program
      */
     @Nullable
-    public Consumer<Context> getProgram() {
+    public Consumer<Context> program() {
         return program;
     }
 
@@ -154,7 +154,7 @@ public class LocalWorkspaceOptions {
      * @return the logger
      */
     @Nullable
-    public Logger getLogger() {
+    public Logger logger() {
         return logger;
     }
 
@@ -164,7 +164,7 @@ public class LocalWorkspaceOptions {
      *
      * @return the environment variables
      */
-    public Map<String, String> getEnvironmentVariables() {
+    public Map<String, String> environmentVariables() {
         return environmentVariables;
     }
 
@@ -178,7 +178,7 @@ public class LocalWorkspaceOptions {
      * @return the project settings
      */
     @Nullable
-    public ProjectSettings getProjectSettings() {
+    public ProjectSettings projectSettings() {
         return projectSettings;
     }
 
@@ -191,7 +191,7 @@ public class LocalWorkspaceOptions {
      *
      * @return the stack settings
      */
-    public Map<String, StackSettings> getStackSettings() {
+    public Map<String, StackSettings> stackSettings() {
         return stackSettings;
     }
 
