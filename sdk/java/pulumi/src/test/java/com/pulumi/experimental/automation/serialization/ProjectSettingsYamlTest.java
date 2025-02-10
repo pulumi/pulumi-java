@@ -105,7 +105,7 @@ public class ProjectSettingsYamlTest {
         assertThat(settings.runtime().options()).isNull();
         var template = settings.template();
         assertThat(template).isNotNull();
-        var config = template.getConfig();
+        var config = template.config();
         assertThat(config).isNotNull();
         assertThat(config).containsKeys("foo");
         var foo = config.get("foo");
@@ -113,9 +113,9 @@ public class ProjectSettingsYamlTest {
         assertThat(foo.getDefault()).isEqualTo("bar");
         assertThat(foo.getDescription()).isEqualTo("foo description");
         assertThat(foo.getSecret()).isTrue();
-        assertThat(template.getDescription()).isEqualTo("some description");
-        assertThat(template.getDisplayName()).isEqualTo("my template");
-        assertThat(template.getQuickstart()).isEqualTo("quickstart text");
+        assertThat(template.description()).isEqualTo("some description");
+        assertThat(template.displayName()).isEqualTo("my template");
+        assertThat(template.quickstart()).isEqualTo("quickstart text");
 
         // Test roundtrip
         var serialized = serializer.serializeYaml(settings);
