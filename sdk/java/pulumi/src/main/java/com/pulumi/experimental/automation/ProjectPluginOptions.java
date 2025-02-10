@@ -35,7 +35,7 @@ public class ProjectPluginOptions {
      *
      * @return the name of the plugin
      */
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -45,7 +45,7 @@ public class ProjectPluginOptions {
      * @return the version of the plugin
      */
     @Nullable
-    public String getVersion() {
+    public String version() {
         return version;
     }
 
@@ -54,7 +54,7 @@ public class ProjectPluginOptions {
      *
      * @return the path of the plugin
      */
-    public String getPath() {
+    public String path() {
         return path;
     }
 
