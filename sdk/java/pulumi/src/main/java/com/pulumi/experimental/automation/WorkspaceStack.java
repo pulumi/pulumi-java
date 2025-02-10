@@ -561,8 +561,8 @@ public final class WorkspaceStack implements AutoCloseable {
         SummaryEvent[] summaryEvent = { null };
         Consumer<EngineEvent> onEvent = options != null ? options.onEvent() : null;
         Consumer<EngineEvent> onPreviewEvent = event -> {
-            if (event.getSummaryEvent() != null) {
-                summaryEvent[0] = event.getSummaryEvent();
+            if (event.summaryEvent() != null) {
+                summaryEvent[0] = event.summaryEvent();
             }
 
             if (onEvent != null) {

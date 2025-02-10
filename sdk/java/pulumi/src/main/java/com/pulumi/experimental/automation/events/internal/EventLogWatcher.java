@@ -42,7 +42,7 @@ public final class EventLogWatcher implements AutoCloseable {
                             onEvent.accept(event);
 
                             // When we see the cancel event, we can stop watching the log file.
-                            if (event.getCancelEvent() != null) {
+                            if (event.cancelEvent() != null) {
                                 break;
                             }
                         }

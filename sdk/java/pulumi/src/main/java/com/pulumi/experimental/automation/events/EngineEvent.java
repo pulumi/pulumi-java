@@ -70,7 +70,7 @@ public class EngineEvent {
      *
      * @return the sequence number
      */
-    public int getSequence() {
+    public int sequence() {
         return sequence;
     }
 
@@ -79,52 +79,52 @@ public class EngineEvent {
      *
      * @return the timestamp
      */
-    public int getTimestamp() {
+    public int timestamp() {
         return timestamp;
     }
 
     @Nullable
-    public CancelEvent getCancelEvent() {
+    public CancelEvent cancelEvent() {
         return cancelEvent;
     }
 
     @Nullable
-    public StandardOutputEvent getStandardOutputEvent() {
+    public StandardOutputEvent standardOutputEvent() {
         return stdoutEvent;
     }
 
     @Nullable
-    public DiagnosticEvent getDiagnosticEvent() {
+    public DiagnosticEvent diagnosticEvent() {
         return diagnosticEvent;
     }
 
     @Nullable
-    public PreludeEvent getPreludeEvent() {
+    public PreludeEvent preludeEvent() {
         return preludeEvent;
     }
 
     @Nullable
-    public SummaryEvent getSummaryEvent() {
+    public SummaryEvent summaryEvent() {
         return summaryEvent;
     }
 
     @Nullable
-    public ResourcePreEvent getResourcePreEvent() {
+    public ResourcePreEvent resourcePreEvent() {
         return resourcePreEvent;
     }
 
     @Nullable
-    public ResourceOutputsEvent getResourceOutputsEvent() {
+    public ResourceOutputsEvent resourceOutputsEvent() {
         return resOutputsEvent;
     }
 
     @Nullable
-    public ResourceOperationFailedEvent getResourceOperationFailedEvent() {
+    public ResourceOperationFailedEvent resourceOperationFailedEvent() {
         return resOpFailedEvent;
     }
 
     @Nullable
-    public PolicyEvent getPolicyEvent() {
+    public PolicyEvent policyEvent() {
         return policyEvent;
     }
 }
