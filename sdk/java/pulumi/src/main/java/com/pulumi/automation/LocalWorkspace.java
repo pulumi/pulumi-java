@@ -185,7 +185,7 @@ public final class LocalWorkspace extends Workspace {
             String projectName,
             String stackName,
             Consumer<Context> program) throws AutomationException {
-        return createStack(projectName, stackName, program, LocalWorkspaceOptions.EMPTY);
+        return createStack(projectName, stackName, program, LocalWorkspaceOptions.Empty);
     }
 
     /**
@@ -230,7 +230,7 @@ public final class LocalWorkspace extends Workspace {
     public static WorkspaceStack createStack(
             String stackName,
             Path workDir) throws AutomationException {
-        return createStack(stackName, workDir, LocalWorkspaceOptions.EMPTY);
+        return createStack(stackName, workDir, LocalWorkspaceOptions.Empty);
     }
 
     /**
@@ -273,7 +273,7 @@ public final class LocalWorkspace extends Workspace {
             String projectName,
             String stackName,
             Consumer<Context> program) throws AutomationException {
-        return selectStack(projectName, stackName, program, LocalWorkspaceOptions.EMPTY);
+        return selectStack(projectName, stackName, program, LocalWorkspaceOptions.Empty);
     }
 
     /**
@@ -319,7 +319,7 @@ public final class LocalWorkspace extends Workspace {
     public static WorkspaceStack selectStack(
             String stackName,
             Path workDir) throws AutomationException {
-        return selectStack(stackName, workDir, LocalWorkspaceOptions.EMPTY);
+        return selectStack(stackName, workDir, LocalWorkspaceOptions.Empty);
     }
 
     /**
@@ -360,7 +360,7 @@ public final class LocalWorkspace extends Workspace {
             String projectName,
             String stackName,
             Consumer<Context> program) throws AutomationException {
-        return createOrSelectStack(projectName, stackName, program, LocalWorkspaceOptions.EMPTY);
+        return createOrSelectStack(projectName, stackName, program, LocalWorkspaceOptions.Empty);
     }
 
     /**
@@ -402,7 +402,7 @@ public final class LocalWorkspace extends Workspace {
     public static WorkspaceStack createOrSelectStack(
             String stackName,
             Path workDir) throws AutomationException {
-        return createOrSelectStack(stackName, workDir, LocalWorkspaceOptions.EMPTY);
+        return createOrSelectStack(stackName, workDir, LocalWorkspaceOptions.Empty);
     }
 
     /**
@@ -432,7 +432,7 @@ public final class LocalWorkspace extends Workspace {
             WorkspaceStackFactory factory) throws AutomationException {
 
         var cmd = getOrCreatePulumiCommand(options);
-        options = options != null ? options : LocalWorkspaceOptions.EMPTY;
+        options = options != null ? options : LocalWorkspaceOptions.Empty;
         options = options.forInlineProgram(program, ProjectSettings.createDefault(projectName));
         var ws = new LocalWorkspace(cmd, options);
         return factory.create(stackName, ws);
@@ -445,7 +445,7 @@ public final class LocalWorkspace extends Workspace {
             WorkspaceStackFactory factory) throws AutomationException {
 
         var cmd = getOrCreatePulumiCommand(options);
-        options = options != null ? options : LocalWorkspaceOptions.EMPTY;
+        options = options != null ? options : LocalWorkspaceOptions.Empty;
         options = options.forLocalProgram(workDir);
         var ws = new LocalWorkspace(cmd, options);
         return factory.create(stackName, ws);

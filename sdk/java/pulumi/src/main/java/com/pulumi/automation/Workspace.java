@@ -455,7 +455,7 @@ public abstract class Workspace implements AutoCloseable {
      * @throws AutomationException if there was an issue installing the plugin
      */
     public void installPlugin(String name, String version) throws AutomationException {
-        installPlugin(name, version, PluginInstallOptions.EMPTY);
+        installPlugin(name, version, PluginInstallOptions.Empty);
     }
 
     /**
@@ -530,7 +530,7 @@ public abstract class Workspace implements AutoCloseable {
      * @throws AutomationException if there was an issue running the command
      */
     CommandResult runCommand(List<String> args) throws AutomationException {
-        return runCommand(args, CommandRunOptions.EMPTY);
+        return runCommand(args, CommandRunOptions.Empty);
     }
 
     /**

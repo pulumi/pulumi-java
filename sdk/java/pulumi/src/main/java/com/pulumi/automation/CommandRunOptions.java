@@ -19,7 +19,7 @@ public final class CommandRunOptions {
     /**
      * An empty set of options.
      */
-    public static final CommandRunOptions EMPTY = CommandRunOptions.builder().build();
+    public static final CommandRunOptions Empty = CommandRunOptions.builder().build();
 
     @Nullable
     private final Path workingDir;

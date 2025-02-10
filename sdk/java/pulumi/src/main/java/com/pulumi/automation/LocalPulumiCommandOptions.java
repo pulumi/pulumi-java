@@ -6,7 +6,7 @@ package com.pulumi.automation;
  * Options to configure a {@link LocalPulumiCommand} instance.
  */
 public class LocalPulumiCommandOptions {
-    public static final LocalPulumiCommandOptions EMPTY = LocalPulumiCommandOptions.builder().build();
+    public static final LocalPulumiCommandOptions Empty = LocalPulumiCommandOptions.builder().build();
 
     private final boolean skipVersionCheck;
 

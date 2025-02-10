@@ -20,7 +20,7 @@ public class LocalWorkspaceOptions {
     /**
      * An empty set of options.
      */
-    public static final LocalWorkspaceOptions EMPTY = LocalWorkspaceOptions.builder().build();
+    public static final LocalWorkspaceOptions Empty = LocalWorkspaceOptions.builder().build();
 
     @Nullable
     private final Path workDir;

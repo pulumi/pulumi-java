@@ -879,7 +879,7 @@ public final class WorkspaceStack implements AutoCloseable {
     }
 
     CommandResult runCommand(List<String> args) throws AutomationException {
-        return runCommand(args, CommandRunOptions.EMPTY);
+        return runCommand(args, CommandRunOptions.Empty);
     }
 
     CommandResult runCommand(List<String> args, CommandRunOptions options) throws AutomationException {

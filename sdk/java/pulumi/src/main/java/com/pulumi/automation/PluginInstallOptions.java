@@ -11,7 +11,7 @@ public class PluginInstallOptions {
     /**
      * An empty set of options.
      */
-    public static final PluginInstallOptions EMPTY = PluginInstallOptions.builder().build();
+    public static final PluginInstallOptions Empty = PluginInstallOptions.builder().build();
 
     private final PluginKind kind;
     private final boolean exactVersion;

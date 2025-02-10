@@ -38,6 +38,6 @@ public interface PulumiCommand {
      * @throws AutomationException if the command fails
      */
     default CommandResult run(List<String> args) throws AutomationException {
-        return run(args, CommandRunOptions.EMPTY);
+        return run(args, CommandRunOptions.Empty);
     }
 }

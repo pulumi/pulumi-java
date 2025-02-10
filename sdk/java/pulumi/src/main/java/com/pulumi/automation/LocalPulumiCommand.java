@@ -57,7 +57,7 @@ public class LocalPulumiCommand implements PulumiCommand {
      * @throws AutomationException
      */
     public static LocalPulumiCommand create() throws AutomationException {
-        return create(LocalPulumiCommandOptions.EMPTY);
+        return create(LocalPulumiCommandOptions.Empty);
     }
 
     /**
