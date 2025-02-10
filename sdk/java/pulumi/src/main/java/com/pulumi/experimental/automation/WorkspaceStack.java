@@ -76,7 +76,7 @@ public final class WorkspaceStack implements AutoCloseable {
      *
      * @return the stack name
      */
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -85,7 +85,7 @@ public final class WorkspaceStack implements AutoCloseable {
      *
      * @return the workspace
      */
-    public Workspace getWorkspace() {
+    public Workspace workspace() {
         return workspace;
     }
 
@@ -94,7 +94,7 @@ public final class WorkspaceStack implements AutoCloseable {
      *
      * @return the module for editing the stack's state
      */
-    public WorkspaceStackState getState() {
+    public WorkspaceStackState state() {
         return state;
     }
 

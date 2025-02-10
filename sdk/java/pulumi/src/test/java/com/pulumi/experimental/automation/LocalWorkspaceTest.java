@@ -98,7 +98,7 @@ public class LocalWorkspaceTest {
 
                 } finally {
                     if (testPassed) {
-                        stack.getWorkspace().removeStack(stackName);
+                        stack.workspace().removeStack(stackName);
                     }
                 }
             }
@@ -163,7 +163,7 @@ public class LocalWorkspaceTest {
 
                 } finally {
                     if (testPassed) {
-                        stack.getWorkspace().removeStack(stackName);
+                        stack.workspace().removeStack(stackName);
                     }
                 }
             }
