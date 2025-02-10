@@ -64,9 +64,9 @@ public class LocalSerializerJsonTest {
         assertThat(config)
                 .isNotNull()
                 .hasSize(2);
-        assertThat(config.get("aws:region").getValue()).isEqualTo("us-east-1");
+        assertThat(config.get("aws:region").value()).isEqualTo("us-east-1");
         assertThat(config.get("aws:region").isSecret()).isFalse();
-        assertThat(config.get("project:name").getValue()).isEqualTo("test");
+        assertThat(config.get("project:name").value()).isEqualTo("test");
         assertThat(config.get("project:name").isSecret()).isTrue();
     }
 

@@ -866,7 +866,7 @@ public final class LocalWorkspace extends Workspace {
         args.add(Objects.requireNonNull(stackName));
         args.add("--non-interactive");
         args.add("--");
-        args.add(value.getValue());
+        args.add(value.value());
         runCommand(args);
     }
 
@@ -889,7 +889,7 @@ public final class LocalWorkspace extends Workspace {
         for (var entry : configMap.entrySet()) {
             String secretArg = entry.getValue().isSecret() ? "--secret" : "--plaintext";
             args.add(secretArg);
-            args.add(entry.getKey() + "=" + entry.getValue().getValue());
+            args.add(entry.getKey() + "=" + entry.getValue().value());
         }
 
         runCommand(args);
