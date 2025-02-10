@@ -39,7 +39,7 @@ public class PluginInfo {
      *
      * @return the plugin name
      */
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -48,7 +48,7 @@ public class PluginInfo {
      *
      * @return the plugin kind
      */
-    public PluginKind getKind() {
+    public PluginKind kind() {
         return kind;
     }
 
@@ -58,7 +58,7 @@ public class PluginInfo {
      * @return the plugin version or {@code null}
      */
     @Nullable
-    public String getVersion() {
+    public String version() {
         return version;
     }
 
@@ -67,7 +67,7 @@ public class PluginInfo {
      *
      * @return the plugin size
      */
-    public long getSize() {
+    public long size() {
         return size;
     }
 
@@ -76,7 +76,7 @@ public class PluginInfo {
      *
      * @return the install time
      */
-    public Instant getInstallTime() {
+    public Instant installTime() {
         return installTime;
     }
 
@@ -85,7 +85,7 @@ public class PluginInfo {
      *
      * @return the last used time
      */
-    public Instant getLastUsedTime() {
+    public Instant lastUsedTime() {
         return lastUsedTime;
     }
 }

@@ -86,12 +86,12 @@ public class LocalSerializerJsonTest {
 
         var info = serializer.deserializeJson(json, PluginInfo.class);
         assertThat(info).isNotNull();
-        assertThat(info.getName()).isEqualTo("aws");
-        assertThat(info.getKind()).isEqualTo(PluginKind.RESOURCE);
-        assertThat(info.getVersion()).isEqualTo("3.19.2");
-        assertThat(info.getSize()).isEqualTo(258460028);
-        assertThat(info.getInstallTime()).isEqualTo(installTime);
-        assertThat(info.getLastUsedTime()).isEqualTo(lastUsedTime);
+        assertThat(info.name()).isEqualTo("aws");
+        assertThat(info.kind()).isEqualTo(PluginKind.RESOURCE);
+        assertThat(info.version()).isEqualTo("3.19.2");
+        assertThat(info.size()).isEqualTo(258460028);
+        assertThat(info.installTime()).isEqualTo(installTime);
+        assertThat(info.lastUsedTime()).isEqualTo(lastUsedTime);
     }
 
     @Test
