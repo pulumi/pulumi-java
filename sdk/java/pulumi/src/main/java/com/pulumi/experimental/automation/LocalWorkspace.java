@@ -1057,7 +1057,7 @@ public final class LocalWorkspace extends Workspace {
         if (newSecretsProvider.equals("passphrase")) {
             var message = "New passphrase must be set when using passphrase provider";
             Objects.requireNonNull(options, message);
-            var newPassphrase = options.getNewPassphrase();
+            var newPassphrase = options.newPassphrase();
             Objects.requireNonNull(newPassphrase, message);
             if (newPassphrase.isEmpty()) {
                 throw new IllegalArgumentException(message);
