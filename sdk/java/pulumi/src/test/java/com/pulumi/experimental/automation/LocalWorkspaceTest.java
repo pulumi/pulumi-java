@@ -67,17 +67,17 @@ public class LocalWorkspaceTest {
 
                     // exp_static
                     var expStaticValue = upResult.getOutputs().get("exp_static");
-                    assertThat(expStaticValue.getValue()).isEqualTo("foo");
+                    assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
                     // exp_cfg
                     var expConfigValue = upResult.getOutputs().get("exp_cfg");
-                    assertThat(expConfigValue.getValue()).isEqualTo("abc");
+                    assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
                     // exp_secret
                     var expSecretValue = upResult.getOutputs().get("exp_secret");
-                    assertThat(expSecretValue.getValue()).isEqualTo("secret");
+                    assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
                     // pulumi preview
@@ -132,17 +132,17 @@ public class LocalWorkspaceTest {
 
                     // exp_static
                     var expStaticValue = upResult.getOutputs().get("exp_static");
-                    assertThat(expStaticValue.getValue()).isEqualTo("foo");
+                    assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
                     // exp_cfg
                     var expConfigValue = upResult.getOutputs().get("exp_cfg");
-                    assertThat(expConfigValue.getValue()).isEqualTo("abc");
+                    assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
                     // exp_secret
                     var expSecretValue = upResult.getOutputs().get("exp_secret");
-                    assertThat(expSecretValue.getValue()).isEqualTo("secret");
+                    assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
                     // pulumi preview
