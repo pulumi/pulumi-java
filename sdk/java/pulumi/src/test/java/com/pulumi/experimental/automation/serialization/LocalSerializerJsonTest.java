@@ -155,12 +155,12 @@ public class LocalSerializerJsonTest {
                 .hasSize(2);
 
         var destroy = history.get(0);
-        assertThat(destroy.getKind()).isEqualTo(UpdateKind.DESTROY);
-        assertThat(destroy.getResult()).isEqualTo(UpdateState.IN_PROGRESS);
-        assertThat(destroy.getResourceChanges())
+        assertThat(destroy.kind()).isEqualTo(UpdateKind.DESTROY);
+        assertThat(destroy.result()).isEqualTo(UpdateState.IN_PROGRESS);
+        assertThat(destroy.resourceChanges())
                 .isNotNull()
                 .hasSize(2);
-        assertThat(destroy.getResourceChanges().get(OperationType.DELETE)).isEqualTo(3);
-        assertThat(destroy.getResourceChanges().get(OperationType.READ_DISCARD)).isEqualTo(1);
+        assertThat(destroy.resourceChanges().get(OperationType.DELETE)).isEqualTo(3);
+        assertThat(destroy.resourceChanges().get(OperationType.READ_DISCARD)).isEqualTo(1);
     }
 }

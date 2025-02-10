@@ -49,7 +49,7 @@ public final class UpdateSummary {
      *
      * @return the kind
      */
-    public UpdateKind getKind() {
+    public UpdateKind kind() {
         return kind;
     }
 
@@ -58,7 +58,7 @@ public final class UpdateSummary {
      *
      * @return the start time
      */
-    public Instant getStartTime() {
+    public Instant startTime() {
         return startTime;
     }
 
@@ -67,7 +67,7 @@ public final class UpdateSummary {
      *
      * @return the message
      */
-    public String getMessage() {
+    public String message() {
         return message;
     }
 
@@ -76,7 +76,7 @@ public final class UpdateSummary {
      *
      * @return the environment
      */
-    public Map<String, String> getEnvironment() {
+    public Map<String, String> environment() {
         return environment;
     }
 
@@ -85,7 +85,7 @@ public final class UpdateSummary {
      *
      * @return the configuration
      */
-    public Map<String, ConfigValue> getConfig() {
+    public Map<String, ConfigValue> config() {
         return config;
     }
 
@@ -94,7 +94,7 @@ public final class UpdateSummary {
      *
      * @return the result
      */
-    public UpdateState getResult() {
+    public UpdateState result() {
         return result;
     }
 
@@ -103,7 +103,7 @@ public final class UpdateSummary {
      *
      * @return the end time
      */
-    public Instant getEndTime() {
+    public Instant endTime() {
         return endTime;
     }
 
@@ -112,7 +112,7 @@ public final class UpdateSummary {
      *
      * @return the version
      */
-    public Integer getVersion() {
+    public Integer version() {
         return version;
     }
 
@@ -121,7 +121,7 @@ public final class UpdateSummary {
      *
      * @return the deployment
      */
-    public String getDeployment() {
+    public String deployment() {
         return deployment;
     }
 
@@ -130,7 +130,7 @@ public final class UpdateSummary {
      *
      * @return the changes
      */
-    public Map<OperationType, Integer> getResourceChanges() {
+    public Map<OperationType, Integer> resourceChanges() {
         return resourceChanges;
     }
 }

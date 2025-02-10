@@ -61,8 +61,8 @@ public class LocalWorkspaceTest {
 
                     // pulumi up
                     var upResult = stack.up();
-                    assertThat(upResult.summary().getKind()).isEqualTo(UpdateKind.UPDATE);
-                    assertThat(upResult.summary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                     assertThat(upResult.getOutputs().size()).isEqualTo(3);
 
                     // exp_static
@@ -87,13 +87,13 @@ public class LocalWorkspaceTest {
 
                     // pulumi refresh
                     var refreshResult = stack.refresh();
-                    assertThat(refreshResult.summary().getKind()).isEqualTo(UpdateKind.REFRESH);
-                    assertThat(refreshResult.summary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.REFRESH);
+                    assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
                     // pulumi destroy
                     var destroyResult = stack.destroy();
-                    assertThat(destroyResult.summary().getKind()).isEqualTo(UpdateKind.DESTROY);
-                    assertThat(destroyResult.summary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
+                    assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
 
                 } finally {
@@ -126,8 +126,8 @@ public class LocalWorkspaceTest {
 
                     // pulumi up
                     var upResult = stack.up();
-                    assertThat(upResult.summary().getKind()).isEqualTo(UpdateKind.UPDATE);
-                    assertThat(upResult.summary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                     assertThat(upResult.getOutputs().size()).isEqualTo(3);
 
                     // exp_static
@@ -152,13 +152,13 @@ public class LocalWorkspaceTest {
 
                     // pulumi refresh
                     var refreshResult = stack.refresh();
-                    assertThat(refreshResult.summary().getKind()).isEqualTo(UpdateKind.REFRESH);
-                    assertThat(refreshResult.summary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.REFRESH);
+                    assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
                     // pulumi destroy
                     var destroyResult = stack.destroy();
-                    assertThat(destroyResult.summary().getKind()).isEqualTo(UpdateKind.DESTROY);
-                    assertThat(destroyResult.summary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
+                    assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
 
                 } finally {
