@@ -87,6 +87,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             DeploymentState state
     ) {
         Supplier<DeploymentInstanceInternal> deployment = () -> state.deployment;
+        state.setDeployment(new DeploymentInstanceInternal(this));
         var monitor = state.monitor;
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
@@ -743,7 +744,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                         // Unmarshal return dependencies.
                         var dependencies = response.getReturnDependenciesMap().values().stream()
                                 .flatMap(deps -> deps.getUrnsList().stream()
-                                        .map(urn -> new DependencyResource(deployment.get(), urn)))
+                                        .map(urn -> new DependencyResource(urn)))
                                 .map(r -> (Resource) r)
                                 .collect(toImmutableSet());
                         return new CallRawAsyncResult(response.getReturn(), dependencies);
@@ -1022,7 +1023,9 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
 
     @Override
     public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
-        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options);
+        Function<String, Resource> newDependencyWrapped = urn ->
+                CurrentDeployment.withCurrentDeployment(this.state.deployment, () -> newDependency.apply(urn));
+        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependencyWrapped, args, options);
     }
 
     private static final class ReadOrRegisterResource {
@@ -1106,9 +1109,9 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                                     if (resource instanceof CustomResource) {
                                         var customResource = (CustomResource) resource;
                                         var isKnown = isNonEmptyOrNull(id);
-                                        customResource.setId(isKnown
-                                                ? out.of(id)
-                                                : new OutputInternal<>(deployment.get(), OutputData.unknown()));
+                                        Internal.from(customResource).setId(isKnown
+                                                ? new OutputInternal<>(deployment.get(), id)
+                                                : new OutputInternal<>(deployment.get(), OutputData.unknown())); // TODO: replace with OutputInternal.unknown()
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
@@ -1630,9 +1633,8 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             }
             return runAsync(() -> {
                 try {
-                    var constructor = stackType.getDeclaredConstructor(Deployment.class);
-                    Deployment d = deployment.get();
-                    var instance = constructor.newInstance(d);
+                    var constructor = stackType.getDeclaredConstructor();
+                    var instance = constructor.newInstance();
                     return instance;
                 } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
                     throw new IllegalArgumentException(String.format(
@@ -1646,12 +1648,15 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         @Override
         public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
             try {
-                var stack = stackFactory.get();
-                var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
+                CurrentDeployment.withCurrentDeployment(deployment.get(), () -> {
+                    var stack = stackFactory.get();
+                    var stackInternal = Internal.from(stack);
+                    // Stack doesn't call RegisterOutputs, so we register them on its behalf.
+                    stackInternal.registerPropertyOutputs();
+                    registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                            Internal.of(stackInternal.getOutputs()).getDataAsync());
+                    return (Void) null;
+                });
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }
@@ -1667,9 +1672,12 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         @Override
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
                                                          StackOptions options) {
-            var stack = Stack.InternalStatic.of(deployment.get(), callback, options);
-            registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                    Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+            CurrentDeployment.withCurrentDeployment(deployment.get(), () -> {
+                    var stack = StackInternal.of(callback, options);
+                    registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                                 Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+                    return (Void) null;
+            });
             return whileRunningAsync();
         }
 

@@ -16,11 +16,12 @@ env:
   PULUMI_API: https://api.pulumi-staging.io
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
-  PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 60000
+  PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 300000
   GPR_USER: ${{ secrets.GPR_USER }}
   GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
 
 jobs:
+
   prerequisites:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -69,6 +70,7 @@ jobs:
         run: make integration_tests
     strategy:
       fail-fast: true
+
   providers:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -126,7 +128,8 @@ jobs:
         run: make provider.${PROVIDER}.install
         env:
           PROVIDER: ${{ matrix.provider }}
-  example1:
+
+  example-aws-java-webserver:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -173,25 +176,15 @@ jobs:
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example aws-java-webserver
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.aws.build provider.aws.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            ss=0
-            cd tests/examples/aws-java-webserver &&
-            ./gradlew install || ((ss++))
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi preview || ((ss++))
-            exit $ss
-  example2:
+        run: make ensure_plugins
+      - name: Build AWS resource provider
+        run: make provider.aws.build provider.aws.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run aws-java-webserver example
+        run: make test_example.aws-java-webserver
+
+  example-azure-java-appservice-sql:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -229,38 +222,25 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
+        run: make ensure_plugins
       #- name: Auth
       #  uses: azure/login@v1
       #  with:
       #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
-      - env:
+      - name: Build Azure Native resource provider
+        run: make provider.azure-native.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example azure-java-appservice-sql
+        env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        name: run example azure-java-appservice-sql
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.azure-native.build
-          make provider.azure-native.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/azure-java-appservice-sql &&
-            ./gradlew install &&
-            ss=0
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi config set azure-native:location westus
-            pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
-            pulumi preview || ((ss++))
-            exit $ss
-  example3:
+        run: make test_example.azure-java-appservice-sql
+
+  example-gcp-java-gke-hello-world:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -298,32 +278,22 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
+        run: make ensure_plugins
       - uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: pulumi-development
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      - name: run example gcp-java-gke-hello-world
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.gcp.build provider.gcp.install
-          make provider.kubernetes.build provider.kubernetes.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/gcp-java-gke-hello-world &&
-            ss=0
-            ./gradlew install || ((ss++))
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi config set gcp:zone us-west1-a
-            pulumi preview || ((ss++))
-            exit $ss
-  example4:
+      - name: Build GCP resource provider
+        run: make provider.gcp.install
+      - name: Build Kubernetes resource provider
+        run: make provider.kubernetes.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example gcp-java-gke-hello-world
+        run: make test_example.gcp-java-gke-hello-world
+
+  example-minimal:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -359,29 +329,13 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example minimal
-        run: |
-          make bin/pulumi-language-jvm
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/minimal &&
-            ss=0
-            mvn --no-transfer-progress package || ((ss++))
-            pulumi destroy -s dev --yes || true
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi config set minimal:name foo
-            pulumi config set minimal:secret bar
-            pulumi preview || ((ss++))
-            pulumi up -s dev --yes || ((ss++))
-            pulumi destroy -s dev --yes || ((ss++))
-            exit $ss
-  example5:
+        run: make ensure_plugins
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example minimal
+        run: make test_example.minimal
+
+  example-aws-native-java-s3-folder:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -426,28 +380,17 @@ jobs:
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource aws-native v0.12.0
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example aws-native-java-s3-folder
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.aws.build provider.aws.install
-          make provider.aws-native.build provider.aws-native.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/aws-native-java-s3-folder &&
-            ss=0
-            ./gradlew install || ((ss++))
-            pulumi destroy -s dev --yes || true
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi preview || ((ss++))
-            exit $ss
-  example6:
+        run: make ensure_plugins
+      - name: Build AWS provider
+        run: make provider.aws.install
+      - name: Build AWS Native provider
+        run: make provider.aws-native.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example aws-native-java-s3-folder
+        run: make test_example.aws-native-java-s3-folder
+
+  example-azure-java-static-website:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -485,36 +428,27 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
+        run: make ensure_plugins
       #- name: Auth
       #  uses: azure/login@v1
       #  with:
       #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
-      - env:
+      - name: Build AWS provider
+        run: make provider.aws.install
+      - name: Build Azure Native provider
+        run: make provider.azure-native.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example azure-java-static-website
+        env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        name: run example azure-java-static-website
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.azure-native.build provider.azure-native.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/azure-java-static-website &&
-            ss=0
-            ./gradlew install || ((ss++))
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi config set azure-native:location westus
-            pulumi preview || ((ss++))
-            exit $ss
-  example7:
+        run: make test_example.azure-java-static-website
+
+  example-random:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -550,28 +484,16 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example random
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.random.build provider.random.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/random &&
-            ss=0
-            pulumi destroy -s dev --yes || true
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi preview || ((ss++))
-            pulumi up -s dev --yes || ((ss++))
-            pulumi destroy -s dev --yes || ((ss++))
-            exit $ss
+        run: make ensure_plugins
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Build random provider
+        run: make provider.random.install
+      - name: Run random example
+        run: make test_example.random
     strategy:
       fail-fast: true
+
   example-eks-minimal:
     runs-on: ubuntu-latest
     steps:
@@ -625,9 +547,10 @@ jobs:
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Run eks-minimal example
-        run: make test_cloud_example.eks-minimal
+        run: make test_example.eks-minimal
     strategy:
       fail-fast: true
+
   go-lint:
     runs-on: ubuntu-latest
     timeout-minutes: 10

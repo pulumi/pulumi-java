@@ -13,6 +13,7 @@ import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.ResourceException;
 
@@ -32,6 +33,9 @@ import static java.util.Objects.requireNonNull;
  */
 @ParametersAreNonnullByDefault
 public abstract class Resource {
+
+    protected final Deployment deployment;
+
     private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture<>();
 
     @Export(name = Constants.UrnPropertyName, type = String.class)
@@ -68,9 +72,9 @@ public abstract class Resource {
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
      */
-    protected Resource(Deployment deployment, String type, String name, boolean custom,
+    protected Resource(String type, String name, boolean custom,
                        ResourceArgs args, ResourceOptions options) {
-        this(deployment, type, name, custom, args, options, false, false);
+        this(type, name, custom, args, options, false, false);
     }
 
     /**
@@ -88,11 +92,10 @@ public abstract class Resource {
      * @param dependency true if this is a synthetic resource used internally for dependency tracking
      */
     protected Resource(
-            Deployment deployment,
             String type, String name, boolean custom,
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency) {
-        this(deployment, type, name, custom, args, options, remote, dependency, null);
+        this(type, name, custom, args, options, remote, dependency, null);
     }
 
     /**
@@ -101,7 +104,6 @@ public abstract class Resource {
      * "dependsOn" is an optional list of other resources that this resource depends on,
      * controlling the order in which we perform resource operations.
      *
-     * @param deployment current Deployment
      * @param type       the type of the resource
      * @param name       the unique name of the resource
      * @param custom     true to indicate that this is a custom resource, managed by a plugin
@@ -112,11 +114,12 @@ public abstract class Resource {
      * @param superInit  subclass initialization logic that needs to be run in superclass
      */
     protected Resource(
-            Deployment deployment,
             String type, String name, boolean custom,
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency, @Nullable Consumer<Resource> superInit
     ) {
+        this.deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+
         if (superInit != null) {
             superInit.accept(this);
         }
@@ -219,7 +222,7 @@ public abstract class Resource {
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
-                        urnInheritedChildAlias(deployment,
+                        urnInheritedChildAlias(
                                 this.name, options.parent.getResourceName(), parentAlias, this.type)
                 );
             }
@@ -269,13 +272,13 @@ public abstract class Resource {
         // resource constructor.
         var aliases = ImmutableList.<Output<String>>builder();
         for (var alias : options.getAliases()) {
-            aliases.add(collapseAliasToUrn(deployment, alias, name, type, options.parent));
+            aliases.add(collapseAliasToUrn(alias, name, type, options.parent));
         }
         this.aliases = aliases.build();
 
         // Finish initialisation with reflection asynchronously
         deploymentInternal.readOrRegisterResource(this, remote,
-                urn -> new DependencyResource(deployment, urn), args, options);
+                urn -> new DependencyResource(urn), args, options);
     }
 
     /**
@@ -338,12 +341,12 @@ public abstract class Resource {
     }
 
     private static Output<String> collapseAliasToUrn(
-            Deployment deployment,
             Output<Alias> alias,
             String defaultName,
             String defaultType,
             @Nullable Resource defaultParent
     ) {
+        var deployment = alias.getDeployment();
         var out = OutputBuilder.forDeployment(deployment);
         return alias.apply(a -> {
             if (a.getUrn().isPresent()) {
@@ -367,7 +370,7 @@ public abstract class Resource {
 
             var parentInfo = getParentInfo(defaultParent, a);
 
-            return Urn.create(deployment, name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
+            return Urn.create(name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
         });
     }
 
@@ -404,14 +407,13 @@ public abstract class Resource {
      * and the parent name changed.
      */
     private static Output<Alias> urnInheritedChildAlias(
-            @Nullable Deployment deployment,
-            String childName, String parentName, Output<String> parentAlias, String childType
-    ) {
+            String childName, String parentName, Output<String> parentAlias, String childType) {
         Objects.requireNonNull(childName);
         Objects.requireNonNull(parentName);
         Objects.requireNonNull(parentAlias);
         Objects.requireNonNull(childType);
 
+        var deployment = parentAlias.getDeployment();
         var out = OutputBuilder.forDeployment(deployment);
 
         // If the child name has the parent name as a prefix, then we make the assumption that
@@ -433,8 +435,7 @@ public abstract class Resource {
                             parentAliasUrn.lastIndexOf("::") + 2) + childName.substring(parentName.length()));
         }
 
-        var urn = Urn.create(deployment, aliasName,
-                out.of(childType), null, parentAlias, null, null);
+        var urn = Urn.create(aliasName, out.of(childType), null, parentAlias, null, null);
 
         return urn.applyValue(Alias::withUrn);
     }

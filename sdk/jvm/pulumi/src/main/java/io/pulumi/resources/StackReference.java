@@ -9,7 +9,7 @@ import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
@@ -51,23 +51,23 @@ public class StackReference extends CustomResource {
      * @param args    The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public StackReference(Deployment deployment, String name,
+    public StackReference(String name,
                           @Nullable StackReferenceArgs args,
                           @Nullable CustomResourceOptions options) {
         super(
-                deployment,
                 "pulumi:pulumi:StackReference",
                 name,
-                new StackReferenceArgs(ensureName(deployment, args, name)),
-                CustomResourceOptions.merge(options, CustomResourceOptions.builder(deployment)
-                        .id(ensureName(deployment, args, name))
+                new StackReferenceArgs(ensureName(args, name)),
+                CustomResourceOptions.merge(options, CustomResourceOptions.builder()
+                        .id(ensureName(args, name))
                         .build())
         );
     }
 
-    private static Output<String> ensureName(Deployment deployment, @Nullable StackReferenceArgs args, String name) {
-        var out = OutputBuilder.forDeployment(deployment);
-        return args == null ? out.of(name) : args.getName().orElse(out.of(name));
+    private static Output<String> ensureName(@Nullable StackReferenceArgs args, String name) {
+        var d = CurrentDeployment.getCurrentDeploymentOrThrow();
+        var defaultValue = OutputBuilder.forDeployment(d).of(name);
+        return args == null ? defaultValue : args.getName().orElse(defaultValue);
     }
 
     public Output<String> getName() {

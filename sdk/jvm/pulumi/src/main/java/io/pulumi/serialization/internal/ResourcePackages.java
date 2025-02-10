@@ -12,6 +12,7 @@ import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
 
@@ -156,10 +157,10 @@ public class ResourcePackages {
         // The search is approximate. We may need to consider using annotations instead in future versions.
         var constructorInfo =
                 Arrays.stream(resourceType.get().getDeclaredConstructors())
-                        .filter(c -> c.getParameterCount() == 4)
+                        .filter(c -> c.getParameterCount() == 3)
                         // Remove confusion of constructors with the second param of type:
                         //     Output<String> id
-                        .filter(c -> !c.getParameterTypes()[2].equals(Output.class))
+                        .filter(c -> !c.getParameterTypes()[1].equals(Output.class))
                         .collect(PulumiCollectors.toSingleton(cause ->
                                 new IllegalArgumentException(String.format(
                                         "Resource provider error. Could not find a constructor for resource %s" +
@@ -171,24 +172,27 @@ public class ResourcePackages {
 
         constructorInfo.setAccessible(true);
 
-        var resourceOptions = resolveResourceOptions(deployment, resourceType.get(), urn);
-        try {
-            var resource = (Resource) constructorInfo.newInstance(new Object[]{deployment, urnName, null, resourceOptions});
-            return Optional.of(resource);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            throw new IllegalArgumentException(String.format(
-                    "Couldn't instantiate the '%s' class using constructor: '%s', for resource type: '%s'",
-                    resourceType.get().getTypeName(), constructorInfo, type
-            ));
-        }
+        var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
+
+        return CurrentDeployment.withCurrentDeployment(deployment, () -> {
+            try {
+                var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
+                return Optional.of(resource);
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+                throw new IllegalArgumentException(String.format(
+                        "Couldn't instantiate the '%s' class using constructor: '%s', for resource type: '%s'",
+                        resourceType.get().getTypeName(), constructorInfo, type
+                ));
+            }
+        });
     }
 
-    private static ResourceOptions resolveResourceOptions(Deployment deployment, Class<?> resourceType, String urn) {
+    private static ResourceOptions resolveResourceOptions(Class<?> resourceType, String urn) {
         if (CustomResource.class.isAssignableFrom(resourceType)) {
-            return CustomResourceOptions.builder(deployment).urn(urn).build();
+            return CustomResourceOptions.builder().urn(urn).build();
         }
         if (ComponentResource.class.isAssignableFrom(resourceType)) {
-            return ComponentResourceOptions.builder(deployment).urn(urn).build();
+            return ComponentResourceOptions.builder().urn(urn).build();
         }
         throw new IllegalStateException(String.format("Unexpected resource type: '%s'", resourceType.getTypeName()));
     }

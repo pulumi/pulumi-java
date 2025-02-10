@@ -1,7 +1,6 @@
 package io.pulumi.serialization.internal;
 
 import com.google.gson.JsonParser;
-import io.pulumi.core.Output;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.deployment.MocksTest;

@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.InvokeArgs;
@@ -18,6 +19,16 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public interface Deployment {
+
+    /**
+     * The current running deployment instance. This is only available from inside the function
+     * passed to @see {@link Deployment#runAsync(Supplier)} (or its overloads).
+     *
+     * @throws IllegalStateException if called before 'run' was called
+     */
+    static DeploymentInstance getInstance() {
+        return (DeploymentInstance)CurrentDeployment.getCurrentDeploymentOrThrow();
+    }
 
     /**
      * @return the current stack name

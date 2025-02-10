@@ -13,8 +13,7 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.deployment.internal.TestOptions;
@@ -22,7 +21,6 @@ import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.ResourceArgs;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
@@ -30,6 +28,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -116,7 +115,7 @@ public class MocksTest {
                         "aws:iam/getRole:getRole",
                         of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
                 ).thenApply(ignore -> {
-                    var myInstance = new Instance(mock.getDeployment(),"instance", new InstanceArgs(), null);
+                    var myInstance = new Instance("instance", new InstanceArgs(), null);
 
                     return ImmutableMap.<String, Optional<Object>>builder()
                             .put("result", Optional.of("x"))
@@ -182,13 +181,32 @@ public class MocksTest {
         CompletableFuture.runAsync(() -> {}, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS)).join();
     }
 
+    @Test
+    public void testResourceCreationInApply() {
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+                .setOptions(new TestOptions(true))
+                .setMocks(new MyMocks())
+                .buildSpyInstance();
+
+        var resources = mock.testAsync(MyStackResourceInApply.class).join();
+
+        var stack = resources.stream()
+                .filter(r -> r instanceof MyStackResourceInApply)
+                .map(r -> (MyStackResourceInApply) r)
+                .findFirst();
+        assertThat(stack).isPresent();
+
+        var ip = OutputTests.waitFor(stack.get().publicIp).getValueNullable();
+        assertThat(ip).isEqualTo("203.0.113.12");
+    }
+
     @ResourceType(type = "aws:ec2/instance:Instance")
     public static class Instance extends CustomResource {
         @Export(type = String.class)
         public Output<String> publicIp;
 
-        public Instance(Deployment deployment, String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "aws:ec2/instance:Instance", name, args, options);
+        public Instance(String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
+            super("aws:ec2/instance:Instance", name, args, options);
         }
     }
 
@@ -200,8 +218,8 @@ public class MocksTest {
         @Export(type = Instance.class)
         public Output<Instance> instance;
 
-        public MyCustom(Deployment deployment, String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "pkg:index:MyCustom", name, args, options);
+        public MyCustom(String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
+            super("pkg:index:MyCustom", name, args, options);
         }
     }
 
@@ -210,8 +228,8 @@ public class MocksTest {
         @Nullable
         public final Output<Instance> instance;
 
-        public MyCustomArgs(Deployment deployment, @Nullable Instance instance) {
-            this.instance = OutputBuilder.forDeployment(deployment).of(instance);
+        public MyCustomArgs(@Nullable Instance instance) {
+            this.instance = Output.of(instance);
         }
     }
 
@@ -246,12 +264,27 @@ public class MocksTest {
         @Export(type = String.class)
         public final Output<String> publicIp;
 
-        public MyStack(Deployment deployment) {
-            super(deployment);
-            var myInstance = new Instance(deployment,"instance", new InstanceArgs(), null);
+        public MyStack() {
+            var myInstance = new Instance("instance", new InstanceArgs(), null);
             //noinspection unused
-            var res = new MyCustom(deployment,"mycustom", new MyCustomArgs(deployment, myInstance), null);
+            var res = new MyCustom("mycustom", new MyCustomArgs(myInstance), null);
             this.publicIp = myInstance.publicIp;
+        }
+    }
+
+    public static class MyStackResourceInApply extends Stack {
+        @Export(type = String.class)
+        public Output<String> publicIp;
+
+        public MyStackResourceInApply() {
+            System.out.println(Thread.currentThread());
+            var later = CompletableFuture.delayedExecutor(1, TimeUnit.MILLISECONDS);
+            Output.of(CompletableFuture.supplyAsync(() -> "instance")
+                            .thenApplyAsync(Function.identity(), later))
+                    .applyVoid(id -> {
+                        var myInstance = new Instance(id, new InstanceArgs(), null);
+                        this.publicIp = myInstance.publicIp;
+                    });
         }
     }
 

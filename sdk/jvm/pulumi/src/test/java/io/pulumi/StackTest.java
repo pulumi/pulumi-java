@@ -6,9 +6,8 @@ import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MocksTest;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
@@ -39,11 +38,9 @@ class StackTest {
         @Export(type = String.class)
         private final Output<String> implicitName;
 
-        public ValidStack(Deployment deployment) {
-            super(deployment);
-            var output = OutputBuilder.forDeployment(deployment);
-            this.explicitName = output.of("bar");
-            this.implicitName = output.of("buzz");
+        public ValidStack() {
+            this.explicitName = Output.of("bar");
+            this.implicitName = Output.of("buzz");
         }
 
         public Output<String> getExplicitName() {
@@ -57,7 +54,7 @@ class StackTest {
 
     @Test
     void testValidStackInstantiationSucceeds() {
-        var result = run(mock -> new ValidStack(mock.getDeployment()));
+        var result = run(mock -> new ValidStack());
         assertThat(result.t2).hasSize(3);
         assertThat(result.t2).containsKey("foo");
         assertThat(result.t2.get("foo")).isPresent();
@@ -77,19 +74,14 @@ class StackTest {
     }
 
     private static class NullOutputStack extends Stack {
-        public NullOutputStack(Deployment deployment) {
-            super(deployment);
-        }
-
         @SuppressWarnings("unused")
         @Export(name = "foo", type = String.class)
         public Output<String> foo = null;
-
     }
 
     @Test
     void testStackWithNullOutputsThrows() {
-        assertThatThrownBy(() -> run(mock -> new NullOutputStack(mock.getDeployment())))
+        assertThatThrownBy(() -> run(mock -> new NullOutputStack()))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have no value assigned");
     }
@@ -98,15 +90,14 @@ class StackTest {
         @Export(name = "foo", type = String.class)
         public String foo;
 
-        public InvalidOutputTypeStack(Deployment deployment) {
-            super(deployment);
+        public InvalidOutputTypeStack() {
             this.foo = "bar";
         }
     }
 
     @Test
     void testStackWithInvalidOutputTypeThrows() {
-        assertThatThrownBy(() -> run(mock -> new InvalidOutputTypeStack(mock.getDeployment())))
+        assertThatThrownBy(() -> run(mock -> new InvalidOutputTypeStack()))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have incorrect type");
     }
@@ -117,19 +108,22 @@ class StackTest {
                 .setOptions(new TestOptions("TestProject", "TestStack"))
                 .buildSpyInstance();
 
-        var stack = factory.apply(mock);
-        Internal.from(stack).registerPropertyOutputs();
+        return CurrentDeployment.withCurrentDeployment(mock.getDeployment(), () -> {
 
-        //noinspection unchecked
-        ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
+            var stack = factory.apply(mock);
+            Internal.from(stack).registerPropertyOutputs();
 
-        var di = DeploymentInternal.cast(mock.deployment);
+            //noinspection unchecked
+            ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
-        // TODO: is this OK that we're called twice?
-        verify(di, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+            var di = DeploymentInternal.cast(mock.deployment);
 
-        var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
-        return Tuples.of(stack, values);
+            // TODO: is this OK that we're called twice?
+            verify(di, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+
+            var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
+            return Tuples.of(stack, values);
+        });
     }
 
 }

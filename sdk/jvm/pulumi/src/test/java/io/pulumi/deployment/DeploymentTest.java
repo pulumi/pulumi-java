@@ -33,7 +33,7 @@ public class DeploymentTest {
         mock.overrideConfig("hello-jvm:name", "test");
 
         Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
-            var config = Config.of(mock.getDeployment(), "hello-jvm");
+            var config = Config.of("hello-jvm");
             //noinspection unused
             var ignore = config.require("name");
             return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
@@ -46,7 +46,7 @@ public class DeploymentTest {
     @Test
     void testConfigRequireMissing() {
         Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
-            var config = Config.of(mock.getDeployment(), "hello-jvm");
+            var config = Config.of("hello-jvm");
             //noinspection unused
             var ignore = config.require("missing");
             return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());

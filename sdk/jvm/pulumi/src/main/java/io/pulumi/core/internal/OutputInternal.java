@@ -2,8 +2,10 @@ package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
+import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.Resource;
 
@@ -45,10 +47,10 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public OutputInternal(Deployment deployment, CompletableFuture<OutputData<T>> dataFuture) {
-        this.deployment = Objects.requireNonNull(deployment);
-        this.dataFuture = Objects.requireNonNull(dataFuture);
-        var di = DeploymentInternal.cast(deployment);
-        di.getRunner().registerTask(this.getClass().getTypeName() + " -> " + dataFuture, dataFuture);
+        this.dataFuture = requireNonNull(dataFuture);
+        this.deployment = requireNonNull(deployment);
+        DeploymentInternal.cast(deployment).getRunner().registerTask(
+                this.getClass().getTypeName() + " -> " + dataFuture, dataFuture);
     }
 
     @InternalUse
@@ -59,9 +61,11 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
+        Function<T, Output<U>> funcWithDeployment = t ->
+                CurrentDeployment.withCurrentDeployment(this.deployment, () -> func.apply(t));
         return new OutputInternal<>(this.deployment, OutputData.apply(
                 dataFuture,
-                func.andThen(o -> Internal.of(o).getDataAsync())
+                funcWithDeployment.andThen(o -> Internal.of(o).getDataAsync())
         ));
     }
 
@@ -151,5 +155,10 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     @Override
     public Deployment getDeployment() {
         return deployment;
+    }
+
+    @InternalUse
+    public static final Output<Tuples.Tuple0> tupleZeroOut(Output baseOutput) {
+        return new OutputInternal<Tuples.Tuple0>(baseOutput.getDeployment(), Tuples.Tuple0.Empty);
     }
 }

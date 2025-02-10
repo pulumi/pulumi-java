@@ -228,4 +228,54 @@ public class OutputStaticsTest {
         assertThat(data2.isPresent()).isTrue();
         assertThat(data2.isKnown()).isTrue();
     }
+
+    /**
+     * If the user creates nulls through APIs we do not maintain that is fair game to throw NPE
+     */
+    @Test
+    void testExpectedNPEs() {
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        output.<Integer>empty().applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        output.<Integer>ofNullable(null)
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        output.of(1)
+                                .applyOptional(__ -> Optional.<Integer>ofNullable(null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        output.of(1)
+                                .apply(__ -> output.<Integer>ofNullable(null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        output.of(1)
+                                .applyFuture(__ -> CompletableFuture.<Integer>supplyAsync(() -> null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+    }
 }

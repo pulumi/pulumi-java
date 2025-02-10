@@ -15,8 +15,8 @@ import io.pulumi.resources.ResourceArgs;
  * Its only valid properties are its URN and ID.
  */
 public final class DependencyProviderResource extends ProviderResource {
-    public DependencyProviderResource(Deployment deployment, String reference) {
-        super(deployment, parsePackage(reference), "", ResourceArgs.Empty, /* no options */ null, true);
+    public DependencyProviderResource(String reference) {
+        super(parsePackage(reference), "", ResourceArgs.Empty, /* no options */ null, true);
 
         var urnAndId = parseReference(reference);
 
