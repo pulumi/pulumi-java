@@ -33,7 +33,7 @@ public class ProjectConfigItemsType {
      *
      * @return the type of the configuration item
      */
-    public String getType() {
+    public String type() {
         return type;
     }
 
@@ -43,7 +43,7 @@ public class ProjectConfigItemsType {
      * @return the configuration items
      */
     @Nullable
-    public ProjectConfigItemsType getItems() {
+    public ProjectConfigItemsType items() {
         return items;
     }
 
