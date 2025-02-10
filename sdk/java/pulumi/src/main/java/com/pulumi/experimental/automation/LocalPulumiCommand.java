@@ -278,12 +278,12 @@ public class LocalPulumiCommand implements PulumiCommand {
     }
 
     static CommandException createExceptionFromResult(CommandResult result) {
-        if (NOT_FOUND_REGEX_PATTERN.matcher(result.getStandardError()).find()) {
+        if (NOT_FOUND_REGEX_PATTERN.matcher(result.standardError()).find()) {
             return new StackNotFoundException(result);
-        } else if (ALREADY_EXISTS_REGEX_PATTERN.matcher(result.getStandardError()).find()) {
+        } else if (ALREADY_EXISTS_REGEX_PATTERN.matcher(result.standardError()).find()) {
             return new StackAlreadyExistsException(result);
-        } else if (result.getStandardError().indexOf(CONFLICT_TEXT) >= 0 ||
-                result.getStandardError().indexOf(LOCAL_BACKEND_CONFLICT_TEXT) >= 0) {
+        } else if (result.standardError().indexOf(CONFLICT_TEXT) >= 0 ||
+                result.standardError().indexOf(LOCAL_BACKEND_CONFLICT_TEXT) >= 0) {
             return new ConcurrentUpdateException(result);
         } else {
             return new CommandException(result);

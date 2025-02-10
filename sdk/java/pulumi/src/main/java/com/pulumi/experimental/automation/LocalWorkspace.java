@@ -653,7 +653,7 @@ public final class LocalWorkspace extends Workspace {
     public WhoAmIResult whoAmI() throws AutomationException {
         var args = List.of("whoami", "--json");
         var result = runCommand(args);
-        return serializer.deserializeJson(result.getStandardOutput(), WhoAmIResult.class);
+        return serializer.deserializeJson(result.standardOutput(), WhoAmIResult.class);
     }
 
     /**
@@ -699,13 +699,13 @@ public final class LocalWorkspace extends Workspace {
     public List<StackSummary> listStacks() throws AutomationException {
         var args = List.of("stack", "ls", "--json");
         var result = runCommand(args);
-        if (result.getStandardOutput().isBlank()) {
+        if (result.standardOutput().isBlank()) {
             return Collections.emptyList();
         }
 
         var listType = new TypeToken<List<StackSummary>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), listType);
+        return serializer.deserializeJson(result.standardOutput(), listType);
     }
 
     /**
@@ -715,7 +715,7 @@ public final class LocalWorkspace extends Workspace {
     public StackDeployment exportStack(String stackName) throws AutomationException {
         var args = List.of("stack", "export", "--stack", Objects.requireNonNull(stackName), "--show-secrets");
         var result = runCommand(args);
-        return StackDeployment.fromJson(result.getStandardOutput());
+        return StackDeployment.fromJson(result.standardOutput());
     }
 
     /**
@@ -776,7 +776,7 @@ public final class LocalWorkspace extends Workspace {
         var args = List.of("stack", "tag", "get", Objects.requireNonNull(key), "--stack",
                 Objects.requireNonNull(stackName));
         var result = runCommand(args);
-        return result.getStandardOutput().trim();
+        return result.standardOutput().trim();
     }
 
     /**
@@ -809,7 +809,7 @@ public final class LocalWorkspace extends Workspace {
 
         var mapType = new TypeToken<Map<String, String>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), mapType);
+        return serializer.deserializeJson(result.standardOutput(), mapType);
     }
 
     /**
@@ -829,7 +829,7 @@ public final class LocalWorkspace extends Workspace {
         args.add(Objects.requireNonNull(stackName));
         var result = runCommand(args);
 
-        return serializer.deserializeJson(result.getStandardOutput(), ConfigValue.class);
+        return serializer.deserializeJson(result.standardOutput(), ConfigValue.class);
     }
 
     /**
@@ -839,12 +839,12 @@ public final class LocalWorkspace extends Workspace {
     public Map<String, ConfigValue> getAllConfig(String stackName) throws AutomationException {
         var args = List.of("config", "--show-secrets", "--json", "--stack", Objects.requireNonNull(stackName));
         var result = runCommand(args);
-        if (result.getStandardOutput().isBlank()) {
+        if (result.standardOutput().isBlank()) {
             return Collections.emptyMap();
         }
         var mapType = new TypeToken<Map<String, ConfigValue>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), mapType);
+        return serializer.deserializeJson(result.standardOutput(), mapType);
     }
 
     /**
@@ -1008,7 +1008,7 @@ public final class LocalWorkspace extends Workspace {
 
         var listType = new TypeToken<List<PluginInfo>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), listType);
+        return serializer.deserializeJson(result.standardOutput(), listType);
     }
 
     /**
@@ -1022,8 +1022,8 @@ public final class LocalWorkspace extends Workspace {
         var maskedResult = runCommand(List.of("stack", "output", "--json", "--stack", stackName));
         var plaintextResult = runCommand(List.of("stack", "output", "--json", "--show-secrets", "--stack", stackName));
 
-        var maskedStdout = maskedResult.getStandardOutput().trim();
-        var plaintextStdout = plaintextResult.getStandardOutput().trim();
+        var maskedStdout = maskedResult.standardOutput().trim();
+        var plaintextStdout = plaintextResult.standardOutput().trim();
 
         var type = new TypeToken<Map<String, String>>() {
         }.getType();

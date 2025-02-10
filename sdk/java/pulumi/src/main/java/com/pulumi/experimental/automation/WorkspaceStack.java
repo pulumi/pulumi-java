@@ -474,8 +474,8 @@ public final class WorkspaceStack implements AutoCloseable {
             var showSecrets = options != null && options.isShowSecrets();
             var summary = getInfo(showSecrets);
             return new UpResult(
-                    upResult.getStandardOutput(),
-                    upResult.getStandardError(),
+                    upResult.standardOutput(),
+                    upResult.standardError(),
                     summary.get(),
                     output);
         } catch (AutomationException e) {
@@ -605,8 +605,8 @@ public final class WorkspaceStack implements AutoCloseable {
             }
 
             return new PreviewResult(
-                    result.getStandardOutput(),
-                    result.getStandardError(),
+                    result.standardOutput(),
+                    result.standardError(),
                     summaryEvent[0].getResourceChanges());
         } catch (AutomationException e) {
             throw e;
@@ -688,8 +688,8 @@ public final class WorkspaceStack implements AutoCloseable {
         var showSecrets = options != null && options.isShowSecrets();
         var summary = getInfo(showSecrets);
         return new UpdateResult(
-                result.getStandardOutput(),
-                result.getStandardError(),
+                result.standardOutput(),
+                result.standardError(),
                 summary.get());
     }
 
@@ -747,8 +747,8 @@ public final class WorkspaceStack implements AutoCloseable {
         var showSecrets = options != null && options.isShowSecrets();
         var summary = getInfo(showSecrets);
         return new UpdateResult(
-                result.getStandardOutput(),
-                result.getStandardError(),
+                result.standardOutput(),
+                result.standardError(),
                 summary.get());
     }
 
@@ -810,14 +810,14 @@ public final class WorkspaceStack implements AutoCloseable {
         }
 
         var result = runCommand(args);
-        if (result.getStandardOutput().isBlank()) {
+        if (result.standardOutput().isBlank()) {
             return Collections.emptyList();
         }
 
         var serializer = new LocalSerializer();
         var listType = new TypeToken<List<UpdateSummary>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), listType);
+        return serializer.deserializeJson(result.standardOutput(), listType);
     }
 
     /**
