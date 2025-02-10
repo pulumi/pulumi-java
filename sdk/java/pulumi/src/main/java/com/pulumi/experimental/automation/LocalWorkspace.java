@@ -455,7 +455,7 @@ public final class LocalWorkspace extends Workspace {
      * {@inheritDoc}
      */
     @Override
-    public Path getWorkDir() {
+    public Path workDir() {
         return workDir;
     }
 
@@ -464,7 +464,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public Path getPulumiHome() {
+    public Path pulumiHome() {
         return pulumiHome;
     }
 
@@ -472,7 +472,7 @@ public final class LocalWorkspace extends Workspace {
      * {@inheritDoc}
      */
     @Override
-    public String getPulumiVersion() {
+    public String pulumiVersion() {
         var version = cmd.version();
         if (version == null) {
             throw new IllegalStateException("Failed to get Pulumi version");
@@ -485,7 +485,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public String getSecretsProvider() {
+    public String secretsProvider() {
         return secretsProvider;
     }
 
@@ -494,7 +494,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public Consumer<Context> getProgram() {
+    public Consumer<Context> program() {
         return program;
     }
 
@@ -503,7 +503,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public Logger getLogger() {
+    public Logger logger() {
         return logger;
     }
 
@@ -511,7 +511,7 @@ public final class LocalWorkspace extends Workspace {
      * {@inheritDoc}
      */
     @Override
-    public Map<String, String> getEnvironmentVariables() {
+    public Map<String, String> environmentVariables() {
         return environmentVariables;
     }
 

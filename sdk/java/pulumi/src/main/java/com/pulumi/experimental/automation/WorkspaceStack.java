@@ -387,8 +387,8 @@ public final class WorkspaceStack implements AutoCloseable {
      */
     public UpResult up(UpOptions options) throws AutomationException {
         var execKind = ExecKind.Local;
-        var program = this.workspace.getProgram();
-        var logger = this.workspace.getLogger();
+        var program = this.workspace.program();
+        var logger = this.workspace.logger();
         var args = new ArrayList<String>();
         args.add("up");
         args.add("--yes");
@@ -508,8 +508,8 @@ public final class WorkspaceStack implements AutoCloseable {
      */
     public PreviewResult preview(PreviewOptions options) throws AutomationException {
         var execKind = ExecKind.Local;
-        var program = this.workspace.getProgram();
-        var logger = this.workspace.getLogger();
+        var program = this.workspace.program();
+        var logger = this.workspace.logger();
         var args = new ArrayList<String>();
         args.add("preview");
 
@@ -671,7 +671,7 @@ public final class WorkspaceStack implements AutoCloseable {
             applyUpdateOptions(options, args);
         }
 
-        var execKind = workspace.getProgram() == null ? ExecKind.Local : ExecKind.Inline;
+        var execKind = workspace.program() == null ? ExecKind.Local : ExecKind.Inline;
         args.add("--exec-kind");
         args.add(execKind);
 
@@ -730,7 +730,7 @@ public final class WorkspaceStack implements AutoCloseable {
             applyUpdateOptions(options, args);
         }
 
-        var execKind = workspace.getProgram() == null ? ExecKind.Local : ExecKind.Inline;
+        var execKind = workspace.program() == null ? ExecKind.Local : ExecKind.Inline;
         args.add("--exec-kind");
         args.add(execKind);
 

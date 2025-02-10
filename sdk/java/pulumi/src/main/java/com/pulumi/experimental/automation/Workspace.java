@@ -35,7 +35,7 @@ public abstract class Workspace implements AutoCloseable {
      *
      * @return the working directory
      */
-    public abstract Path getWorkDir();
+    public abstract Path workDir();
 
     /**
      * The directory override for CLI metadata if set.
@@ -46,14 +46,14 @@ public abstract class Workspace implements AutoCloseable {
      * @return the directory override
      */
     @Nullable
-    public abstract Path getPulumiHome();
+    public abstract Path pulumiHome();
 
     /**
      * The version of the underlying Pulumi CLI/Engine.
      *
      * @return the version
      */
-    public abstract String getPulumiVersion();
+    public abstract String pulumiVersion();
 
     /**
      * The secrets provider to use for encryption and decryption of stack secrets.
@@ -64,7 +64,7 @@ public abstract class Workspace implements AutoCloseable {
      * @return the secrets provider
      */
     @Nullable
-    public abstract String getSecretsProvider();
+    public abstract String secretsProvider();
 
     /**
      * The inline program to be used for Preview/Update operations if any.
@@ -75,17 +75,17 @@ public abstract class Workspace implements AutoCloseable {
      * @return the inline program
      */
     @Nullable
-    public abstract Consumer<Context> getProgram();
+    public abstract Consumer<Context> program();
 
     /**
      * A custom logger instance that will be used for the action. Note that it will
      * only be used
-     * {@link Workspace#getProgram()} is also provided.
+     * {@link Workspace#program()} is also provided.
      *
      * @return The logger
      */
     @Nullable
-    public abstract Logger getLogger();
+    public abstract Logger logger();
 
     /**
      * Environment values scoped to the current workspace. These will be supplied to
@@ -93,7 +93,7 @@ public abstract class Workspace implements AutoCloseable {
      *
      * @return the environment variables
      */
-    public abstract Map<String, String> getEnvironmentVariables();
+    public abstract Map<String, String> environmentVariables();
 
     /**
      * Returns project settings for the current project if any.
@@ -544,7 +544,7 @@ public abstract class Workspace implements AutoCloseable {
     CommandResult runCommand(List<String> args, CommandRunOptions options) throws AutomationException {
         var env = new HashMap<String, String>();
 
-        var pulumiHome = getPulumiHome();
+        var pulumiHome = pulumiHome();
         if (pulumiHome != null) {
             var pulumiHomeStr = pulumiHome.toString();
             if (!pulumiHomeStr.isBlank()) {
@@ -552,13 +552,13 @@ public abstract class Workspace implements AutoCloseable {
             }
         }
 
-        var envVars = getEnvironmentVariables();
+        var envVars = environmentVariables();
         if (envVars != null) {
             env.putAll(envVars);
         }
 
         options = options.withAdditionalEnv(env);
-        options = options.withWorkingDir(getWorkDir());
+        options = options.withWorkingDir(workDir());
         return cmd.run(args, options);
     }
 }
