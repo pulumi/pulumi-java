@@ -14,6 +14,9 @@ import com.pulumi.experimental.automation.serialization.internal.SkipIfFalse;
 public class ProjectTemplateConfigValue {
     @Nullable
     private String description;
+    // We can't use `default` as a field name because it's a reserved keyword in
+    // Java. We use `default_` instead and our serializer automatically strips the
+    // underscore.
     @Nullable
     private String default_;
     @SkipIfFalse

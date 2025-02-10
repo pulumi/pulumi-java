@@ -18,6 +18,9 @@ public class ProjectConfigType {
     private final String description;
     @Nullable
     private final ProjectConfigItemsType items;
+    // We can't use `default` as a field name because it's a reserved keyword in
+    // Java. We use `default_` instead and our serializer automatically strips the
+    // underscore.
     @Nullable
     private final Object default_;
     @Nullable
