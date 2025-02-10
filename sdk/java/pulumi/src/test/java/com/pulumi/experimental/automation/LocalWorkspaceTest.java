@@ -82,7 +82,7 @@ public class LocalWorkspaceTest {
 
                     // pulumi preview
                     var previewResult = stack.preview();
-                    var sameCount = previewResult.getChangeSummary().get(OperationType.SAME);
+                    var sameCount = previewResult.changeSummary().get(OperationType.SAME);
                     assertThat(sameCount).isEqualTo(1);
 
                     // pulumi refresh
@@ -147,7 +147,7 @@ public class LocalWorkspaceTest {
 
                     // pulumi preview
                     var previewResult = stack.preview();
-                    var sameCount = previewResult.getChangeSummary().get(OperationType.SAME);
+                    var sameCount = previewResult.changeSummary().get(OperationType.SAME);
                     assertThat(sameCount).isEqualTo(1);
 
                     // pulumi refresh

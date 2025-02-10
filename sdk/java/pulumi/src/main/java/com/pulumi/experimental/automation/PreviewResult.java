@@ -26,7 +26,7 @@ public class PreviewResult {
      *
      * @return the standard output
      */
-    public String getStandardOutput() {
+    public String standardOutput() {
         return standardOutput;
     }
 
@@ -35,7 +35,7 @@ public class PreviewResult {
      *
      * @return the standard error
      */
-    public String getStandardError() {
+    public String standardError() {
         return standardError;
     }
 
@@ -45,7 +45,7 @@ public class PreviewResult {
      *
      * @return
      */
-    public Map<OperationType, Integer> getChangeSummary() {
+    public Map<OperationType, Integer> changeSummary() {
         return changeSummary;
     }
 }
