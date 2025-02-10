@@ -662,9 +662,9 @@ public final class WorkspaceStack implements AutoCloseable {
             if (options.getImportPendingCreates() != null) {
                 for (var item : options.getImportPendingCreates()) {
                     args.add("--import-pending-creates");
-                    args.add(item.getUrn());
+                    args.add(item.urn());
                     args.add("--import-pending-creates");
-                    args.add(item.getId());
+                    args.add(item.id());
                 }
             }
 
