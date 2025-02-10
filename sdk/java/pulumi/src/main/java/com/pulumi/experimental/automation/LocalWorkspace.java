@@ -978,16 +978,16 @@ public final class LocalWorkspace extends Workspace {
         args.add("plugin");
         args.add("rm");
 
-        var kind = options != null ? options.getKind() : PluginKind.RESOURCE;
+        var kind = options != null ? options.kind() : PluginKind.RESOURCE;
         args.add(kind.toString().toLowerCase());
 
         if (options != null) {
-            var name = options.getName();
+            var name = options.name();
             if (name != null && !name.isBlank()) {
                 args.add(name);
             }
 
-            var versionRange = options.getVersionRange();
+            var versionRange = options.versionRange();
             if (versionRange != null && !versionRange.isBlank()) {
                 args.add(versionRange);
             }

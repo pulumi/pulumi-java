@@ -35,7 +35,7 @@ public final class PluginRemoveOptions {
      * @return the name of the plugin
      */
     @Nullable
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -46,7 +46,7 @@ public final class PluginRemoveOptions {
      * @return the semver range
      */
     @Nullable
-    public String getVersionRange() {
+    public String versionRange() {
         return versionRange;
     }
 
@@ -55,7 +55,7 @@ public final class PluginRemoveOptions {
      *
      * @return the kind of plugin
      */
-    public PluginKind getKind() {
+    public PluginKind kind() {
         return kind;
     }
 
