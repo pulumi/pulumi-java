@@ -56,6 +56,15 @@ public class ProjectOptions {
     }
 
     /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    public Builder toBuilder() {
+        return new Builder().refresh(refresh);
+    }
+
+    /**
      * Builder for {@link ProjectOptions}.
      */
     public static class Builder {
@@ -73,7 +82,7 @@ public class ProjectOptions {
          *                update / preview / destroy
          * @return the builder
          */
-        public Builder url(String refresh) {
+        public Builder refresh(String refresh) {
             this.refresh = refresh;
             return this;
         }

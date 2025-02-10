@@ -6,6 +6,8 @@ import java.util.Objects;
 
 import javax.annotation.Nullable;
 
+import com.pulumi.experimental.automation.serialization.internal.SkipIfFalse;
+
 /**
  * The project configuration type.
  */
@@ -16,17 +18,21 @@ public class ProjectConfigType {
     private final String description;
     @Nullable
     private final ProjectConfigItemsType items;
+    // We can't use `default` as a field name because it's a reserved keyword in
+    // Java. We use `default_` instead and our serializer automatically strips the
+    // underscore.
     @Nullable
-    private final Object defaultValue;
+    private final Object default_;
     @Nullable
     private final Object value;
+    @SkipIfFalse
     private final boolean secret;
 
     private ProjectConfigType(Builder builder) {
         type = builder.type;
         description = builder.description;
         items = builder.items;
-        defaultValue = builder.defaultValue;
+        default_ = builder.default_;
         value = builder.value;
         secret = builder.secret;
     }
@@ -76,8 +82,8 @@ public class ProjectConfigType {
      * @return the default value of the configuration
      */
     @Nullable
-    public Object getDefaultValue() {
-        return defaultValue;
+    public Object getDefault() {
+        return default_;
     }
 
     /**
@@ -111,14 +117,29 @@ public class ProjectConfigType {
         return Objects.equals(type, that.type) &&
                 Objects.equals(description, that.description) &&
                 Objects.equals(items, that.items) &&
-                Objects.equals(defaultValue, that.defaultValue) &&
+                Objects.equals(default_, that.default_) &&
                 Objects.equals(value, that.value) &&
                 secret == that.secret;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, description, items, defaultValue, value, secret);
+        return Objects.hash(type, description, items, default_, value, secret);
+    }
+
+    /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    public Builder toBuilder() {
+        return new Builder()
+                .type(type)
+                .description(description)
+                .items(items)
+                .default_(default_)
+                .value(value)
+                .secret(secret);
     }
 
     /**
@@ -132,7 +153,7 @@ public class ProjectConfigType {
         @Nullable
         private ProjectConfigItemsType items;
         @Nullable
-        private Object defaultValue;
+        private Object default_;
         @Nullable
         private Object value;
         private boolean secret;
@@ -176,11 +197,11 @@ public class ProjectConfigType {
         /**
          * The default value of the configuration.
          *
-         * @param defaultValue the default value of the configuration
+         * @param default_ the default value of the configuration
          * @return the builder
          */
-        public Builder defaultValue(Object defaultValue) {
-            this.defaultValue = defaultValue;
+        public Builder default_(Object default_) {
+            this.default_ = default_;
             return this;
         }
 

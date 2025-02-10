@@ -4,6 +4,8 @@ package com.pulumi.experimental.automation;
 
 import java.util.Collections;
 import java.util.Map;
+import java.util.Objects;
+
 import javax.annotation.Nullable;
 
 /**
@@ -12,17 +14,20 @@ import javax.annotation.Nullable;
  */
 public class StackSettings {
     @Nullable
-    private final String secretsProvider;
+    private final String secretsprovider;
     @Nullable
-    private final String encryptedKey;
+    private final String encryptedkey;
     @Nullable
-    private final String encryptionSalt;
+    private final String encryptionsalt;
     private final Map<String, StackSettingsConfigValue> config;
 
+    // TODO: Add support for `environment`:
+    // https://github.com/pulumi/pulumi-java/issues/1654
+
     private StackSettings(Builder builder) {
-        this.secretsProvider = builder.secretsProvider;
-        this.encryptedKey = builder.encryptedKey;
-        this.encryptionSalt = builder.encryptionSalt;
+        this.secretsprovider = builder.secretsprovider;
+        this.encryptedkey = builder.encryptedkey;
+        this.encryptionsalt = builder.encryptionsalt;
         this.config = builder.config == null
                 ? Collections.emptyMap()
                 : Collections.unmodifiableMap(builder.config);
@@ -44,7 +49,7 @@ public class StackSettings {
      */
     @Nullable
     public String getSecretsProvider() {
-        return secretsProvider;
+        return secretsprovider;
     }
 
     /**
@@ -55,7 +60,7 @@ public class StackSettings {
      */
     @Nullable
     public String getEncryptedKey() {
-        return encryptedKey;
+        return encryptedkey;
     }
 
     /**
@@ -66,7 +71,7 @@ public class StackSettings {
      */
     @Nullable
     public String getEncryptionSalt() {
-        return encryptionSalt;
+        return encryptionsalt;
     }
 
     /**
@@ -78,6 +83,26 @@ public class StackSettings {
         return config;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        var that = (StackSettings) o;
+        return Objects.equals(secretsprovider, that.secretsprovider) &&
+                Objects.equals(encryptedkey, that.encryptedkey) &&
+                Objects.equals(encryptionsalt, that.encryptionsalt) &&
+                Objects.equals(config, that.config);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(secretsprovider, encryptedkey, encryptionsalt, config);
+    }
+
     /**
      * Creates a new {@link Builder} initialized with the values from this instance.
      *
@@ -85,9 +110,9 @@ public class StackSettings {
      */
     public Builder toBuilder() {
         return new Builder()
-                .secretsProvider(secretsProvider)
-                .encryptedKey(encryptedKey)
-                .encryptionSalt(encryptionSalt)
+                .secretsProvider(secretsprovider)
+                .encryptedKey(encryptedkey)
+                .encryptionSalt(encryptionsalt)
                 .config(config.isEmpty() ? null : config);
     }
 
@@ -96,11 +121,11 @@ public class StackSettings {
      */
     public static class Builder {
         @Nullable
-        private String secretsProvider;
+        private String secretsprovider;
         @Nullable
-        private String encryptedKey;
+        private String encryptedkey;
         @Nullable
-        private String encryptionSalt;
+        private String encryptionsalt;
         @Nullable
         private Map<String, StackSettingsConfigValue> config;
 
@@ -114,7 +139,7 @@ public class StackSettings {
          * @return the builder
          */
         public Builder secretsProvider(@Nullable String secretsProvider) {
-            this.secretsProvider = secretsProvider;
+            this.secretsprovider = secretsProvider;
             return this;
         }
 
@@ -126,7 +151,7 @@ public class StackSettings {
          * @return the builder
          */
         public Builder encryptedKey(@Nullable String encryptedKey) {
-            this.encryptedKey = encryptedKey;
+            this.encryptedkey = encryptedKey;
             return this;
         }
 
@@ -138,7 +163,7 @@ public class StackSettings {
          * @return the builder
          */
         public Builder encryptionSalt(@Nullable String encryptionSalt) {
-            this.encryptionSalt = encryptionSalt;
+            this.encryptionsalt = encryptionSalt;
             return this;
         }
 

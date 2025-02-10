@@ -2,20 +2,22 @@
 
 package com.pulumi.experimental.automation;
 
+import java.util.Objects;
+
 /**
  * Represents a configuration value for a stack.
  */
 public class StackSettingsConfigValue {
-    private final String value;
-    private final boolean isSecure;
+    private final Object value;
+    private final boolean secure;
 
-    public StackSettingsConfigValue(String value) {
+    public StackSettingsConfigValue(Object value) {
         this(value, false);
     }
 
-    public StackSettingsConfigValue(String value, boolean isSecure) {
+    public StackSettingsConfigValue(Object value, boolean isSecure) {
         this.value = value;
-        this.isSecure = isSecure;
+        this.secure = isSecure;
     }
 
     /**
@@ -23,7 +25,7 @@ public class StackSettingsConfigValue {
      *
      * @return the value
      */
-    public String getValue() {
+    public Object getValue() {
         return value;
     }
 
@@ -33,6 +35,24 @@ public class StackSettingsConfigValue {
      * @return true if the value is secure
      */
     public boolean isSecure() {
-        return isSecure;
+        return secure;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        var that = (StackSettingsConfigValue) o;
+        return Objects.equals(value, that.value) &&
+                secure == that.secure;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, secure);
     }
 }

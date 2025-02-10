@@ -6,7 +6,7 @@ import java.util.Objects;
 
 import javax.annotation.Nullable;
 
-import com.google.gson.annotations.SerializedName;
+import com.pulumi.experimental.automation.serialization.internal.SkipIfFalse;
 
 /**
  * A placeholder config value for a project template.
@@ -14,9 +14,12 @@ import com.google.gson.annotations.SerializedName;
 public class ProjectTemplateConfigValue {
     @Nullable
     private String description;
-    @SerializedName("default")
+    // We can't use `default` as a field name because it's a reserved keyword in
+    // Java. We use `default_` instead and our serializer automatically strips the
+    // underscore.
     @Nullable
-    private String defaultValue;
+    private String default_;
+    @SkipIfFalse
     private boolean secret;
 
     /**
@@ -33,27 +36,27 @@ public class ProjectTemplateConfigValue {
      * Creates a new {@link ProjectTemplateConfigValue}.
      *
      * @param description  the description of the config value
-     * @param defaultValue the default value
+     * @param default_ the default value
      */
     public ProjectTemplateConfigValue(
             @Nullable String description,
-            @Nullable String defaultValue) {
-        this(description, defaultValue, false);
+            @Nullable String default_) {
+        this(description, default_, false);
     }
 
     /**
      * Creates a new {@link ProjectTemplateConfigValue}.
      *
      * @param description  the description of the config value
-     * @param defaultValue the default value
+     * @param default_ the default value
      * @param secret       whether the value should be treated as secret
      */
     public ProjectTemplateConfigValue(
             @Nullable String description,
-            @Nullable String defaultValue,
+            @Nullable String default_,
             boolean secret) {
         this.description = description;
-        this.defaultValue = defaultValue;
+        this.default_ = default_;
         this.secret = secret;
     }
 
@@ -73,8 +76,8 @@ public class ProjectTemplateConfigValue {
      * @return the default value
      */
     @Nullable
-    public String getDefaultValue() {
-        return defaultValue;
+    public String getDefault() {
+        return default_;
     }
 
     /**
@@ -98,11 +101,11 @@ public class ProjectTemplateConfigValue {
         var that = (ProjectTemplateConfigValue) o;
         return secret == that.secret
                 && Objects.equals(description, that.description)
-                && Objects.equals(defaultValue, that.defaultValue);
+                && Objects.equals(default_, that.default_);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(description, defaultValue, secret);
+        return Objects.hash(description, default_, secret);
     }
 }

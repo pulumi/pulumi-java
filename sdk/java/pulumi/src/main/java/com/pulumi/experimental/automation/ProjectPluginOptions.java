@@ -78,6 +78,18 @@ public class ProjectPluginOptions {
     }
 
     /**
+     * Creates a new {@link Builder} initialized with the values from this instance.
+     *
+     * @return a new {@link Builder} with values copied from this instance
+     */
+    public Builder toBuilder() {
+        return new Builder()
+                .name(name)
+                .version(version)
+                .path(path);
+    }
+
+    /**
      * Builder for {@link ProjectPluginOptions}.
      */
     public static class Builder {

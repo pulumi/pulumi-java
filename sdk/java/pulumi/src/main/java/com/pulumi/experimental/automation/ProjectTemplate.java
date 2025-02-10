@@ -8,24 +8,34 @@ import java.util.Objects;
 
 import javax.annotation.Nullable;
 
+import com.pulumi.experimental.automation.serialization.internal.SkipIfFalse;
+
 /**
  * A template used to seed new stacks created from this project.
  */
 public class ProjectTemplate {
     @Nullable
+    private final String displayName;
+    @Nullable
     private final String description;
     @Nullable
-    private final String quickStart;
+    private final String quickstart;
     private final Map<String, ProjectTemplateConfigValue> config;
+    @SkipIfFalse
     private final boolean important;
+    private final Map<String, String> metadata;
 
     private ProjectTemplate(Builder builder) {
+        this.displayName = builder.displayName;
         this.description = builder.description;
-        this.quickStart = builder.quickStart;
+        this.quickstart = builder.quickstart;
         this.config = builder.config == null
                 ? Collections.emptyMap()
                 : Collections.unmodifiableMap(builder.config);
         this.important = builder.important;
+        this.metadata = builder.metadata == null
+                ? Collections.emptyMap()
+                : Collections.unmodifiableMap(builder.metadata);
     }
 
     /**
@@ -35,6 +45,15 @@ public class ProjectTemplate {
      */
     public static Builder builder() {
         return new Builder();
+    }
+
+    /**
+     * Optional user friendly name of the template.
+     *
+     * @return the display name
+     */
+    public String getDisplayName() {
+        return displayName;
     }
 
     /**
@@ -51,8 +70,8 @@ public class ProjectTemplate {
      *
      * @return the quick start text
      */
-    public String getQuickStart() {
-        return quickStart;
+    public String getQuickstart() {
+        return quickstart;
     }
 
     /**
@@ -73,6 +92,15 @@ public class ProjectTemplate {
         return important;
     }
 
+    /**
+     * Additional metadata for the template.
+     *
+     * @return the metadata
+     */
+    public Map<String, String> getMetadata() {
+        return metadata;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -81,14 +109,16 @@ public class ProjectTemplate {
             return false;
         ProjectTemplate that = (ProjectTemplate) o;
         return important == that.important &&
+                Objects.equals(displayName, that.displayName) &&
                 Objects.equals(description, that.description) &&
-                Objects.equals(quickStart, that.quickStart) &&
-                Objects.equals(config, that.config);
+                Objects.equals(quickstart, that.quickstart) &&
+                Objects.equals(config, that.config) &&
+                Objects.equals(metadata, that.metadata);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(description, quickStart, config, important);
+        return Objects.hash(displayName, description, quickstart, config, important, metadata);
     }
 
     /**
@@ -98,10 +128,12 @@ public class ProjectTemplate {
      */
     public Builder toBuilder() {
         return new Builder()
+                .displayName(displayName)
                 .description(description)
-                .quickStart(quickStart)
+                .quickstart(quickstart)
                 .config(config.isEmpty() ? null : config)
-                .important(important);
+                .important(important)
+                .metadata(metadata.isEmpty() ? null : metadata);
     }
 
     /**
@@ -109,14 +141,29 @@ public class ProjectTemplate {
      */
     public static class Builder {
         @Nullable
+        private String displayName;
+        @Nullable
         private String description;
         @Nullable
-        private String quickStart;
+        private String quickstart;
         @Nullable
         private Map<String, ProjectTemplateConfigValue> config;
         private boolean important;
+        @Nullable
+        private Map<String, String> metadata;
 
         private Builder() {
+        }
+
+        /**
+         * Optional user friendly name of the template.
+         *
+         * @param displayName the display name
+         * @return the builder
+         */
+        public Builder displayName(String displayName) {
+            this.displayName = displayName;
+            return this;
         }
 
         /**
@@ -133,11 +180,11 @@ public class ProjectTemplate {
         /**
          * Optional text to be displayed after template creation.
          *
-         * @param quickStart the quick start text
+         * @param quickstart the quick start text
          * @return the builder
          */
-        public Builder quickStart(String quickStart) {
-            this.quickStart = quickStart;
+        public Builder quickstart(String quickstart) {
+            this.quickstart = quickstart;
             return this;
         }
 
@@ -160,6 +207,17 @@ public class ProjectTemplate {
          */
         public Builder important(boolean important) {
             this.important = important;
+            return this;
+        }
+
+        /**
+         * Additional metadata for the template.
+         *
+         * @param metadata the metadata
+         * @return the builder
+         */
+        public Builder metadata(Map<String, String> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
