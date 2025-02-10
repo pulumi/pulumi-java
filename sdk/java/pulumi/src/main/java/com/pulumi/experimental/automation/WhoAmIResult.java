@@ -35,7 +35,7 @@ public class WhoAmIResult {
      *
      * @return the user
      */
-    public String getUser() {
+    public String user() {
         return user;
     }
 
@@ -45,7 +45,7 @@ public class WhoAmIResult {
      * @return the URL
      */
     @Nullable
-    public String getUrl() {
+    public String url() {
         return url;
     }
 
@@ -54,7 +54,7 @@ public class WhoAmIResult {
      *
      * @return the organizations
      */
-    public List<String> getOrganizations() {
+    public List<String> organizations() {
         return organizations;
     }
 }
