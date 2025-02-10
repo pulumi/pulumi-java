@@ -647,20 +647,20 @@ public final class WorkspaceStack implements AutoCloseable {
         args.add("--skip-preview");
 
         if (options != null) {
-            if (options.isExpectNoChanges()) {
+            if (options.expectNoChanges()) {
                 args.add("--expect-no-changes");
             }
 
-            if (options.isSkipPendingCreates()) {
+            if (options.skipPendingCreates()) {
                 args.add("--skip-pending-creates");
             }
 
-            if (options.isClearPendingCreates()) {
+            if (options.clearPendingCreates()) {
                 args.add("--clear-pending-creates");
             }
 
-            if (options.getImportPendingCreates() != null) {
-                for (var item : options.getImportPendingCreates()) {
+            if (options.importPendingCreates() != null) {
+                for (var item : options.importPendingCreates()) {
                     args.add("--import-pending-creates");
                     args.add(item.urn());
                     args.add("--import-pending-creates");
@@ -685,7 +685,7 @@ public final class WorkspaceStack implements AutoCloseable {
                 .onEngineEvent(onEvent)
                 .build());
 
-        var showSecrets = options != null && options.isShowSecrets();
+        var showSecrets = options != null && options.showSecrets();
         var summary = getInfo(showSecrets);
         return new UpdateResult(
                 result.standardOutput(),
