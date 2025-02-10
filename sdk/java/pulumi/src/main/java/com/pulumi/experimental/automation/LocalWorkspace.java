@@ -948,7 +948,7 @@ public final class LocalWorkspace extends Workspace {
         args.add("plugin");
         args.add("install");
 
-        var kind = options != null ? options.getKind() : PluginKind.RESOURCE;
+        var kind = options != null ? options.kind() : PluginKind.RESOURCE;
         args.add(kind.toString().toLowerCase());
 
         args.add(Objects.requireNonNull(name));
@@ -959,7 +959,7 @@ public final class LocalWorkspace extends Workspace {
                 args.add("--exact");
             }
 
-            var serverUrl = options.getServerUrl();
+            var serverUrl = options.serverUrl();
             if (serverUrl != null && !serverUrl.isBlank()) {
                 args.add("--server");
                 args.add(serverUrl);
