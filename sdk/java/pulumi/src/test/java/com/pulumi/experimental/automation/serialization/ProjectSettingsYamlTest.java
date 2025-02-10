@@ -110,9 +110,9 @@ public class ProjectSettingsYamlTest {
         assertThat(config).containsKeys("foo");
         var foo = config.get("foo");
         assertThat(foo).isNotNull();
-        assertThat(foo.getDefault()).isEqualTo("bar");
-        assertThat(foo.getDescription()).isEqualTo("foo description");
-        assertThat(foo.getSecret()).isTrue();
+        assertThat(foo.default_()).isEqualTo("bar");
+        assertThat(foo.description()).isEqualTo("foo description");
+        assertThat(foo.secret()).isTrue();
         assertThat(template.description()).isEqualTo("some description");
         assertThat(template.displayName()).isEqualTo("my template");
         assertThat(template.quickstart()).isEqualTo("quickstart text");

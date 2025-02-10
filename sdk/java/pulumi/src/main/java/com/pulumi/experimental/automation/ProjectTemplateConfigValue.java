@@ -66,7 +66,7 @@ public class ProjectTemplateConfigValue {
      * @return the description
      */
     @Nullable
-    public String getDescription() {
+    public String description() {
         return description;
     }
 
@@ -76,7 +76,7 @@ public class ProjectTemplateConfigValue {
      * @return the default value
      */
     @Nullable
-    public String getDefault() {
+    public String default_() {
         return default_;
     }
 
@@ -86,7 +86,7 @@ public class ProjectTemplateConfigValue {
      * @return whether the value should be treated as secret
      */
     @Nullable
-    public Boolean getSecret() {
+    public Boolean secret() {
         return secret;
     }
 
