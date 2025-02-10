@@ -25,7 +25,7 @@ public class StackSettingsConfigValue {
      *
      * @return the value
      */
-    public Object getValue() {
+    public Object value() {
         return value;
     }
 
