@@ -789,17 +789,17 @@ public final class WorkspaceStack implements AutoCloseable {
         args.add("--json");
 
         if (options != null) {
-            if (options.getShowSecrets()) {
+            if (options.showSecrets()) {
                 args.add("--show-secrets");
             }
 
-            var pageSize = options.getPageSize();
+            var pageSize = options.pageSize();
             if (pageSize != null) {
                 if (pageSize < 1) {
                     throw new IllegalArgumentException("Page size must be greater than or equal to 1.");
                 }
 
-                var page = options.getPage();
+                var page = options.page();
                 page = page == null || page < 1 ? 1 : page;
 
                 args.add("--page-size");
