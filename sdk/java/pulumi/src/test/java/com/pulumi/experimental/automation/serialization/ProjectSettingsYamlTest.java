@@ -45,8 +45,8 @@ public class ProjectSettingsYamlTest {
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(ProjectSettings.class);
         assertThat(settings.getName()).isEqualTo("test-project");
-        assertThat(settings.getRuntime().getName()).isEqualTo(runtime);
-        assertThat(settings.getRuntime().getOptions()).isNull();
+        assertThat(settings.getRuntime().name()).isEqualTo(runtime);
+        assertThat(settings.getRuntime().options()).isNull();
 
         // Test roundtrip
         var serialized = serializer.serializeYaml(settings);
@@ -70,8 +70,8 @@ public class ProjectSettingsYamlTest {
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(ProjectSettings.class);
         assertThat(settings.getName()).isEqualTo("test-project");
-        assertThat(settings.getRuntime().getName()).isEqualTo(runtime);
-        var options = settings.getRuntime().getOptions();
+        assertThat(settings.getRuntime().name()).isEqualTo(runtime);
+        var options = settings.getRuntime().options();
         assertThat(options).isNotNull();
         assertThat(options.getBinary()).isEqualTo("test-binary");
         assertThat(options.getTypescript()).isFalse();
@@ -101,8 +101,8 @@ public class ProjectSettingsYamlTest {
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(ProjectSettings.class);
         assertThat(settings.getName()).isEqualTo("test-project");
-        assertThat(settings.getRuntime().getName()).isEqualTo(ProjectRuntimeName.JAVA);
-        assertThat(settings.getRuntime().getOptions()).isNull();
+        assertThat(settings.getRuntime().name()).isEqualTo(ProjectRuntimeName.JAVA);
+        assertThat(settings.getRuntime().options()).isNull();
         var template = settings.getTemplate();
         assertThat(template).isNotNull();
         var config = template.getConfig();

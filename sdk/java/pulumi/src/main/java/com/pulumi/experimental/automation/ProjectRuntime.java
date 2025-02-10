@@ -34,7 +34,7 @@ public class ProjectRuntime {
      *
      * @return the runtime name
      */
-    public ProjectRuntimeName getName() {
+    public ProjectRuntimeName name() {
         return name;
     }
 
@@ -44,7 +44,7 @@ public class ProjectRuntime {
      * @return the runtime options
      */
     @Nullable
-    public ProjectRuntimeOptions getOptions() {
+    public ProjectRuntimeOptions options() {
         return options;
     }
 
