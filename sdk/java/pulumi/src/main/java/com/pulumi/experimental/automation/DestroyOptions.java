@@ -29,7 +29,7 @@ public final class DestroyOptions extends UpdateOptions {
 
     /**
      * Allows updating of dependent targets discovered but not specified
-     * {@link #getTargets}
+     * {@link #targets()}
      *
      * @return true if dependent targets should be updated
      */

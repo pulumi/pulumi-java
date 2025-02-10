@@ -108,7 +108,7 @@ public final class PreviewOptions extends UpdateOptions {
 
     /**
      * A custom logger instance that will be used for the action. Note that it will
-     * only be used if {@link #getProgram} is also provided.
+     * only be used if {@link #program()} is also provided.
      *
      * @return the logger
      */

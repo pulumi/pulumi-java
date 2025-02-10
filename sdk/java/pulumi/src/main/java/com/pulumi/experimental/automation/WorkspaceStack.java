@@ -395,39 +395,39 @@ public final class WorkspaceStack implements AutoCloseable {
         args.add("--skip-preview");
 
         if (options != null) {
-            if (options.getProgram() != null) {
-                program = options.getProgram();
+            if (options.program() != null) {
+                program = options.program();
             }
 
-            if (options.getLogger() != null) {
-                logger = options.getLogger();
+            if (options.logger() != null) {
+                logger = options.logger();
             }
 
-            if (options.isExpectNoChanges()) {
+            if (options.expectNoChanges()) {
                 args.add("--expect-no-changes");
             }
 
-            if (options.isDiff()) {
+            if (options.diff()) {
                 args.add("--diff");
             }
 
-            if (options.getPlan() != null) {
+            if (options.plan() != null) {
                 args.add("--plan");
-                args.add(options.getPlan());
+                args.add(options.plan());
             }
 
-            if (options.getReplaces() != null) {
-                for (var item : options.getReplaces()) {
+            if (options.replaces() != null) {
+                for (var item : options.replaces()) {
                     args.add("--replace");
                     args.add(item);
                 }
             }
 
-            if (options.isTargetDependents()) {
+            if (options.targetDependents()) {
                 args.add("--target-dependents");
             }
 
-            if (options.isContinueOnError()) {
+            if (options.continueOnError()) {
                 args.add("--continue-on-error");
             }
 
@@ -471,7 +471,7 @@ public final class WorkspaceStack implements AutoCloseable {
             }
 
             var output = getOutputs();
-            var showSecrets = options != null && options.isShowSecrets();
+            var showSecrets = options != null && options.showSecrets();
             var summary = getInfo(showSecrets);
             return new UpResult(
                     upResult.standardOutput(),

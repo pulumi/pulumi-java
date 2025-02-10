@@ -54,7 +54,7 @@ public final class UpOptions extends UpdateOptions {
      *
      * @return true if the preview should fail if any changes are proposed
      */
-    public boolean isExpectNoChanges() {
+    public boolean expectNoChanges() {
         return expectNoChanges;
     }
 
@@ -63,7 +63,7 @@ public final class UpOptions extends UpdateOptions {
      *
      * @return true if a rich diff should be displayed
      */
-    public boolean isDiff() {
+    public boolean diff() {
         return diff;
     }
 
@@ -72,7 +72,7 @@ public final class UpOptions extends UpdateOptions {
      *
      * @return the list of resource URNs to replace
      */
-    public List<String> getReplaces() {
+    public List<String> replaces() {
         return replaces;
     }
 
@@ -82,7 +82,7 @@ public final class UpOptions extends UpdateOptions {
      *
      * @return true if dependent targets should be updated
      */
-    public boolean isTargetDependents() {
+    public boolean targetDependents() {
         return targetDependents;
     }
 
@@ -92,7 +92,7 @@ public final class UpOptions extends UpdateOptions {
      * @return the program to execute
      */
     @Nullable
-    public Consumer<Context> getProgram() {
+    public Consumer<Context> program() {
         return program;
     }
 
@@ -102,7 +102,7 @@ public final class UpOptions extends UpdateOptions {
      * @return the path to the update plan
      */
     @Nullable
-    public String getPlan() {
+    public String plan() {
         return plan;
     }
 
@@ -111,18 +111,18 @@ public final class UpOptions extends UpdateOptions {
      *
      * @return whether to show secrets
      */
-    public boolean isShowSecrets() {
+    public boolean showSecrets() {
         return showSecrets;
     }
 
     /**
      * A custom logger instance that will be used for the action. Note that it will
-     * only be used if {@link #getProgram} is also provided.
+     * only be used if {@link #program()} is also provided.
      *
      * @return the logger
      */
     @Nullable
-    public Logger getLogger() {
+    public Logger logger() {
         return logger;
     }
 
@@ -131,7 +131,7 @@ public final class UpOptions extends UpdateOptions {
      *
      * @return whether to continue on error
      */
-    public boolean isContinueOnError() {
+    public boolean continueOnError() {
         return continueOnError;
     }
 
