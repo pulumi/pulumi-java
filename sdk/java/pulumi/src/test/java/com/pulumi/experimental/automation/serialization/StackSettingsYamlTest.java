@@ -21,10 +21,10 @@ public class StackSettingsYamlTest {
         var settings = serializer.deserializeYaml(yaml, StackSettings.class);
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(StackSettings.class);
-        assertThat(settings.getSecretsProvider()).isNull();
-        assertThat(settings.getEncryptedKey()).isNull();
-        assertThat(settings.getEncryptionSalt()).isNull();
-        assertThat(settings.getConfig()).isEmpty();
+        assertThat(settings.secretsProvider()).isNull();
+        assertThat(settings.encryptedKey()).isNull();
+        assertThat(settings.encryptionSalt()).isNull();
+        assertThat(settings.config()).isEmpty();
     }
 
     @Test
@@ -33,10 +33,10 @@ public class StackSettingsYamlTest {
         var settings = serializer.deserializeYaml(yaml, StackSettings.class);
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(StackSettings.class);
-        assertThat(settings.getSecretsProvider()).isEqualTo("foo");
-        assertThat(settings.getEncryptedKey()).isNull();
-        assertThat(settings.getEncryptionSalt()).isNull();
-        assertThat(settings.getConfig()).isEmpty();
+        assertThat(settings.secretsProvider()).isEqualTo("foo");
+        assertThat(settings.encryptedKey()).isNull();
+        assertThat(settings.encryptionSalt()).isNull();
+        assertThat(settings.config()).isEmpty();
 
         var serialized = serializer.serializeYaml(settings);
         assertThat(serialized).isEqualTo(yaml);
@@ -60,7 +60,7 @@ public class StackSettingsYamlTest {
         var settings = serializer.deserializeYaml(yaml, StackSettings.class);
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(StackSettings.class);
-        var config = settings.getConfig();
+        var config = settings.config();
         assertThat(config).isNotNull();
         assertThat(config).containsOnlyKeys("aws:region", "baz", "foo", "nestedlist", "nestedobj", "num");
         var awsRegion = config.get("aws:region");
@@ -81,9 +81,9 @@ public class StackSettingsYamlTest {
         var num = config.get("num");
         assertThat(num.getValue()).isEqualTo(42);
         assertThat(num.isSecure()).isFalse();
-        assertThat(settings.getEncryptedKey()).isEqualTo("key");
-        assertThat(settings.getEncryptionSalt()).isEqualTo("salt");
-        assertThat(settings.getSecretsProvider()).isEqualTo("foo");
+        assertThat(settings.encryptedKey()).isEqualTo("key");
+        assertThat(settings.encryptionSalt()).isEqualTo("salt");
+        assertThat(settings.secretsProvider()).isEqualTo("foo");
 
         var serialized = serializer.serializeYaml(settings);
         assertThat(serialized).isEqualTo(yaml);
