@@ -1062,7 +1062,7 @@ public final class LocalWorkspace extends Workspace {
             if (newPassphrase.isEmpty()) {
                 throw new IllegalArgumentException(message);
             }
-            builder.stdIn(newPassphrase);
+            builder.standardInput(newPassphrase);
         }
 
         runCommand(args, builder.build());

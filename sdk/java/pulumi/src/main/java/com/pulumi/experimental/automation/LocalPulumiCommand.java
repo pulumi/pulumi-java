@@ -140,12 +140,12 @@ public class LocalPulumiCommand implements PulumiCommand {
      */
     @Override
     public CommandResult run(List<String> args, CommandRunOptions options) throws AutomationException {
-        if (options != null && options.getOnEngineEvent() != null) {
+        if (options != null && options.onEngineEvent() != null) {
             var firstArg = args != null && !args.isEmpty() ? args.get(0) : null;
             var commandName = sanitizeCommandName(firstArg);
             try (var eventLogFile = new EventLogFile(commandName);
                     var eventLogWatcher = new EventLogWatcher(eventLogFile.getFilePath(),
-                            options.getOnEngineEvent())) {
+                            options.onEngineEvent())) {
                 return runInternal(args, options, eventLogFile.getFilePath());
             } catch (AutomationException e) {
                 throw e;
@@ -163,24 +163,24 @@ public class LocalPulumiCommand implements PulumiCommand {
             @Nullable Path eventLogFile) throws AutomationException {
         var processBuilder = new ProcessBuilder(command);
         processBuilder.command().addAll(pulumiArgs(args, eventLogFile));
-        var workingDir = options.getWorkingDir();
+        var workingDir = options.workingDir();
         if (workingDir != null) {
             processBuilder.directory(workingDir.toFile());
         }
 
         var env = processBuilder.environment();
         var debugCommands = eventLogFile != null;
-        env.putAll(pulumiEnvironment(options.getAdditionalEnv(), command, debugCommands));
+        env.putAll(pulumiEnvironment(options.additionalEnv(), command, debugCommands));
 
         var executor = Executors.newFixedThreadPool(2);
 
         try {
             var process = processBuilder.start();
 
-            var stdoutFuture = readStreamAsync(process.getInputStream(), executor, options.getOnStandardOutput());
-            var stderrFuture = readStreamAsync(process.getErrorStream(), executor, options.getOnStandardError());
+            var stdoutFuture = readStreamAsync(process.getInputStream(), executor, options.onStandardOutput());
+            var stderrFuture = readStreamAsync(process.getErrorStream(), executor, options.onStandardError());
 
-            var stdIn = options.getStdIn();
+            var stdIn = options.standardInput();
             if (stdIn != null && !stdIn.isBlank()) {
                 try (var writer = new OutputStreamWriter(process.getOutputStream())) {
                     writer.write(stdIn);
