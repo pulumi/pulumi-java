@@ -52,7 +52,7 @@ public class ProjectConfigType {
      * @return the type of the configuration
      */
     @Nullable
-    public String getType() {
+    public String type() {
         return type;
     }
 
@@ -62,7 +62,7 @@ public class ProjectConfigType {
      * @return the description of the configuration
      */
     @Nullable
-    public String getDescription() {
+    public String description() {
         return description;
     }
 
@@ -72,7 +72,7 @@ public class ProjectConfigType {
      * @return the configuration items
      */
     @Nullable
-    public ProjectConfigItemsType getItems() {
+    public ProjectConfigItemsType items() {
         return items;
     }
 
@@ -82,7 +82,7 @@ public class ProjectConfigType {
      * @return the default value of the configuration
      */
     @Nullable
-    public Object getDefault() {
+    public Object default_() {
         return default_;
     }
 
@@ -92,7 +92,7 @@ public class ProjectConfigType {
      * @return the value of the configuration
      */
     @Nullable
-    public Object getValue() {
+    public Object value() {
         return value;
     }
 
