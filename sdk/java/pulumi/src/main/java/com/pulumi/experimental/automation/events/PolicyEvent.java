@@ -43,7 +43,7 @@ public class PolicyEvent {
      * @return the resource URN, may be null
      */
     @Nullable
-    public String getResourceUrn() {
+    public String resourceUrn() {
         return resourceUrn;
     }
 
@@ -52,7 +52,7 @@ public class PolicyEvent {
      *
      * @return the message
      */
-    public String getMessage() {
+    public String message() {
         return message;
     }
 
@@ -61,7 +61,7 @@ public class PolicyEvent {
      *
      * @return the color
      */
-    public String getColor() {
+    public String color() {
         return color;
     }
 
@@ -70,7 +70,7 @@ public class PolicyEvent {
      *
      * @return the policy name
      */
-    public String getPolicyName() {
+    public String policyName() {
         return policyName;
     }
 
@@ -79,7 +79,7 @@ public class PolicyEvent {
      *
      * @return the policy pack name
      */
-    public String getPolicyPackName() {
+    public String policyPackName() {
         return policyPackName;
     }
 
@@ -88,7 +88,7 @@ public class PolicyEvent {
      *
      * @return the policy pack version
      */
-    public String getPolicyPackVersion() {
+    public String policyPackVersion() {
         return policyPackVersion;
     }
 
@@ -97,7 +97,7 @@ public class PolicyEvent {
      *
      * @return the policy pack version tag
      */
-    public String getPolicyPackVersionTag() {
+    public String policyPackVersionTag() {
         return policyPackVersionTag;
     }
 
@@ -106,7 +106,7 @@ public class PolicyEvent {
      *
      * @return the enforcement level
      */
-    public String getEnforcementLevel() {
+    public String enforcementLevel() {
         return enforcementLevel;
     }
 }
