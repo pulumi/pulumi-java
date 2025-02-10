@@ -73,9 +73,9 @@ public class ProjectSettingsYamlTest {
         assertThat(settings.getRuntime().name()).isEqualTo(runtime);
         var options = settings.getRuntime().options();
         assertThat(options).isNotNull();
-        assertThat(options.getBinary()).isEqualTo("test-binary");
-        assertThat(options.getTypescript()).isFalse();
-        assertThat(options.getVirtualenv()).isEqualTo("test-env");
+        assertThat(options.binary()).isEqualTo("test-binary");
+        assertThat(options.typescript()).isFalse();
+        assertThat(options.virtualenv()).isEqualTo("test-env");
 
         // Test roundtrip
         var serialized = serializer.serializeYaml(settings);
