@@ -20,7 +20,7 @@ public class PropertyValue {
     public enum ValueType {
         NULL(null),
         BOOL(Boolean.class),
-        NUMBER(Double.class),
+        NUMBER(Number.class),
         STRING(String.class),
         ARRAY(List.class),
         OBJECT(Map.class),
@@ -129,6 +129,10 @@ public class PropertyValue {
 
     public static PropertyValue of(double value) {
         return new PropertyValue(ValueType.NUMBER, value);
+    }
+
+    public static PropertyValue of(int value) {
+        return new PropertyValue(ValueType.NUMBER, Integer.valueOf(value));
     }
 
     public static PropertyValue of(String value) {
