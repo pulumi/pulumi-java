@@ -44,9 +44,9 @@ public class ProjectSettingsYamlTest {
 
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(ProjectSettings.class);
-        assertThat(settings.getName()).isEqualTo("test-project");
-        assertThat(settings.getRuntime().name()).isEqualTo(runtime);
-        assertThat(settings.getRuntime().options()).isNull();
+        assertThat(settings.name()).isEqualTo("test-project");
+        assertThat(settings.runtime().name()).isEqualTo(runtime);
+        assertThat(settings.runtime().options()).isNull();
 
         // Test roundtrip
         var serialized = serializer.serializeYaml(settings);
@@ -69,9 +69,9 @@ public class ProjectSettingsYamlTest {
 
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(ProjectSettings.class);
-        assertThat(settings.getName()).isEqualTo("test-project");
-        assertThat(settings.getRuntime().name()).isEqualTo(runtime);
-        var options = settings.getRuntime().options();
+        assertThat(settings.name()).isEqualTo("test-project");
+        assertThat(settings.runtime().name()).isEqualTo(runtime);
+        var options = settings.runtime().options();
         assertThat(options).isNotNull();
         assertThat(options.binary()).isEqualTo("test-binary");
         assertThat(options.typescript()).isFalse();
@@ -100,10 +100,10 @@ public class ProjectSettingsYamlTest {
 
         assertThat(settings).isNotNull();
         assertThat(settings).isInstanceOf(ProjectSettings.class);
-        assertThat(settings.getName()).isEqualTo("test-project");
-        assertThat(settings.getRuntime().name()).isEqualTo(ProjectRuntimeName.JAVA);
-        assertThat(settings.getRuntime().options()).isNull();
-        var template = settings.getTemplate();
+        assertThat(settings.name()).isEqualTo("test-project");
+        assertThat(settings.runtime().name()).isEqualTo(ProjectRuntimeName.JAVA);
+        assertThat(settings.runtime().options()).isNull();
+        var template = settings.template();
         assertThat(template).isNotNull();
         var config = template.getConfig();
         assertThat(config).isNotNull();
