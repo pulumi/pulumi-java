@@ -21,7 +21,7 @@ public class StandardOutputEvent {
      *
      * @return the message
      */
-    public String getMessage() {
+    public String message() {
         return message;
     }
 
@@ -30,7 +30,7 @@ public class StandardOutputEvent {
      *
      * @return the color
      */
-    public String getColor() {
+    public String color() {
         return color;
     }
 }
