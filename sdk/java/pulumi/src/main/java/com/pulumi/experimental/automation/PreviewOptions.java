@@ -72,17 +72,17 @@ public final class PreviewOptions extends UpdateOptions {
      *
      * @return the list of resource URNs to replace
      */
-    public List<String> getReplaces() {
+    public List<String> replaces() {
         return replaces;
     }
 
     /**
      * Allows updating of dependent targets discovered but not specified
-     * {@link #getTargets()}
+     * {@link #targets()}
      *
      * @return true if dependent targets should be updated
      */
-    public boolean isTargetDependents() {
+    public boolean targetDependents() {
         return targetDependents;
     }
 
@@ -92,7 +92,7 @@ public final class PreviewOptions extends UpdateOptions {
      * @return the program to execute
      */
     @Nullable
-    public Consumer<Context> getProgram() {
+    public Consumer<Context> program() {
         return program;
     }
 
@@ -102,18 +102,18 @@ public final class PreviewOptions extends UpdateOptions {
      * @return the path to the update plan
      */
     @Nullable
-    public String getPlan() {
+    public String plan() {
         return plan;
     }
 
     /**
      * A custom logger instance that will be used for the action. Note that it will
-     * only be used if {@link #getProgram} is also provided.
+     * only be used if {@link #program()} is also provided.
      *
      * @return the logger
      */
     @Nullable
-    public Logger getLogger() {
+    public Logger logger() {
         return logger;
     }
 
@@ -172,7 +172,7 @@ public final class PreviewOptions extends UpdateOptions {
 
         /**
          * Allows updating of dependent targets discovered but not specified
-         * {@link #getTargets()}
+         * {@link #targets()}
          *
          * @param targetDependents true if dependent targets should be updated
          * @return the builder

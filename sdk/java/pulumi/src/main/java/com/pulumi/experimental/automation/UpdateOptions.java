@@ -70,7 +70,7 @@ public abstract class UpdateOptions {
      * @return the number of resource operations to run in parallel
      */
     @Nullable
-    public Integer getParallel() {
+    public Integer parallel() {
         return parallel;
     }
 
@@ -80,7 +80,7 @@ public abstract class UpdateOptions {
      * @return the message
      */
     @Nullable
-    public String getMessage() {
+    public String Message() {
         return message;
     }
 
@@ -90,7 +90,7 @@ public abstract class UpdateOptions {
      *
      * @return the list of target resource URNs
      */
-    public List<String> getTargets() {
+    public List<String> targets() {
         return targets;
     }
 
@@ -99,7 +99,7 @@ public abstract class UpdateOptions {
      *
      * @return the list of paths to policy packs
      */
-    public List<String> getPolicyPacks() {
+    public List<String> policyPacks() {
         return policyPacks;
     }
 
@@ -109,7 +109,7 @@ public abstract class UpdateOptions {
      *
      * @return the list of paths to policy pack JSON configuration files
      */
-    public List<String> getPolicyPackConfigs() {
+    public List<String> policyPackConfigs() {
         return policyPackConfigs;
     }
 
@@ -119,7 +119,7 @@ public abstract class UpdateOptions {
      * @return the callback
      */
     @Nullable
-    public Consumer<String> getOnStandardOutput() {
+    public Consumer<String> onStandardOutput() {
         return onStandardOutput;
     }
 
@@ -129,7 +129,7 @@ public abstract class UpdateOptions {
      * @return the callback
      */
     @Nullable
-    public Consumer<String> getOnStandardError() {
+    public Consumer<String> onStandardError() {
         return onStandardError;
     }
 
@@ -139,7 +139,7 @@ public abstract class UpdateOptions {
      * @return the callback
      */
     @Nullable
-    public Consumer<EngineEvent> getOnEvent() {
+    public Consumer<EngineEvent> onEvent() {
         return onEvent;
     }
 
@@ -149,7 +149,7 @@ public abstract class UpdateOptions {
      * @return the colorize output setting
      */
     @Nullable
-    public String getColor() {
+    public String color() {
         return color;
     }
 
@@ -158,7 +158,7 @@ public abstract class UpdateOptions {
      *
      * @return the flow log settings
      */
-    public boolean isLogFlow() {
+    public boolean logFlow() {
         return logFlow;
     }
 
@@ -168,7 +168,7 @@ public abstract class UpdateOptions {
      * @return the log verbosity
      */
     @Nullable
-    public Integer getLogVerbosity() {
+    public Integer logVerbosity() {
         return logVerbosity;
     }
 
@@ -177,7 +177,7 @@ public abstract class UpdateOptions {
      *
      * @return the log to stderr setting
      */
-    public boolean isLogToStdErr() {
+    public boolean logToStdErr() {
         return logToStdErr;
     }
 
@@ -188,7 +188,7 @@ public abstract class UpdateOptions {
      * @return the tracing endpoint
      */
     @Nullable
-    public String getTracing() {
+    public String tracing() {
         return tracing;
     }
 
@@ -197,7 +197,7 @@ public abstract class UpdateOptions {
      *
      * @return the debug setting
      */
-    public boolean isDebug() {
+    public boolean debug() {
         return debug;
     }
 
@@ -206,7 +206,7 @@ public abstract class UpdateOptions {
      *
      * @return the JSON output setting
      */
-    public boolean isJson() {
+    public boolean json() {
         return json;
     }
 

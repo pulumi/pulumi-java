@@ -48,7 +48,7 @@ public class StackSettings {
      * @return the secrets provider
      */
     @Nullable
-    public String getSecretsProvider() {
+    public String secretsProvider() {
         return secretsprovider;
     }
 
@@ -59,7 +59,7 @@ public class StackSettings {
      * @return the encrypted key
      */
     @Nullable
-    public String getEncryptedKey() {
+    public String encryptedKey() {
         return encryptedkey;
     }
 
@@ -70,7 +70,7 @@ public class StackSettings {
      * @return the encryption salt
      */
     @Nullable
-    public String getEncryptionSalt() {
+    public String encryptionSalt() {
         return encryptionsalt;
     }
 
@@ -79,7 +79,7 @@ public class StackSettings {
      *
      * @return optional configuration bag
      */
-    public Map<String, StackSettingsConfigValue> getConfig() {
+    public Map<String, StackSettingsConfigValue> config() {
         return config;
     }
 

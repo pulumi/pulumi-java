@@ -52,7 +52,7 @@ public class ProjectTemplate {
      *
      * @return the display name
      */
-    public String getDisplayName() {
+    public String displayName() {
         return displayName;
     }
 
@@ -61,7 +61,7 @@ public class ProjectTemplate {
      *
      * @return the description
      */
-    public String getDescription() {
+    public String description() {
         return description;
     }
 
@@ -70,7 +70,7 @@ public class ProjectTemplate {
      *
      * @return the quick start text
      */
-    public String getQuickstart() {
+    public String quickstart() {
         return quickstart;
     }
 
@@ -79,7 +79,7 @@ public class ProjectTemplate {
      *
      * @return the template config
      */
-    public Map<String, ProjectTemplateConfigValue> getConfig() {
+    public Map<String, ProjectTemplateConfigValue> config() {
         return config;
     }
 
@@ -97,7 +97,7 @@ public class ProjectTemplate {
      *
      * @return the metadata
      */
-    public Map<String, String> getMetadata() {
+    public Map<String, String> metadata() {
         return metadata;
     }
 

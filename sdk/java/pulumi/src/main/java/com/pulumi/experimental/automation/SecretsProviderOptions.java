@@ -22,7 +22,7 @@ public class SecretsProviderOptions {
      * @return the new passphrase
      */
     @Nullable
-    public String getNewPassphrase() {
+    public String newPassphrase() {
         return newPassphrase;
     }
 

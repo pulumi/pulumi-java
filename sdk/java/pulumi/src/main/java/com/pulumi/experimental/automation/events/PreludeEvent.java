@@ -22,7 +22,7 @@ public class PreludeEvent {
      *
      * @return an unmodifiable map of configuration keys and values
      */
-    public Map<String, String> getConfig() {
+    public Map<String, String> config() {
         return config;
     }
 }

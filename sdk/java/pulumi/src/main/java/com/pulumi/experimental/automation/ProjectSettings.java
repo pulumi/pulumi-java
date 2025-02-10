@@ -101,7 +101,7 @@ public class ProjectSettings {
      *
      * @return the name of the project
      */
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -110,7 +110,7 @@ public class ProjectSettings {
      *
      * @return the runtime of the project
      */
-    public ProjectRuntime getRuntime() {
+    public ProjectRuntime runtime() {
         return runtime;
     }
 
@@ -120,7 +120,7 @@ public class ProjectSettings {
      * @return the main entry point of the program
      */
     @Nullable
-    public String getMain() {
+    public String main() {
         return main;
     }
 
@@ -130,7 +130,7 @@ public class ProjectSettings {
      * @return the description of the project
      */
     @Nullable
-    public String getDescription() {
+    public String description() {
         return description;
     }
 
@@ -140,7 +140,7 @@ public class ProjectSettings {
      * @return the author of the project
      */
     @Nullable
-    public String getAuthor() {
+    public String author() {
         return author;
     }
 
@@ -150,7 +150,7 @@ public class ProjectSettings {
      * @return the website of the project
      */
     @Nullable
-    public String getWebsite() {
+    public String website() {
         return website;
     }
 
@@ -160,7 +160,7 @@ public class ProjectSettings {
      * @return the license of the project
      */
     @Nullable
-    public String getLicense() {
+    public String license() {
         return license;
     }
 
@@ -169,7 +169,7 @@ public class ProjectSettings {
      *
      * @return the config of the project
      */
-    public Map<String, ProjectConfigType> getConfig() {
+    public Map<String, ProjectConfigType> config() {
         return config;
     }
 
@@ -180,7 +180,7 @@ public class ProjectSettings {
      * @return where to store the Pulumi.&lt;stack-name&gt;.yaml files
      */
     @Nullable
-    public String getStackConfigDir() {
+    public String stackConfigDir() {
         return stackConfigDir;
     }
 
@@ -190,7 +190,7 @@ public class ProjectSettings {
      * @return the template of the project
      */
     @Nullable
-    public ProjectTemplate getTemplate() {
+    public ProjectTemplate template() {
         return template;
     }
 
@@ -200,7 +200,7 @@ public class ProjectSettings {
      * @return the backend of the project
      */
     @Nullable
-    public ProjectBackend getBackend() {
+    public ProjectBackend backend() {
         return backend;
     }
 
@@ -210,7 +210,7 @@ public class ProjectSettings {
      * @return the options of the project
      */
     @Nullable
-    public ProjectOptions getOptions() {
+    public ProjectOptions options() {
         return options;
     }
 
@@ -220,7 +220,7 @@ public class ProjectSettings {
      * @return the plugins of the project
      */
     @Nullable
-    public ProjectPlugins getPlugins() {
+    public ProjectPlugins plugins() {
         return plugins;
     }
 

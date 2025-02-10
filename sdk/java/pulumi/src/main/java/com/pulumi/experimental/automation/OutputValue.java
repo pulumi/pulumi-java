@@ -19,7 +19,7 @@ public final class OutputValue {
      *
      * @return the value
      */
-    public Object getValue() {
+    public Object value() {
         return value;
     }
 

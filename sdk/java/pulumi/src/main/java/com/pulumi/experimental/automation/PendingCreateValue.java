@@ -30,7 +30,7 @@ public final class PendingCreateValue {
      *
      * @return the logical URN used by Pulumi
      */
-    public String getUrn() {
+    public String urn() {
         return urn;
     }
 
@@ -39,7 +39,7 @@ public final class PendingCreateValue {
      *
      * @return the ID used by the provider
      */
-    public String getId() {
+    public String id() {
         return id;
     }
 

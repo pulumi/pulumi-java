@@ -64,9 +64,9 @@ public class LocalSerializerJsonTest {
         assertThat(config)
                 .isNotNull()
                 .hasSize(2);
-        assertThat(config.get("aws:region").getValue()).isEqualTo("us-east-1");
+        assertThat(config.get("aws:region").value()).isEqualTo("us-east-1");
         assertThat(config.get("aws:region").isSecret()).isFalse();
-        assertThat(config.get("project:name").getValue()).isEqualTo("test");
+        assertThat(config.get("project:name").value()).isEqualTo("test");
         assertThat(config.get("project:name").isSecret()).isTrue();
     }
 
@@ -86,12 +86,12 @@ public class LocalSerializerJsonTest {
 
         var info = serializer.deserializeJson(json, PluginInfo.class);
         assertThat(info).isNotNull();
-        assertThat(info.getName()).isEqualTo("aws");
-        assertThat(info.getKind()).isEqualTo(PluginKind.RESOURCE);
-        assertThat(info.getVersion()).isEqualTo("3.19.2");
-        assertThat(info.getSize()).isEqualTo(258460028);
-        assertThat(info.getInstallTime()).isEqualTo(installTime);
-        assertThat(info.getLastUsedTime()).isEqualTo(lastUsedTime);
+        assertThat(info.name()).isEqualTo("aws");
+        assertThat(info.kind()).isEqualTo(PluginKind.RESOURCE);
+        assertThat(info.version()).isEqualTo("3.19.2");
+        assertThat(info.size()).isEqualTo(258460028);
+        assertThat(info.installTime()).isEqualTo(installTime);
+        assertThat(info.lastUsedTime()).isEqualTo(lastUsedTime);
     }
 
     @Test
@@ -155,12 +155,12 @@ public class LocalSerializerJsonTest {
                 .hasSize(2);
 
         var destroy = history.get(0);
-        assertThat(destroy.getKind()).isEqualTo(UpdateKind.DESTROY);
-        assertThat(destroy.getResult()).isEqualTo(UpdateState.IN_PROGRESS);
-        assertThat(destroy.getResourceChanges())
+        assertThat(destroy.kind()).isEqualTo(UpdateKind.DESTROY);
+        assertThat(destroy.result()).isEqualTo(UpdateState.IN_PROGRESS);
+        assertThat(destroy.resourceChanges())
                 .isNotNull()
                 .hasSize(2);
-        assertThat(destroy.getResourceChanges().get(OperationType.DELETE)).isEqualTo(3);
-        assertThat(destroy.getResourceChanges().get(OperationType.READ_DISCARD)).isEqualTo(1);
+        assertThat(destroy.resourceChanges().get(OperationType.DELETE)).isEqualTo(3);
+        assertThat(destroy.resourceChanges().get(OperationType.READ_DISCARD)).isEqualTo(1);
     }
 }

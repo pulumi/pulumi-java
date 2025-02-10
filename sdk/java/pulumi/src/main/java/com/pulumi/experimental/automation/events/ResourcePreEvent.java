@@ -22,7 +22,7 @@ public class ResourcePreEvent {
      *
      * @return The step event metadata
      */
-    public StepEventMetadata getMetadata() {
+    public StepEventMetadata metadata() {
         return metadata;
     }
 
@@ -32,7 +32,7 @@ public class ResourcePreEvent {
      * @return The planning flag
      */
     @Nullable
-    public Boolean getPlanning() {
+    public Boolean planning() {
         return planning;
     }
 }

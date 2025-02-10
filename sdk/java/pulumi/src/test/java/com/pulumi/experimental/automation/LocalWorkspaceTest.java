@@ -61,44 +61,44 @@ public class LocalWorkspaceTest {
 
                     // pulumi up
                     var upResult = stack.up();
-                    assertThat(upResult.getSummary().getKind()).isEqualTo(UpdateKind.UPDATE);
-                    assertThat(upResult.getSummary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
-                    assertThat(upResult.getOutputs().size()).isEqualTo(3);
+                    assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(upResult.outputs().size()).isEqualTo(3);
 
                     // exp_static
-                    var expStaticValue = upResult.getOutputs().get("exp_static");
-                    assertThat(expStaticValue.getValue()).isEqualTo("foo");
+                    var expStaticValue = upResult.outputs().get("exp_static");
+                    assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
                     // exp_cfg
-                    var expConfigValue = upResult.getOutputs().get("exp_cfg");
-                    assertThat(expConfigValue.getValue()).isEqualTo("abc");
+                    var expConfigValue = upResult.outputs().get("exp_cfg");
+                    assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
                     // exp_secret
-                    var expSecretValue = upResult.getOutputs().get("exp_secret");
-                    assertThat(expSecretValue.getValue()).isEqualTo("secret");
+                    var expSecretValue = upResult.outputs().get("exp_secret");
+                    assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
                     // pulumi preview
                     var previewResult = stack.preview();
-                    var sameCount = previewResult.getChangeSummary().get(OperationType.SAME);
+                    var sameCount = previewResult.changeSummary().get(OperationType.SAME);
                     assertThat(sameCount).isEqualTo(1);
 
                     // pulumi refresh
                     var refreshResult = stack.refresh();
-                    assertThat(refreshResult.getSummary().getKind()).isEqualTo(UpdateKind.REFRESH);
-                    assertThat(refreshResult.getSummary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.REFRESH);
+                    assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
                     // pulumi destroy
                     var destroyResult = stack.destroy();
-                    assertThat(destroyResult.getSummary().getKind()).isEqualTo(UpdateKind.DESTROY);
-                    assertThat(destroyResult.getSummary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
+                    assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
 
                 } finally {
                     if (testPassed) {
-                        stack.getWorkspace().removeStack(stackName);
+                        stack.workspace().removeStack(stackName);
                     }
                 }
             }
@@ -126,44 +126,44 @@ public class LocalWorkspaceTest {
 
                     // pulumi up
                     var upResult = stack.up();
-                    assertThat(upResult.getSummary().getKind()).isEqualTo(UpdateKind.UPDATE);
-                    assertThat(upResult.getSummary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
-                    assertThat(upResult.getOutputs().size()).isEqualTo(3);
+                    assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(upResult.outputs().size()).isEqualTo(3);
 
                     // exp_static
-                    var expStaticValue = upResult.getOutputs().get("exp_static");
-                    assertThat(expStaticValue.getValue()).isEqualTo("foo");
+                    var expStaticValue = upResult.outputs().get("exp_static");
+                    assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
                     // exp_cfg
-                    var expConfigValue = upResult.getOutputs().get("exp_cfg");
-                    assertThat(expConfigValue.getValue()).isEqualTo("abc");
+                    var expConfigValue = upResult.outputs().get("exp_cfg");
+                    assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
                     // exp_secret
-                    var expSecretValue = upResult.getOutputs().get("exp_secret");
-                    assertThat(expSecretValue.getValue()).isEqualTo("secret");
+                    var expSecretValue = upResult.outputs().get("exp_secret");
+                    assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
                     // pulumi preview
                     var previewResult = stack.preview();
-                    var sameCount = previewResult.getChangeSummary().get(OperationType.SAME);
+                    var sameCount = previewResult.changeSummary().get(OperationType.SAME);
                     assertThat(sameCount).isEqualTo(1);
 
                     // pulumi refresh
                     var refreshResult = stack.refresh();
-                    assertThat(refreshResult.getSummary().getKind()).isEqualTo(UpdateKind.REFRESH);
-                    assertThat(refreshResult.getSummary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.REFRESH);
+                    assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
                     // pulumi destroy
                     var destroyResult = stack.destroy();
-                    assertThat(destroyResult.getSummary().getKind()).isEqualTo(UpdateKind.DESTROY);
-                    assertThat(destroyResult.getSummary().getResult()).isEqualTo(UpdateState.SUCCEEDED);
+                    assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
+                    assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
 
                 } finally {
                     if (testPassed) {
-                        stack.getWorkspace().removeStack(stackName);
+                        stack.workspace().removeStack(stackName);
                     }
                 }
             }

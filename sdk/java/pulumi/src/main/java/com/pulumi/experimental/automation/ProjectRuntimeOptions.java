@@ -54,7 +54,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the typescript flag
      */
-    public Boolean getTypescript() {
+    public Boolean typescript() {
         return typescript;
     }
 
@@ -63,7 +63,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the arguments to pass to {@code node}
      */
-    public String getNodeargs() {
+    public String nodeargs() {
         return nodeargs;
     }
 
@@ -73,7 +73,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the package manager
      */
-    public String getPackagemanager() {
+    public String packagemanager() {
         return packagemanager;
     }
 
@@ -82,7 +82,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the build target
      */
-    public String getBuildTarget() {
+    public String buildTarget() {
         return buildTarget;
     }
 
@@ -99,7 +99,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the binary
      */
-    public String getBinary() {
+    public String binary() {
         return binary;
     }
 
@@ -109,7 +109,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the toolchain
      */
-    public String getToolchain() {
+    public String toolchain() {
         return toolchain;
     }
 
@@ -119,7 +119,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the virtual environment
      */
-    public String getVirtualenv() {
+    public String virtualenv() {
         return virtualenv;
     }
 
@@ -128,7 +128,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the type checker
      */
-    public String getTypechecker() {
+    public String typechecker() {
         return typechecker;
     }
 
@@ -138,7 +138,7 @@ public class ProjectRuntimeOptions {
      *
      * @return the compiler
      */
-    public String getCompiler() {
+    public String compiler() {
         return compiler;
     }
 

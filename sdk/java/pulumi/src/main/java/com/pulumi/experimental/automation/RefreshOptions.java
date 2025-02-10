@@ -41,7 +41,7 @@ public final class RefreshOptions extends UpdateOptions {
      *
      * @return true if the preview should fail if any changes are proposed
      */
-    public boolean isExpectNoChanges() {
+    public boolean expectNoChanges() {
         return expectNoChanges;
     }
 
@@ -50,7 +50,7 @@ public final class RefreshOptions extends UpdateOptions {
      *
      * @return whether to show secrets
      */
-    public boolean isShowSecrets() {
+    public boolean showSecrets() {
         return showSecrets;
     }
 
@@ -59,7 +59,7 @@ public final class RefreshOptions extends UpdateOptions {
      *
      * @return whether to skip pending creates
      */
-    public boolean isSkipPendingCreates() {
+    public boolean skipPendingCreates() {
         return skipPendingCreates;
     }
 
@@ -68,7 +68,7 @@ public final class RefreshOptions extends UpdateOptions {
      *
      * @return whether to clear pending creates
      */
-    public boolean isClearPendingCreates() {
+    public boolean clearPendingCreates() {
         return clearPendingCreates;
     }
 
@@ -77,7 +77,7 @@ public final class RefreshOptions extends UpdateOptions {
      *
      * @return the list of pending create values
      */
-    public List<PendingCreateValue> getImportPendingCreates() {
+    public List<PendingCreateValue> importPendingCreates() {
         return importPendingCreates;
     }
 

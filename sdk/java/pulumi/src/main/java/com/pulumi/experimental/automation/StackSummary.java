@@ -35,7 +35,7 @@ public class StackSummary {
      *
      * @return the name
      */
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -53,7 +53,7 @@ public class StackSummary {
      *
      * @return the time of the last update
      */
-    public Instant getLastUpdate() {
+    public Instant lastUpdate() {
         return lastUpdate;
     }
 
@@ -71,7 +71,7 @@ public class StackSummary {
      *
      * @return the number of resources
      */
-    public Integer getResourceCount() {
+    public Integer resourceCount() {
         return resourceCount;
     }
 
@@ -80,7 +80,7 @@ public class StackSummary {
      *
      * @return the URL
      */
-    public String getUrl() {
+    public String url() {
         return url;
     }
 }

@@ -45,7 +45,7 @@ public class DiagnosticEvent {
      * @return the URN, may be null
      */
     @Nullable
-    public String getUrn() {
+    public String urn() {
         return urn;
     }
 
@@ -55,7 +55,7 @@ public class DiagnosticEvent {
      * @return the prefix, may be null
      */
     @Nullable
-    public String getPrefix() {
+    public String prefix() {
         return prefix;
     }
 
@@ -64,7 +64,7 @@ public class DiagnosticEvent {
      *
      * @return the message
      */
-    public String getMessage() {
+    public String message() {
         return message;
     }
 
@@ -73,7 +73,7 @@ public class DiagnosticEvent {
      *
      * @return the color
      */
-    public String getColor() {
+    public String color() {
         return color;
     }
 
@@ -82,7 +82,7 @@ public class DiagnosticEvent {
      *
      * @return the severity
      */
-    public String getSeverity() {
+    public String severity() {
         return severity;
     }
 
@@ -92,7 +92,7 @@ public class DiagnosticEvent {
      * @return the stream ID, may be null
      */
     @Nullable
-    public String getStreamId() {
+    public String streamId() {
         return streamId;
     }
 
@@ -102,7 +102,7 @@ public class DiagnosticEvent {
      * @return whether this diagnostic is ephemeral, may be null
      */
     @Nullable
-    public Boolean getEphemeral() {
+    public Boolean ephemeral() {
         return ephemeral;
     }
 }

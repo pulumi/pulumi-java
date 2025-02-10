@@ -27,7 +27,7 @@ public final class UpResult extends UpdateResult {
      *
      * @return the outputs
      */
-    public Map<String, OutputValue> getOutputs() {
+    public Map<String, OutputValue> outputs() {
         return outputs;
     }
 }

@@ -35,7 +35,7 @@ public class ProjectBackend {
      * @return the backend URL
      */
     @Nullable
-    public String getUrl() {
+    public String url() {
         return url;
     }
 

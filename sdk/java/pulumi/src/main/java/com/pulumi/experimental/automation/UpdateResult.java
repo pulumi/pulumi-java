@@ -24,7 +24,7 @@ public class UpdateResult {
      *
      * @return the standard output
      */
-    public String getStandardOutput() {
+    public String standardOutput() {
         return standardOutput;
     }
 
@@ -33,7 +33,7 @@ public class UpdateResult {
      *
      * @return the standard error
      */
-    public String getStandardError() {
+    public String standardError() {
         return standardError;
     }
 
@@ -42,7 +42,7 @@ public class UpdateResult {
      *
      * @return the summary
      */
-    public UpdateSummary getSummary() {
+    public UpdateSummary summary() {
         return summary;
     }
 }

@@ -24,7 +24,7 @@ public final class CommandResult {
      *
      * @return the exit code
      */
-    public int getCode() {
+    public int code() {
         return code;
     }
 
@@ -33,7 +33,7 @@ public final class CommandResult {
      *
      * @return the standard output
      */
-    public String getStandardOutput() {
+    public String standardOutput() {
         return standardOutput;
     }
 
@@ -42,7 +42,7 @@ public final class CommandResult {
      *
      * @return the standard error
      */
-    public String getStandardError() {
+    public String standardError() {
         return standardError;
     }
 

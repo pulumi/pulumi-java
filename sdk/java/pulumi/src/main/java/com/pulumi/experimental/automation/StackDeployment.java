@@ -10,10 +10,10 @@ import com.google.gson.reflect.TypeToken;
 
 /**
  * Represents the state of a stack deployment as used by
- * {@link Workspace#importStack} and {@link Workspace#exportStack}.
+ * {@link Workspace#importStack(String, StackDeployment)} and {@link Workspace#exportStack(String)}.
  * <p>
  * There is no strongly typed model for the contents yet, but you
- * can access the raw representation via {@link #getDeployment}.
+ * can access the raw representation via {@link #deployment()}.
  * <p>
  * NOTE: instances may contain sensitive data (secrets).
  */
@@ -56,7 +56,7 @@ public final class StackDeployment {
      *
      * @return the version of the deployment
      */
-    public int getVersion() {
+    public int version() {
         return version;
     }
 
@@ -65,7 +65,7 @@ public final class StackDeployment {
      *
      * @return the deployment
      */
-    public Map<String, Object> getDeployment() {
+    public Map<String, Object> deployment() {
         return deployment;
     }
 }

@@ -57,11 +57,11 @@ public class StepEventStateMetadata {
                 : Collections.emptyList();
     }
 
-    public String getUrn() {
+    public String urn() {
         return urn;
     }
 
-    public String getType() {
+    public String type() {
         return type;
     }
 
@@ -71,7 +71,7 @@ public class StepEventStateMetadata {
      * @return true if managed by a plugin, may be null
      */
     @Nullable
-    public Boolean getCustom() {
+    public Boolean custom() {
         return custom;
     }
 
@@ -81,7 +81,7 @@ public class StepEventStateMetadata {
      * @return true if pending deletion, may be null
      */
     @Nullable
-    public Boolean getDelete() {
+    public Boolean delete() {
         return delete;
     }
 
@@ -91,7 +91,7 @@ public class StepEventStateMetadata {
      *
      * @return the resource ID
      */
-    public String getId() {
+    public String id() {
         return id;
     }
 
@@ -100,7 +100,7 @@ public class StepEventStateMetadata {
      *
      * @return the parent URN
      */
-    public String getParent() {
+    public String parent() {
         return parent;
     }
 
@@ -111,7 +111,7 @@ public class StepEventStateMetadata {
      * @return true if protected, may be null
      */
     @Nullable
-    public Boolean getProtect() {
+    public Boolean protect() {
         return protect;
     }
 
@@ -122,7 +122,7 @@ public class StepEventStateMetadata {
      *
      * @return an unmodifiable map of input properties
      */
-    public Map<String, Object> getInputs() {
+    public Map<String, Object> inputs() {
         return inputs;
     }
 
@@ -132,7 +132,7 @@ public class StepEventStateMetadata {
      *
      * @return an unmodifiable map of output properties
      */
-    public Map<String, Object> getOutputs() {
+    public Map<String, Object> outputs() {
         return outputs;
     }
 
@@ -141,7 +141,7 @@ public class StepEventStateMetadata {
      *
      * @return the provider reference
      */
-    public String getProvider() {
+    public String provider() {
         return provider;
     }
 
@@ -150,7 +150,7 @@ public class StepEventStateMetadata {
      *
      * @return an unmodifiable list of initialization errors, may be null
      */
-    public List<String> getInitErrors() {
+    public List<String> initErrors() {
         return initErrors;
     }
 }

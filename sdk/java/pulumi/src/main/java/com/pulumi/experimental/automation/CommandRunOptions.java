@@ -25,7 +25,7 @@ public final class CommandRunOptions {
     private final Path workingDir;
     private final Map<String, String> additionalEnv;
     @Nullable
-    private final String stdIn;
+    private final String standardInput;
     @Nullable
     private final Consumer<String> onStandardOutput;
     @Nullable
@@ -38,7 +38,7 @@ public final class CommandRunOptions {
         this.additionalEnv = builder.additionalEnv == null
                 ? Collections.emptyMap()
                 : Collections.unmodifiableMap(builder.additionalEnv);
-        this.stdIn = builder.stdIn;
+        this.standardInput = builder.standardInput;
         this.onStandardOutput = builder.onStandardOutput;
         this.onStandardError = builder.onStandardError;
         this.onEngineEvent = builder.onEngineEvent;
@@ -59,7 +59,7 @@ public final class CommandRunOptions {
      * @return the working directory
      */
     @Nullable
-    public Path getWorkingDir() {
+    public Path workingDir() {
         return workingDir;
     }
 
@@ -68,7 +68,7 @@ public final class CommandRunOptions {
      *
      * @return the additional environment variables
      */
-    public Map<String, String> getAdditionalEnv() {
+    public Map<String, String> additionalEnv() {
         return additionalEnv;
     }
 
@@ -78,8 +78,8 @@ public final class CommandRunOptions {
      * @return the standard input
      */
     @Nullable
-    public String getStdIn() {
-        return stdIn;
+    public String standardInput() {
+        return standardInput;
     }
 
     /**
@@ -89,7 +89,7 @@ public final class CommandRunOptions {
      * @return the consumer for standard output
      */
     @Nullable
-    public Consumer<String> getOnStandardOutput() {
+    public Consumer<String> onStandardOutput() {
         return onStandardOutput;
     }
 
@@ -100,7 +100,7 @@ public final class CommandRunOptions {
      * @return the consumer for standard error
      */
     @Nullable
-    public Consumer<String> getOnStandardError() {
+    public Consumer<String> onStandardError() {
         return onStandardError;
     }
 
@@ -111,7 +111,7 @@ public final class CommandRunOptions {
      * @return the consumer for engine events
      */
     @Nullable
-    public Consumer<EngineEvent> getOnEngineEvent() {
+    public Consumer<EngineEvent> onEngineEvent() {
         return onEngineEvent;
     }
 
@@ -147,7 +147,7 @@ public final class CommandRunOptions {
         return CommandRunOptions.builder()
                 .workingDir(workingDir)
                 .additionalEnv(additionalEnv)
-                .stdIn(stdIn)
+                .standardInput(standardInput)
                 .onStandardOutput(onStandardOutput)
                 .onStandardError(onStandardError)
                 .onEngineEvent(onEngineEvent);
@@ -162,7 +162,7 @@ public final class CommandRunOptions {
         @Nullable
         private Map<String, String> additionalEnv;
         @Nullable
-        private String stdIn;
+        private String standardInput;
         @Nullable
         private Consumer<String> onStandardOutput;
         @Nullable
@@ -198,11 +198,11 @@ public final class CommandRunOptions {
         /**
          * Sets the standard input for the command.
          *
-         * @param stdIn the standard input
+         * @param standardInput the standard input
          * @return the builder
          */
-        public Builder stdIn(String stdIn) {
-            this.stdIn = stdIn;
+        public Builder standardInput(String standardInput) {
+            this.standardInput = standardInput;
             return this;
         }
 

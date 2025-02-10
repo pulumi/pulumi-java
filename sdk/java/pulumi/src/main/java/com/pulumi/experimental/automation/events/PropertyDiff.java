@@ -20,7 +20,7 @@ public class PropertyDiff {
      *
      * @return the difference kind
      */
-    public DiffKind getKind() {
+    public DiffKind kind() {
         return kind;
     }
 

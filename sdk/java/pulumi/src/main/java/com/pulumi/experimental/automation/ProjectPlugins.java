@@ -42,7 +42,7 @@ public class ProjectPlugins {
      *
      * @return the provider plugins to configure for the project
      */
-    public List<ProjectPluginOptions> getProviders() {
+    public List<ProjectPluginOptions> providers() {
         return providers;
     }
 
@@ -51,7 +51,7 @@ public class ProjectPlugins {
      *
      * @return the language plugins to configure for the project
      */
-    public List<ProjectPluginOptions> getLanguages() {
+    public List<ProjectPluginOptions> languages() {
         return languages;
     }
 
@@ -60,7 +60,7 @@ public class ProjectPlugins {
      *
      * @return the analyzer plugins to configure for the project
      */
-    public List<ProjectPluginOptions> getAnalyzers() {
+    public List<ProjectPluginOptions> analyzers() {
         return analyzers;
     }
 

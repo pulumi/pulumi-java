@@ -103,11 +103,11 @@ class ProjectSettingsYamlSerializer {
             // Special handling of ProjectRuntime
             if (propertyValue instanceof ProjectRuntime) {
                 var runtime = (ProjectRuntime) propertyValue;
-                if (runtime.getOptions() == null) {
+                if (runtime.options() == null) {
                     // If options is null, represent runtime as just the name
                     return new NodeTuple(
                             representScalar(Tag.STR, property.getName()),
-                            representScalar(Tag.STR, runtime.getName().name().toLowerCase()));
+                            representScalar(Tag.STR, runtime.name().name().toLowerCase()));
                 }
             }
 

@@ -64,15 +64,15 @@ public class StepEventMetadata {
      *
      * @return the operation type
      */
-    public OperationType getOp() {
+    public OperationType op() {
         return op;
     }
 
-    public String getUrn() {
+    public String urn() {
         return urn;
     }
 
-    public String getType() {
+    public String type() {
         return type;
     }
 
@@ -82,7 +82,7 @@ public class StepEventMetadata {
      * @return the old state metadata, may be null
      */
     @Nullable
-    public StepEventStateMetadata getOld() {
+    public StepEventStateMetadata old() {
         return old;
     }
 
@@ -92,7 +92,7 @@ public class StepEventMetadata {
      * @return the new state metadata, may be null
      */
     @Nullable
-    public StepEventStateMetadata getNew() {
+    public StepEventStateMetadata new_() {
         return newState;
     }
 
@@ -102,7 +102,7 @@ public class StepEventMetadata {
      *
      * @return an unmodifiable list of keys, may be null
      */
-    public List<String> getKeys() {
+    public List<String> keys() {
         return keys;
     }
 
@@ -111,7 +111,7 @@ public class StepEventMetadata {
      *
      * @return an unmodifiable list of changed keys, may be null
      */
-    public List<String> getDiffs() {
+    public List<String> diffs() {
         return diffs;
     }
 
@@ -120,7 +120,7 @@ public class StepEventMetadata {
      *
      * @return an unmodifiable map of detailed differences, may be null
      */
-    public Map<String, PropertyDiff> getDetailedDiff() {
+    public Map<String, PropertyDiff> detailedDiff() {
         return detailedDiff;
     }
 
@@ -130,7 +130,7 @@ public class StepEventMetadata {
      * @return true if the step is logical, may be null
      */
     @Nullable
-    public Boolean getLogical() {
+    public Boolean logical() {
         return logical;
     }
 
@@ -139,7 +139,7 @@ public class StepEventMetadata {
      *
      * @return the provider
      */
-    public String getProvider() {
+    public String provider() {
         return provider;
     }
 }

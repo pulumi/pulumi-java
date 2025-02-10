@@ -34,7 +34,7 @@ public final class HistoryOptions {
      * @return the page
      */
     @Nullable
-    public Integer getPage() {
+    public Integer page() {
         return page;
     }
 
@@ -44,7 +44,7 @@ public final class HistoryOptions {
      * @return the page size
      */
     @Nullable
-    public Integer getPageSize() {
+    public Integer pageSize() {
         return pageSize;
     }
 
@@ -53,7 +53,7 @@ public final class HistoryOptions {
      *
      * @return whether to show secrets
      */
-    public boolean getShowSecrets() {
+    public boolean showSecrets() {
         return showSecrets;
     }
 

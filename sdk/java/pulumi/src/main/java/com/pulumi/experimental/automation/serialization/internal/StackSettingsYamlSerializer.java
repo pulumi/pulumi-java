@@ -54,10 +54,10 @@ class StackSettingsYamlSerializer {
             this.representers.put(StackSettingsConfigValue.class, data -> {
                 var value = (StackSettingsConfigValue) data;
                 if (!value.isSecure()) {
-                    return represent(value.getValue());
+                    return represent(value.value());
                 }
 
-                Node valueNode = represent(value.getValue());
+                Node valueNode = represent(value.value());
                 Node secureNode = new ScalarNode(Tag.STR, "secure", null, null, DumperOptions.ScalarStyle.PLAIN);
                 return new MappingNode(Tag.MAP,
                         Collections.singletonList(new NodeTuple(secureNode, valueNode)),

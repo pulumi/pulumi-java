@@ -23,7 +23,7 @@ public class ResourceOperationFailedEvent {
      *
      * @return the step event metadata
      */
-    public StepEventMetadata getMetadata() {
+    public StepEventMetadata metadata() {
         return metadata;
     }
 
@@ -32,7 +32,7 @@ public class ResourceOperationFailedEvent {
      *
      * @return the status code
      */
-    public int getStatus() {
+    public int status() {
         return status;
     }
 
@@ -41,7 +41,7 @@ public class ResourceOperationFailedEvent {
      *
      * @return the number of steps
      */
-    public int getSteps() {
+    public int steps() {
         return steps;
     }
 }

@@ -16,7 +16,7 @@ public interface PulumiCommand {
      * @return the version of the Pulumi CLI or {@code null}
      */
     @Nullable
-    Version getVersion();
+    Version version();
 
     /**
      * Runs the Pulumi command.

@@ -65,15 +65,15 @@ public final class LocalWorkspace extends Workspace {
         Path dir = null;
 
         if (options != null) {
-            if (options.getWorkDir() != null) {
-                dir = options.getWorkDir();
+            if (options.workDir() != null) {
+                dir = options.workDir();
             }
 
-            this.pulumiHome = options.getPulumiHome();
-            this.program = options.getProgram();
-            this.logger = options.getLogger();
-            this.secretsProvider = options.getSecretsProvider();
-            this.environmentVariables = options.getEnvironmentVariables();
+            this.pulumiHome = options.pulumiHome();
+            this.program = options.program();
+            this.logger = options.logger();
+            this.secretsProvider = options.secretsProvider();
+            this.environmentVariables = options.environmentVariables();
         } else {
             this.pulumiHome = null;
             this.program = null;
@@ -96,12 +96,12 @@ public final class LocalWorkspace extends Workspace {
         this.workDir = dir;
 
         if (options != null) {
-            var projectSettings = options.getProjectSettings();
+            var projectSettings = options.projectSettings();
             if (projectSettings != null) {
                 initializeProjectSettings(projectSettings);
             }
 
-            var stackSettings = options.getStackSettings();
+            var stackSettings = options.stackSettings();
             if (stackSettings != null) {
                 for (var entry : stackSettings.entrySet()) {
                     saveStackSettings(entry.getKey(), entry.getValue());
@@ -150,11 +150,11 @@ public final class LocalWorkspace extends Workspace {
 
     private static PulumiCommand getOrCreatePulumiCommand(
             @Nullable LocalWorkspaceOptions options) throws AutomationException {
-        return options != null && options.getPulumiCommand() != null
-                ? options.getPulumiCommand()
+        return options != null && options.pulumiCommand() != null
+                ? options.pulumiCommand()
                 : LocalPulumiCommand.create(LocalPulumiCommandOptions.builder()
                         .skipVersionCheck(optOutOfVersionCheck(options != null
-                                ? options.getEnvironmentVariables()
+                                ? options.environmentVariables()
                                 : null))
                         .build());
     }
@@ -191,9 +191,9 @@ public final class LocalWorkspace extends Workspace {
     /**
      * Creates a stack with a {@link LocalWorkspace} utilizing the specified inline
      * (in process) {@code program}. This program is fully debuggable and runs in
-     * process. If no {@link LocalWorkspaceOptions#getProjectSettings()} option is
+     * process. If no {@link LocalWorkspaceOptions#projectSettings()} option is
      * specified, default project settings will be created on behalf of the user.
-     * Similarly, unless a {@link LocalWorkspaceOptions#getWorkDir()} option is
+     * Similarly, unless a {@link LocalWorkspaceOptions#workDir()} option is
      * specified, the working directory will default to a new temporary directory
      * provided by the OS.
      *
@@ -280,9 +280,9 @@ public final class LocalWorkspace extends Workspace {
      * Selects an existing Stack with a {@link LocalWorkspace} utilizing the
      * specified inline (in process) {@code program}. This program is fully
      * debuggable and runs in process. If no
-     * {@link LocalWorkspaceOptions#getProjectSettings()} option is specified,
+     * {@link LocalWorkspaceOptions#projectSettings()} option is specified,
      * default project settings will be created on behalf of the user. Similarly,
-     * unless a {@link LocalWorkspaceOptions#getWorkDir()} option is specified, the
+     * unless a {@link LocalWorkspaceOptions#workDir()} option is specified, the
      * working directory will default to a new temporary directory provided by the
      * OS.
      *
@@ -367,9 +367,9 @@ public final class LocalWorkspace extends Workspace {
      * Creates or selects an existing Stack with a {@link LocalWorkspace} utilizing
      * the specified inline (in process) {@code program}. This program is fully
      * debuggable and runs in process. If no
-     * {@link LocalWorkspaceOptions#getProjectSettings()} option is specified,
+     * {@link LocalWorkspaceOptions#projectSettings()} option is specified,
      * default project settings will be created on behalf of the user. Similarly,
-     * unless a {@link LocalWorkspaceOptions#getWorkDir()} option is specified, the
+     * unless a {@link LocalWorkspaceOptions#workDir()} option is specified, the
      * working directory will default to a new temporary directory provided by the
      * OS.
      *
@@ -455,7 +455,7 @@ public final class LocalWorkspace extends Workspace {
      * {@inheritDoc}
      */
     @Override
-    public Path getWorkDir() {
+    public Path workDir() {
         return workDir;
     }
 
@@ -464,7 +464,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public Path getPulumiHome() {
+    public Path pulumiHome() {
         return pulumiHome;
     }
 
@@ -472,8 +472,8 @@ public final class LocalWorkspace extends Workspace {
      * {@inheritDoc}
      */
     @Override
-    public String getPulumiVersion() {
-        var version = cmd.getVersion();
+    public String pulumiVersion() {
+        var version = cmd.version();
         if (version == null) {
             throw new IllegalStateException("Failed to get Pulumi version");
         }
@@ -485,7 +485,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public String getSecretsProvider() {
+    public String secretsProvider() {
         return secretsProvider;
     }
 
@@ -494,7 +494,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public Consumer<Context> getProgram() {
+    public Consumer<Context> program() {
         return program;
     }
 
@@ -503,7 +503,7 @@ public final class LocalWorkspace extends Workspace {
      */
     @Nullable
     @Override
-    public Logger getLogger() {
+    public Logger logger() {
         return logger;
     }
 
@@ -511,7 +511,7 @@ public final class LocalWorkspace extends Workspace {
      * {@inheritDoc}
      */
     @Override
-    public Map<String, String> getEnvironmentVariables() {
+    public Map<String, String> environmentVariables() {
         return environmentVariables;
     }
 
@@ -653,7 +653,7 @@ public final class LocalWorkspace extends Workspace {
     public WhoAmIResult whoAmI() throws AutomationException {
         var args = List.of("whoami", "--json");
         var result = runCommand(args);
-        return serializer.deserializeJson(result.getStandardOutput(), WhoAmIResult.class);
+        return serializer.deserializeJson(result.standardOutput(), WhoAmIResult.class);
     }
 
     /**
@@ -699,13 +699,13 @@ public final class LocalWorkspace extends Workspace {
     public List<StackSummary> listStacks() throws AutomationException {
         var args = List.of("stack", "ls", "--json");
         var result = runCommand(args);
-        if (result.getStandardOutput().isBlank()) {
+        if (result.standardOutput().isBlank()) {
             return Collections.emptyList();
         }
 
         var listType = new TypeToken<List<StackSummary>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), listType);
+        return serializer.deserializeJson(result.standardOutput(), listType);
     }
 
     /**
@@ -715,7 +715,7 @@ public final class LocalWorkspace extends Workspace {
     public StackDeployment exportStack(String stackName) throws AutomationException {
         var args = List.of("stack", "export", "--stack", Objects.requireNonNull(stackName), "--show-secrets");
         var result = runCommand(args);
-        return StackDeployment.fromJson(result.getStandardOutput());
+        return StackDeployment.fromJson(result.standardOutput());
     }
 
     /**
@@ -776,7 +776,7 @@ public final class LocalWorkspace extends Workspace {
         var args = List.of("stack", "tag", "get", Objects.requireNonNull(key), "--stack",
                 Objects.requireNonNull(stackName));
         var result = runCommand(args);
-        return result.getStandardOutput().trim();
+        return result.standardOutput().trim();
     }
 
     /**
@@ -809,7 +809,7 @@ public final class LocalWorkspace extends Workspace {
 
         var mapType = new TypeToken<Map<String, String>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), mapType);
+        return serializer.deserializeJson(result.standardOutput(), mapType);
     }
 
     /**
@@ -829,7 +829,7 @@ public final class LocalWorkspace extends Workspace {
         args.add(Objects.requireNonNull(stackName));
         var result = runCommand(args);
 
-        return serializer.deserializeJson(result.getStandardOutput(), ConfigValue.class);
+        return serializer.deserializeJson(result.standardOutput(), ConfigValue.class);
     }
 
     /**
@@ -839,12 +839,12 @@ public final class LocalWorkspace extends Workspace {
     public Map<String, ConfigValue> getAllConfig(String stackName) throws AutomationException {
         var args = List.of("config", "--show-secrets", "--json", "--stack", Objects.requireNonNull(stackName));
         var result = runCommand(args);
-        if (result.getStandardOutput().isBlank()) {
+        if (result.standardOutput().isBlank()) {
             return Collections.emptyMap();
         }
         var mapType = new TypeToken<Map<String, ConfigValue>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), mapType);
+        return serializer.deserializeJson(result.standardOutput(), mapType);
     }
 
     /**
@@ -866,7 +866,7 @@ public final class LocalWorkspace extends Workspace {
         args.add(Objects.requireNonNull(stackName));
         args.add("--non-interactive");
         args.add("--");
-        args.add(value.getValue());
+        args.add(value.value());
         runCommand(args);
     }
 
@@ -889,7 +889,7 @@ public final class LocalWorkspace extends Workspace {
         for (var entry : configMap.entrySet()) {
             String secretArg = entry.getValue().isSecret() ? "--secret" : "--plaintext";
             args.add(secretArg);
-            args.add(entry.getKey() + "=" + entry.getValue().getValue());
+            args.add(entry.getKey() + "=" + entry.getValue().value());
         }
 
         runCommand(args);
@@ -948,7 +948,7 @@ public final class LocalWorkspace extends Workspace {
         args.add("plugin");
         args.add("install");
 
-        var kind = options != null ? options.getKind() : PluginKind.RESOURCE;
+        var kind = options != null ? options.kind() : PluginKind.RESOURCE;
         args.add(kind.toString().toLowerCase());
 
         args.add(Objects.requireNonNull(name));
@@ -959,7 +959,7 @@ public final class LocalWorkspace extends Workspace {
                 args.add("--exact");
             }
 
-            var serverUrl = options.getServerUrl();
+            var serverUrl = options.serverUrl();
             if (serverUrl != null && !serverUrl.isBlank()) {
                 args.add("--server");
                 args.add(serverUrl);
@@ -978,16 +978,16 @@ public final class LocalWorkspace extends Workspace {
         args.add("plugin");
         args.add("rm");
 
-        var kind = options != null ? options.getKind() : PluginKind.RESOURCE;
+        var kind = options != null ? options.kind() : PluginKind.RESOURCE;
         args.add(kind.toString().toLowerCase());
 
         if (options != null) {
-            var name = options.getName();
+            var name = options.name();
             if (name != null && !name.isBlank()) {
                 args.add(name);
             }
 
-            var versionRange = options.getVersionRange();
+            var versionRange = options.versionRange();
             if (versionRange != null && !versionRange.isBlank()) {
                 args.add(versionRange);
             }
@@ -1008,7 +1008,7 @@ public final class LocalWorkspace extends Workspace {
 
         var listType = new TypeToken<List<PluginInfo>>() {
         }.getType();
-        return serializer.deserializeJson(result.getStandardOutput(), listType);
+        return serializer.deserializeJson(result.standardOutput(), listType);
     }
 
     /**
@@ -1022,8 +1022,8 @@ public final class LocalWorkspace extends Workspace {
         var maskedResult = runCommand(List.of("stack", "output", "--json", "--stack", stackName));
         var plaintextResult = runCommand(List.of("stack", "output", "--json", "--show-secrets", "--stack", stackName));
 
-        var maskedStdout = maskedResult.getStandardOutput().trim();
-        var plaintextStdout = plaintextResult.getStandardOutput().trim();
+        var maskedStdout = maskedResult.standardOutput().trim();
+        var plaintextStdout = plaintextResult.standardOutput().trim();
 
         var type = new TypeToken<Map<String, String>>() {
         }.getType();
@@ -1057,12 +1057,12 @@ public final class LocalWorkspace extends Workspace {
         if (newSecretsProvider.equals("passphrase")) {
             var message = "New passphrase must be set when using passphrase provider";
             Objects.requireNonNull(options, message);
-            var newPassphrase = options.getNewPassphrase();
+            var newPassphrase = options.newPassphrase();
             Objects.requireNonNull(newPassphrase, message);
             if (newPassphrase.isEmpty()) {
                 throw new IllegalArgumentException(message);
             }
-            builder.stdIn(newPassphrase);
+            builder.standardInput(newPassphrase);
         }
 
         runCommand(args, builder.build());

@@ -38,7 +38,7 @@ public class PluginInstallOptions {
      *
      * @return the kind of plugin
      */
-    public PluginKind getKind() {
+    public PluginKind kind() {
         return kind;
     }
 
@@ -60,7 +60,7 @@ public class PluginInstallOptions {
      * @return the server URL
      */
     @Nullable
-    public String getServerUrl() {
+    public String serverUrl() {
         return serverUrl;
     }
 
