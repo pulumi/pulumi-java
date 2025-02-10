@@ -62,6 +62,8 @@ public class LocalSerializer {
     public <T> T deserializeYaml(String content, Class<T> clazz) {
         if (ProjectSettings.class.equals(clazz)) {
             return (T) ProjectSettingsYamlSerializer.deserialize(content);
+        } else if (StackSettings.class.equals(clazz)) {
+            return (T) StackSettingsYamlSerializer.deserialize(content);
         }
 
         throw new UnsupportedOperationException(
@@ -88,6 +90,8 @@ public class LocalSerializer {
     public <T> String serializeYaml(T object) {
         if (object instanceof ProjectSettings) {
             return ProjectSettingsYamlSerializer.serialize((ProjectSettings) object);
+        } else if (object instanceof StackSettings) {
+            return StackSettingsYamlSerializer.serialize((StackSettings) object);
         }
 
         throw new UnsupportedOperationException(
