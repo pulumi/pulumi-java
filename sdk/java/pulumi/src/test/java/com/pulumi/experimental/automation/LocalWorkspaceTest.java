@@ -63,20 +63,20 @@ public class LocalWorkspaceTest {
                     var upResult = stack.up();
                     assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                     assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
-                    assertThat(upResult.getOutputs().size()).isEqualTo(3);
+                    assertThat(upResult.outputs().size()).isEqualTo(3);
 
                     // exp_static
-                    var expStaticValue = upResult.getOutputs().get("exp_static");
+                    var expStaticValue = upResult.outputs().get("exp_static");
                     assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
                     // exp_cfg
-                    var expConfigValue = upResult.getOutputs().get("exp_cfg");
+                    var expConfigValue = upResult.outputs().get("exp_cfg");
                     assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
                     // exp_secret
-                    var expSecretValue = upResult.getOutputs().get("exp_secret");
+                    var expSecretValue = upResult.outputs().get("exp_secret");
                     assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
@@ -128,20 +128,20 @@ public class LocalWorkspaceTest {
                     var upResult = stack.up();
                     assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                     assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
-                    assertThat(upResult.getOutputs().size()).isEqualTo(3);
+                    assertThat(upResult.outputs().size()).isEqualTo(3);
 
                     // exp_static
-                    var expStaticValue = upResult.getOutputs().get("exp_static");
+                    var expStaticValue = upResult.outputs().get("exp_static");
                     assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
                     // exp_cfg
-                    var expConfigValue = upResult.getOutputs().get("exp_cfg");
+                    var expConfigValue = upResult.outputs().get("exp_cfg");
                     assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
                     // exp_secret
-                    var expSecretValue = upResult.getOutputs().get("exp_secret");
+                    var expSecretValue = upResult.outputs().get("exp_secret");
                     assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
