@@ -514,12 +514,12 @@ public final class WorkspaceStack implements AutoCloseable {
         args.add("preview");
 
         if (options != null) {
-            if (options.getProgram() != null) {
-                program = options.getProgram();
+            if (options.program() != null) {
+                program = options.program();
             }
 
-            if (options.getLogger() != null) {
-                logger = options.getLogger();
+            if (options.logger() != null) {
+                logger = options.logger();
             }
 
             if (options.isExpectNoChanges()) {
@@ -530,19 +530,19 @@ public final class WorkspaceStack implements AutoCloseable {
                 args.add("--diff");
             }
 
-            if (options.getPlan() != null) {
+            if (options.plan() != null) {
                 args.add("--plan");
-                args.add(options.getPlan());
+                args.add(options.plan());
             }
 
-            if (options.getReplaces() != null) {
-                for (var item : options.getReplaces()) {
+            if (options.replaces() != null) {
+                for (var item : options.replaces()) {
                     args.add("--replace");
                     args.add(item);
                 }
             }
 
-            if (options.isTargetDependents()) {
+            if (options.targetDependents()) {
                 args.add("--target-dependents");
             }
 

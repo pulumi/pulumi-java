@@ -72,7 +72,7 @@ public final class PreviewOptions extends UpdateOptions {
      *
      * @return the list of resource URNs to replace
      */
-    public List<String> getReplaces() {
+    public List<String> replaces() {
         return replaces;
     }
 
@@ -82,7 +82,7 @@ public final class PreviewOptions extends UpdateOptions {
      *
      * @return true if dependent targets should be updated
      */
-    public boolean isTargetDependents() {
+    public boolean targetDependents() {
         return targetDependents;
     }
 
@@ -92,7 +92,7 @@ public final class PreviewOptions extends UpdateOptions {
      * @return the program to execute
      */
     @Nullable
-    public Consumer<Context> getProgram() {
+    public Consumer<Context> program() {
         return program;
     }
 
@@ -102,7 +102,7 @@ public final class PreviewOptions extends UpdateOptions {
      * @return the path to the update plan
      */
     @Nullable
-    public String getPlan() {
+    public String plan() {
         return plan;
     }
 
@@ -113,7 +113,7 @@ public final class PreviewOptions extends UpdateOptions {
      * @return the logger
      */
     @Nullable
-    public Logger getLogger() {
+    public Logger logger() {
         return logger;
     }
 
