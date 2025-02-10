@@ -607,7 +607,7 @@ public final class WorkspaceStack implements AutoCloseable {
             return new PreviewResult(
                     result.standardOutput(),
                     result.standardError(),
-                    summaryEvent[0].getResourceChanges());
+                    summaryEvent[0].resourceChanges());
         } catch (AutomationException e) {
             throw e;
         } catch (Exception e) {

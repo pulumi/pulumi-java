@@ -47,7 +47,7 @@ public class SummaryEvent {
      *
      * @return duration in seconds
      */
-    public int getDurationSeconds() {
+    public int durationSeconds() {
         return durationSeconds;
     }
 
@@ -56,7 +56,7 @@ public class SummaryEvent {
      *
      * @return an unmodifiable map of resource changes by operation type
      */
-    public Map<OperationType, Integer> getResourceChanges() {
+    public Map<OperationType, Integer> resourceChanges() {
         return resourceChanges;
     }
 
@@ -65,7 +65,7 @@ public class SummaryEvent {
      *
      * @return an unmodifiable map of policy pack names to versions
      */
-    public Map<String, String> getPolicyPacks() {
+    public Map<String, String> policyPacks() {
         return policyPacks;
     }
 }
