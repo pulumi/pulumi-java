@@ -34,7 +34,7 @@ public class ProjectOptions {
      *         preview / destroy
      */
     @Nullable
-    public String getRefresh() {
+    public String refresh() {
         return refresh;
     }
 
