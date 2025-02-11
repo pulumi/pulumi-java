@@ -1,10 +1,14 @@
 package com.pulumi.provider.internal;
 
-import com.pulumi.asset.Asset;
 import com.pulumi.asset.Archive;
-import com.pulumi.asset.FileAsset;
+import com.pulumi.asset.Asset;
+import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.asset.FileArchive;
+import com.pulumi.asset.FileAsset;
 import com.pulumi.core.Output;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.resources.ResourceArgs;
@@ -24,6 +28,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import com.google.common.collect.ImmutableSet;
 
 public class PropertyValueSerializerTest {
 
@@ -411,6 +417,201 @@ public class PropertyValueSerializerTest {
         assertThat(archiveData.getValueNullable()).isInstanceOf(FileArchive.class);
         var archive = (FileArchive)archiveData.getValueNullable();
         assertThat(archive).isEqualTo(fileArchive);
+    }
+
+    class BasicResource  {
+        @Export(name="value")
+        public final Output<String> value;
+
+        @Export(name="valueWithOverridenName")
+        public final Output<String> otherValue;
+
+        public BasicResource(String value, String otherValue) {
+            this.value = Output.of(value);
+            this.otherValue = Output.of(otherValue);
+        }
+    }
+
+    @Test
+    void testSerializingBasicResource() {
+        var basicResource = new BasicResource("test", "other");
+        var data = PropertyValueSerializer.stateFromComponentResource(basicResource);
+        
+        var expected = Map.of(
+            "value", PropertyValue.of("test"),
+            "valueWithOverridenName", PropertyValue.of("other")
+        );
+        assertThat(data).isEqualTo(expected);
+    }
+
+
+    class ComplexResource {
+        @Export(name="stringValue")
+        public final Output<String> stringValue;
+
+        @Export(name="intValue") 
+        public final Output<Integer> intValue;
+
+        @Export(name="doubleValue")
+        public final Output<Double> doubleValue;
+
+        @Export(name="boolValue")
+        public final Output<Boolean> boolValue;
+
+        @Export(name="enumValue")
+        public final Output<TestEnum> enumValue;
+
+        @Export(name="listValue")
+        public final Output<List<String>> listValue;
+
+        @Export(name="mapValue")
+        public final Output<Map<String, String>> mapValue;
+
+        @Export(name="assetValue")
+        public final Output<Asset> assetValue;
+
+        @Export(name="archiveValue")
+        public final Output<Archive> archiveValue;
+
+        public ComplexResource() {
+            this.stringValue = Output.of("test");
+            this.intValue = Output.of(42);
+            this.doubleValue = Output.of(3.14);
+            this.boolValue = Output.of(true);
+            this.enumValue = Output.of(TestEnum.Allow);
+            this.listValue = Output.of(Arrays.asList("one", "two", "three"));
+            this.mapValue = Output.of(Map.of("key1", "value1", "key2", "value2"));
+            this.assetValue = Output.of(new FileAsset("test.txt"));
+            this.archiveValue = Output.of(new FileArchive("test.zip"));
+        }
+    }
+
+    @Test
+    void testSerializingComplexResource() {
+        var resource = new ComplexResource();
+        var data = PropertyValueSerializer.stateFromComponentResource(resource);
+        
+        // Create a map to compare values individually
+        var expected = new HashMap<String, PropertyValue>();
+        expected.put("stringValue", PropertyValue.of("test"));
+        expected.put("intValue", PropertyValue.of(42.0));
+        expected.put("doubleValue", PropertyValue.of(3.14));
+        expected.put("boolValue", PropertyValue.of(true));
+        expected.put("enumValue", PropertyValue.of(0));
+        expected.put("listValue", PropertyValue.of(Arrays.asList(
+            PropertyValue.of("one"),
+            PropertyValue.of("two"),
+            PropertyValue.of("three")
+        )));
+        expected.put("mapValue", PropertyValue.of(Map.of(
+            "key1", PropertyValue.of("value1"),
+            "key2", PropertyValue.of("value2")
+        )));
+
+        // Compare non-asset values
+        for (var entry : expected.entrySet()) {
+            var actualValue = data.get(entry.getKey());
+            var expectedValue = entry.getValue();
+            assertThat(actualValue)
+                .as("Value for key '%s'", entry.getKey())
+                .isEqualTo(expectedValue);
+        }
+
+        // Compare asset and archive values by checking their type and path
+        var actualAsset = data.get("assetValue").getAssetValue();
+        assertThat(actualAsset)
+            .isInstanceOf(FileAsset.class);
+        assertThat(AssetOrArchive.AssetOrArchiveInternal.from(actualAsset).getValue())
+            .isEqualTo("test.txt");
+
+        var actualArchive = data.get("archiveValue").getArchiveValue();
+        assertThat(actualArchive)
+            .isInstanceOf(FileArchive.class);
+        assertThat(AssetOrArchive.AssetOrArchiveInternal.from(actualArchive).getValue())
+            .isEqualTo("test.zip");
+    }
+
+    class SecretResource {
+        @Export(name="secretValue")
+        public final Output<String> secretValue;
+
+        @Export(name="secretList")
+        public final Output<List<String>> secretList;
+
+        public SecretResource() {
+            this.secretValue = Output.ofSecret("secret");
+            this.secretList = Output.ofSecret(Arrays.asList("secret1", "secret2"));
+        }
+    }
+
+    @Test
+    void testSerializingSecretResource() {
+        var resource = new SecretResource();
+        var data = PropertyValueSerializer.stateFromComponentResource(resource);
+
+        var expected = new HashMap<String, PropertyValue>();
+        expected.put("secretValue", PropertyValue.ofSecret(PropertyValue.of("secret")));
+        expected.put("secretList", PropertyValue.ofSecret(PropertyValue.of(Arrays.asList(
+            PropertyValue.of("secret1"),
+            PropertyValue.of("secret2")
+        ))));
+
+        assertThat(data).isEqualTo(expected);
+    }
+
+    class BaseResource {
+        @Export(name="baseValue")
+        public final Output<String> baseValue;
+
+        public BaseResource() {
+            this.baseValue = Output.of("base");
+        }
+    }
+
+    class DerivedResource extends BaseResource {
+        @Export(name="derivedValue")
+        public final Output<String> derivedValue;
+
+        public DerivedResource() {
+            super();
+            this.derivedValue = Output.of("derived");
+        }
+    }
+
+    @Test
+    void testSerializingInheritedExports() {
+        var resource = new DerivedResource();
+        var data = PropertyValueSerializer.stateFromComponentResource(resource);
+
+        var expected = Map.of(
+            "baseValue", PropertyValue.of("base"),
+            "derivedValue", PropertyValue.of("derived")
+        );
+        assertThat(data).isEqualTo(expected);
+    }
+
+    class NullComputedFieldResource {
+        @Export(name="nullValue")
+        public final Output<String> nullValue;
+
+        @Export(name="unknownValue")
+        public final Output<String> unknownValue;
+
+        public NullComputedFieldResource() {
+            this.nullValue = null;
+            OutputData<String> outputData = OutputData.ofNullable(ImmutableSet.of(), null, false, false);
+            this.unknownValue = new OutputInternal<>(outputData);
+        }
+    }
+
+    @Test
+    void testSerializingNullAndComputedExports() {
+        var resource = new NullComputedFieldResource();
+        var data = PropertyValueSerializer.stateFromComponentResource(resource);
+
+        // Only non-null value should be included
+        var expected = Map.of("unknownValue", PropertyValue.COMPUTED);
+        assertThat(data).isEqualTo(expected);
     }
 
     @SafeVarargs
