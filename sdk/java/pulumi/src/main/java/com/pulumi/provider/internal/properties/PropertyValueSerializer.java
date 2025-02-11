@@ -68,8 +68,6 @@ public final class PropertyValueSerializer {
 
     private static Object deserializeValue(PropertyValue value, java.lang.reflect.Type targetType, String[] path) {
         Class<?> rawType = resolveGenericType(targetType);
-        System.out.printf("deserializeValue: value.type=%s, targetType=%s, rawType=%s%n", 
-            value.getType(), targetType.getTypeName(), rawType.getName());
 
         if (Output.class.isAssignableFrom(rawType)) {
             return deserializeOutput(value, targetType, path);
