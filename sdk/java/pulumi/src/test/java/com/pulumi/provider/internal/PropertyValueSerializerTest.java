@@ -1,5 +1,9 @@
 package com.pulumi.provider.internal;
 
+import com.pulumi.asset.Asset;
+import com.pulumi.asset.Archive;
+import com.pulumi.asset.FileAsset;
+import com.pulumi.asset.FileArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
@@ -353,6 +357,49 @@ public class PropertyValueSerializerTest {
         assertThat(children).hasSize(1);
         var childNameData = PulumiTestInternal.extractOutputData(children.get(0).name());
         assertThat(childNameData.getValueNullable()).isEqualTo("child");
+    }
+
+    static class AssetArgs extends ResourceArgs {
+        @Import(name="file")
+        private Output<Asset> file;
+
+        @Import(name="archive")
+        private Output<Archive> archive;
+
+        public Output<Asset> file() {
+            return this.file;
+        }
+
+        public Output<Archive> archive() {
+            return this.archive;
+        }
+
+        private AssetArgs() {}
+    }
+
+    @Test
+    void testDeserializingAssetAndArchiveWorks() {
+        var fileAsset = new FileAsset("path/to/file.txt");
+        var fileArchive = new FileArchive("path/to/archive.zip");
+
+        var data = object(
+            pair("file", PropertyValue.of(fileAsset)),
+            pair("archive", PropertyValue.of(fileArchive))
+        );
+
+        var args = PropertyValueSerializer.deserialize(data, AssetArgs.class);
+        
+        var fileData = PulumiTestInternal.extractOutputData(args.file());
+        assertThat(fileData.isKnown()).isTrue();
+        assertThat(fileData.getValueNullable()).isInstanceOf(FileAsset.class);
+        var asset = (FileAsset)fileData.getValueNullable();
+        assertThat(asset).isEqualTo(fileAsset);
+
+        var archiveData = PulumiTestInternal.extractOutputData(args.archive());
+        assertThat(archiveData.isKnown()).isTrue();
+        assertThat(archiveData.getValueNullable()).isInstanceOf(FileArchive.class);
+        var archive = (FileArchive)archiveData.getValueNullable();
+        assertThat(archive).isEqualTo(fileArchive);
     }
 
     @SafeVarargs

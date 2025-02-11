@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.pulumi.asset.Asset;
+import com.pulumi.asset.Archive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
@@ -108,6 +110,16 @@ public final class PropertyValueSerializer {
             case ARRAY:
                 if (Collection.class.isAssignableFrom(rawType)) {
                     return deserializeCollection(value, targetType, path);
+                }
+                break;
+            case ASSET:
+                if (rawType == Asset.class) {
+                    return value.getAssetValue();
+                }
+                break;
+            case ARCHIVE:
+                if (rawType == Archive.class) {
+                    return value.getArchiveValue();
                 }
                 break;
             case OBJECT:
