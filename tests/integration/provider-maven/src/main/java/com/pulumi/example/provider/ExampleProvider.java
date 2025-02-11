@@ -32,11 +32,7 @@ public class ExampleProvider implements Provider {
     public CompletableFuture<ConstructResponse> construct(ConstructRequest request) {
         var args = PropertyValueSerializer.deserialize(PropertyValue.of(request.getInputs()), HelloWorldArgs.class);
         var comp = new HelloWorld(request.getName(), args, request.getOptions());
-        var state = new HashMap<String, PropertyValue>();
-        var value = Internal.of(comp.value).getValueNullable().join();
-        if (value != null) {
-            state.put("value", PropertyValue.of(value));
-        }
+        var state = PropertyValueSerializer.stateFromComponentResource(comp);
         var urn = Internal.of(comp.urn()).getValueNullable().join();
         var response = new ConstructResponse(urn, state, new HashMap<String, Set<String>>());
         return CompletableFuture.completedFuture(response);

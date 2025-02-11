@@ -7,14 +7,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.concurrent.CompletableFuture;
+import java.util.List;
 
 import com.pulumi.asset.Asset;
 import com.pulumi.asset.Archive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.resources.DependencyResource;
@@ -365,5 +370,212 @@ public final class PropertyValueSerializer {
         }
 
         return propertyName;
+    }
+
+    /**
+     * Converts a component resource object into a map of property values asynchronously.
+     * This method examines the fields of the component resource marked with the {@link Export} annotation
+     * and serializes their values into {@link PropertyValue} objects.
+     *
+     * @param component The component resource object to convert
+     * @return A map where keys are property names and values are serialized {@link PropertyValue} objects
+     * @throws PropertySerializationException if there is an error accessing field values
+     */
+    public static CompletableFuture<Map<String, PropertyValue>> stateFromComponentResourceAsync(Object component) {
+        Class<?> componentType = component.getClass();
+        
+        // Get all fields including inherited ones
+        Set<Field> fields = new HashSet<>();
+        Class<?> currentClass = componentType;
+        while (currentClass != null) {
+            fields.addAll(Arrays.asList(currentClass.getDeclaredFields()));
+            currentClass = currentClass.getSuperclass();
+        }
+
+        // Process each field with @Export annotation and collect futures
+        List<CompletableFuture<Map.Entry<String, PropertyValue>>> futures = fields.stream()
+            .filter(field -> field.isAnnotationPresent(Export.class))
+            .<CompletableFuture<Map.Entry<String, PropertyValue>>>map(field -> {
+                field.setAccessible(true);
+                Export attr = field.getAnnotation(Export.class);
+                String propertyName = !attr.name().isEmpty() ? attr.name() : field.getName();
+
+                try {
+                    Object value = field.get(component);
+                    if (value == null) {
+                        return CompletableFuture.completedFuture(null);
+                    }
+                    return serialize(value, field.getName())
+                            .thenApply(serialized -> Map.entry(propertyName, serialized));
+                } catch (IllegalAccessException e) {
+                    throw new PropertySerializationException(
+                        "Failed to get field value",
+                        new String[]{field.getName()},
+                        field.getType(),
+                        e
+                    );
+                }
+            })
+            .filter(future -> future != null)
+            .collect(Collectors.toList());
+
+        // Wait for all futures to complete and combine results
+        return CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]))
+            .thenApply(v -> futures.stream()
+                .map(CompletableFuture::join)
+                .filter(entry -> entry != null)
+                .collect(Collectors.toMap(
+                    Map.Entry::getKey,
+                    Map.Entry::getValue,
+                    (a, b) -> a,
+                    HashMap::new
+                )));
+    }
+
+    /**
+     * Converts a component resource object into a map of property values.
+     * This method examines the fields of the component resource marked with the {@link Export} annotation
+     * and serializes their values into {@link PropertyValue} objects.
+     *
+     * @param component The component resource object to convert
+     * @return A map where keys are property names and values are serialized {@link PropertyValue} objects
+     * @throws PropertySerializationException if there is an error accessing field values
+     */
+    public static Map<String, PropertyValue> stateFromComponentResource(Object component) {
+        return stateFromComponentResourceAsync(component).join();
+    }
+
+    private static CompletableFuture<PropertyValue> serialize(Object value, String... path) {
+        if (value == null) {
+            return CompletableFuture.completedFuture(PropertyValue.NULL);
+        }
+
+        if (value instanceof Output<?>) {
+            return serializeOutput((Output<?>) value, path);
+        }
+        return CompletableFuture.completedFuture(serializeValue(value, path));
+    }
+
+    private static CompletableFuture<PropertyValue> serializeOutput(Output<?> output, String... path) {
+        return Internal.of(output).getDataAsync().thenCompose(data -> {
+            if (!data.isKnown()) {
+                return CompletableFuture.completedFuture(PropertyValue.COMPUTED);
+            }
+
+            return serialize(data.getValueNullable()).thenApply(element -> {
+                var dependencies = data.getResources().stream()
+                    .map(resource -> Internal.of(resource.urn()))
+                    .map(OutputInternal::getDataAsync)
+                    .map(urnFuture -> urnFuture
+                        .thenApply(OutputData::getValueNullable)
+                        .join())
+                    .collect(Collectors.toSet());
+
+                PropertyValue outputValue;
+                if (dependencies.isEmpty()) {
+                    outputValue = element != null ? element : PropertyValue.COMPUTED;
+                } else {
+                    outputValue = PropertyValue.of(
+                        new PropertyValue.OutputReference(element, dependencies));
+                }
+
+                return data.isSecret() ? PropertyValue.ofSecret(outputValue) : outputValue;
+            });
+        });
+    }
+
+    private static PropertyValue serializeValue(Object value, String... path) {
+        if (value == null) {
+            return PropertyValue.NULL;
+        }
+
+        // Handle primitive types and their wrappers
+        if (value instanceof String) {
+            return PropertyValue.of((String) value);
+        }
+
+        if (value instanceof Integer) {
+            return PropertyValue.of(((Integer) value).doubleValue());
+        }
+
+        if (value instanceof Double || value instanceof Float || value instanceof Long) {
+            return PropertyValue.of(((Number) value).doubleValue());
+        }
+
+        if (value instanceof Boolean) {
+            return PropertyValue.of((Boolean) value);
+        }
+
+        // Handle Pulumi-specific types
+        if (value instanceof Asset) {
+            return PropertyValue.of((Asset) value);
+        }
+
+        if (value instanceof Archive) {
+            return PropertyValue.of((Archive) value);
+        }
+
+        if (value instanceof PropertyValue) {
+            return (PropertyValue) value;
+        }
+
+        // Handle collections
+        if (value instanceof Collection<?>) {
+            var array = ((Collection<?>) value).stream()
+                .map(v -> serializeValue(v, path))
+                .collect(Collectors.toList());
+            return PropertyValue.of(array);
+        }
+
+        if (value instanceof Map<?, ?>) {
+            Map<String, PropertyValue> object = ((Map<?, ?>) value).entrySet().stream()
+                .collect(Collectors.toMap(
+                    e -> String.valueOf(e.getKey()),
+                    e -> serializeValue(e.getValue(), path)
+                ));
+            return PropertyValue.of(object);
+        }
+
+        if (value.getClass().isEnum()) {
+            return PropertyValue.of(((Enum<?>) value).ordinal());
+        }
+
+        // Handle objects with @Export annotations only
+        if (Arrays.stream(value.getClass().getDeclaredFields())
+                .anyMatch(field -> field.isAnnotationPresent(Export.class))) {
+            Map<String, PropertyValue> object = new HashMap<>();
+            for (Field field : value.getClass().getDeclaredFields()) {
+                if (field.isAnnotationPresent(Export.class)) {
+                    field.setAccessible(true);
+                    try {
+                        Object fieldValue = field.get(value);
+                        if (fieldValue != null) {
+                            String propertyName = propertyName(field, value.getClass());
+                            // Add the current field name to the path for nested serialization
+                            String[] fieldPath = Arrays.copyOf(path, path.length + 1);
+                            fieldPath[fieldPath.length - 1] = propertyName;
+                            object.put(propertyName, serializeValue(fieldValue, fieldPath));
+                        }
+                    } catch (IllegalAccessException e) {
+                        String[] fieldPath = Arrays.copyOf(path, path.length + 1);
+                        fieldPath[fieldPath.length - 1] = field.getName();
+                        throw new PropertySerializationException(
+                            "Failed to serialize field",
+                            fieldPath,
+                            field.getType(),
+                            e
+                        );
+                    }
+                }
+            }
+            return PropertyValue.of(object);
+        }
+
+        throw new PropertySerializationException(
+            String.format("Unsupported type for serialization"),
+            path,
+            value.getClass(),
+            null
+        );
     }
 }
