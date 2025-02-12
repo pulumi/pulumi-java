@@ -138,7 +138,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @Override
     public String toString() {
-        return String.join("\n",
+        var message = String.join(System.lineSeparator(),
                 "Calling 'toString' on an 'Output<T>' is not supported.",
                 "This is because the value of an 'Output' is asynchronous.",
                 "",
@@ -146,9 +146,16 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
                 "1: applyValue(v -> String.format(\"prefix%ssuffix\", v))",
                 "2: Output.format(\"prefix%ssuffix\", o)",
                 "",
-                "See https://www.pulumi.com/docs/concepts/inputs-outputs for more details.",
-                "This function may throw in a future version of Pulumi."
-        );
+                "See https://www.pulumi.com/docs/concepts/inputs-outputs for more details.");
+
+        var errorOutputString = System.getenv("PULUMI_ERROR_OUTPUT_STRING");
+
+        if ("1".equals(errorOutputString) || "true".equalsIgnoreCase(errorOutputString)) {
+            throw new IllegalStateException(message);
+        }
+
+        return String.join(System.lineSeparator(), message,
+                "This function may throw in a future version of Pulumi.");
     }
 
     // Static section -----
