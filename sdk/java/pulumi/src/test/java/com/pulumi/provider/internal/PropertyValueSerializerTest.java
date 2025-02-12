@@ -27,7 +27,7 @@ import java.util.Set;
 
 public class PropertyValueSerializerTest {
 
-   static class BasicArgs extends ResourceArgs {
+    static class BasicArgs extends ResourceArgs {
         @Import(name="intValue", required=true)
         private Output<Integer> intValue;
 
@@ -42,6 +42,9 @@ public class PropertyValueSerializerTest {
 
         @Import(name="numberValue", required=true)
         private Output<Number> numberValue;
+
+        @Import(name="valueWithOverridenName")
+        private Output<String> otherStringValue;
 
         public Output<Integer> intValue() {
             return this.intValue;
@@ -62,6 +65,10 @@ public class PropertyValueSerializerTest {
         public Output<Number> numberValue() {
             return this.numberValue;
         }
+
+        public Output<String> otherStringValue() {
+            return this.otherStringValue;
+        }
     
         private BasicArgs() {}
     }
@@ -73,7 +80,8 @@ public class PropertyValueSerializerTest {
             pair("doubleValue", PropertyValue.of(3.14)),
             pair("boolValue", PropertyValue.of(true)),
             pair("stringValue", PropertyValue.of("hello")),
-            pair("numberValue", PropertyValue.of(123.456))
+            pair("numberValue", PropertyValue.of(123.456)),
+            pair("valueWithOverridenName", PropertyValue.of("other"))
         );
 
         var basicArgs = PropertyValueSerializer.deserialize(data, BasicArgs.class);
@@ -92,6 +100,9 @@ public class PropertyValueSerializerTest {
         
         var numberValue = Internal.of(basicArgs.numberValue()).getValueNullable().join();
         assertThat(numberValue).isEqualTo(123.456);
+
+        var otherStringValue = Internal.of(basicArgs.otherStringValue()).getValueNullable().join();
+        assertThat(otherStringValue).isEqualTo("other");
     }
 
     static class SecretArgs extends ResourceArgs {
