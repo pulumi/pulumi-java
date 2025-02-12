@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.core.Output;
 import com.pulumi.provider.internal.models.*;
 import com.pulumi.provider.internal.properties.PropertyValue;
+import com.pulumi.provider.internal.properties.PropertyValueSerializer;
 import com.pulumi.provider.internal.Provider;
 
 public class ExampleProvider implements Provider {
@@ -29,8 +30,7 @@ public class ExampleProvider implements Provider {
 
     @Override
     public CompletableFuture<ConstructResponse> construct(ConstructRequest request) {
-        var length = request.getInputs().get("length").getNumberValue().intValue();
-        var args = new HelloWorldArgs(Output.of(length));
+        var args = PropertyValueSerializer.deserialize(PropertyValue.of(request.getInputs()), HelloWorldArgs.class);
         var comp = new HelloWorld(request.getName(), args, request.getOptions());
         var state = new HashMap<String, PropertyValue>();
         var value = Internal.of(comp.value).getValueNullable().join();
