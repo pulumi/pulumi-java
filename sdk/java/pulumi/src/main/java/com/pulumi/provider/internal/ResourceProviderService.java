@@ -100,28 +100,38 @@ public class ResourceProviderService {
 
         @Override
         public void getSchema(pulumirpc.Provider.GetSchemaRequest request, StreamObserver<pulumirpc.Provider.GetSchemaResponse> responseObserver) {
-            // protobuf sends an empty string for subpackageName/subpackageVersion, but really
-            // that means null in the domain model.
-            Function<String, String> nullIfEmpty = s -> {
-                if (s == null || s.equals("")) {
-                    return null;
-                }
-                return s;
-            };
+            try {
+                // protobuf sends an empty string for subpackageName/subpackageVersion, but really
+                // that means null in the domain model.
+                Function<String, String> nullIfEmpty = s -> {
+                    if (s == null || s.equals("")) {
+                        return null;
+                    }
+                    return s;
+                };
 
-            var domRequest = new com.pulumi.provider.internal.models.GetSchemaRequest(
-                request.getVersion(),
-                nullIfEmpty.apply(request.getSubpackageName()),
-                nullIfEmpty.apply(request.getSubpackageVersion())
-            );
+                var domRequest = new com.pulumi.provider.internal.models.GetSchemaRequest(
+                    request.getVersion(),
+                    nullIfEmpty.apply(request.getSubpackageName()),
+                    nullIfEmpty.apply(request.getSubpackageVersion())
+                );
 
-            this.implementation.getSchema(domRequest).thenAccept(domResponse -> {
-                var grpcResponse = pulumirpc.Provider.GetSchemaResponse.newBuilder()
-                    .setSchema(domResponse.getSchema())
-                    .build();
-                responseObserver.onNext(grpcResponse);
-                responseObserver.onCompleted();
-            });
+                this.implementation.getSchema(domRequest)
+                    .exceptionally(e -> {
+                        handleError(e, responseObserver);
+                        return null;
+                    })
+                    .thenAccept(domResponse -> {
+                        if (domResponse == null) return; // Error was already handled
+                        var grpcResponse = pulumirpc.Provider.GetSchemaResponse.newBuilder()
+                            .setSchema(domResponse.getSchema())
+                            .build();
+                        responseObserver.onNext(grpcResponse);
+                        responseObserver.onCompleted();
+                    });
+            } catch (Exception e) {
+                handleError(e, responseObserver);
+            }
         }
 
         @Override
@@ -140,78 +150,83 @@ public class ResourceProviderService {
                     .build();
                 responseObserver.onNext(response);
                 responseObserver.onCompleted();
+            }).exceptionally(e -> {
+                handleError(e, responseObserver);
+                return null;
             });
         }
 
         @Override
         public void construct(pulumirpc.Provider.ConstructRequest request,
                             StreamObserver<pulumirpc.Provider.ConstructResponse> responseObserver) {
-            if (request.getParent().isEmpty()) {
-                throw new io.grpc.StatusRuntimeException(
-                    io.grpc.Status.INVALID_ARGUMENT.withDescription("Parent must be set for Component Providers."));
-            }
-            
-            var aliases = request.getAliasesList().stream()
-                    .map(urn -> Alias.withUrn(urn))
-                    .toArray(Alias[]::new);
-            var dependsOn = request.getDependenciesList().stream()
-                    .map(urn -> new DependencyResource(urn))
-                    .toArray(DependencyResource[]::new);
-            var providers = request.getProvidersMap().values().stream()
-                    .map(reference -> new DependencyProviderResource(reference))
-                    .toArray(DependencyProviderResource[]::new);
+            try {
+                if (request.getParent().isEmpty()) {
+                    throw new io.grpc.StatusRuntimeException(
+                        io.grpc.Status.INVALID_ARGUMENT.withDescription("Parent must be set for Component Providers."));
+                }
+                
+                var aliases = request.getAliasesList().stream()
+                        .map(urn -> Alias.withUrn(urn))
+                        .toArray(Alias[]::new);
+                var dependsOn = request.getDependenciesList().stream()
+                        .map(urn -> new DependencyResource(urn))
+                        .toArray(DependencyResource[]::new);
+                var providers = request.getProvidersMap().values().stream()
+                        .map(reference -> new DependencyProviderResource(reference))
+                        .toArray(DependencyProviderResource[]::new);
 
-            var opts = ComponentResourceOptions.builder()
-                .aliases(aliases)
-                .dependsOn(dependsOn)
-                .protect(request.getProtect())
-                .providers(providers)
-                .parent(new DependencyResource(request.getParent()))
-                .customTimeouts(deserializeTimeouts(request.getCustomTimeouts()))
-                // TODO deletedWith: https://github.com/pulumi/pulumi-java/issues/944
-                .ignoreChanges(request.getIgnoreChangesList())
-                .retainOnDelete(request.getRetainOnDelete())
-                .replaceOnChanges(request.getReplaceOnChangesList())
-                .build();
+                var opts = ComponentResourceOptions.builder()
+                    .aliases(aliases)
+                    .dependsOn(dependsOn)
+                    .protect(request.getProtect())
+                    .providers(providers)
+                    .parent(new DependencyResource(request.getParent()))
+                    .customTimeouts(deserializeTimeouts(request.getCustomTimeouts()))
+                    // TODO deletedWith: https://github.com/pulumi/pulumi-java/issues/944
+                    .ignoreChanges(request.getIgnoreChangesList())
+                    .retainOnDelete(request.getRetainOnDelete())
+                    .replaceOnChanges(request.getReplaceOnChangesList())
+                    .build();
 
-            var domRequest = new com.pulumi.provider.internal.models.ConstructRequest(
-                request.getType(), request.getName(), unmarshal(request.getInputs()), opts);
+                var domRequest = new com.pulumi.provider.internal.models.ConstructRequest(
+                    request.getType(), request.getName(), unmarshal(request.getInputs()), opts);
 
-            var inlineDeploymentSettings = InlineDeploymentSettings.builder()
-                .monitorAddr(request.getMonitorEndpoint())
-                .engineAddr(this.engineAddress)
-                .project(request.getProject())
-                .stack(request.getStack())
-                .organization(request.getOrganization())
-                .isDryRun(request.getDryRun())
-                .config(ImmutableMap.copyOf(request.getConfigMap()))
-                .configSecretKeys(ImmutableSet.copyOf(request.getConfigSecretKeysList()))
-                .build();
+                var inlineDeploymentSettings = InlineDeploymentSettings.builder()
+                    .monitorAddr(request.getMonitorEndpoint())
+                    .engineAddr(this.engineAddress)
+                    .project(request.getProject())
+                    .stack(request.getStack())
+                    .organization(request.getOrganization())
+                    .isDryRun(request.getDryRun())
+                    .config(ImmutableMap.copyOf(request.getConfigMap()))
+                    .configSecretKeys(ImmutableSet.copyOf(request.getConfigSecretKeysList()))
+                    .build();
 
-            var runner = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.builder().build());
-            runner.runInlineAsync(ctx -> this.implementation.construct(domRequest)).thenAccept(domResponse -> {
-                var domState = domResponse.getState();
-                var state = PropertyValue.marshalProperties(domState);
-                var responseBuilder = pulumirpc.Provider.ConstructResponse.newBuilder()
-                    .setUrn(domResponse.getUrn())
-                    .setState(state);
+                var runner = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.builder().build());
+                runner.runInlineAsync(ctx -> this.implementation.construct(domRequest)).thenAccept(domResponse -> {
+                    var domState = domResponse.getState();
+                    var state = PropertyValue.marshalProperties(domState);
+                    var responseBuilder = pulumirpc.Provider.ConstructResponse.newBuilder()
+                        .setUrn(domResponse.getUrn())
+                        .setState(state);
 
-                domResponse.getStateDependencies().forEach((propertyName, dependencies) -> {
-                    var propertyDeps = pulumirpc.Provider.ConstructResponse.PropertyDependencies.newBuilder()
-                        .addAllUrns(dependencies)
-                        .build();
-                    responseBuilder.putStateDependencies(propertyName, propertyDeps);
-                });
+                    domResponse.getStateDependencies().forEach((propertyName, dependencies) -> {
+                        var propertyDeps = pulumirpc.Provider.ConstructResponse.PropertyDependencies.newBuilder()
+                            .addAllUrns(dependencies)
+                            .build();
+                        responseBuilder.putStateDependencies(propertyName, propertyDeps);
+                    });
 
-                var grpcResponse = responseBuilder.build();
-                responseObserver.onNext(grpcResponse);
-                responseObserver.onCompleted();
+                    var grpcResponse = responseBuilder.build();
+                    responseObserver.onNext(grpcResponse);
+                    responseObserver.onCompleted();
             }).exceptionally(e -> {
-                responseObserver.onError(io.grpc.Status.UNKNOWN
-                    .withCause(e)
-                    .asException());
-                return null;
-            });
+                    handleError(e, responseObserver);
+                    return null;
+                });
+            } catch (Exception e) {
+                handleError(e, responseObserver);
+            }
         }
 
         private static CustomTimeouts deserializeTimeouts(pulumirpc.Provider.ConstructRequest.CustomTimeouts customTimeouts)
@@ -228,6 +243,23 @@ public class ResourceProviderService {
                 return Collections.emptyMap();
             }
             return PropertyValue.unmarshalProperties(properties);
+        }
+
+        private void handleError(Throwable e, StreamObserver<?> responseObserver) {
+            Throwable cause = e.getCause() != null ? e.getCause() : e;
+            
+            // Convert stack trace to string
+            java.io.StringWriter sw = new java.io.StringWriter();
+            cause.printStackTrace(new java.io.PrintWriter(sw));
+            String stackTrace = sw.toString();
+            
+            Status status = Status.INTERNAL
+                .withDescription(String.format("%s: %s\n%s", 
+                    cause.getClass().getName(),
+                    cause.getMessage(),
+                    stackTrace));
+
+            responseObserver.onError(status.asRuntimeException());
         }
     }
 } 
