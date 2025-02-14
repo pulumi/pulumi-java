@@ -6,18 +6,17 @@ import com.pulumi.deployment.DeploymentInstance;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicReference;
 
 @InternalUse
 public abstract class DeploymentInstanceHolder {
 
-    private static final AtomicReference<DeploymentInstance> instance = new AtomicReference<>();
+    private static final ThreadLocal<DeploymentInstance> instance = new ThreadLocal<>();
 
     /**
      * @throws IllegalStateException if called before 'run' was called
      */
     public static DeploymentInstance getInstance() {
-        var i = instance.get();
+        var i = getInstanceNoThrow();
         if (i == null) {
             throw new IllegalStateException("Trying to acquire Deployment#instance before 'run' was called.");
         }
@@ -26,23 +25,25 @@ public abstract class DeploymentInstanceHolder {
 
     @InternalUse
     @VisibleForTesting
-    public static Optional<DeploymentInstance> getInstanceOptional() { // FIXME remove public
-        return Optional.ofNullable(instance.get());
+    public static DeploymentInstance getInstanceNoThrow() {
+        return instance.get();
     }
 
-    /**
-     * @throws IllegalStateException if called more than once (the instance already set)
-     */
+    @InternalUse
+    @VisibleForTesting
+    public static Optional<DeploymentInstance> getInstanceOptional() { // FIXME remove public
+        return Optional.ofNullable(getInstanceNoThrow());
+    }
+
     @InternalUse
     public static void setInstance(@Nullable DeploymentInstance newInstance) {
-        if (!instance.compareAndSet(null, newInstance)) {
-            throw new IllegalStateException("Deployment#instance should only be set once at the beginning of a 'run' call.");
-        }
+        // Because of thread reentrancy, we can no longer enforce single assignment.
+        instance.set(newInstance);
     }
 
     @InternalUse
     @VisibleForTesting
     public static void internalUnsafeDestroyInstance() {
-        instance.set(null);
+        setInstance(null);
     }
 }
