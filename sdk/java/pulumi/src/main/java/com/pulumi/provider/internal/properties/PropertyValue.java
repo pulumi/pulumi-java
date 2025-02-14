@@ -131,10 +131,6 @@ public class PropertyValue {
         return new PropertyValue(ValueType.NUMBER, value);
     }
 
-    public static PropertyValue of(int value) {
-        return new PropertyValue(ValueType.NUMBER, Integer.valueOf(value));
-    }
-
     public static PropertyValue of(String value) {
         return new PropertyValue(ValueType.STRING, value);
     }
