@@ -87,7 +87,7 @@ public class CompletableFutures {
     }
 
     public static <T> CompletableFuture<Optional<T>> flipOptional(Supplier<Optional<CompletableFuture<T>>> supplier) {
-        return CompletableFuture.supplyAsync(supplier).thenCompose(CompletableFutures::flipOptional);
+        return ContextAwareCompletableFuture.supplyAsync(supplier).thenCompose(CompletableFutures::flipOptional);
     }
 
     public static <T> Builder<T> builder(CompletableFuture<T> future) {

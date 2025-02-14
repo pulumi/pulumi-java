@@ -25,6 +25,7 @@ public final class WorkspaceStackState {
      * specifically requested using the force flag.
      *
      * @param urn The Pulumi URN of the resource to be deleted
+     * @throws AutomationException if an error occurs
      */
     public void delete(String urn) throws AutomationException {
         delete(urn, false);
@@ -40,6 +41,7 @@ public final class WorkspaceStackState {
      *
      * @param urn   The Pulumi URN of the resource to be deleted
      * @param force A boolean indicating whether the deletion should be forced
+     * @throws AutomationException if an error occurs
      */
     public void delete(String urn, boolean force) throws AutomationException {
         var args = new ArrayList<String>();
@@ -59,6 +61,7 @@ public final class WorkspaceStackState {
      * bit on the provided resource URN, allowing the resource to be deleted.
      *
      * @param urn The Pulumi URN to be unprotected
+     * @throws AutomationException if an error occurs
      */
     public void unprotect(String urn) throws AutomationException {
         var args = List.of("state", "unprotect", Objects.requireNonNull(urn));
@@ -67,6 +70,7 @@ public final class WorkspaceStackState {
 
     /**
      * Unprotect all resources in a stack's state.
+     * @throws AutomationException if an error occurs
      */
     public void unprotectAll() throws AutomationException {
         var args = List.of("state", "unprotect", "--all");
