@@ -26,7 +26,7 @@ class HelloWorldArgs extends ResourceArgs {
 }
 
 class HelloWorld extends ComponentResource {
-    @Export(name="value")
+    @Export(name="value", refs={String.class}, tree="[0]")
     public final Output<String> value;
 
     public HelloWorld(String name, HelloWorldArgs args, ComponentResourceOptions opts) {

@@ -15,6 +15,7 @@
         <maven.compiler.release>11</maven.compiler.release>
         <mainClass>${project.groupId}.${project.artifactId}.App</mainClass>
         <mainArgs/>
+        <pulumiSdkVersion>0.0.1</pulumiSdkVersion>
         <grpc.version>1.67.1</grpc.version>
         <protobuf.version>3.25.1</protobuf.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,32 +23,34 @@
 
     <profiles>
         <profile>
-        <id>default-pulumi-java-sdk-dependency</id>
+            <id>env-dependencies</id>
             <activation>
                 <property>
-            <name>!env.PULUMI_JAVA_SDK_VERSION</name>
+                    <name>env.PULUMI_JAVA_SDK_VERSION</name>
                 </property>
             </activation>
+            <properties>
+                <pulumiSdkVersion>${env.PULUMI_JAVA_SDK_VERSION}</pulumiSdkVersion>
+            </properties>
         </profile>
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>pulumi</artifactId>
-            <version>0.0.1</version>
-            <exclusions>
-              <exclusion>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-netty-shaded</artifactId>
-              </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>random</artifactId>
-            <version>4.8.1</version>
-        </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>pulumi</artifactId>
+        <version>${pulumiSdkVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.findbugs</groupId>
+        <artifactId>jsr305</artifactId>
+        <version>3.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>random</artifactId>
+        <version>4.14.0</version>
+      </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty-shaded</artifactId>
