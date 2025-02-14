@@ -325,6 +325,8 @@ jobs:
           - rename-component-and-child
           - retype-component
           - retype-parents
+          - provider-maven
+          - provider-gradle
     steps:
       - uses: actions/checkout@v3
         with:
