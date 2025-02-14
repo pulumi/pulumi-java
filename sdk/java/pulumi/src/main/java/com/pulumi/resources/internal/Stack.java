@@ -1,6 +1,7 @@
 package com.pulumi.resources.internal;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.resources.ComponentResource;
@@ -121,7 +122,7 @@ public final class Stack extends ComponentResource {
             deployment.setStack(stack);
             deployment.registerResourceOutputs(stack, lazyOutputs);
             // run the user code callback after Stack was set globally, (note that future is eager)
-            var callbackFuture = CompletableFuture.supplyAsync(callback);
+            var callbackFuture = ContextAwareCompletableFuture.supplyAsync(callback);
             deployment.getRunner().registerTask("callback", callbackFuture);
             callbackFuture.whenComplete((value, throwable) -> {
                 if (throwable != null) {
