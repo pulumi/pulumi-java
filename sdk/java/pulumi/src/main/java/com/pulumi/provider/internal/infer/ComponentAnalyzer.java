@@ -315,12 +315,12 @@ public final class ComponentAnalyzer {
         if (type instanceof Class<?>) {
             Class<?> clazz = (Class<?>) type;
             if (isBuiltinType(clazz)) {
-                return TypeSpec.ofBuiltin(getBuiltinTypeName(clazz), isOutput ? null : true);
+                return TypeSpec.ofBuiltin(getBuiltinTypeName(clazz), !isOutput);
             } 
             
             var specialTypeRef = getSpecialTypeRef(clazz);
             if (specialTypeRef.isPresent()) {
-                return TypeSpec.ofRef(specialTypeRef.get(), isOutput ? null : true);
+                return TypeSpec.ofRef(specialTypeRef.get(), !isOutput);
             }
 
             if (isResourceType(clazz)) {
@@ -346,7 +346,7 @@ public final class ComponentAnalyzer {
                         analysis.required()));
                 }
                 
-                return TypeSpec.ofRef(typeRef, isOutput ? null : true);
+                return TypeSpec.ofRef(typeRef, !isOutput);
             }
         }
         
