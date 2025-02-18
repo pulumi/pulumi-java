@@ -1,7 +1,6 @@
 package com.pulumi.provider.internal;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +30,7 @@ public class ResourceProviderService {
 
     private static final Logger logger = Logger.getLogger(ResourceProviderService.class.getName());
 
-    private Server server;
+    Server server; // Exposed as private-package for testing.
     private final String engineAddress;
     private final Provider implementation;
 
@@ -45,9 +44,10 @@ public class ResourceProviderService {
         blockUntilShutdown();
     }
 
-    private void start() throws IOException {
-        server = ServerBuilder.forPort(0) // Use port 0 to let system assign a free port
+    void start() throws IOException {
+        server = createServerBuilder()
             .addService(new ResourceProviderImpl(this.engineAddress, this.implementation))
+            .intercept(new ErrorHandlingInterceptor())
             .build()
             .start();
         
@@ -78,6 +78,10 @@ public class ResourceProviderService {
         }
     }
 
+    protected ServerBuilder<?> createServerBuilder() {
+        return ServerBuilder.forPort(0);
+    }
+
     static class ResourceProviderImpl extends pulumirpc.ResourceProviderGrpc.ResourceProviderImplBase {
         private final String engineAddress;
         private final Provider implementation;
@@ -99,7 +103,8 @@ public class ResourceProviderService {
         }
 
         @Override
-        public void getSchema(pulumirpc.Provider.GetSchemaRequest request, StreamObserver<pulumirpc.Provider.GetSchemaResponse> responseObserver) {
+        public void getSchema(pulumirpc.Provider.GetSchemaRequest request, 
+                StreamObserver<pulumirpc.Provider.GetSchemaResponse> responseObserver) {
             // protobuf sends an empty string for subpackageName/subpackageVersion, but really
             // that means null in the domain model.
             Function<String, String> nullIfEmpty = s -> {
@@ -115,13 +120,15 @@ public class ResourceProviderService {
                 nullIfEmpty.apply(request.getSubpackageVersion())
             );
 
-            this.implementation.getSchema(domRequest).thenAccept(domResponse -> {
-                var grpcResponse = pulumirpc.Provider.GetSchemaResponse.newBuilder()
-                    .setSchema(domResponse.getSchema())
-                    .build();
-                responseObserver.onNext(grpcResponse);
-                responseObserver.onCompleted();
-            });
+            this.implementation.getSchema(domRequest)
+                .whenComplete((domResponse, error) -> 
+                    handleCompletion(error, domResponse, responseObserver, response -> {
+                        var grpcResponse = pulumirpc.Provider.GetSchemaResponse.newBuilder()
+                            .setSchema(response.getSchema())
+                            .build();
+                        responseObserver.onNext(grpcResponse);
+                    })
+                );
         }
 
         @Override
@@ -131,24 +138,28 @@ public class ResourceProviderService {
                 request.getVariablesMap(), unmarshal(request.getArgs()), request.getAcceptSecrets(),
                 request.getAcceptResources());
 
-            this.implementation.configure(domRequest).thenAccept(domResponse -> {
-                pulumirpc.Provider.ConfigureResponse response = pulumirpc.Provider.ConfigureResponse.newBuilder()
-                    .setAcceptSecrets(domResponse.isAcceptSecrets())
-                    .setAcceptResources(domResponse.isAcceptResources())
-                    .setAcceptOutputs(domResponse.isAcceptOutputs())
-                    .setSupportsPreview(domResponse.isSupportsPreview())
-                    .build();
-                responseObserver.onNext(response);
-                responseObserver.onCompleted();
-            });
+            this.implementation.configure(domRequest)
+                .whenComplete((domResponse, error) -> 
+                    handleCompletion(error, domResponse, responseObserver, response -> {
+                        pulumirpc.Provider.ConfigureResponse grpcResponse = pulumirpc.Provider.ConfigureResponse.newBuilder()
+                            .setAcceptSecrets(response.isAcceptSecrets())
+                            .setAcceptResources(response.isAcceptResources())
+                            .setAcceptOutputs(response.isAcceptOutputs())
+                            .setSupportsPreview(response.isSupportsPreview())
+                            .build();
+                        responseObserver.onNext(grpcResponse);
+                    })
+                );
         }
 
         @Override
         public void construct(pulumirpc.Provider.ConstructRequest request,
                             StreamObserver<pulumirpc.Provider.ConstructResponse> responseObserver) {
             if (request.getParent().isEmpty()) {
-                throw new io.grpc.StatusRuntimeException(
-                    io.grpc.Status.INVALID_ARGUMENT.withDescription("Parent must be set for Component Providers."));
+                responseObserver.onError(Status.INVALID_ARGUMENT
+                    .withDescription("Parent must be set for Component Providers.")
+                    .asRuntimeException());
+                return;
             }
             
             var aliases = request.getAliasesList().stream()
@@ -189,29 +200,43 @@ public class ResourceProviderService {
                 .build();
 
             var runner = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.builder().build());
-            runner.runInlineAsync(ctx -> this.implementation.construct(domRequest)).thenAccept(domResponse -> {
-                var domState = domResponse.getState();
-                var state = PropertyValue.marshalProperties(domState);
-                var responseBuilder = pulumirpc.Provider.ConstructResponse.newBuilder()
-                    .setUrn(domResponse.getUrn())
-                    .setState(state);
+            runner.runInlineAsync(ctx -> this.implementation.construct(domRequest))
+                .whenComplete((domResponse, error) -> 
+                    handleCompletion(error, domResponse, responseObserver, response -> {
+                        var domState = response.getState();
+                        var state = PropertyValue.marshalProperties(domState);
+                        var responseBuilder = pulumirpc.Provider.ConstructResponse.newBuilder()
+                            .setUrn(response.getUrn())
+                            .setState(state);
 
-                domResponse.getStateDependencies().forEach((propertyName, dependencies) -> {
-                    var propertyDeps = pulumirpc.Provider.ConstructResponse.PropertyDependencies.newBuilder()
-                        .addAllUrns(dependencies)
-                        .build();
-                    responseBuilder.putStateDependencies(propertyName, propertyDeps);
-                });
+                        response.getStateDependencies().forEach((propertyName, dependencies) -> {
+                            var propertyDeps = pulumirpc.Provider.ConstructResponse.PropertyDependencies.newBuilder()
+                                .addAllUrns(dependencies)
+                                .build();
+                            responseBuilder.putStateDependencies(propertyName, propertyDeps);
+                        });
 
-                var grpcResponse = responseBuilder.build();
-                responseObserver.onNext(grpcResponse);
-                responseObserver.onCompleted();
-            }).exceptionally(e -> {
-                responseObserver.onError(io.grpc.Status.UNKNOWN
-                    .withCause(e)
-                    .asException());
-                return null;
-            });
+                        var grpcResponse = responseBuilder.build();
+                        responseObserver.onNext(grpcResponse);
+                    })
+                );
+        }
+
+        private <T> void handleCompletion(Throwable error, T response, 
+                StreamObserver<?> responseObserver, 
+                java.util.function.Consumer<T> successHandler) {
+            if (error != null) {
+                Throwable cause = error instanceof java.util.concurrent.CompletionException 
+                    ? error.getCause() 
+                    : error;
+                responseObserver.onError(Status.INTERNAL
+                    .withDescription(cause.getMessage())
+                    .withCause(cause)
+                    .asRuntimeException());
+                return;
+            }
+            successHandler.accept(response);
+            responseObserver.onCompleted();
         }
 
         private static CustomTimeouts deserializeTimeouts(pulumirpc.Provider.ConstructRequest.CustomTimeouts customTimeouts)
