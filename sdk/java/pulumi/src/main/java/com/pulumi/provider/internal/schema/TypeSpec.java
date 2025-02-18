@@ -22,7 +22,10 @@ public class TypeSpec {
     public TypeSpec(String type, String ref, Boolean plain, TypeSpec items, TypeSpec additionalProperties) {
         this.type = type;
         this.ref = ref;
-        this.plain = plain;
+        if (Boolean.TRUE.equals(plain)) {
+            // Don't set plain to false, instead omit it from the JSON.
+            this.plain = plain;
+        }
         this.items = items;
         this.additionalProperties = additionalProperties;
     }
