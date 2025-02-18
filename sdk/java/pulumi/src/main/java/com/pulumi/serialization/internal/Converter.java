@@ -312,13 +312,14 @@ public class Converter {
             });
             argumentsMap.forEach((name, argument) -> {
                 if (!setters.containsKey(name)) {
-                    throw new IllegalArgumentException(String.format(
+                    log.debug(String.format(
                             "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"), got: %s",
                             targetType.getTypeName(),
                             CustomType.class.getTypeName(),
                             CustomType.Setter.class.getTypeName(),
                             name, String.join(",", setters.keySet())
                     ));
+                    return;
                 }
                 // validate null and @Nullable presence
                 if (argument == null
