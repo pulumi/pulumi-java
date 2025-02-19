@@ -9,7 +9,6 @@ import java.util.Optional;
 
 @InternalUse
 public abstract class DeploymentInstanceHolder {
-
     private static final ThreadLocal<DeploymentInstance> instance = new ThreadLocal<>();
 
     /**
@@ -26,7 +25,12 @@ public abstract class DeploymentInstanceHolder {
     @InternalUse
     @VisibleForTesting
     public static DeploymentInstance getInstanceNoThrow() {
-        return instance.get();
+        var value = instance.get();
+        if (value != null && value.isInvalid()) {
+            value = null;
+        }
+
+        return value;
     }
 
     @InternalUse
@@ -44,6 +48,10 @@ public abstract class DeploymentInstanceHolder {
     @InternalUse
     @VisibleForTesting
     public static void internalUnsafeDestroyInstance() {
-        setInstance(null);
+        var value = getInstanceNoThrow();
+        if (value != null) {
+            value.markInvalid();
+            setInstance(null);
+        }
     }
 }

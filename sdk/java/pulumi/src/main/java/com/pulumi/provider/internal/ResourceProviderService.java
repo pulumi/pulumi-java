@@ -11,6 +11,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Empty;
 import com.google.protobuf.Struct;
+import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.Status;
@@ -237,6 +238,7 @@ public class ResourceProviderService {
             }
             successHandler.accept(response);
             responseObserver.onCompleted();
+            DeploymentInstanceHolder.internalUnsafeDestroyInstance();
         }
 
         private static CustomTimeouts deserializeTimeouts(pulumirpc.Provider.ConstructRequest.CustomTimeouts customTimeouts)
