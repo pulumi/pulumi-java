@@ -160,7 +160,12 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
+	"l1-builtin-try":                        "#1683 Fix l1-builtin-try/can",
+	"l1-builtin-can":                        "#1683 Fix l1-builtin-try/can",
+	"l1-keyword-overlap":                    "#1681 Fix l1-keyword-overlap",
 	"l1-output-string":                      "#1562 Large string literals are not generated correctly",
+	"l2-component-call-simple":              "#1680 Fix l2-component-call-simple",
+	"l2-resource-option-deleted-with":       "#1682 Fix l2-resource-option-deleted-with",
 	"l2-invoke-secrets":                     "#1563 Invoke argument and result handling",
 	"l2-map-keys":                           "#1561 Map literals are not generated correctly",
 	"l2-provider-grpc-config-schema-secret": "#1568 Don't generate duplicate files",
