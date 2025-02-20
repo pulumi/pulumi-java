@@ -261,7 +261,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             return hasSupport;
                         });
             }
-            return CompletableFuture.completedFuture(this.featureSupport.get(feature));
+            return ContextAwareCompletableFuture.completedFuture(this.featureSupport.get(feature));
         }
 
         @InternalUse
@@ -511,7 +511,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return invoke(token, targetType, args, options, null);
         }
 
-        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, @Nullable CompletableFuture<String> packageRef) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -537,7 +537,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     }));
         }
 
-        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options, CompletableFuture<String> packageRef) {
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options, @Nullable CompletableFuture<String> packageRef) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -1294,7 +1294,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         /**
-         * Calls @see {@link #readOrRegisterResource(Resource, boolean, Function, ResourceArgs, ResourceOptions, Resource.LazyFields)}"
+         * Calls @see {@link #readOrRegisterResourceAsync(Resource, boolean, Function, ResourceArgs, ResourceOptions, String)}"
          * then completes all the @see {@link OutputCompletionSource} sources on the {@code resource}
          * with the results of it.
          */
@@ -2003,32 +2003,44 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 }
             };
 
-            Supplier<CompletableFuture<Void>> loopUntilDone = () -> {
-                // Keep looping as long as there are outstanding tasks that are still running.
-                while (inFlightTasks.size() > 0) {
-                    this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+            CompletableFuture<Void> drainTasks = new CompletableFuture<>();
 
-                    // Grab all the tasks we currently have running.
-                    for (var task : inFlightTasks.keySet()) {
-                        try {
-                            if (task.isDone()) {
-                                // at this point the future is guaranteed to be solved
-                                // so there won't be any blocking here
-                                handleCompletion.accept(task); // will remove from inFlightTasks
-                            } else {
-                                this.standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
-                                // will attempt again in the next iteration
-                            }
-                        } catch (Exception e) {
-                            return CompletableFuture.failedFuture(e);
-                        }
+            ContextAwareCompletableFuture.runAsync(() -> loopUntilDone(drainTasks, handleCompletion));
+
+            return drainTasks;
+        }
+
+        private void loopUntilDone(CompletableFuture<Void> drainTasks, Consumer<CompletableFuture<Void>> handleCompletion) {
+            try {
+                if (checkForTasks(handleCompletion)) {
+                    drainTasks.complete(null);
+                } else {
+                    // We need to reschedule the loop, to avoid hogging the async thread pool.
+                    ContextAwareCompletableFuture.runAsync(() -> loopUntilDone(drainTasks, handleCompletion));
+                }
+            } catch (Exception e) {
+                drainTasks.completeExceptionally(e);
+            }
+        }
+
+        private boolean checkForTasks(Consumer<CompletableFuture<Void>> handleCompletion) {
+            if (!inFlightTasks.isEmpty()) {
+                this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+
+                // Grab all the tasks we currently have running.
+                for (var task : inFlightTasks.keySet()) {
+                    if (task.isDone()) {
+                        // at this point the future is guaranteed to be solved
+                        // so there won't be any blocking here
+                        handleCompletion.accept(task); // will remove from inFlightTasks
+                    } else {
+                        this.standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
+                        // will attempt again in the next iteration
                     }
                 }
+            }
 
-                // There were no more tasks we were waiting on. Quit out.
-                return CompletableFuture.completedFuture((Void) null);
-            };
-            return ContextAwareCompletableFuture.supplyAsync(loopUntilDone).thenCompose(f -> f);
+            return inFlightTasks.isEmpty();
         }
 
         private CompletableFuture<Integer> handleExceptionAsync(Throwable throwable) {

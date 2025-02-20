@@ -29,7 +29,7 @@ public class OutputFactory {
                 () -> OutputData.ofNullable(value)
         );
         var output = new OutputInternal<>(dataFuture, 0 /* dummy */); // FIXME: remove dummy in later steps
-        register(dataFuture);
+        register(output.getDataAsync());
         return output;
     }
 
