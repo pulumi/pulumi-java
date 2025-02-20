@@ -73,6 +73,8 @@ dependencies {
 
     implementation("com.github.zafarkhaja:java-semver:0.10.2")
 
+    implementation("org.reflections:reflections:0.10.2")
+
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")

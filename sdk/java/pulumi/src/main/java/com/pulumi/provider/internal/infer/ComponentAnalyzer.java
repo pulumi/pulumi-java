@@ -3,6 +3,7 @@ package com.pulumi.provider.internal.infer;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.provider.internal.Metadata;
 import com.pulumi.provider.internal.schema.BuiltinTypeSpec;
 import com.pulumi.provider.internal.schema.ResourceSpec;
 import com.pulumi.provider.internal.schema.PropertySpec;

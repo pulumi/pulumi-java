@@ -15,6 +15,7 @@ import com.pulumi.provider.internal.schema.PackageSpec;
 import com.pulumi.provider.internal.schema.ResourceSpec;
 import com.pulumi.provider.internal.schema.PropertySpec;
 import com.pulumi.provider.internal.schema.TypeSpec;
+import com.pulumi.provider.internal.Metadata;
 import com.pulumi.provider.internal.schema.ComplexTypeSpec;
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.Asset;

@@ -8,7 +8,7 @@ public class ErrorHandlingInterceptor implements ServerInterceptor {
     @Override
     public <ReqT, RespT> ServerCall.Listener<ReqT> interceptCall(
             ServerCall<ReqT, RespT> call,
-            Metadata headers,
+            io.grpc.Metadata headers,
             ServerCallHandler<ReqT, RespT> next) {
         
         return new ForwardingServerCallListener.SimpleForwardingServerCallListener<ReqT>(
@@ -30,7 +30,7 @@ public class ErrorHandlingInterceptor implements ServerInterceptor {
                             cause.getMessage(),
                             stackTrace));
                             
-                    call.close(status, new Metadata());
+                    call.close(status, new io.grpc.Metadata());
                 }
             }
         };
