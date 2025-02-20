@@ -98,7 +98,7 @@ public class CompletableFutures {
         protected CompletableFuture<T> future;
 
         public Builder(CompletableFuture<T> future) {
-            this.future = Objects.requireNonNull(future).copy();
+            this.future = ContextAwareCompletableFuture.wrap(Objects.requireNonNull(future).copy());
         }
 
         @CanIgnoreReturnValue
