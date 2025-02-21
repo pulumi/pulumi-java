@@ -84,6 +84,11 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/java
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          directory: sdk/java/pulumi/build/reports/jacoco/test
+          token: ${{ secrets.CODECOV_TOKEN }}
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-java
