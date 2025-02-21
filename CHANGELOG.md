@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+## 1.4.0
+
+### Improvements
+
+- Add ability to disable `toString` on `Output<T>`
+
+### Bug Fixes
+
+- Be resilient to extra data from providers
+
 ## 1.3.0
 
 ### Improvements
