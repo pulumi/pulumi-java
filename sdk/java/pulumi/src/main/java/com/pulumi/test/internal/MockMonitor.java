@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import com.pulumi.Log;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.Maps;
 import com.pulumi.core.internal.Urn;
 import com.pulumi.core.internal.annotations.InternalUse;
@@ -99,13 +100,13 @@ public class MockMonitor implements Monitor {
 
     @Override
     public CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
-        return mocks.newResourceAsync(new Mocks.ResourceArgs(
+        return ContextAwareCompletableFuture.wrap(mocks.newResourceAsync(new Mocks.ResourceArgs(
                 request.getType(),
                 request.getName(),
                 deserializeToMap(request.getProperties()),
                 request.getProvider(),
                 request.getId()
-        )).thenCompose(idAndState -> {
+        ))).thenCompose(idAndState -> {
             var id = idAndState.id;
             var state = idAndState.state;
             var urn = Urn.create(
@@ -153,13 +154,13 @@ public class MockMonitor implements Monitor {
             );
         }
 
-        return mocks.newResourceAsync(new Mocks.ResourceArgs(
+        return ContextAwareCompletableFuture.wrap(mocks.newResourceAsync(new Mocks.ResourceArgs(
                 request.getType(),
                 request.getName(),
                 deserializeToMap(request.getObject()),
                 request.getProvider(),
                 request.getImportId()
-        )).thenCompose(idAndState -> {
+        ))).thenCompose(idAndState -> {
             var id = idAndState.id;
             var state = idAndState.state;
             var urn = Urn.create(

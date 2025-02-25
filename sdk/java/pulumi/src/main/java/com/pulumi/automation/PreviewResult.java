@@ -43,7 +43,7 @@ public class PreviewResult {
      * Returns a summary of the changes that would be applied by the preview
      * operation.
      *
-     * @return
+     * @return the change summary
      */
     public Map<OperationType, Integer> changeSummary() {
         return changeSummary;
