@@ -6,43 +6,69 @@ import com.pulumi.deployment.DeploymentInstance;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * The Java provider assumes that there's an ambient authority to track the deployment.
+ * This is implemented as value in the Thread Local Storage (TLS).
+ * <p>
+ * That is fine for simple sequential code, but the Pulumi system is highly asynchronous.
+ * The Java runtime for asynchronous computations relies on thread pool controlled by the system, not the application.
+ * <p>
+ * This creates a problem, because the computation of the Pulumi App can resume on a fresh thread with no context.
+ * To address this issue, we have {@link com.pulumi.core.internal.ContextAwareCompletableFuture}
+ * <p>
+ * That class implements the same interface as {@link java.util.concurrent.CompletableFuture}, with the addition of preserving the context.
+ * When a future is completed or chained, it injects the context into the TLS on all resume points.
+ */
 @InternalUse
 public abstract class DeploymentInstanceHolder {
-
-    private static final AtomicReference<DeploymentInstance> instance = new AtomicReference<>();
+    private static final ThreadLocal<DeploymentInstance> instance = new ThreadLocal<>();
 
     /**
      * @throws IllegalStateException if called before 'run' was called
      */
     public static DeploymentInstance getInstance() {
-        var i = instance.get();
-        if (i == null) {
+        var value = instance.get();
+        if (value == null) {
             throw new IllegalStateException("Trying to acquire Deployment#instance before 'run' was called.");
         }
-        return i;
+        if (value.isInvalid()) {
+            throw new IllegalStateException("Trying to acquire Deployment#instance after 'run' was called.");
+        }
+
+        return value;
+    }
+
+    @InternalUse
+    @VisibleForTesting
+    public static DeploymentInstance getInstanceNoThrow() {
+        var value = instance.get();
+        if (value != null && value.isInvalid()) {
+            value = null;
+        }
+
+        return value;
     }
 
     @InternalUse
     @VisibleForTesting
     public static Optional<DeploymentInstance> getInstanceOptional() { // FIXME remove public
-        return Optional.ofNullable(instance.get());
+        return Optional.ofNullable(getInstanceNoThrow());
     }
 
-    /**
-     * @throws IllegalStateException if called more than once (the instance already set)
-     */
     @InternalUse
     public static void setInstance(@Nullable DeploymentInstance newInstance) {
-        if (!instance.compareAndSet(null, newInstance)) {
-            throw new IllegalStateException("Deployment#instance should only be set once at the beginning of a 'run' call.");
-        }
+        // Because of thread reentrancy, we can no longer enforce single assignment.
+        instance.set(newInstance);
     }
 
     @InternalUse
     @VisibleForTesting
     public static void internalUnsafeDestroyInstance() {
-        instance.set(null);
+        var value = getInstanceNoThrow();
+        if (value != null) {
+            value.markInvalid();
+            setInstance(null);
+        }
     }
 }

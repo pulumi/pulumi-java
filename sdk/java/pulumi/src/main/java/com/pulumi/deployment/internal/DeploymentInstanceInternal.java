@@ -27,6 +27,7 @@ import java.util.function.Function;
 public final class DeploymentInstanceInternal implements DeploymentInstance {
 
     private final DeploymentInternal deployment;
+    private boolean isInvalid;
 
     @InternalUse
     public DeploymentInstanceInternal(DeploymentInternal deployment) {
@@ -64,6 +65,16 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     @Override
     public DeploymentImpl.Config getConfig() {
         return deployment.getConfig();
+    }
+
+    @Override
+    public boolean isInvalid() {
+        return isInvalid;
+    }
+
+    @Override
+    public void markInvalid() {
+        isInvalid = true;
     }
 
     @Override

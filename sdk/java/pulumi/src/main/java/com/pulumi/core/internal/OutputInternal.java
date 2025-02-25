@@ -47,11 +47,11 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public OutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
-        this.dataFuture = requireNonNull(dataFuture);
+        this(dataFuture, 0);
 
         var deployment = DeploymentInternal.getInstanceOptional();
         deployment.ifPresent(deploymentInternal -> deploymentInternal.getRunner().registerTask(
-                this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
+                this.getClass().getTypeName() + " -> " + this.dataFuture, this.dataFuture
         ));
     }
 
@@ -60,7 +60,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
      */
     @InternalUse
     OutputInternal(CompletableFuture<OutputData<T>> dataFuture, int dummy /* FIXME: remove dummy after refactoring complete */) {
-        this.dataFuture = requireNonNull(dataFuture);
+        this.dataFuture = ContextAwareCompletableFuture.wrap(requireNonNull(dataFuture));
     }
 
     @InternalUse

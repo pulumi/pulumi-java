@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.resources.CustomResource;
@@ -204,7 +205,7 @@ public class MocksTest {
 
         // Wait for all exceptions to propagate. If we do not, these exceptions contaminate the next test.
         // TODO properly isolate tests.
-        CompletableFuture.runAsync(() -> { /* Empty */ }, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS)).join();
+        ContextAwareCompletableFuture.runAsync(() -> { /* Empty */ }, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS)).join();
     }
 
     @ResourceType(type = "aws:ec2/instance:Instance")

@@ -44,28 +44,16 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     @InternalUse
     public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
-        var instance = Deployment.getInstance();
-        var organizationName = deployment.getOrganizationName();
-        var projectName = deployment.getProjectName();
-        var stackName = deployment.getStackName();
-        var runner = deployment.getRunner();
-        var log = deployment.getLog();
-
-        Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
-        var config = new ConfigContextInternal(projectName, configFactory);
-        var logging = new LoggingContextInternal(log);
-        var outputFactory = new OutputFactory(runner);
-        var outputs = new OutputContextInternal(outputFactory);
-
-        var ctx = new ContextInternal(
-                organizationName, projectName, stackName, logging, config, outputs, options.resourceTransformations()
-        );
-        return new PulumiInternal(runner, ctx);
+        return completeConfiguration(deployment, options);
     }
 
     @InternalUse
     public static PulumiInternal fromInline(InlineDeploymentSettings settings, StackOptions options) {
         var deployment = DeploymentImpl.fromInline(settings);
+        return completeConfiguration(deployment, options);
+    }
+
+    private static PulumiInternal completeConfiguration(DeploymentImpl deployment, StackOptions options) {
         var instance = Deployment.getInstance();
         var organizationName = deployment.getOrganizationName();
         var projectName = deployment.getProjectName();
