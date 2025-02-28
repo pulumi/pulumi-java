@@ -82,12 +82,12 @@ jobs:
       - name: Build and unit-test Pulumi Java SDK
         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
         with:
-          arguments: build
+          arguments: build testAll
           build-root-directory: sdk/java
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
-          directory: sdk/java/pulumi/build/reports/jacoco/test
+          directory: sdk/java/pulumi/build/reports/jacoco/allTests
           token: ${{ secrets.CODECOV_TOKEN }}
       - run: make build_go
       - run: make bin/pulumi-java-gen
