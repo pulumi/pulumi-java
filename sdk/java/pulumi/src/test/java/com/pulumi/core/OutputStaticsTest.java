@@ -1,19 +1,36 @@
 package com.pulumi.core;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
+import com.pulumi.test.internal.PulumiTestInternal;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
+import java.util.logging.Level;
 
 import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
+import static com.pulumi.test.internal.PulumiTestInternal.logger;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.Assertions.entry;
 
 public class OutputStaticsTest {
+    @AfterEach
+    public void cleanup() {
+        PulumiTestInternal.cleanup();
+    }
+
+    @BeforeEach
+    public void setup() {
+        PulumiTestInternal.builder()
+                .standardLogger(logger(Level.OFF))
+                .build();
+    }
 
     @Test
     void testListConcatNull() {
@@ -245,7 +262,7 @@ public class OutputStaticsTest {
 
         assertThatThrownBy(() ->
                 extractOutputData(
-                        Output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
+                        Output.<Integer>of(ContextAwareCompletableFuture.supplyAsync(() -> null))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
@@ -261,7 +278,7 @@ public class OutputStaticsTest {
         assertThatThrownBy(() ->
                 extractOutputData(
                         Output.of(1)
-                                .apply(__ -> Output.of(CompletableFuture.<Integer>supplyAsync(() -> null)))
+                                .apply(__ -> Output.of(ContextAwareCompletableFuture.<Integer>supplyAsync(() -> null)))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);

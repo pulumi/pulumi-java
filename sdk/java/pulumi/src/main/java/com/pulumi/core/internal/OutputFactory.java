@@ -25,11 +25,11 @@ public class OutputFactory {
     }
 
     public <T> Output<T> ofNullable(T value) {
-        var dataFuture = CompletableFuture.supplyAsync(
+        var dataFuture = ContextAwareCompletableFuture.supplyAsync(
                 () -> OutputData.ofNullable(value)
         );
         var output = new OutputInternal<>(dataFuture, 0 /* dummy */); // FIXME: remove dummy in later steps
-        register(dataFuture);
+        register(output.getDataAsync());
         return output;
     }
 
