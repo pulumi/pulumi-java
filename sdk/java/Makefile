@@ -1,3 +1,5 @@
+.PHONY: build ensure test_all test_auto install
+
 # Builds the project and runs fast unit tests.
 build::		ensure
 	gradle --console=plain build
