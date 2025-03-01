@@ -4,13 +4,17 @@ package com.pulumi.automation;
 
 import java.time.Instant;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Information about a stack.
  */
 public class StackSummary {
     private final String name;
+    @SerializedName("current")
     private final boolean isCurrent;
     private final Instant lastUpdate;
+    @SerializedName("updateInProgress")
     private final boolean isUpdateInProgress;
     private final Integer resourceCount;
     private final String url;

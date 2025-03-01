@@ -4,3 +4,4 @@
 
 ### Bug Fixes
 
+- Fix bug deserializing `com.pulumi.automation.StackSummary`
