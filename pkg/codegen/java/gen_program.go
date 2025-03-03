@@ -515,9 +515,14 @@ func sanitizeImport(name string) string {
 	return replacedSlash
 }
 
+// Checks if this is a builtin stack reference or stack reference args
+func isBuiltin(pkg, module, member string) bool {
+	return pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs")
+}
+
 func pulumiImport(pkg string, module string, member string) string {
 	module = cleanModule(module)
-	if pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs") {
+	if isBuiltin(pkg, module, member) {
 		return "com.pulumi.resources." + member
 	}
 	if ignoreModule(module) {
@@ -528,12 +533,13 @@ func pulumiImport(pkg string, module string, member string) string {
 	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
 }
 
+// For resource imports we need to consider the package reference in the schema of the resource
+// for generating the import, as it can override the default 'com.pulumi' base package.
 func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member string) string {
 	module = cleanModule(module)
-	if pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs") {
+	if isBuiltin(pkg, module, member) {
 		return "com.pulumi.resources." + member
 	}
-
 	importName := "com.pulumi."
 	if r.Schema != nil && r.Schema.PackageReference != nil {
 		def, err := r.Schema.PackageReference.Definition()
