@@ -1,6 +1,7 @@
 package com.pulumi.deployment;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.exceptions.RunException;
@@ -144,7 +145,7 @@ public class DeploymentRunnerTest {
         var test = PulumiTestInternal.builder().build();
 
         var taskWasCalled = new AtomicBoolean(false);
-        test.runner().registerTask("testRunnerRuns", CompletableFuture.runAsync(() -> taskWasCalled.set(true)));
+        test.runner().registerTask("testRunnerRuns", ContextAwareCompletableFuture.runAsync(() -> taskWasCalled.set(true)));
         var result = test.runner().runAsync(() -> "foo").join();
 
         assertThat(taskWasCalled).isTrue();

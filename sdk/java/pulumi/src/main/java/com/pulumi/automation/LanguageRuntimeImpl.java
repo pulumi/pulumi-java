@@ -2,14 +2,13 @@
 
 package com.pulumi.automation;
 
-import java.util.concurrent.Semaphore;
 import java.util.function.Consumer;
 import java.util.logging.Logger;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Empty;
-import com.pulumi.deployment.internal.DeploymentImpl;
+import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.InlineDeploymentSettings;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.resources.StackOptions;
@@ -26,8 +25,6 @@ import pulumirpc.Language.RunResponse;
  * Internal implementation of the LanguageRuntime service.
  */
 final class LanguageRuntimeImpl extends LanguageRuntimeImplBase {
-    private static final Semaphore semaphore = new Semaphore(1);
-
     private final Consumer<Context> program;
     private final Logger logger;
 
@@ -64,33 +61,22 @@ final class LanguageRuntimeImpl extends LanguageRuntimeImplBase {
                     .isDryRun(request.getDryRun())
                     .build();
 
-            // TODO Remove lock once https://github.com/pulumi/pulumi-java/issues/30 is
-            // resolved.
-            semaphore.acquire();
-            try {
-                var pulumiInternal = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.Empty);
-                pulumiInternal.runAsync(program).handle((result, throwable) -> {
-                    try {
-                        var responseBuilder = RunResponse.newBuilder();
-                        if (throwable != null) {
-                            responseBuilder.setError(throwable.getMessage());
-                        }
-                        responseObserver.onNext(responseBuilder.build());
-                        responseObserver.onCompleted();
-                        return null;
-                    } finally {
-                        DeploymentImpl.internalUnsafeDestroyInstance();
-                        semaphore.release();
+            var pulumiInternal = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.Empty);
+            pulumiInternal.runAsync(program).handle((result, throwable) -> {
+                try {
+                    var responseBuilder = RunResponse.newBuilder();
+                    if (throwable != null) {
+                        responseBuilder.setError(throwable.getMessage());
                     }
-                });
-            } catch (Exception e) {
-                DeploymentImpl.internalUnsafeDestroyInstance();
-                semaphore.release();
-                throw e;
-            }
+                    responseObserver.onNext(responseBuilder.build());
+                    responseObserver.onCompleted();
+                    return null;
+                } finally {
+                    DeploymentInstanceHolder.internalUnsafeDestroyInstance();
+                }
+            });
 
             // TODO graceful error propagation/handling
-
         } catch (Exception e) {
             String errorDetails = getDetailedErrorMessage(e, "Run failed");
             responseObserver.onError(io.grpc.Status.UNKNOWN

@@ -14,6 +14,7 @@ import java.util.function.Consumer;
 
 import com.pulumi.automation.events.EngineEvent;
 import com.pulumi.automation.serialization.internal.LocalSerializer;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 /**
@@ -26,7 +27,7 @@ public final class EventLogWatcher implements AutoCloseable {
     private final CompletableFuture<Void> future;
 
     public EventLogWatcher(Path logFile, Consumer<EngineEvent> onEvent) {
-        this.future = CompletableFuture.runAsync(() -> {
+        this.future = ContextAwareCompletableFuture.runAsync(() -> {
             var serializer = new LocalSerializer();
             try (var reader = Files.newBufferedReader(logFile, StandardCharsets.UTF_8)) {
                 while (true) {

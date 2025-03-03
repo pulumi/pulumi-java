@@ -6,6 +6,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Setter;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.core.annotations.Import;
@@ -51,7 +52,8 @@ public class DeploymentInvokeDependsOnTest {
                     @Override
                     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
                         Objects.requireNonNull(args.type);
-                        CompletableFuture<ResourceResult> result = CompletableFuture.supplyAsync(() -> {
+                        // Delay the resource creation to ensure we await it in the invoke
+                        return ContextAwareCompletableFuture.supplyAsync(() -> {
                             try {
                                 // Delay the resource creation to ensure we await it in the invoke
                                 Thread.sleep(3000);
@@ -63,7 +65,6 @@ public class DeploymentInvokeDependsOnTest {
                             return ResourceResult.of(Optional.of(args.id + "_id"),
                                     ImmutableMap.of("prop", "some value"));
                         });
-                        return result;
                     }
 
                     @Override
@@ -102,7 +103,7 @@ public class DeploymentInvokeDependsOnTest {
                 .mocks(new Mocks() {
                     @Override
                     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
-                        return CompletableFuture
+                        return ContextAwareCompletableFuture
                                 .supplyAsync(() -> ResourceResult.of(Optional.empty(), ImmutableMap.of()));
                     }
 
@@ -138,7 +139,7 @@ public class DeploymentInvokeDependsOnTest {
                 .mocks(new Mocks() {
                     @Override
                     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
-                        return CompletableFuture
+                        return ContextAwareCompletableFuture
                                 .supplyAsync(() -> ResourceResult.of(Optional.empty(), ImmutableMap.of()));
                     }
 
