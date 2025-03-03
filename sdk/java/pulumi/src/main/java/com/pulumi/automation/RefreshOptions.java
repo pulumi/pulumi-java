@@ -97,7 +97,7 @@ public final class RefreshOptions extends UpdateOptions {
      */
     public static final class Builder extends UpdateOptions.Builder<RefreshOptions.Builder> {
         private boolean expectNoChanges;
-        private boolean previewOnly;
+        private boolean previewOnly = false;
         private boolean showSecrets;
         private boolean skipPendingCreates;
         private boolean clearPendingCreates;
