@@ -6,3 +6,5 @@
 
 - Fix `ComponentProviderHost` to handle multiple arguments correctly, including logging arguments.
   https://github.com/pulumi/pulumi-java/issues/1706
+
+- Fix bug deserializing `com.pulumi.automation.StackSummary`
