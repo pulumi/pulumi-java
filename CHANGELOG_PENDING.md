@@ -1,6 +1,5 @@
 ### Improvements
 
-- Add ability to disable toString on Output<T>
 - Update to pulumi 3.150.0
 - Add the `previewOnly` option to the `refresh` command in the Automation API
 
