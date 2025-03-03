@@ -63,6 +63,8 @@ public final class Infra {
 
 * **[GitHub Discussions](https://github.com/pulumi/pulumi/discussions)**: Ask questions or share what you are building with Pulumi.
 
+* **[SDK](https://www.pulumi.com/docs/reference/pkg/java/)**: Explore the Java SDK.
+
 
 ## <a name="getting-started"></a>Getting Started
 
