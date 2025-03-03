@@ -24,7 +24,7 @@ repositories {
 }
 
 def grpcVersion = "1.57.2"
-def protobufVersion = "3.25.5"
+def protobufVersion = "4.26.0"
 def protocVersion = protobufVersion
 def guavaVersion = "32.1.2-jre"
 def assertjCoreVersion = "3.27.1"
@@ -88,19 +88,11 @@ dependencies {
 
 protobuf {
     protoc {
-        if (osdetector.os == "osx") {
-            artifact = "com.google.protobuf:protoc:${protocVersion}:osx-x86_64"
-        } else {
-            artifact = "com.google.protobuf:protoc:${protocVersion}"
-        }
+        artifact = "com.google.protobuf:protoc:${protocVersion}"
     }
     plugins {
         grpc {
-            if (osdetector.os == "osx") {
-               artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}:osx-x86_64"
-            } else {
-                artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
-            }
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
         }
     }
     generateProtoTasks {

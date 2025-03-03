@@ -40,7 +40,7 @@ dependencies {
     
     implementation "com.google.guava:guava:32.1.2-jre"
     implementation "net.javacrumbs.future-converter:future-converter-java8-guava:1.2.0"
-    implementation "com.google.protobuf:protobuf-java-util:3.25.5"
+    implementation "com.google.protobuf:protobuf-java-util:4.26.0"
     implementation "com.google.code.gson:gson:2.10"
     implementation "org.yaml:snakeyaml:2.3"
     implementation "com.github.zafarkhaja:java-semver:0.10.2"
