@@ -464,3 +464,15 @@ jobs:
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         run: make test_templates
+
+  ci-ok:
+    name: ci-ok
+    needs: [prerequisites, go-tests, examples, go-lint, test_integrations, test_templates]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI failed
+        if: ${{ needs.ci.result != 'success' }}
+        run: exit 1
+      - name: CI succeeded
+        run: exit 0
