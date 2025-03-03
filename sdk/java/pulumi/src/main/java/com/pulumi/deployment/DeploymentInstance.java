@@ -10,5 +10,9 @@ public interface DeploymentInstance extends Deployment {
 
     boolean isInvalid();
 
+    /**
+     * We store the context in thread local storage, and we also capture it in completable futures.
+     * Calling this method makes sure async callbacks that complete after the core program loop completes do not access the stale context.
+     */
     void markInvalid();
 }
