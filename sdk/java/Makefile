@@ -11,11 +11,11 @@ ensure::
 # Builds the project and runs all unit tests, both fast and auto tests.
 # A coverage report is generated at pulumi/build/reports/jacoco/allTests
 test_all::		ensure
-    gradle --console=plain build testAll
+	gradle --console=plain build testAll
 
 # Builds the project and runs only auto tests.
 test_auto::		ensure
-    gradle --console=plain build autoTest
+	gradle --console=plain build autoTest
 
 # Installs the package into a local Maven repository - `~/.m2` by
 # default.
