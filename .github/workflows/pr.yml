@@ -42,7 +42,7 @@ jobs:
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@3da56e6feff8f5db8b48d3a396bc10ef1f968088 # v6
         with:
           pulumi-version: latest
       - name: Install pulumictl
@@ -82,8 +82,13 @@ jobs:
       - name: Build and unit-test Pulumi Java SDK
         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
         with:
-          arguments: build
+          arguments: build testAll
           build-root-directory: sdk/java
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          directory: sdk/java/pulumi/build/reports/jacoco/allTests
+          token: ${{ secrets.CODECOV_TOKEN }}
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-java
@@ -127,7 +132,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@3da56e6feff8f5db8b48d3a396bc10ef1f968088 # v6
         with:
           pulumi-version: latest
       - name: Set up JDK 11
@@ -213,7 +218,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@3da56e6feff8f5db8b48d3a396bc10ef1f968088 # v6
         with:
           pulumi-version: latest
       - run: make clone_examples
@@ -243,7 +248,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-examples-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@3da56e6feff8f5db8b48d3a396bc10ef1f968088 # v6
       - name: Download versions.txt
         uses: actions/download-artifact@v4
         with:
@@ -332,7 +337,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@3da56e6feff8f5db8b48d3a396bc10ef1f968088 # v6
         with:
           pulumi-version: latest
       - name: Set up JDK 11
@@ -361,7 +366,7 @@ jobs:
             ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-integrations-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
+        uses: pulumi/action-install-pulumi-cli@b374ceb6168550de27c6eba92e01c1a774040e11 # v2
       - name: Download versions.txt
         uses: actions/download-artifact@v4
         with:
@@ -392,7 +397,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@3da56e6feff8f5db8b48d3a396bc10ef1f968088 # v6
         with:
           pulumi-version: latest
       - run: make clone_templates

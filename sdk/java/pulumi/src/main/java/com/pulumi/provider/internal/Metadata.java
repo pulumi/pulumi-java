@@ -1,4 +1,4 @@
-package com.pulumi.provider.internal.infer;
+package com.pulumi.provider.internal;
 
 public class Metadata {
     private final String name;

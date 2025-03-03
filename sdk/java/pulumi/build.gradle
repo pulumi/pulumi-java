@@ -73,6 +73,8 @@ dependencies {
 
     implementation("com.github.zafarkhaja:java-semver:0.10.2")
 
+    implementation("org.reflections:reflections:0.10.2")
+
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -164,6 +166,8 @@ test {
         excludeTestsMatching "com.pulumi.serialization.internal.ResourcePackagesIsolatedTest"
     }
 
+    exclude '**/com/pulumi/automation/**'
+
     testLogging {
         showStandardStreams = true
         exceptionFormat = 'full'
@@ -181,10 +185,17 @@ test {
 
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 
-    // Ensure isolatedTest runs after the main tests
-    finalizedBy isolatedTest
-
     finalizedBy jacocoTestReport
+}
+
+task autoTest(type: Test) {
+    useJUnitPlatform()
+
+    include '**/com/pulumi/automation/**'
+}
+
+task allTests {
+    dependsOn test, isolatedTest, autoTest
 }
 
 jacocoTestReport {
@@ -194,6 +205,31 @@ jacocoTestReport {
         csv.required = false
     }
     dependsOn test
+}
+
+task jacocoAllTestsReport(type: JacocoReport) {
+    reports {
+        xml {
+            required = true
+            outputLocation = file("${buildDir}/reports/jacoco/allTests/jacocoTestReport.xml")
+        }
+        html {
+            required = true
+            outputLocation = file("${buildDir}/reports/jacoco/allTests/html")
+        }
+        csv.required = false
+    }
+
+    dependsOn allTests
+
+    sourceDirectories.from = files(sourceSets.main.allSource.srcDirs)
+    classDirectories.from = files(sourceSets.main.output)
+
+    executionData fileTree(project.buildDir).include("jacoco/*.exec")
+}
+
+task testAll {
+    dependsOn jacocoAllTestsReport
 }
 
 def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
