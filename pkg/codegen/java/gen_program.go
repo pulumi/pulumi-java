@@ -528,6 +528,29 @@ func pulumiImport(pkg string, module string, member string) string {
 	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
 }
 
+func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member string) string {
+	module = cleanModule(module)
+	if pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs") {
+		return "com.pulumi.resources." + member
+	}
+
+	importName := "com.pulumi."
+	if r.Schema != nil && r.Schema.PackageReference != nil {
+		def, err := r.Schema.PackageReference.Definition()
+		contract.AssertNoErrorf(err, "failed to get package definition for %s", r.Schema.Token)
+		if info, ok := def.Language["java"].(PackageInfo); ok {
+			importName = info.BasePackageOrDefault()
+		}
+	}
+
+	if ignoreModule(module) {
+		return importName + sanitizeImport(pkg) + "." + member
+	} else if module == "" {
+		return importName + sanitizeImport(pkg)
+	}
+	return importName + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
+}
+
 func pulumiInputImport(pkg string, module string, member string) string {
 	module = cleanModule(module)
 	if ignoreModule(module) {
@@ -612,14 +635,14 @@ func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
 func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 	imports := make([]string, 0)
 	pkg, module, name, _ := resource.DecomposeToken()
-	resourceImport := pulumiImport(pkg, module, name)
+	resourceImport := pulumiResourceImport(resource, pkg, module, name)
 	imports = append(imports, resourceImport)
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
 		// import args type name
 		argsTypeName := g.resourceArgsTypeName(resource)
 		alreadyFullyQualified := strings.Contains(argsTypeName, ".")
 		if !alreadyFullyQualified {
-			resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
+			resourceArgsImport := pulumiResourceImport(resource, pkg, module, argsTypeName)
 			imports = append(imports, resourceArgsImport)
 		} else {
 			imports = append(imports, argsTypeName)
@@ -928,11 +951,11 @@ func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 		member = "Provider"
 	}
 
-	if !g.emittedTypeImportSymbols.Has(pulumiImport(pkg, module, member)) {
+	if !g.emittedTypeImportSymbols.Has(pulumiResourceImport(resource, pkg, module, member)) {
 		// if we didn't emit an import statement for this symbol
 		// it means that there was a duplicate member name in the imports
 		// so return the fully qualified resource name
-		return pulumiImport(pkg, module, member)
+		return pulumiResourceImport(resource, pkg, module, member)
 	}
 
 	return names.Title(member)
