@@ -472,7 +472,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: CI failed
-        if: ${{ needs.go-tests.result != 'success' || needs.examples.result != 'success' || needs.go-lint.result != success || needs.test_integrations.result != 'success' || needs.test_templates.result != 'success' }}
+        if: ${{ needs.go-tests.result != 'success' || needs.examples.result != 'success' || needs.go-lint.result != 'success' || needs.test_integrations.result != 'success' || needs.test_templates.result != 'success' }}
         run: exit 1
       - name: CI succeeded
         run: exit 0
