@@ -11,6 +11,7 @@ import java.util.List;
  */
 public final class RefreshOptions extends UpdateOptions {
     private final boolean expectNoChanges;
+    private final boolean previewOnly;
     private final boolean showSecrets;
     private final boolean skipPendingCreates;
     private final boolean clearPendingCreates;
@@ -19,6 +20,7 @@ public final class RefreshOptions extends UpdateOptions {
     private RefreshOptions(Builder builder) {
         super(builder);
         this.expectNoChanges = builder.expectNoChanges;
+        this.previewOnly = builder.previewOnly;
         this.showSecrets = builder.showSecrets;
         this.skipPendingCreates = builder.skipPendingCreates;
         this.clearPendingCreates = builder.clearPendingCreates;
@@ -43,6 +45,15 @@ public final class RefreshOptions extends UpdateOptions {
      */
     public boolean expectNoChanges() {
         return expectNoChanges;
+    }
+
+    /**
+     * Only show a preview of the refresh, but don't perform the refresh itself.
+     *
+     * @return true if we should only show the preview
+     */
+    public boolean previewOnly() {
+        return previewOnly;
     }
 
     /**
@@ -86,6 +97,7 @@ public final class RefreshOptions extends UpdateOptions {
      */
     public static final class Builder extends UpdateOptions.Builder<RefreshOptions.Builder> {
         private boolean expectNoChanges;
+        private boolean previewOnly = false;
         private boolean showSecrets;
         private boolean skipPendingCreates;
         private boolean clearPendingCreates;
@@ -103,6 +115,18 @@ public final class RefreshOptions extends UpdateOptions {
          */
         public Builder expectNoChanges(boolean expectNoChanges) {
             this.expectNoChanges = expectNoChanges;
+            return this;
+        }
+
+        /**
+         * Only show a preview of the refresh, but don't perform the refresh itself.
+         *
+         * @param previewOnly true if the refresh should be preview-only
+         *
+         * @return the builder
+         */
+        public Builder previewOnly(boolean previewOnly) {
+            this.previewOnly = previewOnly;
             return this;
         }
 
