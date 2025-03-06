@@ -27,6 +27,7 @@ import java.util.regex.Pattern;
 import javax.annotation.Nullable;
 
 import com.pulumi.automation.events.internal.EventLogWatcher;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 
 /**
  * A {@link PulumiCommand} implementation that uses a locally installed Pulumi CLI.
@@ -54,7 +55,7 @@ public class LocalPulumiCommand implements PulumiCommand {
      * Creates a new {@link LocalPulumiCommand} instance.
      *
      * @return a new {@link LocalPulumiCommand} instance
-     * @throws AutomationException
+     * @throws AutomationException if an error occurs
      */
     public static LocalPulumiCommand create() throws AutomationException {
         return create(LocalPulumiCommandOptions.Empty);
@@ -65,7 +66,7 @@ public class LocalPulumiCommand implements PulumiCommand {
      *
      * @param options options to configure the {@link LocalPulumiCommand}
      * @return a new {@link LocalPulumiCommand} instance
-     * @throws AutomationException
+     * @throws AutomationException if an error occurs
      */
     public static LocalPulumiCommand create(LocalPulumiCommandOptions options) throws AutomationException {
         var command = "pulumi";
@@ -215,7 +216,7 @@ public class LocalPulumiCommand implements PulumiCommand {
             InputStream in,
             Executor executor,
             @Nullable Consumer<String> lineConsumer) {
-        return CompletableFuture.supplyAsync(() -> {
+        return ContextAwareCompletableFuture.supplyAsync(() -> {
             var sb = new StringBuilder();
             try (var reader = new BufferedReader(new InputStreamReader(in))) {
                 String line;

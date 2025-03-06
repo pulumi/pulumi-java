@@ -122,7 +122,10 @@ class ResourceProviderServiceTest {
         );
         
         assertEquals(io.grpc.Status.Code.INTERNAL, exception.getStatus().getCode());
-        assertTrue(exception.getMessage().contains("Construction failed"));
+        String message = exception.getMessage();
+        if (!message.contains("Construction failed")) {
+            assertEquals("Construction failed", message);
+        }
     }
 
     @Test
