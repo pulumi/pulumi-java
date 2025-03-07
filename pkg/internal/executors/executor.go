@@ -29,6 +29,10 @@ type JavaExecutor struct {
 
 	// Command to autodetect and print Pulumi plugins depended on
 	// by the Java program.
+	AnalyzerArgs []string
+
+	// Command to autodetect and print Pulumi plugins depended on
+	// by the Java program.
 	PluginArgs []string
 
 	// Command args to run a plugin (e.g. a provider). Optional if the executor
