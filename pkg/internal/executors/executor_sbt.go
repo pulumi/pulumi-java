@@ -53,6 +53,13 @@ func (sbt) newSbtExecutor(cmd string) (*JavaExecutor, error) {
 		Cmd:       cmd,
 		BuildArgs: []string{"-batch", "compile"},
 		RunArgs:   []string{"-batch", "run"},
+		AnalyzerArgs: []string{
+			/* STDOUT needs to be clean of sbt output,
+			   because we expect a JSON with plugin
+			   results */
+			"-batch", "-error",
+			"'; set outputStrategy := Some(StdoutOutput) ; runMain com.pulumi.bootstrap.internal.Main analyzer'",
+		},
 		PluginArgs: []string{
 			/* STDOUT needs to be clean of sbt output,
 			   because we expect a JSON with plugin

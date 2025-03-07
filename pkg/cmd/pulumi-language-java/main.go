@@ -46,6 +46,24 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/version"
 )
 
+// spawnAnalyzerHost starts the Java analyzer and redirects stdout/stderr to the caller
+func spawnAnalyzerHost(execOptions executors.JavaExecutorOptions, engineAddress string, policyPackDir string) error {
+	//time.Sleep(10 * time.Second)
+	executor, err := executors.NewJavaExecutor(execOptions, false)
+	if err != nil {
+		return err
+	}
+
+	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
+	cmd := exec.Command(executor.Cmd, executor.AnalyzerArgs...) // nolint: gas // intentionally running dynamic program name.
+	cmd.Dir = policyPackDir
+	cmd.Stdout = os.Stdout
+	//cmd.Stderr = os.Stderr
+	cmd.Env = append(os.Environ(), fmt.Sprintf("PULUMI_ENGINE=%s", engineAddress))
+
+	return runCommand(cmd)
+}
+
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
 // LanguageRuntimeServer RPC endpoint.
 func main() {
@@ -87,6 +105,14 @@ func main() {
 		cancelChannel, err = setupHealthChecks(engineAddress)
 		if err != nil {
 			cmdutil.Exit(errors.Wrapf(err, "could not start health check host RPC server"))
+		}
+
+		if len(args) == 2 {
+			if err = spawnAnalyzerHost(javaExecOptions, engineAddress, args[1]); err != nil {
+				cmdutil.Exit(errors.Wrapf(err, "could not start analyzer host RPC server"))
+			}
+
+			return
 		}
 	}
 

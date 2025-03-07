@@ -63,6 +63,13 @@ func (maven) newMavenExecutor(cmd string, args []string, pomXMLPath string) (*Ja
 			"compile",
 			"exec:java",
 		},
+		AnalyzerArgs: []string{
+			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
+			"-Dorg.slf4j.simpleLogger.logFile=System.err",
+			"--no-transfer-progress", "compile", "exec:java",
+			"-DmainClass=com.pulumi.bootstrap.internal.Main",
+			"-DmainArgs=analyzer",
+		},
 		PluginArgs: []string{
 			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
 			"-Dorg.slf4j.simpleLogger.logFile=System.err",
