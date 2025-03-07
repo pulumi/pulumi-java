@@ -70,6 +70,24 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     }
 
     @Override
+    public T get() {
+        var v = getOptional();
+        if (v.isEmpty()) {
+            throw new IllegalStateException("Value not present");
+        }
+        return v.get();
+    }
+
+    @Override
+    public Optional<T> getOptional() {
+        if (dataFuture.isDone()) {
+            return dataFuture.join().getValueOptional();
+        }
+
+        return Optional.empty();
+    }
+
+    @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
         return new OutputInternal<>(OutputData.apply(
                 dataFuture,

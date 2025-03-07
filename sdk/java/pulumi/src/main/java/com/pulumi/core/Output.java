@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.stream.Stream;
@@ -52,6 +53,20 @@ import static java.util.stream.Collectors.toCollection;
  * The output properties of all resource objects in Pulumi have type {@code Output}{@literal <T>}.
  */
 public interface Output<T> extends Copyable<Output<T>> {
+    /**
+     * Returns the value of the output if it is available.
+     *
+     * @return an {@code Optional}{@literal <T>} with the value
+     */
+    Optional<T> getOptional();
+
+    /**
+     * Returns the value of the output if it is available, or throws an exception.
+     *
+     * @return the value {@literal <T>}
+     * @throws IllegalStateException if the value is not available
+     */
+    T get();
 
     /**
      * Transforms the data of this {@link Output}{@literal <T>} with the provided {@code func}.

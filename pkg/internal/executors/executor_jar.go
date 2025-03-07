@@ -30,9 +30,10 @@ func (j jarexec) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error
 
 func (jarexec) newJarExecutor(cmd string, path string) (*JavaExecutor, error) {
 	return &JavaExecutor{
-		Cmd:        cmd,
-		BuildArgs:  nil, // not supported
-		RunArgs:    []string{"-jar", filepath.Clean(path)},
-		PluginArgs: []string{"-cp", filepath.Clean(path), "com.pulumi.bootstrap.internal.Main", "packages"},
+		Cmd:          cmd,
+		BuildArgs:    nil, // not supported
+		RunArgs:      []string{"-jar", filepath.Clean(path)},
+		AnalyzerArgs: []string{"-cp", filepath.Clean(path), "com.pulumi.bootstrap.internal.Main", "analyzer"},
+		PluginArgs:   []string{"-cp", filepath.Clean(path), "com.pulumi.bootstrap.internal.Main", "packages"},
 	}, nil
 }
