@@ -117,7 +117,7 @@ public class ResourcePackages {
     }
 
     @SuppressWarnings("UnstableApiUsage")
-    private static boolean excludePackages(ClassInfo c) {
+    static boolean excludePackages(ClassInfo c) {
         return !c.getPackageName().isBlank()
                 && !c.getPackageName().startsWith("META-INF")
                 && !c.getPackageName().startsWith("java.")
@@ -185,8 +185,8 @@ public class ResourcePackages {
                 "Deserialize/ResourcePackages: searching for type=%s version=%s urn=%s",
                 type, version, urn
         );
-        var resourceType = tryGetResourceType(type, version);
-        if (resourceType.isEmpty()) {
+        var resourceTypeOpt = tryGetResourceType(type, version);
+        if (resourceTypeOpt.isEmpty()) {
             var message = String.format(
                     "Deserialize/ResourcePackages: can't find a resource: '%s'; version=%s urn=%s",
                     type, version, urn
@@ -199,14 +199,15 @@ public class ResourcePackages {
         }
         log.excessive(String.format(
                 "Deserialize/ResourcePackages: found resource: '%s'; type=%s version=%s urn=%s",
-                resourceType, type, version, urn
+                resourceTypeOpt, type, version, urn
         ));
 
-        if (Reflection.isNestedClass(resourceType.get())) {
+        var resourceType = resourceTypeOpt.get();
+        if (Reflection.isNestedClass(resourceType)) {
             throw new IllegalArgumentException(String.format(
                     "tryConstruct(String, String, String) cannot be used with nested classes, " +
                             "make class '%s' static or standalone",
-                    resourceType.get().getTypeName()
+                    resourceType.getTypeName()
             ));
         }
 
@@ -219,7 +220,7 @@ public class ResourcePackages {
         //
         // The search is approximate. We may need to consider using annotations instead in future versions.
         var constructorInfo =
-                Arrays.stream(resourceType.get().getDeclaredConstructors())
+                Arrays.stream(resourceType.getDeclaredConstructors())
                         .filter(c -> c.getParameterCount() == 3)
                         // Remove confusion of constructors with the second param of type:
                         //     Output<String> id
@@ -230,7 +231,7 @@ public class ResourcePackages {
                                                 " with the following signature:" +
                                                 " `(String name, SomeResourceArgs args, CustomResourceOptions options)`" +
                                                 ", got: `%s`",
-                                        resourceType.get(), cause
+                                        resourceType, cause
                                 ))
                         ));
 
@@ -238,16 +239,16 @@ public class ResourcePackages {
 
         this.log.excessive(
                 "Deserialize/ResourcePackages: constructing using constructor=%s type=%s version=%s urn=%s",
-                constructorInfo, resourceType.get().getTypeName(), version, urn
+                constructorInfo, resourceType.getTypeName(), version, urn
         );
-        var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
+        var resourceOptions = resolveResourceOptions(resourceType, urn);
         try {
             var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
             return Optional.of(resource);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new IllegalArgumentException(String.format(
                     "Couldn't instantiate class '%s' using constructor: '%s', for resource type: '%s'",
-                    resourceType.get().getTypeName(), constructorInfo, type
+                    resourceType.getTypeName(), constructorInfo, type
             ), e);
         } finally {
             constructorInfo.setAccessible(false);
