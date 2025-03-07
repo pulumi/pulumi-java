@@ -111,6 +111,13 @@ func (g gradle) newGradleExecutor(gradleRoot fsys.ParentFS,
 		Dir:       gradleRoot.Path(),
 		BuildArgs: []string{g.prefix(subproject, "build"), "--console=plain"},
 		RunArgs:   []string{g.prefix(subproject, "run"), "--console=plain"},
+		AnalyzerArgs: []string{
+			// STDOUT needs to be clean of gradle output because we expect a JSON with plugin results.
+			"-q", // must go first due to a bug https://github.com/gradle/gradle/issues/5098
+			g.prefix(subproject, "run"), "--console=plain",
+			"-PmainClass=com.pulumi.bootstrap.internal.Main",
+			"--args=analyzer",
+		},
 		PluginArgs: []string{
 			// STDOUT needs to be clean of gradle output because we expect a JSON with plugin results.
 			"-q", // must go first due to a bug https://github.com/gradle/gradle/issues/5098

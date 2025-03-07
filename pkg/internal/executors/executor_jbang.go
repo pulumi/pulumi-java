@@ -58,6 +58,12 @@ func (j jbang) newJBangExecutor(cmd string, script string) (*JavaExecutor, error
 		Cmd:       cmd,
 		BuildArgs: []string{"--quiet", "build", script},
 		RunArgs:   []string{"--quiet", "run", script},
+		AnalyzerArgs: []string{
+			"--quiet", "run",
+			"--main=com.pulumi.bootstrap.internal.Main",
+			script,
+			"analyzer",
+		},
 		PluginArgs: []string{
 			"--quiet", "run",
 			"--main=com.pulumi.bootstrap.internal.Main",
