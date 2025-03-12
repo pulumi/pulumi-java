@@ -44,6 +44,17 @@ import static java.util.Objects.requireNonNull;
  * @see Serializer
  */
 public class Deserializer {
+    public static class ResourceIdentity {
+        public final String type;
+        public final String version;
+        public final String urn;
+
+        public ResourceIdentity(String type, String version, String urn) {
+            this.type = type;
+            this.version = version;
+            this.urn = urn;
+        }
+    }
 
     private final Log log;
     private final ResourcePackages resourcePackages;
@@ -142,7 +153,7 @@ public class Deserializer {
     private OutputData<List<?>> deserializeList(Value value) {
         return deserializeOneOf(value, LIST_VALUE, v -> {
             var resources = new HashSet<Resource>();
-            var result = new ArrayList<Object>(); // will hold nulls
+            var result = new ArrayList<>(); // will hold nulls
             var isKnown = true;
             var isSecret = false;
 
@@ -236,9 +247,7 @@ public class Deserializer {
         var sig = checkSpecialStruct(value);
         if (sig.isPresent() && Constants.SpecialSecretSig.equals(sig.get())) {
             var secretValue = tryGetValue(value.getStructValue(), Constants.SecretValueName)
-                    .orElseThrow(() -> {
-                        throw new UnsupportedOperationException("Secrets must have a field called 'value'");
-                    });
+                    .orElseThrow(() -> new UnsupportedOperationException("Secrets must have a field called 'value'"));
 
             return innerUnwrapSecret(secretValue, true);
         }
@@ -306,10 +315,8 @@ public class Deserializer {
         if (assets.isPresent()) {
             final Function<Value, AssetOrArchive> assetArchiveOrThrow = v ->
                     tryDeserializeAssetOrArchive(v)
-                            .orElseThrow(() -> {
-                                throw new UnsupportedOperationException(
-                                        "AssetArchive contained an element that wasn't itself an Asset or Archive.");
-                            });
+                            .orElseThrow(() -> new UnsupportedOperationException(
+                                    "AssetArchive contained an element that wasn't itself an Asset or Archive."));
             return new AssetArchive(
                     assets.get().getFieldsMap().entrySet().stream()
                             .collect(Collectors.toMap(
@@ -345,30 +352,38 @@ public class Deserializer {
         throw new UnsupportedOperationException("Value was marked as Asset, but did not conform to required shape.");
     }
 
-    private Optional<Resource> tryDeserializeResource(Value value) {
+    public static ResourceIdentity tryDecodingResourceIdentity(Value value) {
         var sig = checkSpecialStruct(value);
         if (sig.isEmpty() || !Constants.SpecialResourceSig.equals(sig.get())) {
-            return Optional.empty();
+            return null;
         }
 
         var struct = value.getStructValue();
 
         var urn = tryGetStringValue(struct, Constants.ResourceUrnName)
-                .orElseThrow(() -> {
-                    throw new UnsupportedOperationException(
-                            "Value was marked as a Resource, but did not conform to required shape.");
-                });
+                .orElseThrow(() -> new UnsupportedOperationException("Value was marked as a Resource, but did not conform to required shape."));
 
         var version = tryGetStringValue(struct, Constants.ResourceVersionName)
                 .orElse("");
 
         var urnParsed = Urn.parse(urn);
         var type = urnParsed.qualifiedType.type.asString();
-        var resource = this.resourcePackages.tryConstruct(type, version, urn);
+
+        return new ResourceIdentity(type, version, urn);
+
+    }
+
+    private Optional<Resource> tryDeserializeResource(Value value) {
+        var id = tryDecodingResourceIdentity(value);
+        if (id == null) {
+            return Optional.empty();
+        }
+
+        var resource = this.resourcePackages.tryConstruct(id.type, id.version, id.urn);
         if (resource.isPresent()) {
             return resource;
         }
 
-        return Optional.of(new DependencyResource(urn));
+        return Optional.of(new DependencyResource(id.urn));
     }
 }
