@@ -51,6 +51,11 @@
         <artifactId>random</artifactId>
         <version>4.14.0</version>
       </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>std</artifactId>
+        <version>2.2.0</version>
+      </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty-shaded</artifactId>
