@@ -1,6 +1,8 @@
 on:
   pull_request:
     paths-ignore:
+      # Skip CI checks if the only things that have changed are CHANGELOG entries (which is typically the case when a PR
+      # or Push is occurring as part of a release process).
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
   push:
@@ -9,14 +11,14 @@ on:
     tags:
       - sdk/v*.*.*
     paths-ignore:
+      # Skip CI checks if the only things that have changed are CHANGELOG entries (which is typically the case when a PR
+      # or Push is occurring as part of a release process).
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
   repository_dispatch:
     types:
       - run-acceptance-tests-command
 
-# TODO[pulumi/java#10] protect jobs from crypto mining PR attacks
-# before making the repo public.
 env:
   PULUMI_API: https://api.pulumi-staging.io
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
