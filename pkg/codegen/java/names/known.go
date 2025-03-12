@@ -22,6 +22,8 @@ var PulumiAnnotations = PulumiCore.Dot("annotations")
 
 var ResourceTypeAnnotation = PulumiAnnotations.Dot("ResourceType")
 
+var PolicyResourceTypeAnnotation = PulumiAnnotations.Dot("PolicyResourceType")
+
 var Output = PulumiCore.Dot("Output")
 
 var List = JavaUtil.Dot("List")
