@@ -1,0 +1,40 @@
+# This workflow is a version of `pr.yml` that runs in exactly the cases that `pr.yml` doesn't. That is, where `pr.yml`
+# skips execution due to `paths-ignore`, this workflow runs only in those cases. We do this so that we can always
+# produce a `ci-ok` check, which we configure as a required passing step on all PRs to be merged into the repository.
+#
+# This is an officially blessed pattern for handling skipped but required status checks. See
+# https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/troubleshooting-required-status-checks#handling-skipped-but-required-checks
+# for more information.
+
+on:
+  pull_request:
+    paths-ignore:
+      # Skip all files *except CHANGELOG* changes.
+      - '**'
+      - '!CHANGELOG.md'
+      - '!CHANGELOG_PENDING.md'
+  push:
+    branches:
+      - main
+    tags:
+      - sdk/v*.*.*
+    paths-ignore:
+      # Skip all files *except CHANGELOG* changes.
+      - '**'
+      - '!CHANGELOG.md'
+      - '!CHANGELOG_PENDING.md'
+
+jobs:
+  no-op:
+    name: Skip CI on CHANGELOG changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip CI on CHANGELOG changes
+        run: echo 'No need to run CI checks when only CHANGELOGs change'
+
+  ci-ok:
+    name: ci-ok
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI succeeded
+        run: exit 0
