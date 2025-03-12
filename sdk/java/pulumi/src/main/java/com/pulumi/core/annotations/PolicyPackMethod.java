@@ -1,6 +1,6 @@
 package com.pulumi.core.annotations;
 
-import com.pulumi.resources.Resource;
+import com.pulumi.resources.PolicyResource;
 import pulumirpc.AnalyzerOuterClass;
 
 import java.lang.annotation.ElementType;
@@ -10,11 +10,12 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface PolicyPackMethod {
+public @interface PolicyPackMethod
+{
     /**
      * @return the Resource type for this policy
      */
-    Class<? extends Resource> value();
+    Class<? extends PolicyResource> value();
 
     /**
      * @return the Policy name

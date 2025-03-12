@@ -101,13 +101,25 @@ func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
 
-	pkg := mod.basePackageName + packageName(mod.packages, components[0])
+	pkg := mod.basePackageName
+
+	if qualifier == policiesQualifier {
+		pkg += qualifier.String() + "."
+	}
+
+	pkg += packageName(mod.packages, components[0])
 	pkgName := mod.pkg.TokenToModule(tok)
 
 	if pkgName != "" {
 		pkg += "." + packageName(mod.packages, pkgName)
 	}
-	return qualifier.append(pkg)
+
+	switch qualifier {
+	case noQualifier, policiesQualifier:
+		return pkg
+	default:
+		return fmt.Sprintf("%s.%s", pkg, qualifier.String())
+	}
 }
 
 func (mod *modContext) typeName(t *schema.ObjectType) string {
@@ -361,7 +373,7 @@ func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier q
 		panic(err)
 	}
 	className := names.Ident(mod.typeName(t))
-	if !foreign && mod.classQueue != nil {
+	if !foreign && mod.classQueue != nil && qualifier != policiesQualifier {
 		mod.classQueue.ensureGenerated(classQueueEntry{
 			packageName: packageName,
 			className:   className,
@@ -645,6 +657,110 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	fprintf(w, "    }\n\n") // finish the Builder class
 	// Close the class.
 	fprintf(w, "}\n")
+
+	return nil
+}
+
+func (pt *plainType) genPolicyType(ctx *classFileContext, token *string, pending map[*schema.ObjectType]bool) error {
+	// Determine property types
+	propTypes := make([]TypeShape, len(pt.properties))
+	for i, prop := range pt.properties {
+		propTypes[i] = pt.mod.typeString(
+			ctx,
+			pt.flattenPolicyProperty(prop.Type, pending),
+			policiesQualifier,
+			false, // is input
+			false, // requires initializers
+			false, // outer optional
+			false, // inputless overload
+		)
+	}
+
+	w := ctx.writer
+	fprintf(w, "\n")
+
+	// Open the class.
+	if pt.comment != "" {
+		fprintf(w, "/**\n")
+		fprintf(w, "%s\n", formatForeignBlockComment(pt.comment, ""))
+		fprintf(w, " */\n")
+	}
+
+	if token != nil {
+		fprintf(w, "@%s(type=\"%s\")\n", ctx.imports.Ref(names.PolicyResourceTypeAnnotation), *token)
+		fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
+	} else {
+		fprintf(w, "public final class %s {\n", pt.name)
+	}
+
+	fprintf(w, "\n")
+
+	// Declare each input property.
+	for propIndex, p := range pt.properties {
+		propType := propTypes[propIndex]
+		if err := pt.genPolicyProperty(ctx, p, propType); err != nil {
+			return err
+		}
+		fprintf(w, "\n\n")
+	}
+
+	// Close the class.
+	fprintf(w, "}\n")
+
+	return nil
+}
+
+func (pt *plainType) flattenPolicyProperty(t schema.Type, pending map[*schema.ObjectType]bool) schema.Type {
+	switch t := t.(type) {
+	case *schema.InputType:
+		return pt.flattenPolicyProperty(t.ElementType, pending)
+
+	case *schema.ArrayType:
+		return &schema.ArrayType{ElementType: pt.flattenPolicyProperty(t.ElementType, pending)}
+
+	case *schema.MapType:
+		return &schema.MapType{ElementType: pt.flattenPolicyProperty(t.ElementType, pending)}
+
+	case *schema.OptionalType:
+		return pt.flattenPolicyProperty(t.ElementType, pending)
+
+	case *schema.ObjectType:
+		if t.IsInputShape() {
+			return pt.flattenPolicyProperty(t.PlainShape, pending)
+		}
+
+		pending[t] = true
+		return t
+
+	case *schema.UnionType:
+		var elementTypes = make([]schema.Type, len(t.ElementTypes))
+		for i, sub := range t.ElementTypes {
+			elementTypes[i] = pt.flattenPolicyProperty(sub, pending)
+		}
+
+		return &schema.UnionType{
+			ElementTypes:  elementTypes,
+			DefaultType:   pt.flattenPolicyProperty(t.DefaultType, pending),
+			Discriminator: t.Discriminator,
+			Mapping:       t.Mapping,
+		}
+
+	default:
+		return t
+	}
+}
+
+func (pt *plainType) genPolicyProperty(ctx *classFileContext, prop *schema.Property, targetType TypeShape) error {
+	w := ctx.writer
+
+	const indent = "    "
+	genPropJavadoc(ctx, prop, propJavadocOptions{
+		indent: indent,
+	})
+
+	propertyName := names.Ident(pt.mod.propertyName(prop))
+
+	fprintf(w, "    public %s %s;\n\n", targetType.ToCode(ctx.imports), propertyName)
 
 	return nil
 }
@@ -1625,16 +1741,8 @@ const (
 	enumsQualifier
 	inputsQualifier
 	outputsQualifier
+	policiesQualifier
 )
-
-func (q qualifier) append(typeName string) string {
-	switch q {
-	case noQualifier:
-		return typeName
-	default:
-		return fmt.Sprintf("%s.%s", typeName, q.String())
-	}
-}
 
 func (q qualifier) String() string {
 	switch q {
@@ -1646,6 +1754,8 @@ func (q qualifier) String() string {
 		return "inputs"
 	case outputsQualifier:
 		return "outputs"
+	case policiesQualifier:
+		return "policies"
 	}
 	panic("invalid qualifier")
 }
@@ -1809,20 +1919,29 @@ func (mod *modContext) gen(fs fs) error {
 		}
 	}
 
-	addClassFile := func(pkg names.FQN, className names.Ident, contents string) {
+	generateClassFilePath := func(pkg names.FQN, className names.Ident) string {
 		fqn := pkg.Dot(className)
 		relPath := filepath.Join(strings.Split(fqn.String(), ".")...)
-		path := filepath.Join(gradleProjectPath(), relPath) + ".java"
-		files = append(files, path)
-		fs.add(path, []byte(contents))
+		return filepath.Join(gradleProjectPath(), relPath) + ".java"
 	}
 
 	addClass := func(javaPkg names.FQN, javaClass names.Ident, gen func(*classFileContext) error) error {
+		classPath := generateClassFilePath(javaPkg, javaClass)
+		if _, ok := fs[classPath]; ok {
+			// Already processed
+			return nil
+		}
+
 		javaCode, err := genClassFile(javaPkg, javaClass, gen)
 		if err != nil {
 			return err
 		}
-		addClassFile(javaPkg, javaClass, fmt.Sprintf("%s\n%s", mod.genHeader(), javaCode))
+
+		contents := fmt.Sprintf("%s\n%s", mod.genHeader(), javaCode)
+
+		files = append(files, classPath)
+		fs.add(classPath, []byte(contents))
+
 		return nil
 	}
 
@@ -1915,6 +2034,8 @@ import com.pulumi.deployment.Deployment;
 		}
 	}
 
+	pending := map[*schema.ObjectType]bool{}
+
 	// Resources
 	for _, r := range mod.resources {
 		if r.IsOverlay {
@@ -1951,6 +2072,29 @@ import com.pulumi.deployment.Deployment;
 				args:                  true,
 			}
 			return args.genInputType(ctx)
+		}); err != nil {
+			return err
+		}
+
+		policyPkg := javaPkg.Dot(names.Ident("policies"))
+
+		policyPkg, err := parsePackageName(mod.tokenToPackage(r.Token, policiesQualifier))
+		if err != nil {
+			return err
+		}
+
+		policyClassName := names.Ident(tokenToName(r.Token))
+
+		// Generate ResourcePolicy class
+		if err := addClass(policyPkg, policyClassName, func(ctx *classFileContext) error {
+			args := &plainType{
+				mod:                   mod,
+				name:                  string(ctx.className),
+				baseClass:             "com.pulumi.resources.PolicyResource",
+				propertyTypeQualifier: policiesQualifier,
+				properties:            r.InputProperties,
+			}
+			return args.genPolicyType(ctx, &r.Token, pending)
 		}); err != nil {
 			return err
 		}
@@ -2005,6 +2149,32 @@ import com.pulumi.deployment.Deployment;
 			return mod.genType(ctx, entry.schemaType, entry.input)
 		}); err != nil {
 			return err
+		}
+	}
+
+	for len(pending) > 0 {
+		pending2 := pending
+		pending = map[*schema.ObjectType]bool{}
+		for t, _ := range pending2 {
+			pendingPkg, err := parsePackageName(mod.tokenToPackage(t.Token, policiesQualifier))
+			if err != nil {
+				return err
+			}
+
+			pendingClassName := names.Ident(tokenToName(t.Token))
+
+			// Generate the extra ResourcePolicy class
+			if err := addClass(pendingPkg, pendingClassName, func(ctx *classFileContext) error {
+				args := &plainType{
+					mod:                   mod,
+					name:                  string(ctx.className),
+					propertyTypeQualifier: policiesQualifier,
+					properties:            t.Properties,
+				}
+				return args.genPolicyType(ctx, nil, pending)
+			}); err != nil {
+				return err
+			}
 		}
 	}
 
