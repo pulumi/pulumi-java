@@ -160,6 +160,7 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
+	"l1-builtin-project-root":               "TODO: call rootDirectory",
 	"l1-builtin-try":                        "#1683 Fix l1-builtin-try/can",
 	"l1-builtin-can":                        "#1683 Fix l1-builtin-try/can",
 	"l1-keyword-overlap":                    "#1681 Fix l1-keyword-overlap",
@@ -174,6 +175,8 @@ var expectedFailures = map[string]string{
 	"l2-component-component-resource-ref":   "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":     "components with resources as inputs/outputs not supported",
 	"l2-resource-secret":                    "#1564 Fix l2-resource-secret",
+	"l2-resource-parent-inheritance":        "#??? Fix l2-resource-parent-inheritance",
+	"l2-component-property-deps":            "compilation error",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
