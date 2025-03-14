@@ -40,8 +40,8 @@ public class LocalWorkspaceTest {
 
     private static String getTestSuffix() {
         var random = new Random();
-        var result = random.nextInt(); // 31 bits, highest bit will be 0 (signed)
-        return Integer.toHexString(result); // hex representation
+        var result = random.nextInt();
+        return Integer.toHexString(result);
     }
 
     private static String randomStackName() {
@@ -208,10 +208,6 @@ public class LocalWorkspaceTest {
 
                 workspace.importStack(stackName, deployment);
 
-                // After we imported before-destroy deployment,
-                // preview is back to reporting the before-destroy
-                // state.
-
                 var previewAfterImport = stack.preview();
                 assertThat(previewAfterImport.changeSummary().get(OperationType.SAME)).isEqualTo(1);
 
@@ -303,7 +299,6 @@ public class LocalWorkspaceTest {
             var stack = WorkspaceStack.create(stackName, workspace);
 
             try {
-                // test backward compatibility
                 stack.setConfig("key1", new ConfigValue("value1"));
                 // test new flag without subPath
                 stack.setConfig("key2", new ConfigValue("value2"), false);
@@ -322,7 +317,6 @@ public class LocalWorkspaceTest {
                 // test subPath
                 stack.setConfig("key7.subKey3", new ConfigValue("value9"), true);
 
-                // test backward compatibility
                 var cv1 = stack.getConfig("key1");
                 assertThat(cv1).isNotNull();
                 assertThat(cv1.value()).isEqualTo("value1");
@@ -514,38 +508,31 @@ public class LocalWorkspaceTest {
                             "buzz", new ConfigValue("secret", true));
                     stack.setAllConfig(config);
 
-                    // pulumi up
                     var upResult = stack.up();
                     assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                     assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                     assertThat(upResult.outputs().size()).isEqualTo(3);
 
-                    // exp_static
                     var expStaticValue = upResult.outputs().get("exp_static");
                     assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
-                    // exp_cfg
                     var expConfigValue = upResult.outputs().get("exp_cfg");
                     assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
-                    // exp_secret
                     var expSecretValue = upResult.outputs().get("exp_secret");
                     assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
-                    // pulumi preview
                     var previewResult = stack.preview();
                     var sameCount = previewResult.changeSummary().get(OperationType.SAME);
                     assertThat(sameCount).isEqualTo(1);
 
-                    // pulumi refresh
                     var refreshResult = stack.refresh();
                     assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.REFRESH);
                     assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
-                    // pulumi destroy
                     var destroyResult = stack.destroy();
                     assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
                     assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
@@ -606,38 +593,31 @@ public class LocalWorkspaceTest {
                             "buzz", new ConfigValue("secret", true));
                     stack.setAllConfig(config);
 
-                    // pulumi up
                     var upResult = stack.up();
                     assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                     assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                     assertThat(upResult.outputs().size()).isEqualTo(3);
 
-                    // exp_static
                     var expStaticValue = upResult.outputs().get("exp_static");
                     assertThat(expStaticValue.value()).isEqualTo("foo");
                     assertThat(expStaticValue.isSecret()).isFalse();
 
-                    // exp_cfg
                     var expConfigValue = upResult.outputs().get("exp_cfg");
                     assertThat(expConfigValue.value()).isEqualTo("abc");
                     assertThat(expConfigValue.isSecret()).isFalse();
 
-                    // exp_secret
                     var expSecretValue = upResult.outputs().get("exp_secret");
                     assertThat(expSecretValue.value()).isEqualTo("secret");
                     assertThat(expSecretValue.isSecret()).isTrue();
 
-                    // pulumi preview
                     var previewResult = stack.preview();
                     var sameCount = previewResult.changeSummary().get(OperationType.SAME);
                     assertThat(sameCount).isEqualTo(1);
 
-                    // pulumi refresh
                     var refreshResult = stack.refresh();
                     assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.REFRESH);
                     assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
-                    // pulumi destroy
                     var destroyResult = stack.destroy();
                     assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
                     assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
@@ -666,17 +646,14 @@ public class LocalWorkspaceTest {
             Consumer<Map<String, OutputValue>> assertOutputs = outputs -> {
                 assertThat(outputs).hasSize(3);
 
-                // exp_static
                 var expStaticValue = outputs.get("exp_static");
                 assertThat(expStaticValue.value()).isEqualTo("foo");
                 assertThat(expStaticValue.isSecret()).isFalse();
 
-                // exp_cfg
                 var expConfigValue = outputs.get("exp_cfg");
                 assertThat(expConfigValue.value()).isEqualTo("abc");
                 assertThat(expConfigValue.isSecret()).isFalse();
 
-                // exp_secret
                 var expSecretValue = outputs.get("exp_secret");
                 assertThat(expSecretValue.value()).isEqualTo("secret");
                 assertThat(expSecretValue.isSecret()).isTrue();
@@ -695,7 +672,6 @@ public class LocalWorkspaceTest {
                     var initialOutputs = stack.getOutputs();
                     assertThat(initialOutputs).isEmpty();
 
-                    // pulumi up
                     var upResult = stack.up();
                     assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                     assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
@@ -704,7 +680,6 @@ public class LocalWorkspaceTest {
                     var outputsAfterUp = stack.getOutputs();
                     assertOutputs.accept(outputsAfterUp);
 
-                    // pulumi destroy
                     var destroyResult = stack.destroy();
                     assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
                     assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
@@ -735,7 +710,6 @@ public class LocalWorkspaceTest {
             try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
                     LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
                 try {
-                    // pulumi preview
                     var outputCalled = new AtomicBoolean(false);
                     var previewResult = stack.preview(PreviewOptions.builder()
                             .onStandardOutput(s -> outputCalled.set(true))
@@ -743,7 +717,6 @@ public class LocalWorkspaceTest {
                     assertThat(previewResult.standardOutput()).isNotEmpty();
                     assertThat(outputCalled.get()).isTrue();
 
-                    // pulumi up
                     outputCalled.set(false);
                     var upResult = stack.up(UpOptions.builder()
                             .onStandardOutput(s -> outputCalled.set(true))
@@ -751,7 +724,6 @@ public class LocalWorkspaceTest {
                     assertThat(upResult.standardOutput()).isNotEmpty();
                     assertThat(outputCalled.get()).isTrue();
 
-                    // pulumi refresh
                     outputCalled.set(false);
                     var refreshResult = stack.refresh(RefreshOptions.builder()
                             .onStandardOutput(s -> outputCalled.set(true))
@@ -759,7 +731,6 @@ public class LocalWorkspaceTest {
                     assertThat(refreshResult.standardOutput()).isNotEmpty();
                     assertThat(outputCalled.get()).isTrue();
 
-                    // pulumi destroy
                     outputCalled.set(false);
                     var destroyResult = stack.destroy(DestroyOptions.builder()
                             .onStandardOutput(s -> outputCalled.set(true))
@@ -825,13 +796,11 @@ public class LocalWorkspaceTest {
                 .build())) {
 
             try {
-                // pulumi up
                 var upResult = stack.up();
                 assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                 assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                 assertThat(upResult.summary().resourceChanges().get(OperationType.CREATE)).isEqualTo(2);
 
-                // export state
                 var exportResult = stack.exportStack();
                 assertThat(exportResult.deployment()).hasEntrySatisfying("resources", value -> {
                     assertThat(value).isInstanceOf(List.class);
@@ -849,18 +818,15 @@ public class LocalWorkspaceTest {
                     .findFirst()
                     .orElseThrow();
 
-                // pulumi state delete
                 stack.state().delete(urn);
 
-                // test
                 exportResult = stack.exportStack();
                 assertThat(exportResult.deployment()).hasEntrySatisfying("resources", value -> {
                     assertThat(value).isInstanceOf(List.class);
                     var resourcesList = (List<?>) value;
                     assertThat(resourcesList).hasSize(1);
                 });
-            }
-            finally {
+            } finally {
                 var destroyResult = stack.destroy();
                 assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
                 assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
@@ -889,13 +855,11 @@ public class LocalWorkspaceTest {
                 .build())) {
 
             try {
-                // pulumi up
                 var upResult = stack.up();
                 assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                 assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                 assertThat(upResult.summary().resourceChanges().get(OperationType.CREATE)).isEqualTo(2);
 
-                // export state
                 var exportResult = stack.exportStack();
                 assertThat(exportResult.deployment()).hasEntrySatisfying("resources", value -> {
                     assertThat(value).isInstanceOf(List.class);
@@ -913,23 +877,19 @@ public class LocalWorkspaceTest {
                     .findFirst()
                     .orElseThrow();
 
-                // pulumi state delete
                 assertThrows(AutomationException.class, () -> {
                     stack.state().delete(urn);
                 });
 
-                // pulumi state delete force
                 stack.state().delete(urn, true);
 
-                // test
                 exportResult = stack.exportStack();
                 assertThat(exportResult.deployment()).hasEntrySatisfying("resources", value -> {
                     assertThat(value).isInstanceOf(List.class);
                     var resourcesList = (List<?>) value;
                     assertThat(resourcesList).hasSize(1);
                 });
-            }
-            finally {
+            } finally {
                 var destroyResult = stack.destroy();
                 assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
                 assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
