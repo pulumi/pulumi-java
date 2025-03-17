@@ -87,7 +87,7 @@ public class Utilities {
     }
 
     static {
-        var resourceName = "com/a-namespace/namespaced/version.txt";
+        var resourceName = "com/anamespace/namespaced/version.txt";
         var versionFile = Utilities.class.getClassLoader().getResourceAsStream(resourceName);
         if (versionFile == null) {
             throw new IllegalStateException(

@@ -238,7 +238,7 @@ func TestPackageAddWithNamespaceSetJava(t *testing.T) {
 	e.RunCommand("pulumi", "package", "add", "../provider/schema.json")
 
 	// Make sure the SDK was generated in the expected directory
-	_, err := os.Stat(filepath.Join(e.CWD, "sdks", "example-mypkg", "src", "main", "java",
-		"com", "example", "mypkg", "Utilities.java"))
+	_, err := os.Stat(filepath.Join(e.CWD, "sdks", "my-namespace-mypkg", "src", "main", "java",
+		"com", "mynamespace", "mypkg", "Utilities.java"))
 	require.NoError(t, err)
 }

@@ -10,5 +10,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "com.a-namespace.namespaced"
+rootProject.name = "com.anamespace.namespaced"
 include("lib")

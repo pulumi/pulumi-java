@@ -31,7 +31,7 @@
 					<version>CORE.VERSION</version>
 				</dependency>
 				<dependency>
-					<groupId>com.pulumi</groupId>
+					<groupId>com.anamespace</groupId>
 					<artifactId>namespaced</artifactId>
 					<version>16.0.0</version>
 				</dependency>
