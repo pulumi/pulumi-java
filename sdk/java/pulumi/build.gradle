@@ -29,7 +29,7 @@ def protocVersion = protobufVersion
 def guavaVersion = "32.1.2-jre"
 def assertjCoreVersion = "3.27.1"
 def junitVersion = "5.10.0"
-def mockitoCoreVersion = "5.14.2"
+def mockitoCoreVersion = "5.16.1"
 
 dependencies {
     implementation("io.grpc:grpc-protobuf:${grpcVersion}") {
