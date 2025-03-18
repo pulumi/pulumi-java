@@ -47,7 +47,7 @@ public class App {
             .build());
 
         var remoteass = new AssetResource("remoteass", AssetResourceArgs.builder()
-            .value(new RemoteAsset("https://raw.githubusercontent.com/pulumi/pulumi/master/cmd/pulumi-test-language/testdata/l2-resource-asset-archive/test.txt"))
+            .value(new RemoteAsset("https://raw.githubusercontent.com/pulumi/pulumi/7b0eb7fb10694da2f31c0d15edf671df843e0d4c/cmd/pulumi-test-language/tests/testdata/l2-resource-asset-archive/test.txt"))
             .build());
 
     }

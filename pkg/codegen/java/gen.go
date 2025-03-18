@@ -2056,6 +2056,9 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 			info = &javaInfo
 			infos[def] = info
 		}
+		if info.BasePackage == "" && p.Namespace() != "" {
+			info.BasePackage = "com." + sanitizeImport(p.Namespace()) + "."
+		}
 		return info
 	}
 	infos[pkg] = getPackageInfo(pkg.Reference())

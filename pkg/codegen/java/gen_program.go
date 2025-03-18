@@ -291,13 +291,17 @@ func GenerateProject(
 		}
 
 		if version != nil {
+			namespace := "pulumi"
+			if p.Namespace != "" {
+				namespace = sanitizeImport(p.Namespace)
+			}
 			dependencySection := fmt.Sprintf(
 				`<dependency>
-					<groupId>com.pulumi</groupId>
+					<groupId>com.%s</groupId>
 					<artifactId>%s</artifactId>
 					<version>%s</version>
 				</dependency>`,
-				packageName, version.String(),
+				namespace, packageName, version.String(),
 			)
 			mavenDependenciesXML.WriteString(dependencySection)
 		}
@@ -520,17 +524,20 @@ func isBuiltin(pkg, module, member string) bool {
 	return pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs")
 }
 
-func pulumiImport(pkg string, module string, member string) string {
+func pulumiImport(pkg string, module string, member string, namespace string) string {
+	if namespace == "" {
+		namespace = "pulumi"
+	}
 	module = cleanModule(module)
 	if isBuiltin(pkg, module, member) {
 		return "com.pulumi.resources." + member
 	}
 	if ignoreModule(module) {
-		return "com.pulumi." + sanitizeImport(pkg) + "." + member
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." + member
 	} else if module == "" {
-		return "com.pulumi." + sanitizeImport(pkg)
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg)
 	}
-	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
+	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
 }
 
 // For resource imports we need to consider the package reference in the schema of the resource
@@ -546,6 +553,8 @@ func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member str
 		contract.AssertNoErrorf(err, "failed to get package definition for %s", r.Schema.Token)
 		if info, ok := def.Language["java"].(PackageInfo); ok {
 			importName = info.BasePackageOrDefault()
+		} else if r.Schema.PackageReference.Namespace() != "" {
+			importName = "com." + sanitizeImport(r.Schema.PackageReference.Namespace()) + "."
 		}
 	}
 
@@ -557,12 +566,16 @@ func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member str
 	return importName + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
 }
 
-func pulumiInputImport(pkg string, module string, member string) string {
+func pulumiInputImport(pkg string, module string, member string, namespace string) string {
+	if namespace == "" {
+		namespace = "pulumi"
+	}
 	module = cleanModule(module)
 	if ignoreModule(module) {
-		return "com.pulumi." + sanitizeImport(pkg) + ".inputs." + member
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + ".inputs." + member
 	}
-	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + ".inputs." + member
+	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." +
+		sanitizeImport(module) + ".inputs." + member
 }
 
 func literalExprText(expr model.Expression) (string, bool) {
@@ -584,7 +597,9 @@ func literalExprText(expr model.Expression) (string, bool) {
 
 // Recursively derives imports from object by using its property type and
 // any nested object property that it instantiates
-func collectObjectImports(object *model.ObjectConsExpression, objectType *schema.ObjectType) []string {
+func collectObjectImports(
+	object *model.ObjectConsExpression, objectType *schema.ObjectType, namespace string,
+) []string {
 	imports := make([]string, 0)
 	// add imports of the type itself
 	fullyQualifiedTypeName := objectType.Token
@@ -597,9 +612,9 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 			objectTypeName = objectTypeName + "Args"
 		}
 
-		imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+		imports = append(imports, pulumiInputImport(pkg, module, objectTypeName, namespace))
 	} else {
-		imports = append(imports, pulumiImport(pkg, module, objectTypeName))
+		imports = append(imports, pulumiImport(pkg, module, objectTypeName, namespace))
 	}
 
 	// then check whether one of the properties of this object is an object too
@@ -615,7 +630,7 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 					case *schema.ObjectType:
 						innerObjectType := objectPropertyType
 						// recurse into nested object
-						imports = append(imports, collectObjectImports(innerObject, innerObjectType)...)
+						imports = append(imports, collectObjectImports(innerObject, innerObjectType, namespace)...)
 					}
 				}
 			}
@@ -662,7 +677,8 @@ func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 				switch inputProperty.Value.(type) {
 				case *model.ObjectConsExpression:
 					object := inputProperty.Value.(*model.ObjectConsExpression)
-					imports = append(imports, collectObjectImports(object, objectType)...)
+					imports = append(imports, collectObjectImports(
+						object, objectType, resource.Schema.PackageReference.Namespace())...)
 				}
 			case *schema.ArrayType:
 				arrayType := reduceInputTypeFromArray(inputType.(*schema.ArrayType))
@@ -680,7 +696,10 @@ func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 							switch arrayObject := arrayObject.(type) {
 							case *model.ObjectConsExpression:
 								object := arrayObject
-								imports = append(imports, collectObjectImports(object, arrayInnerTypeAsObject)...)
+								imports = append(imports, collectObjectImports(
+									object,
+									arrayInnerTypeAsObject,
+									resource.Schema.PackageReference.Namespace())...)
 							}
 						}
 					}
@@ -709,7 +728,7 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 		return importDef, member
 	}
 
-	return pulumiImport(pkg, module, names.Title(module)+"Functions"), member
+	return pulumiImport(pkg, module, names.Title(module)+"Functions", ""), member
 }
 
 func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallExpression) []string {
@@ -731,7 +750,7 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 					return imports
 				}
 				argumentExprType := functionSchema.Inputs.InputShape
-				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType)...)
+				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType, "")...)
 			}
 		}
 	case "stack", "project", "organization":

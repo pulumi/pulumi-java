@@ -50,6 +50,13 @@ public class App {
                 .parent(parent2)
                 .build());
 
+        var child3 = new Resource("child3", ResourceArgs.builder()
+            .value(true)
+            .build(), CustomResourceOptions.builder()
+                .protect(false)
+                .parent(parent2)
+                .build());
+
         var orphan2 = new Resource("orphan2", ResourceArgs.builder()
             .value(true)
             .build());

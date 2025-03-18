@@ -63,25 +63,25 @@ class PulumiPluginTest {
                 // plugin
                 .argumentsForFirstParameter(
                         null,
-                        new RawResource("test", "{}"),
-                        new RawResource("test",
+                        new RawResource("test", "", "{}"),
+                        new RawResource("test", "",
                                 "{\"resource\": true}"
                         ),
-                        new RawResource("test",
+                        new RawResource("test", "",
                                 "{\"resource\":true,\"name\":\"test\"}"
                         ),
-                        new RawResource("test",
+                        new RawResource("test", "",
                                 "{\"resource\":true,\"name\":\"test\",\"version\":\"1.1.1\"}"
                         ),
-                        new RawResource("test",
+                        new RawResource("test", "",
                                 "{\"resource\":true,\"name\":\"test\",\"version\":\"1.1.1\",\"server\":\"https://example.org\"}"
                         )
                 )
                 // version
                 .argumentsForNextParameter(
                         null,
-                        new RawResource("test", ""),
-                        new RawResource("test", "1.1.1")
+                        new RawResource("test", "",  ""),
+                        new RawResource("test", "", "1.1.1")
                 );
     }
 
