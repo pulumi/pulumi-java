@@ -10,6 +10,7 @@ import (
 	"path"
 	"path/filepath"
 	"reflect"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -663,17 +664,25 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 func (pt *plainType) genPolicyType(ctx *classFileContext, token *string, pending map[*schema.ObjectType]bool) error {
 	// Determine property types
-	propTypes := make([]TypeShape, len(pt.properties))
-	for i, prop := range pt.properties {
-		propTypes[i] = pt.mod.typeString(
-			ctx,
-			pt.flattenPolicyProperty(prop.Type, pending),
-			policiesQualifier,
-			false, // is input
-			false, // requires initializers
-			false, // outer optional
-			false, // inputless overload
-		)
+
+	type PropAndShape struct {
+		prop  *schema.Property
+		shape schema.Type
+	}
+
+	propTypes := map[string]PropAndShape{}
+
+	for _, prop := range pt.properties {
+		shape := pt.flattenPolicyProperty(prop.Type, pending)
+		if old, ok := propTypes[prop.Name]; ok {
+			if old.shape.String() != shape.String() {
+				return fmt.Errorf("Two properties for %v.%v with same name but different type: %v != %v", pt.name, prop.Name, old, shape)
+			}
+		}
+		propTypes[prop.Name] = PropAndShape{
+			prop:  prop,
+			shape: shape,
+		}
 	}
 
 	w := ctx.writer
@@ -696,9 +705,17 @@ func (pt *plainType) genPolicyType(ctx *classFileContext, token *string, pending
 	fprintf(w, "\n")
 
 	// Declare each input property.
-	for propIndex, p := range pt.properties {
-		propType := propTypes[propIndex]
-		if err := pt.genPolicyProperty(ctx, p, propType); err != nil {
+	for _, propAndShape := range propTypes {
+		propType := pt.mod.typeString(
+			ctx,
+			propAndShape.shape,
+			policiesQualifier,
+			false, // is input
+			false, // requires initializers
+			false, // outer optional
+			false, // inputless overload
+		)
+		if err := pt.genPolicyProperty(ctx, propAndShape.prop, propType); err != nil {
 			return err
 		}
 		fprintf(w, "\n\n")
@@ -733,17 +750,7 @@ func (pt *plainType) flattenPolicyProperty(t schema.Type, pending map[*schema.Ob
 		return t
 
 	case *schema.UnionType:
-		var elementTypes = make([]schema.Type, len(t.ElementTypes))
-		for i, sub := range t.ElementTypes {
-			elementTypes[i] = pt.flattenPolicyProperty(sub, pending)
-		}
-
-		return &schema.UnionType{
-			ElementTypes:  elementTypes,
-			DefaultType:   pt.flattenPolicyProperty(t.DefaultType, pending),
-			Discriminator: t.Discriminator,
-			Mapping:       t.Mapping,
-		}
+		return pt.flattenPolicyProperty(t.DefaultType, pending)
 
 	default:
 		return t
@@ -2087,12 +2094,18 @@ import com.pulumi.deployment.Deployment;
 
 		// Generate ResourcePolicy class
 		if err := addClass(policyPkg, policyClassName, func(ctx *classFileContext) error {
+			props := slices.Concat(r.Properties, r.InputProperties)
+
+			if r.StateInputs != nil {
+				props = slices.Concat(props, r.StateInputs.Properties)
+			}
+
 			args := &plainType{
 				mod:                   mod,
 				name:                  string(ctx.className),
 				baseClass:             "com.pulumi.resources.PolicyResource",
 				propertyTypeQualifier: policiesQualifier,
-				properties:            r.InputProperties,
+				properties:            props,
 			}
 			return args.genPolicyType(ctx, &r.Token, pending)
 		}); err != nil {

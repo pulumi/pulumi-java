@@ -24,4 +24,16 @@ public class Exceptions {
         }
         return stringWriter.getBuffer().toString();
     }
+
+    public static IllegalStateException newIllegalState(Throwable e, String format, Object... args) {
+        return new IllegalStateException(String.format(format, args), e);
+    }
+
+    public static RuntimeException newRuntime(Throwable e, String format, Object... args) {
+        return new RuntimeException(String.format(format, args), e);
+    }
+
+    public static UnsupportedOperationException newUnsupportedOperation(Throwable e, String format, Object... args) {
+        return new UnsupportedOperationException(String.format(format, args), e);
+    }
 }
