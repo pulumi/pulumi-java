@@ -17,7 +17,7 @@ import com.pulumi.core.Either;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.EnumType;
-import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.Optionals;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.resources.Resource;
@@ -43,7 +43,6 @@ import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
 
 /**
  * Part of deserialization, @see {@link Deserializer}
@@ -251,7 +250,7 @@ public class Converter {
                         try {
                             return Objects.equals(value, converter.invoke(constant));
                         } catch (IllegalAccessException | InvocationTargetException ex) {
-                            throw new IllegalStateException(String.format("Unexpected exception: %s", ex.getMessage()), ex);
+                            throw Exceptions.newIllegalState(ex, "Unexpected exception: %s", ex.getMessage());
                         }
                     })
                     .findFirst()
@@ -299,7 +298,7 @@ public class Converter {
                 builderConstructor.setAccessible(false);
             } catch (InvocationTargetException | InstantiationException
                      | IllegalAccessException | NoSuchMethodException e) {
-                throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+                throw Exceptions.newIllegalState(e, "Unexpected exception: %s", e.getMessage());
             }
             // call setters for all arguments
             var setters = processSetters(builderType, Function.identity());
@@ -350,18 +349,17 @@ public class Converter {
                     // we err on the side of skipping the builder call
                     // when the argument is null.
                     if (convertedArgument != null) {
-                            setters.get(name).invoke(builder, convertedArgument);
+                        setters.get(name).invoke(builder, convertedArgument);
                     }
                 } catch (IllegalArgumentException e) {
-                    throw new IllegalStateException(String.format(
+                    throw Exceptions.newIllegalState(e,
                             "Error invoking setter '%s' (on '%s'), setter parameters: '%s', argument type: '%s'",
                             name, targetType.getTypeName(),
                             Arrays.toString(setters.get(name).getParameterTypes()),
-                            argument == null ? "null" : argument.getClass()
-                    ), e);
+                            argument == null ? "null" : argument.getClass());
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     var exMsg = e.getMessage() == null ? e.getClass().getSimpleName() : e.getMessage();
-                    throw new IllegalStateException(String.format("Unexpected exception: %s", exMsg), e);
+                    throw Exceptions.newIllegalState(e, "Unexpected exception: %s", exMsg);
                 }
             });
             // call .build()
@@ -372,16 +370,14 @@ public class Converter {
                 buildMethod.setAccessible(false);
                 return o;
             } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+                throw Exceptions.newIllegalState(e, "Unexpected exception: %s", e.getMessage());
             }
         }
 
         if (targetType.getType().isAssignableFrom(Object.class)) {
             return value; // target is not interested in type anymore
         } else {
-            throw new UnsupportedOperationException(String.format(
-                    "Unexpected target type '%s' when deserializing '%s'", targetType.getTypeName(), context
-            ));
+            throw Exceptions.newUnsupportedOperation(null, "Unexpected target type '%s' when deserializing '%s'", targetType.getTypeName(), context);
         }
     }
 
