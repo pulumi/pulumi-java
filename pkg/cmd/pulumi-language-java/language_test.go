@@ -175,8 +175,9 @@ var expectedFailures = map[string]string{
 	"l2-component-component-resource-ref":   "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":     "components with resources as inputs/outputs not supported",
 	"l2-resource-secret":                    "#1564 Fix l2-resource-secret",
-	"l2-resource-parent-inheritance":        "#??? Fix l2-resource-parent-inheritance",
+	"l2-resource-parent-inheritance":        "Fix l2-resource-parent-inheritance",
 	"l2-component-property-deps":            "compilation error",
+	"l2-parameterized-resource":             "compilation error",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
