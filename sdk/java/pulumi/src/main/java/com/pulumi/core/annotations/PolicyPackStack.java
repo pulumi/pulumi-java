@@ -10,13 +10,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface PolicyPackMethod
+public @interface PolicyPackStack
 {
-    /**
-     * @return the Resource type for this policy
-     */
-    Class<? extends PolicyResource> value();
-
     /**
      * @return the Policy name
      */

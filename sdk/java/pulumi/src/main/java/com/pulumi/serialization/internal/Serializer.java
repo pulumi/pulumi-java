@@ -17,6 +17,7 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.internal.CompletableFutures;
 import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.annotations.InternalUse;
@@ -283,19 +284,16 @@ public class Serializer {
                 if (value instanceof Double || value instanceof String) {
                     return CompletableFuture.completedFuture(value);
                 } else {
-                    throw new UnsupportedOperationException(
-                            String.format(
-                                    "Serialize property[%s]: Type '%s' is not a supported argument type." +
-                                            " Expected an Enum with a converter method annotated with '%s' and return type of Double or String, got a converted type: '%s'",
-                                    ctx,
-                                    prop.getClass().getTypeName(),
-                                    EnumType.Converter.class,
-                                    value.getClass().getTypeName()
-                            )
+                    throw Exceptions.newUnsupportedOperation(null,
+                            "Serialize property[%s]: Type '%s' is not a supported argument type. Expected an Enum with a converter method annotated with '%s' and return type of Double or String, got a converted type: '%s'",
+                            ctx,
+                            prop.getClass().getTypeName(),
+                            EnumType.Converter.class,
+                            value.getClass().getTypeName()
                     );
                 }
             } catch (IllegalAccessException | InvocationTargetException ex) {
-                throw new IllegalStateException(String.format("Unexpected exception: %s", ex.getMessage()), ex);
+                throw Exceptions.newIllegalState(ex, "Unexpected exception: %s", ex.getMessage());
             }
         }
 

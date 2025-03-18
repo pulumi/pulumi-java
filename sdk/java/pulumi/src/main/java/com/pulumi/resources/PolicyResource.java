@@ -1,8 +1,10 @@
 package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.google.protobuf.Value.KindCase;
+import com.google.protobuf.util.JsonFormat;
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.Asset;
 import com.pulumi.asset.AssetArchive;
@@ -36,21 +38,32 @@ import static java.util.Objects.requireNonNull;
  */
 @ParametersAreNonnullByDefault
 public abstract class PolicyResource {
-    public static <T extends PolicyResource> T deserialize(com.google.protobuf.Struct args, Class<T> type) {
+    public static <T extends PolicyResource> T deserialize(Struct args, Class<T> type) {
         try {
             T result = type.getDeclaredConstructor().newInstance();
 
             for (var entry : args.getFieldsMap().entrySet()) {
-                Field field = type.getField(entry.getKey());
+                try {
+                    Field field = type.getField(entry.getKey());
 
-                var valueData = deserializeInner(entry.getValue(), field.getGenericType());
-                if (valueData != null) {
-                    field.set(result, valueData);
+                    var valueData = deserializeInner(entry.getValue(), field.getGenericType());
+                    if (valueData instanceof String && field.getType() != String.class) {
+                        var valueBuilder = Value.newBuilder();
+                        JsonFormat.parser().ignoringUnknownFields().merge((String) valueData, valueBuilder);
+                        valueData = deserializeInner(valueBuilder.build(), field.getGenericType());
+                    }
+
+                    if (valueData != null) {
+                        field.set(result, valueData);
+                    }
+
+                } catch (NoSuchFieldException e) {
+                    // Ignore missing fields
                 }
             }
 
             return result;
-        } catch (ReflectiveOperationException e) {
+        } catch (Throwable e) {
             throw new RuntimeException(e);
         }
     }

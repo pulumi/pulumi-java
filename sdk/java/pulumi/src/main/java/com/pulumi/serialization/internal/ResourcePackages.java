@@ -9,6 +9,7 @@ import com.google.common.reflect.ClassPath.ClassInfo;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.Maps;
 import com.pulumi.core.internal.Optionals;
 import com.pulumi.core.internal.Reflection;
@@ -60,7 +61,7 @@ public class ResourcePackages {
         try {
             classpath = ClassPath.from(loader);
         } catch (IOException e) {
-            throw new IllegalStateException(String.format("Failed to read class path: %s", e.getMessage()), e);
+            throw Exceptions.newIllegalState(e, "Failed to read class path: %s", e.getMessage());
         }
 
         return classpath.getAllClasses().stream()
@@ -70,10 +71,7 @@ public class ResourcePackages {
                     try {
                         return c.load();
                     } catch (LinkageError e) {
-                        throw new IllegalStateException(String.format(
-                                "Failed to load class '%s' (package: '%s') from class path: %s",
-                                c, c.getPackageName(), e.getMessage()
-                        ), e);
+                        throw Exceptions.newIllegalState(e, "Failed to load class '%s' (package: '%s') from class path: %s", c, c.getPackageName(), e.getMessage());
                     }
                 })
                 .filter(c -> c.isAnnotationPresent(ResourceType.class))
@@ -166,7 +164,7 @@ public class ResourcePackages {
         String packages = System.getProperty("pulumi.resourcepackages.excludes");
         if (packages != null) {
             String[] items = packages.split(",");
-            for (String item: items){
+            for (String item : items) {
                 if (c.getPackageName().startsWith(item)) {
                     return true;
                 }

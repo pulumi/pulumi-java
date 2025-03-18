@@ -14,4 +14,9 @@ public @interface PolicyPackType {
      * @return the Policy Pack name
      */
     String name();
+
+    /**
+     * @return the optional version of the Policy Pack
+     */
+    String version() default "1.0.0";
 }
