@@ -192,4 +192,8 @@ public class Reflection {
     public static <T> Class<T> getRawType(Type type) {
         return getRawType(null, type);
     }
+
+    public static boolean sameType(Type type1, Type type2) {
+        return getRawType(type1) == getRawType(type2);
+    }
 }
