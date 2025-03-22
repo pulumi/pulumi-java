@@ -2,6 +2,7 @@ package com.pulumi.provider.internal;
 
 import com.google.protobuf.Empty;
 import com.pulumi.core.internal.Exceptions;
+import com.pulumi.resources.PolicyManager;
 import com.pulumi.resources.PolicyResource;
 import com.pulumi.serialization.internal.PolicyPackages;
 import com.pulumi.serialization.internal.PolicyResourcePackages;
@@ -12,8 +13,7 @@ import pulumirpc.AnalyzerOuterClass;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -127,7 +127,7 @@ public class AnalyzerService {
                                  StreamObserver<AnalyzerOuterClass.AnalyzeResponse> responseObserver) {
             var builder = AnalyzerOuterClass.AnalyzeResponse.newBuilder();
 
-            var resources = new HashMap<String, PolicyResource>();
+            var resources = new ArrayList<PolicyResource>();
 
             for (var res : request.getResourcesList()) {
                 var resourceClass = PolicyResourcePackages.resolveType(res.getType(), "");
@@ -136,7 +136,7 @@ public class AnalyzerService {
                 }
                 try {
                     var resourceArgs = PolicyResource.deserialize(res.getProperties(), resourceClass);
-                    resources.put(res.getUrn(), resourceArgs);
+                    resources.add(resourceArgs);
                 } catch (Throwable e) {
                     throw Exceptions.newRuntime(null, "Message: %s %s %s", res.getType(), res.getProperties().toString(), e.getMessage());
                 }
@@ -145,22 +145,42 @@ public class AnalyzerService {
             for (var pack : PolicyPackages.get()) {
                 if (pack.stackPolicy != null) {
                     try {
-                        var violations = new HashMap<String, List<String>>();
-                        pack.stackPolicy.target.invoke(null, resources, violations);
-
-                        for (var violationEntry : violations.entrySet()) {
-                            for (var violation : violationEntry.getValue()) {
+                        var manager = new PolicyManager() {
+                            @Override
+                            public void reportViolation(String description) {
                                 var diag = pulumirpc.AnalyzerOuterClass.AnalyzeDiagnostic.newBuilder()
                                         .setPolicyPackName(pack.annotation.name())
                                         .setPolicyPackVersion(pack.annotation.version())
                                         .setPolicyName(pack.stackPolicy.annotation.name())
                                         .setEnforcementLevel(pack.stackPolicy.annotation.enforcementLevel())
                                         .setDescription(pack.stackPolicy.annotation.description())
-                                        .setUrn(violationEntry.getKey())
-                                        .setMessage(violation).build();
+                                        .setMessage(description).build();
                                 builder.addDiagnostics(diag);
                             }
-                        }
+
+                            @Override
+                            public void reportViolationWithContext(String description, PolicyResource... resourcesInvolved) {
+                                for (var resource : resourcesInvolved) {
+                                    var diag = pulumirpc.AnalyzerOuterClass.AnalyzeDiagnostic.newBuilder()
+                                            .setPolicyPackName(pack.annotation.name())
+                                            .setPolicyPackVersion(pack.annotation.version())
+                                            .setPolicyName(pack.stackPolicy.annotation.name())
+                                            .setEnforcementLevel(pack.stackPolicy.annotation.enforcementLevel())
+                                            .setDescription(pack.stackPolicy.annotation.description())
+                                            .setUrn(resource.getUrn())
+                                            .setMessage(description).build();
+                                    builder.addDiagnostics(diag);
+                                }
+                            }
+
+                            @Override
+                            public Optional<PolicyResource> fetchResource(String urn) {
+                                return Optional.empty();
+                            }
+                        };
+
+                        pack.stackPolicy.target.invoke(null, manager, resources);
+
                     } catch (ReflectiveOperationException e) {
                         throw new RuntimeException(e);
                     }
@@ -184,20 +204,40 @@ public class AnalyzerService {
                     try {
                         var resourceArgs = PolicyResource.deserialize(request.getProperties(), policy.resourceClass);
 
-                        var violations = new ArrayList<String>();
-                        policy.target.invoke(null, resourceArgs, violations);
+                        var manager = new PolicyManager() {
+                            @Override
+                            public void reportViolation(String description) {
+                                var diag = pulumirpc.AnalyzerOuterClass.AnalyzeDiagnostic.newBuilder()
+                                        .setEnforcementLevel(policy.annotation.enforcementLevel())
+                                        .setPolicyPackName(pack.annotation.name())
+                                        .setPolicyPackVersion(pack.annotation.version())
+                                        .setPolicyName(policy.annotation.name())
+                                        .setDescription(policy.annotation.description())
+                                        .setUrn(request.getUrn())
+                                        .setMessage(description).build();
+                                builder.addDiagnostics(diag);
+                            }
 
-                        for (var violation : violations) {
-                            var diag = pulumirpc.AnalyzerOuterClass.AnalyzeDiagnostic.newBuilder()
-                                    .setEnforcementLevel(policy.annotation.enforcementLevel())
-                                    .setPolicyPackName(pack.annotation.name())
-                                    .setPolicyPackVersion(pack.annotation.version())
-                                    .setPolicyName(policy.annotation.name())
-                                    .setDescription(policy.annotation.description())
-                                    .setUrn(request.getUrn())
-                                    .setMessage(violation).build();
-                            builder.addDiagnostics(diag);
-                        }
+                            @Override
+                            public void reportViolationWithContext(String description, PolicyResource... resourcesInvolved) {
+                                var diag = pulumirpc.AnalyzerOuterClass.AnalyzeDiagnostic.newBuilder()
+                                        .setEnforcementLevel(policy.annotation.enforcementLevel())
+                                        .setPolicyPackName(pack.annotation.name())
+                                        .setPolicyPackVersion(pack.annotation.version())
+                                        .setPolicyName(policy.annotation.name())
+                                        .setDescription(policy.annotation.description())
+//                                        .setUrn(resourcesInvolved[0].getUrn())
+                                        .setMessage(description).build();
+                                builder.addDiagnostics(diag);
+                            }
+
+                            @Override
+                            public Optional<PolicyResource> fetchResource(String urn) {
+                                return Optional.empty();
+                            }
+                        };
+
+                        policy.target.invoke(null, manager, resourceArgs);
                     } catch (ReflectiveOperationException e) {
                         throw new RuntimeException(e);
                     }
