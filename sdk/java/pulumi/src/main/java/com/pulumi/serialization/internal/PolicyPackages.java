@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.PolicyPackType;
 import com.pulumi.core.annotations.PolicyResourceType;
 import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.resources.PolicyManager;
 import com.pulumi.resources.PolicyResource;
 
 import java.lang.reflect.Method;
@@ -97,20 +98,20 @@ public class PolicyPackages {
 
                     var types = m.getGenericParameterTypes();
                     if (types.length != 2) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': it should have two parameters, a PolicyResource and a list of strings", m, c);
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': it should have two parameters, a PolicyManager and a PolicyResource", m, c);
                     }
 
                     var classForResource = annotationResource.value();
-                    var typeForResource = types[0];
-                    var typeForViolations = types[1];
+                    var typeForManager = types[0];
+                    var typeForResource = types[1];
+
+                    if (!Reflection.sameType(typeForManager, PolicyManager.class)) {
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be PolicyManager", m, c);
+                    }
 
                     PolicyResourceType annotation = classForResource.getAnnotation(PolicyResourceType.class);
                     if (annotation == null || classForResource != typeForResource) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be a subclass of Pulumi PolicyResource", m, c);
-                    }
-
-                    if (!Reflection.isSubclassOf(typeForViolations, List.class, String.class)) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be List<String>", m, c);
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be a subclass of Pulumi PolicyResource", m, c);
                     }
 
                     resourcePolicies.add(new PolicyForResource(annotationResource, m, annotation.type(), classForResource));
@@ -124,18 +125,18 @@ public class PolicyPackages {
 
                     var types = m.getGenericParameterTypes();
                     if (types.length != 2) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': it should have two parameters, a list of PolicyResource and a list of strings", m, c);
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': it should have two parameters, a PolicyManager and a list of PolicyResource", m, c);
                     }
 
-                    var typeForResources = types[0];
-                    var typeForViolations = types[1];
+                    var typeForManager = types[0];
+                    var typeForResources = types[1];
 
-                    if (!Reflection.isSubclassOf(typeForResources, Map.class, String.class, PolicyResource.class)) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be Map<String, PolicyResource>", m, c);
+                    if (!Reflection.sameType(typeForManager, PolicyManager.class)) {
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be PolicyManager", m, c);
                     }
 
-                    if (!Reflection.isSubclassOf(typeForViolations, Map.class, String.class, listOfString)) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be Map<String, List<String>>", m, c);
+                    if (!Reflection.isSubclassOf(typeForResources, List.class, PolicyResource.class)) {
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be List<PolicyResource>", m, c);
                     }
 
                     if (stackPolicy != null) {

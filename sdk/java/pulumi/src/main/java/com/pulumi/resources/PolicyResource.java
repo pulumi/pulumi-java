@@ -38,6 +38,16 @@ import static java.util.Objects.requireNonNull;
  */
 @ParametersAreNonnullByDefault
 public abstract class PolicyResource {
+    private String urn;
+
+    public void setUrn(String urn) {
+        this.urn = urn;
+    }
+
+    public String getUrn() {
+        return this.urn;
+    }
+
     public static <T extends PolicyResource> T deserialize(Struct args, Class<T> type) {
         try {
             T result = type.getDeclaredConstructor().newInstance();
@@ -305,3 +315,4 @@ public abstract class PolicyResource {
         return Optional.of(resource);
     }
 }
+
