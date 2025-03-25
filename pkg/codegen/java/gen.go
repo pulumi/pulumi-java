@@ -917,15 +917,7 @@ func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	w := ctx.writer
 	fprintf(w, "%s.of(", ctx.ref(names.Output))
 	fprintf(w, "%s.builder()", ctx.ref(names.Alias))
-	if alias.Name != nil {
-		fprintf(w, ".name(\"%v\")", *alias.Name)
-	}
-	if alias.Project != nil {
-		fprintf(w, ".project(\"%v\")", *alias.Project)
-	}
-	if alias.Type != nil {
-		fprintf(w, ".type(\"%v\")", *alias.Type)
-	}
+	fprintf(w, ".type(\"%v\")", alias.Type)
 	fprintf(w, ".build()")
 	fprintf(w, ")")
 }
