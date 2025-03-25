@@ -173,19 +173,26 @@ public class ResourceProviderService {
                     .map(reference -> new DependencyProviderResource(reference))
                     .toArray(DependencyProviderResource[]::new);
 
-            var opts = ComponentResourceOptions.builder()
+            var optsBuilder = ComponentResourceOptions.builder()
                 .aliases(aliases)
                 .dependsOn(dependsOn)
-                .protect(request.getProtect())
                 .providers(providers)
                 .parent(new DependencyResource(request.getParent()))
                 .customTimeouts(deserializeTimeouts(request.getCustomTimeouts()))
                 // TODO deletedWith: https://github.com/pulumi/pulumi-java/issues/944
                 .ignoreChanges(request.getIgnoreChangesList())
-                .retainOnDelete(request.getRetainOnDelete())
-                .replaceOnChanges(request.getReplaceOnChangesList())
-                .build();
+                .replaceOnChanges(request.getReplaceOnChangesList());
 
+            if (request.getProtect()) {
+                optsBuilder = optsBuilder.protect();
+            }
+            if (request.getRetainOnDelete()) {
+                optsBuilder = optsBuilder.retainOnDelete();
+            }
+            
+            
+            var opts = optsBuilder.build(); 
+            
             var domRequest = new com.pulumi.provider.internal.models.ConstructRequest(
                 request.getType(), request.getName(), unmarshal(request.getInputs()), opts);
 
