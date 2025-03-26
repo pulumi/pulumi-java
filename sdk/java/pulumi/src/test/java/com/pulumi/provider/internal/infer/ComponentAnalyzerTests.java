@@ -32,7 +32,8 @@ public class ComponentAnalyzerTests {
         var expected = new PackageSpec()
             .setName("infer")
             .setDisplayName("infer")
-            .setVersion(null);
+            .setVersion(null)
+            .setNamespace("pulumi");
 
         // Set up language settings
         Map<String, Object> languageSettings = new HashMap<>();
@@ -71,7 +72,7 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema()
         );
-        
+
         assertEquals(
             "At least one component class must be provided",
             exception.getMessage()
@@ -98,10 +99,10 @@ public class ComponentAnalyzerTests {
     public static class SelfSignedCertificateArgs extends ResourceArgs {
         @Import(required = true)
         private Output<String> algorithm;
-        
+
         @Import(required = false)
         private Output<String> ecdsaCurve;
-        
+
         @Import
         private Output<Integer> bits;
     }
@@ -154,9 +155,9 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema(metadata, NoArgsComponent.class)
         );
-        
+
         assertEquals(
-            "Component " + NoArgsComponent.class.getName() + 
+            "Component " + NoArgsComponent.class.getName() +
             " must have exactly one constructor parameter that extends ResourceArgs",
             exception.getMessage()
         );
@@ -188,14 +189,14 @@ public class ComponentAnalyzerTests {
     public static class ComplexTypeArgs extends ResourceArgs {
         @Import(required = false)
         private Output<List<String>> aInputListStr;
-        
+
         @Import(required = true)
         private String aStr;
-        
+
         public Output<List<String>> aInputListStr() {
             return aInputListStr;
         }
-        
+
         public String aStr() {
             return aStr;
         }
@@ -210,46 +211,46 @@ public class ComponentAnalyzerTests {
     public static class PlainTypesArgs extends ResourceArgs {
         @Import(required = true)
         private Integer aInt;
-        
+
         @Import(required = true)
         private String aStr;
-        
+
         @Import(required = true)
         private Double aFloat;
-        
+
         @Import(required = true)
         private Boolean aBool;
-        
+
         @Import(required = false)
         private String aOptional;
-        
+
         @Import(required = true)
         private List<String> aList;
-        
+
         @Import(required = true)
         private Output<List<String>> aInputList;
-        
+
         @Import(required = true)
         private List<Output<String>> aListInput;
-        
+
         @Import(required = true)
         private Output<List<Output<String>>> aInputListInput;
-        
+
         @Import(required = true)
         private Map<String, Integer> aDict;
-        
+
         @Import(required = true)
         private Map<String, Output<Integer>> aDictInput;
-        
+
         @Import(required = true)
         private Output<Map<String, Integer>> aInputDict;
-        
+
         @Import(required = true)
         private Output<Map<String, Output<Integer>>> aInputDictInput;
-        
+
         @Import(required = true)
         private ComplexTypeArgs aComplexType;
-        
+
         @Import(required = true)
         private Output<ComplexTypeArgs> aInputComplexType;
     }
@@ -257,19 +258,19 @@ public class ComponentAnalyzerTests {
     public static class PlainTypesComponent extends ComponentResource {
         @Export
         private Integer aInt;
-        
+
         @Export
         private String aStr;
-        
+
         @Export
         private Double aFloat;
-        
+
         @Export
         private Boolean aBool;
-        
+
         @Export
         private Output<List<String>> aOutputList;
-        
+
         @Export
         private Output<ComplexOutputType> aOutputComplex;
 

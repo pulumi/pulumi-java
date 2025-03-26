@@ -50,7 +50,7 @@ public final class ComponentAnalyzer {
         String name = classes[0].getPackage().getName();
         // Use last segment of package name if it contains dots
         name = name.substring(name.lastIndexOf('.') + 1);
-        
+
         return generateSchema(new Metadata(name, null, null), classes);
     }
 
@@ -68,25 +68,33 @@ public final class ComponentAnalyzer {
 
         ComponentAnalyzer analyzer = new ComponentAnalyzer(metadata);
         Map<String, ResourceSpec> components = new HashMap<>();
-        
+
+        if (classes.length == 0) {
+            throw new IllegalArgumentException("At least one component class must be provided");
+        }
+
+        String namespace = classes[0].getPackage().getName().split("\\.")[1];
+
         for (Class<?> clazz : classes) {
             if (ComponentResource.class.isAssignableFrom(clazz) && !clazz.isInterface() && !java.lang.reflect.Modifier.isAbstract(clazz.getModifiers())) {
                 components.put(clazz.getSimpleName(), analyzer.analyzeComponent(clazz));
             }
         }
 
-        return analyzer.generateSchema(metadata, components, analyzer.typeDefinitions);
+        return analyzer.generateSchema(metadata, namespace, components, analyzer.typeDefinitions);
     }
 
     private PackageSpec generateSchema(
             Metadata metadata,
+            String namespace,
             Map<String, ResourceSpec> components,
             Map<String, ComplexTypeSpec> typeDefinitions) {
-        
+
         PackageSpec pkg = new PackageSpec();
         pkg.setName(metadata.getName());
         pkg.setVersion(metadata.getVersion());
         pkg.setDisplayName(metadata.getDisplayName() != null ? metadata.getDisplayName() : metadata.getName());
+        pkg.setNamespace(namespace);
 
         // Set up language settings
         Map<String, Object> languageSettings = new HashMap<>();
@@ -166,7 +174,7 @@ public final class ComponentAnalyzer {
                 .filter(field -> field.isAnnotationPresent(Export.class))
                 .forEach(field -> {
                     Export exportAnnotation = field.getAnnotation(Export.class);
-                    String schemaName = exportAnnotation.name().isEmpty() ? 
+                    String schemaName = exportAnnotation.name().isEmpty() ?
                             getSchemaPropertyName(field) : exportAnnotation.name();
 
                     analyzeProperty(field).ifPresent(propertyDef -> {
@@ -183,11 +191,11 @@ public final class ComponentAnalyzer {
     private Optional<PropertySpec> analyzeProperty(java.lang.reflect.Field field) {
         Type fieldType = field.getGenericType();
         try {
-            boolean isOutput = fieldType instanceof ParameterizedType && 
+            boolean isOutput = fieldType instanceof ParameterizedType &&
                 ((ParameterizedType) fieldType).getRawType().equals(Output.class);
-            
+
             TypeSpec typeSpec = analyzeTypeParameter(fieldType, field.getDeclaringClass().getSimpleName() + "." + field.getName(), isOutput);
-            
+
             return Optional.of(new PropertySpec(
                 typeSpec.getType(),
                 typeSpec.getRef(),
@@ -196,7 +204,7 @@ public final class ComponentAnalyzer {
                 typeSpec.getAdditionalProperties()
             ));
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException(e.getMessage().replace(fieldType.getTypeName(), 
+            throw new IllegalArgumentException(e.getMessage().replace(fieldType.getTypeName(),
                 field.getDeclaringClass().getSimpleName() + "." + field.getName()));
         }
     }
@@ -302,7 +310,7 @@ public final class ComponentAnalyzer {
                 Type keyType = paramType.getActualTypeArguments()[0];
                 if (!keyType.equals(String.class)) {
                     throw new IllegalArgumentException(
-                        String.format("map keys must be strings, got '%s' for '%s'", 
+                        String.format("map keys must be strings, got '%s' for '%s'",
                             ((Class<?>)keyType).getSimpleName(),
                             context)
                     );
@@ -312,13 +320,13 @@ public final class ComponentAnalyzer {
                 return TypeSpec.ofDict(valueSpec);
             }
         }
-        
+
         if (type instanceof Class<?>) {
             Class<?> clazz = (Class<?>) type;
             if (isBuiltinType(clazz)) {
                 return TypeSpec.ofBuiltin(getBuiltinTypeName(clazz), !isOutput);
-            } 
-            
+            }
+
             var specialTypeRef = getSpecialTypeRef(clazz);
             if (specialTypeRef.isPresent()) {
                 return TypeSpec.ofRef(specialTypeRef.get(), !isOutput);
@@ -330,7 +338,7 @@ public final class ComponentAnalyzer {
                         clazz.getSimpleName(), context)
                 );
             }
-            
+
             if (!clazz.isInterface() && !clazz.isPrimitive() && clazz != String.class) {
                 String typeName = getTypeName(clazz);
                 String typeRef = String.format("#/types/%s:index:%s", metadata.getName(), typeName);
@@ -339,18 +347,18 @@ public final class ComponentAnalyzer {
                 if (!typeDefinitions.containsKey(typeName)) {
                     // Add empty definition to prevent infinite recursion
                     typeDefinitions.put(typeName, ComplexTypeSpec.ofObject(Map.of(), Set.of()));
-                    
+
                     // Then analyze and update with actual properties
                     var analysis = analyzeType(clazz);
                     typeDefinitions.put(typeName, ComplexTypeSpec.ofObject(
                         analysis.properties(),
                         analysis.required()));
                 }
-                
+
                 return TypeSpec.ofRef(typeRef, !isOutput);
             }
         }
-        
+
         throw new IllegalArgumentException("Unsupported type parameter: " + type);
     }
 }
