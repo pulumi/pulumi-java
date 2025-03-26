@@ -55,7 +55,7 @@ public final class ComponentAnalyzer {
     }
 
     private static String getNamespace(Class<?> clazz) {
-        String[] split = classes[0].getPackage().getName().split("\\.");
+        String[] split = clazz.getPackage().getName().split("\\.");
         if (split.length == 0) {
             return "";
         }
@@ -85,8 +85,8 @@ public final class ComponentAnalyzer {
         String namespace = getNamespace(classes[0]);
 
         for (Class<?> clazz : classes) {
-            if (getNamespace(clazz) != namespace) {
-                throw new IllegalArgumentException("All classes must be in the same top level package");
+            if (!getNamespace(clazz).equals(namespace)) {
+                throw new IllegalArgumentException("All classes must be in the same top level package. Expected: " + namespace + " Found: " + getNamespace(clazz));
             }
             if (ComponentResource.class.isAssignableFrom(clazz) && !clazz.isInterface() && !java.lang.reflect.Modifier.isAbstract(clazz.getModifiers())) {
                 components.put(clazz.getSimpleName(), analyzer.analyzeComponent(clazz));
