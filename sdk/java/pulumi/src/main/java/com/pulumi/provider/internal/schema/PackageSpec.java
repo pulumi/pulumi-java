@@ -34,7 +34,7 @@ public class PackageSpec {
 
     public PackageSpec setNamespace(String namespace) {
         this.namespace = namespace;
-	return this;
+        return this;
     }
 
     public PackageSpec setDisplayName(String displayName) {
@@ -67,7 +67,7 @@ public class PackageSpec {
     }
 
     public String getNamespace() {
-	return namespace;
+        return namespace;
     }
 
     public String getDisplayName() {

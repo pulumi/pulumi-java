@@ -309,7 +309,7 @@ public class ComponentAnalyzerTests {
                 "my-component:index:PlainTypesComponent",
                 new ResourceSpec(
                     inputs,
-                    Set.of("aInt", "aStr", "aFloat", "aBool", "aList", "aInputList", "aListInput", 
+                    Set.of("aInt", "aStr", "aFloat", "aBool", "aList", "aInputList", "aListInput",
                           "aInputListInput", "aDict", "aDictInput", "aInputDict", "aInputDictInput",
                           "aComplexType", "aInputComplexType"),
                     Map.of(
@@ -348,7 +348,7 @@ public class ComponentAnalyzerTests {
     public static class ListTypesArgs extends ResourceArgs {
         @Import(required = true)
         private Output<List<String>> requiredList;
-        
+
         @Import(required = false)
         private Output<List<String>> optionalList;
 
@@ -433,7 +433,7 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema(metadata, NonStringMapKeyComponent.class)
         );
-        
+
         assertEquals(
             "map keys must be strings, got 'Integer' for 'NonStringMapKeyArgs.badDict'",
             exception.getMessage()
@@ -453,7 +453,7 @@ public class ComponentAnalyzerTests {
     public static class DictTypesArgs extends ResourceArgs {
         @Import(required = true)
         private Output<Map<String, Integer>> dictInput;
-        
+
         @Import(required = true)
         private Output<Map<String, ComplexDictTypeArgs>> complexDictInput;
     }
@@ -461,7 +461,7 @@ public class ComponentAnalyzerTests {
     public static class DictTypesComponent extends ComponentResource {
         @Export
         private Output<Map<String, Integer>> dictOutput;
-        
+
         @Export
         private Output<Map<String, ComplexDictType>> complexDictOutput;
 
@@ -476,7 +476,7 @@ public class ComponentAnalyzerTests {
 
         var expected = createBasePackageSpec()
             .setResources(Map.of(
-                "my-component:index:DictTypesComponent", 
+                "my-component:index:DictTypesComponent",
                 new ResourceSpec(
                     Map.of(
                         "dictInput", PropertySpec.ofDict(TypeSpec.ofBuiltin("integer")),
@@ -505,7 +505,7 @@ public class ComponentAnalyzerTests {
     public static class ComplexTypeWithRequiredAndOptionalArgs extends ResourceArgs {
         @Import(required = true)
         private Output<String> value;
-        
+
         @Import(required = false)
         private Output<Integer> optionalValue;
     }
@@ -513,7 +513,7 @@ public class ComponentAnalyzerTests {
     public static class ComplexTypeWithRequiredAndOptional {
         @Export
         private Output<String> value;
-        
+
         @Export
         private Output<Integer> optionalValue;
     }
@@ -659,7 +659,7 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema(metadata, ResourceRefComponent.class)
         );
-        
+
         assertEquals(
             "Resource references are not supported yet: found type 'MyResource' for 'ResourceRefComponentArgs.password'",
             exception.getMessage()

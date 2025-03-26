@@ -54,6 +54,15 @@ public final class ComponentAnalyzer {
         return generateSchema(new Metadata(name, null, null), classes);
     }
 
+    private static String getNamespace(Class<?> clazz) {
+        String[] split = classes[0].getPackage().getName().split("\\.");
+        if (split.length == 0) {
+            return "";
+        }
+        return split[1];
+    }
+
+
     /**
      * Analyzes the given classes as Pulumi components and generates a package schema.
      * @param metadata The package metadata including name (required), version and display name (optional)
@@ -73,9 +82,12 @@ public final class ComponentAnalyzer {
             throw new IllegalArgumentException("At least one component class must be provided");
         }
 
-        String namespace = classes[0].getPackage().getName().split("\\.")[1];
+        String namespace = getNamespace(classes[0]);
 
         for (Class<?> clazz : classes) {
+            if (getNamespace(clazz) != namespace) {
+                throw new IllegalArgumentException("All classes must be in the same top level package");
+            }
             if (ComponentResource.class.isAssignableFrom(clazz) && !clazz.isInterface() && !java.lang.reflect.Modifier.isAbstract(clazz.getModifiers())) {
                 components.put(clazz.getSimpleName(), analyzer.analyzeComponent(clazz));
             }
