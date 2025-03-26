@@ -1,6 +1,6 @@
 ### Improvements
 
-- Add the `previewOnly` option to the `refresh` command in the Automation API
+- Update to pulumi 3.158.0
 
 ### Bug Fixes
 
