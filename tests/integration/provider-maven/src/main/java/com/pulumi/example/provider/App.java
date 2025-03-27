@@ -6,7 +6,6 @@ import com.pulumi.provider.internal.ComponentProviderHost;
 
 public class App {
     public static void main(String[] args) throws IOException, InterruptedException {
-        new ComponentProviderHost(new Metadata("javap"), App.class.getPackage()).start(args);
+        new ComponentProviderHost("javap", App.class.getPackage()).start(args);
     }
 }
-

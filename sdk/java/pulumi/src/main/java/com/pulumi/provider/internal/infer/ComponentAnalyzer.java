@@ -51,7 +51,7 @@ public final class ComponentAnalyzer {
         // Use last segment of package name if it contains dots
         name = name.substring(name.lastIndexOf('.') + 1);
 
-        return generateSchema(new Metadata(name, null, null), classes);
+        return generateSchema(new Metadata(name), classes);
     }
 
     protected static String getNamespace(Class<?> clazz) {

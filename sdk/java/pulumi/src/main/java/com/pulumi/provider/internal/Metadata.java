@@ -6,7 +6,7 @@ public class Metadata {
     private final String displayName;
 
     public Metadata(String name) {
-        this(name, null, null);
+        this(name, "0.0.0", null);
     }
 
     public Metadata(String name, String version) {
@@ -16,6 +16,9 @@ public class Metadata {
     public Metadata(String name, String version, String displayName) {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Name cannot be null or empty");
+        }
+        if (version == null || version.isEmpty()) {
+            throw new IllegalArgumentException("Version cannot be null or empty");
         }
         this.name = name;
         this.version = version;
