@@ -19,6 +19,8 @@ import com.pulumi.provider.internal.Metadata;
 import com.pulumi.provider.internal.schema.ComplexTypeSpec;
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.Asset;
+import com.my_namespace.MyNamespacedComponent;
+import com.MyComponent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -76,6 +78,25 @@ public class ComponentAnalyzerTests {
         assertEquals(
             "At least one component class must be provided",
             exception.getMessage()
+        );
+    }
+
+    @Test
+    void testGetNamespace() {
+        assertEquals("pulumi", ComponentAnalyzer.getNamespace(SelfSignedCertificate.class));
+        assertEquals("", ComponentAnalyzer.getNamespace(MyComponent.class));
+        assertEquals("my-namespace", ComponentAnalyzer.getNamespace(MyNamespacedComponent.class));
+    }
+
+    @Test
+    void testMultipleNamespacesErrors() {
+        IllegalArgumentException exception = assertThrows(
+            IllegalArgumentException.class,
+            ()-> ComponentAnalyzer.generateSchema(metadata, SelfSignedCertificate.class, MyNamespacedComponent.class)
+        );
+        assertEquals(
+            "All classes must be in the same top level package. Expected: pulumi Found: my-namespace",
+	    exception.getMessage()
         );
     }
 

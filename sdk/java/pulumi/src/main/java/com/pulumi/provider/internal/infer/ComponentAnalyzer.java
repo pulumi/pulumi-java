@@ -54,12 +54,14 @@ public final class ComponentAnalyzer {
         return generateSchema(new Metadata(name, null, null), classes);
     }
 
-    private static String getNamespace(Class<?> clazz) {
+    protected static String getNamespace(Class<?> clazz) {
         String[] split = clazz.getPackage().getName().split("\\.");
-        if (split.length == 0) {
+        if (split.length < 2) {
             return "";
         }
-        return split[1];
+        // Java package names are allowed to contain underscores, but namespaces expect dashes instead.
+        String namespace = split[1].replaceAll("_", "-");
+        return namespace;
     }
 
 
@@ -92,9 +94,6 @@ public final class ComponentAnalyzer {
                 components.put(clazz.getSimpleName(), analyzer.analyzeComponent(clazz));
             }
         }
-
-        // Java package names are allowed to contain underscores, but namespaces expect dashes instead.
-        namespace = namespace.replaceAll("_", "-");
 
         return analyzer.generateSchema(metadata, namespace, components, analyzer.typeDefinitions);
     }
