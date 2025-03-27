@@ -17,6 +17,7 @@ public final class DestroyOptions extends UpdateOptions {
         this.targetDependents = builder.targetDependents;
         this.showSecrets = builder.showSecrets;
         this.continueOnError = builder.continueOnError;
+        this.previewOnly = builder.previewOnly;
     }
 
     /**
