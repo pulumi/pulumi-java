@@ -603,9 +603,7 @@ public class LocalWorkspaceTest {
                     assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
                     assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                 } finally {
-                    if (testPassed) {
-                        stack.workspace().removeStack(stackName);
-                    }
+                    stack.workspace().removeStack(stackName);
                 }
             }
         });
