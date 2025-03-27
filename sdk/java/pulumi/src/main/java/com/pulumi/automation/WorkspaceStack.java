@@ -722,7 +722,7 @@ public final class WorkspaceStack implements AutoCloseable {
         var args = new ArrayList<String>();
         args.add("destroy");
 
-        if (options != null && options.previewOnly) {
+        if (options != null && options.previewOnly()) {
           args.add("--preview-only");
         } else {
           args.add("--yes");
