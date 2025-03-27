@@ -19,6 +19,8 @@ import com.pulumi.provider.internal.Metadata;
 import com.pulumi.provider.internal.schema.ComplexTypeSpec;
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.Asset;
+import com.my_namespace.MyNamespacedComponent;
+import com.MyComponent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,7 +34,8 @@ public class ComponentAnalyzerTests {
         var expected = new PackageSpec()
             .setName("infer")
             .setDisplayName("infer")
-            .setVersion(null);
+            .setVersion("0.0.0")
+            .setNamespace("pulumi");
 
         // Set up language settings
         Map<String, Object> languageSettings = new HashMap<>();
@@ -71,10 +74,29 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema()
         );
-        
+
         assertEquals(
             "At least one component class must be provided",
             exception.getMessage()
+        );
+    }
+
+    @Test
+    void testGetNamespace() {
+        assertEquals("pulumi", ComponentAnalyzer.getNamespace(SelfSignedCertificate.class));
+        assertEquals("", ComponentAnalyzer.getNamespace(MyComponent.class));
+        assertEquals("my-namespace", ComponentAnalyzer.getNamespace(MyNamespacedComponent.class));
+    }
+
+    @Test
+    void testMultipleNamespacesErrors() {
+        IllegalArgumentException exception = assertThrows(
+            IllegalArgumentException.class,
+            ()-> ComponentAnalyzer.generateSchema(metadata, SelfSignedCertificate.class, MyNamespacedComponent.class)
+        );
+        assertEquals(
+            "All classes must be in the same top level package. Expected: pulumi Found: my-namespace",
+	    exception.getMessage()
         );
     }
 
@@ -98,10 +120,10 @@ public class ComponentAnalyzerTests {
     public static class SelfSignedCertificateArgs extends ResourceArgs {
         @Import(required = true)
         private Output<String> algorithm;
-        
+
         @Import(required = false)
         private Output<String> ecdsaCurve;
-        
+
         @Import
         private Output<Integer> bits;
     }
@@ -154,9 +176,9 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema(metadata, NoArgsComponent.class)
         );
-        
+
         assertEquals(
-            "Component " + NoArgsComponent.class.getName() + 
+            "Component " + NoArgsComponent.class.getName() +
             " must have exactly one constructor parameter that extends ResourceArgs",
             exception.getMessage()
         );
@@ -188,14 +210,14 @@ public class ComponentAnalyzerTests {
     public static class ComplexTypeArgs extends ResourceArgs {
         @Import(required = false)
         private Output<List<String>> aInputListStr;
-        
+
         @Import(required = true)
         private String aStr;
-        
+
         public Output<List<String>> aInputListStr() {
             return aInputListStr;
         }
-        
+
         public String aStr() {
             return aStr;
         }
@@ -210,46 +232,46 @@ public class ComponentAnalyzerTests {
     public static class PlainTypesArgs extends ResourceArgs {
         @Import(required = true)
         private Integer aInt;
-        
+
         @Import(required = true)
         private String aStr;
-        
+
         @Import(required = true)
         private Double aFloat;
-        
+
         @Import(required = true)
         private Boolean aBool;
-        
+
         @Import(required = false)
         private String aOptional;
-        
+
         @Import(required = true)
         private List<String> aList;
-        
+
         @Import(required = true)
         private Output<List<String>> aInputList;
-        
+
         @Import(required = true)
         private List<Output<String>> aListInput;
-        
+
         @Import(required = true)
         private Output<List<Output<String>>> aInputListInput;
-        
+
         @Import(required = true)
         private Map<String, Integer> aDict;
-        
+
         @Import(required = true)
         private Map<String, Output<Integer>> aDictInput;
-        
+
         @Import(required = true)
         private Output<Map<String, Integer>> aInputDict;
-        
+
         @Import(required = true)
         private Output<Map<String, Output<Integer>>> aInputDictInput;
-        
+
         @Import(required = true)
         private ComplexTypeArgs aComplexType;
-        
+
         @Import(required = true)
         private Output<ComplexTypeArgs> aInputComplexType;
     }
@@ -257,19 +279,19 @@ public class ComponentAnalyzerTests {
     public static class PlainTypesComponent extends ComponentResource {
         @Export
         private Integer aInt;
-        
+
         @Export
         private String aStr;
-        
+
         @Export
         private Double aFloat;
-        
+
         @Export
         private Boolean aBool;
-        
+
         @Export
         private Output<List<String>> aOutputList;
-        
+
         @Export
         private Output<ComplexOutputType> aOutputComplex;
 
@@ -308,7 +330,7 @@ public class ComponentAnalyzerTests {
                 "my-component:index:PlainTypesComponent",
                 new ResourceSpec(
                     inputs,
-                    Set.of("aInt", "aStr", "aFloat", "aBool", "aList", "aInputList", "aListInput", 
+                    Set.of("aInt", "aStr", "aFloat", "aBool", "aList", "aInputList", "aListInput",
                           "aInputListInput", "aDict", "aDictInput", "aInputDict", "aInputDictInput",
                           "aComplexType", "aInputComplexType"),
                     Map.of(
@@ -347,7 +369,7 @@ public class ComponentAnalyzerTests {
     public static class ListTypesArgs extends ResourceArgs {
         @Import(required = true)
         private Output<List<String>> requiredList;
-        
+
         @Import(required = false)
         private Output<List<String>> optionalList;
 
@@ -432,7 +454,7 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema(metadata, NonStringMapKeyComponent.class)
         );
-        
+
         assertEquals(
             "map keys must be strings, got 'Integer' for 'NonStringMapKeyArgs.badDict'",
             exception.getMessage()
@@ -452,7 +474,7 @@ public class ComponentAnalyzerTests {
     public static class DictTypesArgs extends ResourceArgs {
         @Import(required = true)
         private Output<Map<String, Integer>> dictInput;
-        
+
         @Import(required = true)
         private Output<Map<String, ComplexDictTypeArgs>> complexDictInput;
     }
@@ -460,7 +482,7 @@ public class ComponentAnalyzerTests {
     public static class DictTypesComponent extends ComponentResource {
         @Export
         private Output<Map<String, Integer>> dictOutput;
-        
+
         @Export
         private Output<Map<String, ComplexDictType>> complexDictOutput;
 
@@ -475,7 +497,7 @@ public class ComponentAnalyzerTests {
 
         var expected = createBasePackageSpec()
             .setResources(Map.of(
-                "my-component:index:DictTypesComponent", 
+                "my-component:index:DictTypesComponent",
                 new ResourceSpec(
                     Map.of(
                         "dictInput", PropertySpec.ofDict(TypeSpec.ofBuiltin("integer")),
@@ -504,7 +526,7 @@ public class ComponentAnalyzerTests {
     public static class ComplexTypeWithRequiredAndOptionalArgs extends ResourceArgs {
         @Import(required = true)
         private Output<String> value;
-        
+
         @Import(required = false)
         private Output<Integer> optionalValue;
     }
@@ -512,7 +534,7 @@ public class ComponentAnalyzerTests {
     public static class ComplexTypeWithRequiredAndOptional {
         @Export
         private Output<String> value;
-        
+
         @Export
         private Output<Integer> optionalValue;
     }
@@ -658,7 +680,7 @@ public class ComponentAnalyzerTests {
             IllegalArgumentException.class,
             () -> ComponentAnalyzer.generateSchema(metadata, ResourceRefComponent.class)
         );
-        
+
         assertEquals(
             "Resource references are not supported yet: found type 'MyResource' for 'ResourceRefComponentArgs.password'",
             exception.getMessage()

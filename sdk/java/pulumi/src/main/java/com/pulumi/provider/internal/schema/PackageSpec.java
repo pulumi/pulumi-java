@@ -9,6 +9,9 @@ public class PackageSpec {
     @SerializedName("name")
     private String name;
 
+    @SerializedName("namespace")
+    private String namespace;
+
     @SerializedName("displayName")
     private String displayName;
 
@@ -26,6 +29,11 @@ public class PackageSpec {
 
     public PackageSpec setName(String name) {
         this.name = name;
+        return this;
+    }
+
+    public PackageSpec setNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
 
@@ -56,6 +64,10 @@ public class PackageSpec {
 
     public String getName() {
         return name;
+    }
+
+    public String getNamespace() {
+        return namespace;
     }
 
     public String getDisplayName() {
@@ -107,4 +119,4 @@ public class PackageSpec {
                ", language=" + language +
                '}';
     }
-} 
+}

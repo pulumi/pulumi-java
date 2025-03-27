@@ -1,6 +1,26 @@
 CHANGELOG
 =========
 
+## 1.8.0
+
+### Improvements
+
+- Automatically infer namespaces for components
+
+### Bug Fixes
+
+- Default version 0.0.0 for component providers
+
+## 1.7.0
+
+### Improvements
+
+- Update to pulumi 3.158.0
+
+### Bug Fixes
+
+- Fix bug deserializing `com.pulumi.automation.StackSummary`
+
 ## 1.6.0
 
 ### Improvements
