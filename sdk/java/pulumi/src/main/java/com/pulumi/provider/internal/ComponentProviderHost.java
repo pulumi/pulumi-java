@@ -7,8 +7,8 @@ public class ComponentProviderHost {
     private final Metadata metadata;
     private final Package currentPackage;
 
-    public ComponentProviderHost(Metadata metadata, Package currentPackage) {
-        this.metadata = metadata;
+    public ComponentProviderHost(String name, Package currentPackage) {
+        this.metadata = new Metadata(name);
         this.currentPackage = currentPackage;
     }
 

@@ -34,7 +34,7 @@ public class ComponentAnalyzerTests {
         var expected = new PackageSpec()
             .setName("infer")
             .setDisplayName("infer")
-            .setVersion(null)
+            .setVersion("0.0.0")
             .setNamespace("pulumi");
 
         // Set up language settings
