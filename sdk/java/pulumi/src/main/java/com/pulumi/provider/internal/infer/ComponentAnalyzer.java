@@ -93,7 +93,7 @@ public final class ComponentAnalyzer {
             }
         }
 
-        // Java package names are not allowed to contain underscores, but namespaces expect dashes instead.
+        // Java package names are allowed to contain underscores, but namespaces expect dashes instead.
         namespace = namespace.replaceAll("_", "-");
 
         return analyzer.generateSchema(metadata, namespace, components, analyzer.typeDefinitions);
