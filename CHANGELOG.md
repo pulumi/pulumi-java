@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+## 1.8.0
+
+### Improvements
+
+- Automatically infer namespaces for components
+
+### Bug Fixes
+
+- Default version 0.0.0 for component providers
+
 ## 1.7.0
 
 ### Improvements
