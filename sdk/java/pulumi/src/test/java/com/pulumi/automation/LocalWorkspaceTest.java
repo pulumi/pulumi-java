@@ -588,6 +588,9 @@ public class LocalWorkspaceTest {
             var env = new HashMap<String, String>(envVars);
             env.put("PULUMI_CONFIG_PASSPHRASE", "test");
 
+            Consumer<Context> program = ctx -> {
+            };
+
             var stackName = randomStackName();
             var projectName = "inline_java";
             try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
