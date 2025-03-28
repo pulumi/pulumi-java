@@ -721,8 +721,13 @@ public final class WorkspaceStack implements AutoCloseable {
     public UpdateResult destroy(DestroyOptions options) throws AutomationException {
         var args = new ArrayList<String>();
         args.add("destroy");
-        args.add("--yes");
-        args.add("--skip-preview");
+
+        if (options != null && options.previewOnly()) {
+          args.add("--preview-only");
+        } else {
+          args.add("--yes");
+          args.add("--skip-preview");
+        }
 
         if (options != null) {
             if (options.isTargetDependents()) {

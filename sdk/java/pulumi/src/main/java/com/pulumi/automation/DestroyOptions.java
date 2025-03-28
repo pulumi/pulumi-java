@@ -10,12 +10,14 @@ public final class DestroyOptions extends UpdateOptions {
     private final boolean targetDependents;
     private final boolean showSecrets;
     private final boolean continueOnError;
+    private final boolean previewOnly;
 
     private DestroyOptions(Builder builder) {
         super(builder);
         this.targetDependents = builder.targetDependents;
         this.showSecrets = builder.showSecrets;
         this.continueOnError = builder.continueOnError;
+        this.previewOnly = builder.previewOnly;
     }
 
     /**
@@ -56,12 +58,22 @@ public final class DestroyOptions extends UpdateOptions {
     }
 
     /**
+     * Only show a preview of the destroy, but don't perform the destroy itself.
+     *
+     * @return whether this is just a preview
+     */
+    public boolean previewOnly() {
+        return previewOnly;
+    }
+
+    /**
      * Builder for {@link DestroyOptions}.
      */
     public static final class Builder extends UpdateOptions.Builder<DestroyOptions.Builder> {
         private boolean targetDependents;
         private boolean showSecrets;
         private boolean continueOnError;
+        private boolean previewOnly;
 
         private Builder() {
         }
@@ -98,6 +110,18 @@ public final class DestroyOptions extends UpdateOptions {
          */
         public Builder continueOnError(boolean continueOnError) {
             this.continueOnError = continueOnError;
+            return this;
+        }
+
+        /**
+         * Sets whether to continue performing the destroy operation despite the
+         * occurrence of errors.
+         *
+         * @param previewOnly the preview only flag
+         * @return the builder
+         */
+        public Builder previewOnly(boolean previewOnly) {
+            this.previewOnly = previewOnly;
             return this;
         }
 

@@ -5,6 +5,13 @@ package com.pulumi.automation;
 import com.pulumi.Context;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.automation.ConfigValue;
+import com.pulumi.automation.DestroyOptions;
+import com.pulumi.automation.LocalWorkspace;
+import com.pulumi.automation.LocalWorkspaceOptions;
+import com.pulumi.automation.OperationType;
+import com.pulumi.automation.UpdateKind;
+import com.pulumi.automation.UpdateState;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -569,6 +576,35 @@ public class LocalWorkspaceTest {
 
                     assertThat(stdout.toString()).doesNotContain("warning");
                     assertThat(stderr.toString()).doesNotContain("warning");
+                } finally {
+                    stack.workspace().removeStack(stackName);
+                }
+            }
+        });
+    }
+
+    void testPreviewDestroy(@EnvVars Map<String, String> envVars) {
+        assertDoesNotThrow(() -> {
+            var env = new HashMap<String, String>(envVars);
+            env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+            Consumer<Context> program = ctx -> {
+            };
+
+            var stackName = randomStackName();
+            var projectName = "inline_java";
+            try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
+                    LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
+                try {
+                    // pulumi up
+                    var upResult = stack.up();
+                    assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+
+                    // pulumi destroy
+                    var destroyResult = stack.destroy(DestroyOptions.builder().previewOnly(true).build());
+                    assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
                 } finally {
                     stack.workspace().removeStack(stackName);
                 }
