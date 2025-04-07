@@ -236,7 +236,8 @@ func TestGeneratePackage(t *testing.T) {
 			checks["java/test"] = testGeneratedPackage
 		}
 		test.TestSDKCodegen(t, &test.SDKCodegenOptions{
-			GenPackage: func(tool string,
+			GenPackage: func(
+				tool string,
 				pkg *schema.Package,
 				extraFiles map[string][]byte,
 			) (map[string][]byte, error) {
@@ -255,7 +256,7 @@ func TestGeneratePackage(t *testing.T) {
 					info := pkg.Language["java"].(PackageInfo)
 					pkg.Language["java"] = info.With(testCase.packageInfo)
 				}
-				return GeneratePackage(tool, pkg, extraFiles, nil, false /*local*/, false /*legacyBuildFiles*/)
+				return GeneratePackage(tool, pkg, extraFiles, nil, false /*local*/, false /*legacyBuildFiles*/, false /*generatePolicyPack*/)
 			},
 			Language:  "java",
 			TestCases: []*test.SDKTest{testCase.sdkTest},

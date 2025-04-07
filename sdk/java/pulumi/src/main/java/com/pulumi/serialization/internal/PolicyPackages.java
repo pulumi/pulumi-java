@@ -13,18 +13,13 @@ import com.pulumi.resources.PolicyManager;
 import com.pulumi.resources.PolicyResource;
 
 import java.lang.reflect.Method;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Supplier;
 
 @InternalUse
 public class PolicyPackages {
-    private static final Type listOfString = new Reflection.TypeReference<List<String>>() {
-    }.type;
-
     public static class PolicyForResource {
         public final PolicyPackResource annotation;
         public final Method target;
@@ -101,16 +96,20 @@ public class PolicyPackages {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': it should have two parameters, a PolicyManager and a PolicyResource", m, c);
                     }
 
-                    var classForResource = annotationResource.value();
                     var typeForManager = types[0];
                     var typeForResource = types[1];
+                    Class<PolicyResource> classForResource = Reflection.getRawType(typeForResource);
 
                     if (!Reflection.sameType(typeForManager, PolicyManager.class)) {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be PolicyManager", m, c);
                     }
 
+                    if (!Reflection.isSubclassOf(typeForResource, PolicyResource.class)) {
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be a subclass of Pulumi PolicyResource", m, c);
+                    }
+
                     PolicyResourceType annotation = classForResource.getAnnotation(PolicyResourceType.class);
-                    if (annotation == null || classForResource != typeForResource) {
+                    if (annotation == null) {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be a subclass of Pulumi PolicyResource", m, c);
                     }
 

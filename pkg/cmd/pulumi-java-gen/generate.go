@@ -91,7 +91,8 @@ func generateJava(cfg generateJavaOptions) error {
 		extraFiles,
 		nil, /*localDependencies*/
 		cfg.Local,
-		true, /*legacyBuildFiles*/
+		true,  /*legacyBuildFiles*/
+		false, /*generatePolicyPack*/
 	)
 	if err != nil {
 		return err
@@ -105,6 +106,33 @@ func generateJava(cfg generateJavaOptions) error {
 
 	for f, bytes := range files {
 		if err := emitFile(filepath.Join(outDir, f), bytes); err != nil {
+			return err
+		}
+	}
+
+	pkg.Name += "-policypacks"
+
+	filesForPolicyPack, err := javagen.GeneratePackage(
+		"pulumi-java-gen",
+		pkg,
+		extraFiles,
+		nil, /*localDependencies*/
+		cfg.Local,
+		true, /*legacyBuildFiles*/
+		true, /*generatePolicyPack*/
+	)
+	if err != nil {
+		return err
+	}
+
+	outDirForPolicyPack := filepath.Join(cfg.RootDir, cfg.OutputDir+"_policy")
+
+	if err := cleanDir(outDirForPolicyPack); err != nil {
+		return err
+	}
+
+	for f, bytes := range filesForPolicyPack {
+		if err := emitFile(filepath.Join(outDirForPolicyPack, f), bytes); err != nil {
 			return err
 		}
 	}
