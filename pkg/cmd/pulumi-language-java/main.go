@@ -169,7 +169,8 @@ type javaLanguageHost struct {
 	tracing       string
 }
 
-func newLanguageHost(execOptions executors.JavaExecutorOptions,
+func newLanguageHost(
+	execOptions executors.JavaExecutorOptions,
 	engineAddress, tracing string,
 ) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
@@ -558,7 +559,8 @@ func (host *javaLanguageHost) GetPluginInfo(_ context.Context, _ *pbempty.Empty)
 	}, nil
 }
 
-func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
+func (host *javaLanguageHost) InstallDependencies(
+	req *pulumirpc.InstallDependenciesRequest,
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer,
 ) error {
 	executor, err := host.Executor(false)
@@ -611,7 +613,8 @@ func (host *javaLanguageHost) GetProgramDependencies(
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
 
-func (host *javaLanguageHost) RuntimeOptionsPrompts(_ context.Context,
+func (host *javaLanguageHost) RuntimeOptionsPrompts(
+	_ context.Context,
 	_ *pulumirpc.RuntimeOptionsRequest,
 ) (*pulumirpc.RuntimeOptionsResponse, error) {
 	return &pulumirpc.RuntimeOptionsResponse{}, nil
@@ -839,6 +842,7 @@ func (host *javaLanguageHost) GeneratePackage(
 		req.LocalDependencies,
 		req.Local,
 		false, /*legacyBuildFiles*/
+		false, /*generatePolicyPack*/
 	)
 	if err != nil {
 		return nil, err
@@ -846,6 +850,39 @@ func (host *javaLanguageHost) GeneratePackage(
 
 	for filename, data := range files {
 		outPath := filepath.Join(req.Directory, filename)
+		err := os.MkdirAll(filepath.Dir(outPath), 0o700)
+		if err != nil {
+			return nil, fmt.Errorf("could not create output directory %s: %w", filepath.Dir(filename), err)
+		}
+
+		err = os.WriteFile(outPath, data, 0o600)
+		if err != nil {
+			return nil, fmt.Errorf("could not write output file %s: %w", filename, err)
+		}
+	}
+
+	pkgForPolicyPack, _, err := schema.BindSpec(*dedupedSpec, loader)
+	if err != nil {
+		return nil, err
+	}
+
+	pkgForPolicyPack.Name += "-policypacks"
+
+	filesForPolicyPack, err := codegen.GeneratePackage(
+		"pulumi-language-java",
+		pkgForPolicyPack,
+		req.ExtraFiles,
+		req.LocalDependencies,
+		req.Local,
+		false, /*legacyBuildFiles*/
+		true,  /*generatePolicyPack*/
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	for filename, data := range filesForPolicyPack {
+		outPath := filepath.Join(req.Directory+"_policy", filename)
 		err := os.MkdirAll(filepath.Dir(outPath), 0o700)
 		if err != nil {
 			return nil, fmt.Errorf("could not create output directory %s: %w", filepath.Dir(filename), err)

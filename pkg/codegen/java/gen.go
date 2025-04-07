@@ -7,6 +7,7 @@ import (
 	"bytes"
 	"encoding/base64"
 	"fmt"
+	"maps"
 	"path"
 	"path/filepath"
 	"reflect"
@@ -19,13 +20,12 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"golang.org/x/exp/maps"
 
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
 // This should be bumped as required at the point of release.
-var DefaultSdkVersion = semver.Version{Major: 1, Minor: 0, Patch: 0}
+var DefaultSdkVersion = semver.Version{Major: 1, Minor: 8, Patch: 0}
 
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
@@ -705,7 +705,8 @@ func (pt *plainType) genPolicyType(ctx *classFileContext, token *string, pending
 	fprintf(w, "\n")
 
 	// Declare each input property.
-	for _, propAndShape := range propTypes {
+	for _, propName := range slices.Sorted(maps.Keys(propTypes)) {
+		propAndShape := propTypes[propName]
 		propType := pt.mod.typeString(
 			ctx,
 			propAndShape.shape,
@@ -775,7 +776,8 @@ func (pt *plainType) genPolicyProperty(ctx *classFileContext, prop *schema.Prope
 // Generates derived builder setters that resolve to the main setter.
 // This helps to promote T to Output<T>, accept varargs for a List parameter
 // and to unroll Either<L, R> to both of its types.
-func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
+func (pt *plainType) genBuilderHelpers(
+	ctx *classFileContext, setterName,
 	fieldName string, t TypeShape, prop *schema.Property,
 ) {
 	w := ctx.writer
@@ -1354,7 +1356,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	return nil
 }
 
-type addClassMethod = func(names.FQN, names.Ident, func(*classFileContext) error) error
+type addClassMethod = func(names.FQN, names.Ident, bool, func(*classFileContext) error) error
 
 func (mod *modContext) functionsClassName() (names.Ident, error) {
 	if mod.mod != "" {
@@ -1572,7 +1574,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		if fun.Inputs != nil {
 			// Generate "{Function}Args" class for invokes that return Output<T>
 			// Notice here using fun.Inputs.InputShape.Properties which use the shape which accepting Outputs
-			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
+			if err := addClass(inputsPkg, argsClass, false, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
@@ -1587,7 +1589,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 			// Generate "{Function}PlainArgs" class for invokes that return CompletableFuture<T>
 			// Notice here using fun.Inputs.Properties which use the plain shape (not accepting Outputs)
-			if err := addClass(inputsPkg, plainArgsClass, func(ctx *classFileContext) error {
+			if err := addClass(inputsPkg, plainArgsClass, false, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
@@ -1602,7 +1604,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		}
 
 		if fun.Outputs != nil {
-			if err := addClass(outputsPkg, resultClass, func(ctx *classFileContext) error {
+			if err := addClass(outputsPkg, resultClass, false, func(ctx *classFileContext) error {
 				res := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
@@ -1762,7 +1764,7 @@ func (q qualifier) String() string {
 	case outputsQualifier:
 		return "outputs"
 	case policiesQualifier:
-		return "policies"
+		return "policypacks"
 	}
 	panic("invalid qualifier")
 }
@@ -1910,7 +1912,7 @@ func gradleProjectPath() string {
 	return filepath.Join("src", "main", "java")
 }
 
-func (mod *modContext) gen(fs fs) error {
+func (mod *modContext) gen(fs fs, generatePolicyPack bool) error {
 	pkgComponents := strings.Split(mod.packageName, ".")
 
 	dir := filepath.Join(gradleProjectPath(), filepath.Join(pkgComponents...))
@@ -1932,10 +1934,19 @@ func (mod *modContext) gen(fs fs) error {
 		return filepath.Join(gradleProjectPath(), relPath) + ".java"
 	}
 
-	addClass := func(javaPkg names.FQN, javaClass names.Ident, gen func(*classFileContext) error) error {
+	addClass := func(
+		javaPkg names.FQN,
+		javaClass names.Ident,
+		isPolicyClass bool,
+		gen func(*classFileContext) error,
+	) error {
 		classPath := generateClassFilePath(javaPkg, javaClass)
 		if _, ok := fs[classPath]; ok {
 			// Already processed
+			return nil
+		}
+
+		if generatePolicyPack != isPolicyClass {
 			return nil
 		}
 
@@ -1960,7 +1971,7 @@ func (mod *modContext) gen(fs fs) error {
 	// Utilities, config
 	switch mod.mod {
 	case "":
-		if err := addClass(mod.rootPackage(), names.Ident("Utilities"), func(ctx *classFileContext) error {
+		if err := addClass(mod.rootPackage(), names.Ident("Utilities"), false, func(ctx *classFileContext) error {
 			pkg, err := mod.pkg.Definition()
 			if err != nil {
 				return err
@@ -2033,7 +2044,7 @@ import com.pulumi.deployment.Deployment;
 			if err != nil {
 				return err
 			}
-			if err := addClass(configPkg, names.Ident("Config"), func(ctx *classFileContext) error {
+			if err := addClass(configPkg, names.Ident("Config"), false, func(ctx *classFileContext) error {
 				return mod.genConfig(ctx, config)
 			}); err != nil {
 				return err
@@ -2061,14 +2072,14 @@ import com.pulumi.deployment.Deployment;
 		}
 
 		// Generate Resource class
-		if err := addClass(javaPkg, names.Ident(resourceName(r)), func(ctx *classFileContext) error {
+		if err := addClass(javaPkg, names.Ident(resourceName(r)), false, func(ctx *classFileContext) error {
 			return mod.genResource(ctx, r, argsFQN, stateFQN)
 		}); err != nil {
 			return err
 		}
 
 		// Generate ResourceArgs class
-		if err := addClass(javaPkg, argsClassName, func(ctx *classFileContext) error {
+		if err := addClass(javaPkg, argsClassName, false, func(ctx *classFileContext) error {
 			args := &plainType{
 				mod:                   mod,
 				res:                   r,
@@ -2093,7 +2104,7 @@ import com.pulumi.deployment.Deployment;
 		policyClassName := names.Ident(tokenToName(r.Token))
 
 		// Generate ResourcePolicy class
-		if err := addClass(policyPkg, policyClassName, func(ctx *classFileContext) error {
+		if err := addClass(policyPkg, policyClassName, true, func(ctx *classFileContext) error {
 			props := slices.Concat(r.Properties, r.InputProperties)
 
 			if r.StateInputs != nil {
@@ -2114,7 +2125,7 @@ import com.pulumi.deployment.Deployment;
 
 		// Generate the `get` args type, if any.
 		if r.StateInputs != nil {
-			if err := addClass(inputsPkg, stateClassName, func(ctx *classFileContext) error {
+			if err := addClass(inputsPkg, stateClassName, false, func(ctx *classFileContext) error {
 				state := &plainType{
 					mod:                   mod,
 					res:                   r,
@@ -2137,7 +2148,7 @@ import com.pulumi.deployment.Deployment;
 		if err != nil {
 			return err
 		}
-		if err := addClass(javaPkg, className, func(ctx *classFileContext) error {
+		if err := addClass(javaPkg, className, false, func(ctx *classFileContext) error {
 			return mod.genFunctions(ctx, addClass)
 		}); err != nil {
 			return err
@@ -2148,7 +2159,7 @@ import com.pulumi.deployment.Deployment;
 	if len(mod.enums) > 0 {
 		for _, enum := range mod.enums {
 			enumClassName := names.Ident(tokenToName(enum.Token))
-			if err := addClass(javaPkg.Dot(names.Ident("enums")), enumClassName, func(ctx *classFileContext) error {
+			if err := addClass(javaPkg.Dot(names.Ident("enums")), enumClassName, false, func(ctx *classFileContext) error {
 				return mod.genEnum(ctx, enum)
 			}); err != nil {
 				return err
@@ -2158,7 +2169,7 @@ import com.pulumi.deployment.Deployment;
 
 	for !mod.classQueue.isEmpty() {
 		entry := mod.classQueue.dequeue()
-		if err := addClass(entry.packageName, entry.className, func(ctx *classFileContext) error {
+		if err := addClass(entry.packageName, entry.className, false, func(ctx *classFileContext) error {
 			return mod.genType(ctx, entry.schemaType, entry.input)
 		}); err != nil {
 			return err
@@ -2168,7 +2179,7 @@ import com.pulumi.deployment.Deployment;
 	for len(pending) > 0 {
 		pending2 := pending
 		pending = map[*schema.ObjectType]bool{}
-		for t, _ := range pending2 {
+		for t := range pending2 {
 			pendingPkg, err := parsePackageName(mod.tokenToPackage(t.Token, policiesQualifier))
 			if err != nil {
 				return err
@@ -2177,7 +2188,7 @@ import com.pulumi.deployment.Deployment;
 			pendingClassName := names.Ident(tokenToName(t.Token))
 
 			// Generate the extra ResourcePolicy class
-			if err := addClass(pendingPkg, pendingClassName, func(ctx *classFileContext) error {
+			if err := addClass(pendingPkg, pendingClassName, true, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
 					name:                  string(ctx.className),
@@ -2218,8 +2229,12 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 
 			var javaInfo PackageInfo
 			if raw, ok := pkg.Language["java"]; ok {
-				javaInfo, ok = raw.(PackageInfo)
-				if !ok {
+				switch rawTyped := raw.(type) {
+				case PackageInfo:
+					javaInfo = rawTyped
+				case *PackageInfo:
+					javaInfo = *rawTyped
+				default:
 					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"java\"]`=%v to `PackageInfo`", raw))
 				}
 			}
@@ -2411,6 +2426,7 @@ func GeneratePackage(
 	localDependencies map[string]string,
 	local bool,
 	legacyBuildFiles bool,
+	generatePolicyPack bool,
 ) (map[string][]byte, error) {
 	// Presently, Gradle is the primary build system we support for generated SDKs. Later on, when we validate the
 	// package in order to produce build system artifacts, we'll need a description and repository. To this end, we
@@ -2461,7 +2477,7 @@ func GeneratePackage(
 	}
 
 	pkgOverrides.Dependencies = dependencies
-	pkgOverrides.Repositories = maps.Keys(repositories)
+	pkgOverrides.Repositories = slices.Sorted(maps.Keys(repositories))
 
 	overriddenInfo := info.With(pkgOverrides)
 	info = &overriddenInfo
@@ -2475,7 +2491,7 @@ func GeneratePackage(
 	}
 
 	for _, mod := range modules {
-		if err := mod.gen(files); err != nil {
+		if err := mod.gen(files, generatePolicyPack); err != nil {
 			return nil, err
 		}
 	}

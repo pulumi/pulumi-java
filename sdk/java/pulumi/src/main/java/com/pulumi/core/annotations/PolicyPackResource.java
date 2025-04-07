@@ -13,11 +13,6 @@ import java.lang.annotation.Target;
 public @interface PolicyPackResource
 {
     /**
-     * @return the Resource type for this policy
-     */
-    Class<? extends PolicyResource> value();
-
-    /**
      * @return the Policy name
      */
     String name();
