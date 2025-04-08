@@ -143,14 +143,16 @@ public class LocalWorkspaceTest {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
 
+        var projectName = "create_select_remove_stack_test";
+
         try (var workspace = LocalWorkspace.create(LocalWorkspaceOptions.builder()
                 .projectSettings(ProjectSettings.builder(
-                        "create_select_remove_stack_test",
+                        projectName,
                         ProjectRuntimeName.NODEJS).build())
                 .environmentVariables(env)
                 .build())) {
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
 
             Predicate<StackSummary> isStack = s -> s.name().equals(stackName);
 
@@ -192,7 +194,7 @@ public class LocalWorkspaceTest {
                 .environmentVariables(env)
                 .build())) {
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), "testproj", randomStackName());
 
             try {
                 var stack = WorkspaceStack.create(stackName, workspace);
@@ -238,7 +240,7 @@ public class LocalWorkspaceTest {
                 .environmentVariables(env)
                 .build())) {
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             var stack = WorkspaceStack.create(stackName, workspace);
 
             var plainKey = normalizeConfigKey("plain", projectName);
@@ -302,7 +304,7 @@ public class LocalWorkspaceTest {
                 .environmentVariables(env)
                 .build())) {
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             var stack = WorkspaceStack.create(stackName, workspace);
 
             try {
@@ -407,7 +409,7 @@ public class LocalWorkspaceTest {
                 .environmentVariables(env)
                 .build())) {
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             var stack = WorkspaceStack.create(stackName, workspace);
 
             var plainKey = normalizeConfigKey("key", projectName);
@@ -447,7 +449,7 @@ public class LocalWorkspaceTest {
             var stackNames = new ArrayList<String>();
             try {
                 for (var i = 0; i < 2; i++) {
-                    var stackName = "int_test" + getTestSuffix();
+                    var stackName = fullyQualifiedStackName(getTestOrg(), projectName, "int_test" + getTestSuffix());
                     WorkspaceStack.create(stackName, workspace);
                     stackNames.add(stackName);
                     var summary = workspace.getStack();
@@ -478,7 +480,7 @@ public class LocalWorkspaceTest {
                 .environmentVariables(env)
                 .build())) {
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             var stack = WorkspaceStack.create(stackName, workspace);
             try {
                 var history = stack.getHistory();
@@ -505,8 +507,8 @@ public class LocalWorkspaceTest {
                 ctx.export("exp_secret", config.getSecret("buzz"));
             };
 
-            var stackName = randomStackName();
             var projectName = "inline_java";
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
                     LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
                 try {
@@ -561,8 +563,8 @@ public class LocalWorkspaceTest {
             Consumer<Context> program = ctx -> {
             };
 
-            var stackName = randomStackName();
             var projectName = "inline_java";
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
                     LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
                 try {
@@ -619,7 +621,7 @@ public class LocalWorkspaceTest {
             var env = new HashMap<String, String>(envVars);
             env.put("PULUMI_CONFIG_PASSPHRASE", "test");
 
-            var stackName = randomStackName();
+            var stackName = fullyQualifiedStackName(getTestOrg(), "testproj", randomStackName());
             Path workingDir = Paths.get(getClass().getResource("/testproj").toURI());
             try (var stack = LocalWorkspace.createStack(stackName, workingDir,
                     LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
@@ -695,8 +697,8 @@ public class LocalWorkspaceTest {
                 assertThat(expSecretValue.isSecret()).isTrue();
             };
 
-            var stackName = randomStackName();
             var projectName = "inline_java";
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
                     LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
                 try {
@@ -741,8 +743,8 @@ public class LocalWorkspaceTest {
                 ctx.export("test", "test");
             };
 
-            var stackName = randomStackName();
             var projectName = "inline_output";
+            var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
             try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
                     LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
                 try {
@@ -796,8 +798,8 @@ public class LocalWorkspaceTest {
         Consumer<Context> program = ctx -> {
         };
 
-        var stackName = randomStackName();
         var projectName = "project_was_overwritten";
+        var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
 
         Path workDir = Paths.get(getClass().getResource("/correct_project").toURI());
 
@@ -824,8 +826,8 @@ public class LocalWorkspaceTest {
             new ComponentResource(type, "a");
         };
 
-        var stackName = randomStackName();
         var projectName = "test_state_delete";
+        var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
 
         try (var stack = LocalWorkspace.createStack(projectName, stackName, program, LocalWorkspaceOptions.builder()
                 .environmentVariables(env)
@@ -883,8 +885,8 @@ public class LocalWorkspaceTest {
                     .build());
         };
 
-        var stackName = randomStackName();
         var projectName = "test_state_delete_force";
+        var stackName = fullyQualifiedStackName(getTestOrg(), projectName, randomStackName());
 
         try (var stack = LocalWorkspace.createStack(projectName, stackName, program, LocalWorkspaceOptions.builder()
                 .environmentVariables(env)
@@ -932,5 +934,19 @@ public class LocalWorkspaceTest {
                 stack.workspace().removeStack(stackName);
             }
         }
+    }
+
+    static String fullyQualifiedStackName(String org, String project, String stack) {
+      return String.format("%s/%s/%s", org, project, stack);
+    }
+
+    static String getTestOrg() {
+      if (System.getenv("PULUMI_ACCESS_TOKEN") != null) {
+          if (System.getenv("PULUMI_TEST_ORG") != null) {
+              return System.getenv("PULUMI_TEST_ORG");
+          }
+          return "pulumi-test";
+      }
+      return "organization";
     }
 }

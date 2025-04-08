@@ -1,0 +1,5 @@
+[tools]
+go = "latest"
+gradle = "8.8"
+java = "22"
+maven = "3.8.4"
