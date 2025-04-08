@@ -941,12 +941,9 @@ public class LocalWorkspaceTest {
     }
 
     static String getTestOrg() {
-      if (System.getenv("PULUMI_ACCESS_TOKEN") != null) {
-          if (System.getenv("PULUMI_TEST_ORG") != null) {
-              return System.getenv("PULUMI_TEST_ORG");
-          }
-          return "pulumi-test";
-      }
-      return "organization";
+        if (System.getenv("PULUMI_ACCESS_TOKEN") != null && System.getenv("PULUMI_TEST_ORG") != null) {
+            return System.getenv("PULUMI_TEST_ORG");
+        }
+        return "pulumi-test";
     }
 }
