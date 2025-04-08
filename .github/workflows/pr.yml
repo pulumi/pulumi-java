@@ -84,7 +84,7 @@ jobs:
       - name: Build and unit-test Pulumi Java SDK
         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
         with:
-          arguments: build testAll
+          arguments: build testAll --info
           build-root-directory: sdk/java
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
