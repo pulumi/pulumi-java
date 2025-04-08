@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 1.9.0
+
+### Improvements
+
+- Add the `previewOnly` option to the `destroy` command in the Automation API
+
 ## 1.8.0
 
 ### Improvements
