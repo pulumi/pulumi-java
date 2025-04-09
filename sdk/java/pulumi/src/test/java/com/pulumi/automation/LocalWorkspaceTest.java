@@ -945,8 +945,8 @@ public class LocalWorkspaceTest {
           if (System.getenv("PULUMI_TEST_ORG") != null) {
               return System.getenv("PULUMI_TEST_ORG");
           }
-          return "pulumi-test";
+          return "organization";
       }
-      return "organization";
+      return "pulumi-test";
     }
 }
