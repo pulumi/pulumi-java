@@ -1125,6 +1125,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			g.Fgen(w, ")")
 			g.genNewline(w)
 		}
+		if resource.Options.ImportID != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".importId(%v)", resource.Options.ImportID)
+			g.genNewline(w)
+		}
 		g.genIndent(w)
 		g.Fgen(w, ".build()")
 	})
