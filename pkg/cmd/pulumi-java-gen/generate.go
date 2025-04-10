@@ -110,8 +110,6 @@ func generateJava(cfg generateJavaOptions) error {
 		}
 	}
 
-	pkg.Name += "-policypacks"
-
 	filesForPolicyPack, err := javagen.GeneratePackage(
 		"pulumi-java-gen",
 		pkg,

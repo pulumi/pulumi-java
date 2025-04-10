@@ -24,6 +24,10 @@ var ResourceTypeAnnotation = PulumiAnnotations.Dot("ResourceType")
 
 var PolicyResourceTypeAnnotation = PulumiAnnotations.Dot("PolicyResourceType")
 
+var PolicyResourcePropertyAnnotation = PulumiAnnotations.Dot("PolicyResourceProperty")
+
+var UndeferrableValueException = PulumiCore.Dot("UndeferrableValueException")
+
 var Output = PulumiCore.Dot("Output")
 
 var List = JavaUtil.Dot("List")
