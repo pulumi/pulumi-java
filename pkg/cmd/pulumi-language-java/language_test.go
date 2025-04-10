@@ -178,7 +178,6 @@ var expectedFailures = map[string]string{
 	"l2-provider-grpc-config-secret":        "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config":               "#1568 Don't generate duplicate files",
 	"l2-proxy-index":                        "compilation error",
-	"l2-resource-option-import":             "unsupported attribute import",
 	"l2-rtti":                               "TODO: call pulumiResourceName",
 	"l2-component-component-resource-ref":   "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":     "components with resources as inputs/outputs not supported",
