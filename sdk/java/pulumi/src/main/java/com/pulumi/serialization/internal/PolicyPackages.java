@@ -9,8 +9,10 @@ import com.pulumi.core.annotations.PolicyPackType;
 import com.pulumi.core.annotations.PolicyResourceType;
 import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.resources.PolicyManager;
+import com.pulumi.resources.AnalyzerManager;
 import com.pulumi.resources.PolicyResource;
+import com.pulumi.resources.PolicyResourceInput;
+import com.pulumi.resources.PolicyResourceOutput;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -51,19 +53,26 @@ public class PolicyPackages {
     public static class PolicyPack {
         public final PolicyPackType annotation;
         public final PolicyForStack stackPolicy;
-        public final ImmutableMap<String, PolicyForResource> resourcePolicies;
+        public final ImmutableMap<String, PolicyForResource> resourcePolicyInputs;
+        public final ImmutableMap<String, PolicyForResource> resourcePolicyOutputs;
 
         public PolicyPack(PolicyPackType annotation,
                           PolicyForStack stackPolicy,
-                          List<PolicyForResource> resourcePolicies) {
-            var map = new HashMap<String, PolicyForResource>();
-            for (var policy : resourcePolicies) {
-                map.put(policy.type, policy);
+                          List<PolicyForResource> resourcePolicyInputs,
+                          List<PolicyForResource> resourcePolicyOutputs) {
+            var mapInputs = new HashMap<String, PolicyForResource>();
+            for (var policy : resourcePolicyInputs) {
+                mapInputs.put(policy.type, policy);
+            }
+            var mapOutputs = new HashMap<String, PolicyForResource>();
+            for (var policy : resourcePolicyOutputs) {
+                mapOutputs.put(policy.type, policy);
             }
 
             this.annotation = annotation;
             this.stackPolicy = stackPolicy;
-            this.resourcePolicies = ImmutableMap.copyOf(map);
+            this.resourcePolicyInputs = ImmutableMap.copyOf(mapInputs);
+            this.resourcePolicyOutputs = ImmutableMap.copyOf(mapOutputs);
         }
     }
 
@@ -81,7 +90,8 @@ public class PolicyPackages {
         var policyPacks = new ArrayList<PolicyPack>();
 
         Reflection.enumerateClassesWithAnnotation(PolicyPackType.class, (c, annotationType) -> {
-            var resourcePolicies = new ArrayList<PolicyForResource>();
+            var resourcePolicyInputs = new ArrayList<PolicyForResource>();
+            var resourcePolicyOutputs = new ArrayList<PolicyForResource>();
             PolicyForStack stackPolicy = null;
 
             for (var m : c.getMethods()) {
@@ -100,12 +110,8 @@ public class PolicyPackages {
                     var typeForResource = types[1];
                     Class<PolicyResource> classForResource = Reflection.getRawType(typeForResource);
 
-                    if (!Reflection.sameType(typeForManager, PolicyManager.class)) {
+                    if (!Reflection.sameType(typeForManager, AnalyzerManager.class)) {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be PolicyManager", m, c);
-                    }
-
-                    if (!Reflection.isSubclassOf(typeForResource, PolicyResource.class)) {
-                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be a subclass of Pulumi PolicyResource", m, c);
                     }
 
                     PolicyResourceType annotation = classForResource.getAnnotation(PolicyResourceType.class);
@@ -113,7 +119,15 @@ public class PolicyPackages {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be a subclass of Pulumi PolicyResource", m, c);
                     }
 
-                    resourcePolicies.add(new PolicyForResource(annotationResource, m, annotation.type(), classForResource));
+                    if (Reflection.isSubclassOf(typeForResource, PolicyResourceInput.class)) {
+                        resourcePolicyInputs.add(new PolicyForResource(annotationResource, m, annotation.type(), classForResource));
+                    } else if (Reflection.isSubclassOf(typeForResource, PolicyResourceOutput.class)) {
+                        resourcePolicyOutputs.add(new PolicyForResource(annotationResource, m, annotation.type(), classForResource));
+                    } else {
+                        throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be a subclass of Pulumi PolicyResource", m, c);
+                    }
+
+
                 }
 
                 var annotationStack = m.getAnnotation(PolicyPackStack.class);
@@ -130,11 +144,11 @@ public class PolicyPackages {
                     var typeForManager = types[0];
                     var typeForResources = types[1];
 
-                    if (!Reflection.sameType(typeForManager, PolicyManager.class)) {
+                    if (!Reflection.sameType(typeForManager, AnalyzerManager.class)) {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': first parameter has to be PolicyManager", m, c);
                     }
 
-                    if (!Reflection.isSubclassOf(typeForResources, List.class, PolicyResource.class)) {
+                    if (!Reflection.isSubclassOf(typeForResources, List.class, PolicyResourceOutput.class)) {
                         throw Exceptions.newIllegalState(null, "Method '%s' of class '%s': second parameter has to be List<PolicyResource>", m, c);
                     }
 
@@ -146,8 +160,8 @@ public class PolicyPackages {
                 }
             }
 
-            if (!resourcePolicies.isEmpty() || stackPolicy != null) {
-                policyPacks.add(new PolicyPack(annotationType, stackPolicy, resourcePolicies));
+            if (!resourcePolicyInputs.isEmpty() || !resourcePolicyOutputs.isEmpty() || stackPolicy != null) {
+                policyPacks.add(new PolicyPack(annotationType, stackPolicy, resourcePolicyInputs, resourcePolicyOutputs));
             }
         });
 

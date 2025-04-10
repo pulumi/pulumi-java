@@ -156,11 +156,19 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 	return result
 }
 
-func (i PackageInfo) BasePackageOrDefault() string {
-	if len(i.BasePackage) > 0 {
-		return ensureEndsWithDot(i.BasePackage)
+func (i PackageInfo) BasePackageOrDefault(generatePolicyPack bool) string {
+	res := i.BasePackage
+	if len(res) == 0 {
+		res = defaultBasePackage
 	}
-	return ensureEndsWithDot(defaultBasePackage)
+
+	res = ensureEndsWithDot(res)
+
+	if generatePolicyPack {
+		res += "policypacks."
+	}
+
+	return res
 }
 
 // Makes sure Depdendencies contains the key if it does not already.

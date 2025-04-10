@@ -16,7 +16,7 @@ import (
 
 func TestNewGradleTemplateContextLegacy(t *testing.T) {
 	pkg, info := eksExample()
-	tctx := newGradleTemplateContext(pkg, info, true /*legacyBuildFiles*/)
+	tctx := newGradleTemplateContext(pkg, info, true, false)
 	assert.Equal(t, "0.37.1", tctx.Version)
 	assert.Equal(t, "com.pulumi", tctx.GroupID)
 	assert.Equal(t, "eks", tctx.Name)
@@ -37,7 +37,7 @@ func TestNewGradleTemplateContextLegacy(t *testing.T) {
 
 func TestNewGradleTemplateContext(t *testing.T) {
 	pkg, info := eksExample()
-	tctx := newGradleTemplateContext(pkg, info, false /*legacyBuildFiles*/)
+	tctx := newGradleTemplateContext(pkg, info, false, false)
 	assert.Equal(t, "0.37.1", tctx.Version)
 	assert.Equal(t, "com.pulumi", tctx.GroupID)
 	assert.Equal(t, "eks", tctx.Name)
@@ -63,44 +63,44 @@ func TestNewGradleTemplateContextBuildFiles(t *testing.T) {
 
 	// We default to the behavior of `gradle-nexus`.
 	info := &PackageInfo{BuildFiles: ""}
-	tctx := newGradleTemplateContext(pkg, info, false /*legacyBuildFiles*/)
+	tctx := newGradleTemplateContext(pkg, info, false, false)
 	assert.Equal(t, "2.0.0", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 
 	info = &PackageInfo{BuildFiles: "gradle-nexus"}
-	tctx = newGradleTemplateContext(pkg, info, false /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, false, false)
 	assert.Equal(t, "2.0.0", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 
 	info = &PackageInfo{BuildFiles: "gradle-nexus", GradleNexusPublishPluginVersion: "1.2.3"}
-	tctx = newGradleTemplateContext(pkg, info, false /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, false, false)
 	assert.Equal(t, "1.2.3", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 
 	info = &PackageInfo{BuildFiles: "gradle"}
-	tctx = newGradleTemplateContext(pkg, info, false /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, false, false)
 	assert.Equal(t, "", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, false, tctx.GradleNexusPublishPluginEnabled)
 
 	info = &PackageInfo{BuildFiles: "gradle", GradleNexusPublishPluginVersion: "1.2.3"}
-	tctx = newGradleTemplateContext(pkg, info, false /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, false, false)
 	assert.Equal(t, "1.2.3", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 
 	// Legacy build files: true
 
 	info = &PackageInfo{BuildFiles: ""}
-	tctx = newGradleTemplateContext(pkg, info, true /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, true, false)
 	assert.Equal(t, "", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, false, tctx.GradleNexusPublishPluginEnabled)
 
 	info = &PackageInfo{BuildFiles: "gradle"}
-	tctx = newGradleTemplateContext(pkg, info, true /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, true, false)
 	assert.Equal(t, "", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, false, tctx.GradleNexusPublishPluginEnabled)
 
 	info = &PackageInfo{BuildFiles: "gradle", GradleNexusPublishPluginVersion: "1.2.3"}
-	tctx = newGradleTemplateContext(pkg, info, true /*legacyBuildFiles*/)
+	tctx = newGradleTemplateContext(pkg, info, true, false)
 	assert.Equal(t, "1.2.3", tctx.GradleNexusPublishPluginVersion)
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 }
@@ -108,7 +108,7 @@ func TestNewGradleTemplateContextBuildFiles(t *testing.T) {
 func TestGenGradleProjectLegacyTrue(t *testing.T) {
 	pkg, info := eksExample()
 	files := fs{}
-	err := genGradleProject(pkg, info, files, true /*legacyBuildFiles*/)
+	err := genGradleProject(pkg, info, files, true, false)
 	if err != nil {
 		t.Error(err)
 	}
@@ -121,7 +121,7 @@ func TestGenGradleProjectLegacyTrue(t *testing.T) {
 func TestGenGradleProjectLegacyFalse(t *testing.T) {
 	pkg, info := eksExample()
 	files := fs{}
-	err := genGradleProject(pkg, info, files, false /*legacyBuildFiles*/)
+	err := genGradleProject(pkg, info, files, false, false)
 	if err != nil {
 		t.Error(err)
 	}
