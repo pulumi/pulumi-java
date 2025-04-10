@@ -286,3 +286,24 @@ func (ts TypeShape) UnEither() (bool, TypeShape, TypeShape) {
 	}
 	return false, TypeShape{}, TypeShape{}
 }
+
+func (ts TypeShape) StripWrapperClasses() TypeShape {
+	if len(ts.Parameters) == 0 {
+		return ts
+	}
+
+	if ts.Type.Equal(names.Output) || ts.Type.Equal(names.Optional) || ts.Type.Equal(names.Either) {
+		return ts.Parameters[0].StripWrapperClasses()
+	}
+
+	strippedParameters := make([]TypeShape, len(ts.Parameters))
+	for i, parameter := range ts.Parameters {
+		strippedParameters[i] = parameter.StripWrapperClasses()
+	}
+
+	return TypeShape{
+		Type:        ts.Type,
+		Parameters:  strippedParameters,
+		Annotations: ts.Annotations,
+	}
+}

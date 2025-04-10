@@ -866,8 +866,6 @@ func (host *javaLanguageHost) GeneratePackage(
 		return nil, err
 	}
 
-	pkgForPolicyPack.Name += "-policypacks"
-
 	filesForPolicyPack, err := codegen.GeneratePackage(
 		"pulumi-language-java",
 		pkgForPolicyPack,

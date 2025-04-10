@@ -21,12 +21,13 @@ func genGradleProject(
 	packageInfo *PackageInfo,
 	files fs,
 	legacyBuildFiles bool,
+	generatePolicyPack bool,
 ) error {
 	if err := gradleValidatePackage(pkg); err != nil {
 		return err
 	}
 
-	ctx := newGradleTemplateContext(pkg, packageInfo, legacyBuildFiles)
+	ctx := newGradleTemplateContext(pkg, packageInfo, legacyBuildFiles, generatePolicyPack)
 	templates := map[string]string{
 		"build.gradle":    buildGradleTemplate,
 		"settings.gradle": settingsGradleTemplate,
@@ -103,6 +104,7 @@ func newGradleTemplateContext(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
 	legacyBuildFiles bool,
+	generatePolicyPack bool,
 ) gradleTemplateContext {
 	ctx := gradleTemplateContext{
 		Name:                           pkg.Name,
@@ -111,6 +113,10 @@ func newGradleTemplateContext(
 		ProjectGitURL:                  formatGitURL(pkg.Repository),
 		GradleTestJUnitPlatformEnabled: packageInfo.GradleTest == "JUnitPlatform",
 		PluginDownloadURL:              pkg.PluginDownloadURL,
+	}
+
+	if generatePolicyPack {
+		ctx.Name += "-policypack"
 	}
 
 	if pkg.Version != nil {
@@ -219,7 +225,7 @@ func newGradleTemplateContext(
 	}
 
 	if ctx.RootProjectName == "" {
-		ctx.RootProjectName = packageInfo.BasePackageOrDefault() + pkg.Name
+		ctx.RootProjectName = packageInfo.BasePackageOrDefault(generatePolicyPack) + pkg.Name
 	}
 
 	return ctx

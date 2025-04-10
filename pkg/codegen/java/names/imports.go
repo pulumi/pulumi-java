@@ -25,12 +25,16 @@ func (fqn FQN) Dot(id Ident) FQN {
 }
 
 func (fqn FQN) String() string {
+	return strings.Join(fqn.Strings(), ".")
+}
+
+func (fqn FQN) Strings() []string {
 	var elements []string
 	for _, p := range fqn.prefix {
 		elements = append(elements, p.String())
 	}
 	elements = append(elements, fqn.id.String())
-	return strings.Join(elements, ".")
+	return elements
 }
 
 func (fqn FQN) Equal(other FQN) bool {

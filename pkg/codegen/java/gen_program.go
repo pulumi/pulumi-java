@@ -552,7 +552,7 @@ func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member str
 		def, err := r.Schema.PackageReference.Definition()
 		contract.AssertNoErrorf(err, "failed to get package definition for %s", r.Schema.Token)
 		if info, ok := def.Language["java"].(PackageInfo); ok {
-			importName = info.BasePackageOrDefault()
+			importName = info.BasePackageOrDefault(false)
 		} else if r.Schema.PackageReference.Namespace() != "" {
 			importName = "com." + sanitizeImport(r.Schema.PackageReference.Namespace()) + "."
 		}
