@@ -33,7 +33,7 @@
 				<dependency>
 					<groupId>com.pulumi</groupId>
 					<artifactId>alpha</artifactId>
-					<version>3.0.0-alpha.1.internal</version>
+					<version>3.0.0-alpha.1.internal+exp.sha.12345678</version>
 				</dependency>
 			</dependencies>
 
