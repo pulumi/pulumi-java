@@ -28,6 +28,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/errutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
@@ -912,7 +913,7 @@ func (host *javaLanguageHost) Pack(_ context.Context, req *pulumirpc.PackRequest
 	gradlePublishCmd.Stderr = os.Stderr
 	err = gradlePublishCmd.Run()
 	if err != nil {
-		return nil, fmt.Errorf("gradle publish: %w", err)
+		return nil, errutil.ErrorWithStderr(err, "gradle publish")
 	}
 
 	artifactPath := fmt.Sprintf(
