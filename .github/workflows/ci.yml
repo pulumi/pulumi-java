@@ -19,6 +19,9 @@ on:
     types:
       - run-acceptance-tests-command
 
+  schedule:
+    - cron: "43 6 * * *"
+
 env:
   PULUMI_API: https://api.pulumi-staging.io
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
