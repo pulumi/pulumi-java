@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+## 1.10.0
+
+### Improvements
+
+* Support generating programs using the `import` resource option
+
+### Bug Fixes
+
 ## 1.9.0
 
 ### Improvements
