@@ -1,5 +1,5 @@
 ### Improvements
 
-* Add import to resource options
+* Support generating programs using the `import` resource option
 
 ### Bug Fixes
