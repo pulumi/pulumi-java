@@ -429,7 +429,7 @@ public final class WorkspaceStack implements AutoCloseable {
                 }
             }
 
-            if (options.isTargetDependents()) {
+            if (options.targetDependents()) {
                 args.add("--target-dependents");
             }
 
@@ -555,7 +555,7 @@ public final class WorkspaceStack implements AutoCloseable {
                 }
             }
 
-            if (options.isTargetDependents()) {
+            if (options.targetDependents()) {
                 args.add("--target-dependents");
             }
 
@@ -755,7 +755,7 @@ public final class WorkspaceStack implements AutoCloseable {
         }
 
         if (options != null) {
-            if (options.targets()) {
+            if (options.targets().length != null) {
                 for (var item : options.targets()) {
                     args.add("--target");
                     args.add(item);
