@@ -28,6 +28,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/errutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
@@ -486,7 +487,6 @@ func (host *javaLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, co
 	maybeAppendEnv("stack", req.GetStack())
 	maybeAppendEnv("pwd", req.GetPwd())
 	maybeAppendEnv("dry_run", fmt.Sprintf("%v", req.GetDryRun()))
-	maybeAppendEnv("query_mode", fmt.Sprint(req.GetQueryMode()))
 	maybeAppendEnv("parallel", fmt.Sprint(req.GetParallel()))
 	maybeAppendEnv("tracing", host.tracing)
 	maybeAppendEnv("config", config)
@@ -912,7 +912,7 @@ func (host *javaLanguageHost) Pack(_ context.Context, req *pulumirpc.PackRequest
 	gradlePublishCmd.Stderr = os.Stderr
 	err = gradlePublishCmd.Run()
 	if err != nil {
-		return nil, fmt.Errorf("gradle publish: %w", err)
+		return nil, errutil.ErrorWithStderr(err, "gradle publish")
 	}
 
 	artifactPath := fmt.Sprintf(

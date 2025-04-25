@@ -1050,6 +1050,7 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.Parent != nil ||
 		resource.Options.Protect != nil ||
 		resource.Options.RetainOnDelete != nil ||
+		resource.Options.ImportID != nil ||
 		resource.Options.Provider != nil
 }
 
@@ -1123,6 +1124,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			}
 
 			g.Fgen(w, ")")
+			g.genNewline(w)
+		}
+		if resource.Options.ImportID != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".importId(%v)", resource.Options.ImportID)
 			g.genNewline(w)
 		}
 		g.genIndent(w)

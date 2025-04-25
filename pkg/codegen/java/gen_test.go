@@ -236,9 +236,11 @@ func TestGeneratePackage(t *testing.T) {
 			checks["java/test"] = testGeneratedPackage
 		}
 		test.TestSDKCodegen(t, &test.SDKCodegenOptions{
-			GenPackage: func(tool string,
+			GenPackage: func(
+				tool string,
 				pkg *schema.Package,
 				extraFiles map[string][]byte,
+				_ schema.ReferenceLoader,
 			) (map[string][]byte, error) {
 				pkg.Description = "test description"
 				pkg.Repository = "https://github.com/pulumi/pulumi-java"
