@@ -2,6 +2,7 @@
 
 package com.pulumi.automation;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.logging.Logger;

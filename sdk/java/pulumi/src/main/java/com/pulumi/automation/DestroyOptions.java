@@ -2,6 +2,8 @@
 
 package com.pulumi.automation;
 
+import java.util.Collections;
+
 /**
  * Options controlling the behavior of a {@link WorkspaceStack#destroy}
  * operation.
