@@ -63,16 +63,6 @@ public final class PreviewOptions extends UpdateOptions {
     }
 
     /**
-     * Allows previewing of dependent targets discovered but not specified
-     * {@link #targets()}
-     *
-     * @return true if dependent targets should be previewed
-     */
-    public boolean isTargetDependents() {
-        return targetDependents;
-    }
-
-    /**
      * Return an error if any changes are proposed by this preview.
      *
      * @return true if the preview should fail if any changes are proposed
@@ -97,6 +87,16 @@ public final class PreviewOptions extends UpdateOptions {
      */
     public List<String> replaces() {
         return replaces;
+    }
+
+    /**
+     * Allows previewing of dependent targets discovered but not specified
+     * {@link #targets()}
+     *
+     * @return true if dependent targets should be previewed
+     */
+    public boolean targetDependents() {
+        return targetDependents;
     }
 
     /**
