@@ -755,7 +755,7 @@ public final class WorkspaceStack implements AutoCloseable {
         }
 
         if (options != null) {
-            if (options.targets().length != null) {
+            if (options.targets() != null) {
                 for (var item : options.targets()) {
                     args.add("--target");
                     args.add(item);
