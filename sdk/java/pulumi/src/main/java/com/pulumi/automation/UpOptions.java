@@ -82,7 +82,7 @@ public final class UpOptions extends UpdateOptions {
     }
 
     /**
-     * Resources to replace.
+     * Resources to target.
      *
      * @return the list of resource URNs to target
      */
