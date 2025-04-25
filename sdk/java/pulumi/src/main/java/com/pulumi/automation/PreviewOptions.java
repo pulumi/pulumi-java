@@ -100,16 +100,6 @@ public final class PreviewOptions extends UpdateOptions {
     }
 
     /**
-     * Allows updating of dependent targets discovered but not specified
-     * {@link #targets()}
-     *
-     * @return true if dependent targets should be updated
-     */
-    public boolean targetDependents() {
-        return targetDependents;
-    }
-
-    /**
      * The program to execute as part of the update.
      *
      * @return the program to execute
@@ -169,18 +159,6 @@ public final class PreviewOptions extends UpdateOptions {
          */
         public Builder targets(List<String> targets) {
             this.targets = targets;
-            return this;
-        }
-
-        /**
-         * Allows previewing of dependent targets discovered but not specified
-         * {@link #targets}.
-         *
-         * @param targetDependents true if dependent targets should be previewed
-         * @return the builder
-         */
-        public Builder targetDependents(boolean targetDependents) {
-            this.targetDependents = targetDependents;
             return this;
         }
 

@@ -3,6 +3,9 @@
 package com.pulumi.automation;
 
 import java.util.Collections;
+import java.util.List;
+
+import javax.annotation.Nullable;
 
 /**
  * Options controlling the behavior of a {@link WorkspaceStack#destroy}
