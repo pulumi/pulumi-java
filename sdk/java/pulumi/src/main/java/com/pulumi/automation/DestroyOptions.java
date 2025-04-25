@@ -7,6 +7,7 @@ package com.pulumi.automation;
  * operation.
  */
 public final class DestroyOptions extends UpdateOptions {
+    private final List<String> targets;
     private final boolean targetDependents;
     private final boolean showSecrets;
     private final boolean continueOnError;
@@ -14,6 +15,9 @@ public final class DestroyOptions extends UpdateOptions {
 
     private DestroyOptions(Builder builder) {
         super(builder);
+        this.targets = builder.targets == null
+          ? Collections.emptyList()
+          : Collections.unmodifiableList(builder.targets);
         this.targetDependents = builder.targetDependents;
         this.showSecrets = builder.showSecrets;
         this.continueOnError = builder.continueOnError;
@@ -27,6 +31,15 @@ public final class DestroyOptions extends UpdateOptions {
      */
     public static Builder builder() {
         return new Builder();
+    }
+
+    /**
+     * The list of specified targets.
+     *
+     * @return The specified targets
+     */
+    public List<String> targets() {
+      return targets;
     }
 
     /**
@@ -70,12 +83,25 @@ public final class DestroyOptions extends UpdateOptions {
      * Builder for {@link DestroyOptions}.
      */
     public static final class Builder extends UpdateOptions.Builder<DestroyOptions.Builder> {
+        @Nullable
+        private List<String> targets;
         private boolean targetDependents;
         private boolean showSecrets;
         private boolean continueOnError;
         private boolean previewOnly;
 
         private Builder() {
+        }
+
+        /**
+         * Provide a specific subset of targets to destroy.
+         *
+         * @param targets The specified targets for destroying
+         * @return the builder
+         */
+        public Builder targets(List<String> targets) {
+            this.targets = targets;
+            return this;
         }
 
         /**

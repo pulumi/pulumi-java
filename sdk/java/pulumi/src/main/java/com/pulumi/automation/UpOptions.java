@@ -17,6 +17,7 @@ public final class UpOptions extends UpdateOptions {
     private final boolean expectNoChanges;
     private final boolean diff;
     private final List<String> replaces;
+    private final List<String> targets;
     private final boolean targetDependents;
     @Nullable
     private final Consumer<Context> program;
@@ -32,6 +33,9 @@ public final class UpOptions extends UpdateOptions {
         this.expectNoChanges = builder.expectNoChanges;
         this.diff = builder.diff;
         this.replaces = builder.replaces;
+        this.targets = builder.targets == null
+          ? Collections.emptyList()
+          : Collections.unmodifiableList(builder.targets);
         this.targetDependents = builder.targetDependents;
         this.program = builder.program;
         this.plan = builder.plan;
@@ -74,6 +78,15 @@ public final class UpOptions extends UpdateOptions {
      */
     public List<String> replaces() {
         return replaces;
+    }
+
+    /**
+     * Resources to replace.
+     *
+     * @return the list of resource URNs to target
+     */
+    public List<String> targets() {
+        return targets;
     }
 
     /**
@@ -143,6 +156,8 @@ public final class UpOptions extends UpdateOptions {
         private boolean diff;
         @Nullable
         private List<String> replaces;
+        @Nullable
+        private List<String> targets;
         private boolean targetDependents;
         @Nullable
         private Consumer<Context> program;
@@ -187,6 +202,17 @@ public final class UpOptions extends UpdateOptions {
          */
         public Builder replaces(List<String> replaces) {
             this.replaces = replaces;
+            return this;
+        }
+
+        /**
+         * Resources to target.
+         *
+         * @param targets the list of resource URNs to target
+         * @return the builder
+         */
+        public Builder targets(List<String> targets) {
+            this.targets = targets;
             return this;
         }
 

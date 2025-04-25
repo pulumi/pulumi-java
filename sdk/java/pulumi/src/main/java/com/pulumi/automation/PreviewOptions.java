@@ -19,6 +19,7 @@ public final class PreviewOptions extends UpdateOptions {
     private final boolean expectNoChanges;
     private final boolean diff;
     private final List<String> replaces;
+    private final List<String> targets;
     private final boolean targetDependents;
     @Nullable
     private final Consumer<Context> program;
@@ -34,6 +35,9 @@ public final class PreviewOptions extends UpdateOptions {
         this.replaces = builder.replaces == null
                 ? Collections.emptyList()
                 : Collections.unmodifiableList(builder.replaces);
+        this.targets = builder.targets == null
+                ? Collections.emptyList()
+                : Collections.unmodifiableList(builder.targets);
         this.targetDependents = builder.targetDependents;
         this.program = builder.program;
         this.plan = builder.plan;
@@ -47,6 +51,25 @@ public final class PreviewOptions extends UpdateOptions {
      */
     public static Builder builder() {
         return new Builder();
+    }
+
+    /**
+     * The list of specified targets.
+     *
+     * @return The specified targets
+     */
+    public List<String> targets() {
+      return targets;
+    }
+
+    /**
+     * Allows previewing of dependent targets discovered but not specified
+     * {@link #targets()}
+     *
+     * @return true if dependent targets should be previewed
+     */
+    public boolean isTargetDependents() {
+        return targetDependents;
     }
 
     /**
@@ -125,6 +148,8 @@ public final class PreviewOptions extends UpdateOptions {
         private boolean diff;
         @Nullable
         private List<String> replaces;
+        @Nullable
+        private List<String> targets;
         private boolean targetDependents;
         @Nullable
         private Consumer<Context> program;
@@ -134,6 +159,29 @@ public final class PreviewOptions extends UpdateOptions {
         private Logger logger;
 
         private Builder() {
+        }
+
+        /**
+         * Provide a specific subset of targets to preview.
+         *
+         * @param targets The specified targets for previewing
+         * @return the builder
+         */
+        public Builder targets(List<String> targets) {
+            this.targets = targets;
+            return this;
+        }
+
+        /**
+         * Allows previewing of dependent targets discovered but not specified
+         * {@link #targets}.
+         *
+         * @param targetDependents true if dependent targets should be previewed
+         * @return the builder
+         */
+        public Builder targetDependents(boolean targetDependents) {
+            this.targetDependents = targetDependents;
+            return this;
         }
 
         /**
