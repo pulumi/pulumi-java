@@ -17,6 +17,7 @@ public final class UpOptions extends UpdateOptions {
     private final boolean expectNoChanges;
     private final boolean diff;
     private final List<String> replaces;
+    private final boolean excludeDependents;
     private final boolean targetDependents;
     @Nullable
     private final Consumer<Context> program;
@@ -32,6 +33,7 @@ public final class UpOptions extends UpdateOptions {
         this.expectNoChanges = builder.expectNoChanges;
         this.diff = builder.diff;
         this.replaces = builder.replaces;
+        this.excludeDependents = builder.excludeDependents;
         this.targetDependents = builder.targetDependents;
         this.program = builder.program;
         this.plan = builder.plan;
@@ -74,6 +76,16 @@ public final class UpOptions extends UpdateOptions {
      */
     public List<String> replaces() {
         return replaces;
+    }
+
+    /**
+     * Allows exclusion of dependent targets discovered but not specified
+     * {@link #excludes()}
+     *
+     * @return true if dependent targets should be excluded
+     */
+    public boolean excludeDependents() {
+        return excludeDependents;
     }
 
     /**
