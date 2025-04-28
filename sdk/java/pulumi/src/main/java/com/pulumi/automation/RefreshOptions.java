@@ -5,14 +5,11 @@ package com.pulumi.automation;
 import java.util.Collections;
 import java.util.List;
 
-import javax.annotation.Nullable;
-
 /**
  * Options controlling the behavior of a {@link WorkspaceStack#refresh}
  * operation.
  */
 public final class RefreshOptions extends UpdateOptions {
-    private final List<String> targets;
     private final boolean targetDependents;
     private final boolean expectNoChanges;
     private final boolean previewOnly;
@@ -23,9 +20,6 @@ public final class RefreshOptions extends UpdateOptions {
 
     private RefreshOptions(Builder builder) {
         super(builder);
-        this.targets = builder.targets == null
-          ? Collections.emptyList()
-          : Collections.unmodifiableList(builder.targets);
         this.targetDependents = builder.targetDependents;
         this.expectNoChanges = builder.expectNoChanges;
         this.previewOnly = builder.previewOnly;
@@ -44,15 +38,6 @@ public final class RefreshOptions extends UpdateOptions {
      */
     public static Builder builder() {
         return new Builder();
-    }
-
-    /**
-     * The list of specified targets.
-     *
-     * @return The specified targets
-     */
-    public List<String> targets() {
-      return targets;
     }
 
     /**
@@ -123,8 +108,6 @@ public final class RefreshOptions extends UpdateOptions {
      * Builder for {@link RefreshOptions}.
      */
     public static final class Builder extends UpdateOptions.Builder<RefreshOptions.Builder> {
-        @Nullable
-        private List<String> targets;
         private boolean targetDependents;
         private boolean expectNoChanges;
         private boolean previewOnly = false;
@@ -134,17 +117,6 @@ public final class RefreshOptions extends UpdateOptions {
         private List<PendingCreateValue> importPendingCreates;
 
         private Builder() {
-        }
-
-        /**
-         * Provide a specific subset of targets to refresh.
-         *
-         * @param targets The specified targets for refreshing
-         * @return the builder
-         */
-        public Builder targets(List<String> targets) {
-            this.targets = targets;
-            return this;
         }
 
         /**
