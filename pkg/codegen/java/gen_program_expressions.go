@@ -3,6 +3,7 @@
 package java
 
 import (
+	"fmt"
 	"io"
 	"math/big"
 	"strings"
@@ -233,7 +234,9 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 				g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
 			}
 		default:
-			g.genIntrinsic(w, expr.Args[0], expr.Signature.ReturnType)
+			fmt.Printf("%T %s\n", expr.Args[0], expr)
+			from := expr.Args[0]
+			g.genIntrinsic(w, from, expr.Signature.ReturnType)
 		}
 	case pcl.IntrinsicApply:
 		g.genApply(w, expr)
