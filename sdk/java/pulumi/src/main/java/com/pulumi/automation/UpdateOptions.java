@@ -19,6 +19,7 @@ public abstract class UpdateOptions {
     private final Integer parallel;
     @Nullable
     private final String message;
+    private final List<String> excludes;
     private final List<String> targets;
     private final List<String> policyPacks;
     private final List<String> policyPackConfigs;
@@ -42,6 +43,9 @@ public abstract class UpdateOptions {
     protected UpdateOptions(Builder<?> builder) {
         parallel = builder.parallel;
         message = builder.message;
+        excludes = builder.excludes == null
+                ? Collections.emptyList()
+                : Collections.unmodifiableList(builder.excludes);
         targets = builder.targets == null
                 ? Collections.emptyList()
                 : Collections.unmodifiableList(builder.targets);
@@ -82,6 +86,16 @@ public abstract class UpdateOptions {
     @Nullable
     public String Message() {
         return message;
+    }
+
+    /**
+     * A list of resource URNs to exclude during the operation. Wildcards
+     * (*, **) are also supported.
+     *
+     * @return the list of excluded resource URNs
+     */
+    public List<String> excludes() {
+        return excludes;
     }
 
     /**
@@ -219,6 +233,8 @@ public abstract class UpdateOptions {
         @Nullable
         private String message;
         @Nullable
+        private List<String> excludes;
+        @Nullable
         private List<String> targets;
         @Nullable
         private List<String> policyPacks;
@@ -266,6 +282,19 @@ public abstract class UpdateOptions {
         @SuppressWarnings("unchecked")
         public B message(String message) {
             this.message = message;
+            return (B) this;
+        }
+
+        /**
+         * A list of resource URNs to exclude during the operation. Wildcards
+         * (*, **) are also supported.
+         *
+         * @param excludes the list of excluded resource URNs
+         * @return the builder
+         */
+        @SuppressWarnings("unchecked")
+        public B excludes(List<String> excludes) {
+            this.excludes = excludes;
             return (B) this;
         }
 

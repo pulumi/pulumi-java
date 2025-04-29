@@ -7,6 +7,7 @@ package com.pulumi.automation;
  * operation.
  */
 public final class DestroyOptions extends UpdateOptions {
+    private final boolean excludeDependents;
     private final boolean targetDependents;
     private final boolean showSecrets;
     private final boolean continueOnError;
@@ -14,6 +15,7 @@ public final class DestroyOptions extends UpdateOptions {
 
     private DestroyOptions(Builder builder) {
         super(builder);
+        this.excludeDependents = builder.excludeDependents;
         this.targetDependents = builder.targetDependents;
         this.showSecrets = builder.showSecrets;
         this.continueOnError = builder.continueOnError;
@@ -27,6 +29,16 @@ public final class DestroyOptions extends UpdateOptions {
      */
     public static Builder builder() {
         return new Builder();
+    }
+
+    /**
+     * Allows exclusion of dependent targets discovered but not specified
+     * {@link #excludes()}
+     *
+     * @return true if dependent targets should be excluded
+     */
+    public boolean isExcludeDependents() {
+        return excludeDependents;
     }
 
     /**
@@ -70,12 +82,25 @@ public final class DestroyOptions extends UpdateOptions {
      * Builder for {@link DestroyOptions}.
      */
     public static final class Builder extends UpdateOptions.Builder<DestroyOptions.Builder> {
+        private boolean excludeDependents;
         private boolean targetDependents;
         private boolean showSecrets;
         private boolean continueOnError;
         private boolean previewOnly;
 
         private Builder() {
+        }
+
+        /**
+         * Allows exclusion of dependent targets discovered but not specified
+         * {@link #excludes}.
+         *
+         * @param excludeDependents true if dependent targets should be excluded
+         * @return the builder
+         */
+        public Builder excludeDependents(boolean excludeDependents) {
+            this.excludeDependents = excludeDependents;
+            return this;
         }
 
         /**

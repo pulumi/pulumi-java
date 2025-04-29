@@ -17,6 +17,7 @@ public final class UpOptions extends UpdateOptions {
     private final boolean expectNoChanges;
     private final boolean diff;
     private final List<String> replaces;
+    private final boolean excludeDependents;
     private final boolean targetDependents;
     @Nullable
     private final Consumer<Context> program;
@@ -32,6 +33,7 @@ public final class UpOptions extends UpdateOptions {
         this.expectNoChanges = builder.expectNoChanges;
         this.diff = builder.diff;
         this.replaces = builder.replaces;
+        this.excludeDependents = builder.excludeDependents;
         this.targetDependents = builder.targetDependents;
         this.program = builder.program;
         this.plan = builder.plan;
@@ -74,6 +76,16 @@ public final class UpOptions extends UpdateOptions {
      */
     public List<String> replaces() {
         return replaces;
+    }
+
+    /**
+     * Allows exclusion of dependent targets discovered but not specified
+     * {@link #excludes()}
+     *
+     * @return true if dependent targets should be excluded
+     */
+    public boolean excludeDependents() {
+        return excludeDependents;
     }
 
     /**
@@ -143,6 +155,7 @@ public final class UpOptions extends UpdateOptions {
         private boolean diff;
         @Nullable
         private List<String> replaces;
+        private boolean excludeDependents;
         private boolean targetDependents;
         @Nullable
         private Consumer<Context> program;
@@ -187,6 +200,18 @@ public final class UpOptions extends UpdateOptions {
          */
         public Builder replaces(List<String> replaces) {
             this.replaces = replaces;
+            return this;
+        }
+
+        /**
+         * Allows exclusion of dependent targets discovered but not specified
+         * {@link #excludes}.
+         *
+         * @param excludeDependents true if dependent targets should be excluded
+         * @return the builder
+         */
+        public Builder excludeDependents(boolean excludeDependents) {
+            this.excludeDependents = excludeDependents;
             return this;
         }
 
