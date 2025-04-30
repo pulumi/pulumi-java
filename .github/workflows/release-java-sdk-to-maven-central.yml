@@ -1,3 +1,4 @@
+permissions: write-all # Equivalent to default permissions plus id-token: write
 # A successful run of this action creates a staging repo at
 # s01.oss.sonatype.org. Further manual steps are needed to complete
 # publishing to Maven Central, see:
@@ -15,24 +16,20 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   OSSRH_REPO_URL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
-  OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-  OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-
-  # Include only last 8 hex digits of the key ID included, due to
-  # limitations of gradle.
-  SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
-
-  # Obtained by `gpg --armor --export-secret-key support@pulumi.com`.
-  SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-
-  # Aka passphrase for the GPG key.
-  SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: imports/github-secrets
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: OSSRH_USERNAME,OSSRH_PASSWORD,SIGNING_KEY_ID,SIGNING_KEY,SIGNING_PASSWORD
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
