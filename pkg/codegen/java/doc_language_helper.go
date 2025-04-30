@@ -45,7 +45,7 @@ func (d DocLanguageHelper) GetPropertyName(p *schema.Property) (string, error) {
 	return names.Ident(p.Name).AsProperty().Getter(), nil
 }
 
-func (d DocLanguageHelper) GetFunctionName(_ string, f *schema.Function) string {
+func (d DocLanguageHelper) GetFunctionName(f *schema.Function) string {
 	return tokenToFunctionName(f.Token)
 }
 
