@@ -18,11 +18,11 @@ func TestGetLanguageTypeString(t *testing.T) {
 	assert.NoError(t, err)
 	dlh := DocLanguageHelper{}
 	for _, input := range []bool{false, true} {
-		ts := dlh.GetTypeName(pkg,
+		ts := dlh.GetTypeName(pkg.Reference(),
 			findPlainType(pkg, "aws:config/endpoints:endpoints"),
 			input, "")
 		assert.Equal(t, "Endpoints", ts)
-		ts2 := dlh.GetTypeName(pkg,
+		ts2 := dlh.GetTypeName(pkg.Reference(),
 			findInputType(pkg, "aws:config/endpoints:endpoints"),
 			input, "")
 		assert.Equal(t, "EndpointsArgs", ts2)
@@ -42,7 +42,9 @@ func readPackage(schemaJSON string) (*schema.Package, error) {
 		return nil, err
 	}
 
-	pkg, diag, err := schema.BindSpec(spec, nil)
+	pkg, diag, err := schema.BindSpec(spec, nil, schema.ValidationOptions{
+		AllowDanglingReferences: true,
+	})
 	if err != nil {
 		return nil, err
 	}
