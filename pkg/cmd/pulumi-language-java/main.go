@@ -795,7 +795,9 @@ func (host *javaLanguageHost) GeneratePackage(
 		}, nil
 	}
 
-	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, loader)
+	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, loader, schema.ValidationOptions{
+		AllowDanglingReferences: true,
+	})
 	if err != nil {
 		return nil, err
 	}
