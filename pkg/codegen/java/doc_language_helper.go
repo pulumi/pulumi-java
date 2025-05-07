@@ -18,9 +18,9 @@ type DocLanguageHelper struct{}
 var _ codegen.DocLanguageHelper = DocLanguageHelper{}
 
 func (d DocLanguageHelper) GetTypeName(
-	pkg *schema.Package, t schema.Type, input bool, relateToModule string,
+	pkg schema.PackageReference, t schema.Type, input bool, relateToModule string,
 ) string {
-	modCtx := &modContext{pkg: pkg.Reference(), mod: relateToModule}
+	modCtx := &modContext{pkg: pkg, mod: relateToModule}
 	ctx := newPseudoClassFileContext()
 
 	typeShape := modCtx.typeString(
@@ -59,7 +59,7 @@ func (d DocLanguageHelper) GetMethodName(m *schema.Method) string {
 }
 
 func (d DocLanguageHelper) GetMethodResultName(
-	_ *schema.Package, _ string, _ *schema.Resource, m *schema.Method,
+	_ schema.PackageReference, _ string, _ *schema.Resource, m *schema.Method,
 ) string {
 	// TODO revise when method support is built, revise when output-versioned functions are built
 	return tokenToFunctionResultClassName(nil, m.Function.Token).String()

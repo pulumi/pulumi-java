@@ -186,6 +186,8 @@ var expectedFailures = map[string]string{
 	"l2-namespaced-provider":                "components with resources as inputs/outputs not supported",
 	"l2-component-property-deps":            "compilation error",
 	"l2-parameterized-resource":             "compilation error",
+	"l2-explicit-providers":                 "should have 6 item(s), but has 7",
+	"l2-invoke-scalar":                      "exception at runtime",
 	"l3-component-simple":                   "compilation error",
 }
 
