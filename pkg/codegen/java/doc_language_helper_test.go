@@ -18,11 +18,13 @@ func TestGetLanguageTypeString(t *testing.T) {
 	assert.NoError(t, err)
 	dlh := DocLanguageHelper{}
 	for _, input := range []bool{false, true} {
-		ts := dlh.GetLanguageTypeString(pkg, "",
-			findPlainType(pkg, "aws:config/endpoints:endpoints"), input)
+		ts := dlh.GetTypeName(pkg,
+			findPlainType(pkg, "aws:config/endpoints:endpoints"),
+			input, "")
 		assert.Equal(t, "Endpoints", ts)
-		ts2 := dlh.GetLanguageTypeString(pkg, "",
-			findInputType(pkg, "aws:config/endpoints:endpoints"), input)
+		ts2 := dlh.GetTypeName(pkg,
+			findInputType(pkg, "aws:config/endpoints:endpoints"),
+			input, "")
 		assert.Equal(t, "EndpointsArgs", ts2)
 	}
 }

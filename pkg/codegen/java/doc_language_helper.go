@@ -17,10 +17,10 @@ type DocLanguageHelper struct{}
 
 var _ codegen.DocLanguageHelper = DocLanguageHelper{}
 
-func (d DocLanguageHelper) GetLanguageTypeString(
-	pkg *schema.Package, moduleName string, t schema.Type, input bool,
+func (d DocLanguageHelper) GetTypeName(
+	pkg *schema.Package, t schema.Type, input bool, relateToModule string,
 ) string {
-	modCtx := &modContext{pkg: pkg.Reference(), mod: moduleName}
+	modCtx := &modContext{pkg: pkg.Reference(), mod: relateToModule}
 	ctx := newPseudoClassFileContext()
 
 	typeShape := modCtx.typeString(
