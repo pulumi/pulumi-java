@@ -1090,13 +1090,129 @@ public final class LocalWorkspace extends Workspace {
         }
     }
 
-    // private static boolean optOutOfVersionCheck(Map<String, String>
-    // environmentVariables) {
-    // boolean hasSkipEnvVar = environmentVariables != null &&
-    // environmentVariables.containsKey("PULUMI_SKIP");
-    // boolean optOut = hasSkipEnvVar || System.getenv("PULUMI_SKIP") != null;
-    // return optOut;
-    // }
+    @Override
+    public ConfigValue getConfigWithOptions(String stackName, String key, ConfigOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("config");
+        args.add("get");
+        if (options.getPath()) {
+            args.add("--path");
+        }
+        if (options.getConfigFile() != null) {
+            args.add("--config-file");
+            args.add(options.getConfigFile());
+        }
+        args.add(Objects.requireNonNull(key));
+        args.add("--json");
+        args.add("--stack");
+        args.add(Objects.requireNonNull(stackName));
+        var result = runCommand(args);
+        return serializer.deserializeJson(result.standardOutput(), ConfigValue.class);
+    }
+
+    @Override
+    public void setConfigWithOptions(String stackName, String key, ConfigValue value, ConfigOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("config");
+        args.add("set");
+        if (options.getPath()) {
+            args.add("--path");
+        }
+        if (options.getConfigFile() != null) {
+            args.add("--config-file");
+            args.add(options.getConfigFile());
+        }
+        args.add(Objects.requireNonNull(key));
+        Objects.requireNonNull(value);
+        var secretArg = value.isSecret() ? "--secret" : "--plaintext";
+        args.add(secretArg);
+        args.add("--stack");
+        args.add(Objects.requireNonNull(stackName));
+        args.add("--non-interactive");
+        args.add("--");
+        args.add(value.value());
+        runCommand(args);
+    }
+
+    @Override
+    public void removeConfigWithOptions(String stackName, String key, ConfigOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("config");
+        args.add("rm");
+        args.add(Objects.requireNonNull(key));
+        args.add("--stack");
+        args.add(Objects.requireNonNull(stackName));
+        if (options.getPath()) {
+            args.add("--path");
+        }
+        if (options.getConfigFile() != null) {
+            args.add("--config-file");
+            args.add(options.getConfigFile());
+        }
+        runCommand(args);
+    }
+
+    @Override
+    public Map<String, ConfigValue> getAllConfigWithOptions(String stackName, GetAllConfigOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("config");
+        if (options.getShowSecrets()) {
+            args.add("--show-secrets");
+        }
+        if (options.getConfigFile() != null) {
+            args.add("--config-file");
+            args.add(options.getConfigFile());
+        }
+        args.add("--json");
+        args.add("--stack");
+        args.add(Objects.requireNonNull(stackName));
+        var result = runCommand(args);
+        if (result.standardOutput().isBlank()) {
+            return Collections.emptyMap();
+        }
+        var mapType = new TypeToken<Map<String, ConfigValue>>() {}.getType();
+        return serializer.deserializeJson(result.standardOutput(), mapType);
+    }
+
+    @Override
+    public void setAllConfigWithOptions(String stackName, Map<String, ConfigValue> configMap, ConfigOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("config");
+        args.add("set-all");
+        args.add("--stack");
+        args.add(Objects.requireNonNull(stackName));
+        if (options.getPath()) {
+            args.add("--path");
+        }
+        if (options.getConfigFile() != null) {
+            args.add("--config-file");
+            args.add(options.getConfigFile());
+        }
+        for (var entry : configMap.entrySet()) {
+            String secretArg = entry.getValue().isSecret() ? "--secret" : "--plaintext";
+            args.add(secretArg);
+            args.add(entry.getKey() + "=" + entry.getValue().value());
+        }
+        runCommand(args);
+    }
+
+    @Override
+    public void removeAllConfigWithOptions(String stackName, Collection<String> keys, ConfigOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("config");
+        args.add("rm-all");
+        args.add("--stack");
+        args.add(Objects.requireNonNull(stackName));
+        if (options.getPath()) {
+            args.add("--path");
+        }
+        if (options.getConfigFile() != null) {
+            args.add("--config-file");
+            args.add(options.getConfigFile());
+        }
+        args.addAll(Objects.requireNonNull(keys));
+        runCommand(args);
+    }
 
     @FunctionalInterface
     private interface WorkspaceStackFactory {
