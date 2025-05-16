@@ -1,17 +1,19 @@
 # Composite targets simplify local dev scenarios
 
+.PHONY: build
 build::	ensure build_go build_sdk
 
+.PHONY: ensure
 ensure::	ensure_sdk
 
 PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 
 # Go project rooted at `pkg/` implements Pulumi Java language plugin
 # and Java go as a Go library.
+.PHONY: build_go
+build_go: bin/pulumi-language-java bin/pulumi-java-gen
 
-build_go::
-	cd pkg && go build -v all
-
+.PHONY: test_go
 test_go:: build_go submodule_update
 	cd pkg && go test ./...
 
@@ -26,6 +28,17 @@ bin/pulumi-java-gen: ${PKG_FILES}
 	cd pkg && go build -o ../bin \
 		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" \
 		github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
+
+.PHONY: install
+install: install_sdk install_go
+
+.PHONY: install_go
+install_go: install_pulumi-language-java install_pulumi-java-gen
+
+# Install a binary onto GOPATH
+.PHONY: install_%
+install_%: bin/%
+	cp $< $(or $(shell go env GOBIN),$(shell go env GOPATH)/bin)/$*
 
 # Java SDK is a gradle project rooted at `sdk/java`
 
