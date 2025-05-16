@@ -15,6 +15,7 @@ import (
 	"os/exec"
 	"os/signal"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"syscall"
 	"time"
@@ -393,7 +394,6 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 		}
 	}()
 	if err := runCommand(cmd); err != nil {
-
 		// The command failed. Dump any data we collected to
 		// the actual stdout/stderr streams, so they get
 		// displayed to the user.
@@ -427,7 +427,7 @@ func (host *javaLanguageHost) RunPlugin(
 		ProgramArgs: req.Args,
 	}
 
-	executor, err := executors.NewJavaExecutor(pluginExecOptions, false)
+	executor, err := executors.NewJavaExecutor(pluginExecOptions, req.GetAttachDebugger())
 	if err != nil {
 		return err
 	}
@@ -445,8 +445,71 @@ func (host *javaLanguageHost) RunPlugin(
 	cmd := exec.Command(executable, args...)
 	cmd.Dir = req.Pwd
 	cmd.Env = req.Env
-	cmd.Stdout = stdout
-	cmd.Stderr = stderr
+	var stdoutBuf bytes.Buffer
+	var tr io.Reader
+	if req.GetAttachDebugger() {
+		cmd.Stdout = &stdoutBuf
+		func() {
+			// If we have a debugger attached filter the output
+			if req.GetAttachDebugger() {
+				scanner := bufio.NewScanner(&stdoutBuf)
+				for scanner.Scan() {
+					// only print if we have the port number in the output.
+					// mvnDebug prints other stuff, which RunPlugin doesn't
+					// expect, so we have to filter it out.
+					if regexp.MustCompile("%d+").MatchString(scanner.Text()) {
+						stdout.Write(scanner.Bytes())
+					}
+				}
+			}
+			if req.GetAttachDebugger() {
+				pr, pw := io.Pipe()
+				cmd.Stderr = pw
+
+				tr = io.TeeReader(pr, stderr)
+			}
+		}()
+	} else {
+		cmd.Stdout = stdout
+		cmd.Stderr = stderr
+	}
+
+	if req.GetAttachDebugger() {
+		go func() {
+			err := WaitForDebuggerReady(tr)
+			if err != nil {
+				logging.Errorf("failed to wait for debugger: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+
+			// emit a debug configuration
+			debugConfig, err := structpb.NewStruct(map[string]any{
+				"name":     fmt.Sprintf("Pulumi: Plugin (%s)", req.GetName()),
+				"type":     "java",
+				"request":  "attach",
+				"hostName": "localhost",
+				"port":     8000,
+			})
+			if err != nil {
+				logging.Errorf("failed to serialize debug configuration: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+			engineClient, closer, err := host.connectToEngine()
+			if err != nil {
+				logging.Errorf("unable to connect to host engine: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+			defer contract.IgnoreClose(closer)
+			_, err = engineClient.StartDebugging(server.Context(), &pulumirpc.StartDebuggingRequest{
+				Config:  debugConfig,
+				Message: fmt.Sprintf("on port %d", 8000),
+			})
+			if err != nil {
+				logging.Errorf("unable to start debugging: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+		}()
+	}
 
 	if err = cmd.Run(); err != nil {
 		var exiterr *exec.ExitError
