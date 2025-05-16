@@ -29,6 +29,15 @@ func TestGetLanguageTypeString(t *testing.T) {
 	}
 }
 
+func TestGetModuleName(t *testing.T) {
+	t.Parallel()
+	var helper DocLanguageHelper
+
+	assert.Equal(t, "", helper.GetModuleName(nil, "index"))
+	assert.Equal(t, "plain", helper.GetModuleName(nil, "plain"))
+	assert.Equal(t, "m_moduleName", helper.GetModuleName(nil, "m/moduleName"))
+}
+
 func readPackage(schemaJSON string) (*schema.Package, error) {
 	f, err := os.Open(schemaJSON)
 	if err != nil {
