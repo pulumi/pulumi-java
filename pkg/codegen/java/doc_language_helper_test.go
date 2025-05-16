@@ -10,9 +10,10 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
-func TestGetLanguageTypeString(t *testing.T) {
+func TestGetTypeName(t *testing.T) {
 	schemaJSON := "../testing/test/testdata/mini-awsclassic/schema.json"
 	pkg, err := readPackage(schemaJSON)
 	assert.NoError(t, err)
@@ -36,6 +37,33 @@ func TestGetModuleName(t *testing.T) {
 	assert.Equal(t, "", helper.GetModuleName(nil, "index"))
 	assert.Equal(t, "plain", helper.GetModuleName(nil, "plain"))
 	assert.Equal(t, "m_moduleName", helper.GetModuleName(nil, "m/moduleName"))
+}
+
+func TestGetResourceName(t *testing.T) {
+	t.Parallel()
+	var helper DocLanguageHelper
+
+	pkg, _, err := schema.BindSpec(schema.PackageSpec{
+		Name: "example",
+		Resources: map[string]schema.ResourceSpec{
+			"example:index:ComponentResource": {
+				IsComponent: true,
+			},
+			"example:nested:Resource": {
+				IsComponent: true,
+			},
+		},
+	}, nil, schema.ValidationOptions{})
+	require.NoError(t, err)
+
+	must := func(r *schema.Resource, ok bool) *schema.Resource {
+		require.True(t, ok)
+		return r
+	}
+
+	assert.Equal(t, "Provider", helper.GetResourceName(pkg.Provider))
+	assert.Equal(t, "ComponentResource", helper.GetResourceName(must(pkg.GetResource("example:index:ComponentResource"))))
+	assert.Equal(t, "Resource", helper.GetResourceName(must(pkg.GetResource("example:nested:Resource"))))
 }
 
 func readPackage(schemaJSON string) (*schema.Package, error) {
