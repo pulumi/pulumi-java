@@ -52,6 +52,10 @@ func (DocLanguageHelper) GetPropertyName(p *schema.Property) (string, error) {
 	return names.Ident(p.Name).AsProperty().Getter(), nil
 }
 
+func (DocLanguageHelper) GetResourceName(r *schema.Resource) string {
+	return resourceName(r)
+}
+
 func (DocLanguageHelper) GetFunctionName(f *schema.Function) string {
 	return tokenToFunctionName(f.Token)
 }
