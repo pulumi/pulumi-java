@@ -22,7 +22,6 @@ import static com.pulumi.serialization.internal.ConverterTests.ContainerColor.Bl
 import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ComplexTypeConverterTest {
 
@@ -168,6 +167,41 @@ class ComplexTypeConverterTest {
                 .put("private", "test")
                 .put("size", 6)
                 .put("color", "blue")
+                .build()
+        ).join();
+        var data = converter.convertValue(
+                "TestComplexType1", serialized, ComplexType1.class
+        );
+
+        assertThat(data.getValueNullable()).isNotNull();
+        assertThat(data.getValueNullable().s).isEqualTo("str");
+        assertThat(data.getValueNullable().b).isTrue();
+        assertThat(data.getValueNullable().i).isEqualTo(42);
+        assertThat(data.getValueNullable().d).isEqualTo(1.5);
+        assertThat(data.getValueNullable().list).hasSameElementsAs(ImmutableList.of(true, false));
+        assertThat(data.getValueNullable().map).containsAllEntriesOf(ImmutableMap.of("k", 10));
+        assertThat(data.getValueNullable().$private).isEqualTo("test");
+        assertThat(data.getValueNullable().size).isEqualTo(ContainerSize.SixInch);
+        assertThat(data.getValueNullable().color).isEqualTo(Blue);
+
+        assertThat(data.isKnown()).isTrue();
+    }
+
+    @Test
+    void testTestComplexType1ExtraDataDoesNotThrow() {
+        var deserializer = new Deserializer(log);
+        var converter = new Converter(log, deserializer);
+        var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
+                .put("s", "str")
+                .put("b", true)
+                .put("i", 42)
+                .put("d", 1.5)
+                .put("list", ImmutableList.of(true, false))
+                .put("map", ImmutableMap.of("k", 10))
+                .put("private", "test")
+                .put("size", 6)
+                .put("color", "blue")
+                .put("extra", "data") // extra data not represented in the ComplexType1 class
                 .build()
         ).join();
         var data = converter.convertValue(
@@ -426,27 +460,6 @@ class ComplexTypeConverterTest {
                 return this.$;
             }
         }
-    }
-
-    @Test
-    void testEscapedComplexType() {
-        var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEscapedComplexType");
-        var inMemoryLog = PulumiTestInternal.mockLog(logger);
-        var deserializer = new Deserializer(log);
-        var converter = new Converter(inMemoryLog, deserializer);
-
-        var map = new HashMap<String, Object>();
-        map.put("private", "test");
-        var serialized = serializeToValueAsync(map).join();
-
-        assertThatThrownBy(() -> converter.convertValue(
-                "EscapedComplexType", serialized, EscapedComplexType.class
-        )).isInstanceOf(UnsupportedOperationException.class)
-                .hasCauseInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(String.format(
-                        "to have a setter annotated with @%s(\"private\"), got: $private",
-                        Setter.class.getTypeName()
-                ));
     }
 
     @Test

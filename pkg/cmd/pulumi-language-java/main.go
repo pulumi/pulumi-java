@@ -16,6 +16,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"strings"
+	"syscall"
 	"time"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
@@ -27,6 +28,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/errutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
@@ -404,6 +406,68 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	return &pulumirpc.RunResponse{Error: errResult}, nil
 }
 
+// RunPlugin executes a plugin program and returns its result.
+func (host *javaLanguageHost) RunPlugin(
+	req *pulumirpc.RunPluginRequest, server pulumirpc.LanguageRuntime_RunPluginServer,
+) error {
+	logging.V(5).Infof("Attempting to run java plugin in %s", req.Pwd)
+
+	closer, stdout, stderr, err := rpcutil.MakeRunPluginStreams(server, false)
+	if err != nil {
+		return err
+	}
+	// Best effort close, but we try an explicit close and error check at the end as well
+	defer closer.Close()
+
+	// Create new executor options with the plugin directory and runtime args
+	pluginExecOptions := executors.JavaExecutorOptions{
+		Binary:      host.execOptions.Binary,
+		UseExecutor: host.execOptions.UseExecutor,
+		WD:          fsys.DirFS(req.Info.ProgramDirectory),
+		ProgramArgs: req.Args,
+	}
+
+	executor, err := executors.NewJavaExecutor(pluginExecOptions, false)
+	if err != nil {
+		return err
+	}
+
+	executable := executor.Cmd
+	args := executor.RunPluginArgs
+
+	if len(args) == 0 {
+		return errors.Errorf("executor %s does not currently support running plugins", executor.Cmd)
+	}
+
+	commandStr := strings.Join(args, " ")
+	logging.V(5).Infof("Language host launching process: %s %s", executable, commandStr)
+
+	cmd := exec.Command(executable, args...)
+	cmd.Dir = req.Pwd
+	cmd.Env = req.Env
+	cmd.Stdout = stdout
+	cmd.Stderr = stderr
+
+	if err = cmd.Run(); err != nil {
+		var exiterr *exec.ExitError
+		if errors.As(err, &exiterr) {
+			if status, ok := exiterr.Sys().(syscall.WaitStatus); ok {
+				return server.Send(&pulumirpc.RunPluginResponse{
+					//nolint:gosec // WaitStatus always uses the lower 8 bits for the exit code.
+					Output: &pulumirpc.RunPluginResponse_Exitcode{Exitcode: int32(status.ExitStatus())},
+				})
+			}
+			if len(exiterr.Stderr) > 0 {
+				return fmt.Errorf("program exited unexpectedly: %w: %s", exiterr, exiterr.Stderr)
+			}
+			return fmt.Errorf("program exited unexpectedly: %w", exiterr)
+		}
+		return fmt.Errorf("problem executing plugin program (could not run language executor): %w", err)
+	}
+
+	return closer.Close()
+}
+
 // constructEnv constructs an environ for `pulumi-language-java`
 // by enumerating all of the optional and non-optional evn vars present
 // in a RunRequest.
@@ -418,11 +482,11 @@ func (host *javaLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, co
 
 	maybeAppendEnv("monitor", req.GetMonitorAddress())
 	maybeAppendEnv("engine", host.engineAddress)
+	maybeAppendEnv("organization", req.GetOrganization())
 	maybeAppendEnv("project", req.GetProject())
 	maybeAppendEnv("stack", req.GetStack())
 	maybeAppendEnv("pwd", req.GetPwd())
 	maybeAppendEnv("dry_run", fmt.Sprintf("%v", req.GetDryRun()))
-	maybeAppendEnv("query_mode", fmt.Sprint(req.GetQueryMode()))
 	maybeAppendEnv("parallel", fmt.Sprint(req.GetParallel()))
 	maybeAppendEnv("tracing", host.tracing)
 	maybeAppendEnv("config", config)
@@ -608,6 +672,8 @@ func (host *javaLanguageHost) GenerateProject(
 		extraOptions = append(extraOptions, pcl.NonStrictBindOptions()...)
 	}
 
+	extraOptions = append(extraOptions, pcl.PreferOutputVersionedInvokes)
+
 	program, diags, err := pcl.BindDirectory(req.SourceDirectory, loader, extraOptions...)
 	if err != nil {
 		return nil, err
@@ -669,7 +735,7 @@ func (host *javaLanguageHost) GenerateProgram(
 		}
 	}
 
-	program, diags, err := pcl.BindProgram(parser.Files, pcl.Loader(loader))
+	program, diags, err := pcl.BindProgram(parser.Files, pcl.Loader(loader), pcl.PreferOutputVersionedInvokes)
 	if err != nil {
 		return nil, err
 	}
@@ -729,7 +795,9 @@ func (host *javaLanguageHost) GeneratePackage(
 		}, nil
 	}
 
-	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, loader)
+	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, loader, schema.ValidationOptions{
+		AllowDanglingReferences: true,
+	})
 	if err != nil {
 		return nil, err
 	}
@@ -746,6 +814,7 @@ func (host *javaLanguageHost) GeneratePackage(
 		req.ExtraFiles,
 		req.LocalDependencies,
 		req.Local,
+		false, /*legacyBuildFiles*/
 	)
 	if err != nil {
 		return nil, err
@@ -845,7 +914,7 @@ func (host *javaLanguageHost) Pack(_ context.Context, req *pulumirpc.PackRequest
 	gradlePublishCmd.Stderr = os.Stderr
 	err = gradlePublishCmd.Run()
 	if err != nil {
-		return nil, fmt.Errorf("gradle publish: %w", err)
+		return nil, errutil.ErrorWithStderr(err, "gradle publish")
 	}
 
 	artifactPath := fmt.Sprintf(

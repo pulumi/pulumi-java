@@ -11,6 +11,11 @@ import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
+import com.pulumi.deployment.internal.Engine;
+import com.pulumi.deployment.internal.Monitor;
+import com.pulumi.deployment.internal.GrpcEngine;
+import com.pulumi.deployment.internal.GrpcMonitor;
+import com.pulumi.deployment.internal.InlineDeploymentSettings;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
 import com.pulumi.resources.StackOptions;
@@ -39,7 +44,18 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     @InternalUse
     public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
+        return completeConfiguration(deployment, options);
+    }
+
+    @InternalUse
+    public static PulumiInternal fromInline(InlineDeploymentSettings settings, StackOptions options) {
+        var deployment = DeploymentImpl.fromInline(settings);
+        return completeConfiguration(deployment, options);
+    }
+
+    private static PulumiInternal completeConfiguration(DeploymentImpl deployment, StackOptions options) {
         var instance = Deployment.getInstance();
+        var organizationName = deployment.getOrganizationName();
         var projectName = deployment.getProjectName();
         var stackName = deployment.getStackName();
         var runner = deployment.getRunner();
@@ -52,7 +68,7 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
         var outputs = new OutputContextInternal(outputFactory);
 
         var ctx = new ContextInternal(
-                projectName, stackName, logging, config, outputs, options.resourceTransformations()
+                organizationName, projectName, stackName, logging, config, outputs, options.resourceTransformations()
         );
         return new PulumiInternal(runner, ctx);
     }
@@ -63,6 +79,27 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
 
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
         return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
+    }
+
+    @InternalUse
+    public <T> CompletableFuture<T> runInlineAsync(Function<Context, CompletableFuture<T>> runnerFunc) {
+        return runner.runAsync(() -> runnerFunc.apply(stackContext))
+                .thenCompose(result -> result.result()
+                        .map(CompletableFuture::completedFuture)
+                        .orElseGet(() -> {
+                            var exceptions = result.exceptions();
+                            if (!exceptions.isEmpty()) {
+                                if (exceptions.size() == 1) {
+                                    return CompletableFuture.failedFuture(exceptions.get(0));
+                                }
+                                var composite = new RuntimeException("Multiple exceptions occurred");
+                                exceptions.forEach(composite::addSuppressed);
+                                return CompletableFuture.failedFuture(composite);
+                            }
+                            return CompletableFuture.failedFuture(
+                                    new IllegalStateException("No result or exceptions available"));
+                        }))
+                .thenCompose(Function.identity());
     }
 
     protected CompletableFuture<Result<Stack>> runAsyncResult(Consumer<Context> stackCallback) {

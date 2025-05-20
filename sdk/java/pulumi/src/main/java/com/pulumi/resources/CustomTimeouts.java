@@ -93,6 +93,78 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
     }
 
     /**
+     * Given a string representing a duration, such as "300ms", "-1.5h" or "2h45m", parse it into
+     * a {@link Duration}.
+     *
+     * @param timeout the string to parse
+     * @return the parsed duration, or null if the input string was empty or null
+     */
+    public static Duration parseTimeoutString(String timeout) {
+        if (timeout == null || timeout.isEmpty()) {
+            return null;
+        }
+
+        // A duration string is a possibly signed sequence of decimal numbers, each with optional
+        // fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns",
+        // "us" (or "µs"), "ms", "s", "m", "h".
+
+        String s = timeout;
+        boolean neg = false;
+        if (s.charAt(0) == '-' || s.charAt(0) == '+') {
+            neg = s.charAt(0) == '-';
+            s = s.substring(1);
+        }
+        if (s.equals("0")) {
+            return Duration.ZERO;
+        }
+        if (s.isEmpty()) {
+            throw new IllegalArgumentException("invalid duration " + timeout);
+        }
+
+        Duration duration = Duration.ZERO;
+        while (!s.isEmpty()) {
+            // find the next timeunit
+            int i = 0;
+            while (i < s.length() && (Character.isDigit(s.charAt(i)) || s.charAt(i) == '.')) {
+                i++;
+            }
+            // parse the number
+            double v = Double.parseDouble(s.substring(0, i));
+            // parse the unit
+            s = s.substring(i);
+            if (s.isEmpty()) {
+                throw new IllegalArgumentException("missing unit in duration " + timeout);
+            }
+
+            if (s.startsWith("ns")) {
+                duration = duration.plusNanos((long)v);
+                s = s.substring(2);
+            } else if (s.startsWith("µs") || s.startsWith("us")) {
+                duration = duration.plusNanos((long)(v * 1000));
+                s = s.substring(2);
+            } else if (s.startsWith("ms")) {
+                duration = duration.plusNanos((long)(v * 1_000_000));
+                s = s.substring(2);
+            } else if (s.startsWith("s")) {
+                duration = duration.plusNanos((long)(v * 1_000_000_000));
+                s = s.substring(1);
+            } else if (s.startsWith("m")) {
+                duration = duration.plusSeconds((long)(v * 60));
+                s = s.substring(1);
+            } else if (s.startsWith("h")) {
+                duration = duration.plusSeconds((long)(v * 3600));
+                s = s.substring(1);
+            } else if (s.startsWith("d")) {
+                duration = duration.plusSeconds((long)(v * 86400));
+                s = s.substring(1);
+            } else {
+                throw new IllegalArgumentException("invalid unit in duration " + timeout);
+            }
+        }
+        return neg ? duration.negated() : duration;
+    }
+
+    /**
      * @return a {@link CustomTimeouts} builder
      */
     public static Builder builder() {

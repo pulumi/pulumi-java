@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"path"
+	"path/filepath"
 	"slices"
 	"strings"
 
@@ -48,7 +48,8 @@ type generator struct {
 	//
 	// later on when apply a traversal sush as resourceGroup.getName(),
 	// we should rewrite it as resourceGroup.thenApply(getResourceGroupResult -> getResourceGroupResult.getName())
-	functionInvokes map[string]*schema.Function
+	functionInvokes          map[string]*schema.Function
+	emittedTypeImportSymbols codegen.StringSet
 }
 
 // genComment generates a comment into the output.
@@ -150,6 +151,25 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 	return foundRangeCall
 }
 
+// inspectFunctionCall visits the provided nodes and calls the inspect function
+// for every function call expression it encounters.
+func inspectFunctionCall(nodes []pcl.Node, inspect func(*model.FunctionCallExpression)) {
+	for _, node := range nodes {
+		diags := node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
+			// Ignore the node if it is not a function call.
+			call, ok := x.(*model.FunctionCallExpression)
+			if !ok {
+				return x, nil
+			}
+
+			inspect(call)
+			return x, nil
+		})
+
+		contract.Assertf(len(diags) == 0, "unexpected diagnostics: %v", diags)
+	}
+}
+
 func hasIterableResources(nodes []pcl.Node) bool {
 	for _, node := range nodes {
 		switch node := node.(type) {
@@ -186,8 +206,9 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	}
 
 	g := &generator{
-		program:         program,
-		functionInvokes: map[string]*schema.Function{},
+		program:                  program,
+		functionInvokes:          map[string]*schema.Function{},
+		emittedTypeImportSymbols: codegen.NewStringSet(),
 	}
 
 	g.Formatter = format.NewFormatter(g)
@@ -225,6 +246,16 @@ func GenerateProject(
 		return diagnostics
 	}
 
+	rootDirectory := directory
+	if project.Main != "" {
+		directory = filepath.Join(rootDirectory, project.Main)
+		// mkdir -p the subdirectory
+		err = os.MkdirAll(directory, 0o700)
+		if err != nil {
+			return fmt.Errorf("create main directory: %w", err)
+		}
+	}
+
 	// Set the runtime to "java" then marshal to Pulumi.yaml
 	project.Runtime = workspace.NewProjectRuntimeInfo("java", nil)
 	projectBytes, err := encoding.YAML.Marshal(project)
@@ -234,13 +265,13 @@ func GenerateProject(
 
 	filesWithPackages := make(map[string][]byte)
 
-	filesWithPackages["Pulumi.yaml"] = projectBytes
+	filesWithPackages[filepath.Join(rootDirectory, "Pulumi.yaml")] = projectBytes
 
 	for fileName, fileContents := range files {
 		if fileName == "MyStack.java" {
 			fileName = "App.java"
 		}
-		fileWithPackage := fmt.Sprintf("src/main/java/generated_program/%s", fileName)
+		fileWithPackage := filepath.Join(directory, "src", "main", "java", "generated_program", fileName)
 		filesWithPackages[fileWithPackage] = fileContents
 	}
 
@@ -252,21 +283,37 @@ func GenerateProject(
 	for _, p := range packages {
 		packageName := p.Name
 		version := p.Version
+
+		// Skip the pulumi package itself, as that is already included by default
+		// and listing it twice leads to build errors.
+		if packageName == "pulumi" {
+			continue
+		}
+
 		if version != nil {
+			namespace := "pulumi"
+			if p.Namespace != "" {
+				namespace = sanitizeImport(p.Namespace)
+			}
 			dependencySection := fmt.Sprintf(
 				`<dependency>
-					<groupId>com.pulumi</groupId>
+					<groupId>com.%s</groupId>
 					<artifactId>%s</artifactId>
 					<version>%s</version>
 				</dependency>`,
-				packageName, version.String(),
+				namespace, packageName, version.String(),
 			)
 			mavenDependenciesXML.WriteString(dependencySection)
 		}
 	}
 
 	repositories := make(map[string]bool)
-	coreSDKVersion := "(,1.0]"
+
+	// If no version is specified for the pulumi package, use the default SDK version. In either case, presently we emit
+	// a "soft" dependency requirement, which essentially means that it will be used if no other preference is expressed
+	// in the dependency tree. See https://maven.apache.org/pom.html#Dependency_Version_Requirement_Specification for
+	// more information.
+	coreSDKVersion := DefaultSdkVersion.String()
 	for name, dep := range localDependencies {
 		parts := strings.Split(dep, ":")
 		if len(parts) < 3 {
@@ -400,15 +447,15 @@ func GenerateProject(
 		coreSDKVersion,
 		mavenDependenciesXML.String(),
 	))
-	filesWithPackages["pom.xml"] = mavenPomXML.Bytes()
+	filesWithPackages[filepath.Join(directory, "pom.xml")] = mavenPomXML.Bytes()
 
 	for filePath, data := range filesWithPackages {
-		outPath := path.Join(directory, filePath)
-		err := os.MkdirAll(path.Dir(outPath), os.ModePerm)
+		dir := filepath.Dir(filePath)
+		err := os.MkdirAll(dir, os.ModePerm)
 		if err != nil {
-			return fmt.Errorf("could not write output program: %w", err)
+			return fmt.Errorf("could not create output directory %s: %w", dir, err)
 		}
-		err = os.WriteFile(outPath, data, 0o600)
+		err = os.WriteFile(filePath, data, 0o600)
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
@@ -472,22 +519,63 @@ func sanitizeImport(name string) string {
 	return replacedSlash
 }
 
-func pulumiImport(pkg string, module string, member string) string {
-	module = cleanModule(module)
-	if ignoreModule(module) {
-		return "com.pulumi." + sanitizeImport(pkg) + "." + member
-	} else if module == "" {
-		return "com.pulumi." + sanitizeImport(pkg)
-	}
-	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
+// Checks if this is a builtin stack reference or stack reference args
+func isBuiltin(pkg, module, member string) bool {
+	return pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs")
 }
 
-func pulumiInputImport(pkg string, module string, member string) string {
+func pulumiImport(pkg string, module string, member string, namespace string) string {
+	if namespace == "" {
+		namespace = "pulumi"
+	}
+	module = cleanModule(module)
+	if isBuiltin(pkg, module, member) {
+		return "com.pulumi.resources." + member
+	}
+	if ignoreModule(module) {
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." + member
+	} else if module == "" {
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg)
+	}
+	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
+}
+
+// For resource imports we need to consider the package reference in the schema of the resource
+// for generating the import, as it can override the default 'com.pulumi' base package.
+func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member string) string {
+	module = cleanModule(module)
+	if isBuiltin(pkg, module, member) {
+		return "com.pulumi.resources." + member
+	}
+	importName := "com.pulumi."
+	if r.Schema != nil && r.Schema.PackageReference != nil {
+		def, err := r.Schema.PackageReference.Definition()
+		contract.AssertNoErrorf(err, "failed to get package definition for %s", r.Schema.Token)
+		if info, ok := def.Language["java"].(PackageInfo); ok {
+			importName = info.BasePackageOrDefault()
+		} else if r.Schema.PackageReference.Namespace() != "" {
+			importName = "com." + sanitizeImport(r.Schema.PackageReference.Namespace()) + "."
+		}
+	}
+
+	if ignoreModule(module) {
+		return importName + sanitizeImport(pkg) + "." + member
+	} else if module == "" {
+		return importName + sanitizeImport(pkg)
+	}
+	return importName + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
+}
+
+func pulumiInputImport(pkg string, module string, member string, namespace string) string {
+	if namespace == "" {
+		namespace = "pulumi"
+	}
 	module = cleanModule(module)
 	if ignoreModule(module) {
-		return "com.pulumi." + sanitizeImport(pkg) + ".inputs." + member
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + ".inputs." + member
 	}
-	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + ".inputs." + member
+	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." +
+		sanitizeImport(module) + ".inputs." + member
 }
 
 func literalExprText(expr model.Expression) (string, bool) {
@@ -509,7 +597,9 @@ func literalExprText(expr model.Expression) (string, bool) {
 
 // Recursively derives imports from object by using its property type and
 // any nested object property that it instantiates
-func collectObjectImports(object *model.ObjectConsExpression, objectType *schema.ObjectType) []string {
+func collectObjectImports(
+	object *model.ObjectConsExpression, objectType *schema.ObjectType, namespace string,
+) []string {
 	imports := make([]string, 0)
 	// add imports of the type itself
 	fullyQualifiedTypeName := objectType.Token
@@ -522,9 +612,9 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 			objectTypeName = objectTypeName + "Args"
 		}
 
-		imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+		imports = append(imports, pulumiInputImport(pkg, module, objectTypeName, namespace))
 	} else {
-		imports = append(imports, pulumiImport(pkg, module, objectTypeName))
+		imports = append(imports, pulumiImport(pkg, module, objectTypeName, namespace))
 	}
 
 	// then check whether one of the properties of this object is an object too
@@ -540,7 +630,7 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 					case *schema.ObjectType:
 						innerObjectType := objectPropertyType
 						// recurse into nested object
-						imports = append(imports, collectObjectImports(innerObject, innerObjectType)...)
+						imports = append(imports, collectObjectImports(innerObject, innerObjectType, namespace)...)
 					}
 				}
 			}
@@ -563,16 +653,21 @@ func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
 	}
 }
 
-func collectResourceImports(resource *pcl.Resource) []string {
+func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 	imports := make([]string, 0)
 	pkg, module, name, _ := resource.DecomposeToken()
-	resourceImport := pulumiImport(pkg, module, name)
+	resourceImport := pulumiResourceImport(resource, pkg, module, name)
 	imports = append(imports, resourceImport)
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
 		// import args type name
-		argsTypeName := resourceArgsTypeName(resource)
-		resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
-		imports = append(imports, resourceArgsImport)
+		argsTypeName := g.resourceArgsTypeName(resource)
+		alreadyFullyQualified := strings.Contains(argsTypeName, ".")
+		if !alreadyFullyQualified {
+			resourceArgsImport := pulumiResourceImport(resource, pkg, module, argsTypeName)
+			imports = append(imports, resourceArgsImport)
+		} else {
+			imports = append(imports, argsTypeName)
+		}
 		resourceProperties := typedResourceProperties(resource)
 		for _, inputProperty := range resource.Inputs {
 			inputType := resourceProperties[inputProperty.Name]
@@ -582,7 +677,8 @@ func collectResourceImports(resource *pcl.Resource) []string {
 				switch inputProperty.Value.(type) {
 				case *model.ObjectConsExpression:
 					object := inputProperty.Value.(*model.ObjectConsExpression)
-					imports = append(imports, collectObjectImports(object, objectType)...)
+					imports = append(imports, collectObjectImports(
+						object, objectType, resource.Schema.PackageReference.Namespace())...)
 				}
 			case *schema.ArrayType:
 				arrayType := reduceInputTypeFromArray(inputType.(*schema.ArrayType))
@@ -600,7 +696,10 @@ func collectResourceImports(resource *pcl.Resource) []string {
 							switch arrayObject := arrayObject.(type) {
 							case *model.ObjectConsExpression:
 								object := arrayObject
-								imports = append(imports, collectObjectImports(object, arrayInnerTypeAsObject)...)
+								imports = append(imports, collectObjectImports(
+									object,
+									arrayInnerTypeAsObject,
+									resource.Schema.PackageReference.Namespace())...)
 							}
 						}
 					}
@@ -629,7 +728,7 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 		return importDef, member
 	}
 
-	return pulumiImport(pkg, module, names.Title(module)+"Functions"), member
+	return pulumiImport(pkg, module, names.Title(module)+"Functions", ""), member
 }
 
 func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallExpression) []string {
@@ -651,11 +750,11 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 					return imports
 				}
 				argumentExprType := functionSchema.Inputs.InputShape
-				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType)...)
+				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType, "")...)
 			}
 		}
-	case "stack", "projectName":
-		// stack() and projectName() functions are pulumi built-ins
+	case "stack", "project", "organization":
+		// stack(), project(), and organization() functions are pulumi built-ins
 		// they require the Deployment class
 		imports = append(imports, "com.pulumi.deployment.Deployment")
 	}
@@ -696,7 +795,7 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 		case *pcl.Resource:
 			// collect resource imports
 			resource := node
-			imports = append(imports, collectResourceImports(resource)...)
+			imports = append(imports, g.collectResourceImports(resource)...)
 			for _, prop := range resource.Inputs {
 				_, diags := model.VisitExpression(prop.Value, model.IdentityVisitor, visitFunctionCalls)
 				g.diagnostics = append(g.diagnostics, diags...)
@@ -715,22 +814,118 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 	return removeDuplicates(imports)
 }
 
+// checks whether the input expression is an object that has a property "dependsOn"
+func containsDependsOnInvokeOption(expr model.Expression) bool {
+	if invokeOptions, ok := expr.(*model.ObjectConsExpression); ok {
+		for _, item := range invokeOptions.Items {
+			if key, ok := literalExprText(item.Key); ok && key == "dependsOn" {
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
 // genPreamble generates import statements, main class and stack definition.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
+	javaStringType := "String"
+
 	g.Fgen(w, "package generated_program;")
 	g.genNewline(w)
 	g.genNewline(w)
 	g.genImport(w, "com.pulumi.Context")
 	g.genImport(w, "com.pulumi.Pulumi")
 	g.genImport(w, "com.pulumi.core.Output")
-	// Write out the specific imports from used nodes
-	for _, importDef := range g.collectImports(nodes) {
-		g.genImport(w, importDef)
+
+	imports := g.collectImports(nodes)
+
+	importMember := func(importDef string) string {
+		return importDef[strings.LastIndex(importDef, ".")+1:]
 	}
 
-	if containsFunctionCall("toJSON", nodes) {
-		// import static functions from the Serialization class
-		g.Fgen(w, "import static com.pulumi.codegen.internal.Serialization.*;\n")
+	// a map to keep track of member names of imports
+	// e.g. ResourceType -> [
+	//     com.pulumi.my_package.ResourceType
+	//     com.pulumi.your_package.ResourceType
+	// ]
+	importsByMember := map[string]codegen.StringSet{}
+	for _, importDef := range imports {
+		importMember := importMember(importDef)
+		if _, ok := importsByMember[importMember]; !ok {
+			// initialize the set
+			importsByMember[importMember] = codegen.NewStringSet()
+		}
+
+		importsByMember[importMember].Add(importDef)
+	}
+
+	// if we have two imports such as the following:
+	// - com.pulumi.my_package.ResourceType
+	// - com.pulumi.your_package.ResourceType
+	// then we shouldn't generate import statements for them
+	// instead, we use the fully qualified name at the usage site
+	importsWithDuplicateName := codegen.NewStringSet()
+	emittedTypeImportSymbols := codegen.NewStringSet()
+	for _, importDef := range imports {
+		if len(importsByMember[importMember(importDef)]) > 1 {
+			importsWithDuplicateName.Add(importDef)
+		} else {
+			emittedTypeImportSymbols.Add(importDef)
+		}
+	}
+
+	// Write out the specific imports from used nodes
+	for _, importDef := range imports {
+		if strings.HasSuffix(importDef, ".String") {
+			// A type named `String` is being imported so we need to fully qualify our
+			// use of the built-in `java.lang.String` type to avoid the conflict.
+			javaStringType = "java.lang.String"
+		}
+
+		if emittedTypeImportSymbols.Has(importDef) {
+			// do not generate import statements for symbols with duplicate members
+			// because those will require full qualification at the usage site
+			g.genImport(w, importDef)
+		}
+	}
+
+	g.emittedTypeImportSymbols = emittedTypeImportSymbols
+
+	functionImports := codegen.NewStringSet()
+
+	inspectFunctionCall(nodes, func(call *model.FunctionCallExpression) {
+		switch call.Name {
+		case "toJSON":
+			functionImports.Add("static com.pulumi.codegen.internal.Serialization.*")
+		case "readDir":
+			functionImports.Add("static com.pulumi.codegen.internal.Files.readDir")
+		case "fileAsset":
+			functionImports.Add("com.pulumi.asset.FileAsset")
+		case "fileArchive":
+			functionImports.Add("com.pulumi.asset.FileArchive")
+		case "stringAsset":
+			functionImports.Add("com.pulumi.asset.StringAsset")
+		case "remoteAsset":
+			functionImports.Add("com.pulumi.asset.RemoteAsset")
+		case "assetArchive":
+			functionImports.Add("com.pulumi.asset.AssetArchive")
+		case pcl.Invoke:
+			hasInvokeOptions := len(call.Args) == 3
+			if hasInvokeOptions {
+				if containsDependsOnInvokeOption(call.Args[2]) {
+					// for invoke output options, instantiate the builder from its parent class
+					// i.e. (new InvokeOutputOptions.Builder()).dependsOn(resource).build()
+					functionImports.Add("com.pulumi.deployment.InvokeOutputOptions")
+				} else {
+					functionImports.Add("com.pulumi.deployment.InvokeOptions")
+				}
+			}
+		}
+	})
+
+	for _, functionImport := range functionImports.SortedValues() {
+		g.genImport(w, functionImport)
 	}
 
 	if containsRangeExpr(nodes) {
@@ -740,22 +935,6 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	if requiresImportingCustomResourceOptions(nodes) {
 		g.genImport(w, "com.pulumi.resources.CustomResourceOptions")
-	}
-
-	if containsFunctionCall("readDir", nodes) {
-		g.genImport(w, "static com.pulumi.codegen.internal.Files.readDir")
-	}
-
-	if containsFunctionCall("fileAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.FileAsset")
-	}
-
-	if containsFunctionCall("fileArchive", nodes) {
-		g.genImport(w, "com.pulumi.asset.FileArchive")
-	}
-
-	if containsFunctionCall("stringAsset", nodes) {
-		g.genImport(w, "com.pulumi.asset.StringAsset")
 	}
 
 	g.genImport(w, "java.util.List")
@@ -769,7 +948,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	// Emit Stack class signature
 	g.Fprint(w, "public class App {")
 	g.genNewline(w)
-	g.Fprint(w, "    public static void main(String[] args) {\n")
+	g.Fprintf(w, "    public static void main(%s[] args) {\n", javaStringType)
 	g.Fgen(w, "        Pulumi.run(App::stack);\n")
 	g.Fgen(w, "    }\n")
 	g.genNewline(w)
@@ -789,7 +968,7 @@ func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 }
 
 // resourceTypeName computes the Java resource class name for the given resource.
-func resourceTypeName(resource *pcl.Resource) string {
+func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, diags := resource.DecomposeToken()
 	contract.Assertf(len(diags) == 0, "failed to decompose resource token: %v", diags)
@@ -797,12 +976,19 @@ func resourceTypeName(resource *pcl.Resource) string {
 		member = "Provider"
 	}
 
+	if !g.emittedTypeImportSymbols.Has(pulumiResourceImport(resource, pkg, module, member)) {
+		// if we didn't emit an import statement for this symbol
+		// it means that there was a duplicate member name in the imports
+		// so return the fully qualified resource name
+		return pulumiResourceImport(resource, pkg, module, member)
+	}
+
 	return names.Title(member)
 }
 
 // resourceArgsTypeName computes the Java arguments class name for the given resource.
-func resourceArgsTypeName(r *pcl.Resource) string {
-	return fmt.Sprintf("%sArgs", resourceTypeName(r))
+func (g *generator) resourceArgsTypeName(r *pcl.Resource) string {
+	return fmt.Sprintf("%sArgs", g.resourceTypeName(r))
 }
 
 // Returns the expression that should be emitted for a resource's "name" parameter given its base name
@@ -864,6 +1050,7 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.Parent != nil ||
 		resource.Options.Protect != nil ||
 		resource.Options.RetainOnDelete != nil ||
+		resource.Options.ImportID != nil ||
 		resource.Options.Provider != nil
 }
 
@@ -939,6 +1126,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			g.Fgen(w, ")")
 			g.genNewline(w)
 		}
+		if resource.Options.ImportID != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".importId(%v)", resource.Options.ImportID)
+			g.genNewline(w)
+		}
 		g.genIndent(w)
 		g.Fgen(w, ".build()")
 	})
@@ -959,8 +1151,8 @@ func typedResourceProperties(resource *pcl.Resource) map[string]schema.Type {
 }
 
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
-	resourceTypeName := resourceTypeName(resource)
-	resourceArgs := resourceArgsTypeName(resource)
+	resourceTypeName := g.resourceTypeName(resource)
+	resourceArgs := g.resourceArgsTypeName(resource)
 	variableName := names.LowerCamelCase(names.MakeValidIdentifier(resource.Name()))
 	g.genTrivia(w, resource.Definition.Tokens.GetType(""))
 	for _, l := range resource.Definition.Tokens.GetLabels(nil) {
@@ -975,9 +1167,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			// latter will typically be a union of the type we've computed and one or more output types. This may result
 			// in inaccurate code generation later on. Arguably this is a bug in the generator, but this will have to do
 			// for now.
-			_, diagnostics := resource.InputType.Traverse(hcl.TraverseAttr{Name: input.Name})
+			targetType, diagnostics := resource.InputType.Traverse(hcl.TraverseAttr{Name: input.Name})
 			g.diagnostics = append(g.diagnostics, diagnostics...)
-			value := g.lowerExpression(input.Value, input.Type())
+			value := g.lowerExpression(input.Value, targetType.(model.Type))
 			input.Value = value
 		}
 	}
@@ -1032,56 +1224,42 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 
 		} else {
 			// for each-loop through the elements to creates a resource from each one
-			switch rangeExpr.(type) {
-			case *model.FunctionCallExpression:
-				funcCall := rangeExpr.(*model.FunctionCallExpression)
-				switch funcCall.Name {
-				case pcl.IntrinsicConvert:
-					firstArg := funcCall.Args[0]
-					switch firstArg := firstArg.(type) {
-					case *model.ScopeTraversalExpression:
-						traversalExpr := firstArg
-						if len(traversalExpr.Parts) == 2 {
-							// Meaning here we have {root}.{part} expression which the most common
-							// check whether {root} is actually a variable name that holds the result
-							// of a function invoke
-							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
-								resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
-								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
-								g.genIndent(w)
-								g.Fgenf(w, "final var %s = ", resource.Name())
-								g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
-								g.Indented(func() {
-									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
-									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s()) {\n", g.Indent, resultTypeName, part)
-									g.Indented(func() {
-										suffix := "range.key()"
-										g.Fgenf(w, "%svar resource = ", g.Indent)
-										instantiate(makeResourceName(resource.Name(), suffix))
-										g.Fgenf(w, ";\n\n")
-										g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
-									})
-									g.Fgenf(w, "%s}\n\n", g.Indent)
-									g.Fgenf(w, "%sreturn resources;\n", g.Indent)
-								})
-								g.Fgenf(w, "%s});\n\n", g.Indent)
-								return
-							}
-							// not an async function invoke
-							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-						} else {
-							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-						}
+			switch expr := resource.Options.Range.(type) {
+			case *model.ScopeTraversalExpression:
+				traversalExpr := expr
+				if len(traversalExpr.Parts) == 2 {
+					// Meaning here we have {root}.{part} expression which the most common
+					// check whether {root} is actually a variable name that holds the result
+					// of a function invoke
+					if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
+						resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
+						part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
+						g.genIndent(w)
+						g.Fgenf(w, "final var %s = ", resource.Name())
+						g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
+						g.Indented(func() {
+							g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
+							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s())) {\n", g.Indent, resultTypeName, part)
+							g.Indented(func() {
+								suffix := "range.key()"
+								g.Fgenf(w, "%svar resource = ", g.Indent)
+								instantiate(makeResourceName(resource.Name(), suffix))
+								g.Fgenf(w, ";\n\n")
+								g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
+							})
+							g.Fgenf(w, "%s}\n\n", g.Indent)
+							g.Fgenf(w, "%sreturn resources;\n", g.Indent)
+						})
+						g.Fgenf(w, "%s});\n\n", g.Indent)
+						return
 					}
+					// not an async function invoke
 					// wrap into range collection
 					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
-				default:
-					// assume function call returns a Range<T>
-					g.Fgenf(w, "%sfor (var range : %.12o) {\n", g.Indent, rangeExpr)
+				} else {
+					// wrap into range collection
+					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 				}
-
 			default:
 				// wrap into range collection
 				g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
@@ -1146,9 +1324,9 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 	g.genIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
-		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
-		// functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
-		g.Fgenf(w, "final var %s = %v;\n", variableName, localVariable.Definition.Value)
+		invokeCall := localVariable.Definition.Value.(*model.FunctionCallExpression)
+		functionDefinitionWithApplies := g.lowerExpression(invokeCall, invokeCall.Signature.ReturnType)
+		g.Fgenf(w, "final var %s = %v;\n", variableName, functionDefinitionWithApplies)
 	} else {
 		variable := localVariable.Definition.Value
 		g.Fgenf(w, "final var %s = %v;\n", variableName, g.lowerExpression(variable, variable.Type()))
@@ -1158,7 +1336,11 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 
 func (g *generator) genOutputAssignment(w io.Writer, outputVariable *pcl.OutputVariable) {
 	g.genIndent(w)
-	rewrittenOutVar := g.lowerExpression(outputVariable.Value, outputVariable.Type())
+	targetType := outputVariable.Value.Type()
+	if _, ok := targetType.(*model.OutputType); !ok {
+		targetType = model.NewOutputType(targetType)
+	}
+	rewrittenOutVar := g.lowerExpression(outputVariable.Value, targetType)
 	g.Fgenf(w, "ctx.export(\"%s\", %v);", outputVariable.Name(), rewrittenOutVar)
 	g.genNewline(w)
 }

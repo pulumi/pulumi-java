@@ -49,12 +49,12 @@ public class App {
             .build());
 
         final var subnets = Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
-            .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
+            .vpcId(vpc.applyValue(_vpc -> _vpc.id()))
             .build());
 
         // Create a security group that permits HTTP ingress and unrestricted egress.
         var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()
-            .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
+            .vpcId(vpc.applyValue(_vpc -> _vpc.id()))
             .egress(SecurityGroupEgressArgs.builder()
                 .protocol("-1")
                 .fromPort(0)
@@ -95,7 +95,7 @@ public class App {
 
         // Create a load balancer to listen for HTTP traffic on port 80.
         var webLoadBalancer = new LoadBalancer("webLoadBalancer", LoadBalancerArgs.builder()
-            .subnets(subnets.applyValue(getSubnetIdsResult -> getSubnetIdsResult.ids()))
+            .subnets(subnets.applyValue(_subnets -> _subnets.ids()))
             .securityGroups(webSecurityGroup.id())
             .build());
 
@@ -103,7 +103,7 @@ public class App {
             .port(80)
             .protocol("HTTP")
             .targetType("ip")
-            .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
+            .vpcId(vpc.applyValue(_vpc -> _vpc.id()))
             .build());
 
         var webListener = new Listener("webListener", ListenerArgs.builder()
@@ -142,7 +142,7 @@ public class App {
             .taskDefinition(appTask.arn())
             .networkConfiguration(ServiceNetworkConfigurationArgs.builder()
                 .assignPublicIp(true)
-                .subnets(subnets.applyValue(getSubnetIdsResult -> getSubnetIdsResult.ids()))
+                .subnets(subnets.applyValue(_subnets -> _subnets.ids()))
                 .securityGroups(webSecurityGroup.id())
                 .build())
             .loadBalancers(ServiceLoadBalancerArgs.builder()

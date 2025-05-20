@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "name": "example",
+  "keywords": [
+    "Testing",
+    "Pulumipus"
+  ],
+  "description": "Test the none setting for build-files",
+  "license": "MIT",
+  "types": {},
+  "readme": "hello this is the readme body.",
+  "homepage": "https://pulumi.com",
+  "repository": "https://github.com/pulumi/pulumi",
+  "resources": {},
+  "functions": {},
+  "language": {
+    "java": {
+      "buildFiles": "gradle"
+    }
+  }
+}

@@ -34,7 +34,7 @@ public class App {
                     .resources(ResourceRequirementsArgs.builder()
                         .limits(Map.ofEntries(
                             Map.entry("memory", "20Mi"),
-                            Map.entry("cpu", 0.2)
+                            Map.entry("cpu", "0.2")
                         ))
                         .build())
                     .build())

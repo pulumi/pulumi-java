@@ -8,6 +8,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"path"
+	"path/filepath"
 	"reflect"
 	"sort"
 	"strconv"
@@ -23,7 +24,7 @@ import (
 )
 
 // This should be bumped as required at the point of release.
-var DefaultSdkVersion = semver.Version{Major: 0, Minor: 19, Patch: 0}
+var DefaultSdkVersion = semver.Version{Major: 1, Minor: 0, Patch: 0}
 
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
@@ -916,15 +917,7 @@ func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	w := ctx.writer
 	fprintf(w, "%s.of(", ctx.ref(names.Output))
 	fprintf(w, "%s.builder()", ctx.ref(names.Alias))
-	if alias.Name != nil {
-		fprintf(w, ".name(\"%v\")", *alias.Name)
-	}
-	if alias.Project != nil {
-		fprintf(w, ".project(\"%v\")", *alias.Project)
-	}
-	if alias.Type != nil {
-		fprintf(w, ".type(\"%v\")", *alias.Type)
-	}
+	fprintf(w, ".type(\"%v\")", alias.Type)
 	fprintf(w, ".build()")
 	fprintf(w, ")")
 }
@@ -1170,6 +1163,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Output))
 	fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	fprintf(w, "            .version(%s.getVersion())\n", mod.utilitiesRef(ctx))
+	if url := pkg.PluginDownloadURL; url != "" {
+		fprintf(w, "            .pluginDownloadURL(%q)\n", url)
+	}
 
 	if len(r.Aliases) > 0 {
 		fprintf(w, "            .aliases(%s.of(\n", ctx.ref(names.List))
@@ -1794,13 +1790,13 @@ func (mod *modContext) utilitiesRef(ctx *classFileContext) string {
 }
 
 func gradleProjectPath() string {
-	return path.Join("src", "main", "java")
+	return filepath.Join("src", "main", "java")
 }
 
 func (mod *modContext) gen(fs fs) error {
 	pkgComponents := strings.Split(mod.packageName, ".")
 
-	dir := path.Join(gradleProjectPath(), path.Join(pkgComponents...))
+	dir := filepath.Join(gradleProjectPath(), filepath.Join(pkgComponents...))
 
 	var files []string
 	for p := range fs {
@@ -1815,8 +1811,8 @@ func (mod *modContext) gen(fs fs) error {
 
 	addClassFile := func(pkg names.FQN, className names.Ident, contents string) {
 		fqn := pkg.Dot(className)
-		relPath := path.Join(strings.Split(fqn.String(), ".")...)
-		path := path.Join(gradleProjectPath(), relPath) + ".java"
+		relPath := filepath.Join(strings.Split(fqn.String(), ".")...)
+		path := filepath.Join(gradleProjectPath(), relPath) + ".java"
 		files = append(files, path)
 		fs.add(path, []byte(contents))
 	}
@@ -2049,16 +2045,11 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				WithDefaultDependencies().
 				WithJavaSdkDependencyDefault(DefaultSdkVersion)
 
-			// All packages that SupportPack (which in some sense reflects the latest version of the schema) should use
-			// Gradle if no build system has been explicitly specified.
-			if p.SupportPack() {
-				if javaInfo.BuildFiles == "" {
-					javaInfo.BuildFiles = "gradle"
-				}
-			}
-
 			info = &javaInfo
 			infos[def] = info
+		}
+		if info.BasePackage == "" && p.Namespace() != "" {
+			info.BasePackage = "com." + sanitizeImport(p.Namespace()) + "."
 		}
 		return info
 	}
@@ -2236,6 +2227,7 @@ func GeneratePackage(
 	extraFiles map[string][]byte,
 	localDependencies map[string]string,
 	local bool,
+	legacyBuildFiles bool,
 ) (map[string][]byte, error) {
 	// Presently, Gradle is the primary build system we support for generated SDKs. Later on, when we validate the
 	// package in order to produce build system artifacts, we'll need a description and repository. To this end, we
@@ -2270,6 +2262,13 @@ func GeneratePackage(
 			)
 		}
 
+		// local dependencies should only be using the pulumi core sdk
+		// in the future we will be adding local dependencies to component providers
+		// but for non-component providers, we should only be using the pulumi core sdk
+		if parts[1] != "pulumi" {
+			continue
+		}
+
 		k := parts[0] + ":" + parts[1]
 		dependencies[k] = parts[2]
 
@@ -2298,38 +2297,48 @@ func GeneratePackage(
 		}
 	}
 
+	var useGradle bool
+	if local {
+		// Local packages do not use gradle.
+		useGradle = false
+	} else {
+		// `legacyBuildFiles is set by `pulumi-java-gen`. When we remove the
+		// deprecated `pulumi-java-gen` executable, we can remove the
+		// legacyBuildFiles flag.
+		if legacyBuildFiles {
+			// The default for legacy invocations is "none", so we need to see an explicit "gradle" setting.
+			useGradle = info.BuildFiles == "gradle"
+		} else {
+			// The default for new invocations is to use gradle, unless "none" is specified explicitly.
+			useGradle = info.BuildFiles != "none"
+		}
+	}
+
 	// Currently, packages come bundled with a version.txt resource that is used by generated code to report a version.
 	// When a build tool is configured, we defer the generation of this file to the build process so that e.g. CI
 	// processes can set the version to be used when releasing or publishing a package, as opposed to when the code for
 	// that package is generated. In the case that we are generating a package without a build tool, or a local package
 	// to be incorporated into a program with an existing build process, we need to emit the version.txt file explicitly
 	// as part of code generation.
-	if info.BuildFiles == "" || local {
-		pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
-		pkgPath := strings.ReplaceAll(pkgName, ".", "/")
-
-		var version string
-		if pkg.Version != nil {
-			version = pkg.Version.String()
-		} else {
-			version = "0.0.1"
-		}
-
-		files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
-		return files, nil
-	}
-
-	// If we are emitting a publishable package with a configured build system, emit those files now.
-	switch info.BuildFiles {
-	case "gradle":
-		if err := genGradleProject(pkg, info, files); err != nil {
+	if useGradle {
+		if err := genGradleProject(pkg, info, files, legacyBuildFiles); err != nil {
 			return nil, err
 		}
 		return files, nil
-	default:
-		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",
-			info.BuildFiles)
 	}
+
+	pkgName := fmt.Sprintf("%s%s", info.BasePackageOrDefault(), pkg.Name)
+	pkgPath := strings.ReplaceAll(pkgName, ".", "/")
+
+	var version string
+	if pkg.Version != nil {
+		version = pkg.Version.String()
+	} else {
+		version = "0.0.1"
+	}
+
+	files.add("src/main/resources/"+pkgPath+"/version.txt", []byte(version))
+	return files, nil
 }
 
 func isInputType(t schema.Type) bool {

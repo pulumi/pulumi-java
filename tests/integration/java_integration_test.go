@@ -3,6 +3,8 @@
 package integration
 
 import (
+	"fmt"
+	"os"
 	"os/exec"
 	"path/filepath"
 	"testing"
@@ -43,9 +45,6 @@ func TestIntegrations(t *testing.T) {
 			SkipRefresh: true,
 			Env: []string{
 				"PULUMI_EXCESSIVE_DEBUG_OUTPUT=false",
-			},
-			Config: map[string]string{
-				"local": "true",
 			},
 			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 				rawVal := stackInfo.Outputs["val"]
@@ -119,6 +118,21 @@ func TestIntegrations(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+
+	for _, provider := range []string{"maven", "gradle"} {
+		t.Run("provider-"+provider, func(t *testing.T) {
+			test := getJavaBase(t, integration.ProgramTestOptions{
+				Dir: filepath.Join(getCwd(t), fmt.Sprintf("provider-%s/example", provider)),
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					rawVal := stackInfo.Outputs["value"]
+					val, isString := rawVal.(string)
+					assert.Truef(t, isString, "output 'val' was not serialized as a string, got %T", rawVal)
+					assert.Equal(t, 12, len(val))
+				},
+			})
+			integration.ProgramTest(t, &test)
+		})
+	}
 
 	runAliasTest(t, "rename")
 	runAliasTest(t, "rename-component")
@@ -211,4 +225,20 @@ func stackTransformationValidator() func(t *testing.T, stack integration.Runtime
 		assert.True(t, foundRes4Child)
 		assert.True(t, foundRes5Child)
 	}
+}
+
+func TestPackageAddWithNamespaceSetJava(t *testing.T) {
+	t.Parallel()
+
+	e := ptesting.NewEnvironment(t)
+	defer e.DeleteIfNotFailed()
+
+	e.ImportDirectory("packageadd-namespace")
+	e.CWD = filepath.Join(e.RootPath, "java")
+	e.RunCommand("pulumi", "package", "add", "../provider/schema.json")
+
+	// Make sure the SDK was generated in the expected directory
+	_, err := os.Stat(filepath.Join(e.CWD, "sdks", "my-namespace-mypkg", "src", "main", "java",
+		"com", "mynamespace", "mypkg", "Utilities.java"))
+	require.NoError(t, err)
 }

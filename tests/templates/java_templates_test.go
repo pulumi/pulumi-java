@@ -69,7 +69,8 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 		defer fileEdit.Revert()
 	}
 
-	cmdArgs := []string{"new", templateDir(t, templateName), "-f", "--yes", "-s", "template-test"}
+	projectName := ptesting.RandomStackName()
+	cmdArgs := []string{"new", templateDir(t, templateName), "-f", "--yes", "-n", projectName, "-s", "template-test"}
 	e.RunCommand("pulumi", cmdArgs...)
 	if t.Failed() {
 		t.FailNow()

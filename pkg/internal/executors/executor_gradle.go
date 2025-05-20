@@ -36,7 +36,7 @@ func (g gradle) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error)
 	if err != nil {
 		return nil, err
 	}
-	executor, err := g.newGradleExecutor(gradleRoot, cmd, subproject)
+	executor, err := g.newGradleExecutor(gradleRoot, cmd, subproject, opts.ProgramArgs)
 	if err != nil {
 		return nil, err
 	}
@@ -103,20 +103,27 @@ func (gradle) isGradleProject(dir fs.FS, opts JavaExecutorOptions) (bool, error)
 	return false, nil
 }
 
-func (g gradle) newGradleExecutor(gradleRoot fsys.ParentFS, cmd, subproject string) (*JavaExecutor, error) {
+func (g gradle) newGradleExecutor(gradleRoot fsys.ParentFS,
+	cmd, subproject string, args []string,
+) (*JavaExecutor, error) {
 	return &JavaExecutor{
 		Cmd:       cmd,
 		Dir:       gradleRoot.Path(),
 		BuildArgs: []string{g.prefix(subproject, "build"), "--console=plain"},
 		RunArgs:   []string{g.prefix(subproject, "run"), "--console=plain"},
 		PluginArgs: []string{
-			/* STDOUT needs to be clean of gradle output,
-			   because we expect a JSON with plugin
-			   results */
+			// STDOUT needs to be clean of gradle output because we expect a JSON with plugin results.
 			"-q", // must go first due to a bug https://github.com/gradle/gradle/issues/5098
 			g.prefix(subproject, "run"), "--console=plain",
 			"-PmainClass=com.pulumi.bootstrap.internal.Main",
 			"--args=packages",
+		},
+		RunPluginArgs: []string{
+			// STDOUT needs to be clean of gradle output because we expect a port printed back.
+			"-q",                               // must go first due to a bug https://github.com/gradle/gradle/issues/5098
+			"--project-dir", gradleRoot.Path(), // plugin's CWD is set to the Pulumi program's root
+			g.prefix(subproject, "run"), "--console=plain",
+			"--args=" + strings.Join(args, " "),
 		},
 	}, nil
 }

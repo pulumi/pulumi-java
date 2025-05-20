@@ -42,6 +42,14 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
     String getProjectName();
 
     /**
+     * @return the current organization name
+     */
+    @Nonnull
+    default String getOrganizationName() {
+        return "organization";
+    }
+
+    /**
      * Whether the application is currently being previewed or actually applied.
      *
      * @return true if application is being applied

@@ -24,9 +24,10 @@ class PulumiPlugins {
 
     // Make sure capturing groups are the same in the patterns, very easy to miss when refactoring
     private static final String PACKAGE_CAPTURING_GROUP = "package";
+    private static final String NAMESPACE_CAPTURING_GROUP = "namespace";
     private static final String NAME_CAPTURING_GROUP = "name";
-    private static final RegexPattern PLUGIN_PATTERN = RegexPattern.of("^(?<package>com/pulumi/(?<name>.+))/plugin.json$");
-    private static final RegexPattern VERSION_PATTERN = RegexPattern.of("(?<package>com/pulumi/(?<name>.+))/version.txt$");
+    private static final RegexPattern PLUGIN_PATTERN = RegexPattern.of("^(?<package>com/(?<namespace>.+)/(?<name>.+))/plugin.json$");
+    private static final RegexPattern VERSION_PATTERN = RegexPattern.of("(?<package>com/(?<namespace>.+)/(?<name>.+))/version.txt$");
 
     private PulumiPlugins() {
         throw new UnsupportedOperationException("static class");
@@ -68,10 +69,12 @@ class PulumiPlugins {
 
     static final class RawResource {
         public final String name;
+        public final String namespace;
         public final String content;
 
-        RawResource(String name, String content) {
+        RawResource(String name, String namespace, String content) {
             this.name = requireNonNull(name);
+            this.namespace = requireNonNull(namespace);
             this.content = requireNonNull(content);
         }
 
@@ -89,9 +92,11 @@ class PulumiPlugins {
             };
             var package_ = matcher.namedMatch(PACKAGE_CAPTURING_GROUP)
                     .orElseThrow(() -> capturingExceptionSupplier.apply(PACKAGE_CAPTURING_GROUP));
+            var namespace = matcher.namedMatch(NAMESPACE_CAPTURING_GROUP)
+                    .orElseThrow(() -> capturingExceptionSupplier.apply(NAMESPACE_CAPTURING_GROUP));
             var name = matcher.namedMatch(NAME_CAPTURING_GROUP)
                     .orElseThrow(() -> capturingExceptionSupplier.apply(NAME_CAPTURING_GROUP));
-            return Optional.of(Map.entry(package_, new RawResource(name, asString(info))));
+            return Optional.of(Map.entry(package_, new RawResource(name, namespace, asString(info))));
         }
 
         @Override
@@ -112,6 +117,7 @@ class PulumiPlugins {
         public String toString() {
             return new StringJoiner(", ", RawResource.class.getSimpleName() + "[", "]")
                     .add("name='" + name + "'")
+                    .add("namespace='" + namespace + "'")
                     .add("content='" + content + "'")
                     .toString();
         }

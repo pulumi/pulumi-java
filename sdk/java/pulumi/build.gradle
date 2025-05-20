@@ -3,6 +3,7 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("com.google.protobuf") version "0.9.4"
+    id("jacoco")
 }
 
 version = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
@@ -22,11 +23,11 @@ repositories {
     mavenLocal()
 }
 
-def grpcVersion = "1.69.0"
+def grpcVersion = "1.57.2"
 def protobufVersion = "3.25.5"
 def protocVersion = protobufVersion
 def guavaVersion = "32.1.2-jre"
-def assertjCoreVersion = "3.23.1"
+def assertjCoreVersion = "3.27.1"
 def junitVersion = "5.11.4"
 def mockitoCoreVersion = "5.14.2"
 
@@ -67,6 +68,12 @@ dependencies {
         exclude group: 'com.google.guava', module: 'guava'
         exclude group: 'com.google.errorprone', module: 'error_prone_annotations'
     }
+
+    implementation("org.yaml:snakeyaml:2.3")
+
+    implementation("com.github.zafarkhaja:java-semver:0.10.2")
+
+    implementation("org.reflections:reflections:0.10.2")
 
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
@@ -159,6 +166,8 @@ test {
         excludeTestsMatching "com.pulumi.serialization.internal.ResourcePackagesIsolatedTest"
     }
 
+    exclude '**/com/pulumi/automation/**'
+
     testLogging {
         showStandardStreams = true
         exceptionFormat = 'full'
@@ -176,10 +185,52 @@ test {
 
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 
-    // Ensure isolatedTest runs after the main tests
-    finalizedBy isolatedTest
+    finalizedBy jacocoTestReport
 }
 
+task autoTest(type: Test) {
+    useJUnitPlatform()
+
+    include '**/com/pulumi/automation/**'
+}
+
+task allTests {
+    dependsOn test, isolatedTest, autoTest
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+        csv.required = false
+    }
+    dependsOn test
+}
+
+task jacocoAllTestsReport(type: JacocoReport) {
+    reports {
+        xml {
+            required = true
+            outputLocation = file("${buildDir}/reports/jacoco/allTests/jacocoTestReport.xml")
+        }
+        html {
+            required = true
+            outputLocation = file("${buildDir}/reports/jacoco/allTests/html")
+        }
+        csv.required = false
+    }
+
+    dependsOn allTests
+
+    sourceDirectories.from = files(sourceSets.main.allSource.srcDirs)
+    classDirectories.from = files(sourceSets.main.output)
+
+    executionData fileTree(project.buildDir).include("jacoco/*.exec")
+}
+
+task testAll {
+    dependsOn jacocoAllTestsReport
+}
 
 def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
 def ossrhPassword = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")

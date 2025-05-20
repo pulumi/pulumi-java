@@ -26,16 +26,6 @@ public final class StackReferenceArgs extends ResourceArgs {
 
     /**
      * The name of the stack to reference.
-     *
-     * @deprecated use {@link #name()}
-     */
-    @Deprecated
-    public Optional<Output<String>> getName() {
-        return name();
-    }
-
-    /**
-     * The name of the stack to reference.
      */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(name);

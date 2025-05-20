@@ -68,11 +68,12 @@ public class App {
             .build());
 
         // Subnets, one for each AZ in a region
-        final var zones = AwsFunctions.getAvailabilityZones();
+        final var zones = AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+            .build());
 
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
-            for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names())) {
                 var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()
                     .assignIpv6AddressOnCreation(false)
                     .vpcId(eksVpc.id())
@@ -90,10 +91,10 @@ public class App {
 
         final var rta = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<RouteTableAssociation>();
-            for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names())) {
                 var resource = new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()
                     .routeTableId(eksRouteTable.id())
-                    .subnetId(vpcSubnet[range.key()].id())
+                    .subnetId(vpcSubnet.applyValue(_vpcSubnet -> _vpcSubnet[range.key()].id()))
                     .build());
 
                 resources.add(resource);
@@ -102,7 +103,7 @@ public class App {
             return resources;
         });
 
-        final var subnetIds = vpcSubnet.stream().map(element -> element.id()).collect(toList());
+        final var subnetIds = vpcSubnet.applyValue(_vpcSubnet -> _vpcSubnet.stream().map(element -> element.id()).collect(toList()));
 
         var eksSecurityGroup = new SecurityGroup("eksSecurityGroup", SecurityGroupArgs.builder()
             .vpcId(eksVpc.id())

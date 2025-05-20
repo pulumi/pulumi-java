@@ -63,7 +63,9 @@ func generateJava(cfg generateJavaOptions) error {
 	}
 	printDiagnostics(diags)
 
-	pkg, err := pschema.ImportSpec(*pkgSpec, nil)
+	pkg, err := pschema.ImportSpec(*pkgSpec, nil, pschema.ValidationOptions{
+		AllowDanglingReferences: true,
+	})
 	if err != nil {
 		return fmt.Errorf("failed to import Pulumi schema: %w", err)
 	}
@@ -91,6 +93,7 @@ func generateJava(cfg generateJavaOptions) error {
 		extraFiles,
 		nil, /*localDependencies*/
 		cfg.Local,
+		true, /*legacyBuildFiles*/
 	)
 	if err != nil {
 		return err

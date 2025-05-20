@@ -4,6 +4,7 @@ import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.subpackage.HelloWorld;
+import com.pulumi.subpackage.HelloWorldComponent;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -20,6 +21,9 @@ public class App {
         // The resource name is based on the parameter value
         var example = new HelloWorld("example");
 
+        var exampleComponent = new HelloWorldComponent("exampleComponent");
+
         ctx.export("parameterValue", example.parameterValue());
+        ctx.export("parameterValueFromComponent", exampleComponent.parameterValue());
     }
 }

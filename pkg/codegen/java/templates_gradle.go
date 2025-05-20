@@ -14,16 +14,19 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
+const DefaultGradleNexusPublishPluginVersion = "2.0.0"
+
 func genGradleProject(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
 	files fs,
+	legacyBuildFiles bool,
 ) error {
 	if err := gradleValidatePackage(pkg); err != nil {
 		return err
 	}
 
-	ctx := newGradleTemplateContext(pkg, packageInfo)
+	ctx := newGradleTemplateContext(pkg, packageInfo, legacyBuildFiles)
 	templates := map[string]string{
 		"build.gradle":    buildGradleTemplate,
 		"settings.gradle": settingsGradleTemplate,
@@ -99,6 +102,7 @@ type gradleTemplateParameterization struct {
 func newGradleTemplateContext(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
+	legacyBuildFiles bool,
 ) gradleTemplateContext {
 	ctx := gradleTemplateContext{
 		Name:                           pkg.Name,
@@ -126,7 +130,58 @@ func newGradleTemplateContext(
 		ctx.Version = pkg.Parameterization.BaseProvider.Version.String()
 	}
 
-	if packageInfo.GradleNexusPublishPluginVersion != "" {
+	/*
+		For `legacyBuildFiles == true` we have the following behavior
+
+		|-----------------------------------------|--------------------------------------|
+		| PackageInfo                             | Behaviour                            |
+		|-----------------------------------------|--------------------------------------|
+		|                                         | no gradle file, default              |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file without nexus plugin     |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle,                     | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: 2.0.0  | default version of the plugin        |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle,                     | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | specified version of the plugin      |
+		|-----------------------------------------|--------------------------------------|
+
+		For `legacyBuildFiles == false` we have the following behavior, with the default
+		being `buildFiles: gradle-nexus`:
+
+		|-----------------------------------------|--------------------------------------|
+		| PackageInfo                             | Behaviour                            |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: none                        | no gradle file                       |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle-nexus                | gradle file with nexus plugin, using |
+		|                                         | the default version 2.0.0            |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle-nexus,               | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | version $VER                         |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file without nexus plugin     |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | specified version of the plugin      |
+		|-----------------------------------------|--------------------------------------|
+
+	*/
+	if legacyBuildFiles {
+		// In legacy mode, we require the user to provide the Gradle Nexus Publish Plugin version.
+		if packageInfo.GradleNexusPublishPluginVersion != "" {
+			ctx.GradleNexusPublishPluginEnabled = true
+			ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
+		}
+	} else if packageInfo.BuildFiles == "" || packageInfo.BuildFiles == "gradle-nexus" {
+		version := DefaultGradleNexusPublishPluginVersion
+		if packageInfo.GradleNexusPublishPluginVersion != "" {
+			version = packageInfo.GradleNexusPublishPluginVersion
+		}
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = version
+	} else if packageInfo.BuildFiles == "gradle" && packageInfo.GradleNexusPublishPluginVersion != "" {
 		ctx.GradleNexusPublishPluginEnabled = true
 		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
 	}
