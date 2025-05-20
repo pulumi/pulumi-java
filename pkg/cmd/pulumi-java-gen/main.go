@@ -22,6 +22,7 @@ import (
 )
 
 func main() {
+	fmt.Printf("pulumi-java-gen is deprecated, use `pulumi package gen-sdk --language java` instead\n")
 	if err := newPulumiJavaGenCmd().Execute(); err != nil {
 		_, err := fmt.Fprintf(os.Stderr, "An error occurred: %v\n", err)
 		contract.IgnoreError(err)

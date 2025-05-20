@@ -5,6 +5,7 @@ package java
 import (
 	"bytes"
 	_ "embed"
+	"encoding/base64"
 	"fmt"
 	"net/url"
 	"slices"
@@ -13,16 +14,19 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
+const DefaultGradleNexusPublishPluginVersion = "2.0.0"
+
 func genGradleProject(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
 	files fs,
+	legacyBuildFiles bool,
 ) error {
 	if err := gradleValidatePackage(pkg); err != nil {
 		return err
 	}
 
-	ctx := newGradleTemplateContext(pkg, packageInfo)
+	ctx := newGradleTemplateContext(pkg, packageInfo, legacyBuildFiles)
 	templates := map[string]string{
 		"build.gradle":    buildGradleTemplate,
 		"settings.gradle": settingsGradleTemplate,
@@ -66,9 +70,9 @@ var settingsGradleTemplate string
 var buildGradleTemplate string
 
 type gradleTemplateContext struct {
+	Name                            string
 	Version                         string
 	GroupID                         string
-	ArtifactID                      string
 	ProjectName                     string
 	RootProjectName                 string
 	ProjectURL                      string
@@ -86,14 +90,22 @@ type gradleTemplateContext struct {
 	GradleNexusPublishPluginVersion string
 	GradleTestJUnitPlatformEnabled  bool
 	PluginDownloadURL               string
+	Parameterization                *gradleTemplateParameterization
+}
+
+type gradleTemplateParameterization struct {
+	Name    string
+	Version string
+	Value   string
 }
 
 func newGradleTemplateContext(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
+	legacyBuildFiles bool,
 ) gradleTemplateContext {
 	ctx := gradleTemplateContext{
-		ArtifactID:                     pkg.Name,
+		Name:                           pkg.Name,
 		ProjectDescription:             pkg.Description,
 		ProjectURL:                     pkg.Repository,
 		ProjectGitURL:                  formatGitURL(pkg.Repository),
@@ -101,15 +113,77 @@ func newGradleTemplateContext(
 		PluginDownloadURL:              pkg.PluginDownloadURL,
 	}
 
-	if packageInfo.GradleNexusPublishPluginVersion != "" {
-		ctx.GradleNexusPublishPluginEnabled = true
-		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
-	}
-
 	if pkg.Version != nil {
 		ctx.Version = pkg.Version.String()
 	} else {
 		ctx.Version = "0.0.1"
+	}
+
+	if pkg.Parameterization != nil {
+		ctx.Parameterization = &gradleTemplateParameterization{
+			Name:    ctx.Name,
+			Version: ctx.Version,
+			Value:   base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
+		}
+
+		ctx.Name = pkg.Parameterization.BaseProvider.Name
+		ctx.Version = pkg.Parameterization.BaseProvider.Version.String()
+	}
+
+	/*
+		For `legacyBuildFiles == true` we have the following behavior
+
+		|-----------------------------------------|--------------------------------------|
+		| PackageInfo                             | Behaviour                            |
+		|-----------------------------------------|--------------------------------------|
+		|                                         | no gradle file, default              |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file without nexus plugin     |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle,                     | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: 2.0.0  | default version of the plugin        |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle,                     | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | specified version of the plugin      |
+		|-----------------------------------------|--------------------------------------|
+
+		For `legacyBuildFiles == false` we have the following behavior, with the default
+		being `buildFiles: gradle-nexus`:
+
+		|-----------------------------------------|--------------------------------------|
+		| PackageInfo                             | Behaviour                            |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: none                        | no gradle file                       |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle-nexus                | gradle file with nexus plugin, using |
+		|                                         | the default version 2.0.0            |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle-nexus,               | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | version $VER                         |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file without nexus plugin     |
+		|-----------------------------------------|--------------------------------------|
+		| buildFiles: gradle                      | gradle file with nexus plugin, using |
+		| gradleNexusPublishPluginVersion: $VER   | specified version of the plugin      |
+		|-----------------------------------------|--------------------------------------|
+
+	*/
+	if legacyBuildFiles {
+		// In legacy mode, we require the user to provide the Gradle Nexus Publish Plugin version.
+		if packageInfo.GradleNexusPublishPluginVersion != "" {
+			ctx.GradleNexusPublishPluginEnabled = true
+			ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
+		}
+	} else if packageInfo.BuildFiles == "" || packageInfo.BuildFiles == "gradle-nexus" {
+		version := DefaultGradleNexusPublishPluginVersion
+		if packageInfo.GradleNexusPublishPluginVersion != "" {
+			version = packageInfo.GradleNexusPublishPluginVersion
+		}
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = version
+	} else if packageInfo.BuildFiles == "gradle" && packageInfo.GradleNexusPublishPluginVersion != "" {
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
 	}
 
 	if packageInfo.Repositories != nil {
@@ -141,7 +215,7 @@ func newGradleTemplateContext(
 		ctx.DeveloperName = "Pulumi"
 		ctx.DeveloperEmail = "support@pulumi.com"
 		ctx.ProjectInceptionYear = "2022"
-		ctx.ProjectName = fmt.Sprintf("pulumi-%s", ctx.ArtifactID)
+		ctx.ProjectName = fmt.Sprintf("pulumi-%s", ctx.Name)
 	}
 
 	if ctx.RootProjectName == "" {

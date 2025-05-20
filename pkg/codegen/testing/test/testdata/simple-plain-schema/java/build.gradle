@@ -45,7 +45,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.9")
     implementation("com.google.guava:guava:33.4.0-jre")
     implementation("com.pulumi:pulumi:0.0.1")
-    implementation("org.assertj:assertj-core:3.27.0")
+    implementation("org.assertj:assertj-core:3.27.1")
     implementation("org.junit.jupiter:junit-jupiter-api:5.11.4")
     implementation("org.junit.jupiter:junit-jupiter-engine:5.11.4")
     implementation("org.mockito:mockito-core:5.14.2")
@@ -69,11 +69,13 @@ def genPulumiResources = tasks.register('genPulumiResources') {
         def outDir = file("$resourcesDir/$subDir")
         outDir.mkdirs()
         new File(outDir, "version.txt").text = resolvedVersion
-        def info = new Object()
-        info.metaClass.resource = true
-        info.metaClass.name = "example"
-        info.metaClass.version = resolvedVersion
-        def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
+        def builder = new groovy.json.JsonBuilder()
+        builder {
+            resource true
+            name "example"
+            version resolvedVersion
+        }
+        def infoJson = builder.toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
     }
 }

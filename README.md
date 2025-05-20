@@ -1,4 +1,4 @@
-**Pulumi Java SDK** lets you leverage the full power of [Pulumi Infrastructure as Code Platform](https://pulumi.com) using the Java programming language. Java support is currently in **Public Preview**.
+**Pulumi Java SDK** lets you leverage the full power of [Pulumi Infrastructure as Code Platform](https://pulumi.com) using the Java programming language.
 
 
 Simply write Java code in your favorite editor and Pulumi
@@ -63,6 +63,8 @@ public final class Infra {
 
 * **[GitHub Discussions](https://github.com/pulumi/pulumi/discussions)**: Ask questions or share what you are building with Pulumi.
 
+* **[SDK](https://www.pulumi.com/docs/reference/pkg/java/)**: Explore the Java SDK.
+
 
 ## <a name="getting-started"></a>Getting Started
 
@@ -114,7 +116,7 @@ resources in a Pulumi Java, and deploy them to AWS, in minutes:
     ```
 
 To learn more, head over to [pulumi.com](https://pulumi.com/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-home) for much more information, including
-[tutorials](https://www.pulumi.com/docs/reference/tutorials/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-tutorials), [examples](https://github.com/pulumi/examples), and
+[tutorials](https://www.pulumi.com/tutorials/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-tutorials), [examples](https://github.com/pulumi/examples), and
 details of the core Pulumi CLI and [programming model concepts](https://www.pulumi.com/docs/reference/concepts/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-concepts).
 
 
@@ -147,6 +149,6 @@ runtime:
 ## Contributing
 
 Visit
-[CONTRIBUTING.md](https://github.com/pulumi/pulumi-java/blob/master/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/pulumi/pulumi-java/blob/main/CONTRIBUTING.md)
 for information on building Pulumi Java support from source or
 contributing improvements.

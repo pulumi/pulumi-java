@@ -63,25 +63,25 @@ class PulumiPluginTest {
                 // plugin
                 .argumentsForFirstParameter(
                         null,
-                        new RawResource("test", "{}"),
-                        new RawResource("test",
+                        new RawResource("test", "", "{}"),
+                        new RawResource("test", "",
                                 "{\"resource\": true}"
                         ),
-                        new RawResource("test",
+                        new RawResource("test", "",
                                 "{\"resource\":true,\"name\":\"test\"}"
                         ),
-                        new RawResource("test",
+                        new RawResource("test", "",
                                 "{\"resource\":true,\"name\":\"test\",\"version\":\"1.1.1\"}"
                         ),
-                        new RawResource("test",
+                        new RawResource("test", "",
                                 "{\"resource\":true,\"name\":\"test\",\"version\":\"1.1.1\",\"server\":\"https://example.org\"}"
                         )
                 )
                 // version
                 .argumentsForNextParameter(
                         null,
-                        new RawResource("test", ""),
-                        new RawResource("test", "1.1.1")
+                        new RawResource("test", "",  ""),
+                        new RawResource("test", "", "1.1.1")
                 );
     }
 
@@ -93,19 +93,19 @@ class PulumiPluginTest {
                 arguments("", null, ""),
                 arguments(
                         "{}",
-                        new PulumiPlugin(false, null, null, null),
+                        new PulumiPlugin(false, null, null, null, null),
                         "{\"resource\":false}"),
                 arguments(
                         "{\n" +
                                 "  \"resource\":true\n" +
                                 "}",
-                        new PulumiPlugin(true, null, null, null),
+                        new PulumiPlugin(true, null, null, null, null),
                         "{\"resource\":true}"),
                 arguments("{\n" +
                                 "  \"resource\": true,\n" +
                                 "  \"name\": \"unittest\"\n" +
                                 "}",
-                        new PulumiPlugin(true, "unittest", null, null),
+                        new PulumiPlugin(true, "unittest", null, null, null),
                         "{\"resource\":true,\"name\":\"unittest\"}"),
                 arguments(
                         "{\n" +
@@ -113,7 +113,7 @@ class PulumiPluginTest {
                                 "  \"name\": \"unittest\",\n" +
                                 "  \"version\": \"1.1.1\"\n" +
                                 "}",
-                        new PulumiPlugin(true, "unittest", "1.1.1", null),
+                        new PulumiPlugin(true, "unittest", "1.1.1", null, null),
                         "{\"resource\":true,\"name\":\"unittest\",\"version\":\"1.1.1\"}"),
                 arguments(
                         "{\n" +
@@ -122,8 +122,22 @@ class PulumiPluginTest {
                                 "  \"version\": \"1.1.1\",\n" +
                                 "  \"server\": \"https://example.org\"\n" +
                                 "}",
-                        new PulumiPlugin(true, "unittest", "1.1.1", "https://example.org"),
-                        "{\"resource\":true,\"name\":\"unittest\",\"version\":\"1.1.1\",\"server\":\"https://example.org\"}")
+                        new PulumiPlugin(true, "unittest", "1.1.1", "https://example.org", null),
+                        "{\"resource\":true,\"name\":\"unittest\",\"version\":\"1.1.1\",\"server\":\"https://example.org\"}"),
+                arguments(
+                        "{\n" +
+                                "  \"resource\": true,\n" +
+                                "  \"name\": \"unittest\",\n" +
+                                "  \"version\": \"1.1.1\",\n" +
+                                "  \"parameterization\": {\n" +
+                                "    \"name\": \"parameterized\",\n" +
+                                "    \"version\": \"2.2.2\",\n" +
+                                "    \"value\": \"value\"\n" +
+                                "  }\n" +
+                                "}",
+                        new PulumiPlugin(true, "unittest", "1.1.1", null,
+                            new PulumiPluginParameterization("parameterized", "2.2.2", "value")),
+                        "{\"resource\":true,\"name\":\"unittest\",\"version\":\"1.1.1\",\"parameterization\":{\"name\":\"parameterized\",\"version\":\"2.2.2\",\"value\":\"value\"}}")
         );
     }
 

@@ -1,0 +1,17 @@
+name: java-yaml
+runtime: yaml
+plugins:
+  providers:
+    - name: javap
+      path: ..
+resources:
+  hello:
+    type: javap:index:HelloWorld
+    properties:
+      length: 12
+  hello2:
+    type: javap:index:HelloWorld
+    properties:
+      length: 22
+outputs:
+  value: ${hello.value}

@@ -1,8 +1,14 @@
 package com.pulumi.deployment.internal;
 
+import com.google.common.util.concurrent.ListenableFuture;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import io.grpc.ManagedChannelBuilder;
 import pulumirpc.EngineGrpc;
-import pulumirpc.EngineOuterClass.*;
+import pulumirpc.EngineOuterClass.GetRootResourceRequest;
+import pulumirpc.EngineOuterClass.GetRootResourceResponse;
+import pulumirpc.EngineOuterClass.LogRequest;
+import pulumirpc.EngineOuterClass.SetRootResourceRequest;
+import pulumirpc.EngineOuterClass.SetRootResourceResponse;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -27,16 +33,20 @@ public class GrpcEngine implements Engine {
 
     @Override
     public CompletableFuture<Void> logAsync(LogRequest request) {
-        return toCompletableFuture(this.engine.log(request)).thenApply(empty -> null);
+        return toContextAwareCompletableFuture(this.engine.log(request)).thenApply(empty -> null);
     }
 
     @Override
     public CompletableFuture<SetRootResourceResponse> setRootResourceAsync(SetRootResourceRequest request) {
-        return toCompletableFuture(this.engine.setRootResource(request));
+        return toContextAwareCompletableFuture(this.engine.setRootResource(request));
     }
 
     @Override
     public CompletableFuture<GetRootResourceResponse> getRootResourceAsync(GetRootResourceRequest request) {
-        return toCompletableFuture(this.engine.getRootResource(request));
+        return toContextAwareCompletableFuture(this.engine.getRootResource(request));
+    }
+
+    private <T> CompletableFuture<T> toContextAwareCompletableFuture(ListenableFuture<T> listenableFuture) {
+        return ContextAwareCompletableFuture.wrap(toCompletableFuture(listenableFuture));
     }
 }

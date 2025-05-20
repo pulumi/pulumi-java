@@ -3,6 +3,7 @@
 package java
 
 import (
+	"fmt"
 	"io"
 	"math/big"
 	"strings"
@@ -83,7 +84,27 @@ func (g *generator) GenAnonymousFunctionExpression(w io.Writer, expr *model.Anon
 	case 0:
 		g.Fgen(w, "()")
 	case 1:
-		g.Fgenf(w, "%s", expr.Signature.Parameters[0].Name)
+		// rename the parameter to avoid conflicts existing variables
+		// for example we could have data.applyValue(data -> data.result())
+		// in this case we rename the parameter to _data
+		// it becomes data.applyValue(_data -> _data.result())
+		paramName := expr.Signature.Parameters[0].Name
+		modifiedParamName := "_" + paramName
+		modifier := func(x model.Expression) (model.Expression, hcl.Diagnostics) {
+			if x, ok := x.(*model.ScopeTraversalExpression); ok && x.RootName == paramName {
+				x.RootName = modifiedParamName
+			}
+			if x, ok := x.(*model.RelativeTraversalExpression); ok {
+				if scope, ok := x.Source.(*model.ScopeTraversalExpression); ok && scope.RootName == paramName {
+					scope.RootName = modifiedParamName
+				}
+			}
+			return x, nil
+		}
+
+		_, diags := model.VisitExpression(expr.Body, model.IdentityVisitor, modifier)
+		contract.Assertf(len(diags) == 0, "unexpected diagnostics when rewriting parameter name")
+		g.Fgenf(w, "%s", modifiedParamName)
 		g.Fgenf(w, " -> %v", expr.Body)
 	default:
 		g.Fgen(w, "values -> {\n")
@@ -192,17 +213,34 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
-func (g *generator) functionName(tokenArg model.Expression) string {
-	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
-	tokenRange := tokenArg.SyntaxNode().Range()
-
-	// Compute the resource type from the Pulumi type token.
-	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
-	if module == "index" || module == "" {
-		return names.Title(pkg) + "Functions" + "." + member
+func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Type) {
+	targetType := pcl.LowerConversion(from, to)
+	output, isOutput := targetType.(*model.OutputType)
+	if isOutput {
+		targetType = output.ElementType
 	}
 
-	return names.Title(module) + "Functions" + "." + member
+	if targetType.Equals(model.NumberType) {
+		if schemaType, ok := pcl.GetSchemaForType(to); ok {
+			if inputType, ok := schemaType.(*schema.InputType); ok {
+				schemaType = inputType.ElementType
+			}
+
+			if expr, ok := from.(*model.LiteralValueExpression); ok && schemaType == schema.NumberType {
+				bf := expr.Value.AsBigFloat()
+				if i, acc := bf.Int64(); acc == big.Exact {
+					g.Fgenf(w, "%d.0", i)
+					return
+				}
+
+				f, _ := bf.Float64()
+				g.Fgenf(w, "%g", f)
+				return
+			}
+		}
+	}
+
+	g.Fgenf(w, "%.v", from)
 }
 
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
@@ -210,9 +248,13 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case pcl.IntrinsicConvert:
 		switch arg := expr.Args[0].(type) {
 		case *model.ObjectConsExpression:
-			g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			if schemaType, ok := pcl.GetSchemaForType(expr.Signature.ReturnType); ok {
+				g.genObjectConsExpression(w, arg, schemaType)
+			} else {
+				g.genObjectConsExpression(w, arg, &schema.MapType{ElementType: schema.StringType})
+			}
 		default:
-			g.Fgenf(w, "%.v", expr.Args[0]) // <- probably wrong w.r.t. precedence
+			g.genIntrinsic(w, expr.Args[0], expr.Signature.ReturnType)
 		}
 	case pcl.IntrinsicApply:
 		g.genApply(w, expr)
@@ -269,6 +311,10 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		}
 	case "stringAsset":
 		g.Fgenf(w, "new StringAsset(%.v)", expr.Args[0])
+	case "remoteAsset":
+		g.Fgenf(w, "new RemoteAsset(%.v)", expr.Args[0])
+	case "assetArchive":
+		g.Fgenf(w, "new AssetArchive(%.v)", expr.Args[0])
 	case "file":
 		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)), StandardCharsets.UTF_8)", expr.Args[0])
 	case "filebase64":
@@ -277,20 +323,72 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method
 		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
-		fullyQualifiedName := g.functionName(expr.Args[0])
+		if expr.Signature.MultiArgumentInputs {
+			err := fmt.Errorf("Java program-gen does not implement MultiArgumentInputs for function '%v'",
+				expr.Args[0])
+			panic(err)
+		}
+
+		fullyQualifiedType, funcName := g.functionImportDef(expr.Args[0])
+		if !g.emittedTypeImportSymbols.Has(fullyQualifiedType) {
+			// the fully qualified name isn't emitted
+			// this means we need to use the fully qualified function name at call site
+			funcName = fullyQualifiedType
+		} else {
+			parts := strings.Split(fullyQualifiedType, ".")
+			funcName = parts[len(parts)-1] + "." + funcName
+		}
+
+		generateInvokeOptions := func() {
+			if len(expr.Args) == 3 {
+				if options, ok := expr.Args[2].(*model.ObjectConsExpression); ok {
+					builderName := "InvokeOptions.builder()"
+					if containsDependsOnInvokeOption(options) {
+						// TODO: replace with `InvokeOutputOptions.builder()` once it's implemented
+						// for that we need InvokeOutputOptions to not extend InvokeOptions
+						builderName = "(new InvokeOutputOptions.Builder())"
+					}
+					g.Fgenf(w, ", %s", builderName)
+					g.genNewline(w)
+					g.Indented(func() {
+						for _, item := range options.Items {
+							lit := item.Key.(*model.LiteralValueExpression)
+							key := lit.Value.AsString()
+							if key == "pluginDownloadUrl" {
+								key = "pluginDownloadURL"
+							}
+
+							g.genIndent(w)
+							g.Fgenf(w, "    .%s(%.v)", key, item.Value)
+							g.genNewline(w)
+						}
+
+						g.genIndent(w)
+						g.Fgenf(w, "    .build()")
+					})
+				}
+			}
+		}
+
 		functionSchema, foundFunction := g.findFunctionSchema(expr.Args[0])
 		if foundFunction {
-			g.Fprintf(w, "%s(", fullyQualifiedName)
+			g.Fprintf(w, "%s(", funcName)
 			invokeArgumentsExpr := expr.Args[1]
 			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
 				argumentsExpr := invokeArgumentsExpr
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
+			case *model.FunctionCallExpression:
+				convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression)
+				if ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
+					g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
+				}
 			}
+			generateInvokeOptions()
 			g.Fprint(w, ")")
 			return
 		}
-		g.Fprintf(w, "%s(", fullyQualifiedName)
+		g.Fprintf(w, "%s(", funcName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
 		if isOutput {
 			// typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")
@@ -303,7 +401,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, &schema.MapType{ElementType: schema.StringType})
 			}
 		}
-
+		generateInvokeOptions()
 		g.Fprint(w, ")")
 	case "join":
 		g.Fgenf(w, "String.join(%v, %v)", expr.Args[0], expr.Args[1])
@@ -343,6 +441,10 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgen(w, "Deployment.getInstance().getStackName()")
 	case "project":
 		g.Fgen(w, "Deployment.getInstance().getProjectName()")
+	case "getOutput":
+		g.Fgenf(w, "%v.output(%v)", expr.Args[0], expr.Args[1])
+	case "organization":
+		g.Fgen(w, "Deployment.getInstance().getOrganizationName()")
 	default:
 		g.genNYI(w, "call %v", expr.Name)
 	}
@@ -470,10 +572,6 @@ func (g *generator) GenObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 }
 
 func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsExpression, destType schema.Type) {
-	if len(expr.Items) == 0 {
-		return
-	}
-
 	g.genObjectConsExpressionWithTypeName(w, expr, destType)
 }
 
@@ -552,13 +650,9 @@ func pickTypeFromUnion(union *schema.UnionType, expr *model.ObjectConsExpression
 func (g *generator) genObjectConsExpressionWithTypeName(
 	w io.Writer, expr *model.ObjectConsExpression, destType schema.Type,
 ) {
-	if len(expr.Items) == 0 {
-		return
-	}
-
-	destTypeName := typeName(destType)
 	switch destType := destType.(type) {
 	case *schema.ObjectType:
+		destTypeName := typeName(destType)
 		objectProperties := make(map[string]schema.Type)
 		for _, property := range destType.Properties {
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
@@ -660,17 +754,7 @@ func (g *generator) GenRelativeTraversalExpression(w io.Writer, expr *model.Rela
 
 func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTraversalExpression) {
 	rootName := names.MakeValidIdentifier(expr.RootName)
-
 	g.Fgen(w, rootName)
-
-	invokedFunctionSchema, isFunctionInvoke := g.functionInvokes[rootName]
-
-	if isFunctionInvoke {
-		lambdaArg := names.LowerCamelCase(typeName(invokedFunctionSchema.Outputs))
-		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
-		g.Fgenf(w, ".applyValue(%s -> %s", lambdaArg, lambdaArg)
-	}
-
 	var objType *schema.ObjectType
 	if resource, ok := expr.Parts[0].(*pcl.Resource); ok {
 		if schemaType, ok := pcl.GetSchemaForType(resource.InputType); ok {
@@ -678,10 +762,6 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 		}
 	}
 	g.genRelativeTraversal(w, expr.Traversal.SimpleSplit().Rel, expr.Parts, objType)
-
-	if isFunctionInvoke {
-		g.Fgenf(w, ")")
-	}
 }
 
 func (g *generator) GenSplatExpression(w io.Writer, expr *model.SplatExpression) {
@@ -760,30 +840,49 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		}
 	}
 
-	if len(expr.Expressions) > 0 {
-		if len(expr.Expressions) == 1 {
-			// simple case, just write the first element
-			g.Fgenf(w, "%.v", expr.Expressions[0])
-			return
+	closeList := func() {
+		if g.currentResourcePropertyType == nil {
+			g.Fgen(w, ")")
 		}
-
-		// Write multiple list elements
-		g.Fgenf(w, "%s\n", g.Indent)
-		g.Indented(func() {
-			for index, value := range expr.Expressions {
-				if index == 0 {
-					// first expression, no need for a new line
-					g.Fgenf(w, "%s%.v,", g.Indent, value)
-				} else if index == len(expr.Expressions)-1 {
-					// last element, no trailing comma
-					g.Fgenf(w, "\n%s%.v", g.Indent, value)
-				} else {
-					// elements in between: new line and trailing comma
-					g.Fgenf(w, "\n%s%.v,", g.Indent, value)
-				}
-			}
-		})
 	}
+
+	if g.currentResourcePropertyType == nil {
+		// we are dealing with an untyped array
+		// generate `List.of(...)`
+		g.Fgen(w, "List.of(")
+	}
+
+	if len(expr.Expressions) == 0 {
+		// empty list
+		closeList()
+		return
+	}
+
+	if len(expr.Expressions) == 1 {
+		// simple case, just write the first element
+		g.Fgenf(w, "%.v", expr.Expressions[0])
+		closeList()
+		return
+	}
+
+	// Write multiple list elements
+	g.Fgenf(w, "%s\n", g.Indent)
+	g.Indented(func() {
+		for index, value := range expr.Expressions {
+			if index == 0 {
+				// first expression, no need for a new line
+				g.Fgenf(w, "%s%.v,", g.Indent, value)
+			} else if index == len(expr.Expressions)-1 {
+				// last element, no trailing comma
+				g.Fgenf(w, "\n%s%.v", g.Indent, value)
+			} else {
+				// elements in between: new line and trailing comma
+				g.Fgenf(w, "\n%s%.v,", g.Indent, value)
+			}
+		}
+	})
+
+	closeList()
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {

@@ -22,6 +22,13 @@ public interface Context extends OutputContext, ConfigContext {
     String stackName();
 
     /**
+     * @return the name of the current organization
+     */
+    default String organizationName() {
+        return "organization";
+    }
+
+    /**
      * @return the logger context
      */
     LoggingContext log();
@@ -36,4 +43,17 @@ public interface Context extends OutputContext, ConfigContext {
      */
     @CanIgnoreReturnValue
     Context export(String name, Output<?> output);
+
+    /**
+     * Append an {@code Output} value to exported stack outputs.
+     * <p>
+     * This method mutates the context internal state.
+     * @param name name of the {@code Output}
+     * @param output the plain output value
+     * @return the current {@link Context}
+     */
+    @CanIgnoreReturnValue
+    default <T> Context export(String name, T output) {
+        return export(name, Output.of(output));
+    }
 }

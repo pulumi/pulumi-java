@@ -1,13 +1,152 @@
 CHANGELOG
 =========
 
-### 0.20.0 (2024-12-12)
+## 1.11.0
+
+### Improvements
+
+* Support generating programs using the `import` resource option
+
+* Support `--exclude` and `--exclude-dependents` in the Automation API.
+
+* Update to pulumi 3.167.0.
+
+## 1.10.0
+
+### Improvements
+
+* Support generating programs using the `import` resource option
+
+### Bug Fixes
+
+## 1.9.0
+
+### Improvements
+
+- Add the `previewOnly` option to the `destroy` command in the Automation API
+
+## 1.8.0
+
+### Improvements
+
+- Automatically infer namespaces for components
+
+### Bug Fixes
+
+- Default version 0.0.0 for component providers
+
+## 1.7.0
+
+### Improvements
+
+- Update to pulumi 3.158.0
+
+### Bug Fixes
+
+- Fix bug deserializing `com.pulumi.automation.StackSummary`
+
+## 1.6.0
+
+### Improvements
+
+- Add the `previewOnly` option to the `refresh` command in the Automation API
+
+## 1.5.0
+
+### Improvements
+
+- Update to pulumi 3.150.0
+
+### Bug Fixes
+
+- Fix `ComponentProviderHost` to handle multiple arguments correctly, including logging arguments.
+  https://github.com/pulumi/pulumi-java/issues/1706
+
+## 1.4.0
+
+### Improvements
+
+- Add ability to disable `toString` on `Output<T>`
+
+### Bug Fixes
+
+- Be resilient to extra data from providers
+
+## 1.3.0
+
+### Improvements
+
+- Automation API
+- Support RunPlugin for Maven and Gradle plugins
+- Support Construct to enable authoring Component Packages in Java
+
+### Bug Fixes
+
+- Default to using Gradle with the Nexus publishing plugin when using `gen-sdk`
+- Use filepath.Join instead of file.Join
+
+## 1.2.0
+
+### Improvements
+
+- Default to using Gradle with the Nexus publishing plugin when using `gen-sdk`
+- Support RunPlugin for Maven and Gradle plugins
+- Remove `@Deprecated` members from the Java SDK
+
+## 1.1.0
+
+### Improvements
+
+ - Fix emitted functions for `assetArchive` and `remoteAsset` in generated programs
+ - Fix generation of `double` literals in generated programs
+ - Avoid calling invokes with dependencies on unknown resources
+ - Fix generation of untyped maps and array literals
+ - Implement `InvokeOptionsBuilder` and `InvokeOutputOptionsBuilder`
+ - Emit invoke options and invoke output options in generated programs
+ - Include explicit dependencies of invokes in their resulting output
+ - Bump core SDK versions in generated code
+ - Emit plugin download URL in default resource options of the generated SDKs
+ - Wait for resources in the input property dependencies
+
+### Bug Fixes
+
+ - Panic when asked to generate SDKs involving multi-argument invokes
+
+## 1.0.0
+
+### Improvements
+
+- Fix emitted import statements in generated programs such that imports with the same symbol are fully qualified
+
+- Fix args and result handling of invokes in generated programs
+
+### Bug Fixes
+
+## 0.21.0
+
+### Improvements
+
+- Update to Pulumi 3.144.1
+
+- Implement `GetRequiredPackages` for the Java language host
+
+- Support exporting plain stack output values with `Context.export`
+
+- Support `StackReference.getOutput` from generated programs
+
+- Implement `getOrganizationName` on `Deployment` and `Context`
+
+### Bug Fixes
+
+- [Convert] Emit the `Deployment` class when using Pulumi built-in functions in PCL `stack()` and `projectName()`
+
+## 0.20.0 (2024-12-12)
 
 ### Bug Fixes
 
 - Update SDK version used for codegen to 0.19
 
-### 0.19.0 (2024-12-11)
+## 0.19.0 (2024-12-11)
 
 ### Improvements
 

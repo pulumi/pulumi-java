@@ -17,10 +17,17 @@ type DocLanguageHelper struct{}
 
 var _ codegen.DocLanguageHelper = DocLanguageHelper{}
 
-func (d DocLanguageHelper) GetLanguageTypeString(
-	pkg *schema.Package, moduleName string, t schema.Type, input bool,
+func (DocLanguageHelper) GetModuleName(_ schema.PackageReference, modName string) string {
+	if modName == "index" {
+		return ""
+	}
+	return names.Ident(modName).String()
+}
+
+func (DocLanguageHelper) GetTypeName(
+	pkg schema.PackageReference, t schema.Type, input bool, relateToModule string,
 ) string {
-	modCtx := &modContext{pkg: pkg.Reference(), mod: moduleName}
+	modCtx := &modContext{pkg: pkg, mod: relateToModule}
 	ctx := newPseudoClassFileContext()
 
 	typeShape := modCtx.typeString(
@@ -41,31 +48,35 @@ func (d DocLanguageHelper) GetLanguageTypeString(
 	return code
 }
 
-func (d DocLanguageHelper) GetPropertyName(p *schema.Property) (string, error) {
+func (DocLanguageHelper) GetPropertyName(p *schema.Property) (string, error) {
 	return names.Ident(p.Name).AsProperty().Getter(), nil
 }
 
-func (d DocLanguageHelper) GetFunctionName(_ string, f *schema.Function) string {
+func (DocLanguageHelper) GetResourceName(r *schema.Resource) string {
+	return resourceName(r)
+}
+
+func (DocLanguageHelper) GetFunctionName(f *schema.Function) string {
 	return tokenToFunctionName(f.Token)
 }
 
-func (d DocLanguageHelper) GetResourceFunctionResultName(_ string, f *schema.Function) string {
+func (DocLanguageHelper) GetResourceFunctionResultName(_ string, f *schema.Function) string {
 	return tokenToFunctionResultClassName(nil, f.Token).String()
 }
 
-func (d DocLanguageHelper) GetMethodName(m *schema.Method) string {
+func (DocLanguageHelper) GetMethodName(m *schema.Method) string {
 	// TODO revise when method support is built, revise when output-versioned functions are built
 	return tokenToFunctionName(m.Function.Token)
 }
 
-func (d DocLanguageHelper) GetMethodResultName(
-	_ *schema.Package, _ string, _ *schema.Resource, m *schema.Method,
+func (DocLanguageHelper) GetMethodResultName(
+	_ schema.PackageReference, _ string, _ *schema.Resource, m *schema.Method,
 ) string {
 	// TODO revise when method support is built, revise when output-versioned functions are built
 	return tokenToFunctionResultClassName(nil, m.Function.Token).String()
 }
 
-func (d DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string, error) {
+func (DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string, error) {
 	name := e.Name
 	if name == "" {
 		name = fmt.Sprintf("%v", e.Value)
@@ -87,26 +98,26 @@ func (d DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string,
 // Context, BucketArgs and ResourceOption get linked to Go API docs.
 //
 // For Java we could link to JavaDoc when appropriate.
-func (d DocLanguageHelper) GetDocLinkForPulumiType(_ *schema.Package, _ string) string {
+func (DocLanguageHelper) GetDocLinkForPulumiType(_ *schema.Package, _ string) string {
 	return ""
 }
 
-func (d DocLanguageHelper) GetDocLinkForResourceType(_ *schema.Package, _, _ string) string {
+func (DocLanguageHelper) GetDocLinkForResourceType(_ *schema.Package, _, _ string) string {
 	panic("Not implemented")
 }
 
-func (d DocLanguageHelper) GetDocLinkForResourceInputOrOutputType(
+func (DocLanguageHelper) GetDocLinkForResourceInputOrOutputType(
 	_ *schema.Package, _, _ string, _ bool,
 ) string {
 	panic("Not implemented")
 }
 
-func (d DocLanguageHelper) GetDocLinkForFunctionInputOrOutputType(
+func (DocLanguageHelper) GetDocLinkForFunctionInputOrOutputType(
 	_ *schema.Package, _, _ string, _ bool,
 ) string {
 	panic("Not implemented")
 }
 
-func (d DocLanguageHelper) GetModuleDocLink(_ *schema.Package, _ string) (string, string) {
+func (DocLanguageHelper) GetModuleDocLink(_ *schema.Package, _ string) (string, string) {
 	panic("Not implemented")
 }

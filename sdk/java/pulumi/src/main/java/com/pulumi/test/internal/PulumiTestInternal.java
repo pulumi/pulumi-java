@@ -17,6 +17,7 @@ import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.internal.DeploymentImpl;
+import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInstanceInternal;
 import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.deployment.internal.Engine;
@@ -154,7 +155,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     public static void cleanup() {
         // ensure we don't get the error:
         //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
-        DeploymentImpl.internalUnsafeDestroyInstance();
+        DeploymentInstanceHolder.internalUnsafeDestroyInstance();
     }
 
     @InternalUse
@@ -364,6 +365,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                 this.state = new DeploymentImpl.DeploymentState(
                         this.config,
                         this.standardLogger,
+                        this.options.organizationName(),
                         this.options.projectName(),
                         this.options.stackName(),
                         this.options.preview(),
@@ -386,6 +388,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             var outputsContext = new OutputContextInternal(outputFactory);
 
             var context = new ContextInternal(
+                    this.options.organizationName(),
                     this.options.projectName(),
                     this.options.stackName(),
                     loggingContext, configContext, outputsContext,

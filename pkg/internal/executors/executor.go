@@ -31,6 +31,10 @@ type JavaExecutor struct {
 	// by the Java program.
 	PluginArgs []string
 
+	// Command args to run a plugin (e.g. a provider). Optional if the executor
+	// does not support running plugins.
+	RunPluginArgs []string
+
 	// Returns a list of program dependencies as configured for the executor (e.g. in a `pom.xml` for Maven, or a
 	// `build.gradle` for Gradle).
 	GetProgramDependencies func(
@@ -51,6 +55,9 @@ type JavaExecutorOptions struct {
 	// The value of `runtime.options.use-executor` setting from
 	// `Pulumi.yaml`. Optional.
 	UseExecutor string
+
+	// Additional runtime arguments to pass to the program.
+	ProgramArgs []string
 }
 
 type javaExecutorFactory interface {

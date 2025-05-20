@@ -6,14 +6,17 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Setter;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.test.Mocks;
 import com.pulumi.test.TestOptions;
@@ -30,6 +33,7 @@ import java.util.Optional;
 import java.lang.Thread;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class DeploymentInvokeDependsOnTest {
 
@@ -43,12 +47,13 @@ public class DeploymentInvokeDependsOnTest {
         var marker = new ResolveMarker();
 
         var test = PulumiTestInternal.builder()
-                .options(TestOptions.builder().preview(true).build())
+                .options(TestOptions.builder().build())
                 .mocks(new Mocks() {
                     @Override
                     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
                         Objects.requireNonNull(args.type);
-                        CompletableFuture<ResourceResult> result = CompletableFuture.supplyAsync(() -> {
+                        // Delay the resource creation to ensure we await it in the invoke
+                        return ContextAwareCompletableFuture.supplyAsync(() -> {
                             try {
                                 // Delay the resource creation to ensure we await it in the invoke
                                 Thread.sleep(3000);
@@ -60,7 +65,6 @@ public class DeploymentInvokeDependsOnTest {
                             return ResourceResult.of(Optional.of(args.id + "_id"),
                                     ImmutableMap.of("prop", "some value"));
                         });
-                        return result;
                     }
 
                     @Override
@@ -89,6 +93,74 @@ public class DeploymentInvokeDependsOnTest {
         });
 
         assertThat(result.exceptions()).hasSize(0);
+        assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedSuccessfully);
+    }
+
+    @Test
+    void testInvokesDependsOnUnknown() {
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new Mocks() {
+                    @Override
+                    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+                        return ContextAwareCompletableFuture
+                                .supplyAsync(() -> ResourceResult.of(Optional.empty(), ImmutableMap.of()));
+                    }
+
+                    @Override
+                    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
+                        return CompletableFuture.completedFuture(ImmutableMap.of());
+                    }
+                })
+                .build();
+
+        var result = test.runTest(ctx -> {
+            var deps = new ArrayList<Resource>();
+            var remote = new DependencyResource("some:urn");
+            deps.add(remote);
+            var res = new MyCustomResource("r1", null, CustomResourceOptions.builder().build());
+            deps.add(res);
+
+            var opts = new InvokeOutputOptions(null, null, null, deps);
+            CustomInvokes.doStuff(CustomArgs.Empty, opts).applyValue(r -> {
+                assertFalse(true, "invoke should not be called!");
+                return r;
+            });
+        });
+
+        assertThat(result.exceptions()).hasSize(0);
+        assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedSuccessfully);
+    }
+
+    @Test
+    void testInvokesInputDependencies() {
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new Mocks() {
+                    @Override
+                    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+                        return ContextAwareCompletableFuture
+                                .supplyAsync(() -> ResourceResult.of(Optional.empty(), ImmutableMap.of()));
+                    }
+
+                    @Override
+                    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
+                        return CompletableFuture.completedFuture(ImmutableMap.of());
+                    }
+                })
+                .build();
+
+        var result = test.runTest(ctx -> {
+            var res = new MyCustomResource("r1", null, CustomResourceOptions.builder().build());
+            var text = new OutputInternal<>(OutputData.of("abc").withDependency(res));
+            var arg = new CustomArgs(text);
+            CustomInvokes.doStuff(arg, InvokeOutputOptions.Empty).applyValue(r -> {
+                assertFalse(true, "invoke should not be called!");
+                return r;
+            });
+        });
+        assertThat(result.exceptions()).hasSize(0);
+
         assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedSuccessfully);
     }
 
@@ -126,9 +198,9 @@ public class DeploymentInvokeDependsOnTest {
 
         @Import(name = "text")
         @Nullable
-        public final String text;
+        public final Output<String> text;
 
-        CustomArgs(@Nullable String text) {
+        CustomArgs(@Nullable Output<String> text) {
             this.text = text;
         }
     }

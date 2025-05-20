@@ -50,6 +50,12 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
         return this.state.projectName;
     }
 
+    @Nonnull
+    @Override
+    public String getOrganizationName() {
+        return this.state.organizationName;
+    }
+
     @Override
     public boolean isDryRun() {
         return this.state.isDryRun;

@@ -48,7 +48,7 @@ public class App {
             .tags(Map.of("Name", "web-server-www"))
             .instanceType("t2.micro")
             .securityGroups(securityGroup.name())
-            .ami(ami.applyValue(getAmiResult -> getAmiResult.id()))
+            .ami(ami.applyValue(_ami -> _ami.id()))
             .userData("""
 #!/bin/bash
 echo "Hello, World!" > index.html

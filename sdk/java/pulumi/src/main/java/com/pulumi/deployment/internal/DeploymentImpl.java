@@ -17,6 +17,7 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.CompletableFutures;
 import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.Environment;
 import com.pulumi.core.internal.GlobalLogging;
 import com.pulumi.core.internal.Internal;
@@ -27,7 +28,6 @@ import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.core.internal.Strings;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
-import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.exceptions.LogException;
@@ -52,17 +52,16 @@ import com.pulumi.serialization.internal.JsonFormatter;
 import com.pulumi.serialization.internal.PropertiesSerializer;
 import com.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
 import com.pulumi.serialization.internal.Structs;
-import pulumirpc.EngineOuterClass;
+import pulumirpc.AliasOuterClass.Alias;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
 import pulumirpc.Resource.Parameterization;
-import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterPackageRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
+import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
-import pulumirpc.AliasOuterClass.Alias;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -91,6 +90,7 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
@@ -163,6 +163,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return impl;
     }
 
+    @InternalUse
+    public static DeploymentImpl fromInline(InlineDeploymentSettings settings) {
+        var state = DeploymentState.fromInline(settings);
+        var impl = new DeploymentImpl(state);
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
+        return impl;
+    }
+
     @Override
     @Nonnull
     public String getStackName() {
@@ -173,6 +181,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Nonnull
     public String getProjectName() {
         return this.state.projectName;
+    }
+
+    @Override
+    @Nonnull
+    public String getOrganizationName() {
+        return this.state.organizationName;
     }
 
     @Override
@@ -247,7 +261,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             return hasSupport;
                         });
             }
-            return CompletableFuture.completedFuture(this.featureSupport.get(feature));
+            return ContextAwareCompletableFuture.completedFuture(this.featureSupport.get(feature));
         }
 
         @InternalUse
@@ -420,7 +434,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
         return this.invoke.invoke(token, targetType, args, options, packageRef);
     }
-    
+
     @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options) {
         return this.invoke.invoke(token, targetType, args, options);
@@ -497,7 +511,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return invoke(token, targetType, args, options, null);
         }
 
-        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, CompletableFuture<String> packageRef) {
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options, @Nullable CompletableFuture<String> packageRef) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -506,8 +520,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
             final CompletableFuture<String> packageRefFuture = packageRef == null
-                ? CompletableFuture.completedFuture(null)
-                : packageRef;
+                    ? CompletableFuture.completedFuture(null)
+                    : packageRef;
 
             // Wait for all values to be available, and then perform the RPC.
             return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
@@ -523,7 +537,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     }));
         }
 
-        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options, CompletableFuture<String> packageRef) {
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOutputOptions options, @Nullable CompletableFuture<String> packageRef) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -532,28 +546,49 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
             final CompletableFuture<String> packageRefFuture = packageRef == null
-                ? CompletableFuture.completedFuture(null)
-                : packageRef;
+                    ? CompletableFuture.completedFuture(null)
+                    : packageRef;
 
-            // Find all the resource dependencies from dependsOn. We need to wait for these futures to complete
-            // before calling the invoke.
-            var depsFuture = this.prepare.getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(options.getDependsOn()));
+            return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences().thenCompose(
+                    keepResources -> this.serializeInvokeArgs(token, args, keepResources)
+            ).thenCompose(serializedArgs -> {
+                if (serializedArgs.containsUnknowns) {
+                    return CompletableFuture.completedFuture(OutputData.unknown());
+                } else {
+                    // If we depend on any CustomResources, we need to ensure that their
+                    // ID is known before proceeding. If it is not known, we will return
+                    // an unknown result.
+                    var deps = new HashSet<Resource>(options.getDependsOn());
+                    // Add the dependencies from the inputs to the set of resources to wait for.
+                    var propertyDeps = serializedArgs.propertyToDependentResources.values().stream()
+                            .flatMap(Collection::stream)
+                            .collect(ImmutableSet.toImmutableSet());
+                    var depsSet = new ImmutableSet.Builder<Resource>()
+                            .addAll(deps)
+                            .addAll(propertyDeps)
+                            .build();
+                    // The expanded set of dependencies, including children of components.
+                    var transitiveDeps = this.prepare.getAllTransitivelyReferencedResources(depsSet);
+                    // Ensure that all resource IDs are known before proceeding.
+                    var hasUnknownIDs = CompletableFutures.allOf(transitiveDeps
+                            .filter(r -> r instanceof CustomResource)
+                            .map(r -> Internal.of(((CustomResource) r).id()).isKnown())
+                            .collect(ImmutableSet.toImmutableSet())
+                    ).thenApply(s -> s.stream().anyMatch(known -> !known));
 
-            // Wait for all values from args to be available, and then perform the RPC.
-            return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
-                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
-                    .thenCompose(serializedArgs -> {
-                        if (!serializedArgs.containsUnknowns) {
-                            return CompletableFuture.allOf(depsFuture, packageRefFuture)
-                                    .thenCompose(v -> this.invokeRawAsync(token, serializedArgs, options, packageRefFuture.join()))
-                                    .thenApply(result -> parseInvokeResponse(token, targetType, result))
-                                    .thenApply(output -> output.withDependencies(options.getDependsOn()));
-                        } else {
+                    return hasUnknownIDs.thenCompose(hasUnknown -> {
+                        if (hasUnknown) {
                             return CompletableFuture.completedFuture(OutputData.unknown());
+                        } else {
+                            return packageRefFuture
+                                    .thenCompose(packageRefString -> this.invokeRawAsync(token, serializedArgs, options, packageRefString))
+                                    .thenApply(result -> parseInvokeResponse(token, targetType, result).withDependencies(options.getDependsOn()));
                         }
-                    }));
+                    });
+                }
+            }));
         }
-        
+
         private <T> OutputData<T> parseInvokeResponse(
                 String token, TypeShape<T> targetType, SerializationResult result) {
             return this.converter.convertValue(
@@ -608,8 +643,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // `invoke`.
 
             packageRefFuture = packageRefFuture == null
-                ? CompletableFuture.completedFuture(null)
-                : packageRefFuture;
+                    ? CompletableFuture.completedFuture(null)
+                    : packageRefFuture;
 
             return packageRefFuture
                     .thenCompose(packageRef -> invokeRawAsync(token, args, options, packageRef))
@@ -683,7 +718,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 });
             });
         }
-        
+
         private CompletableFuture<SerializationResult> serializeInvokeArgs(
                 String token, InvokeArgs args, boolean keepResources) {
             return Internal.from(args).toMapAsync(this.log).thenCompose(argsDict ->
@@ -893,12 +928,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @Override
     public CompletableFuture<String> registerPackage(
-        String baseProviderName,
-        String baseProviderVersion,
-        String baseProviderDownloadUrl,
-        String packageName,
-        String packageVersion,
-        String base64Parameter
+            String baseProviderName,
+            String baseProviderVersion,
+            String baseProviderDownloadUrl,
+            String packageName,
+            String packageVersion,
+            String base64Parameter
     ) {
         return this.featureSupport.monitorSupportsParameterization().thenCompose(supportsParameterization -> {
             if (!supportsParameterization) {
@@ -906,20 +941,20 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             }
 
             var request = RegisterPackageRequest.newBuilder()
-                .setName(baseProviderName)
-                .setVersion(baseProviderVersion)
-                .setDownloadUrl(baseProviderDownloadUrl)
-                .setParameterization(
-                    Parameterization.newBuilder()
-                        .setName(packageName)
-                        .setVersion(packageVersion)
-                        .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
-                        .build()
-                )
-                .build();
+                    .setName(baseProviderName)
+                    .setVersion(baseProviderVersion)
+                    .setDownloadUrl(baseProviderDownloadUrl)
+                    .setParameterization(
+                            Parameterization.newBuilder()
+                                    .setName(packageName)
+                                    .setVersion(packageVersion)
+                                    .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
+                                    .build()
+                    )
+                    .build();
 
             return this.state.monitor.registerPackageAsync(request)
-                .thenApply(response -> response.getRef());
+                    .thenApply(response -> response.getRef());
         });
     }
 
@@ -1067,7 +1102,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return Internal.of(resources).getValueOrDefault(List.of());
         }
 
-        private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
+        private Stream<Resource> getAllTransitivelyReferencedResources(
                 ImmutableSet<Resource> resources
         ) {
             // Go through 'resources', but transitively walk through **Component** resources, collecting any
@@ -1106,13 +1141,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             return Internal.from(resource).getRemote();
                         }
                         return false; // Unreachable
-                    })
-                    .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""))
-                    .collect(toImmutableSet());
-            return CompletableFutures.allOf(transitivelyReachableCustomResources)
-                    .thenApply(ts -> ts.stream()
-                            .filter(Strings::isNonEmptyOrNull)
-                            .collect(toImmutableSet())
+                    });
+            return transitivelyReachableCustomResources;
+        }
+
+        private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
+                ImmutableSet<Resource> resources) {
+            var urns = getAllTransitivelyReferencedResources(resources)
+                    .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""));
+            return CompletableFutures.allOf(urns.collect(ImmutableSet.toImmutableSet()))
+                    .thenApply(strings -> strings.stream().filter(Strings::isNonEmptyOrNull))
+                    .thenApply(urn -> urn.collect(ImmutableSet.toImmutableSet())
                     );
         }
 
@@ -1255,7 +1294,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         /**
-         * Calls @see {@link #readOrRegisterResource(Resource, boolean, Function, ResourceArgs, ResourceOptions, Resource.LazyFields)}"
+         * Calls @see {@link #readOrRegisterResourceAsync(Resource, boolean, Function, ResourceArgs, ResourceOptions, String)}"
          * then completes all the @see {@link OutputCompletionSource} sources on the {@code resource}
          * with the results of it.
          */
@@ -1266,17 +1305,19 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Resource.LazyFields lazy, CompletableFuture<String> packageRefFuture
         ) {
             packageRefFuture = packageRefFuture == null
-                ? CompletableFuture.completedFuture(null)
-                : packageRefFuture;
+                    ? CompletableFuture.completedFuture(null)
+                    : packageRefFuture;
+
+            packageRefFuture = ContextAwareCompletableFuture.wrap(packageRefFuture);
 
             return packageRefFuture
                     .thenCompose(packageRef -> readOrRegisterResourceAsync(
-                        resource,
-                        remote,
-                        newDependency,
-                        args,
-                        options,
-                        packageRef
+                            resource,
+                            remote,
+                            newDependency,
+                            args,
+                            options,
+                            packageRef
                     ))
                     .thenApplyAsync(response -> {
                         var urn = response.urn;
@@ -1452,7 +1493,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return this.prepare.prepareResourceAsync(label, resource, /* custom */ true, /* remote */ false, args, options)
                     .thenCompose(prepareResult -> {
                         log.debugOrExcessive(String.format(
-                                "ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name),
+                                        "ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name),
                                 String.format(", obj=%s", prepareResult.serializedProps)
                         );
 
@@ -1661,8 +1702,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 log.debugOrExcessive(
                         String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn),
                         String.format(", outputs=%s", JsonFormatter
-                                        .format(serialized)
-                                        .orThrow(Function.identity())
+                                .format(serialized)
+                                .orThrow(Function.identity())
                         ));
 
                 return this.monitor.registerResourceOutputsAsync(
@@ -1731,6 +1772,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
 
         public final DeploymentImpl.Config config;
+        public final String organizationName;
         public final String projectName;
         public final String stackName;
         public final boolean isDryRun;
@@ -1746,6 +1788,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public DeploymentState(
                 DeploymentImpl.Config config,
                 Logger standardLogger,
+                String organizationName,
                 String projectName,
                 String stackName,
                 boolean isDryRun,
@@ -1753,6 +1796,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Monitor monitor) {
             this.config = Objects.requireNonNull(config);
             this.standardLogger = Objects.requireNonNull(standardLogger);
+            this.organizationName = Objects.requireNonNullElse(organizationName, "organization");
             this.projectName = Objects.requireNonNull(projectName);
             this.stackName = Objects.requireNonNull(stackName);
             this.isDryRun = isDryRun;
@@ -1778,6 +1822,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             try {
                 var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
                 var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
+                var organization = getEnvironmentVariable("PULUMI_ORGANIZATION").or("organization");
                 var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
                 var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
                 var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
@@ -1793,11 +1838,47 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var monitor = new GrpcMonitor(monitorTarget);
                 standardLogger.log(Level.FINEST, "Created deployment monitor");
 
-                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
+                return new DeploymentState(config, standardLogger, organization, project, stack, dryRun, engine, monitor);
             } catch (NullPointerException ex) {
                 throw new IllegalStateException(
                         "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
             }
+        }
+
+        public static DeploymentState fromInline(InlineDeploymentSettings settings) {
+
+            Objects.requireNonNull(settings, "settings cannot be null");
+
+            String organizationName = settings.getOrganization().orElse("organization");
+            String projectName = settings.getProject();
+            String stackName = settings.getStack();
+            boolean isDryRun = settings.isDryRun();
+
+            if (Strings.isEmptyOrNull(settings.getMonitorAddr()) ||
+                    Strings.isEmptyOrNull(settings.getEngineAddr()) ||
+                    Strings.isEmptyOrNull(projectName) ||
+                    Strings.isEmptyOrNull(stackName)) {
+                throw new IllegalStateException(
+                        "Inline execution was not provided the necessary parameters to run the Pulumi engine.");
+            }
+
+            Logger deploymentLogger = Logger.getLogger(DeploymentImpl.class.getName());
+            deploymentLogger.setLevel(GlobalLogging.GlobalLevel);
+
+            deploymentLogger.log(Level.FINEST, "Creating deployment engine");
+            Engine engine = new GrpcEngine(settings.getEngineAddr());
+            deploymentLogger.log(Level.FINEST, "Created deployment engine");
+
+            deploymentLogger.log(Level.FINEST, "Creating deployment monitor");
+            Monitor monitor = new GrpcMonitor(settings.getMonitorAddr());
+            deploymentLogger.log(Level.FINEST, "Created deployment monitor");
+
+            Config config = new Config(
+                    settings.getConfig(),
+                    settings.getConfigSecretKeys()
+            );
+
+            return new DeploymentState(config, deploymentLogger, organizationName, projectName, stackName, isDryRun, engine, monitor);
         }
     }
 
@@ -1830,7 +1911,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @Override
         public <T> CompletableFuture<Result<T>> runAsync(Supplier<T> callback) {
-            var valueFuture = CompletableFuture.supplyAsync(callback);
+            var valueFuture = ContextAwareCompletableFuture.supplyAsync(callback);
             // run the callback asynchronously in the context of the error handler
             registerTask("DefaultRunner#runAsync", valueFuture);
             // loop starts after the callback
@@ -1922,32 +2003,44 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 }
             };
 
-            Supplier<CompletableFuture<Void>> loopUntilDone = () -> {
-                // Keep looping as long as there are outstanding tasks that are still running.
-                while (inFlightTasks.size() > 0) {
-                    this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+            CompletableFuture<Void> drainTasks = new CompletableFuture<>();
 
-                    // Grab all the tasks we currently have running.
-                    for (var task : inFlightTasks.keySet()) {
-                        try {
-                            if (task.isDone()) {
-                                // at this point the future is guaranteed to be solved
-                                // so there won't be any blocking here
-                                handleCompletion.accept(task); // will remove from inFlightTasks
-                            } else {
-                                this.standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
-                                // will attempt again in the next iteration
-                            }
-                        } catch (Exception e) {
-                            return CompletableFuture.failedFuture(e);
-                        }
+            ContextAwareCompletableFuture.runAsync(() -> loopUntilDone(drainTasks, handleCompletion));
+
+            return drainTasks;
+        }
+
+        private void loopUntilDone(CompletableFuture<Void> drainTasks, Consumer<CompletableFuture<Void>> handleCompletion) {
+            try {
+                if (checkForTasks(handleCompletion)) {
+                    drainTasks.complete(null);
+                } else {
+                    // We need to reschedule the loop, to avoid hogging the async thread pool.
+                    ContextAwareCompletableFuture.runAsync(() -> loopUntilDone(drainTasks, handleCompletion));
+                }
+            } catch (Exception e) {
+                drainTasks.completeExceptionally(e);
+            }
+        }
+
+        private boolean checkForTasks(Consumer<CompletableFuture<Void>> handleCompletion) {
+            if (!inFlightTasks.isEmpty()) {
+                this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+
+                // Grab all the tasks we currently have running.
+                for (var task : inFlightTasks.keySet()) {
+                    if (task.isDone()) {
+                        // at this point the future is guaranteed to be solved
+                        // so there won't be any blocking here
+                        handleCompletion.accept(task); // will remove from inFlightTasks
+                    } else {
+                        this.standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
+                        // will attempt again in the next iteration
                     }
                 }
+            }
 
-                // There were no more tasks we were waiting on. Quit out.
-                return CompletableFuture.completedFuture((Void) null);
-            };
-            return CompletableFuture.supplyAsync(loopUntilDone).thenCompose(f -> f);
+            return inFlightTasks.isEmpty();
         }
 
         private CompletableFuture<Integer> handleExceptionAsync(Throwable throwable) {
@@ -1970,7 +2063,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 // Nothing to do here but print some errors and abort.
                 this.standardLogger.log(Level.SEVERE, String.format(
                         "Error occurred trying to send logging message to engine: %s", exception.getMessage()));
-                return CompletableFuture.supplyAsync(() -> {
+                return ContextAwareCompletableFuture.supplyAsync(() -> {
                     System.err.printf("Error occurred trying to send logging message to engine: %s%n", exception);
                     exception.printStackTrace();
                     return ProcessExitedBeforeLoggingUserActionableMessage;
