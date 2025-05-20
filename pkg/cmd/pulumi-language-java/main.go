@@ -445,38 +445,29 @@ func (host *javaLanguageHost) RunPlugin(
 	cmd := exec.Command(executable, args...)
 	cmd.Dir = req.Pwd
 	cmd.Env = req.Env
-	var stdoutBuf bytes.Buffer
-	var tr io.Reader
 	if req.GetAttachDebugger() {
-		cmd.Stdout = &stdoutBuf
-		func() {
+		var tr io.Reader
+		pr, pw := io.Pipe()
+		readyPr, readyPw := io.Pipe()
+		tr = io.TeeReader(pr, readyPw)
+		cmd.Stdout = pw
+		cmd.Stderr = stderr
+
+		go func() {
 			// If we have a debugger attached filter the output
-			if req.GetAttachDebugger() {
-				scanner := bufio.NewScanner(&stdoutBuf)
-				for scanner.Scan() {
-					// only print if we have the port number in the output.
-					// mvnDebug prints other stuff, which RunPlugin doesn't
-					// expect, so we have to filter it out.
-					if regexp.MustCompile("%d+").MatchString(scanner.Text()) {
-						stdout.Write(scanner.Bytes())
-					}
+			scanner := bufio.NewScanner(tr)
+			for scanner.Scan() {
+				// only print if we have the port number in the output.
+				// mvnDebug prints other stuff, which RunPlugin doesn't
+				// expect, so we have to filter it out.
+				if regexp.MustCompile("%d+").MatchString(scanner.Text()) {
+					stdout.Write(scanner.Bytes())
 				}
 			}
-			if req.GetAttachDebugger() {
-				pr, pw := io.Pipe()
-				cmd.Stderr = pw
-
-				tr = io.TeeReader(pr, stderr)
-			}
 		}()
-	} else {
-		cmd.Stdout = stdout
-		cmd.Stderr = stderr
-	}
 
-	if req.GetAttachDebugger() {
 		go func() {
-			err := WaitForDebuggerReady(tr)
+			err := WaitForDebuggerReady(readyPr)
 			if err != nil {
 				logging.Errorf("failed to wait for debugger: %v", err)
 				contract.IgnoreError(cmd.Process.Kill())
@@ -509,6 +500,10 @@ func (host *javaLanguageHost) RunPlugin(
 				contract.IgnoreError(cmd.Process.Kill())
 			}
 		}()
+
+	} else {
+		cmd.Stdout = stdout
+		cmd.Stderr = stderr
 	}
 
 	if err = cmd.Run(); err != nil {
