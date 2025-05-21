@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.12.0
+
+- Allow --attach-debugger to attach to plugins
+
 ## 1.11.0
 
 ### Improvements
