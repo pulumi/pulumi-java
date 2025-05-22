@@ -933,4 +933,65 @@ public class LocalWorkspaceTest {
             }
         }
     }
+
+    @Test
+    public void testConfigWithOptions(@EnvVars Map<String, String> envVars) throws Exception {
+        var env = new HashMap<String, String>(envVars);
+        env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+        try (var workspace = LocalWorkspace.create(LocalWorkspaceOptions.builder()
+                .projectSettings(ProjectSettings.builder(
+                        "config_options_test",
+                        ProjectRuntimeName.NODEJS).build())
+                .environmentVariables(env)
+                .build())) {
+
+            var stackName = randomStackName();
+            var stack = WorkspaceStack.create(stackName, workspace);
+
+            // Test getConfigWithOptions
+            var getOptions = new ConfigOptions(true, "Pulumi.test.yaml", false);
+            stack.setConfigWithOptions("key1", new ConfigValue("value1"), getOptions);
+            var value = stack.getConfigWithOptions("key1", getOptions);
+            assertThat(value.value()).isEqualTo("value1");
+
+            // Test setConfigWithOptions
+            var setOptions = new ConfigOptions(false, "Pulumi.test.yaml", false);
+            stack.setConfigWithOptions("key2", new ConfigValue("value2"), setOptions);
+            value = stack.getConfigWithOptions("key2", setOptions);
+            assertThat(value.value()).isEqualTo("value2");
+
+            // Test removeConfigWithOptions
+            var removeOptions = new ConfigOptions(true, "Pulumi.test.yaml", false);
+            stack.removeConfigWithOptions("key1", removeOptions);
+            assertThrows(AutomationException.class, () -> stack.getConfigWithOptions("key1", removeOptions));
+
+            // Test getAllConfigWithOptions
+            var getAllOptions = new GetAllConfigOptions(false, "Pulumi.test.yaml", true);
+            var config = stack.getAllConfigWithOptions(getAllOptions);
+            assertThat(config).hasEntrySatisfying("key2", v -> assertThat(v.value()).isEqualTo("value2"));
+
+            // Test setAllConfigWithOptions
+            var setAllOptions = new ConfigOptions(true, "Pulumi.test.yaml", false);
+            var configMap = Map.of(
+                "key3", new ConfigValue("value3"),
+                "key4", new ConfigValue("value4", true)
+            );
+            stack.setAllConfigWithOptions(configMap, setAllOptions);
+            config = stack.getAllConfigWithOptions(getAllOptions);
+            assertThat(config).hasEntrySatisfying("key3", v -> assertThat(v.value()).isEqualTo("value3"));
+            assertThat(config).hasEntrySatisfying("key4", v -> {
+                assertThat(v.value()).isEqualTo("value4");
+                assertThat(v.isSecret()).isTrue();
+            });
+
+            // Test removeAllConfigWithOptions
+            var removeAllOptions = new ConfigOptions(false, "Pulumi.test.yaml", false);
+            stack.removeAllConfigWithOptions(List.of("key2", "key3"), removeAllOptions);
+            config = stack.getAllConfigWithOptions(getAllOptions);
+            assertThat(config).doesNotContainKey("key2");
+            assertThat(config).doesNotContainKey("key3");
+            assertThat(config).containsKey("key4");
+        }
+    }
 }
