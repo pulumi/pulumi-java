@@ -237,6 +237,8 @@ public class MockMonitor implements Monitor {
 
     @Override
     public CompletableFuture<RegisterPackageResponse> registerPackageAsync(RegisterPackageRequest request) {
-        return CompletableFuture.completedFuture(RegisterPackageResponse.newBuilder().build());
+        return CompletableFuture.completedFuture(RegisterPackageResponse.newBuilder()
+                .setRef("mock-uuid")
+                .build());
     }
 }
