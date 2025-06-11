@@ -1,9 +1,19 @@
 CHANGELOG
 =========
 
+## 1.13.0
+
+### Improvements
+
+* Support parameterization in mocks
+
+* Update pulumi/pulumi dependencies
+
 ## 1.12.0
 
-- Allow --attach-debugger to attach to plugins
+### Improvements
+
+* Allow --attach-debugger to attach to plugins
 
 ## 1.11.0
 
