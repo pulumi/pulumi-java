@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.13.1
+
+* Update dependencies
+
 ## 1.13.0
 
 ### Improvements
