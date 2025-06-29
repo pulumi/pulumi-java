@@ -9,6 +9,9 @@ import java.lang.annotation.Target;
 
 import com.pulumi.core.internal.annotations.InternalUse;
 
+/**
+ * Annotation indicating that a boolean field should be skipped during serialization if its value is {@code false}.
+ */
 @InternalUse
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

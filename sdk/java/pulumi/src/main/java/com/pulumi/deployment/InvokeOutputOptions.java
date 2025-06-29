@@ -55,6 +55,9 @@ public class InvokeOutputOptions extends InvokeOptions {
         return this.dependsOn == null ? List.of() : new ArrayList<>(this.dependsOn);
     }
 
+    /**
+     * The {@link InvokeOutputOptions} builder.
+     */
     public static final class Builder {
         private @Nullable Resource parent;
         private @Nullable ProviderResource provider;
@@ -117,20 +120,52 @@ public class InvokeOutputOptions extends InvokeOptions {
         }
     }
 
+    /**
+     * Internal utility class of {@link InvokeOutputOptions}.
+     *
+     * @see InvokeOutputOptions
+     * @see ProviderResource
+     * @see com.pulumi.core.internal.Internal
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static final class InvokeOutputOptionsInternal {
 
+        /**
+         * The underlying {@link InvokeOutputOptions} instance from which provider and parent information is resolved.
+         */
         private final InvokeOutputOptions options;
 
+        /**
+         * Creates a new {@code InvokeOutputOptionsInternal} wrapper for the given {@link InvokeOutputOptions}.
+         *
+         * @param options the {@link InvokeOutputOptions} instance to wrap; must not be null
+         * @throws NullPointerException if {@code options} is null
+         */
         private InvokeOutputOptionsInternal(InvokeOutputOptions options) {
             this.options = requireNonNull(options);
         }
 
+        /**
+         * Creates a new {@code InvokeOutputOptionsInternal} from the specified {@link InvokeOutputOptions}.
+         *
+         * @param options the {@link InvokeOutputOptions} to wrap
+         * @return a new {@code InvokeOutputOptionsInternal} instance
+         * @throws NullPointerException if {@code options} is null
+         */
         public static InvokeOutputOptionsInternal from(InvokeOutputOptions options) {
             return new InvokeOutputOptionsInternal(options);
         }
 
+        /**
+         * Attempts to resolve a {@link ProviderResource} for the given provider token.
+         *
+         * @param token the provider token to resolve
+         * @return an {@link Optional} containing the resolved {@link ProviderResource}, or empty if not found
+         *
+         * @see ProviderResource
+         * @see com.pulumi.core.internal.Internal#from(Resource)
+         */
         public Optional<ProviderResource> getNestedProvider(String token) {
             return this.options.getProvider().or(
                     () -> this.options.getParent()

@@ -27,24 +27,59 @@ import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.StackOptions;
 import com.pulumi.resources.internal.DependencyProviderResource;
 
+/**
+ * The {@code ResourceProviderService} class is responsible for managing the lifecycle of resource provider server.
+ *
+ * @see Provider
+ * @see ResourceProviderService.ResourceProviderImpl
+ */
 public class ResourceProviderService {
 
     private static final Logger logger = Logger.getLogger(ResourceProviderService.class.getName());
 
+    /**
+     * The gRPC server instance that serves the resource provider.
+     */
     Server server; // Exposed as private-package for testing.
+
+    /**
+     * The address of the Pulumi engine to which this provider service connects.
+     */
     private final String engineAddress;
+
+    /**
+     * The provider implementation that contains the logic for handling resource operations.
+     */
     private final Provider implementation;
 
+    /**
+     * Constructs a new {@code ResourceProviderService} with the specified engine address and provider implementation.
+     * @param engineAddress the address of the Pulumi engine to connect to
+     * @param implementation the provider implementation to expose via the gRPC server
+     */
     public ResourceProviderService(String engineAddress, Provider implementation) {
         this.engineAddress = engineAddress;
         this.implementation = implementation;
     }
 
+    /**
+     * Starts the resource provider server and blocks the current thread until the server is shut down.
+     * @throws IOException if the server fails to start due to I/O errors
+     * @throws InterruptedException if the thread is interrupted while waiting for shutdown
+     *
+     * @see #start()
+     * @see #blockUntilShutdown()
+     */
     public void startAndBlockUntilShutdown() throws IOException, InterruptedException {
         start();
         blockUntilShutdown();
     }
 
+    /**
+     * Starts the gRPC server for the resource provider, making it available to handle requests from the engine.
+     *
+     * @throws IOException if the server fails to start due to I/O errors
+     */
     void start() throws IOException {
         server = createServerBuilder()
             .addService(new ResourceProviderImpl(this.engineAddress, this.implementation))
@@ -67,18 +102,32 @@ public class ResourceProviderService {
         });
     }
 
+    /**
+     * Stops the gRPC server, preventing it from handling any further requests.
+     *
+     * @throws InterruptedException if the thread is interrupted while waiting for shutdown
+     */
     private void stop() throws InterruptedException {
         if (server != null) {
             server.shutdown().awaitTermination(30, TimeUnit.SECONDS);
         }
     }
 
+    /**
+     * Blocks the current thread until the gRPC server is shut down.
+     * @throws InterruptedException if the thread is interrupted while waiting for shutdown
+     */
     private void blockUntilShutdown() throws InterruptedException {
         if (server != null) {
             server.awaitTermination();
         }
     }
 
+    /**
+     * Creates a new {@link ServerBuilder} instance for configuring and building the gRPC server.
+     *
+     * @return a {@link ServerBuilder} instance for configuring the server
+     */
     protected ServerBuilder<?> createServerBuilder() {
         return ServerBuilder.forPort(0);
     }
@@ -241,6 +290,11 @@ public class ResourceProviderService {
             DeploymentInstanceHolder.internalUnsafeDestroyInstance();
         }
 
+        /**
+         * Deserializes the custom timeouts from the protobuf representation.
+         * @param customTimeouts the protobuf representation of custom timeouts
+         * @return a {@link CustomTimeouts} instance with the parsed timeouts
+         */
         private static CustomTimeouts deserializeTimeouts(pulumirpc.Provider.ConstructRequest.CustomTimeouts customTimeouts)
         {
             return CustomTimeouts.builder()
@@ -250,6 +304,11 @@ public class ResourceProviderService {
                 .build();
         }
 
+        /**
+         * Unmarshals the properties from a protobuf {@link Struct} into a map of {@link PropertyValue}.
+         * @param properties the protobuf representation of properties
+         * @return a map of property names to their corresponding {@link PropertyValue}
+         */
         private static Map<String, PropertyValue> unmarshal(Struct properties) {
             if (properties == null) {
                 return Collections.emptyMap();
