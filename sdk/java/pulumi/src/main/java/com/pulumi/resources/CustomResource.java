@@ -118,17 +118,39 @@ public class CustomResource extends Resource {
         return this.id;
     }
 
+
+    /**
+     * Internal helper class for managing the internal state and lifecycle of a {@link CustomResource}.
+     *
+     * @see CustomResource
+     * @see ResourceInternal
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class CustomResourceInternal extends ResourceInternal {
 
+        /**
+         * The associated {@link CustomResource} instance whose internal state is managed.
+         */
         private final CustomResource resource;
 
+        /**
+         * Constructs a new {@code CustomResourceInternal} for the specified {@link CustomResource}.
+         *
+         * @param resource the {@link CustomResource} to manage; must not be null
+         * @throws NullPointerException if {@code resource} is null
+         */
         protected CustomResourceInternal(CustomResource resource) {
             super(resource);
             this.resource = requireNonNull(resource);
         }
 
+        /**
+         * Creates a new {@code CustomResourceInternal} instance for the given {@link CustomResource}.
+         *
+         * @param r the {@link CustomResource} to wrap; must not be null
+         * @return a new {@code CustomResourceInternal} instance managing {@code r}
+         */
         public static CustomResourceInternal from(CustomResource r) {
             return new CustomResourceInternal(r);
         }
@@ -136,7 +158,7 @@ public class CustomResource extends Resource {
         /**
          * More: {@link #id()}
          *
-         * @param id the the provider-assigned unique ID to set
+         * @param id the provider-assigned unique ID to set
          * @throws NullPointerException if id is null
          */
         @InternalUse
@@ -146,6 +168,13 @@ public class CustomResource extends Resource {
             }
         }
 
+        /**
+         * Attempts to set the provider-assigned unique ID for the associated {@link CustomResource}.
+         *
+         * @param id the provider-assigned unique ID to set; must not be null
+         * @return {@code true} if the ID was set successfully; {@code false} if it was already set
+         * @throws NullPointerException if {@code id} is null
+         */
         @InternalUse
         public boolean trySetId(Output<String> id) {
             requireNonNull(id);

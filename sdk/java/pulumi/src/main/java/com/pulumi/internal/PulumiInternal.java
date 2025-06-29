@@ -28,31 +28,74 @@ import java.util.function.Function;
 
 import static java.util.Objects.requireNonNull;
 
+/**
+ * Internal implementation of the {@link Pulumi} API, responsible for configuring and executing Pulumi stack deployments.
+ *
+ * @see com.pulumi.deployment.Deployment
+ * @see com.pulumi.deployment.internal.DeploymentImpl
+ * @see com.pulumi.resources.StackOptions
+ */
 @InternalUse
 @ParametersAreNonnullByDefault
 public class PulumiInternal implements Pulumi, Pulumi.API {
 
+    /**
+     * The internal context representing the current stack execution environment.
+     */
     protected final Runner runner;
+    /**
+     * The internal context representing the current stack execution environment.
+     */
     protected final ContextInternal stackContext;
 
+    /**
+     * Constructs a new {@code PulumiInternal} instance with the specified runner and stack context.
+     *
+     * @param runner the runner used to execute deployment tasks
+     * @param stackContext the context representing the stack execution environment
+     * @throws NullPointerException if either argument is {@code null}
+     */
     @InternalUse
     public PulumiInternal(Runner runner, ContextInternal stackContext) {
         this.runner = requireNonNull(runner);
         this.stackContext = requireNonNull(stackContext);
     }
 
+    /**
+     * Creates a new {@code PulumiInternal} instance using environment-based deployment configuration.
+     *
+     * @param options stack options to customize the deployment
+     * @return a configured {@code PulumiInternal} instance
+     * @see com.pulumi.resources.StackOptions
+     */
     @InternalUse
     public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
         return completeConfiguration(deployment, options);
     }
 
+    /**
+     * Creates a new {@code PulumiInternal} instance using inline deployment settings.
+     *
+     * @param settings inline deployment settings
+     * @param options stack options to customize the deployment
+     * @return a configured {@code PulumiInternal} instance
+     * @see com.pulumi.deployment.internal.InlineDeploymentSettings
+     * @see com.pulumi.resources.StackOptions
+     */
     @InternalUse
     public static PulumiInternal fromInline(InlineDeploymentSettings settings, StackOptions options) {
         var deployment = DeploymentImpl.fromInline(settings);
         return completeConfiguration(deployment, options);
     }
 
+    /**
+     * Completes the configuration of a {@code PulumiInternal} instance by initializing context and dependencies.
+     *
+     * @param deployment the deployment implementation to use
+     * @param options stack options to customize the deployment
+     * @return a fully configured {@code PulumiInternal} instance
+     */
     private static PulumiInternal completeConfiguration(DeploymentImpl deployment, StackOptions options) {
         var instance = Deployment.getInstance();
         var organizationName = deployment.getOrganizationName();
@@ -73,14 +116,36 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
         return new PulumiInternal(runner, ctx);
     }
 
+    /**
+     * Runs the Pulumi stack synchronously, blocking until completion and exiting the process with the result code.
+     *
+     * @param stack a {@link Consumer} that receives the Pulumi {@link Context} for stack logic execution
+     * @see com.pulumi.Context
+     */
     public void run(Consumer<Context> stack) {
         System.exit(runAsync(stack).join());
     }
 
+    /**
+     * Runs the Pulumi stack asynchronously, returning a future for the exit code.
+     *
+     * @param stackCallback a {@link Consumer} that receives the Pulumi {@link Context} for stack logic execution
+     * @return a {@link CompletableFuture} that completes with the process exit code
+     */
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
         return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
     }
 
+    /**
+     * Runs the Pulumi stack inline with a custom asynchronous runner function.
+     *
+     * @param runnerFunc a function that receives the Pulumi {@link Context} and returns a future result
+     * @param <T> the type of the result produced by the runner function
+     * @return a {@link CompletableFuture} that completes with the runner function's result
+     * @throws RuntimeException if multiple exceptions occur during execution
+     * @throws IllegalStateException if no result or exceptions are available
+     * @see com.pulumi.Context
+     */
     @InternalUse
     public <T> CompletableFuture<T> runInlineAsync(Function<Context, CompletableFuture<T>> runnerFunc) {
         return runner.runAsync(() -> runnerFunc.apply(stackContext))
@@ -102,6 +167,14 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
                 .thenCompose(Function.identity());
     }
 
+    /**
+     * Runs the Pulumi stack asynchronously and returns a future for the stack execution result.
+     *
+     * @param stackCallback a {@link Consumer} that receives the Pulumi {@link Context} for stack logic execution
+     * @return a {@link CompletableFuture} containing the result of the stack execution
+     * @see com.pulumi.Context
+     * @see com.pulumi.resources.internal.Stack
+     */
     protected CompletableFuture<Result<Stack>> runAsyncResult(Consumer<Context> stackCallback) {
         // Stack must be created and set globally before running any user code
         return runner.runAsync(

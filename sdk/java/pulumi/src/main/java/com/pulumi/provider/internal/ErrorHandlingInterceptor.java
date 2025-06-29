@@ -4,6 +4,12 @@ import io.grpc.*;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+/**
+ * A gRPC {@link ServerInterceptor} that catches and reports uncaught exceptions as internal errors.
+ *
+ * @see io.grpc.ServerInterceptor
+ * @see io.grpc.Status
+ */
 public class ErrorHandlingInterceptor implements ServerInterceptor {
     @Override
     public <ReqT, RespT> ServerCall.Listener<ReqT> interceptCall(

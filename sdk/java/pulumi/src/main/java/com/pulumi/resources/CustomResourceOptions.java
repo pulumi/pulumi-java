@@ -57,6 +57,12 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
         return new Builder(new CustomResourceOptions());
     }
 
+
+    /**
+     * Builder for {@link CustomResourceOptions}.
+     *
+     * @see CustomResourceOptions
+     */
     public static final class Builder extends ResourceOptions.Builder<CustomResourceOptions, Builder> {
 
         private Builder(CustomResourceOptions options) {
@@ -66,6 +72,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
         /**
          * When set to "true", indicates that this resource should be deleted before its
          * replacement is created when replacement is necessary.
+         * @param deleteBeforeReplace {@code true} to delete before replace; {@code false} to use default behavior
+         * @return this builder instance for method chaining
          */
         public Builder deleteBeforeReplace(boolean deleteBeforeReplace) {
             options.deleteBeforeReplace = deleteBeforeReplace;
@@ -78,12 +86,18 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
          * to your resource. It can be used to mark certain outputs as a secrets on a per-resource
          * basis.
          *
+         * @param additionalSecretOutputs one or more output names to treat as secrets
+         * @return this builder instance for method chaining
          */
         public Builder additionalSecretOutputs(String... additionalSecretOutputs) {
             return this.additionalSecretOutputs(List.of(additionalSecretOutputs));
         }
 
         /**
+         * Adds the names of outputs for this resource that should be treated as secrets.
+         *
+         * @param additionalSecretOutputs a list of output names to treat as secrets, or {@code null} for none
+         * @return this builder instance for method chaining
          * @see #additionalSecretOutputs(String...)
          */
         public Builder additionalSecretOutputs(@Nullable List<String> additionalSecretOutputs) {
@@ -96,12 +110,18 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
          * import its state from the cloud resource with the given ID.The inputs to the resource's
          * constructor must align with the resource's current state.Once a resource has been
          * imported, the import property must be removed from the resource's options.
+         *
+         * @param importId the provider-assigned unique ID of the resource to import, or {@code null} to disable import
+         * @return this builder instance for method chaining
          */
         public Builder importId(@Nullable String importId) {
             options.importId = importId;
             return this;
         }
 
+        /**
+         * Builds a new {@link CustomResourceOptions} instance with the configured settings.
+         */
         public CustomResourceOptions build() {
             return this.options;
         }
