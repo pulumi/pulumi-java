@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.15.0
+
+* Fix publishing workflows
+
 ## 1.14.0
 
 * Update dependencies
