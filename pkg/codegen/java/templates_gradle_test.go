@@ -12,6 +12,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 )
 
 func TestNewGradleTemplateContextLegacy(t *testing.T) {
@@ -105,6 +106,18 @@ func TestNewGradleTemplateContextBuildFiles(t *testing.T) {
 	assert.Equal(t, true, tctx.GradleNexusPublishPluginEnabled)
 }
 
+var accept = cmdutil.IsTruthy(os.Getenv("PULUMI_ACCEPT"))
+
+func assertFileContentIs(t *testing.T, filePath, expectedContent string) {
+	if accept {
+		err := os.WriteFile(filePath, []byte(expectedContent), 0o600)
+		require.NoError(t, err)
+	}
+	actualContent, err := os.ReadFile(filePath)
+	require.NoError(t, err)
+	require.Equal(t, expectedContent, string(actualContent))
+}
+
 func TestGenGradleProjectLegacyTrue(t *testing.T) {
 	pkg, info := eksExample()
 	files := fs{}
@@ -113,9 +126,8 @@ func TestGenGradleProjectLegacyTrue(t *testing.T) {
 		t.Error(err)
 	}
 	gradleFile := files["build.gradle"]
-	snapshot, err := os.ReadFile(filepath.Join("testdata", "gen-gradle-project-legacy-true", "build.gradle"))
-	require.NoError(t, err)
-	require.Equal(t, string(snapshot), string(gradleFile))
+	fp := filepath.Join("testdata", "gen-gradle-project-legacy-true", "build.gradle")
+	assertFileContentIs(t, fp, string(gradleFile))
 }
 
 func TestGenGradleProjectLegacyFalse(t *testing.T) {
@@ -126,9 +138,8 @@ func TestGenGradleProjectLegacyFalse(t *testing.T) {
 		t.Error(err)
 	}
 	gradleFile := files["build.gradle"]
-	snapshot, err := os.ReadFile(filepath.Join("testdata", "gen-gradle-project-legacy-false", "build.gradle"))
-	require.NoError(t, err)
-	require.Equal(t, string(snapshot), string(gradleFile))
+	fp := filepath.Join("testdata", "gen-gradle-project-legacy-false", "build.gradle")
+	assertFileContentIs(t, fp, string(gradleFile))
 }
 
 func eksExample() (*schema.Package, *PackageInfo) {
