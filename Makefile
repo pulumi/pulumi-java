@@ -55,6 +55,11 @@ ensure_sdk::
 lint:: lint_pkg
 lint_pkg: lint_pkg_dependencies
 	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m
+
+.PHONY: lint_pkg.fix
+lint_pkg.fix: lint_pkg_dependencies
+	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m --fix
+
 .PHONY: lint_pkg_dependencies
 lint_pkg_dependencies:
 	@cd pkg || exit 1; \
