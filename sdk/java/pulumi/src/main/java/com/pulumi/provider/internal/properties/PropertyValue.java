@@ -16,7 +16,19 @@ import java.util.stream.Collectors;
 import com.pulumi.asset.*;
 import com.pulumi.core.internal.Constants;
 
+/**
+ * Represents a value in provider property system, supporting a wide range of types and
+ * serialization to and from Protobuf values.
+ */
 public class PropertyValue {
+
+    /**
+     * Enum representing the type of value stored in a {@link PropertyValue}.
+     * <p>
+     * Each type corresponds to a specific Java class, allowing for type-safe access to the value.
+     * The {@code NULL} and {@code COMPUTED} types are special cases that do not hold a value.
+     * </p>
+     */
     public enum ValueType {
         NULL(null),
         BOOL(Boolean.class),
@@ -38,6 +50,9 @@ public class PropertyValue {
         }
     }
 
+    /**
+     * Represents a reference to a Pulumi resource, including its URN, ID, and package version.
+     */
     public static class ResourceReference {
         private final String URN;
         private final PropertyValue id;
@@ -65,6 +80,9 @@ public class PropertyValue {
         }
     }
 
+    /**
+     * Represents a reference to an output value, including its dependencies.
+     */
     public static class OutputReference {
         private final PropertyValue value;
         private final Set<String> dependencies;
