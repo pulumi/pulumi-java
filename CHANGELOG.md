@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.14.0
+
+* Update dependencies
+
 ## 1.13.1
 
 * Update dependencies
