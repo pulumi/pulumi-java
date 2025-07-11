@@ -110,7 +110,7 @@ var accept = cmdutil.IsTruthy(os.Getenv("PULUMI_ACCEPT"))
 
 func assertFileContentIs(t *testing.T, filePath, expectedContent string) {
 	if accept {
-		err := os.WriteFile(filePath, []byte(expectedContent), 0600)
+		err := os.WriteFile(filePath, []byte(expectedContent), 0o600)
 		require.NoError(t, err)
 	}
 	actualContent, err := os.ReadFile(filePath)
