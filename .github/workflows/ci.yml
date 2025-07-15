@@ -65,7 +65,7 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         run: |
-          echo -n "test"" | md5sum
+          echo -n "test" | md5sum
           echo OSSRH_USERNAME
           echo -n "$OSSRH_USERNAME" | md5sum
           echo OSSRH_PASSWORD
