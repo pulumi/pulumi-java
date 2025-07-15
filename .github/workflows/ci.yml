@@ -62,6 +62,9 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         run: |
+          echo OSSRH_USERNAME=$OSSRH_USERNAME
+          echo OSSRH_PASSWORD
+          echo -n "$OSSRH_PASSWORD" | md5sum
           cd sdk/java && gradle pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
 
 
