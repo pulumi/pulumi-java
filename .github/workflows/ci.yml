@@ -54,9 +54,9 @@ jobs:
         uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
           gradle-version: 8.14.1
-      - uses: pulumi/esc-action@v1
-        with:
-          environment: pulumi/imports/github-secrets
+      # - uses: pulumi/esc-action@v1
+      #   with:
+      #     environment: pulumi/imports/github-secrets
       - name: Publish Pulumi Java SDK
         env:
           PULUMI_JAVA_SDK_VERSION: 1.16.0-alpha.5
