@@ -54,15 +54,17 @@ jobs:
         uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
           gradle-version: 8.14.1
+      - uses: pulumi/esc-action@v1
+        with:
+          environment: pulumi/imports/github-secrets
       - name: Publish Pulumi Java SDK
         env:
           PULUMI_JAVA_SDK_VERSION: 1.16.0-alpha.5
-          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         run: |
-          echo OSSRH_USERNAME=$OSSRH_USERNAME
+          echo TEST
+          echo -n "test"" | md5sum
+          echo OSSRH_USERNAME
+          echo -n "$OSSRH_USERNAME" | md5sum
           echo OSSRH_PASSWORD
           echo -n "$OSSRH_PASSWORD" | md5sum
           cd sdk/java && gradle pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
