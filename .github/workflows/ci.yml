@@ -65,8 +65,6 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -84,11 +82,13 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
-          arguments: build testAll
-          build-root-directory: sdk/java
+          gradle-version: 8.14.1
+      - name: Build and unit-test Pulumi Java SDK
+        run: |
+          cd sdk/java && gradle build testAll
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
@@ -105,11 +105,13 @@ jobs:
         with:
           name: go-binaries
           path: bin/
-      - name: Publish Pulumi Java SDK to Maven Local
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
-          arguments: publishToMavenLocal
-          build-root-directory: sdk/java
+          gradle-version: 8.14.1
+      - name: Publish Pulumi Java SDK to Maven Local
+        run: |
+          cd sdk/java && gradle publishToMavenLocal
       - uses: actions/upload-artifact@v4
         with:
           name: java-sdk
@@ -146,8 +148,6 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -168,14 +168,16 @@ jobs:
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        with:
+          gradle-version: 8.14.1
       - name: Publish Pulumi Java SDK to Maven Local to enable codegen tests
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+        run: |
+          cd sdk/java && gradle publishToMavenLocal
         env:
           # Override to match gen_test.go
           PULUMI_JAVA_SDK_VERSION: 0.0.1
-        with:
-          arguments: publishToMavenLocal
-          build-root-directory: sdk/java
       - name: Configure Go cache
         id: go-cache-paths
         run: |
@@ -233,8 +235,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -351,8 +351,6 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
