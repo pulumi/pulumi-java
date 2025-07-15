@@ -14,13 +14,8 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  OSSRH_REPO_URL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
   OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-
-  # Include only last 8 hex digits of the key ID included, due to
-  # limitations of gradle.
-  SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
 
   # Obtained by `gpg --armor --export-secret-key support@pulumi.com`.
   SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
@@ -53,10 +48,10 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6
-      - name: Publish Pulumi Java SDK
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
-          arguments: pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
-          build-root-directory: sdk/java
+          gradle-version: 8.14.1
+      - name: Publish Pulumi Java SDK
+        run: |
+          cd sdk/java && gradle pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
