@@ -314,20 +314,45 @@ public abstract class Resource {
         return result.build();
     }
 
+    /**
+     * Internal utility for {@link Resource}.
+     *
+     * @see Resource
+     * @see ProviderResource
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class ResourceInternal {
 
+        /**
+         * The associated {@link Resource} instance that this internal class manages.
+         */
         protected final Resource resource;
 
+        /**
+         * Constructs a new internal resource manager for the given {@link Resource}.
+         *
+         * @param resource the resource to be managed; must not be null
+         */
         protected ResourceInternal(Resource resource) {
             this.resource = requireNonNull(resource);
         }
 
+        /**
+         * Creates a new {@link ResourceInternal} instance from the given {@link Resource}.
+         *
+         * @param r the resource to wrap; must not be null
+         * @return a new internal resource instance managing the given resource
+         */
         public static ResourceInternal from(Resource r) {
             return new ResourceInternal(r);
         }
 
+        /**
+         * Returns whether the resource is remote.
+         *
+         * @return true if the resource is remote, false otherwise
+         */
         @InternalUse
         public boolean getRemote() {
             return this.resource.remote;
@@ -335,6 +360,8 @@ public abstract class Resource {
 
         /**
          * The specified provider or provider determined from the parent for custom resources.
+         *
+         * @return an {@link Optional} containing the provider if set, or empty if not
          */
         @InternalUse
         public Optional<ProviderResource> getProvider() {
@@ -389,42 +416,96 @@ public abstract class Resource {
         }
     }
 
+    /**
+     * Internal utility for lazily-initialized fields in a {@link Resource}.
+     */
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class LazyFields {
+
+        /**
+         * The lazily-initialized ID field for the resource, if present.
+         */
         private final LazyField<String> urn;
+        /**
+         * The lazily-initialized URN field for the resource.
+         */
         private final Optional<LazyField<String>> id;
 
+        /**
+         * Constructs a new instance of {@link LazyFields} with the given URN and optional ID fields.
+         *
+         * @param urn the lazy URN field for the resource; must not be null
+         * @param id  an optional lazy ID field for the resource; may be empty
+         */
         protected LazyFields(LazyField<String> urn, Optional<LazyField<String>> id) {
             this.urn = requireNonNull(urn);
             this.id = requireNonNull(id);
         }
 
+        /**
+         * Returns the lazy URN field for the resource.
+         *
+         * @return the lazy URN field
+         */
         public LazyField<String> urn() {
             return this.urn;
         }
 
+        /**
+         * Returns the optional lazy ID field for the resource.
+         *
+         * @return the optional lazy ID field
+         */
         public Optional<LazyField<String>> id() {
             return this.id;
         }
     }
 
+    /**
+     * An interface for lazy fields in a {@link Resource}.
+     *
+     * @param <T> the type of the field value
+     */
     @InternalUse
     public interface LazyField<T> {
+        /**
+         * Returns the underlying {@link CompletableFuture} for this field.
+         *
+         * @return the {@link CompletableFuture} representing the asynchronous value of this field
+         */
         CompletableFuture<Output<T>> future();
 
+        /**
+         * Completes this field with the given value, or throws if already completed.
+         *
+         * @param value the {@link Output} value to complete the field with
+         * @throws IllegalStateException if the field has already been completed
+         */
         default void completeOrThrow(Output<T> value) {
             if (!complete(value)) {
                 throw new IllegalStateException("lazy field cannot be set twice, must be 'null' for 'set' to work");
             }
         }
 
+        /**
+         * Attempts to complete this field with the given value.
+         *
+         * @param value the {@link Output} value to complete the field with
+         * @return {@code true} if the field was completed, {@code false} if it was already set
+         */
         default boolean complete(Output<T> value) {
             requireNonNull(value);
             return future().complete(value);
         }
 
+        /**
+         * Fails this field with the given throwable, completing the future exceptionally.
+         *
+         * @param throwable the exception to fail the field with
+         * @return {@code true} if the field was completed exceptionally, {@code false} if it was already set
+         */
         default boolean fail(Throwable throwable) {
             requireNonNull(throwable);
             return complete(Output.of(CompletableFuture.failedFuture(throwable)));
