@@ -47,7 +47,7 @@ jobs:
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install Pulumi CLI
-        uses: pulumi/actions@1e05f8defdf9b836a8390236cbf121f4c20c4fd8 # v6
+        uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
         with:
           pulumi-version: latest
       - name: Install pulumictl
@@ -139,7 +139,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@1e05f8defdf9b836a8390236cbf121f4c20c4fd8 # v6
+        uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
         with:
           pulumi-version: latest
       - name: Set up JDK 11
@@ -225,7 +225,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@1e05f8defdf9b836a8390236cbf121f4c20c4fd8 # v6
+        uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
         with:
           pulumi-version: latest
       - run: make clone_examples
@@ -253,7 +253,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-examples-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
-        uses: pulumi/actions@1e05f8defdf9b836a8390236cbf121f4c20c4fd8 # v6
+        uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
       - name: Download versions.txt
         uses: actions/download-artifact@v4
         with:
@@ -342,7 +342,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@1e05f8defdf9b836a8390236cbf121f4c20c4fd8 # v6
+        uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
         with:
           pulumi-version: latest
       - name: Set up JDK 11
@@ -400,7 +400,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@1e05f8defdf9b836a8390236cbf121f4c20c4fd8 # v6
+        uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
         with:
           pulumi-version: latest
       - run: make clone_templates
