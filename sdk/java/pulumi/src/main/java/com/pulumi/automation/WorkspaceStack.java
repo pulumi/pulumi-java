@@ -534,7 +534,7 @@ public final class WorkspaceStack implements AutoCloseable {
             }
 
             if (options.plan() != null) {
-                args.add("--plan");
+                args.add("--save-plan");
                 args.add(options.plan());
             }
 
