@@ -9,8 +9,8 @@ replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
 require (
-	github.com/pulumi/pulumi/pkg/v3 v3.184.0
-	github.com/pulumi/pulumi/sdk/v3 v3.184.0
+	github.com/pulumi/pulumi/pkg/v3 v3.185.0
+	github.com/pulumi/pulumi/sdk/v3 v3.185.0
 	github.com/stretchr/testify v1.10.0
 )
 
@@ -163,7 +163,7 @@ require (
 	golang.org/x/exp v0.0.0-20240719175910-8a7402abbf56 // indirect
 	golang.org/x/mod v0.25.0 // indirect
 	golang.org/x/net v0.40.0 // indirect
-	golang.org/x/oauth2 v0.27.0 // indirect
+	golang.org/x/oauth2 v0.30.0 // indirect
 	golang.org/x/sync v0.15.0 // indirect
 	golang.org/x/sys v0.33.0 // indirect
 	golang.org/x/term v0.32.0 // indirect
