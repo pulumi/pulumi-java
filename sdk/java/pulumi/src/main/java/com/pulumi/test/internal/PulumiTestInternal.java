@@ -164,28 +164,62 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         return Internal.of(output).getDataAsync().join();
     }
 
+    /**
+     * Internal implementation of the {@link com.pulumi.test.PulumiTest.API} interface for configuring and executing tests.
+     */
     @InternalUse
     public static final class APIInternal implements PulumiTest.API {
 
         private final Builder builder = new Builder();
 
+        /**
+         * Sets the {@link TestOptions} to be used for the test.
+         *
+         * @param options the test options to configure the test environment
+         * @return this API instance for method chaining
+         * @see com.pulumi.test.TestOptions
+         */
         @Override
         public PulumiTest.API withOptions(TestOptions options) {
             this.builder.options(options);
             return this;
         }
 
+        /**
+         * Sets the {@link Mocks} implementation to be used for the test.
+         *
+         * @param mocks the mocks to simulate Pulumi engine and resource provider behavior
+         * @return this API instance for method chaining
+         * @see com.pulumi.test.Mocks
+         */
         @Override
         public PulumiTest.API withMocks(Mocks mocks) {
             this.builder.mocks(mocks);
             return this;
         }
 
+        /**
+         * Executes the Pulumi stack test synchronously using the configured options and mocks.
+         *
+         * @param stack a {@link Consumer} that receives the Pulumi {@link Context} for test logic
+         * @return a {@link TestResult} containing the outcome of the test execution
+         * @see com.pulumi.Context
+         * @see com.pulumi.test.TestResult
+         */
         @Override
         public TestResult runTest(Consumer<Context> stack) {
             return builder.build().runTest(stack);
         }
 
+        /**
+         * Executes the Pulumi stack test asynchronously using the configured options and mocks.
+         *
+         * @param stack a {@link Consumer} that receives the Pulumi {@link Context} for test logic
+         * @return a {@link CompletableFuture} that completes with the {@link TestResult} of the test execution
+         * @see com.pulumi.Context
+         * @see com.pulumi.test.TestResult
+         * @see java.util.concurrent.CompletableFuture
+         */
         @Override
         public CompletableFuture<TestResult> runTestAsync(Consumer<Context> stack) {
             return builder.build().runTestAsync(stack);
