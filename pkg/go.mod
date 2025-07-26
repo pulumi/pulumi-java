@@ -1,8 +1,8 @@
 module github.com/pulumi/pulumi-java/pkg
 
-go 1.23.0
+go 1.23.11
 
-toolchain go1.24.2
+toolchain go1.24.5
 
 replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 
@@ -14,8 +14,8 @@ require (
 	github.com/hashicorp/hcl/v2 v2.23.0
 	github.com/hexops/autogold/v2 v2.2.1
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.185.0
-	github.com/pulumi/pulumi/sdk/v3 v3.185.0
+	github.com/pulumi/pulumi/pkg/v3 v3.186.0
+	github.com/pulumi/pulumi/sdk/v3 v3.186.0
 	github.com/spf13/cobra v1.9.1
 	github.com/stretchr/testify v1.10.0
 	github.com/zclconf/go-cty v1.16.3
