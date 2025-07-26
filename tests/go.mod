@@ -1,16 +1,16 @@
 module github.com/pulumi/pulumi-java/tests
 
-go 1.23.0
+go 1.23.11
 
-toolchain go1.24.2
+toolchain go1.24.5
 
 replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
 require (
-	github.com/pulumi/pulumi/pkg/v3 v3.185.0
-	github.com/pulumi/pulumi/sdk/v3 v3.185.0
+	github.com/pulumi/pulumi/pkg/v3 v3.186.0
+	github.com/pulumi/pulumi/sdk/v3 v3.186.0
 	github.com/stretchr/testify v1.10.0
 )
 
