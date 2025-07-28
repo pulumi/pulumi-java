@@ -1,10 +1,6 @@
 CHANGELOG
 =========
 
-## 1.16.1
-
-* Fix generated 'plan' argument of 'preview' command
-
 ## 1.16.0
 
 * Update Java publishing to default to Maven Central instead of OSSRH
