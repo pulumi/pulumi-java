@@ -109,7 +109,7 @@ public final class PreviewOptions extends UpdateOptions {
     }
 
     /**
-     * The path to an update plan to use for the update.
+     * The path to where the update plan will be stored.
      *
      * @return the path to the update plan
      */
@@ -219,7 +219,7 @@ public final class PreviewOptions extends UpdateOptions {
         }
 
         /**
-         * The path to an update plan to use for the update.
+         * Save the operations proposed by the preview to a plan file at the given path.
          *
          * @param plan the path to the update plan
          * @return the builder
