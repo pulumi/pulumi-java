@@ -3,15 +3,37 @@ package com.pulumi.provider.internal;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * A host for a component provider,  managing its lifecycle and integration.
+ */
 public class ComponentProviderHost {
+    /**
+     * Metadata describing the provider, such as its name and version.
+     */
     private final Metadata metadata;
+    /**
+     * The Java package containing the component resources for this provider.
+     */
     private final Package currentPackage;
 
+    /**
+     * Constructs a new {@code ComponentProviderHost} with the specified provider name and package.
+     *
+     * @param name the name of the provider
+     * @param currentPackage the Java package containing the component resources
+     */
     public ComponentProviderHost(String name, Package currentPackage) {
         this.metadata = new Metadata(name);
         this.currentPackage = currentPackage;
     }
 
+    /**
+     * Starts the component provider host, initializing the provider and gRPC server.
+     *
+     * @param args the command-line arguments passed to the provider
+     * @throws IOException if an I/O error occurs while starting the server
+     * @throws InterruptedException if the server is interrupted while running
+     */
     public void start(String[] args) throws IOException, InterruptedException {
         String engineAddress;
         try {
@@ -28,6 +50,13 @@ public class ComponentProviderHost {
         server.startAndBlockUntilShutdown();
     }
 
+    /**
+     * Extracts and validates the engine address from the command-line arguments.
+     *
+     * @param args the command-line arguments
+     * @return the engine address as a string
+     * @throws IllegalArgumentException if no engine address is provided or multiple non-logging arguments are found
+     */
     static String getEngineAddress(String[] args) {
         var cleanArgs = new ArrayList<String>();
 

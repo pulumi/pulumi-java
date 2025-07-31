@@ -4,6 +4,13 @@ package com.pulumi.deployment;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.internal.DeploymentImpl;
 
+/**
+ * An instance of a Pulumi deployment, providing access to deployment configuration,
+ * validity state, and lifecycle management for asynchronous operations.
+ *
+ * @see Deployment
+ * @see com.pulumi.deployment.internal.DeploymentImpl
+ */
 public interface DeploymentInstance extends Deployment {
     @InternalUse
     DeploymentImpl.Config getConfig();

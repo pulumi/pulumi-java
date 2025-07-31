@@ -86,26 +86,58 @@ public class ProviderResource extends CustomResource {
                 ));
     }
 
+    /**
+     * Internal implementation class for {@link ProviderResource}
+     * responsible for managing the lifecycle, registration, and state of provider resources within the Pulumi engine.
+     *
+     * @see ProviderResource
+     * @see CustomResourceInternal
+     * @see com.pulumi.resources.Resource
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static final class ProviderResourceInternal extends CustomResourceInternal {
 
+        /**
+         * The associated {@link ProviderResource} instance that this internal class manages.
+         */
         private final ProviderResource resource;
 
+        /**
+         * Constructs a new internal provider resource manager for the given {@link ProviderResource}.
+         *
+         * @param resource the provider resource to be managed; must not be null
+         */
         private ProviderResourceInternal(ProviderResource resource) {
             super(resource);
             this.resource = requireNonNull(resource);
         }
 
+        /**
+         * Creates a new {@link ProviderResourceInternal} instance from the given {@link ProviderResource}.
+         *
+         * @param r the provider resource to wrap; must not be null
+         * @return a new internal provider resource instance managing the given provider
+         */
         public static ProviderResourceInternal from(ProviderResource r) {
             return new ProviderResourceInternal(r);
         }
 
+        /**
+         * Retrieves the registration ID associated with the managed provider resource.
+         *
+         * @return a future that completes with the registration ID string
+         */
         @InternalUse
         public CompletableFuture<String> getRegistrationId() {
             return this.resource.registrationId;
         }
 
+        /**
+         * Gets the package name associated with the managed provider resource.
+         *
+         * @return the provider package name
+         */
         @InternalUse
         public String getPackage() {
             return this.resource.aPackage;
