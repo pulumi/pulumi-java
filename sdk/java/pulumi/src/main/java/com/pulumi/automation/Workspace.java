@@ -412,6 +412,21 @@ public abstract class Workspace implements AutoCloseable {
     public abstract void removeStack(String stackName) throws AutomationException;
 
     /**
+     * Deletes the stack and all associated configuration and history.
+     *
+     * @param stackName the stack to remove
+     * @param options   options for removing the stack
+     * @throws AutomationException if there was an issue removing the stack
+     */
+    public void removeStack(String stackName, StackRemoveOptions options) throws AutomationException {
+        if (options != null && options != StackRemoveOptions.Empty) {
+            throw new UnsupportedOperationException(
+                "StackRemoveOptions are not supported in this workspace implementation");
+        }
+        removeStack(stackName);
+    }
+
+    /**
      * Returns all stacks created under the current project.
      * <p>
      * This queries underlying backend and may return stacks not present in the
