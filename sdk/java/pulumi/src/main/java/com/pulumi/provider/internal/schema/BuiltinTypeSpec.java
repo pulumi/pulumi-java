@@ -15,4 +15,4 @@ public final class BuiltinTypeSpec {
      * Private constructor to prevent instantiation of this utility class.
      */
     private BuiltinTypeSpec() {} // Prevent instantiation
-} 
+}
