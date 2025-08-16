@@ -100,7 +100,7 @@ public abstract class ResourceOptions {
         }
 
         /**
-         * Sets the resource ID as an Output value.
+         * An optional existing ID to load, rather than create.
          *
          * @param id the Output-wrapped resource ID, or null to unset
          * @return this builder for method chaining

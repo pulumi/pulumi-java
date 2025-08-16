@@ -1,4 +1,4 @@
 /**
- * Provides the pulumi automation for managing Pulumi stacks and projects.
+ * Provides the Pulumi Automation API, the programmatic interface for driving Pulumi programs, encapsulating the functionality of the CLI.
  */
 package com.pulumi.automation;

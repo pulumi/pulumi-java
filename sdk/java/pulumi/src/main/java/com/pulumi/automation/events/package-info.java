@@ -1,8 +1,5 @@
 /**
- * Provides event types for the pulumi automation.
- * <p>
- * This package contains event classes and interfaces for handling
- * automation events, callbacks, and notifications during Pulumi operations.
+ * Provides types describing Pulumi engine events, such as changes to resources or diagnostic messages, for use in the Pulumi Automation API.
  */
 
 package com.pulumi.automation.events; 
