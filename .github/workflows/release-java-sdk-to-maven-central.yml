@@ -49,7 +49,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4.4.3
         with:
           gradle-version: 8.14.1
       - name: Publish Pulumi Java SDK
