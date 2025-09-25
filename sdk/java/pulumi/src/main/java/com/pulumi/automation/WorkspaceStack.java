@@ -185,6 +185,74 @@ public final class WorkspaceStack implements AutoCloseable {
     }
 
     /**
+     * Returns the config value associated with the specified key, using the provided options.
+     *
+     * @param key     the key to use for the config lookup
+     * @param options the options for the config operation
+     * @return the value associated with the key
+     * @throws AutomationException if an error occurs
+     */
+    public ConfigValue getConfigWithOptions(String key, ConfigOptions options) throws AutomationException {
+        return this.workspace.getConfigWithOptions(this.name, key, options);
+    }
+
+    /**
+     * Sets the config key-value pair on the Stack in the associated Workspace, using the provided options.
+     *
+     * @param key     the config key to set
+     * @param value   the config value to set
+     * @param options the options for the config operation
+     * @throws AutomationException if an error occurs
+     */
+    public void setConfigWithOptions(String key, ConfigValue value, ConfigOptions options) throws AutomationException {
+        this.workspace.setConfigWithOptions(this.name, key, value, options);
+    }
+
+    /**
+     * Removes the specified config key from the Stack in the associated Workspace, using the provided options.
+     *
+     * @param key     the config key to remove
+     * @param options the options for the config operation
+     * @throws AutomationException if an error occurs
+     */
+    public void removeConfigWithOptions(String key, ConfigOptions options) throws AutomationException {
+        this.workspace.removeConfigWithOptions(this.name, key, options);
+    }
+
+    /**
+     * Returns the full config map associated with the stack in the Workspace, using the provided options.
+     *
+     * @param options the options for retrieving all config
+     * @return the config map
+     * @throws AutomationException if an error occurs
+     */
+    public Map<String, ConfigValue> getAllConfigWithOptions(GetAllConfigOptions options) throws AutomationException {
+        return this.workspace.getAllConfigWithOptions(this.name, options);
+    }
+
+    /**
+     * Sets all specified config values on the stack in the associated Workspace, using the provided options.
+     *
+     * @param configMap the map of config key-value pairs to set
+     * @param options   the options for the config operation
+     * @throws AutomationException if an error occurs
+     */
+    public void setAllConfigWithOptions(Map<String, ConfigValue> configMap, ConfigOptions options) throws AutomationException {
+        this.workspace.setAllConfigWithOptions(this.name, configMap, options);
+    }
+
+    /**
+     * Removes the specified config keys from the Stack in the associated Workspace, using the provided options.
+     *
+     * @param keys    the config keys to remove
+     * @param options the options for the config operation
+     * @throws AutomationException if an error occurs
+     */
+    public void removeAllConfigWithOptions(Collection<String> keys, ConfigOptions options) throws AutomationException {
+        this.workspace.removeAllConfigWithOptions(this.name, keys, options);
+    }
+
+    /**
      * Returns the config value associated with the specified key.
      *
      * @param key the key to use for the config lookup
