@@ -1,24 +1,40 @@
-run:
-  timeout: 10m
+version: "2"
 linters:
-  enable-all: false
   enable:
-    - errcheck
     - goconst
-    - gofumpt
-    - revive
     - gosec
-    - govet
-    - ineffassign
     - lll
     - misspell
     - nakedret
+    - revive
     - unconvert
-
-issues:
-  exclude:
-    # https://github.com/pulumi/pulumi/issues/9469
-    - 'Name is deprecated: Name returns the variable or declaration name of the resource'
-
-    # https://github.com/pulumi/pulumi/issues/11870
-    - 'strings.Title has been deprecated'
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      # https://github.com/pulumi/pulumi/issues/9469
+      - path: (.+)\.go$
+        text: 'Name is deprecated: Name returns the variable or declaration name of the resource'
+      # https://github.com/pulumi/pulumi/issues/11870
+      - path: (.+)\.go$
+        text: strings.Title has been deprecated
+      - linters:
+          - staticcheck
+        text: 'error strings should not be capitalized'
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofumpt
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

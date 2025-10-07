@@ -1503,7 +1503,7 @@ func printObsoleteAttribute(ctx *classFileContext, deprecationMessage, indent st
 	if deprecationMessage != "" {
 		fprintf(w, "%s@Deprecated /* %s */\n",
 			indent,
-			strings.Replace(deprecationMessage, `"`, `""`, -1))
+			strings.ReplaceAll(deprecationMessage, `"`, `""`))
 	}
 }
 
@@ -1570,11 +1570,12 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 			} else {
 				separator = ","
 			}
-			if enum.ElementType == schema.StringType {
+			switch enum.ElementType {
+			case schema.StringType:
 				fprintf(w, "%s%s(%q)%s\n", indent, e.Name, e.Value, separator)
-			} else if enum.ElementType == schema.NumberType {
+			case schema.NumberType:
 				fprintf(w, "%s%s(%f)%s\n", indent, e.Name, e.Value, separator)
-			} else {
+			default:
 				fprintf(w, "%s%s(%v)%s\n", indent, e.Name, e.Value, separator)
 			}
 		}

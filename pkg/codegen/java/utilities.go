@@ -216,12 +216,13 @@ func (w *codeJavadocWriter) WriteRune(r rune) {
 		// If we are writing text and we encounter an '@', we open a literal sequence in order to write it. If we
 		// encounter a brace, we write it as-is, allowing us to write multiple braces without repeatedly entering and
 		// leaving the code state. All other characters return us to the code state before continuing.
-		if r == '@' {
+		switch r {
+		case '@':
 			w.b.WriteString("{@literal @")
 			w.state = codeJavadocLiteral
-		} else if r == '{' || r == '}' {
+		case '{', '}':
 			w.b.WriteRune(r)
-		} else {
+		default:
 			w.b.WriteString("{@code")
 			if r != '\n' {
 				w.b.WriteRune(' ')
@@ -233,13 +234,14 @@ func (w *codeJavadocWriter) WriteRune(r rune) {
 		// If we are already inside a literal and we encounter another '@', we can just write it as-is. If we see a
 		// brace, we enter a text state and write it out. If we see any other character, we need to close the literal,
 		// write the rune and return to the text state.
-		if r == '@' {
+		switch r {
+		case '@':
 			w.b.WriteRune('@')
-		} else if r == '{' || r == '}' {
+		case '{', '}':
 			w.b.WriteRune('}')
 			w.b.WriteRune(r)
 			w.state = codeJavadocText
-		} else {
+		default:
 			w.b.WriteString("}{@code")
 			if r != '\n' {
 				w.b.WriteRune(' ')

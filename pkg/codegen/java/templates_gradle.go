@@ -211,7 +211,7 @@ func newGradleTemplateContext(
 
 	if isPublishedByPulumi(pkg) {
 		ctx.GroupID = "com.pulumi"
-		ctx.DeveloperID = "pulumi"
+		ctx.DeveloperID = "pulumi" //nolint:goconst
 		ctx.DeveloperName = "Pulumi"
 		ctx.DeveloperEmail = "support@pulumi.com"
 		ctx.ProjectInceptionYear = "2022"
