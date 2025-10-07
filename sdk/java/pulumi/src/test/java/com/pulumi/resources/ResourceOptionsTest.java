@@ -21,7 +21,7 @@ class ResourceOptionsTest {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
                         null, null, Output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null, false, null
+                        null, null, null, null, null, null, null, false, null, null
                 )),
                 arguments(new TestResourceOptions(
                                 null,
@@ -37,6 +37,7 @@ class ResourceOptionsTest {
                                 null,
                                 null,
                                 false,
+                                null,
                                 null
                         ),
                         new TestResourceOptions(
@@ -53,7 +54,8 @@ class ResourceOptionsTest {
                                 "urn",
                                 List.of(),
                                 true,
-                                "url"
+                                "url",
+                                null
                         ),
                         new TestResourceOptions(
                                 Output.of("id"),
@@ -69,7 +71,8 @@ class ResourceOptionsTest {
                                 "urn",
                                 List.of(),
                                 true,
-                                "url"
+                                "url",
+                                null
                         )
                 ) // TODO: more test cases
         );
@@ -116,11 +119,12 @@ class ResourceOptionsTest {
                 @Nullable String urn,
                 @Nullable List<String> replaceOnChanges,
                 boolean retainOnDelete,
-                @Nullable String pluginDownloadURL
+                @Nullable String pluginDownloadURL,
+                @Nullable List<String> hideDiffs
         ) {
             super(id, parent, dependsOn, protect, ignoreChanges,
                     version, provider, customTimeouts, resourceTransformations,
-                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL);
+                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs);
         }
     }
 
