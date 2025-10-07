@@ -1051,7 +1051,8 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.Protect != nil ||
 		resource.Options.RetainOnDelete != nil ||
 		resource.Options.ImportID != nil ||
-		resource.Options.Provider != nil
+		resource.Options.Provider != nil ||
+		resource.Options.HideDiffs != nil
 }
 
 // Checks whether any resource within the program nodes has a custom resource option
@@ -1073,6 +1074,32 @@ func requiresImportingCustomResourceOptions(programNodes []pcl.Node) bool {
 func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource) {
 	g.Fgen(w, "CustomResourceOptions.builder()")
 	g.Indented(func() {
+		genQuotedList := func(option string, expr model.Expression) {
+			g.genIndent(w)
+			g.Fgen(w, "."+option+"(")
+			switch expr := expr.(type) {
+			case *model.TupleConsExpression:
+				// when we have a list of expressions
+				// write each one of them between quotes
+				for index, v := range expr.Expressions {
+					g.Fgenf(w, "\"%v\"", v)
+
+					// write a comma between elements
+					// if we did not reach last expression
+					if index != len(expr.Expressions)-1 {
+						g.Fgen(w, ", ")
+					}
+				}
+			default:
+				// expression was NOT a list which is not really expected
+				// here we will write the expression as-is anyway
+				g.Fgenf(w, "\"%v\"", resource.Options.IgnoreChanges)
+			}
+
+			g.Fgen(w, ")")
+			g.genNewline(w)
+		}
+
 		g.genNewline(w)
 		if resource.Options.Provider != nil {
 			g.genIndent(w)
@@ -1100,31 +1127,10 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			g.genNewline(w)
 		}
 		if resource.Options.IgnoreChanges != nil {
-			g.genIndent(w)
-			g.Fgen(w, ".ignoreChanges(")
-			switch resource.Options.IgnoreChanges.(type) {
-			case *model.TupleConsExpression:
-				// when we have a list of expressions
-				// write each one of them between quotes
-				ignoredChanges := resource.Options.IgnoreChanges.(*model.TupleConsExpression)
-				for index, ignoredChange := range ignoredChanges.Expressions {
-					g.Fgenf(w, "\"%v\"", ignoredChange)
-
-					// write a comma between elements
-					// if we did not reach last expression
-					if index != len(ignoredChanges.Expressions)-1 {
-						g.Fgen(w, ", ")
-					}
-				}
-			default:
-				// ignored changes expression was NOT a list
-				// which is not really expected here
-				// we will write the expression as-is anyway
-				g.Fgenf(w, "\"%v\"", resource.Options.IgnoreChanges)
-			}
-
-			g.Fgen(w, ")")
-			g.genNewline(w)
+			genQuotedList("ignoreChanges", resource.Options.IgnoreChanges)
+		}
+		if resource.Options.HideDiffs != nil {
+			genQuotedList("hideDiffs", resource.Options.HideDiffs)
 		}
 		if resource.Options.ImportID != nil {
 			g.genIndent(w)
