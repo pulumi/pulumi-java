@@ -613,7 +613,7 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	defer closer.Close()
 
 	// intentionally running dynamic program name.
-	cmd := exec.Command(executor.Cmd, executor.BuildArgs...) // nolint: gas
+	cmd := exec.Command(executor.Cmd, executor.BuildArgs...) // nolint: gosec
 	cmd.Dir = req.Info.ProgramDirectory
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
