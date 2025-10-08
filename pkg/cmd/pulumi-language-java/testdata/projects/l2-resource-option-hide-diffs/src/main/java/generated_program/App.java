@@ -5,6 +5,7 @@ import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.simple.Resource;
 import com.pulumi.simple.ResourceArgs;
+import com.pulumi.resources.CustomResourceOptions;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -20,7 +21,9 @@ public class App {
     public static void stack(Context ctx) {
         var hideDiffs = new Resource("hideDiffs", ResourceArgs.builder()
             .value(true)
-            .build());
+            .build(), CustomResourceOptions.builder()
+                .hideDiffs("value")
+                .build());
 
         var notHideDiffs = new Resource("notHideDiffs", ResourceArgs.builder()
             .value(true)

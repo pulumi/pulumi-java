@@ -40,10 +40,11 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable List<String> replaceOnChanges,
             boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
+            @Nullable List<String> hideDiffs,
             @Nullable List<ProviderResource> providers
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
-                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL);
+                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
@@ -107,6 +108,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
                 copyNullableList(this.replaceOnChanges),
                 this.retainOnDelete,
                 this.pluginDownloadURL,
+                copyNullableList(this.hideDiffs),
                 copyNullableList(this.providers) // TODO: should we also invoke copy() on the items?
         );
     }

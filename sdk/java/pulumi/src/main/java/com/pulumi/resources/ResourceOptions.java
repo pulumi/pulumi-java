@@ -43,6 +43,8 @@ public abstract class ResourceOptions {
     protected boolean retainOnDelete;
     @Nullable
     protected String pluginDownloadURL;
+    @Nullable
+    protected List<String> hideDiffs;
 
     protected ResourceOptions() { /* empty */ }
 
@@ -60,7 +62,8 @@ public abstract class ResourceOptions {
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges,
             boolean retainOnDelete,
-            @Nullable String pluginDownloadURL
+            @Nullable String pluginDownloadURL,
+            @Nullable List<String> hideDiffs
     ) {
         this.id = id;
         this.parent = parent;
@@ -76,6 +79,7 @@ public abstract class ResourceOptions {
         this.replaceOnChanges = replaceOnChanges;
         this.retainOnDelete = retainOnDelete;
         this.pluginDownloadURL = pluginDownloadURL;
+        this.hideDiffs = hideDiffs;
     }
 
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
@@ -288,6 +292,23 @@ public abstract class ResourceOptions {
             options.pluginDownloadURL = pluginDownloadURL;
             return (B) this;
         }
+
+        /**
+         * Hide diffs collapses the diff of any mentioned property paths.
+         */
+        public B hideDiffs(String... hideDiffs) {
+            return this.hideDiffs(List.of(hideDiffs));
+        }
+
+        /**
+         * @see #hideDiffs(String...)
+         */
+        public B hideDiffs(@Nullable List<String> hideDiffs) {
+            options.hideDiffs = hideDiffs;
+            //noinspection unchecked
+            return (B) this;
+        }
+
     }
 
     /**
@@ -388,6 +409,14 @@ public abstract class ResourceOptions {
         return Optional.ofNullable(this.pluginDownloadURL);
     }
 
+    /**
+     * @see Builder#hideDiffs(String...)
+     */
+    public List<String> getHideDiffs() {
+        return this.hideDiffs == null ? List.of() : List.copyOf(this.hideDiffs);
+    }
+
+
     @InternalUse
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
         return mergeSharedOptions(options1, options2, null);
@@ -414,7 +443,7 @@ public abstract class ResourceOptions {
         options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
         options1.retainOnDelete = options1.retainOnDelete || options2.retainOnDelete;
         options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
-
+        options1.hideDiffs = mergeNullableList(options1.hideDiffs, options2.hideDiffs);
         options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);
 
         // Override the ID if one was specified for consistency with other language SDKs.

@@ -223,7 +223,6 @@ var expectedFailures = map[string]string{
 	"l2-resource-simple":                    "test failing",
 	"policy-stack-config":                   "test failing",
 	"policy-enforcement-config":             "test failing",
-	"l2-resource-option-hide-diffs":         "test failing",
 	"policy-remediate":                      "test failing",
 	"l2-primitive-ref":                      "test failing",
 	"l2-plain":                              "test failing",
