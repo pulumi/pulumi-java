@@ -19,7 +19,7 @@ jobs:
         run: |
           git fetch --quiet --prune --unshallow --tags
       - name: Set up Go 1.19.x
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: stable
       - name: Configure Go cache
