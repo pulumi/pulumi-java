@@ -41,7 +41,7 @@ jobs:
     outputs:
       gotcloudcreds: ${{ steps.gotcloudcreds.outputs.gotcloudcreds }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Fetch Tags
@@ -135,7 +135,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
@@ -221,7 +221,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
@@ -302,7 +302,7 @@ jobs:
     name: Lint pkg
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
           submodules: recursive
@@ -338,7 +338,7 @@ jobs:
           - provider-maven
           - provider-gradle
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
@@ -400,7 +400,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
