@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 1.16.2
+
+### Bug Fixes
+
+* Fix generated 'plan' argument of 'preview' command
+
 ## 1.16.1
 
 ### Bug Fixes
