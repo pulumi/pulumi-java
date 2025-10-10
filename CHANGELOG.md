@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 1.16.2
+
+### Bug Fixes
+
+* Add `hideDiffs` as a new resource option. See https://github.com/pulumi/pulumi/issues/20591 for details
+
 ## 1.16.1
 
 ### Bug Fixes
