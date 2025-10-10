@@ -5,7 +5,7 @@ CHANGELOG
 
 ### Bug Fixes
 
-* Fix generated 'plan' argument of 'preview' command
+* Add `hideDiffs` as a new resource option. See https://github.com/pulumi/pulumi/issues/20591 for details
 
 ## 1.16.1
 
