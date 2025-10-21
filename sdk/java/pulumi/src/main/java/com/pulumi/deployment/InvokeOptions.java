@@ -89,6 +89,9 @@ public class InvokeOptions {
         return new Builder();
     }
 
+    /**
+     * The {@link InvokeOptions} builder.
+     */
     public static final class Builder {
         private @Nullable Resource parent;
         private @Nullable ProviderResource provider;
@@ -137,20 +140,49 @@ public class InvokeOptions {
         }
     }
 
+    /**
+     * Internal utility class for advanced provider resolution logic within {@link InvokeOptions}.
+     *
+     * @see InvokeOptions
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static final class InvokeOptionsInternal {
 
+        /**
+         * The underlying {@link InvokeOptions} instance from which provider and parent information is resolved.
+         */
         private final InvokeOptions options;
 
+        /**
+         * Creates a new {@code InvokeOptionsInternal} wrapper for the given {@link InvokeOptions}.
+         *
+         * @param options the {@link InvokeOptions} instance to wrap; must not be null
+         * @throws NullPointerException if {@code options} is null
+         */
         private InvokeOptionsInternal(InvokeOptions options) {
             this.options = requireNonNull(options);
         }
 
+        /**
+         * Creates a new {@code InvokeOptionsInternal} from the specified {@link InvokeOptions}.
+         *
+         * @param options the {@link InvokeOptions} to wrap
+         * @return a new {@code InvokeOptionsInternal} instance
+         * @throws NullPointerException if {@code options} is null
+         */
         public static InvokeOptionsInternal from(InvokeOptions options) {
             return new InvokeOptionsInternal(options);
         }
 
+        /**
+         * Attempts to resolve a {@link ProviderResource} for the given provider token.
+         *
+         * @param token the provider token to resolve
+         * @return an {@link Optional} containing the resolved {@link ProviderResource}, or empty if not found
+         *
+         * @see ProviderResource
+         */
         public Optional<ProviderResource> getNestedProvider(String token) {
             return this.options.getProvider().or(
                     () -> this.options.getParent()
