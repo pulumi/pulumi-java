@@ -583,6 +583,95 @@ public class LocalWorkspaceTest {
         });
     }
 
+    @Test
+    void testStackRemoveForce(@EnvVars Map<String, String> envVars) throws Exception {
+        var env = new HashMap<String, String>(envVars);
+        env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+        final var type = "test:res";
+        Consumer<Context> program = ctx -> {
+            new ComponentResource(type, "a");
+        };
+
+        var stackName = randomStackName();
+        var projectName = "test_stack_remove_force";
+
+        try (var stack = LocalWorkspace.createStack(projectName, stackName, program, LocalWorkspaceOptions.builder()
+                .environmentVariables(env)
+                .build())) {
+
+            var upResult = stack.up();
+            assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+            assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+            assertThat(upResult.summary().resourceChanges().get(OperationType.CREATE)).isEqualTo(2);
+
+            // We shouldn't be able to remove the stack that has resources without force.
+            assertThrows(AutomationException.class, () -> stack.workspace().removeStack(stackName));
+
+            // Force remove the stack.
+            stack.workspace().removeStack(stackName, StackRemoveOptions.builder().force(true).build());
+
+            // We shouldn't be able to select the stack after removing it.
+            assertThrows(StackNotFoundException.class, () -> stack.workspace().selectStack(stackName));
+        }
+    }
+
+    @Test
+    void testStackRemovePreserveConfig(@EnvVars Map<String, String> envVars) throws Exception {
+        var env = new HashMap<String, String>(envVars);
+        env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+        Consumer<Context> program = ctx -> {
+            // Empty program
+        };
+
+        var stackName = randomStackName();
+        var projectName = "test_stack_remove_preserve_config";
+
+        try (var stack = LocalWorkspace.createStack(projectName, stackName, program, LocalWorkspaceOptions.builder()
+                .environmentVariables(env)
+                .build())) {
+
+            var upResult = stack.up();
+            assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+            assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+
+            // Remove the stack, specifying preserveConfig.
+            stack.workspace().removeStack(stackName, StackRemoveOptions.builder().preserveConfig(true).build());
+
+            // We shouldn't be able to select the stack after removing it.
+            assertThrows(StackNotFoundException.class, () -> stack.workspace().selectStack(stackName));
+        }
+    }
+
+    @Test
+    void testStackRemoveRemoveBackups(@EnvVars Map<String, String> envVars) throws Exception {
+        var env = new HashMap<String, String>(envVars);
+        env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+        Consumer<Context> program = ctx -> {
+            // Empty program
+        };
+
+        var stackName = randomStackName();
+        var projectName = "test_stack_remove_remove_backups";
+
+        try (var stack = LocalWorkspace.createStack(projectName, stackName, program, LocalWorkspaceOptions.builder()
+                .environmentVariables(env)
+                .build())) {
+
+            var upResult = stack.up();
+            assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+            assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+
+            // Remove the stack, specifying removeBackups.
+            stack.workspace().removeStack(stackName, StackRemoveOptions.builder().removeBackups(true).build());
+
+            // We shouldn't be able to select the stack after removing it.
+            assertThrows(StackNotFoundException.class, () -> stack.workspace().selectStack(stackName));
+        }
+    }
+
     void testPreviewDestroy(@EnvVars Map<String, String> envVars) {
         assertDoesNotThrow(() -> {
             var env = new HashMap<String, String>(envVars);

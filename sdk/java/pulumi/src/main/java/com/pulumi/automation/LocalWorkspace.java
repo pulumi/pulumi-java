@@ -688,7 +688,36 @@ public final class LocalWorkspace extends Workspace {
      */
     @Override
     public void removeStack(String stackName) throws AutomationException {
-        var args = List.of("stack", "rm", "--yes", Objects.requireNonNull(stackName));
+        removeStack(stackName, StackRemoveOptions.Empty);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void removeStack(String stackName, StackRemoveOptions options) throws AutomationException {
+        var args = new ArrayList<String>();
+        args.add("stack");
+        args.add("rm");
+        args.add("--yes");
+        args.add(Objects.requireNonNull(stackName));
+
+        if (options != null) {
+            if (options.force()) {
+                args.add("--force");
+            }
+            if (options.preserveConfig()) {
+                args.add("--preserve-config");
+            }
+            if (options.removeBackups()) {
+                if (!supportsCommand(Version.of(3, 188))) {
+                    throw new IllegalStateException(
+                        "The Pulumi CLI version does not support removeBackups. Please update the Pulumi CLI.");
+                }
+                args.add("--remove-backups");
+            }
+        }
+
         runCommand(args);
     }
 
@@ -1101,5 +1130,13 @@ public final class LocalWorkspace extends Workspace {
     @FunctionalInterface
     private interface WorkspaceStackFactory {
         WorkspaceStack create(String name, Workspace workspace) throws AutomationException;
+    }
+
+    private boolean supportsCommand(Version minVersion) {
+        var version = cmd.version();
+        if (version == null) {
+            version = Version.of(3, 0);
+        }
+        return version.isHigherThanOrEquivalentTo(minVersion);
     }
 }
