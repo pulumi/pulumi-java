@@ -140,6 +140,23 @@ func TestIntegrations(t *testing.T) {
 	runAliasTest(t, "retype-component")
 	runAliasTest(t, "retype-parents")
 	runAliasTest(t, "adopt-into-component")
+
+	t.Run("package-add", func(t *testing.T) {
+		t.Parallel()
+
+		e := ptesting.NewEnvironment(t)
+		defer e.DeleteIfNotFailed()
+
+		e.ImportDirectory("packageadd-namespace")
+		e.CWD = filepath.Join(e.RootPath, "java")
+		e.RunCommand("pulumi", "package", "add", "../provider/schema.json")
+
+		// Make sure the SDK was generated in the expected directory
+		_, err := os.Stat(filepath.Join(e.CWD, "sdks", "example-mypkg", "src", "main", "java",
+			"com", "example", "mypkg", "Utilities.java"))
+		require.NoError(t, err)
+
+	})
 }
 
 func runAliasTest(t *testing.T, directory string) {
@@ -225,20 +242,4 @@ func stackTransformationValidator() func(t *testing.T, stack integration.Runtime
 		assert.True(t, foundRes4Child)
 		assert.True(t, foundRes5Child)
 	}
-}
-
-func TestPackageAddWithNamespaceSetJava(t *testing.T) {
-	t.Parallel()
-
-	e := ptesting.NewEnvironment(t)
-	defer e.DeleteIfNotFailed()
-
-	e.ImportDirectory("packageadd-namespace")
-	e.CWD = filepath.Join(e.RootPath, "java")
-	e.RunCommand("pulumi", "package", "add", "../provider/schema.json")
-
-	// Make sure the SDK was generated in the expected directory
-	_, err := os.Stat(filepath.Join(e.CWD, "sdks", "my-namespace-mypkg", "src", "main", "java",
-		"com", "mynamespace", "mypkg", "Utilities.java"))
-	require.NoError(t, err)
 }
