@@ -234,6 +234,7 @@ var expectedFailures = map[string]string{
 	"l2-ref-ref":                            "test failing",
 	"l2-invoke-dependencies":                "test failing",
 	"l2-destroy":                            "test failing",
+	"l2-invoke-scalars":                     "not implemented",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
