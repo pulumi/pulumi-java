@@ -337,6 +337,8 @@ jobs:
           - retype-parents
           - provider-maven
           - provider-gradle
+          - package-add
+          - convert
     steps:
       - uses: actions/checkout@v3
         with:
