@@ -554,6 +554,56 @@ func (host *javaLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, co
 	return env
 }
 
+func (host *javaLanguageHost) Link(
+	_ context.Context, req *pulumirpc.LinkRequest,
+) (*pulumirpc.LinkResponse, error) {
+	if len(req.Packages) == 0 {
+		return &pulumirpc.LinkResponse{}, nil
+	}
+
+	instructions := ""
+	if len(req.Packages) > 1 {
+		names := make([]string, len(req.Packages))
+		for i, pkg := range req.Packages {
+			names[i] = pkg.Package.Name
+		}
+		instructions += fmt.Sprintf("Successfully generated Java SDKs for packages %s\n\n", strings.Join(names, ", "))
+		instructions += "To use these SDKs in your Java project, complete the following steps:\n"
+		instructions += "1. Copy the contents of the generated SDKs to your Java project:\n"
+	} else {
+		instructions += fmt.Sprintf("Successfully generated a Java SDK for the package %s\n\n", req.Packages[0].Package.Name)
+		instructions += "To use this SDK in your Java project, complete the following steps:\n"
+		instructions += "1. Copy the contents of the generated SDK to your Java project:\n"
+	}
+
+	dest := filepath.Join(req.Info.ProgramDirectory, "src")
+	for _, dep := range req.Packages {
+		instructions += fmt.Sprintf("     cp -r %s/src/* %s\n", dep.Path, dest)
+	}
+
+	instructions += "\n"
+	instructions += "2. Add the SDK dependencies to your Java project's build configuration.\n"
+	instructions += "   If you are using Maven, add the following dependencies to your pom.xml:\n"
+	instructions += "\n"
+	instructions += "     <dependencies>\n"
+	instructions += "         <dependency>\n"
+	instructions += "             <groupId>com.google.code.findbugs</groupId>\n"
+	instructions += "             <artifactId>jsr305</artifactId>\n"
+	instructions += "             <version>3.0.2</version>\n"
+	instructions += "         </dependency>\n"
+	instructions += "         <dependency>\n"
+	instructions += "             <groupId>com.google.code.gson</groupId>\n"
+	instructions += "             <artifactId>gson</artifactId>\n"
+	instructions += "             <version>2.8.9</version>\n"
+	instructions += "         </dependency>\n"
+	instructions += "     </dependencies>\n"
+	instructions += "\n"
+
+	return &pulumirpc.LinkResponse{
+		ImportInstructions: instructions,
+	}, nil
+}
+
 // constructConfig json-serializes the configuration data given as part of a RunRequest.
 func (host *javaLanguageHost) constructConfig(req *pulumirpc.RunRequest) (string, error) {
 	configMap := req.GetConfig()
