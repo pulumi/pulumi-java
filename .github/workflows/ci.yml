@@ -374,6 +374,12 @@ jobs:
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        with:
+          repo: pulumi/pulumictl
+          tag: v0.0.31
+          cache: enable
       - name: Run integration tests
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}

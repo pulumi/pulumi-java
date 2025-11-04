@@ -7,7 +7,6 @@ build::	ensure build_go build_sdk
 ensure::	ensure_sdk
 
 PKG_FILES := $(shell  find pkg -name '*.go' -type f)
-GO_TEST_PARALLEL ?= $(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 2)
 
 # Go project rooted at `pkg/` implements Pulumi Java language plugin
 # and Java go as a Go library.
@@ -87,10 +86,10 @@ test_templates: bin/pulumi-language-java
 # Test a single integration, s.g.:
 #     make test_integration.stack-reference
 test_integration.%: bin/pulumi-language-java
-	cd tests/integration && PATH="${PWD}/bin:${PATH}" GOMAXPROCS=$(GO_TEST_PARALLEL) go test -run "TestIntegrations/^$*$$" -test.v
+	cd tests/integration && PATH="${PWD}/bin:${PATH}" go test -run "TestIntegrations/^$*$$" -test.v
 
 test_integrations: bin/pulumi-language-java
-	cd tests/integration && PATH="${PWD}/bin:${PATH}" GOMAXPROCS=$(GO_TEST_PARALLEL) go test -test.v
+	cd tests/integration && PATH="${PWD}/bin:${PATH}" go test -test.v
 
 codegen_tests::
 	cd ./pkg/codegen/java && go test ./...
