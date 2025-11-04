@@ -325,20 +325,6 @@ jobs:
     timeout-minutes: 10
     strategy:
       fail-fast: false
-      matrix:
-        integration:
-          - stack-reference
-          - stack-transformation
-          - adopt-into-component
-          - rename
-          - rename-component
-          - rename-component-and-child
-          - retype-component
-          - retype-parents
-          - provider-maven
-          - provider-gradle
-          - package-add
-          - convert
     steps:
       - uses: actions/checkout@v3
         with:
@@ -388,10 +374,10 @@ jobs:
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
-      - name: Run ${{ matrix.integration }} integration
+      - name: Run integration tests
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-        run: make test_integration.${{ matrix.integration }}
+        run: make test_integrations
 
   test_templates:
     runs-on: ubuntu-latest
