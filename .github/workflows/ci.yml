@@ -41,7 +41,7 @@ jobs:
     outputs:
       gotcloudcreds: ${{ steps.gotcloudcreds.outputs.gotcloudcreds }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Fetch Tags
@@ -83,7 +83,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        uses: gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2 # v5.0.0
         with:
           gradle-version: 8.14.1
       - name: Build and unit-test Pulumi Java SDK
@@ -106,7 +106,7 @@ jobs:
           name: go-binaries
           path: bin/
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        uses: gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2 # v5.0.0
         with:
           gradle-version: 8.14.1
       - name: Publish Pulumi Java SDK to Maven Local
@@ -135,7 +135,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
@@ -169,7 +169,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        uses: gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2 # v5.0.0
         with:
           gradle-version: 8.14.1
       - name: Publish Pulumi Java SDK to Maven Local to enable codegen tests
@@ -221,7 +221,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
@@ -267,7 +267,7 @@ jobs:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-region: ${{ env.AWS_REGION }}
@@ -302,7 +302,7 @@ jobs:
     name: Lint pkg
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
           submodules: recursive
@@ -342,7 +342,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        uses: gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2 # v5.0.0
         with:
           gradle-version: 8.14.1
       - name: Set up Go
@@ -396,7 +396,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install Pulumi CLI
@@ -411,7 +411,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        uses: gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2 # v5.0.0
         with:
           gradle-version: 8.14.1
       - name: Set up Go
@@ -444,7 +444,7 @@ jobs:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-region: ${{ env.AWS_REGION }}
