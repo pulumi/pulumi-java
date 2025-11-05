@@ -18,7 +18,7 @@ import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 /**
- * Watches a Pulumi engine log file for events and invokes a callback for each
+ * Watch a Pulumi engine log file for events and invokes a callback for each
  * event.
  */
 @InternalUse
