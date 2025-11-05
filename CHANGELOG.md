@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## 1.16.3
+
+* Update pulumi pkg & sdk to 3.205.0
+* Implement `Language.Link`
+
 ## 1.16.2
 
 ### Bug Fixes
