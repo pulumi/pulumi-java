@@ -27,7 +27,11 @@ import java.util.regex.Pattern;
 import javax.annotation.Nullable;
 
 import com.pulumi.automation.events.internal.EventLogWatcher;
+import com.pulumi.automation.events.internal.EventsServer;
 import com.pulumi.core.internal.ContextAwareCompletableFuture;
+
+import io.grpc.Server;
+import io.grpc.ServerBuilder;
 
 /**
  * A {@link PulumiCommand} implementation that uses a locally installed Pulumi CLI.
@@ -36,6 +40,7 @@ public class LocalPulumiCommand implements PulumiCommand {
     static final String SKIP_VERSION_CHECK_VAR = "PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK";
 
     private static final Version MINIMUM_VERSION = Version.of(3, 95);
+    private static final Version GRPC_EVENT_LOG_VERSION = Version.of(3, 205, 0);
 
     private static final Pattern NOT_FOUND_REGEX_PATTERN = Pattern.compile("no stack named.*found");
     private static final Pattern ALREADY_EXISTS_REGEX_PATTERN = Pattern.compile("stack.*already exists");
@@ -142,35 +147,76 @@ public class LocalPulumiCommand implements PulumiCommand {
     @Override
     public CommandResult run(List<String> args, CommandRunOptions options) throws AutomationException {
         if (options != null && options.onEngineEvent() != null) {
-            var firstArg = args != null && !args.isEmpty() ? args.get(0) : null;
-            var commandName = sanitizeCommandName(firstArg);
-            try (var eventLogFile = new EventLogFile(commandName);
-                    var eventLogWatcher = new EventLogWatcher(eventLogFile.filePath(),
-                            options.onEngineEvent())) {
-                return runInternal(args, options, eventLogFile.filePath());
-            } catch (AutomationException e) {
-                throw e;
-            } catch (Exception e) {
-                throw new AutomationException(e);
+            if (version != null && version.compareTo(GRPC_EVENT_LOG_VERSION) > 0) {
+                return runWithGrpcEventLog(args, options);
+            } else {
+                return runWithFileEventLog(args, options);
             }
         }
 
         return runInternal(args, options, null);
     }
 
+    /**
+     * Run the command with gRPC-based event logging.
+     */
+    private CommandResult runWithGrpcEventLog(List<String> args, CommandRunOptions options) throws AutomationException {
+        var maxRpcMessageSize = 400 * 1024 * 1024; // 400MB
+        var eventsServer = new EventsServer(options.onEngineEvent());
+        var server = ServerBuilder.forPort(0)
+                .maxInboundMessageSize(maxRpcMessageSize)
+                .addService(eventsServer)
+                .build();
+
+        try {
+            server.start();
+            var port = server.getPort();
+            var eventLogAddress = "tcp://127.0.0.1:" + port;
+
+            return runInternal(args, options, eventLogAddress);
+        } catch (IOException e) {
+            throw new AutomationException("Failed to start gRPC events server", e);
+        } catch (AutomationException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new AutomationException(e);
+        } finally {
+            if (server != null) {
+                server.shutdown();
+            }
+        }
+    }
+
+    /**
+     * Run the command with file-based event logging.
+     */
+    private CommandResult runWithFileEventLog(List<String> args, CommandRunOptions options) throws AutomationException {
+        var firstArg = args != null && !args.isEmpty() ? args.get(0) : null;
+        var commandName = sanitizeCommandName(firstArg);
+        try (var eventLogFile = new EventLogFile(commandName);
+                var eventLogWatcher = new EventLogWatcher(eventLogFile.filePath(),
+                        options.onEngineEvent())) {
+            return runInternal(args, options, eventLogFile.filePath().toString());
+        } catch (AutomationException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new AutomationException(e);
+        }
+    }
+
     private CommandResult runInternal(
             List<String> args,
             CommandRunOptions options,
-            @Nullable Path eventLogFile) throws AutomationException {
+            @Nullable String eventLogLocation) throws AutomationException {
         var processBuilder = new ProcessBuilder(command);
-        processBuilder.command().addAll(pulumiArgs(args, eventLogFile));
+        processBuilder.command().addAll(pulumiArgs(args, eventLogLocation));
         var workingDir = options.workingDir();
         if (workingDir != null) {
             processBuilder.directory(workingDir.toFile());
         }
 
         var env = processBuilder.environment();
-        var debugCommands = eventLogFile != null;
+        var debugCommands = eventLogLocation != null;
         env.putAll(pulumiEnvironment(options.additionalEnv(), command, debugCommands));
 
         var executor = Executors.newFixedThreadPool(2);
@@ -233,7 +279,7 @@ public class LocalPulumiCommand implements PulumiCommand {
         }, executor);
     }
 
-    static List<String> pulumiArgs(List<String> args, Path eventLogFile) {
+    static List<String> pulumiArgs(List<String> args, String eventLogLocation) {
         var result = new ArrayList<String>(args);
 
         // all commands should be run in non-interactive mode.
@@ -243,9 +289,9 @@ public class LocalPulumiCommand implements PulumiCommand {
             result.add("--non-interactive");
         }
 
-        if (eventLogFile != null) {
+        if (eventLogLocation != null) {
             result.add("--event-log");
-            result.add(eventLogFile.toString());
+            result.add(eventLogLocation);
         }
 
         return result;
