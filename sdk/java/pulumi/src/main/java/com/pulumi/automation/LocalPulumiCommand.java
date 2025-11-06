@@ -147,7 +147,7 @@ public class LocalPulumiCommand implements PulumiCommand {
     @Override
     public CommandResult run(List<String> args, CommandRunOptions options) throws AutomationException {
         if (options != null && options.onEngineEvent() != null) {
-            if (version != null && version.compareTo(GRPC_EVENT_LOG_VERSION) >= 0) {
+            if (version != null && version.compareTo(GRPC_EVENT_LOG_VERSION) > 0) {
                 return runWithGrpcEventLog(args, options);
             } else {
                 return runWithFileEventLog(args, options);
