@@ -49,7 +49,7 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/actions@cc7494be991dba0978f7ffafaf995b0449a0998e # v6
         with:
-          pulumi-version: latest
+          pulumi-version: dev
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v2.1.0
         with:
