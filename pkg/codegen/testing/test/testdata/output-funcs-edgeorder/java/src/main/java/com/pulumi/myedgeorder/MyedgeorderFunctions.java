@@ -40,7 +40,8 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The list of configurations.
@@ -48,7 +49,8 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The list of configurations.
@@ -56,7 +58,8 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static CompletableFuture<ListConfigurationsResult> listConfigurationsPlain(ListConfigurationsPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The list of product families.
@@ -80,7 +83,8 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The list of product families.
@@ -88,7 +92,8 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The list of product families.
@@ -96,6 +101,7 @@ public final class MyedgeorderFunctions {
      * 
      */
     public static CompletableFuture<ListProductFamiliesResult> listProductFamiliesPlain(ListProductFamiliesPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

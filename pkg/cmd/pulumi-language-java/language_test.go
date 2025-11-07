@@ -128,7 +128,6 @@ func TestLanguage(t *testing.T) {
 	require.NoError(t, err)
 
 	for _, tt := range tests.Tests {
-		tt := tt
 		t.Run(tt, func(t *testing.T) {
 			t.Parallel()
 
@@ -187,7 +186,6 @@ var expectedFailures = map[string]string{
 	"l2-component-property-deps":            "compilation error",
 	"l2-parameterized-resource":             "compilation error",
 	"l2-explicit-providers":                 "should have 6 item(s), but has 7",
-	"l2-invoke-scalar":                      "exception at runtime",
 	"l3-component-simple":                   "compilation error",
 	"l1-builtin-cwd":                        "test failing",
 	"l1-stack-reference":                    "test failing",
@@ -234,7 +232,6 @@ var expectedFailures = map[string]string{
 	"l2-ref-ref":                            "test failing",
 	"l2-invoke-dependencies":                "test failing",
 	"l2-destroy":                            "test failing",
-	"l2-invoke-scalars":                     "not implemented",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

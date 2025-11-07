@@ -52,7 +52,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getactivation.getActivation has been deprecated in favor of akamai.index/getpropertyactivation.getPropertyActivation */
     public static Output<GetActivationResult> getActivation(GetActivationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getActivation:getActivation", TypeShape.of(GetActivationResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getActivation:getActivation", TypeShape.of(GetActivationResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -62,7 +63,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getactivation.getActivation has been deprecated in favor of akamai.index/getpropertyactivation.getPropertyActivation */
     public static Output<GetActivationResult> getActivation(GetActivationArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getActivation:getActivation", TypeShape.of(GetActivationResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getActivation:getActivation", TypeShape.of(GetActivationResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -72,7 +74,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getactivation.getActivation has been deprecated in favor of akamai.index/getpropertyactivation.getPropertyActivation */
     public static CompletableFuture<GetActivationResult> getActivationPlain(GetActivationPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:properties/getActivation:getActivation", TypeShape.of(GetActivationResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:properties/getActivation:getActivation", TypeShape.of(GetActivationResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -102,7 +105,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getcpcode.getCpCode has been deprecated in favor of akamai.index/getcpcode.getCpCode */
     public static Output<GetCpCodeResult> getCpCode(GetCpCodeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getCpCode:getCpCode", TypeShape.of(GetCpCodeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getCpCode:getCpCode", TypeShape.of(GetCpCodeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -112,7 +116,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getcpcode.getCpCode has been deprecated in favor of akamai.index/getcpcode.getCpCode */
     public static Output<GetCpCodeResult> getCpCode(GetCpCodeArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getCpCode:getCpCode", TypeShape.of(GetCpCodeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getCpCode:getCpCode", TypeShape.of(GetCpCodeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -122,7 +127,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getcpcode.getCpCode has been deprecated in favor of akamai.index/getcpcode.getCpCode */
     public static CompletableFuture<GetCpCodeResult> getCpCodePlain(GetCpCodePlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:properties/getCpCode:getCpCode", TypeShape.of(GetCpCodeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:properties/getCpCode:getCpCode", TypeShape.of(GetCpCodeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -152,7 +158,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getproperty.getProperty has been deprecated in favor of akamai.index/getproperty.getProperty */
     public static Output<GetPropertyResult> getProperty(GetPropertyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getProperty:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getProperty:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -162,7 +169,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getproperty.getProperty has been deprecated in favor of akamai.index/getproperty.getProperty */
     public static Output<GetPropertyResult> getProperty(GetPropertyArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getProperty:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getProperty:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -172,7 +180,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getproperty.getProperty has been deprecated in favor of akamai.index/getproperty.getProperty */
     public static CompletableFuture<GetPropertyResult> getPropertyPlain(GetPropertyPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:properties/getProperty:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:properties/getProperty:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -202,7 +211,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getpropertyrules.getPropertyRules has been deprecated in favor of akamai.index/getpropertyrules.getPropertyRules */
     public static Output<GetPropertyRulesResult> getPropertyRules(GetPropertyRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getPropertyRules:getPropertyRules", TypeShape.of(GetPropertyRulesResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getPropertyRules:getPropertyRules", TypeShape.of(GetPropertyRulesResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -212,7 +222,8 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getpropertyrules.getPropertyRules has been deprecated in favor of akamai.index/getpropertyrules.getPropertyRules */
     public static Output<GetPropertyRulesResult> getPropertyRules(GetPropertyRulesArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:properties/getPropertyRules:getPropertyRules", TypeShape.of(GetPropertyRulesResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:properties/getPropertyRules:getPropertyRules", TypeShape.of(GetPropertyRulesResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -222,6 +233,7 @@ public final class PropertiesFunctions {
      */
     @Deprecated /* akamai.properties/getpropertyrules.getPropertyRules has been deprecated in favor of akamai.index/getpropertyrules.getPropertyRules */
     public static CompletableFuture<GetPropertyRulesResult> getPropertyRulesPlain(GetPropertyRulesPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:properties/getPropertyRules:getPropertyRules", TypeShape.of(GetPropertyRulesResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:properties/getPropertyRules:getPropertyRules", TypeShape.of(GetPropertyRulesResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

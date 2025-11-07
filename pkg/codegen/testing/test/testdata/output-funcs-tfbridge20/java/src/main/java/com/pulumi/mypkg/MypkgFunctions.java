@@ -49,7 +49,8 @@ public final class MypkgFunctions {
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
     public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * Taken from pulumi-AWS to regress an issue
@@ -60,7 +61,8 @@ public final class MypkgFunctions {
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
     public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * Taken from pulumi-AWS to regress an issue
@@ -71,7 +73,8 @@ public final class MypkgFunctions {
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
     public static CompletableFuture<GetAmiIdsResult> getAmiIdsPlain(GetAmiIdsPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The response from the ListKeys operation.
@@ -95,7 +98,8 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The response from the ListKeys operation.
@@ -103,7 +107,8 @@ public final class MypkgFunctions {
      * 
      */
     public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * The response from the ListKeys operation.
@@ -111,6 +116,7 @@ public final class MypkgFunctions {
      * 
      */
     public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeysPlain(ListStorageAccountKeysPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

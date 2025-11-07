@@ -28,12 +28,15 @@ public final class X_iamFunctions {
         return getPolicyDocumentPlain(args, InvokeOptions.Empty);
     }
     public static Output<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocumentPlain(GetPolicyDocumentPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("aws:x/iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

@@ -34,20 +34,23 @@ public final class UrnidFunctions {
      * 
      */
     public static Output<TestResult> test(TestArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * It&#39;s fine for invokes to use urn and id
      * 
      */
     public static Output<TestResult> test(TestArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * It&#39;s fine for invokes to use urn and id
      * 
      */
     public static CompletableFuture<TestResult> testPlain(TestPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("urnid:index:Test", TypeShape.of(TestResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }
