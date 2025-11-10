@@ -3,6 +3,14 @@ resource siteBucket "aws-native:s3:Bucket" {
 	websiteConfiguration = {
 		indexDocument = "index.html"
 	}
+	publicAccessBlockConfiguration = {
+		blockPublicAcls = false
+	}
+	ownershipControls = {
+		rules = [{
+			objectOwnership = "ObjectWriter"
+		}]
+	}
 }
 
 resource indexHtml "aws:s3/bucketObject:BucketObject" {
@@ -11,6 +19,10 @@ resource indexHtml "aws:s3/bucketObject:BucketObject" {
 	source = fileAsset("./www/index.html")
 	acl = "public-read"
 	contentType = "text/html"
+
+	options {
+		version = "5.16.2"
+	}
 }
 
 resource faviconPng "aws:s3/bucketObject:BucketObject" {
@@ -19,12 +31,18 @@ resource faviconPng "aws:s3/bucketObject:BucketObject" {
 	source = fileAsset("./www/favicon.png")
 	acl = "public-read"
 	contentType = "image/png"
+
+	options {
+		version = "5.16.2"
+	}
 }
 
-resource bucketPolicy "aws:s3/bucketPolicy:BucketPolicy" {
-	__logicalName = "bucketPolicy"
-	bucket = siteBucket.id
-	policy = "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Principal\": \"*\",\n      \"Action\": [\"s3:GetObject\"],\n      \"Resource\": [\"${siteBucket.arn}/*\"]\n    }\n  ]\n}\n"
+resource defaultProvider "pulumi:providers:aws" {
+	__logicalName = "defaultProvider"
+
+	options {
+		version = "5.16.2"
+	}
 }
 
 output bucketName {
@@ -34,5 +52,5 @@ output bucketName {
 
 output websiteUrl {
 	__logicalName = "websiteUrl"
-	value = siteBucket.websiteURL
+	value = siteBucket.websiteUrl
 }
