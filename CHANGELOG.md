@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.17.0
+
+* Get the event log in the automation API over gRPC, instead of through a text file
+
 ## 1.16.3
 
 * Update pulumi pkg & sdk to 3.205.0
