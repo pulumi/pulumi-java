@@ -28,13 +28,16 @@ public final class SimpleinvokeFunctions {
         return myInvokePlain(args, InvokeOptions.Empty);
     }
     public static Output<MyInvokeResult> myInvoke(MyInvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("simple-invoke:index:myInvoke", TypeShape.of(MyInvokeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("simple-invoke:index:myInvoke", TypeShape.of(MyInvokeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<MyInvokeResult> myInvoke(MyInvokeArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("simple-invoke:index:myInvoke", TypeShape.of(MyInvokeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("simple-invoke:index:myInvoke", TypeShape.of(MyInvokeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<MyInvokeResult> myInvokePlain(MyInvokePlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("simple-invoke:index:myInvoke", TypeShape.of(MyInvokeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("simple-invoke:index:myInvoke", TypeShape.of(MyInvokeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<SecretInvokeResult> secretInvoke(SecretInvokeArgs args) {
         return secretInvoke(args, InvokeOptions.Empty);
@@ -43,13 +46,16 @@ public final class SimpleinvokeFunctions {
         return secretInvokePlain(args, InvokeOptions.Empty);
     }
     public static Output<SecretInvokeResult> secretInvoke(SecretInvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("simple-invoke:index:secretInvoke", TypeShape.of(SecretInvokeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("simple-invoke:index:secretInvoke", TypeShape.of(SecretInvokeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<SecretInvokeResult> secretInvoke(SecretInvokeArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("simple-invoke:index:secretInvoke", TypeShape.of(SecretInvokeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("simple-invoke:index:secretInvoke", TypeShape.of(SecretInvokeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<SecretInvokeResult> secretInvokePlain(SecretInvokePlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("simple-invoke:index:secretInvoke", TypeShape.of(SecretInvokeResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("simple-invoke:index:secretInvoke", TypeShape.of(SecretInvokeResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<UnitResult> unit() {
         return unit(UnitArgs.Empty, InvokeOptions.Empty);
@@ -64,12 +70,15 @@ public final class SimpleinvokeFunctions {
         return unitPlain(args, InvokeOptions.Empty);
     }
     public static Output<UnitResult> unit(UnitArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("simple-invoke:index:unit", TypeShape.of(UnitResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("simple-invoke:index:unit", TypeShape.of(UnitResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<UnitResult> unit(UnitArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("simple-invoke:index:unit", TypeShape.of(UnitResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("simple-invoke:index:unit", TypeShape.of(UnitResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<UnitResult> unitPlain(UnitPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("simple-invoke:index:unit", TypeShape.of(UnitResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("simple-invoke:index:unit", TypeShape.of(UnitResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

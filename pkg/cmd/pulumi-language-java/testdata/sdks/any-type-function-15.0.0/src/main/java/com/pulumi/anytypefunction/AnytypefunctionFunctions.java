@@ -28,12 +28,15 @@ public final class AnytypefunctionFunctions {
         return dynListToDynPlain(args, InvokeOptions.Empty);
     }
     public static Output<DynListToDynResult> dynListToDyn(DynListToDynArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("any-type-function:index:dynListToDyn", TypeShape.of(DynListToDynResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("any-type-function:index:dynListToDyn", TypeShape.of(DynListToDynResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<DynListToDynResult> dynListToDyn(DynListToDynArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("any-type-function:index:dynListToDyn", TypeShape.of(DynListToDynResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("any-type-function:index:dynListToDyn", TypeShape.of(DynListToDynResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<DynListToDynResult> dynListToDynPlain(DynListToDynPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("any-type-function:index:dynListToDyn", TypeShape.of(DynListToDynResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("any-type-function:index:dynListToDyn", TypeShape.of(DynListToDynResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

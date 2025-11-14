@@ -43,7 +43,8 @@ public final class TrafficmanagementFunctions {
      */
     @Deprecated /* akamai.trafficmanagement/getgtmdefaultdatacenter.getGtmDefaultDatacenter has been deprecated in favor of akamai.index/getgtmdefaultdatacenter.getGtmDefaultDatacenter */
     public static Output<GetGtmDefaultDatacenterResult> getGtmDefaultDatacenter(GetGtmDefaultDatacenterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -53,7 +54,8 @@ public final class TrafficmanagementFunctions {
      */
     @Deprecated /* akamai.trafficmanagement/getgtmdefaultdatacenter.getGtmDefaultDatacenter has been deprecated in favor of akamai.index/getgtmdefaultdatacenter.getGtmDefaultDatacenter */
     public static Output<GetGtmDefaultDatacenterResult> getGtmDefaultDatacenter(GetGtmDefaultDatacenterArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -63,6 +65,7 @@ public final class TrafficmanagementFunctions {
      */
     @Deprecated /* akamai.trafficmanagement/getgtmdefaultdatacenter.getGtmDefaultDatacenter has been deprecated in favor of akamai.index/getgtmdefaultdatacenter.getGtmDefaultDatacenter */
     public static CompletableFuture<GetGtmDefaultDatacenterResult> getGtmDefaultDatacenterPlain(GetGtmDefaultDatacenterPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:trafficmanagement/getGtmDefaultDatacenter:getGtmDefaultDatacenter", TypeShape.of(GetGtmDefaultDatacenterResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

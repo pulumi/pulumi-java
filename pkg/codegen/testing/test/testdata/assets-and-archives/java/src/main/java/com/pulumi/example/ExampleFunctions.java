@@ -22,12 +22,15 @@ public final class ExampleFunctions {
         return getAssetsPlain(args, InvokeOptions.Empty);
     }
     public static Output<GetAssetsResult> getAssets(GetAssetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<GetAssetsResult> getAssets(GetAssetsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<GetAssetsResult> getAssetsPlain(GetAssetsPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("example::GetAssets", TypeShape.of(GetAssetsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }
