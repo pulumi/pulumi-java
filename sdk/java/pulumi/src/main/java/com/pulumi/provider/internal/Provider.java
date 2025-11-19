@@ -4,6 +4,9 @@ import java.util.concurrent.CompletableFuture;
 
 import com.pulumi.provider.internal.models.*;
 
+/**
+ * An interface representing Pulumi Provider that can be configured, provide schemas, and construct resources.
+ */
 public interface Provider {
     /**
      * Configure the provider with the given configuration parameters.

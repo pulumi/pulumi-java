@@ -62,6 +62,10 @@ public final class CallOptions {
         return Optional.ofNullable(version);
     }
 
+    /**
+     * Internal helper class for resolving the effective {@link ProviderResource} and {@link Resource}
+     * options
+     */
     @InternalUse
     public static final class CallOptionsInternal {
 
