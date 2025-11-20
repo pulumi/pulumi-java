@@ -46,7 +46,8 @@ public final class EdgednsFunctions {
      */
     @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
     public static Output<GetAuthoritiesSetResult> getAuthoritiesSet(GetAuthoritiesSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -56,7 +57,8 @@ public final class EdgednsFunctions {
      */
     @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
     public static Output<GetAuthoritiesSetResult> getAuthoritiesSet(GetAuthoritiesSetArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -66,7 +68,8 @@ public final class EdgednsFunctions {
      */
     @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
     public static CompletableFuture<GetAuthoritiesSetResult> getAuthoritiesSetPlain(GetAuthoritiesSetPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -96,7 +99,8 @@ public final class EdgednsFunctions {
      */
     @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
     public static Output<GetDnsRecordSetResult> getDnsRecordSet(GetDnsRecordSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -106,7 +110,8 @@ public final class EdgednsFunctions {
      */
     @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
     public static Output<GetDnsRecordSetResult> getDnsRecordSet(GetDnsRecordSetArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * 
@@ -116,6 +121,7 @@ public final class EdgednsFunctions {
      */
     @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
     public static CompletableFuture<GetDnsRecordSetResult> getDnsRecordSetPlain(GetDnsRecordSetPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }
