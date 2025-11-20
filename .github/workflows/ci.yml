@@ -4,7 +4,7 @@ on:
       # Skip CI checks if the only things that have changed are CHANGELOG entries (which is typically the case when a PR
       # or Push is occurring as part of a release process).
       - 'CHANGELOG.md'
-      - 'CHANGELOG_PENDING.md'
+      - '.changes/**'
   push:
     branches:
       - main
@@ -14,7 +14,7 @@ on:
       # Skip CI checks if the only things that have changed are CHANGELOG entries (which is typically the case when a PR
       # or Push is occurring as part of a release process).
       - 'CHANGELOG.md'
-      - 'CHANGELOG_PENDING.md'
+      - '.changes/**'
   repository_dispatch:
     types:
       - run-acceptance-tests-command

@@ -49,6 +49,7 @@ You will want to install the following on your machine:
 
 1. Ensure running `make` passes with no issues.
 2. Run `make codegen_tests_update` if anything related to codegen has been changed.
+3. We require a changelog entry for all PRs that aren't labeled `impact/no-changelog-required`. To generate a new changelog entry, run `make changelog` and follow the prompts on screen.
 
 ### Understanding the repo structure
 
@@ -150,14 +151,46 @@ If you want to talk with other folks in the Pulumi community
 `#contribute` channel on the
 [Pulumi Community Slack](https://slack.pulumi.com/).
 
+## Changelog
+
+Changelog management is done via [`changie`](https://changie.dev/).
+See the [installation](https://changie.dev/guide/installation/) guide for `changie`.
+
+Run `make changelog` (or `changie new`) in the top level directory. Here is an example of what that looks like:
+
+```shell
+$ make changelog
+✔ Component … sdk
+✔ Kind … Improvements
+✔ Body … Cool new SDK feature.
+✔ GitHub Pull Request … 123
+```
+
+### Changelog messages
+
+Changelog notes are written in the active imperative form. They should not end with a period. The simple rule is to pretend the message starts with "This change will ..."
+
+Good examples for changelog entries are:
+- Exit immediately from state edit when no change was made
+- Fix root and program paths to always be absolute
+
+Here's some examples of what we're trying to avoid:
+- Fixes a bug
+- Adds a feature
+- Feature now does something
+
 ## Release Process
 
 To release a new version of `pulumi-java`, follow these steps:
 
-1. Create a new pull request that updates [CHANGELOG.md](./CHANGELOG.md) with
-  the pending changes from [CHANGLOG_PENDING.md](./CHANGLOG_PENDING.md). Do *not*
-  remove the pending changes from [CHANGLOG_PENDING.md](./CHANGLOG_PENDING.md)
-  yet. Merge the PR.
+1. Use `changie` to update the changelog file and open a PR for that change. Once that PR merges it will trigger a release workflow.
+
+  ```shell
+  changie batch auto
+  changie merge
+  git add .
+  git commit -m "Changelog for $(changie latest)"
+  ```
 
 2. After the pull request is merged, push the release tags to the `main` branch
   by running the [`release.sh`](./scripts/release.sh) script. Make sure you have
@@ -168,6 +201,3 @@ To release a new version of `pulumi-java`, follow these steps:
   git pull origin main
   ./scripts/release.sh v0.20.0
   ```
-
-3. Create a new pull request that empties the pending changelog in
-  [CHANGELOG_PENDING.md](./CHANGELOG_PENDING.md) and merge it.
