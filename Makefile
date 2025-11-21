@@ -116,3 +116,7 @@ clone_templates::
 
 clone_examples::
 	git clone https://github.com/pulumi/examples.git
+
+.PHONY: changelog
+changelog:
+	changie new

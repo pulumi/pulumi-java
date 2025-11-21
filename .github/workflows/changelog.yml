@@ -1,0 +1,26 @@
+name: Verify changelog
+
+on:
+  merge_group:
+  pull_request:
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  check-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup mise and install tools
+        uses: jdx/mise-action@v3.4.0
+      - name: Verify
+        run: |
+          if ! gh release list | grep -q "$(changie latest)"; then
+            # The changie latest isn't yet published, i.e. we're going to publish it so check ".changes/unreleased" is empty
+            if [ -n "$(ls .changes/unreleased 2>/dev/null)" ]; then
+              echo "Unreleased changes are not empty"
+              exit 1
+            fi
+          fi
+

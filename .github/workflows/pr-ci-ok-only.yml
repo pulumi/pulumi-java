@@ -12,7 +12,7 @@ on:
       # Skip all files *except CHANGELOG* changes.
       - '**'
       - '!CHANGELOG.md'
-      - '!CHANGELOG_PENDING.md'
+      - '!.changes/**'
   push:
     branches:
       - main
@@ -22,7 +22,7 @@ on:
       # Skip all files *except CHANGELOG* changes.
       - '**'
       - '!CHANGELOG.md'
-      - '!CHANGELOG_PENDING.md'
+      - '!.changes/**'
 
 jobs:
   no-op:
