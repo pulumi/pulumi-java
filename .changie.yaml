@@ -1,0 +1,33 @@
+changesDir: .changes
+unreleasedDir: unreleased
+headerPath: header.tpl.md
+changelogPath: CHANGELOG.md
+versionExt: md
+versionFormat: '## {{.Version}} - {{.Time.Format "2006-01-02"}}'
+kindFormat: '### {{.Kind}}'
+kinds:
+- label: Improvements
+  auto: minor
+- label: Bug Fixes
+  auto: patch
+  key: bug-fixes
+# Custom fragment file format because we use / in the component name.
+fragmentFileFormat: '{{.Kind}}-{{.Custom.PR}}'
+components:
+ - sdk
+ - runtime
+ - codegen
+ - language
+changeFormat: '- [{{.Component}}] {{.Body}} [#{{.Custom.PR}}](https://github.com/pulumi/pulumi-java/pull/{{.Custom.PR}})'
+custom:
+  - key: PR
+    label: GitHub Pull Request
+    type: int
+newlines:
+  afterVersion: 1
+  afterChange: 1
+  afterKind: 1
+  afterChangelogHeader: 1
+  endOfVersion: 1
+envPrefix: CHANGIE_
+
