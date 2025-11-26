@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.17.1
+
+* Dependency bumps
+
 ## 1.17.0
 
 * Get the event log in the automation API over gRPC, instead of through a text file
