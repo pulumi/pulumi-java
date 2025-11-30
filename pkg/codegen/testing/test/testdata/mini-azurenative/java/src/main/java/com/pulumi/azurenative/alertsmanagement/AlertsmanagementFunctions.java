@@ -37,7 +37,8 @@ public final class AlertsmanagementFunctions {
      * 
      */
     public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * Action rule object containing target scope, conditions and suppression logic
@@ -45,7 +46,8 @@ public final class AlertsmanagementFunctions {
      * 
      */
     public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * Action rule object containing target scope, conditions and suppression logic
@@ -53,6 +55,7 @@ public final class AlertsmanagementFunctions {
      * 
      */
     public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByNamePlain(GetActionRuleByNamePlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

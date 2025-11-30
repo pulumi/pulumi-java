@@ -22,12 +22,15 @@ public final class MypkgFunctions {
         return funcWithSecretsPlain(args, InvokeOptions.Empty);
     }
     public static Output<FuncWithSecretsResult> funcWithSecrets(FuncWithSecretsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<FuncWithSecretsResult> funcWithSecrets(FuncWithSecretsArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<FuncWithSecretsResult> funcWithSecretsPlain(FuncWithSecretsPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("mypkg::funcWithSecrets", TypeShape.of(FuncWithSecretsResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }
