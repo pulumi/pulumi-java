@@ -23,6 +23,9 @@ import com.pulumi.provider.internal.Provider;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
 
+/**
+ * A generic provider implementation for component resources.
+ */
 public class ComponentProvider implements Provider {
     private final Metadata metadata;
     private final String basePackageName;

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <suppress checks=".*" files="com/pulumi/bootstrap/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/codegen/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/context/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/core/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/deployment/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/resources/internal/.*"/>
+    <suppress checks=".*" files="com/pulumi/serialization/internal/.*"/>
+</suppressions>
+

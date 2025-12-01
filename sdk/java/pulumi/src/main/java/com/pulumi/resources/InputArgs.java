@@ -35,16 +35,36 @@ public abstract class InputArgs {
 
     protected abstract void validateMember(Class<?> memberType, String fullName);
 
+    
+    /**
+     * Internal utility class of {@link InputArgs} instances.
+     *
+     * @see InputArgs
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static final class InputArgsInternal {
 
+        /**
+         * The {@link InputArgs} instance.
+         */
         private final InputArgs inputArgs;
 
+        /**
+         * Constructs a new internal utility for the given {@link InputArgs} instance.
+         *
+         * @param inputArgs the input arguments to manage; must not be null
+         */
         private InputArgsInternal(InputArgs inputArgs) {
             this.inputArgs = requireNonNull(inputArgs);
         }
 
+        /**
+         * Creates a new {@link InputArgsInternal} instance from the given {@link InputArgs}.
+         *
+         * @param inputArgs the input arguments to wrap; must not be null
+         * @return a new internal utility instance managing the given input arguments
+         */
         public static InputArgsInternal from(InputArgs inputArgs) {
             return new InputArgsInternal(inputArgs);
         }

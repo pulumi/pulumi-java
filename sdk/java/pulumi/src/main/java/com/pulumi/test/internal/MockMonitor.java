@@ -38,16 +38,45 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 
+
+/**
+ * MockMonitor is a test implementation of the {@link Monitor} interface for use with unit tests..
+ *
+ * @see com.pulumi.test.Mocks
+ * @see com.pulumi.deployment.internal.Monitor
+ */
 @InternalUse
 public class MockMonitor implements Monitor {
 
+    /**
+     * The user-provided mocks implementation used to simulate resource operations.
+     */
     private final Mocks mocks;
+    /**
+     * Serializer for converting Java objects to protocol buffer structs.
+     */
     private final Serializer serializer;
+    /**
+     * Deserializer for converting protocol buffer structs to Java objects.
+     */
     private final Deserializer deserializer;
 
+    /**
+     * Map of URN to registered resource state, used to track resources created during the test.
+     */
     private final Map<String, ImmutableMap<String, Object>> registeredResources;
+    /**
+     * List of all resources registered via this monitor during the test lifecycle.
+     */
     public final List<Resource> resources;
 
+    /**
+     * Constructs a new MockMonitor instance.
+     *
+     * @param mocks the {@link Mocks} implementation to use for simulating resource operations
+     * @param log   the {@link Log} instance for logging serialization/deserialization events
+     * @throws NullPointerException if mocks is null
+     */
     public MockMonitor(Mocks mocks, Log log) {
         this.mocks = Objects.requireNonNull(mocks);
         this.serializer = new Serializer(log);
@@ -56,6 +85,12 @@ public class MockMonitor implements Monitor {
         this.resources = Collections.synchronizedList(new LinkedList<>());
     }
 
+    /**
+     * Checks if a given feature is supported by this monitor implementation.
+     *
+     * @param request the feature support request
+     * @return a future containing the feature support response
+     */
     @Override
     public CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
         var hasSupport = !"outputValues".equals(request.getId());
@@ -64,6 +99,13 @@ public class MockMonitor implements Monitor {
         );
     }
 
+    /**
+     * Invokes a provider function or retrieves a resource, delegating to the mocks implementation.
+     *
+     * @param request the invoke request
+     * @return a future containing the invoke response with serialized results
+     * @throws IllegalArgumentException if a requested resource URN is not found
+     */
     @Override
     public CompletableFuture<InvokeResponse> invokeAsync(pulumirpc.Resource.ResourceInvokeRequest request) {
         var args = deserializeToMap(request.getArgs());
@@ -85,6 +127,12 @@ public class MockMonitor implements Monitor {
                 .thenApply(struct -> InvokeResponse.newBuilder().setReturn(struct).build());
     }
 
+    /**
+     * Invokes a provider call, delegating to the mocks implementation.
+     *
+     * @param request the call request
+     * @return a future containing the call response with serialized results
+     */
     @Override
     public CompletableFuture<CallResponse> callAsync(ResourceCallRequest request) {
         // For now, we'll route both Invoke and Call through IMocks.CallAsync.
@@ -98,6 +146,13 @@ public class MockMonitor implements Monitor {
                 .thenApply(struct -> CallResponse.newBuilder().setReturn(struct).build());
     }
 
+    /**
+     * Reads the state of an existing resource, simulating a resource read operation.
+     *
+     * @param resource the resource instance being read
+     * @param request  the read resource request
+     * @return a future containing the read resource response with serialized state
+     */
     @Override
     public CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
         return ContextAwareCompletableFuture.wrap(mocks.newResourceAsync(new Mocks.ResourceArgs(
@@ -135,6 +190,13 @@ public class MockMonitor implements Monitor {
         });
     }
 
+    /**
+     * Registers a new resource, simulating resource creation and tracking its state.
+     *
+     * @param resource the resource instance being registered
+     * @param request  the register resource request
+     * @return a future containing the register resource response with URN and serialized state
+     */
     @Override
     public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
         this.resources.add(resource);
@@ -187,11 +249,23 @@ public class MockMonitor implements Monitor {
         });
     }
 
+    /**
+     * Registers the outputs of a resource. This is a no-op in the mock implementation.
+     *
+     * @param request the register resource outputs request
+     * @return a completed future
+     */
     @Override
     public CompletableFuture<Void> registerResourceOutputsAsync(RegisterResourceOutputsRequest request) {
         return CompletableFuture.completedFuture(null);
     }
 
+    /**
+     * Deserializes a protocol buffer struct to an immutable map of arguments.
+     *
+     * @param args the struct to deserialize
+     * @return an immutable map of deserialized arguments
+     */
     private ImmutableMap<String, Object> deserializeToMap(Struct args) {
         var builder = ImmutableMap.<String, Object>builder();
         for (var entry : args.getFieldsMap().entrySet()) {
@@ -205,6 +279,13 @@ public class MockMonitor implements Monitor {
         return builder.build();
     }
 
+    /**
+     * Serializes an object to a protocol buffer struct asynchronously.
+     *
+     * @param o the object to serialize
+     * @return a future containing the serialized struct
+     * @throws IllegalArgumentException if the input is a CompletableFuture
+     */
     private CompletableFuture<Struct> serializeToStruct(Object o) {
         if (o instanceof CompletableFuture) {
             throw new IllegalArgumentException("Unexpected CompletableFuture");
@@ -212,6 +293,13 @@ public class MockMonitor implements Monitor {
         return serializeToMap(o).thenApply(Serializer::createStruct);
     }
 
+    /**
+     * Serializes an object to an immutable map asynchronously.
+     *
+     * @param o the object to serialize
+     * @return a future containing the serialized immutable map
+     * @throws UnsupportedOperationException if the serialization result is not a map
+     */
     private CompletableFuture<ImmutableMap<String, Object>> serializeToMap(Object o) {
         if (o instanceof Map) {
             o = ImmutableMap.copyOf((Map<String, Object>) o); // defensive copy
@@ -235,6 +323,12 @@ public class MockMonitor implements Monitor {
                 );
     }
 
+    /**
+     * Registers a provider package. This is a stub implementation for testing.
+     *
+     * @param request the register package request
+     * @return a future containing the register package response with a mock reference
+     */
     @Override
     public CompletableFuture<RegisterPackageResponse> registerPackageAsync(RegisterPackageRequest request) {
         return CompletableFuture.completedFuture(RegisterPackageResponse.newBuilder()

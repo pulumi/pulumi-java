@@ -5,6 +5,10 @@ import com.pulumi.deployment.internal.Runner;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
+/**
+ * A mock implementation of the {@link Runner} interface for use in testing scenarios.
+ * @see com.pulumi.deployment.internal.Runner
+ */
 public class MockRunner implements Runner {
 
     @Override

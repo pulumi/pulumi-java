@@ -82,15 +82,32 @@ public abstract class ResourceOptions {
         this.hideDiffs = hideDiffs;
     }
 
+
+    /**
+     * Abstract builder class for constructing and configuring {@link ResourceOptions} instances.
+     * @see ResourceOptions
+     */
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
 
+        /**
+         * The options instance being configured by this builder.
+         */
         protected final T options;
 
+        /**
+         * Constructs a new builder for the specified options instance.
+         *
+         * @param options the ResourceOptions instance to configure
+         */
         protected Builder(T options) {
             this.options = options;
         }
 
         /**
+         * An optional existing ID to load, rather than create.
+         *
+         * @param id the Output-wrapped resource ID, or null to unset
+         * @return this builder for method chaining
          * @see #id(String)
          */
         public B id(@Nullable Output<String> id) {
@@ -101,6 +118,9 @@ public abstract class ResourceOptions {
 
         /**
          * An optional existing ID to load, rather than create.
+         *
+         * @param id the resource ID as a String, or null to unset
+         * @return this builder for method chaining
          */
         public B id(@Nullable String id) {
             options.id = Output.ofNullable(id);
@@ -110,6 +130,9 @@ public abstract class ResourceOptions {
 
         /**
          * An optional parent resource to which this resource belongs.
+         *
+         * @param parent the parent resource, or null if none
+         * @return this builder for method chaining
          */
         public B parent(@Nullable Resource parent) {
             options.parent = parent;
@@ -119,6 +142,9 @@ public abstract class ResourceOptions {
 
         /**
          * Optional additional explicit dependencies on other resources.
+         *
+         * @param dependsOn one or more resources this resource depends on
+         * @return this builder for method chaining
          */
         public B dependsOn(Resource... dependsOn) {
             return this.dependsOn(List.of(dependsOn));

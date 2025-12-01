@@ -3,6 +3,7 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("com.google.protobuf") version "0.9.4"
+    id("checkstyle")
     id("jacoco")
 }
 
@@ -308,6 +309,17 @@ if (ossrhUsername) {
         useInMemoryPgpKeys(signingKey, signingPassword)
         sign publishing.publications.gpr
     }
+}
+
+checkstyle {
+    toolVersion = "10.26.0"
+    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
+}
+checkstyleMain {
+    source ='src/main/java'
+}
+checkstyleTest {
+    source ='src/test/java'
 }
 
 

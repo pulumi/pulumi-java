@@ -99,28 +99,64 @@ public class ComponentResource extends Resource {
         );
     }
 
+    /**
+     * Registers the output properties for this component resource.
+     *
+     * @param outputs a map of output property names to their corresponding {@link Output} values; must not be null
+     * @see #registerOutputs(CompletableFuture)
+     * @see #registerOutputs(Output)
+     */
     protected void registerOutputs(Map<String, Output<?>> outputs) {
         requireNonNull(outputs);
         registerOutputs(CompletableFuture.completedFuture(outputs));
     }
 
+    /**
+     * Registers the output properties for this component resource asynchronously.
+     *
+     * @param outputs a {@link CompletableFuture} that will complete with a map of output property names to their {@link Output} values; must not be null
+     * @see #registerOutputs(Map)
+     * @see #registerOutputs(Output)
+     */
     protected void registerOutputs(CompletableFuture<Map<String, Output<?>>> outputs) {
         requireNonNull(outputs);
         registerOutputs(Output.of(outputs));
     }
 
+    /**
+     * Registers the output properties for this component resource as an {@link Output}.
+     *
+     * @param outputs an {@link Output} containing a map of output property names to their {@link Output} values; must not be null
+     */
     protected void registerOutputs(Output<Map<String, Output<?>>> outputs) {
         requireNonNull(outputs);
         DeploymentInternal.getInstance().registerResourceOutputs(this, outputs);
     }
 
+    /**
+     * Internal helper class of {@link ComponentResource}.
+     *
+     * @see ComponentResource
+     * @see ResourceInternal
+     */
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class ComponentResourceInternal extends ResourceInternal {
+        /**
+         * Constructs a new internal accessor for the given {@link ComponentResource}.
+         *
+         * @param resource the {@link ComponentResource} instance to wrap
+         */
         protected ComponentResourceInternal(ComponentResource resource) {
             super(resource);
         }
 
+        /**
+         * Creates a new {@link ComponentResourceInternal} accessor for the specified resource.
+         *
+         * @param r the {@link ComponentResource} to wrap
+         * @return a new {@link ComponentResourceInternal} instance for the given resource
+         */
         public static ComponentResourceInternal from(ComponentResource r) {
             return new ComponentResourceInternal(r);
         }

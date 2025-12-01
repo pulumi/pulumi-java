@@ -13,6 +13,9 @@ public abstract class Archive extends AssetOrArchive {
         super(Constants.SpecialArchiveSig, propName, value);
     }
 
+    /**
+     * An InvalidArchive is internal class for uninitialized or invalid {@link Archive}
+     */
     @InternalUse
     public static final class InvalidArchive extends Archive {
         public InvalidArchive() {
