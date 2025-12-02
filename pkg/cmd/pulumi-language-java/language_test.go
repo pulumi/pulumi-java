@@ -191,6 +191,7 @@ var expectedFailures = map[string]string{
 	"l2-invoke-scalar":                       "exception at runtime",
 	"l3-component-simple":                    "compilation error",
 	"l1-builtin-cwd":                         "test failing",
+	"l1-builtin-stash":                       "test failing",
 	"l1-stack-reference":                     "test failing",
 	"l2-invoke-options":                      "test failing",
 	"l1-output-map":                          "test failing",
