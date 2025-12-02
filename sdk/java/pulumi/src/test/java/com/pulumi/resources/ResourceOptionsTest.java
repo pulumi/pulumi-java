@@ -20,7 +20,7 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, Output.of(List.<Resource>of()), false, null,
+                        null, null, Output.of(List.of()), false, null,
                         null, null, null, null, null, null, null, false, null, null, null
                 )),
                 arguments(new TestResourceOptions(
@@ -44,14 +44,14 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.of(List.<Resource>of()),
+                                Output.of(List.of()),
                                 true,
                                 List.of("b"),
                                 "test",
                                 null,
                                 new CustomTimeouts(null, null, null),
-                                List.<ResourceTransformation>of(),
-                                List.<Output<Alias>>of(),
+                                List.of(),
+                                List.of(),
                                 "urn",
                                 List.of(),
                                 true,
@@ -62,14 +62,14 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.of(List.<Resource>of()),
+                                Output.of(List.of()),
                                 true,
                                 List.of("a", "b"),
                                 "test",
                                 null,
                                 new CustomTimeouts(null, null, null),
-                                List.<ResourceTransformation>of(),
-                                List.<Output<Alias>>of(),
+                                List.of(),
+                                List.of(),
                                 "urn",
                                 List.of(),
                                 true,
