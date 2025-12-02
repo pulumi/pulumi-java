@@ -45,10 +45,11 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable List<String> replaceOnChanges,
             boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
-            @Nullable List<String> hideDiffs
+            @Nullable List<String> hideDiffs,
+            @Nullable List<Resource> replaceWith
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
-              resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs);
+              resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith);
         this.deleteBeforeReplace = deleteBeforeReplace;
         this.additionalSecretOutputs = additionalSecretOutputs;
         this.importId = importId;
@@ -148,7 +149,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
                 copyNullableList(this.replaceOnChanges),
                 this.retainOnDelete,
                 this.pluginDownloadURL,
-                this.hideDiffs
+                this.hideDiffs,
+                copyNullableList(this.replaceWith)
         );
     }
 

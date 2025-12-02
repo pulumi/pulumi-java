@@ -20,8 +20,8 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, Output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null, false, null, null
+                        null, null, Output.of(List.<Resource>of()), false, null,
+                        null, null, null, null, null, null, null, false, null, null, null
                 )),
                 arguments(new TestResourceOptions(
                                 null,
@@ -38,40 +38,43 @@ class ResourceOptionsTest {
                                 null,
                                 false,
                                 null,
+                                null,
                                 null
                         ),
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.of(List.of()),
+                                Output.of(List.<Resource>of()),
                                 true,
                                 List.of("b"),
                                 "test",
                                 null,
                                 new CustomTimeouts(null, null, null),
-                                List.of(),
-                                List.of(),
+                                List.<ResourceTransformation>of(),
+                                List.<Output<Alias>>of(),
                                 "urn",
                                 List.of(),
                                 true,
                                 "url",
+                                null,
                                 null
                         ),
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.of(List.of()),
+                                Output.of(List.<Resource>of()),
                                 true,
                                 List.of("a", "b"),
                                 "test",
                                 null,
                                 new CustomTimeouts(null, null, null),
-                                List.of(),
-                                List.of(),
+                                List.<ResourceTransformation>of(),
+                                List.<Output<Alias>>of(),
                                 "urn",
                                 List.of(),
                                 true,
                                 "url",
+                                null,
                                 null
                         )
                 ) // TODO: more test cases
@@ -120,11 +123,12 @@ class ResourceOptionsTest {
                 @Nullable List<String> replaceOnChanges,
                 boolean retainOnDelete,
                 @Nullable String pluginDownloadURL,
-                @Nullable List<String> hideDiffs
+                @Nullable List<String> hideDiffs,
+                @Nullable List<Resource> replaceWith
         ) {
             super(id, parent, dependsOn, protect, ignoreChanges,
                     version, provider, customTimeouts, resourceTransformations,
-                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs);
+                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith);
         }
     }
 

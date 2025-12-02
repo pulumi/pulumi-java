@@ -984,9 +984,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return gatherExplicitDependenciesAsync(options.getDependsOn())
                     .thenApply(ImmutableSet::copyOf)
                     .thenCompose(explicitDirectDependencies -> {
+                        var explicitDirectDependenciesWithReplace = ImmutableSet.<Resource>builder()
+                                .addAll(explicitDirectDependencies)
+                                .addAll(options.getReplaceWith())
+                                .build();
+
                         log.excessive(
                                 "Gathered explicit dependencies: t=%s, name=%s, custom=%s, remote=%s, explicitDirectDependencies=%S",
-                                type, name, custom, remote, explicitDirectDependencies
+                                type, name, custom, remote, explicitDirectDependenciesWithReplace
                         );
 
                         // Serialize out all our props to their final values. In doing so, we'll also collect all
@@ -1051,7 +1056,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                                                                 // The list of all dependencies (implicit or explicit).
                                                                                 var allTransitiveDependencyUrns =
-                                                                                        CompletableFutures.builder(getAllTransitivelyReferencedResourceUrnsAsync(explicitDirectDependencies));
+                                                                                        CompletableFutures.builder(getAllTransitivelyReferencedResourceUrnsAsync(explicitDirectDependenciesWithReplace));
 
                                                                                 var propertyToDirectDependencyUrnFutures = new HashMap<String, CompletableFuture<ImmutableSet<String>>>();
                                                                                 for (var entry : propertyToDirectDependencies.entrySet()) {
@@ -1072,19 +1077,31 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                 return allTransitiveDependencyUrns.build().thenCompose(
                                                                                         allDirectDependencyUrns -> propertyToDirectDependencyUrnsFuture.thenCompose(
                                                                                                 propertyToDirectDependencyUrns -> {
-
                                                                                                     // Wait for all aliases.
                                                                                                     var aliasesFuture = AliasSerializer.serializeAliases(options.getAliases());
+                                                                                                    var replaceWithUrnFutures = options.getReplaceWith().stream()
+                                                                                                            .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""))
+                                                                                                            .collect(Collectors.toList());
 
-                                                                                                    return aliasesFuture.thenApply(aliases -> new PrepareResult(
-                                                                                                            serializedProps,
-                                                                                                            pUrn.orElse(""),
-                                                                                                            pRef.orElse(""),
-                                                                                                            providerRefs,
-                                                                                                            allDirectDependencyUrns,
-                                                                                                            propertyToDirectDependencyUrns,
-                                                                                                            aliases
-                                                                                                    ));
+                                                                                                    return aliasesFuture.thenCompose(aliases -> {
+                                                                                                        return CompletableFutures.allOf(replaceWithUrnFutures)
+                                                                                                                .thenApply(urns -> {
+                                                                                                                    var replaceWithUrns = urns.stream()
+                                                                                                                            .filter(Strings::isNonEmptyOrNull)
+                                                                                                                            .collect(ImmutableList.toImmutableList());
+
+                                                                                                                    return new PrepareResult(
+                                                                                                                            serializedProps,
+                                                                                                                            pUrn.orElse(""),
+                                                                                                                            pRef.orElse(""),
+                                                                                                                            providerRefs,
+                                                                                                                            allDirectDependencyUrns,
+                                                                                                                            propertyToDirectDependencyUrns,
+                                                                                                                            aliases,
+                                                                                                                            replaceWithUrns
+                                                                                                                    );
+                                                                                                                });
+                                                                                                    });
                                                                                                 })
                                                                                 );
                                                                             });
@@ -1194,6 +1211,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public final ImmutableSet<String> allDirectDependencyUrns;
         public final ImmutableMap<String, ImmutableSet<String>> propertyToDirectDependencyUrns;
         public final ImmutableList<Alias> aliases;
+        public final ImmutableList<String> replaceWithUrns;
 
         public PrepareResult(
                 Struct serializedProps,
@@ -1202,7 +1220,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ImmutableMap<String, String> providerRefs,
                 ImmutableSet<String> allDirectDependencyUrns,
                 ImmutableMap<String, ImmutableSet<String>> propertyToDirectDependencyUrns,
-                ImmutableList<Alias> aliases
+                ImmutableList<Alias> aliases,
+                ImmutableList<String> replaceWithUrns
         ) {
             this.serializedProps = Objects.requireNonNull(serializedProps);
             this.parentUrn = Objects.requireNonNull(parentUrn);
@@ -1211,6 +1230,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.allDirectDependencyUrns = Objects.requireNonNull(allDirectDependencyUrns);
             this.propertyToDirectDependencyUrns = Objects.requireNonNull(propertyToDirectDependencyUrns);
             this.aliases = Objects.requireNonNull(aliases);
+            this.replaceWithUrns = Objects.requireNonNull(replaceWithUrns);
         }
     }
 
@@ -1625,6 +1645,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             request.addAllIgnoreChanges(options.getIgnoreChanges());
             request.addAllHideDiffs(options.getHideDiffs());
+            request.addAllReplaceWith(prepareResult.replaceWithUrns);
 
             // populateRequest
 
@@ -1634,6 +1655,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             request.putAllProviders(prepareResult.providerRefs);
             request.addAllAliases(prepareResult.aliases);
             request.addAllDependencies(prepareResult.allDirectDependencyUrns);
+            request.addAllReplaceWith(prepareResult.replaceWithUrns);
 
             request.putAllPropertyDependencies(prepareResult.propertyToDirectDependencyUrns.entrySet().stream()
                     .collect(toImmutableMap(
