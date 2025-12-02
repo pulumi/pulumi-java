@@ -31,6 +31,13 @@ func TestIntegrations(t *testing.T) {
 		// There should be no "unknown" plugin versions.
 		assert.NotContains(t, stdout, "unknown")
 		assert.NotContains(t, stderr, "unknown")
+		// Should have a string with the language runtime info, like
+		// This project is written in java: executable='/Users/julien/.local/share/mise/installs/java/temurin-11.0.28+6/bin/java' version='openjdk 11.0.28 2025-07-15' javac='11.0.28' maven='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' gradle='8.14.1' java='/Users/julien/.local/share/mise/installs/java/temurin-11.0.28+6/bin/java' //nolint:lll
+		assert.Contains(t, stdout, "executable=")
+		assert.Contains(t, stdout, "version=")
+		assert.Contains(t, stdout, "javac=")
+		assert.Contains(t, stdout, "maven=")
+		assert.Contains(t, stdout, "gradle=")
 	})
 
 	t.Run("stack-reference", func(t *testing.T) {
