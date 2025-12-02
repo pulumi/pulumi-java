@@ -41,10 +41,11 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
             @Nullable List<String> hideDiffs,
-            @Nullable List<ProviderResource> providers
+            @Nullable List<ProviderResource> providers,
+            @Nullable List<Resource> replaceWith
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
-                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs);
+                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
@@ -109,7 +110,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
                 this.retainOnDelete,
                 this.pluginDownloadURL,
                 copyNullableList(this.hideDiffs),
-                copyNullableList(this.providers) // TODO: should we also invoke copy() on the items?
+                copyNullableList(this.providers), // TODO: should we also invoke copy() on the items?
+                copyNullableList(this.replaceWith)
         );
     }
 

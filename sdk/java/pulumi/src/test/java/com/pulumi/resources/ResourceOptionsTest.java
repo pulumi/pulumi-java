@@ -21,7 +21,7 @@ class ResourceOptionsTest {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
                         null, null, Output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null, false, null, null
+                        null, null, null, null, null, null, null, false, null, null, null
                 )),
                 arguments(new TestResourceOptions(
                                 null,
@@ -37,6 +37,7 @@ class ResourceOptionsTest {
                                 null,
                                 null,
                                 false,
+                                null,
                                 null,
                                 null
                         ),
@@ -55,6 +56,7 @@ class ResourceOptionsTest {
                                 List.of(),
                                 true,
                                 "url",
+                                null,
                                 null
                         ),
                         new TestResourceOptions(
@@ -72,6 +74,7 @@ class ResourceOptionsTest {
                                 List.of(),
                                 true,
                                 "url",
+                                null,
                                 null
                         )
                 ) // TODO: more test cases
@@ -120,11 +123,12 @@ class ResourceOptionsTest {
                 @Nullable List<String> replaceOnChanges,
                 boolean retainOnDelete,
                 @Nullable String pluginDownloadURL,
-                @Nullable List<String> hideDiffs
+                @Nullable List<String> hideDiffs,
+                @Nullable List<Resource> replaceWith
         ) {
             super(id, parent, dependsOn, protect, ignoreChanges,
                     version, provider, customTimeouts, resourceTransformations,
-                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs);
+                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith);
         }
     }
 

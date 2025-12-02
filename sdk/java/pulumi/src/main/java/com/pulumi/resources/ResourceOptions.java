@@ -45,6 +45,8 @@ public abstract class ResourceOptions {
     protected String pluginDownloadURL;
     @Nullable
     protected List<String> hideDiffs;
+    @Nullable
+    protected List<Resource> replaceWith;
 
     protected ResourceOptions() { /* empty */ }
 
@@ -63,7 +65,8 @@ public abstract class ResourceOptions {
             @Nullable List<String> replaceOnChanges,
             boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
-            @Nullable List<String> hideDiffs
+            @Nullable List<String> hideDiffs,
+            @Nullable List<Resource> replaceWith
     ) {
         this.id = id;
         this.parent = parent;
@@ -80,6 +83,7 @@ public abstract class ResourceOptions {
         this.retainOnDelete = retainOnDelete;
         this.pluginDownloadURL = pluginDownloadURL;
         this.hideDiffs = hideDiffs;
+        this.replaceWith = replaceWith;
     }
 
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
@@ -309,6 +313,21 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
+        /**
+         * If set, this resource will also be replaced whenever any of the provided resources are replaced.
+         */
+        public B replaceWith(Resource... replaceWith) {
+            return this.replaceWith(List.of(replaceWith));
+        }
+
+        /**
+         * @see #replaceWith(Resource...)
+         */
+        public B replaceWith(@Nullable List<Resource> replaceWith) {
+            options.replaceWith = replaceWith;
+            //noinspection unchecked
+            return (B) this;
+        }
     }
 
     /**
@@ -416,6 +435,13 @@ public abstract class ResourceOptions {
         return this.hideDiffs == null ? List.of() : List.copyOf(this.hideDiffs);
     }
 
+    /**
+     * @see Builder#replaceWith(Resource...)
+     */
+    public List<Resource> getReplaceWith() {
+        return this.replaceWith == null ? List.of() : List.copyOf(this.replaceWith);
+    }
+
 
     @InternalUse
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
@@ -445,6 +471,7 @@ public abstract class ResourceOptions {
         options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
         options1.hideDiffs = mergeNullableList(options1.hideDiffs, options2.hideDiffs);
         options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);
+        options1.replaceWith = mergeNullableList(options1.replaceWith, options2.replaceWith);
 
         // Override the ID if one was specified for consistency with other language SDKs.
         options1.id = id == null ? options1.id : id;
