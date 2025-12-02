@@ -36,6 +36,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
+	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials/insecure"
@@ -713,13 +714,13 @@ func WaitForDebuggerReady(out io.Reader) error {
 	return scanner.Err()
 }
 
-func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest) (*pulumirpc.AboutResponse, error) {
-	getResponse := func(execString string, args ...string) (string, string, error) {
+func (host *javaLanguageHost) About(ctx context.Context, _ *pulumirpc.AboutRequest) (*pulumirpc.AboutResponse, error) {
+	getResponse := func(ctx context.Context, execString string, args ...string) (string, string, error) {
 		ex, err := executable.FindExecutable(execString)
 		if err != nil {
 			return "", "", fmt.Errorf("could not find executable '%s': %w", execString, err)
 		}
-		cmd := exec.Command(ex, args...)
+		cmd := exec.CommandContext(ctx, ex, args...)
 		var out []byte
 		if out, err = cmd.Output(); err != nil {
 			cmd := ex
@@ -731,24 +732,48 @@ func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest
 		return ex, strings.TrimSpace(string(out)), nil
 	}
 
-	java, version, err := getResponse("java", "--version")
-	if err != nil {
+	var javaExec, javaOutput, javacOutput, mavenOutput, gradleOutput string
+
+	g, ctx := errgroup.WithContext(ctx)
+
+	g.Go(func() error {
+		var err error
+		javaExec, javaOutput, err = getResponse(ctx, "java", "--version")
+		return err
+	})
+
+	g.Go(func() error {
+		_, javacOutput, _ = getResponse(ctx, "javac", "--version")
+		return nil // Don't fail the group if javac is not found
+	})
+
+	g.Go(func() error {
+		_, mavenOutput, _ = getResponse(ctx, "mvn", "--version")
+		return nil // Don't fail the group if maven is not found
+	})
+
+	g.Go(func() error {
+		_, gradleOutput, _ = getResponse(ctx, "gradle", "--version")
+		return nil // Don't fail the group if gradle is not found
+	})
+
+	if err := g.Wait(); err != nil {
 		return nil, err
 	}
 
 	metadata := make(map[string]string)
-	metadata["java"] = strings.Split(java, "\n")[0]
-	_, javac, err := getResponse("javac", "--version")
-	if err != nil {
-		javac = "unknown"
+	metadata["java"] = strings.Split(javaExec, "\n")[0]
+
+	if javacOutput != "" {
+		metadata["javac"] = strings.TrimPrefix(javacOutput, "javac ")
 	}
-	metadata["javac"] = strings.TrimPrefix(javac, "javac ")
-	if _, maven, err := getResponse("mvn", "--version"); err == nil {
-		// We add this only if there are no errors
-		metadata["maven"] = strings.Split(maven, "\n")[0]
+
+	if mavenOutput != "" {
+		metadata["maven"] = strings.Split(mavenOutput, "\n")[0]
 	}
-	if _, gradle, err := getResponse("gradle", "--version"); err == nil {
-		for _, line := range strings.Split(gradle, "\n") {
+
+	if gradleOutput != "" {
+		for _, line := range strings.Split(gradleOutput, "\n") {
 			if strings.HasPrefix(line, "Gradle") {
 				metadata["gradle"] = strings.TrimPrefix(line, "Gradle ")
 				break
@@ -756,9 +781,11 @@ func (host *javaLanguageHost) About(_ context.Context, _ *pulumirpc.AboutRequest
 		}
 	}
 
+	javaVersion := strings.Split(javaOutput, "\n")[0]
+
 	return &pulumirpc.AboutResponse{
-		Executable: java,
-		Version:    version,
+		Executable: javaExec,
+		Version:    javaVersion,
 		Metadata:   metadata,
 	}, nil
 }
