@@ -1645,7 +1645,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             request.addAllIgnoreChanges(options.getIgnoreChanges());
             request.addAllHideDiffs(options.getHideDiffs());
-            request.addAllReplaceWith(prepareResult.replaceWithUrns);
 
             // populateRequest
 

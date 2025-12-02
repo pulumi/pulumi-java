@@ -1052,7 +1052,8 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.RetainOnDelete != nil ||
 		resource.Options.ImportID != nil ||
 		resource.Options.Provider != nil ||
-		resource.Options.HideDiffs != nil
+		resource.Options.HideDiffs != nil ||
+		resource.Options.ReplaceWith != nil
 }
 
 // Checks whether any resource within the program nodes has a custom resource option
@@ -1124,6 +1125,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		if resource.Options.DependsOn != nil {
 			g.genIndent(w)
 			g.Fgenf(w, ".dependsOn(%v)", resource.Options.DependsOn)
+			g.genNewline(w)
+		}
+		if resource.Options.ReplaceWith != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".replaceWith(%v)", resource.Options.ReplaceWith)
 			g.genNewline(w)
 		}
 		if resource.Options.IgnoreChanges != nil {
