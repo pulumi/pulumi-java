@@ -1,4 +1,5 @@
 [tools]
+changie = "latest"
 golangci-lint = "2.5.0"
 gradle = "8.14.1"
 java = "temurin-11.0.28+6"
