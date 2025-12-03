@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 1.18.0
+
+### Improvements
+
+* Add `ReplaceWith` as a resource option
+
 ## 1.17.1
 
 * Dependency bumps
