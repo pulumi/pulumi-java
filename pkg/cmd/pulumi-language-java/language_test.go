@@ -25,8 +25,6 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/pulumi/pulumi-java/pkg/internal/executors"
-	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
 	"github.com/pulumi/pulumi/sdk/v3"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/diag"
 	pbempty "google.golang.org/protobuf/types/known/emptypb"
@@ -59,10 +57,6 @@ func TestLanguage(t *testing.T) {
 	handle, err := rpcutil.ServeWithOptions(rpcutil.ServeOptions{
 		Init: func(srv *grpc.Server) error {
 			host := newLanguageHost(
-				executors.JavaExecutorOptions{
-					WD:          fsys.DirFS(rootDir),
-					UseExecutor: "mvn",
-				},
 				engineAddress,
 				"", /*tracing*/
 			)
@@ -124,6 +118,7 @@ func TestLanguage(t *testing.T) {
 				Replacement: "<url>REPOSITORY</url>",
 			},
 		},
+		LanguageInfo: "{\"use-exectutor\":\"mvn\"}",
 	})
 	require.NoError(t, err)
 
