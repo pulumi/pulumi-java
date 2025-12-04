@@ -53,34 +53,17 @@ import (
 // LanguageRuntimeServer RPC endpoint.
 func main() {
 	var tracing string
-	var root string
-	var binary string
 	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
-	flag.StringVar(&root, "root", "", "Project root path to use")
-	flag.StringVar(&binary, "binary", "", "JAR or a JBang entry-point file to execute")
 
-	// You can use the below flag to request that the language host load a specific executor instead of probing the
-	// PATH.  This can be used during testing to override the default location.
-	var useExecutor string
-	flag.StringVar(&useExecutor, "use-executor", "",
-		"Use the given program as the executor instead of looking for one on PATH")
+	flag.String("root", "", "[obsolete] Project root path to use")
+	flag.String("binary", "", "[obsolete] JAR or a JBang entry-point file to execute")
+	flag.String("use-executor", "", "[obsolete] Use the given program as the executor instead of looking for one on PATH")
 
 	flag.Parse()
 	var cancelChannel chan bool
 	args := flag.Args()
 	logging.InitLogging(false, 0, false)
 	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
-
-	wd, err := os.Getwd()
-	if err != nil {
-		cmdutil.Exit(fmt.Errorf("could not get the working directory: %w", err))
-	}
-
-	javaExecOptions := executors.JavaExecutorOptions{
-		Binary:      binary,
-		UseExecutor: useExecutor,
-		WD:          fsys.DirFS(wd),
-	}
 
 	// Optionally pluck out the engine so we can do logging, etc.
 	var engineAddress string
@@ -97,7 +80,7 @@ func main() {
 	handle, err := rpcutil.ServeWithOptions(rpcutil.ServeOptions{
 		Cancel: cancelChannel,
 		Init: func(srv *grpc.Server) error {
-			host := newLanguageHost(javaExecOptions, engineAddress, tracing)
+			host := newLanguageHost(engineAddress, tracing)
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
 			return nil
 		},
@@ -142,27 +125,53 @@ func setupHealthChecks(engineAddress string) (chan bool, error) {
 type javaLanguageHost struct {
 	pulumirpc.UnimplementedLanguageRuntimeServer
 
-	execOptions   executors.JavaExecutorOptions
 	engineAddress string
 	tracing       string
 }
 
-func newLanguageHost(execOptions executors.JavaExecutorOptions,
+func newLanguageHost(
 	engineAddress, tracing string,
 ) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
-		execOptions:   execOptions,
 		engineAddress: engineAddress,
 		tracing:       tracing,
 	}
 }
 
-func (host *javaLanguageHost) Executor(attachDebugger bool) (*executors.JavaExecutor, error) {
-	executor, err := executors.NewJavaExecutor(host.execOptions, attachDebugger)
+func (host *javaLanguageHost) Executor(
+	execOptions executors.JavaExecutorOptions, attachDebugger bool,
+) (*executors.JavaExecutor, error) {
+	executor, err := executors.NewJavaExecutor(execOptions, attachDebugger)
 	if err != nil {
 		return nil, err
 	}
 	return executor, nil
+}
+
+func (host *javaLanguageHost) parseExecOptions(info *pulumirpc.ProgramInfo) (executors.JavaExecutorOptions, error) {
+	javaOptions := executors.JavaExecutorOptions{
+		WD: fsys.DirFS(info.ProgramDirectory),
+	}
+
+	options := info.Options.AsMap()
+
+	if binary, ok := options["binary"]; ok {
+		if binary, ok := binary.(string); ok {
+			javaOptions.Binary = binary
+		} else {
+			return javaOptions, errors.New("binary option must be a string")
+		}
+	}
+
+	if executor, ok := options["use-executor"]; ok {
+		if executor, ok := executor.(string); ok {
+			javaOptions.UseExecutor = executor
+		} else {
+			return javaOptions, errors.New("use-executor option must be a string")
+		}
+	}
+
+	return javaOptions, nil
 }
 
 // GetRequiredPackages computes the complete set of anticipated packages required by a program.
@@ -172,7 +181,12 @@ func (host *javaLanguageHost) GetRequiredPackages(
 ) (*pulumirpc.GetRequiredPackagesResponse, error) {
 	logging.V(5).Infof("GetRequiredPackages: programDirectory=%v", req.Info.ProgramDirectory)
 
-	pulumiPackages, err := host.determinePulumiPackages(ctx, req.Info.ProgramDirectory)
+	execOptions, err := host.parseExecOptions(req.Info)
+	if err != nil {
+		return nil, fmt.Errorf("parsing options: %w", err)
+	}
+
+	pulumiPackages, err := host.determinePulumiPackages(ctx, execOptions, req.Info.ProgramDirectory)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host could not determine Pulumi packages")
 	}
@@ -215,11 +229,12 @@ func (host *javaLanguageHost) GetRequiredPlugins(
 
 func (host *javaLanguageHost) determinePulumiPackages(
 	ctx context.Context,
+	execOptions executors.JavaExecutorOptions,
 	programDirectory string,
 ) ([]plugin.PulumiPluginJSON, error) {
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
-	exec, err := host.Executor(false)
+	exec, err := host.Executor(execOptions, false)
 	if err != nil {
 		return nil, err
 	}
@@ -324,6 +339,12 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	}
 	defer contract.IgnoreClose(closer)
 
+	execOptions, err := host.parseExecOptions(req.Info)
+	if err != nil {
+		return nil, fmt.Errorf("parsing options: %w", err)
+	}
+	execOptions.ProgramArgs = req.Args
+
 	config, err := host.constructConfig(req)
 	if err != nil {
 		err = errors.Wrap(err, "failed to serialize configuration")
@@ -335,7 +356,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 		return nil, err
 	}
 
-	executor, err := host.Executor(req.GetAttachDebugger())
+	executor, err := host.Executor(execOptions, req.GetAttachDebugger())
 	if err != nil {
 		return nil, err
 	}
@@ -421,15 +442,13 @@ func (host *javaLanguageHost) RunPlugin(
 	// Best effort close, but we try an explicit close and error check at the end as well
 	defer closer.Close()
 
-	// Create new executor options with the plugin directory and runtime args
-	pluginExecOptions := executors.JavaExecutorOptions{
-		Binary:      host.execOptions.Binary,
-		UseExecutor: host.execOptions.UseExecutor,
-		WD:          fsys.DirFS(req.Info.ProgramDirectory),
-		ProgramArgs: req.Args,
+	execOptions, err := host.parseExecOptions(req.Info)
+	if err != nil {
+		return fmt.Errorf("parsing options: %w", err)
 	}
+	execOptions.ProgramArgs = req.Args
 
-	executor, err := executors.NewJavaExecutor(pluginExecOptions, req.GetAttachDebugger())
+	executor, err := executors.NewJavaExecutor(execOptions, req.GetAttachDebugger())
 	if err != nil {
 		return err
 	}
@@ -645,7 +664,12 @@ func (host *javaLanguageHost) GetPluginInfo(_ context.Context, _ *pbempty.Empty)
 func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer,
 ) error {
-	executor, err := host.Executor(false)
+	execOptions, err := host.parseExecOptions(req.Info)
+	if err != nil {
+		return fmt.Errorf("parsing options: %w", err)
+	}
+
+	executor, err := host.Executor(execOptions, false)
 	if err != nil {
 		return err
 	}
@@ -683,7 +707,12 @@ func (host *javaLanguageHost) GetProgramDependencies(
 	ctx context.Context,
 	req *pulumirpc.GetProgramDependenciesRequest,
 ) (*pulumirpc.GetProgramDependenciesResponse, error) {
-	executor, err := host.Executor(false)
+	execOptions, err := host.parseExecOptions(req.Info)
+	if err != nil {
+		return nil, fmt.Errorf("parsing options: %w", err)
+	}
+
+	executor, err := host.Executor(execOptions, false)
 	if err != nil {
 		return nil, err
 	}
