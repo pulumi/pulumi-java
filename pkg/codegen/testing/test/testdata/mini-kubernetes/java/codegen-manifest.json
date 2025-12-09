@@ -1,5 +1,6 @@
 {
   "emittedFiles": [
+    ".gitattributes",
     "README.md",
     "build.gradle",
     "settings.gradle",
