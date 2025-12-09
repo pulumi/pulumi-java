@@ -2288,6 +2288,9 @@ func GeneratePackage(
 
 	// Generate each module.
 	files := fs{}
+
+	files.add(".gitattributes", codegen.GenGitAttributesFile())
+
 	for p, f := range extraFiles {
 		files.add(p, f)
 	}
