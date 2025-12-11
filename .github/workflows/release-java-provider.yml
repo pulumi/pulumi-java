@@ -46,18 +46,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Check if release exists
-        # This lets us update CHANGELOG.md and with updated release notes without retriggering a release
-        # that's already happened.
-        id: check-release
-        run: |
-          if [ -z "$(git tag -l ${{ env.GORELEASER_CURRENT_TAG }})" ]; then
-            echo "exists=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "exists=true" >> "$GITHUB_OUTPUT"
-          fi
       - name: Run GoReleaser
-        if: steps.check-release.outputs.exists == 'false'
         uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
