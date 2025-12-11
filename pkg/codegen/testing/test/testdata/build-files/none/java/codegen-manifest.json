@@ -1,5 +1,6 @@
 {
   "emittedFiles": [
+    ".gitattributes",
     "README.md",
     "src/main/java/com/pulumi/example/Provider.java",
     "src/main/java/com/pulumi/example/ProviderArgs.java",
