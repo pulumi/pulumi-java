@@ -1053,7 +1053,8 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.ImportID != nil ||
 		resource.Options.Provider != nil ||
 		resource.Options.HideDiffs != nil ||
-		resource.Options.ReplaceWith != nil
+		resource.Options.ReplaceWith != nil ||
+		resource.Options.ReplacementTrigger != nil
 }
 
 // Checks whether any resource within the program nodes has a custom resource option
@@ -1130,6 +1131,16 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		if resource.Options.ReplaceWith != nil {
 			g.genIndent(w)
 			g.Fgenf(w, ".replaceWith(%v)", resource.Options.ReplaceWith)
+			g.genNewline(w)
+		}
+		if resource.Options.ReplacementTrigger != nil {
+			g.genIndent(w)
+			exprType := resource.Options.ReplacementTrigger.Type()
+			if _, ok := exprType.(*model.OutputType); ok {
+				g.Fgenf(w, ".replacementTrigger(%v)", resource.Options.ReplacementTrigger)
+			} else {
+				g.Fgenf(w, ".replacementTrigger(Output.of(%v))", resource.Options.ReplacementTrigger)
+			}
 			g.genNewline(w)
 		}
 		if resource.Options.IgnoreChanges != nil {

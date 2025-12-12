@@ -124,11 +124,12 @@ class ResourceOptionsTest {
                 boolean retainOnDelete,
                 @Nullable String pluginDownloadURL,
                 @Nullable List<String> hideDiffs,
-                @Nullable List<Resource> replaceWith
+                @Nullable List<Resource> replaceWith,
+                @Nullable Output<?> replacementTrigger
         ) {
             super(id, parent, dependsOn, protect, ignoreChanges,
                     version, provider, customTimeouts, resourceTransformations,
-                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith);
+                    aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith, replacementTrigger);
         }
     }
 
