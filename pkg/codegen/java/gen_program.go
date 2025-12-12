@@ -1135,7 +1135,7 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		}
 		if resource.Options.ReplacementTrigger != nil {
 			g.genIndent(w)
-			exprType := resource.Options.ReplacementTrigger.Type()
+			exprType := model.ResolveOutputs(resource.Options.ReplacementTrigger.Type())
 			if _, ok := exprType.(*model.OutputType); ok {
 				g.Fgenf(w, ".replacementTrigger(%v)", resource.Options.ReplacementTrigger)
 			} else {

@@ -21,9 +21,9 @@ class ResourceOptionsTest {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
                         null, null, Output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null, false, null, null, null
+                        null, null, null, null, null, null, null, false, null, null, null, null
                 )),
-                arguments(new TestResourceOptions(
+                arguments(                        new TestResourceOptions(
                                 null,
                                 null,
                                 null,
@@ -37,6 +37,7 @@ class ResourceOptionsTest {
                                 null,
                                 null,
                                 false,
+                                null,
                                 null,
                                 null,
                                 null
@@ -57,6 +58,7 @@ class ResourceOptionsTest {
                                 true,
                                 "url",
                                 null,
+                                null,
                                 null
                         ),
                         new TestResourceOptions(
@@ -74,6 +76,7 @@ class ResourceOptionsTest {
                                 List.of(),
                                 true,
                                 "url",
+                                null,
                                 null,
                                 null
                         )
