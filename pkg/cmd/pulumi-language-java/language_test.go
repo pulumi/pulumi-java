@@ -200,7 +200,6 @@ var expectedFailures = map[string]string{
 	"l2-explicit-provider":                   "test failing",
 	"l2-resource-option-protect":             "test failing",
 	"l2-engine-update-options":               "test failing",
-	"l2-target-up-with-new-dependency":       "test failing",
 	"l1-output-array":                        "test failing",
 	"l1-main":                                "test failing",
 	"l1-builtin-project-root-main":           "test failing",
@@ -230,7 +229,6 @@ var expectedFailures = map[string]string{
 	"l2-large-string":                        "test failing",
 	"l2-ref-ref":                             "test failing",
 	"l2-invoke-dependencies":                 "test failing",
-	"l2-destroy":                             "test failing",
 	"l2-invoke-scalars":                      "not implemented",
 }
 
