@@ -447,7 +447,7 @@ func GenerateProject(
 		coreSDKVersion,
 		mavenDependenciesXML.String(),
 	))
-	filesWithPackages[filepath.Join(directory, "pom.xml")] = mavenPomXML.Bytes()
+	filesWithPackages[filepath.Join(rootDirectory, "pom.xml")] = mavenPomXML.Bytes()
 
 	for filePath, data := range filesWithPackages {
 		dir := filepath.Dir(filePath)
