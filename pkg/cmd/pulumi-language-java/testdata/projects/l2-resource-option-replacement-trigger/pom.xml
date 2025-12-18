@@ -32,10 +32,6 @@
 				</dependency>
 				<dependency>
 					<groupId>com.pulumi</groupId>
-					<artifactId>output</artifactId>
-					<version>23.0.0</version>
-				</dependency><dependency>
-					<groupId>com.pulumi</groupId>
 					<artifactId>simple</artifactId>
 					<version>2.0.0</version>
 				</dependency>
