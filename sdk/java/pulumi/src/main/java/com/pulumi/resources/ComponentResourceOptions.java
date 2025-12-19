@@ -42,10 +42,11 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable String pluginDownloadURL,
             @Nullable List<String> hideDiffs,
             @Nullable List<ProviderResource> providers,
-            @Nullable List<Resource> replaceWith
+            @Nullable List<Resource> replaceWith,
+            @Nullable Output<?> replacementTrigger
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
-                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith);
+                resourceTransformations, aliases, urn, replaceOnChanges, retainOnDelete, pluginDownloadURL, hideDiffs, replaceWith, replacementTrigger);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
@@ -111,7 +112,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
                 this.pluginDownloadURL,
                 copyNullableList(this.hideDiffs),
                 copyNullableList(this.providers), // TODO: should we also invoke copy() on the items?
-                copyNullableList(this.replaceWith)
+                copyNullableList(this.replaceWith),
+                this.replacementTrigger
         );
     }
 

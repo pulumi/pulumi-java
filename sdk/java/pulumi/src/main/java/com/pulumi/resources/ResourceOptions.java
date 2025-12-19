@@ -47,6 +47,8 @@ public abstract class ResourceOptions {
     protected List<String> hideDiffs;
     @Nullable
     protected List<Resource> replaceWith;
+    @Nullable
+    protected Output<?> replacementTrigger;
 
     protected ResourceOptions() { /* empty */ }
 
@@ -66,7 +68,8 @@ public abstract class ResourceOptions {
             boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
             @Nullable List<String> hideDiffs,
-            @Nullable List<Resource> replaceWith
+            @Nullable List<Resource> replaceWith,
+            @Nullable Output<?> replacementTrigger
     ) {
         this.id = id;
         this.parent = parent;
@@ -84,6 +87,7 @@ public abstract class ResourceOptions {
         this.pluginDownloadURL = pluginDownloadURL;
         this.hideDiffs = hideDiffs;
         this.replaceWith = replaceWith;
+        this.replacementTrigger = replacementTrigger;
     }
 
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
@@ -328,6 +332,17 @@ public abstract class ResourceOptions {
             //noinspection unchecked
             return (B) this;
         }
+
+        /**
+         * If set, the engine will diff this with the last recorded value, and trigger a replace if they are not equal.
+         * Note that if either value is null, no comparison is done and no replacement is triggered. This means that the
+         * replacement trigger only applies to two subsequent deployments with defined triggers.
+         */
+        public B replacementTrigger(@Nullable Output<?> replacementTrigger) {
+            options.replacementTrigger = replacementTrigger;
+            //noinspection unchecked
+            return (B) this;
+        }
     }
 
     /**
@@ -442,6 +457,13 @@ public abstract class ResourceOptions {
         return this.replaceWith == null ? List.of() : List.copyOf(this.replaceWith);
     }
 
+    /**
+     * @see Builder#replacementTrigger(Output)
+     */
+    public Optional<Output<?>> getReplacementTrigger() {
+        return Optional.ofNullable(this.replacementTrigger);
+    }
+
 
     @InternalUse
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
@@ -472,6 +494,7 @@ public abstract class ResourceOptions {
         options1.hideDiffs = mergeNullableList(options1.hideDiffs, options2.hideDiffs);
         options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);
         options1.replaceWith = mergeNullableList(options1.replaceWith, options2.replaceWith);
+        options1.replacementTrigger = options2.replacementTrigger == null ? options1.replacementTrigger : options2.replacementTrigger;
 
         // Override the ID if one was specified for consistency with other language SDKs.
         options1.id = id == null ? options1.id : id;

@@ -1083,23 +1083,54 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                             .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""))
                                                                                                             .collect(Collectors.toList());
 
+                                                                                                    CompletableFuture<Value> replacementTriggerValueFuture;
+                                                                                                    CompletableFuture<ImmutableSet<String>> replacementTriggerDepsFuture;
+                                                                                                    if (options.getReplacementTrigger().isPresent()) {
+                                                                                                        var serializer = new com.pulumi.serialization.internal.Serializer(log);
+                                                                                                        var replacementTriggerOutput = options.getReplacementTrigger().get();
+                                                                                                        replacementTriggerValueFuture = serializer.serializeAsync(
+                                                                                                                String.format("%s.replacementTrigger", label),
+                                                                                                                replacementTriggerOutput,
+                                                                                                                supportsResourceReferences
+                                                                                                        ).thenApply(serialized -> {
+                                                                                                            return com.pulumi.serialization.internal.Serializer.createValue(serialized);
+                                                                                                        });
+                                                                                                        
+                                                                                                        replacementTriggerDepsFuture = replacementTriggerValueFuture.thenCompose(value -> {
+                                                                                                            var replacementTriggerDeps = serializer.dependentResources;
+                                                                                                            if (replacementTriggerDeps.isEmpty()) {
+                                                                                                                return CompletableFuture.completedFuture(ImmutableSet.<String>of());
+                                                                                                            }
+                                                                                                            return getAllTransitivelyReferencedResourceUrnsAsync(ImmutableSet.copyOf(replacementTriggerDeps));
+                                                                                                        });
+                                                                                                    } else {
+                                                                                                        replacementTriggerValueFuture = CompletableFuture.completedFuture(null);
+                                                                                                        replacementTriggerDepsFuture = CompletableFuture.completedFuture(ImmutableSet.of());
+                                                                                                    }
+
                                                                                                     return aliasesFuture.thenCompose(aliases -> {
                                                                                                         return CompletableFutures.allOf(replaceWithUrnFutures)
-                                                                                                                .thenApply(urns -> {
+                                                                                                                .thenCompose(urns -> {
                                                                                                                     var replaceWithUrns = urns.stream()
                                                                                                                             .filter(Strings::isNonEmptyOrNull)
                                                                                                                             .collect(ImmutableList.toImmutableList());
 
-                                                                                                                    return new PrepareResult(
-                                                                                                                            serializedProps,
-                                                                                                                            pUrn.orElse(""),
-                                                                                                                            pRef.orElse(""),
-                                                                                                                            providerRefs,
-                                                                                                                            allDirectDependencyUrns,
-                                                                                                                            propertyToDirectDependencyUrns,
-                                                                                                                            aliases,
-                                                                                                                            replaceWithUrns
-                                                                                                                    );
+                                                                                                                    return replacementTriggerValueFuture.thenCompose(replacementTriggerValue -> {
+                                                                                                                        return replacementTriggerDepsFuture.thenApply(replacementTriggerDeps -> {
+                                                                                                                            var mergedDeps = Sets.union(allDirectDependencyUrns, replacementTriggerDeps).immutableCopy();
+                                                                                                                            return new PrepareResult(
+                                                                                                                                    serializedProps,
+                                                                                                                                    pUrn.orElse(""),
+                                                                                                                                    pRef.orElse(""),
+                                                                                                                                    providerRefs,
+                                                                                                                                    mergedDeps,
+                                                                                                                                    propertyToDirectDependencyUrns,
+                                                                                                                                    aliases,
+                                                                                                                                    replaceWithUrns,
+                                                                                                                                    replacementTriggerValue
+                                                                                                                            );
+                                                                                                                        });
+                                                                                                                    });
                                                                                                                 });
                                                                                                     });
                                                                                                 })
@@ -1212,6 +1243,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public final ImmutableMap<String, ImmutableSet<String>> propertyToDirectDependencyUrns;
         public final ImmutableList<Alias> aliases;
         public final ImmutableList<String> replaceWithUrns;
+        @Nullable
+        public final Value replacementTrigger;
 
         public PrepareResult(
                 Struct serializedProps,
@@ -1221,7 +1254,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ImmutableSet<String> allDirectDependencyUrns,
                 ImmutableMap<String, ImmutableSet<String>> propertyToDirectDependencyUrns,
                 ImmutableList<Alias> aliases,
-                ImmutableList<String> replaceWithUrns
+                ImmutableList<String> replaceWithUrns,
+                @Nullable Value replacementTrigger
         ) {
             this.serializedProps = Objects.requireNonNull(serializedProps);
             this.parentUrn = Objects.requireNonNull(parentUrn);
@@ -1231,6 +1265,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.propertyToDirectDependencyUrns = Objects.requireNonNull(propertyToDirectDependencyUrns);
             this.aliases = Objects.requireNonNull(aliases);
             this.replaceWithUrns = Objects.requireNonNull(replaceWithUrns);
+            this.replacementTrigger = replacementTrigger;
         }
     }
 
@@ -1655,6 +1690,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             request.addAllAliases(prepareResult.aliases);
             request.addAllDependencies(prepareResult.allDirectDependencyUrns);
             request.addAllReplaceWith(prepareResult.replaceWithUrns);
+            if (prepareResult.replacementTrigger != null) {
+                request.setReplacementTrigger(prepareResult.replacementTrigger);
+            }
 
             request.putAllPropertyDependencies(prepareResult.propertyToDirectDependencyUrns.entrySet().stream()
                     .collect(toImmutableMap(
