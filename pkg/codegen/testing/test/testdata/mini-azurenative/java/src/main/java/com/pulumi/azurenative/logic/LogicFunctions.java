@@ -37,7 +37,8 @@ public final class LogicFunctions {
      * 
      */
     public static Output<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * Collection of key vault keys.
@@ -45,7 +46,8 @@ public final class LogicFunctions {
      * 
      */
     public static Output<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * Collection of key vault keys.
@@ -53,6 +55,7 @@ public final class LogicFunctions {
      * 
      */
     public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeysPlain(ListIntegrationAccountKeyVaultKeysPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

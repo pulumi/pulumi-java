@@ -28,12 +28,15 @@ public final class ExampleFunctions {
         return argFunctionPlain(args, InvokeOptions.Empty);
     }
     public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<ArgFunctionResult> argFunctionPlain(ArgFunctionPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

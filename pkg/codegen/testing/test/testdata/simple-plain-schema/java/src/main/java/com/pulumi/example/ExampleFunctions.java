@@ -22,12 +22,15 @@ public final class ExampleFunctions {
         return doFooPlain(args, InvokeOptions.Empty);
     }
     public static Output<Void> doFoo(DoFooArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<Void> doFoo(DoFooArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<Void> doFooPlain(DoFooPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

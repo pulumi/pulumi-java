@@ -48,20 +48,23 @@ public final class PkgFunctions {
      * 
      */
     public static Output<DoEchoResult> doEcho(DoEchoArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        var result = Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        return result;
     }
     /**
      * A test invoke that echoes its input.
      * 
      */
     public static Output<DoEchoResult> doEcho(DoEchoArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        var result = Deployment.getInstance().invoke("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        return result;
     }
     /**
      * A test invoke that echoes its input.
      * 
      */
     public static CompletableFuture<DoEchoResult> doEchoPlain(DoEchoPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        var result = Deployment.getInstance().invokeAsync("pkg:index:doEcho", TypeShape.of(DoEchoResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        return result;
     }
 }

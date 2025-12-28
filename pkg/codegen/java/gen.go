@@ -1341,8 +1341,24 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		var returnType string
 		if fun.Outputs != nil {
 			returnType = ctx.imports.Ref(resultFQN)
+		} else if fun.ReturnType != nil {
+			shape := mod.typeString(
+				ctx, fun.ReturnType,
+				outputsQualifier,
+				true,  // is input
+				false, // requires initializers
+				false, // outer optional
+				false, // inputless overload
+			)
+			returnType = shape.ToCode(ctx.imports)
 		} else {
 			returnType = ctx.imports.Ref(names.Void)
+		}
+
+		scalarReturn := false
+		if fun.ReturnType != nil {
+			_, isObjectType := fun.ReturnType.(*schema.ObjectType)
+			scalarReturn = !isObjectType
 		}
 
 		// default method name returns Output<ReturnType>
@@ -1393,24 +1409,34 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			plainMethodName, invokeOptions)
 		fprintf(w, "    }\n")
 
-		// Output version: add full invoke with InvokeOptions
-		printCommentFunction(ctx, fun, indent)
-		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
-		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
-			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+		typeShape := fmt.Sprintf("%s.of(%s.class)", ctx.ref(names.TypeShape), returnType)
+		if scalarReturn {
+			typeShape = fmt.Sprintf("%s.map(%s.class, %s.class)", ctx.ref(names.TypeShape), ctx.ref(names.String), returnType)
+		}
 
 		pkg, err := mod.pkg.Definition()
 		if err != nil {
 			return err
 		}
 
+		// Output version: add full invoke with InvokeOptions
+		printCommentFunction(ctx, fun, indent)
+		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
+			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
+		fprintf(w,
+			"        var result = %s.getInstance().invoke(\"%s\", %s, args, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, typeShape, mod.utilitiesRef(ctx))
 		if pkg.Parameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
 		}
-
 		fprintf(w, ");\n")
+
+		if scalarReturn {
+			fprintf(w, "        return result.applyValue(m -> (%s)(m.values().toArray()[0]));\n", returnType)
+		} else {
+			fprintf(w, "        return result;\n")
+		}
+
 		fprintf(w, "    }\n")
 
 		// Output version: add full invoke with InvokeOutputOptions
@@ -1419,14 +1445,19 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, argsType, invokeOutputOptions)
 		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
-			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
-
+			"        var result = %s.getInstance().invoke(\"%s\", %s, args, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, typeShape, mod.utilitiesRef(ctx))
 		if pkg.Parameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
 		}
-
 		fprintf(w, ");\n")
+
+		if scalarReturn {
+			fprintf(w, "        return result.applyValue(m -> (%s)(m.values().toArray()[0]));\n", returnType)
+		} else {
+			fprintf(w, "        return result;\n")
+		}
+
 		fprintf(w, "    }\n")
 
 		// CompletableFuture version: add full invoke
@@ -1435,14 +1466,19 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
-			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
-
+			"        var result = %s.getInstance().invokeAsync(\"%s\", %s, args, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, typeShape, mod.utilitiesRef(ctx))
 		if pkg.Parameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
 		}
-
 		fprintf(w, ");\n")
+
+		if scalarReturn {
+			fprintf(w, "        return result.thenApply(m -> (%s)(m.values().toArray()[0]));\n", returnType)
+		} else {
+			fprintf(w, "        return result;\n")
+		}
+
 		fprintf(w, "    }\n")
 
 		// Emit the args and result types, if any.

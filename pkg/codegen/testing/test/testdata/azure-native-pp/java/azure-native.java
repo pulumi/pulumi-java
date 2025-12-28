@@ -35,8 +35,8 @@ public class App {
 
         var endpoint = new Endpoint("endpoint", EndpointArgs.builder()
             .deliveryPolicy(EndpointPropertiesUpdateParametersDeliveryPolicyArgs.builder()
-                .rules(DeliveryRuleArgs.builder()
-                    .actions(                    
+                .rules(Map.ofEntries(
+                    Map.entry("actions",                     
                         DeliveryRuleCacheExpirationActionArgs.builder()
                             .name("CacheExpiration")
                             .parameters(CacheExpirationActionParametersArgs.builder()
@@ -63,8 +63,8 @@ public class App {
                                 .odataType("#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters")
                                 .value("gzip")
                                 .build())
-                            .build())
-                    .conditions(DeliveryRuleRemoteAddressConditionArgs.builder()
+                            .build()),
+                    Map.entry("conditions", DeliveryRuleRemoteAddressConditionArgs.builder()
                         .name("RemoteAddress")
                         .parameters(RemoteAddressMatchConditionParametersArgs.builder()
                             .matchValues(                            
@@ -74,10 +74,10 @@ public class App {
                             .odataType("#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters")
                             .operator("IPMatch")
                             .build())
-                        .build())
-                    .name("rule1")
-                    .order(1)
-                    .build())
+                        .build()),
+                    Map.entry("name", "rule1"),
+                    Map.entry("order", 1)
+                ))
                 .build())
             .endpointName("endpoint1")
             .isCompressionEnabled(true)

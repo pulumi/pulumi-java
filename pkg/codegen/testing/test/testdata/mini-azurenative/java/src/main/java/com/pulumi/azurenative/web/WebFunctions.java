@@ -37,7 +37,8 @@ public final class WebFunctions {
      * 
      */
     public static Output<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * A web app, a mobile app backend, or an API app.
@@ -45,7 +46,8 @@ public final class WebFunctions {
      * 
      */
     public static Output<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     /**
      * A web app, a mobile app backend, or an API app.
@@ -53,6 +55,7 @@ public final class WebFunctions {
      * 
      */
     public static CompletableFuture<GetWebAppSlotResult> getWebAppSlotPlain(GetWebAppSlotPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }

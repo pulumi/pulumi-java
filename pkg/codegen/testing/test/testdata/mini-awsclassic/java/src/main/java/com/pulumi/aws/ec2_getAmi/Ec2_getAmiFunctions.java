@@ -22,12 +22,15 @@ public final class Ec2_getAmiFunctions {
         return getAmiPlain(args, InvokeOptions.Empty);
     }
     public static Output<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static Output<GetAmiResult> getAmi(GetAmiArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+        return result;
     }
     public static CompletableFuture<GetAmiResult> getAmiPlain(GetAmiPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+        var result = Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+        return result;
     }
 }
