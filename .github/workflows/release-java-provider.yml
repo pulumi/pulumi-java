@@ -29,23 +29,11 @@ jobs:
         run: |
           echo GORELEASER_CURRENT_TAG=${{ steps.latest.outputs.output }} >> $GITHUB_ENV
           echo RELEASE_NOTES_PATH=.changes/${{ steps.latest.outputs.output }}.md >> $GITHUB_ENV
-      - name: Set up Go 1.19.x
-        uses: actions/setup-go@v5
+      - name: Set up Go
+        uses: actions/setup-go@v6
         with:
           go-version: stable
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
-          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
-      - name: Set up Go cache
-        uses: actions/cache@v4
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
+          cache-dependency-path: "**/go.sum"
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
         with:

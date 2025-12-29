@@ -66,22 +66,10 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: stable
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
-          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
-      - name: Set up Go cache
-        uses: actions/cache@v4
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
+          cache-dependency-path: "**/go.sum"
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
@@ -152,6 +140,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
+          cache-dependency-path: "**/go.sum"
       - name: Download go-binaries
         uses: actions/download-artifact@v5
         with:
@@ -178,19 +167,6 @@ jobs:
         env:
           # Override to match gen_test.go
           PULUMI_JAVA_SDK_VERSION: 0.0.1
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
-          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
-      - name: Set up Go cache
-        uses: actions/cache@v4
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-test-go-${{ hashFiles('**/go.sum') }}
       - name: Download Java SDK
         uses: actions/download-artifact@v5
         with:
@@ -239,19 +215,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
-          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
-      - name: Set up Go cache
-        uses: actions/cache@v4
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-examples-${{ hashFiles('**/go.sum') }}
+          cache-dependency-path: "**/go.sum"
       - name: Install Pulumi CLI
         uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
       - name: Download versions.txt
@@ -307,7 +271,7 @@ jobs:
           ref: ${{ env.PR_COMMIT_SHA }}
           submodules: recursive
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: stable
       - name: golangci-lint
@@ -415,22 +379,10 @@ jobs:
         with:
           gradle-version: 8.14.1
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: stable
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "go-build=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
-          echo "go-mod=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
-      - name: Set up Go cache
-        uses: actions/cache@v4
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-templates-${{ hashFiles('**/go.sum') }}
+          cache-dependency-path: "**/go.sum"
       - name: Download versions.txt
         uses: actions/download-artifact@v5
         with:
