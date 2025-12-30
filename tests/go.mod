@@ -4,7 +4,7 @@ go 1.24.7
 
 toolchain go1.24.10
 
-replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
+replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.8.3
 
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
