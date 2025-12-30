@@ -199,5 +199,5 @@ To release a new version of `pulumi-java`, follow these steps:
   ```shell
   git checkout main
   git pull origin main
-  ./scripts/release.sh v0.20.0
+  ./scripts/release.sh "$(changie latest)"
   ```
