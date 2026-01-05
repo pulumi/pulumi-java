@@ -16,8 +16,8 @@
         <mainClass>${project.groupId}.${project.artifactId}.App</mainClass>
         <mainArgs/>
         <pulumiSdkVersion>0.0.1</pulumiSdkVersion>
-        <grpc.version>1.67.1</grpc.version>
-        <protobuf.version>3.25.1</protobuf.version>
+        <grpc.version>1.75.0</grpc.version>
+        <protobuf.version>3.25.5</protobuf.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
