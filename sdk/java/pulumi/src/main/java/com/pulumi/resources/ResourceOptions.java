@@ -23,6 +23,7 @@ public abstract class ResourceOptions {
     protected Resource parent;
     @Nullable
     protected Output<List<Resource>> dependsOn;
+    @Nullable
     protected boolean protect;
     @Nullable
     protected List<String> ignoreChanges;
@@ -40,6 +41,7 @@ public abstract class ResourceOptions {
     protected String urn;
     @Nullable
     protected List<String> replaceOnChanges;
+    @Nullable
     protected boolean retainOnDelete;
     @Nullable
     protected String pluginDownloadURL;
@@ -56,7 +58,7 @@ public abstract class ResourceOptions {
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
-            boolean protect,
+            @Nullable boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
             @Nullable ProviderResource provider,
@@ -65,7 +67,7 @@ public abstract class ResourceOptions {
             @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges,
-            boolean retainOnDelete,
+            @Nullable boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
             @Nullable List<String> hideDiffs,
             @Nullable List<Resource> replaceWith,
@@ -477,7 +479,7 @@ public abstract class ResourceOptions {
 
         options1.id = options2.id == null ? options1.id : options2.id;
         options1.parent = options2.parent == null ? options1.parent : options2.parent;
-        options1.protect = options1.protect || options2.protect;
+        options1.protect = options2.protect == null ? options1.protect : options2.protect;
         options1.urn = options2.urn == null ? options1.urn : options2.urn;
         options1.version = options2.version == null ? options1.version : options2.version;
         options1.provider = options2.provider == null ? options1.provider : options2.provider;

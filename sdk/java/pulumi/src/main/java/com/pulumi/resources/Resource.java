@@ -52,6 +52,7 @@ public abstract class Resource {
     /**
      * When set to true, protect ensures this resource cannot be deleted.
      */
+    @Nullable
     private final boolean protect;
 
     private final List<ResourceTransformation> transformations;
@@ -118,7 +119,7 @@ public abstract class Resource {
             // this.urn will be set using setter in the subtype constructor after this supertype constructor finishes
             this.type = "";
             this.name = "";
-            this.protect = false;
+            this.protect = null;
             this.transformations = List.of();
             this.providers = Map.of();
             this.provider = null;
@@ -200,7 +201,9 @@ public abstract class Resource {
             // the 'childResources' is a Synchronized Collection, so this is safe operation
             parentResource.childResources.add(this);
 
-            options.protect = options.protect || parentResource.protect; // TODO: is this logic good?
+            if (options.protect == null) {
+                options.protect = parentResource.protect;
+            }
             thisProviders.putAll(options.parent.providers);
         }
 
