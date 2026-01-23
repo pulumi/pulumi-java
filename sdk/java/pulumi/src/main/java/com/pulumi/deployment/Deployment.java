@@ -50,6 +50,20 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
     }
 
     /**
+     * Checks if the engine we are connected to is compatible with the passed in version range. If the version is not
+     * compatible with the specified range, an exception is raised.
+     *
+     * <p>The supported syntax for the range is that of
+     * <a href="https://pkg.go.dev/github.com/blang/semver#ParseRange">github.com/blang/semver#ParseRange</a>.
+     * For example {@code ">=3.0.0"}, or {@code "!3.1.2"}. Ranges can be AND-ed together by concatenating with
+     * spaces {@code ">=3.5.0 !3.7.7"}, meaning greater-or-equal to 3.5.0 and not exactly 3.7.7. Ranges can be
+     * OR-ed with the {@code ||} operator: {@code "<3.4.0 || >3.8.0"}, meaning less-than 3.4.0 or greater-than 3.8.0.
+     *
+     * @param range the version range to check against
+     */
+    void requirePulumiVersion(String range);
+
+    /**
      * Whether the application is currently being previewed or actually applied.
      *
      * @return true if application is being applied

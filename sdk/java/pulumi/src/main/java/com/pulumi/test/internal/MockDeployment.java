@@ -62,6 +62,11 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
+    public void requirePulumiVersion(String range) {
+        // No-op for mock deployment
+    }
+
+    @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options, CompletableFuture<String> packageRef) {
         return null;
     }

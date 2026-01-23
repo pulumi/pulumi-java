@@ -64,6 +64,11 @@ class ContextAwareCompletableFutureTest {
         }
 
         @Override
+        public void requirePulumiVersion(String range) {
+            // Noop
+        }
+
+        @Override
         public <T> Output<T> invoke(String token,
                                     TypeShape<T> targetType,
                                     InvokeArgs args) {

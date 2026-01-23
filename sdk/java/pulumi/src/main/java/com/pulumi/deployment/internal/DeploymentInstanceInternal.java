@@ -63,6 +63,11 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
+    public void requirePulumiVersion(String range) {
+        deployment.requirePulumiVersion(range);
+    }
+
+    @Override
     public DeploymentImpl.Config getConfig() {
         return deployment.getConfig();
     }

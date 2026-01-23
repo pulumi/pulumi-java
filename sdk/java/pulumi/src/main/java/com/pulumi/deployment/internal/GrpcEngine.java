@@ -7,6 +7,8 @@ import pulumirpc.EngineGrpc;
 import pulumirpc.EngineOuterClass.GetRootResourceRequest;
 import pulumirpc.EngineOuterClass.GetRootResourceResponse;
 import pulumirpc.EngineOuterClass.LogRequest;
+import pulumirpc.EngineOuterClass.RequirePulumiVersionRequest;
+import pulumirpc.EngineOuterClass.RequirePulumiVersionResponse;
 import pulumirpc.EngineOuterClass.SetRootResourceRequest;
 import pulumirpc.EngineOuterClass.SetRootResourceResponse;
 
@@ -44,6 +46,11 @@ public class GrpcEngine implements Engine {
     @Override
     public CompletableFuture<GetRootResourceResponse> getRootResourceAsync(GetRootResourceRequest request) {
         return toContextAwareCompletableFuture(this.engine.getRootResource(request));
+    }
+
+    @Override
+    public CompletableFuture<RequirePulumiVersionResponse> requirePulumiVersionAsync(RequirePulumiVersionRequest request) {
+        return toContextAwareCompletableFuture(this.engine.requirePulumiVersion(request));
     }
 
     private <T> CompletableFuture<T> toContextAwareCompletableFuture(ListenableFuture<T> listenableFuture) {

@@ -11,4 +11,6 @@ public interface Engine {
     CompletableFuture<SetRootResourceResponse> setRootResourceAsync(SetRootResourceRequest request);
 
     CompletableFuture<GetRootResourceResponse> getRootResourceAsync(GetRootResourceRequest request);
+
+    CompletableFuture<RequirePulumiVersionResponse> requirePulumiVersionAsync(RequirePulumiVersionRequest request);
 }

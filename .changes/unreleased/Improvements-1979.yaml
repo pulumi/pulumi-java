@@ -1,0 +1,6 @@
+component: sdk
+kind: Improvements
+body: Add Deployment.RequirePulumiVersion
+time: 2026-01-23T17:15:23.791653+01:00
+custom:
+    PR: "1979"
