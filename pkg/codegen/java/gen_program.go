@@ -808,6 +808,10 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 			outputVariable := node
 			_, diags := model.VisitExpression(outputVariable.Value, model.IdentityVisitor, visitFunctionCalls)
 			g.diagnostics = append(g.diagnostics, diags...)
+		case *pcl.PulumiBlock:
+			if node.RequiredVersion != nil {
+				imports = append(imports, "com.pulumi.deployment.Deployment")
+			}
 		}
 	}
 
@@ -1429,6 +1433,14 @@ func (g *generator) genNode(w io.Writer, n pcl.Node) {
 		g.genLocalVariable(w, n)
 	case *pcl.OutputVariable:
 		g.genOutputAssignment(w, n)
+	case *pcl.PulumiBlock:
+		g.genPulumi(w, n)
+	}
+}
+
+func (g *generator) genPulumi(w io.Writer, v *pcl.PulumiBlock) {
+	if v.RequiredVersion != nil {
+		g.Fgenf(w, "%sDeployment.getInstance().requirePulumiVersion(%.v);\n", g.Indent, v.RequiredVersion)
 	}
 }
 

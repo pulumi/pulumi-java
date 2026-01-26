@@ -19,15 +19,12 @@ import (
 	"context"
 	"fmt"
 	"io"
-	"os"
 	"os/exec"
 	"path/filepath"
 	"sync"
 	"testing"
 
 	"github.com/pulumi/pulumi/sdk/v3"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/diag"
-	pbempty "google.golang.org/protobuf/types/known/emptypb"
 
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/fsutil"
@@ -155,7 +152,6 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
-	"l1-builtin-require-pulumi-version":     "TODO: https://github.com/pulumi/pulumi-java/issues/1981",
 	"l1-builtin-project-root":               "TODO: call rootDirectory",
 	"l1-builtin-try":                        "#1683 Fix l1-builtin-try/can",
 	"l1-builtin-can":                        "#1683 Fix l1-builtin-try/can",
@@ -296,83 +292,5 @@ func runTestingHost(t *testing.T) (string, testingrpc.LanguageTestClient) {
 		contract.IgnoreError(cmd.Wait())
 	})
 
-	engineAddress := runEngine(t)
-	return engineAddress, client
-}
-
-// runEngine boots up a hostEngine for receiving logs from the language runtime under test so that they can be
-// incorporated into test log output.
-func runEngine(t *testing.T) string {
-	engine := &hostEngine{t: t}
-	stop := make(chan bool)
-	t.Cleanup(func() {
-		close(stop)
-	})
-	handle, err := rpcutil.ServeWithOptions(rpcutil.ServeOptions{
-		Cancel: stop,
-		Init: func(srv *grpc.Server) error {
-			pulumirpc.RegisterEngineServer(srv, engine)
-			return nil
-		},
-		Options: rpcutil.OpenTracingServerInterceptorOptions(nil),
-	})
-	require.NoError(t, err)
-	return fmt.Sprintf("127.0.0.1:%v", handle.Port)
-}
-
-// hostEngine is a fake implementation of the Engine gRPC interface which accepts log messages (in this case, from the
-// language host) and forwards on to the supplied T's Log method.
-type hostEngine struct {
-	pulumirpc.UnimplementedEngineServer
-	t *testing.T
-
-	logLock         sync.Mutex
-	logRepeat       int
-	previousMessage string
-}
-
-// Implements the Engine.Log RPC method. Forwards received log messages on to this hostEngine's T.Log.
-func (e *hostEngine) Log(_ context.Context, req *pulumirpc.LogRequest) (*pbempty.Empty, error) {
-	e.logLock.Lock()
-	defer e.logLock.Unlock()
-
-	var sev diag.Severity
-	switch req.Severity {
-	case pulumirpc.LogSeverity_DEBUG:
-		sev = diag.Debug
-	case pulumirpc.LogSeverity_INFO:
-		sev = diag.Info
-	case pulumirpc.LogSeverity_WARNING:
-		sev = diag.Warning
-	case pulumirpc.LogSeverity_ERROR:
-		sev = diag.Error
-	default:
-		return nil, fmt.Errorf("Unrecognized logging severity: %v", req.Severity)
-	}
-
-	message := req.Message
-	if os.Getenv("PULUMI_LANGUAGE_TEST_SHOW_FULL_OUTPUT") != "true" {
-		// Cut down logs so they don't overwhelm the test output
-		if len(message) > 1024 {
-			message = message[:1024] + "... (truncated, run with PULUMI_LANGUAGE_TEST_SHOW_FULL_OUTPUT=true to see full logs))"
-		}
-	}
-
-	if e.previousMessage == message {
-		e.logRepeat++
-		return &pbempty.Empty{}, nil
-	}
-
-	if e.logRepeat > 1 {
-		e.t.Logf("Last message repeated %d times", e.logRepeat)
-	}
-	e.logRepeat = 1
-	e.previousMessage = message
-
-	if req.StreamId != 0 {
-		e.t.Logf("(%d) %s[%s]: %s", req.StreamId, sev, req.Urn, message)
-	} else {
-		e.t.Logf("%s[%s]: %s", sev, req.Urn, message)
-	}
-	return &pbempty.Empty{}, nil
+	return address, client
 }

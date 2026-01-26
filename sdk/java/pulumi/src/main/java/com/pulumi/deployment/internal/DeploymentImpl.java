@@ -52,9 +52,12 @@ import com.pulumi.serialization.internal.JsonFormatter;
 import com.pulumi.serialization.internal.PropertiesSerializer;
 import com.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
 import com.pulumi.serialization.internal.Structs;
+import io.grpc.Status;
+import io.grpc.StatusRuntimeException;
 import pulumirpc.AliasOuterClass.Alias;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
+import pulumirpc.EngineOuterClass.RequirePulumiVersionRequest;
 import pulumirpc.Resource.Parameterization;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterPackageRequest;
@@ -192,6 +195,30 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Override
     public boolean isDryRun() {
         return this.state.isDryRun;
+    }
+
+    @Override
+    public void requirePulumiVersion(String range) {
+        var request = RequirePulumiVersionRequest.newBuilder()
+                .setPulumiVersionRange(range)
+                .build();
+        try {
+            this.state.engine.requirePulumiVersionAsync(request).join();
+        } catch (Exception e) {
+            Throwable cause = e;
+            if (e.getCause() != null) {
+                cause = e.getCause();
+            }
+            if (cause instanceof StatusRuntimeException) {
+                StatusRuntimeException sre = (StatusRuntimeException) cause;
+                if (sre.getStatus().getCode() == Status.Code.UNIMPLEMENTED) {
+                    throw new RuntimeException(
+                            "The installed version of the CLI does not support the `RequirePulumiVersion` RPC. Please upgrade the Pulumi CLI.");
+                }
+                throw new RuntimeException(sre.getStatus().getDescription(), sre);
+            }
+            throw new RuntimeException(cause);
+        }
     }
 
     @Override
@@ -1095,7 +1122,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                         ).thenApply(serialized -> {
                                                                                                             return com.pulumi.serialization.internal.Serializer.createValue(serialized);
                                                                                                         });
-                                                                                                        
+
                                                                                                         replacementTriggerDepsFuture = replacementTriggerValueFuture.thenCompose(value -> {
                                                                                                             var replacementTriggerDeps = serializer.dependentResources;
                                                                                                             if (replacementTriggerDeps.isEmpty()) {

@@ -65,4 +65,10 @@ public class MockEngine implements Engine, CountingLogger {
                         .build()
         );
     }
+
+    @Override
+    public CompletableFuture<EngineOuterClass.RequirePulumiVersionResponse> requirePulumiVersionAsync(EngineOuterClass.RequirePulumiVersionRequest request) {
+        // Noop
+        return CompletableFuture.completedFuture(EngineOuterClass.RequirePulumiVersionResponse.newBuilder().build());
+    }
 }
