@@ -235,6 +235,7 @@ var expectedFailures = map[string]string{
 	"l2-invoke-output-only":                 "not implemented",
 	"l2-parameterized-invoke":               "not implemented",
 	"provider-resource-component":           "not implemented",
+	"provider-alias-component":              "not implemented",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
