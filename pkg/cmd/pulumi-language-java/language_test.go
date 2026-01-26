@@ -155,7 +155,6 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
-	"l1-builtin-require-pulumi-version":     "TODO: https://github.com/pulumi/pulumi-java/issues/1981",
 	"l1-builtin-project-root":               "TODO: call rootDirectory",
 	"l1-builtin-try":                        "#1683 Fix l1-builtin-try/can",
 	"l1-builtin-can":                        "#1683 Fix l1-builtin-try/can",
