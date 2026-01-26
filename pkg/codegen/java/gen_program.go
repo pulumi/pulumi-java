@@ -1367,7 +1367,7 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 			configVariable.Name(),
 			configVariable.DefaultValue)
 	} else {
-		g.Fgenf(w, "final var %s = config.get(\"%s\");",
+		g.Fgenf(w, "final var %s = config.require(\"%s\");",
 			names.MakeValidIdentifier(configVariable.Name()),
 			configVariable.Name())
 	}
