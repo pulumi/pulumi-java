@@ -133,6 +133,7 @@ public class Alias {
         private Resource parent;
         @Nullable
         private Output<String> parentUrn;
+        private boolean noParent;
 
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
@@ -174,6 +175,11 @@ public class Alias {
             return this;
         }
 
+        public Builder noParent() {
+            this.noParent = true;
+            return this;
+        }
+
         public Builder parent(@Nullable Resource parent) {
             requireNullState(name, () -> "Alias should not specify Alias#parent when Alias#parentUrn is  already.");
             this.parent = parent;
@@ -187,6 +193,9 @@ public class Alias {
         }
 
         public Alias build() {
+            if (noParent) {
+                return Alias.noParent();
+            }
             return new Alias(null, name, type, stack, project, parent, parentUrn, false);
         }
     }

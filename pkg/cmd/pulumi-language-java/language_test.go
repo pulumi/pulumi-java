@@ -155,6 +155,7 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
+	"l1-builtin-require-pulumi-version":     "TODO: https://github.com/pulumi/pulumi-java/issues/1981",
 	"l1-builtin-project-root":               "TODO: call rootDirectory",
 	"l1-builtin-try":                        "#1683 Fix l1-builtin-try/can",
 	"l1-builtin-can":                        "#1683 Fix l1-builtin-try/can",
@@ -234,6 +235,7 @@ var expectedFailures = map[string]string{
 	"l2-invoke-output-only":                 "not implemented",
 	"l2-parameterized-invoke":               "not implemented",
 	"provider-resource-component":           "not implemented",
+	"provider-alias-component":              "not implemented",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

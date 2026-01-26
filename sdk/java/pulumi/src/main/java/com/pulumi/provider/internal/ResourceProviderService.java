@@ -162,9 +162,41 @@ public class ResourceProviderService {
                     .asRuntimeException());
                 return;
             }
-            
+
             var aliases = request.getAliasesList().stream()
-                    .map(urn -> Alias.withUrn(urn))
+                    .map(alias -> {
+                        if (!alias.getUrn().isEmpty()) {
+                            return Alias.withUrn(alias.getUrn());
+                        } else {
+                            var spec = alias.getSpec();
+                            var builder = Alias.builder();
+                            if (!spec.getName().isEmpty()) {
+                                builder.name(spec.getName());
+                            }
+                            if (!spec.getType().isEmpty()) {
+                                builder.type(spec.getType());
+                            }
+                            if (!spec.getStack().isEmpty()) {
+                                builder.stack(spec.getStack());
+                            }
+                            if (!spec.getProject().isEmpty()) {
+                                builder.project(spec.getProject());
+                            }
+                            switch (spec.getParentCase()) {
+                                case PARENTURN:
+                                    builder.parentUrn(com.pulumi.core.Output.of(spec.getParentUrn()));
+                                    break;
+                                case NOPARENT:
+                                    if (spec.getNoParent()) {
+                                        return Alias.noParent();
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            return builder.build();
+                        }
+                    })
                     .toArray(Alias[]::new);
             var dependsOn = request.getDependenciesList().stream()
                     .map(urn -> new DependencyResource(urn))

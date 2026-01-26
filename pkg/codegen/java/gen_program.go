@@ -933,9 +933,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		g.genImport(w, "com.pulumi.codegen.internal.KeyedValue")
 	}
 
-	if requiresImportingCustomResourceOptions(nodes) {
-		g.genImport(w, "com.pulumi.resources.CustomResourceOptions")
-	}
+	g.genResourceOptionsImports(w, nodes)
 
 	g.genImport(w, "java.util.List")
 	g.genImport(w, "java.util.ArrayList")
@@ -1054,23 +1052,35 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.Provider != nil ||
 		resource.Options.HideDiffs != nil ||
 		resource.Options.ReplaceWith != nil ||
-		resource.Options.ReplacementTrigger != nil
+		resource.Options.ReplacementTrigger != nil ||
+		resource.Options.Aliases != nil
 }
 
-// Checks whether any resource within the program nodes has a custom resource option
-// in which case an import should be emitted
-func requiresImportingCustomResourceOptions(programNodes []pcl.Node) bool {
+// genResourceOptionsImports generates imports for the `CustomResourceOptions` and `Alias` classes.
+func (g *generator) genResourceOptionsImports(w io.Writer, programNodes []pcl.Node) {
+	customResourceOptions := false
+	hasAliases := false
+
 	for _, node := range programNodes {
 		switch node := node.(type) {
 		case *pcl.Resource:
 			resource := node
 			if hasCustomResourceOptions(resource) {
-				return true
+				customResourceOptions = true
+				if resource.Options.Aliases != nil {
+					hasAliases = true
+					break // Both flags are true, we can stop looking
+				}
 			}
 		}
 	}
 
-	return false
+	if customResourceOptions {
+		g.genImport(w, "com.pulumi.resources.CustomResourceOptions")
+	}
+	if hasAliases {
+		g.genImport(w, "com.pulumi.core.Alias")
+	}
 }
 
 func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource) {
@@ -1153,6 +1163,47 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			g.genIndent(w)
 			g.Fgenf(w, ".importId(%v)", resource.Options.ImportID)
 			g.genNewline(w)
+		}
+		if resource.Options.Aliases != nil {
+			g.genIndent(w)
+
+			g.Fgenf(w, ".aliases(")
+			for i, expr := range resource.Options.Aliases.(*model.TupleConsExpression).Expressions {
+				if i > 0 {
+					g.Fgenf(w, ", ")
+				}
+				// If the expression is a string literal, we can inline it directly.
+				if expr.Type().Equals(model.StringType) {
+					g.Fgenf(w, "Alias.withUrn(%v)", expr)
+					continue
+				}
+				// Otherwise pull off the fields dynamically.
+				obj := expr.(*model.ObjectConsExpression)
+
+				g.Fgenf(w, "Alias.builder()")
+				g.Indented(func() {
+					for _, item := range obj.Items {
+						g.genNewline(w)
+						g.genIndent(w)
+						// We need a literal key here.
+						key, diags := item.Key.Evaluate(&hcl.EvalContext{})
+						contract.Assertf(len(diags) == 0, "Expected no diagnostics, got %d", len(diags))
+
+						switch key.AsString() {
+						case "name":
+							g.Fgenf(w, ".name(%v)", item.Value)
+						case "noParent":
+							g.Fgenf(w, ".noParent()")
+						case "parent":
+							g.Fgenf(w, ".parent(%v)", item.Value)
+						}
+					}
+				})
+				g.Fgenf(w, ".build()")
+			}
+			g.Fgenf(w, ")")
+			g.genNewline(w)
+
 		}
 		g.genIndent(w)
 		g.Fgen(w, ".build()")
