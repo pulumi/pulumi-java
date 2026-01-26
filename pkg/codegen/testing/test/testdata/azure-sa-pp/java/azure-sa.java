@@ -21,8 +21,8 @@ public class App {
 
     public static void stack(Context ctx) {
         final var config = ctx.config();
-        final var storageAccountNameParam = config.get("storageAccountNameParam");
-        final var resourceGroupNameParam = config.get("resourceGroupNameParam");
+        final var storageAccountNameParam = config.require("storageAccountNameParam");
+        final var resourceGroupNameParam = config.require("resourceGroupNameParam");
         final var resourceGroupVar = CoreFunctions.getResourceGroup(GetResourceGroupArgs.builder()
             .name(resourceGroupNameParam)
             .build());
