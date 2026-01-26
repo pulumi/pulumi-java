@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: Use config.require in codegen when there is no default value
+time: 2026-01-26T14:09:22.479354+01:00
+custom:
+    PR: "1983"
