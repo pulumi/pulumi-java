@@ -1,6 +1,0 @@
-component: codegen
-kind: Improvements
-body: Implement alias resource options generation
-time: 2026-01-26T12:03:08.246379+01:00
-custom:
-    PR: "1982"
