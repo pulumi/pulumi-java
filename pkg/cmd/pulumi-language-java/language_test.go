@@ -155,7 +155,8 @@ var expectedFailures = map[string]string{
 	"l1-builtin-project-root":                      "TODO: call rootDirectory",
 	"l1-builtin-try":                               "#1683 Fix l1-builtin-try/can",
 	"l1-builtin-can":                               "#1683 Fix l1-builtin-try/can",
-	"l1-config-types":                              "compilation error",
+	"l1-config-types-object":                       "https://github.com/pulumi/pulumi-java/issues/2005",
+	"l1-config-types-primitive":                    "https://github.com/pulumi/pulumi-java/issues/2004",
 	"l1-keyword-overlap":                           "#1681 Fix l1-keyword-overlap",
 	"l1-output-null":                               "unhandled error occurred",
 	"l1-output-string":                             "#1562 Large string literals are not generated correctly",
@@ -239,8 +240,10 @@ var expectedFailures = map[string]string{
 	"l2-resource-option-version-sdk":               "https://github.com/pulumi/pulumi-java/issues/1996",
 	"l3-range-resource-output-traversal":           "https://github.com/pulumi/pulumi-java/issues/1997",
 	"l2-resource-option-plugin-download-url":       "https://github.com/pulumi/pulumi-java/issues/1999",
+	"l2-resource-option-env-var-mappings":          "https://github.com/pulumi/pulumi-java/issues/2006",
 	"provider-resource-component":                  "not implemented",
 	"provider-alias-component":                     "not implemented",
+	"provider-replacement-trigger-component":       "https://github.com/pulumi/pulumi-java/issues/2007",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
