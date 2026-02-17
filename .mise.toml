@@ -1,6 +1,7 @@
 [tools]
 changie = "latest"
-golangci-lint = "2.5.0"
+go = "1.25"
+golangci-lint = "2.9.0"
 gradle = "8.14.1"
 java = "temurin-11.0.28+6"
 maven = "3.9.11"
