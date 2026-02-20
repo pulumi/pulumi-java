@@ -1,0 +1,33 @@
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.simple.Resource;
+import com.pulumi.simple.ResourceArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var res1 = new Resource("res1", ResourceArgs.builder()
+            .value(true)
+            .build());
+
+        final var localVar = res1.value();
+
+        var res2 = new Resource("res2", ResourceArgs.builder()
+            .value(localVar)
+            .build());
+
+        ctx.export("out", res2.value());
+    }
+}

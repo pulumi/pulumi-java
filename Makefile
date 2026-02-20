@@ -63,9 +63,9 @@ lint_pkg.fix: lint_pkg_dependencies
 .PHONY: lint_pkg_dependencies
 lint_pkg_dependencies:
 	@cd pkg || exit 1; \
-	PKG=$$(grep -r '"github.com/pulumi/pulumi/pkg/v3/[^codegen]' .); \
-	if [ "$$?" -eq 0 ] ; then \
-		echo "Cannot use pkg except for codegen.";\
+	PKG=$$(grep -r '"github.com/pulumi/pulumi/pkg/v3/' . | grep -v 'codegen' | grep -v 'testing'); \
+	if [ -n "$$PKG" ] ; then \
+		echo "Cannot use pkg except for codegen and testing.";\
 		echo "Found $$PKG";\
 		exit 1; \
 	fi
