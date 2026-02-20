@@ -241,9 +241,18 @@ var expectedFailures = map[string]string{
 	"l3-range-resource-output-traversal":           "https://github.com/pulumi/pulumi-java/issues/1997",
 	"l2-resource-option-plugin-download-url":       "https://github.com/pulumi/pulumi-java/issues/1999",
 	"l2-resource-option-env-var-mappings":          "https://github.com/pulumi/pulumi-java/issues/2006",
+	"l1-elide-index":                               "https://github.com/pulumi/pulumi-java/issues/2017",
+	"l2-elide-index":                               "https://github.com/pulumi/pulumi-java/issues/2016",
+	"l2-enum":                                      "https://github.com/pulumi/pulumi-java/issues/2018",
+	"l2-module-format":                             "https://github.com/pulumi/pulumi-java/issues/2019",
+	"l2-resource-names":                            "https://github.com/pulumi/pulumi-java/issues/2020",
+	"l2-discriminated-union":                       "https://github.com/pulumi/pulumi-java/issues/2021",
+	"policy-stack-tags":                            "https://github.com/pulumi/pulumi-java/issues/2022",
 	"provider-resource-component":                  "not implemented",
 	"provider-alias-component":                     "not implemented",
 	"provider-replacement-trigger-component":       "https://github.com/pulumi/pulumi-java/issues/2007",
+	"provider-depends-on-component":                "https://github.com/pulumi/pulumi-java/issues/2023",
+	"provider-ignore-changes-component":            "https://github.com/pulumi/pulumi-java/issues/2024",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
@@ -253,7 +262,7 @@ func runTestingHost(t *testing.T) (string, testingrpc.LanguageTestClient) {
 	// We can't just go run the pulumi-test-language package because of
 	// https://github.com/golang/go/issues/39172, so we build it to a temp file then run that.
 	binary := t.TempDir() + "/pulumi-test-language"
-	cmd := exec.Command("go", "build", "-C", "../../../pulumi/cmd/pulumi-test-language", "-o", binary)
+	cmd := exec.Command("go", "build", "-o", binary, "github.com/pulumi/pulumi/pkg/v3/testing/pulumi-test-language") //nolint:gosec,lll
 	output, err := cmd.CombinedOutput()
 	t.Logf("build output: %s", output)
 	require.NoError(t, err)
