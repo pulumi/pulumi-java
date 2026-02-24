@@ -77,7 +77,7 @@ final class LanguageRuntimeImpl extends LanguageRuntimeImplBase {
                 } finally {
                     DeploymentInstanceHolder.internalUnsafeDestroyInstance();
                 }
-            });
+            }).join();
 
             // TODO graceful error propagation/handling
         } catch (Exception e) {
