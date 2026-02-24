@@ -10,6 +10,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Empty;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.InlineDeploymentSettings;
+import com.pulumi.deployment.internal.Runner;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.resources.StackOptions;
 import com.pulumi.Context;
@@ -62,11 +63,13 @@ final class LanguageRuntimeImpl extends LanguageRuntimeImplBase {
                     .build();
 
             var pulumiInternal = PulumiInternal.fromInline(inlineDeploymentSettings, StackOptions.Empty);
-            pulumiInternal.runAsync(program).handle((result, throwable) -> {
+            pulumiInternal.runAsync(program).handle((exitCode, throwable) -> {
                 try {
                     var responseBuilder = RunResponse.newBuilder();
                     if (throwable != null) {
                         responseBuilder.setError(throwable.getMessage());
+                    } else if (exitCode != null && exitCode != Runner.ProcessExitedSuccessfully) {
+                        responseBuilder.setError("Pulumi program exited with non-zero exit code: " + exitCode);
                     }
                     responseObserver.onNext(responseBuilder.build());
                     responseObserver.onCompleted();

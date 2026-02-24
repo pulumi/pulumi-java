@@ -104,13 +104,8 @@ public class Utilities {
                 .trim();
     }
 
-	private static final CompletableFuture<java.lang.String> packageRef;
 	public static CompletableFuture<java.lang.String> getPackageRef() {
-		return packageRef;
-	}
-
-	static {
-		packageRef = Deployment.getInstance().registerPackage(
+		return Deployment.getInstance().registerPackage(
 			// Base provider name
 			"parameterized",
 			// Base provider version

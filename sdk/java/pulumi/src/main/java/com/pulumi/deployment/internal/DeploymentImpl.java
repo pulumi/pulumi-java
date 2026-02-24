@@ -121,6 +121,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RegisterResource registerResource;
     private final RegisterResourceOutputs registerResourceOutputs;
     private final RootResource rootResource;
+    private final ConcurrentHashMap<String, CompletableFuture<String>> packageRefCache =
+            new ConcurrentHashMap<>();
 
     @InternalUse
     @VisibleForTesting
@@ -962,27 +964,31 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             String packageVersion,
             String base64Parameter
     ) {
-        return this.featureSupport.monitorSupportsParameterization().thenCompose(supportsParameterization -> {
-            if (!supportsParameterization) {
-                throw new UnsupportedOperationException("The Pulumi CLI does not support parameterization. Please update the Pulumi CLI.");
-            }
+        var cacheKey = String.join("\0", baseProviderName, baseProviderVersion,
+                baseProviderDownloadUrl, packageName, packageVersion, base64Parameter);
+        return packageRefCache.computeIfAbsent(cacheKey, __ ->
+                this.featureSupport.monitorSupportsParameterization().thenCompose(supportsParameterization -> {
+                    if (!supportsParameterization) {
+                        throw new UnsupportedOperationException("The Pulumi CLI does not support parameterization. Please update the Pulumi CLI.");
+                    }
 
-            var request = RegisterPackageRequest.newBuilder()
-                    .setName(baseProviderName)
-                    .setVersion(baseProviderVersion)
-                    .setDownloadUrl(baseProviderDownloadUrl)
-                    .setParameterization(
-                            Parameterization.newBuilder()
-                                    .setName(packageName)
-                                    .setVersion(packageVersion)
-                                    .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
-                                    .build()
-                    )
-                    .build();
+                    var request = RegisterPackageRequest.newBuilder()
+                            .setName(baseProviderName)
+                            .setVersion(baseProviderVersion)
+                            .setDownloadUrl(baseProviderDownloadUrl)
+                            .setParameterization(
+                                    Parameterization.newBuilder()
+                                            .setName(packageName)
+                                            .setVersion(packageVersion)
+                                            .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
+                                            .build()
+                            )
+                            .build();
 
-            return this.state.monitor.registerPackageAsync(request)
-                    .thenApply(response -> response.getRef());
-        });
+                    return this.state.monitor.registerPackageAsync(request)
+                            .thenApply(response -> response.getRef());
+                })
+        );
     }
 
     private static final class Prepare {
