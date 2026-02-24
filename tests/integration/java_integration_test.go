@@ -193,6 +193,18 @@ func TestIntegrations(t *testing.T) {
 		stdout, _ := e.RunCommand("gradle", "run", "-q")
 		assert.Contains(t, stdout, "Second preview succeeded")
 	})
+
+	t.Run("automation-api-error-propagation", func(t *testing.T) {
+		t.Parallel()
+
+		e := ptesting.NewEnvironment(t)
+		defer e.DeleteIfNotFailed()
+
+		e.ImportDirectory("automation-api-error-propagation")
+
+		stdout, _ := e.RunCommand("gradle", "run", "-q")
+		assert.Contains(t, stdout, "Error propagation works")
+	})
 }
 
 func runAliasTest(t *testing.T, directory string) {
