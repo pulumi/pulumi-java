@@ -22,5 +22,5 @@ repositories {
 }
 
 dependencies {
-    implementation("com.pulumi:pulumi:[1,)")
+    implementation("com.pulumi:pulumi:0.0.1")
 }

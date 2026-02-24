@@ -22,8 +22,7 @@ repositories {
 }
 
 dependencies {
-    // Pulumi core SDK (includes automation API)
-    implementation("com.pulumi:pulumi:[1,)")
+    implementation("com.pulumi:pulumi:0.0.1")
     // Dependencies of the generated random provider SDK sources (copied in from sdks/random/src/)
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("com.google.code.gson:gson:2.8.9")
