@@ -29,11 +29,6 @@ jobs:
         run: |
           echo GORELEASER_CURRENT_TAG=${{ steps.latest.outputs.output }} >> $GITHUB_ENV
           echo RELEASE_NOTES_PATH=.changes/${{ steps.latest.outputs.output }}.md >> $GITHUB_ENV
-      - name: Set up Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: stable
-          cache-dependency-path: "**/go.sum"
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
         with:
