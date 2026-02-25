@@ -121,8 +121,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RegisterResource registerResource;
     private final RegisterResourceOutputs registerResourceOutputs;
     private final RootResource rootResource;
-    private final ConcurrentHashMap<String, CompletableFuture<String>> packageRefCache =
-            new ConcurrentHashMap<>();
 
     @InternalUse
     @VisibleForTesting
@@ -966,7 +964,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     ) {
         var cacheKey = String.join("\0", baseProviderName, baseProviderVersion,
                 baseProviderDownloadUrl, packageName, packageVersion, base64Parameter);
-        return packageRefCache.computeIfAbsent(cacheKey, __ ->
+        return this.state.packageRefCache.computeIfAbsent(cacheKey, __ ->
                 this.featureSupport.monitorSupportsParameterization().thenCompose(supportsParameterization -> {
                     if (!supportsParameterization) {
                         throw new UnsupportedOperationException("The Pulumi CLI does not support parameterization. Please update the Pulumi CLI.");
@@ -1873,6 +1871,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public final Monitor monitor;
         public Runner runner; // late init
         public EngineLogger logger; // late init
+        public final ConcurrentHashMap<String, CompletableFuture<String>> packageRefCache =
+                new ConcurrentHashMap<>();
 
         private final Logger standardLogger;
 
