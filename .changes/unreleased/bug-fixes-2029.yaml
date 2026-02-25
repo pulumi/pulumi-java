@@ -1,0 +1,6 @@
+component: runtime
+kind: bug-fixes
+body: Fix `unknown provider package` error in automation API and correctly propagate errors from inline programs.
+time: 2026-02-24T13:01:16.487942+01:00
+custom:
+    PR: "2029"

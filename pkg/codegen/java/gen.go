@@ -1851,13 +1851,8 @@ import com.pulumi.deployment.Deployment;
 
 				packageReferenceUtilities = fmt.Sprintf(`
 
-	private static final CompletableFuture<java.lang.String> packageRef;
 	public static CompletableFuture<java.lang.String> getPackageRef() {
-		return packageRef;
-	}
-
-	static {
-		packageRef = Deployment.getInstance().registerPackage(
+		return Deployment.getInstance().registerPackage(
 			// Base provider name
 			"%s",
 			// Base provider version

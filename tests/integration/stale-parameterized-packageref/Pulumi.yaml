@@ -1,0 +1,3 @@
+name: stale-parameterized-packageref
+runtime: java
+description: Test for stale parameterized packageRef in automation API inline programs

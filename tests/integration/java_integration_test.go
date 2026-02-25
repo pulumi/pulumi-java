@@ -164,6 +164,47 @@ func TestIntegrations(t *testing.T) {
 		require.NoError(t, err)
 
 	})
+
+	// Regression test for https://github.com/pulumi/pulumi-java/issues/2003
+	t.Run("stale-parameterized-packageref", func(t *testing.T) {
+		t.Parallel()
+
+		e := ptesting.NewEnvironment(t)
+		defer e.DeleteIfNotFailed()
+
+		e.ImportDirectory("stale-parameterized-packageref")
+		e.RunCommand("pulumi", "package", "add", "terraform-provider", "hashicorp/random")
+
+		err := copyDir(
+			filepath.Join(e.CWD, "sdks", "random", "src"),
+			filepath.Join(e.CWD, "src"),
+		)
+		require.NoError(t, err)
+
+		// Replace the placeholder App.java with the real automation-API test program that
+		// references com.pulumi.random.* (now available via the copied SDK sources).
+		err = copyFile(
+			filepath.Join(e.CWD, "testapp", "App.java"),
+			filepath.Join(e.CWD, "src", "main", "java", "myproject", "App.java"),
+			0o644,
+		)
+		require.NoError(t, err)
+
+		stdout, _ := e.RunCommand("gradle", "run", "-q")
+		assert.Contains(t, stdout, "Second preview succeeded")
+	})
+
+	t.Run("automation-api-error-propagation", func(t *testing.T) {
+		t.Parallel()
+
+		e := ptesting.NewEnvironment(t)
+		defer e.DeleteIfNotFailed()
+
+		e.ImportDirectory("automation-api-error-propagation")
+
+		stdout, _ := e.RunCommand("gradle", "run", "-q")
+		assert.Contains(t, stdout, "Error propagation works")
+	})
 }
 
 func runAliasTest(t *testing.T, directory string) {

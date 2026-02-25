@@ -1,0 +1,31 @@
+plugins {
+    id("java")
+    id("application")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+application {
+    mainClass = "myproject.App"
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url("https://maven-central.storage-download.googleapis.com/maven2/")
+    }
+    mavenCentral()
+}
+
+def pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
+
+dependencies {
+    implementation("com.pulumi:pulumi:$pulumiJavaSdkVersion")
+    // Dependencies of the generated random provider SDK sources (copied in from sdks/random/src/)
+    implementation("com.google.code.findbugs:jsr305:3.0.2")
+    implementation("com.google.code.gson:gson:2.8.9")
+}
