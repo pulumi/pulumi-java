@@ -211,3 +211,5 @@ require (
 	lukechampine.com/frand v1.5.1 // indirect
 	mvdan.cc/gofumpt v0.5.0 // indirect
 )
+
+tool github.com/pulumi/pulumi/pkg/v3/testing/pulumi-test-language
