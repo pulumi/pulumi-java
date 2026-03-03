@@ -56,6 +56,7 @@ func TestLanguage(t *testing.T) {
 			host := newLanguageHost(
 				engineAddress,
 				"", /*tracing*/
+				"", /*otel*/
 			)
 
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
@@ -174,6 +175,7 @@ var expectedFailures = map[string]string{
 	"l2-rtti":                                      "TODO: call pulumiResourceName",
 	"l2-component-component-resource-ref":          "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":            "components with resources as inputs/outputs not supported",
+	"l2-external-enum":                             "not implemented",
 	"l2-resource-secret":                           "#1564 Fix l2-resource-secret",
 	"l2-resource-parent-inheritance":               "Fix l2-resource-parent-inheritance",
 	"l2-namespaced-provider":                       "components with resources as inputs/outputs not supported",
@@ -251,7 +253,6 @@ var expectedFailures = map[string]string{
 	"provider-resource-component":                  "not implemented",
 	"provider-alias-component":                     "not implemented",
 	"provider-replacement-trigger-component":       "https://github.com/pulumi/pulumi-java/issues/2007",
-	"provider-depends-on-component":                "https://github.com/pulumi/pulumi-java/issues/2023",
 	"provider-ignore-changes-component":            "https://github.com/pulumi/pulumi-java/issues/2024",
 	"l1-builtin-base64":                            "TODO: call fromBase64/toBase64 not implemented",
 	"l1-config-secret":                             "compilation error: applyValue called on plain String",

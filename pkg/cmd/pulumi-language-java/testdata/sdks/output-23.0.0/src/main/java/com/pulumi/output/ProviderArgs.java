@@ -3,15 +3,36 @@
 
 package com.pulumi.output;
 
-
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
+import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
+    @Import(name="elideUnknowns", json=true)
+    private @Nullable Output<Boolean> elideUnknowns;
+
+    public Optional<Output<Boolean>> elideUnknowns() {
+        return Optional.ofNullable(this.elideUnknowns);
+    }
+
+    private ProviderArgs() {}
+
+    private ProviderArgs(ProviderArgs $) {
+        this.elideUnknowns = $.elideUnknowns;
+    }
+
     public static Builder builder() {
         return new Builder();
+    }
+    public static Builder builder(ProviderArgs defaults) {
+        return new Builder(defaults);
     }
 
     public static final class Builder {
@@ -20,6 +41,20 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         public Builder() {
             $ = new ProviderArgs();
         }
+
+        public Builder(ProviderArgs defaults) {
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder elideUnknowns(@Nullable Output<Boolean> elideUnknowns) {
+            $.elideUnknowns = elideUnknowns;
+            return this;
+        }
+
+        public Builder elideUnknowns(Boolean elideUnknowns) {
+            return elideUnknowns(Output.of(elideUnknowns));
+        }
+
         public ProviderArgs build() {
             return $;
         }
