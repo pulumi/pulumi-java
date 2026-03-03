@@ -30,6 +30,8 @@ def guavaVersion = "32.1.2-jre"
 def assertjCoreVersion = "3.27.1"
 def junitVersion = "5.11.4"
 def mockitoCoreVersion = "5.14.2"
+def opentelemetryVersion = "1.40.0"
+def opentelemetryInstrumentationVersion = "2.6.0"
 
 dependencies {
     implementation("io.grpc:grpc-protobuf:${grpcVersion}") {
@@ -70,6 +72,11 @@ dependencies {
     }
 
     implementation("org.yaml:snakeyaml:2.3")
+
+    implementation("io.opentelemetry:opentelemetry-api:${opentelemetryVersion}")
+    implementation("io.opentelemetry:opentelemetry-sdk:${opentelemetryVersion}")
+    implementation("io.opentelemetry:opentelemetry-exporter-otlp:${opentelemetryVersion}")
+    implementation("io.opentelemetry.instrumentation:opentelemetry-grpc-1.6:${opentelemetryInstrumentationVersion}-alpha")
 
     implementation("com.github.zafarkhaja:java-semver:0.10.2")
 

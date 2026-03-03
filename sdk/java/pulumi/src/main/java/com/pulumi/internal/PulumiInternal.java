@@ -16,6 +16,7 @@ import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.deployment.internal.GrpcEngine;
 import com.pulumi.deployment.internal.GrpcMonitor;
 import com.pulumi.deployment.internal.InlineDeploymentSettings;
+import com.pulumi.deployment.internal.Instrumentation;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
 import com.pulumi.resources.StackOptions;
@@ -78,7 +79,9 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     }
 
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
-        return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
+        return runAsyncResult(stackCallback)
+                .thenApply(r -> r.exitCode())
+                .whenComplete((result, throwable) -> Instrumentation.shutdown());
     }
 
     @InternalUse

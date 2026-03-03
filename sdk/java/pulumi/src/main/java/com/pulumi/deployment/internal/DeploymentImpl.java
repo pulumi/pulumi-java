@@ -1907,6 +1907,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
             standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
 
+            // Initialize OpenTelemetry tracing if TRACEPARENT is present
+            Instrumentation.initialize();
+
             Function<RuntimeException, RuntimeException> startErrorSupplier =
                     e -> new IllegalArgumentException(
                             "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e

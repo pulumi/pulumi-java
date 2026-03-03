@@ -125,6 +125,7 @@ public class ResourcePackages {
                 && !c.getPackageName().equals("kotlin")
                 && !c.getPackageName().startsWith("kotlin.")
                 && !c.getPackageName().startsWith("io.grpc")
+                && !c.getPackageName().startsWith("okhttp3.")
                 && !c.getPackageName().startsWith("com.google.common")
                 && !c.getPackageName().startsWith("com.google.rpc")
                 && !c.getPackageName().startsWith("com.google.protobuf")
