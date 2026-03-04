@@ -73,23 +73,23 @@ lint_pkg_dependencies:
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
 test_example.%:	bin/pulumi-language-java
-	cd tests/examples && PATH="${PWD}/bin:${PATH}" go test -run "TestExamples/^$*$$" -test.v
+	cd tests/examples && PATH="${PWD}/bin:${PATH}" go test -run "TestExamples/^$*$$"
 
 # Test a single template, e.g.:
 #     make test_template.java-gradle
 test_template.%: bin/pulumi-language-java
-	cd tests/templates && PATH="${PWD}/bin:${PATH}" go test -run "TestTemplates/^$*$$" -test.v
+	cd tests/templates && PATH="${PWD}/bin:${PATH}" go test -run "TestTemplates/^$*$$"
 
 test_templates: bin/pulumi-language-java
-	cd tests/templates && PATH="${PWD}/bin:${PATH}" go test -test.v
+	cd tests/templates && PATH="${PWD}/bin:${PATH}" go test
 
 # Test a single integration, s.g.:
 #     make test_integration.stack-reference
 test_integration.%: bin/pulumi-language-java
-	cd tests/integration && PATH="${PWD}/bin:${PATH}" go test -run "TestIntegrations/^$*$$" -test.v
+	cd tests/integration && PATH="${PWD}/bin:${PATH}" go test -run "TestIntegrations/^$*$$"
 
 test_integrations: bin/pulumi-language-java
-	cd tests/integration && PATH="${PWD}/bin:${PATH}" go test -test.v
+	cd tests/integration && PATH="${PWD}/bin:${PATH}" go test
 
 codegen_tests::
 	cd ./pkg/codegen/java && go test ./...
