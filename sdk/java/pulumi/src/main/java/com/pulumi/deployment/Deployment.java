@@ -15,6 +15,9 @@ import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
+/**
+ * Provides the deployment context and core operations.
+ */
 @InternalUse
 public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutputs {
 

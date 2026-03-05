@@ -11,6 +11,9 @@ public abstract class Asset extends AssetOrArchive {
         super(Constants.SpecialAssetSig, propName, value);
     }
 
+    /**
+     * An InvalidAsset is an internal class for uninitialized or invalid {@link Asset}
+     */
     @InternalUse
     public static final class InvalidAsset extends Asset {
         public InvalidAsset() {
