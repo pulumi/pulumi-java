@@ -1,4 +1,4 @@
 [submodule "pulumi"]
 	path = pulumi
 	url = https://github.com/pulumi/pulumi
-	branch = v3.225.0
+	branch = v3.225.1
