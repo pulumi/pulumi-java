@@ -10,7 +10,7 @@ require (
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/golang/protobuf v1.5.4
 	github.com/hashicorp/hcl/v2 v2.24.0
-	github.com/hexops/autogold/v2 v2.2.1
+	github.com/hexops/autogold/v2 v2.3.1
 	github.com/pkg/errors v0.9.1
 	github.com/pulumi/pulumi/pkg/v3 v3.225.0
 	github.com/pulumi/pulumi/sdk/v3 v3.225.0
@@ -94,7 +94,7 @@ require (
 	github.com/edsrzf/mmap-go v1.1.0 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
-	github.com/fatih/color v1.16.0 // indirect
+	github.com/fatih/color v1.18.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/git-pkgs/manifests v0.4.1 // indirect
 	github.com/git-pkgs/packageurl-go v0.2.1 // indirect
@@ -135,7 +135,7 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/vault/api v1.12.0 // indirect
 	github.com/hexops/gotextdiff v1.0.3 // indirect
-	github.com/hexops/valast v1.4.4 // indirect
+	github.com/hexops/valast v1.5.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
@@ -146,7 +146,7 @@ require (
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/lucasb-eyer/go-colorful v1.3.0 // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-localereader v0.0.1 // indirect
 	github.com/mattn/go-runewidth v0.0.20 // indirect
@@ -213,7 +213,7 @@ require (
 	gocloud.dev v0.37.0 // indirect
 	gocloud.dev/secrets/hashivault v0.37.0 // indirect
 	golang.org/x/crypto v0.48.0 // indirect
-	golang.org/x/mod v0.32.0 // indirect
+	golang.org/x/mod v0.33.0 // indirect
 	golang.org/x/net v0.51.0 // indirect
 	golang.org/x/oauth2 v0.35.0 // indirect
 	golang.org/x/sys v0.41.0 // indirect
@@ -228,7 +228,7 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260226221140-a57be14db171 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	lukechampine.com/frand v1.5.1 // indirect
-	mvdan.cc/gofumpt v0.5.0 // indirect
+	mvdan.cc/gofumpt v0.9.2 // indirect
 )
 
 tool github.com/pulumi/pulumi/pkg/v3/testing/pulumi-test-language
