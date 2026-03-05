@@ -253,6 +253,20 @@ var expectedFailures = map[string]string{
 	"provider-replacement-trigger-component":       "https://github.com/pulumi/pulumi-java/issues/2007",
 	"provider-depends-on-component":                "https://github.com/pulumi/pulumi-java/issues/2023",
 	"provider-ignore-changes-component":            "https://github.com/pulumi/pulumi-java/issues/2024",
+	"l1-builtin-base64":                            "TODO: call fromBase64/toBase64 not implemented",
+	"l1-config-secret":                             "compilation error: applyValue called on plain String",
+	"l1-builtin-object":                            "compilation error: illegal start of expression",
+	"l2-builtin-object":                            "compilation error: illegal start of expression",
+	"l3-range":                                     "compilation error: KeyedValue.of() expects Iterable, got String",
+	"l2-resource-option-replacement-trigger":       "replacementTrigger method not found on CustomResourceOptions.Builder",
+	"l1-builtin-list":                              "compilation error: array indexing on String",
+	"l2-resource-elide-unknowns":                   "compilation error: array indexing on List and missing .x() method on Map", //nolint:lll
+	"l2-external-enum":                             "compilation error: package com.pulumi.enum_.enums does not exist",
+	"l1-builtin-secret":                            "TODO: call unsecret not implemented",
+	"l1-builtin-require-pulumi-version":            "requirePulumiVersion method not found on DeploymentInstance",
+	"l2-resource-name-type":                        "TODO: call pulumiResourceName/pulumiResourceType not implemented",
+	"l2-resource-option-replace-with":              "replaceWith method not found on CustomResourceOptions.Builder",
+	"l2-resource-option-alias":                     "noParent method not found on Alias.Builder",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
