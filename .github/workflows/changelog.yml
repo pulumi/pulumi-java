@@ -11,7 +11,7 @@ jobs:
   check-changelog:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Setup mise and install tools
         uses: jdx/mise-action@v3.4.0
       - name: Verify
