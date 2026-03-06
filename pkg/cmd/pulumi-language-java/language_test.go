@@ -56,6 +56,7 @@ func TestLanguage(t *testing.T) {
 			host := newLanguageHost(
 				engineAddress,
 				"", /*tracing*/
+				"", /*otel*/
 			)
 
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)

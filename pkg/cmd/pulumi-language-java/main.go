@@ -36,6 +36,10 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/propagation"
+	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
@@ -63,7 +67,19 @@ func main() {
 	var cancelChannel chan bool
 	args := flag.Args()
 	logging.InitLogging(false, 0, false)
-	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
+
+	// Use OTel when the CLI provides an OTLP endpoint; fall back to
+	// OpenTracing otherwise.  Only one system should be active to avoid
+	// duplicate spans.
+	otelEndpoint := os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
+	if otelEndpoint == "" {
+		cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
+	} else {
+		if err := cmdutil.InitOtelTracing("pulumi-language-java", otelEndpoint); err != nil {
+			logging.V(3).Infof("failed to initialize OTel tracing: %v", err)
+		}
+		defer cmdutil.CloseOtelTracing()
+	}
 
 	// Optionally pluck out the engine so we can do logging, etc.
 	var engineAddress string
@@ -80,10 +96,11 @@ func main() {
 	handle, err := rpcutil.ServeWithOptions(rpcutil.ServeOptions{
 		Cancel: cancelChannel,
 		Init: func(srv *grpc.Server) error {
-			host := newLanguageHost(engineAddress, tracing)
+			host := newLanguageHost(engineAddress, tracing, otelEndpoint)
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
 			return nil
 		},
+		Options: rpcutil.TracingServerInterceptorOptions(nil),
 	})
 	if err != nil {
 		cmdutil.Exit(errors.Wrapf(err, "could not start language host RPC server"))
@@ -127,14 +144,16 @@ type javaLanguageHost struct {
 
 	engineAddress string
 	tracing       string
+	otelEndpoint  string
 }
 
 func newLanguageHost(
-	engineAddress, tracing string,
+	engineAddress, tracing, otelEndpoint string,
 ) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
 		engineAddress: engineAddress,
 		tracing:       tracing,
+		otelEndpoint:  otelEndpoint,
 	}
 }
 
@@ -370,6 +389,14 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 		logging.V(5).Infoln("Language host launching process: ", executable, commandStr)
 	}
 
+	tracer := otel.Tracer("pulumi-language-java")
+	ctx, otelSpan := cmdutil.StartSpan(ctx, tracer, "execJava",
+		trace.WithAttributes(
+			attribute.String("component", "exec.Command"),
+			attribute.StringSlice("args", args),
+		))
+	defer otelSpan.End()
+
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
@@ -387,7 +414,18 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 
 	tr := io.TeeReader(pr, &stdoutBuf)
 
-	cmd.Env = host.constructEnv(req, config, configSecretKeys)
+	env := host.constructEnv(req, config, configSecretKeys)
+
+	carrier := make(propagation.MapCarrier)
+	otel.GetTextMapPropagator().Inject(ctx, carrier)
+	if traceparent := carrier.Get("traceparent"); traceparent != "" {
+		env = append(env, "TRACEPARENT="+traceparent)
+	}
+	if host.otelEndpoint != "" {
+		env = append(env, "OTEL_EXPORTER_OTLP_ENDPOINT="+host.otelEndpoint)
+	}
+
+	cmd.Env = env
 	go func() {
 		err := WaitForDebuggerReady(tr)
 		if err != nil {
@@ -681,6 +719,10 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	}
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory) //nolint:staticcheck
+
+	tracer := otel.Tracer("pulumi-language-java")
+	_, otelSpan := cmdutil.StartSpan(server.Context(), tracer, "java-install-deps")
+	defer otelSpan.End()
 
 	closer, stdout, stderr, err := rpcutil.MakeInstallDependenciesStreams(server, req.IsTerminal)
 	if err != nil {
