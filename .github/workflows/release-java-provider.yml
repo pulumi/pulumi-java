@@ -19,7 +19,7 @@ jobs:
         run: |
           git fetch --quiet --prune --unshallow --tags
       - name: Setup mise and install tools
-        uses: jdx/mise-action@v3.4.0
+        uses: jdx/mise-action@v3.6.2
       - name: Get the latest version
         id: latest
         uses: miniscruff/changie-action@v2
