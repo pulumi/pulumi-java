@@ -3,6 +3,8 @@ package com.pulumi.core.internal;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.DeploymentInstance;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
+import io.opentelemetry.context.Context;
+import io.opentelemetry.context.Scope;
 
 import javax.annotation.Nonnull;
 import java.util.concurrent.*;
@@ -25,12 +27,15 @@ import java.util.function.*;
 public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
 {
     private final DeploymentInstance   context;
+    private final Context              otelContext;
     private final CompletableFuture<T> future;
 
     private ContextAwareCompletableFuture(DeploymentInstance context,
+                                          Context otelContext,
                                           CompletableFuture<T> future)
     {
         this.context = context;
+        this.otelContext = otelContext;
         this.future = future;
     }
 
@@ -62,7 +67,7 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
             return future;
         }
 
-        var wrapped = new ContextAwareCompletableFuture<>(context, future);
+        var wrapped = new ContextAwareCompletableFuture<>(context, Context.current(), future);
         wrapped.link();
         return wrapped;
     }
@@ -74,7 +79,7 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
             return future;
         }
 
-        var wrapped = new ContextAwareCompletableFuture<>(context, future);
+        var wrapped = new ContextAwareCompletableFuture<>(context, otelContext, future);
         wrapped.link();
         return wrapped;
     }
@@ -82,6 +87,7 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     private static <T> Supplier<T> wrap(Supplier<T> callback)
     {
         var context = DeploymentInstanceHolder.getInstanceNoThrow();
+        var otelCtx = Context.current();
         if (context == null)
         {
             return callback;
@@ -90,7 +96,7 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
         return () ->
         {
             DeploymentInstanceHolder.setInstance(context);
-            try
+            try (Scope scope = otelCtx.makeCurrent())
             {
                 return callback.get();
             }
@@ -104,6 +110,7 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     private static Runnable wrap(Runnable callback)
     {
         var context = DeploymentInstanceHolder.getInstanceNoThrow();
+        var otelCtx = Context.current();
         if (context == null)
         {
             return callback;
@@ -112,7 +119,7 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
         return () ->
         {
             DeploymentInstanceHolder.setInstance(context);
-            try
+            try (Scope scope = otelCtx.makeCurrent())
             {
                 callback.run();
             }
@@ -159,19 +166,35 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
         return wrap(future);
     }
 
-    @Override
-    public T get() throws InterruptedException, ExecutionException
+    /**
+     * Restore both the Pulumi DeploymentInstance and OTel context on the current thread.
+     * Returns a Scope that must be closed to restore the previous OTel context.
+     */
+    private Scope restoreContexts()
     {
         DeploymentInstanceHolder.setInstance(context);
-        return super.get();
+        return otelContext.makeCurrent();
     }
 
     @Override
+    @SuppressWarnings("try")
+    public T get() throws InterruptedException, ExecutionException
+    {
+        try (Scope scope = restoreContexts())
+        {
+            return super.get();
+        }
+    }
+
+    @Override
+    @SuppressWarnings("try")
     public T get(long timeout,
                  TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException
     {
-        DeploymentInstanceHolder.setInstance(context);
-        return super.get(timeout, unit);
+        try (Scope scope = restoreContexts())
+        {
+            return super.get(timeout, unit);
+        }
     }
 
     @Override
@@ -181,24 +204,33 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     }
 
     @Override
+    @SuppressWarnings("try")
     public T getNow(T valueIfAbsent)
     {
-        DeploymentInstanceHolder.setInstance(context);
-        return super.getNow(valueIfAbsent);
+        try (Scope scope = restoreContexts())
+        {
+            return super.getNow(valueIfAbsent);
+        }
     }
 
     @Override
+    @SuppressWarnings("try")
     public boolean complete(T value)
     {
-        DeploymentInstanceHolder.setInstance(context);
-        return super.complete(value);
+        try (Scope scope = restoreContexts())
+        {
+            return super.complete(value);
+        }
     }
 
     @Override
+    @SuppressWarnings("try")
     public boolean completeExceptionally(Throwable ex)
     {
-        DeploymentInstanceHolder.setInstance(context);
-        return super.completeExceptionally(ex);
+        try (Scope scope = restoreContexts())
+        {
+            return super.completeExceptionally(ex);
+        }
     }
 
     @Override
@@ -207,8 +239,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.thenApply(v ->
                                                      {
-                                                         DeploymentInstanceHolder.setInstance(context);
-                                                         return fn.apply(v);
+                                                         try (Scope scope = restoreContexts())
+                                                         {
+                                                             return fn.apply(v);
+                                                         }
                                                      });
 
         return wrapIfNeeded(inner);
@@ -228,8 +262,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.thenApplyAsync(v ->
                                                           {
-                                                              DeploymentInstanceHolder.setInstance(context);
-                                                              return fn.apply(v);
+                                                              try (Scope scope = restoreContexts())
+                                                              {
+                                                                  return fn.apply(v);
+                                                              }
                                                           }, executor);
 
         return wrapIfNeeded(inner);
@@ -241,8 +277,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         var inner = super.thenAccept(v ->
                                      {
-                                         DeploymentInstanceHolder.setInstance(context);
-                                         action.accept(v);
+                                         try (Scope scope = restoreContexts())
+                                         {
+                                             action.accept(v);
+                                         }
                                      });
 
         return wrapIfNeeded(inner);
@@ -262,8 +300,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         var inner = super.thenAcceptAsync(v ->
                                           {
-                                              DeploymentInstanceHolder.setInstance(context);
-                                              action.accept(v);
+                                              try (Scope scope = restoreContexts())
+                                              {
+                                                  action.accept(v);
+                                              }
                                           }, executor);
 
         return wrapIfNeeded(inner);
@@ -275,8 +315,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         var inner = super.thenRun(() ->
                                   {
-                                      DeploymentInstanceHolder.setInstance(context);
-                                      action.run();
+                                      try (Scope scope = restoreContexts())
+                                      {
+                                          action.run();
+                                      }
                                   });
 
         return wrapIfNeeded(inner);
@@ -296,8 +338,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         var inner = super.thenRunAsync(() ->
                                        {
-                                           DeploymentInstanceHolder.setInstance(context);
-                                           action.run();
+                                           try (Scope scope = restoreContexts())
+                                           {
+                                               action.run();
+                                           }
                                        }, executor);
 
         return wrapIfNeeded(inner);
@@ -310,8 +354,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<V> inner = super.thenCombine(other, (v, t) ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            return fn.apply(v, t);
+            try (Scope scope = restoreContexts())
+            {
+                return fn.apply(v, t);
+            }
         });
 
         return wrapIfNeeded(inner);
@@ -333,8 +379,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<V> inner = super.thenCombineAsync(other, (v, t) ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            return fn.apply(v, t);
+            try (Scope scope = restoreContexts())
+            {
+                return fn.apply(v, t);
+            }
         }, executor);
 
         return wrapIfNeeded(inner);
@@ -347,8 +395,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.thenAcceptBoth(other, (v, t) ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.accept(v, t);
+            try (Scope scope = restoreContexts())
+            {
+                action.accept(v, t);
+            }
         });
 
         return wrapIfNeeded(inner);
@@ -370,8 +420,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.thenAcceptBothAsync(other, (v, t) ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.accept(v, t);
+            try (Scope scope = restoreContexts())
+            {
+                action.accept(v, t);
+            }
         }, executor);
 
         return wrapIfNeeded(inner);
@@ -384,8 +436,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.runAfterBoth(other, () ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.run();
+            try (Scope scope = restoreContexts())
+            {
+                action.run();
+            }
         });
 
         return wrapIfNeeded(inner);
@@ -407,8 +461,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.runAfterBothAsync(other, () ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.run();
+            try (Scope scope = restoreContexts())
+            {
+                action.run();
+            }
         }, executor);
 
         return wrapIfNeeded(inner);
@@ -421,8 +477,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.applyToEither(other, v ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            return fn.apply(v);
+            try (Scope scope = restoreContexts())
+            {
+                return fn.apply(v);
+            }
         });
 
         return wrapIfNeeded(inner);
@@ -444,8 +502,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.applyToEitherAsync(other, v ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            return fn.apply(v);
+            try (Scope scope = restoreContexts())
+            {
+                return fn.apply(v);
+            }
         }, executor);
 
         return wrapIfNeeded(inner);
@@ -458,8 +518,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.acceptEither(other, v ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.accept(v);
+            try (Scope scope = restoreContexts())
+            {
+                action.accept(v);
+            }
         });
 
         return wrapIfNeeded(inner);
@@ -481,8 +543,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.acceptEitherAsync(other, v ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.accept(v);
+            try (Scope scope = restoreContexts())
+            {
+                action.accept(v);
+            }
         }, executor);
 
         return wrapIfNeeded(inner);
@@ -495,8 +559,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.runAfterEither(other, () ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.run();
+            try (Scope scope = restoreContexts())
+            {
+                action.run();
+            }
         });
 
         return wrapIfNeeded(inner);
@@ -518,8 +584,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<Void> inner = super.runAfterEitherAsync(other, () ->
         {
-            DeploymentInstanceHolder.setInstance(context);
-            action.run();
+            try (Scope scope = restoreContexts())
+            {
+                action.run();
+            }
         }, executor);
 
         return wrapIfNeeded(inner);
@@ -531,8 +599,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.thenCompose((v) ->
                                                        {
-                                                           DeploymentInstanceHolder.setInstance(context);
-                                                           return fn.apply(v);
+                                                           try (Scope scope = restoreContexts())
+                                                           {
+                                                               return fn.apply(v);
+                                                           }
                                                        });
 
         return wrapIfNeeded(inner);
@@ -552,8 +622,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.thenComposeAsync((v) ->
                                                             {
-                                                                DeploymentInstanceHolder.setInstance(context);
-                                                                return fn.apply(v);
+                                                                try (Scope scope = restoreContexts())
+                                                                {
+                                                                    return fn.apply(v);
+                                                                }
                                                             }, executor);
 
         return wrapIfNeeded(inner);
@@ -565,8 +637,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<T> inner = super.whenComplete((v, t) ->
                                                         {
-                                                            DeploymentInstanceHolder.setInstance(context);
-                                                            action.accept(v, t);
+                                                            try (Scope scope = restoreContexts())
+                                                            {
+                                                                action.accept(v, t);
+                                                            }
                                                         });
 
         return wrapIfNeeded(inner);
@@ -586,8 +660,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<T> inner = super.whenCompleteAsync((v, t) ->
                                                              {
-                                                                 DeploymentInstanceHolder.setInstance(context);
-                                                                 action.accept(v, t);
+                                                                 try (Scope scope = restoreContexts())
+                                                                 {
+                                                                     action.accept(v, t);
+                                                                 }
                                                              }, executor);
 
         return wrapIfNeeded(inner);
@@ -599,8 +675,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.handle((v, t) ->
                                                   {
-                                                      DeploymentInstanceHolder.setInstance(context);
-                                                      return fn.apply(v, t);
+                                                      try (Scope scope = restoreContexts())
+                                                      {
+                                                          return fn.apply(v, t);
+                                                      }
                                                   });
 
         return wrapIfNeeded(inner);
@@ -620,8 +698,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<U> inner = super.handleAsync((v, t) ->
                                                        {
-                                                           DeploymentInstanceHolder.setInstance(context);
-                                                           return fn.apply(v, t);
+                                                           try (Scope scope = restoreContexts())
+                                                           {
+                                                               return fn.apply(v, t);
+                                                           }
                                                        }, executor);
 
         return wrapIfNeeded(inner);
@@ -633,8 +713,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<T> inner = super.exceptionally(v ->
                                                          {
-                                                             DeploymentInstanceHolder.setInstance(context);
-                                                             return fn.apply(v);
+                                                             try (Scope scope = restoreContexts())
+                                                             {
+                                                                 return fn.apply(v);
+                                                             }
                                                          });
 
         return wrapIfNeeded(inner);
@@ -668,8 +750,10 @@ public class ContextAwareCompletableFuture<T> extends CompletableFuture<T>
     {
         CompletableFuture<T> inner = super.completeAsync(() ->
                                                          {
-                                                             DeploymentInstanceHolder.setInstance(context);
-                                                             return supplier.get();
+                                                             try (Scope scope = restoreContexts())
+                                                             {
+                                                                 return supplier.get();
+                                                             }
                                                          }, executor);
 
         return wrapIfNeeded(inner);

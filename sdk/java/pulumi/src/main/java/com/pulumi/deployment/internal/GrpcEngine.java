@@ -24,13 +24,15 @@ public class GrpcEngine implements Engine {
     public GrpcEngine(String engine) {
         // maxRpcMessageSize raises the gRPC Max Message size from `4194304` (4mb) to `419430400` (400mb)
         var maxRpcMessageSizeInBytes = 400 * 1024 * 1024;
-        this.engine = newFutureStub(
-                ManagedChannelBuilder
-                        .forTarget(engine)
-                        .usePlaintext() // disable TLS
-                        .maxInboundMessageSize(maxRpcMessageSizeInBytes)
-                        .build()
-        );
+        var channelBuilder = ManagedChannelBuilder
+                .forTarget(engine)
+                .usePlaintext() // disable TLS
+                .maxInboundMessageSize(maxRpcMessageSizeInBytes);
+        var interceptor = Instrumentation.getClientInterceptor();
+        if (interceptor != null) {
+            channelBuilder.intercept(interceptor);
+        }
+        this.engine = newFutureStub(channelBuilder.build());
     }
 
     @Override

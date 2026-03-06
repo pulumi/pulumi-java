@@ -30,13 +30,15 @@ public class GrpcMonitor implements Monitor {
     public GrpcMonitor(String monitor) {
         // maxRpcMessageSize raises the gRPC Max Message size from `4194304` (4mb) to `419430400` (400mb)
         var maxRpcMessageSizeInBytes = 400 * 1024 * 1024;
-        this.monitor = newFutureStub(
-                ManagedChannelBuilder
-                        .forTarget(monitor)
-                        .usePlaintext() // disable TLS
-                        .maxInboundMessageSize(maxRpcMessageSizeInBytes)
-                        .build()
-        );
+        var channelBuilder = ManagedChannelBuilder
+                .forTarget(monitor)
+                .usePlaintext() // disable TLS
+                .maxInboundMessageSize(maxRpcMessageSizeInBytes);
+        var interceptor = Instrumentation.getClientInterceptor();
+        if (interceptor != null) {
+            channelBuilder.intercept(interceptor);
+        }
+        this.monitor = newFutureStub(channelBuilder.build());
     }
 
     @Override
