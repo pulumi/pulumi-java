@@ -57,7 +57,7 @@ public final class Instrumentation {
             var tracerProviderBuilder = SdkTracerProvider.builder()
                     .setResource(resourceBuilder);
 
-            var otlpEndpoint = System.getenv("OTEL_EXPORTER_OTLP_ENDPOINT");
+            var otlpEndpoint = System.getenv("PULUMI_OTEL_EXPORTER_OTLP_ENDPOINT");
             if (otlpEndpoint != null && !otlpEndpoint.isEmpty()) {
                 var exporter = OtlpGrpcSpanExporter.builder()
                         .setEndpoint("http://" + otlpEndpoint)
