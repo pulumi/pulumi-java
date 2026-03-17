@@ -8,7 +8,7 @@ import static com.pulumi.resources.Resources.mergeNullableList;
 import static java.util.Objects.requireNonNull;
 
 /**
- * @see StackOptions is a bag of optional settings that control a stack's behavior.
+ * {@link StackOptions} is a bag of optional settings that control a stack's behavior.
  */
 @ParametersAreNonnullByDefault
 public class StackOptions {
