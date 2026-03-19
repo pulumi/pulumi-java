@@ -187,7 +187,6 @@ var expectedFailures = map[string]string{
 	"l1-builtin-stash":                             "test failing",
 	"l1-stack-reference":                           "test failing",
 	"l2-invoke-options":                            "test failing",
-	"l1-output-map":                                "test failing",
 	"l2-resource-keyword-overlap":                  "test failing",
 	"policy-simple":                                "test failing",
 	"l2-invoke-variants":                           "test failing",
