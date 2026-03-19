@@ -192,7 +192,6 @@ var expectedFailures = map[string]string{
 	"policy-simple":                                "test failing",
 	"l2-invoke-variants":                           "test failing",
 	"l2-union":                                     "test failing",
-	"l1-output-bool":                               "test failing",
 	"l2-resource-option-import":                    "test failing",
 	"l2-resource-option-retain-on-delete":          "test failing",
 	"l2-explicit-provider":                         "test failing",
