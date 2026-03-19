@@ -212,7 +212,6 @@ var expectedFailures = map[string]string{
 	"policy-config":                                "test failing",
 	"l2-explicit-parameterized-provider":           "test failing",
 	"l2-invoke-options-depends-on":                 "test failing",
-	"l1-output-number":                             "test failing",
 	"l2-resource-primitives":                       "test failing",
 	"l2-resource-simple":                           "test failing",
 	"policy-stack-config":                          "test failing",
