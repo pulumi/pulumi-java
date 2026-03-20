@@ -16,6 +16,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        ctx.export("cwdOutput", "TODO: call cwd");
+        ctx.export("cwdOutput", System.getProperty("user.dir"));
     }
 }
