@@ -452,6 +452,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "%v.output(%v)", expr.Args[0], expr.Args[1])
 	case "organization":
 		g.Fgen(w, "Deployment.getInstance().getOrganizationName()")
+	case "cwd":
+		g.Fgen(w, "System.getProperty(\"user.dir\")")
 	default:
 		g.genNYI(w, "call %v", expr.Name)
 	}
