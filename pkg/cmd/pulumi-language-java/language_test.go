@@ -196,7 +196,6 @@ var expectedFailures = map[string]string{
 	"l2-resource-option-protect":                   "test failing",
 	"l2-engine-update-options":                     "test failing",
 	"l2-target-up-with-new-dependency":             "test failing",
-	"l1-main":                                      "test failing",
 	"l1-builtin-project-root-main":                 "test failing",
 	"l2-failed-create-continue-on-error":           "test failing",
 	"l2-parameterized-resource-twice":              "test failing",
