@@ -220,7 +220,6 @@ var expectedFailures = map[string]string{
 	"l2-keywords":                                  "test failing",
 	"l2-large-string":                              "test failing",
 	"l2-ref-ref":                                   "test failing",
-	"l2-destroy":                                   "test failing",
 	"l2-invoke-dependencies":                       "test failing",
 	"l2-invoke-scalars":                            "not implemented",
 	"l2-invoke-output-only":                        "not implemented",
