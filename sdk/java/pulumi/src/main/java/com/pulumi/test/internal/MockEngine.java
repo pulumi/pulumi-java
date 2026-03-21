@@ -40,20 +40,6 @@ public class MockEngine implements Engine, CountingLogger {
     }
 
     @Override
-    public CompletableFuture<EngineOuterClass.SetRootResourceResponse> setRootResourceAsync(EngineOuterClass.SetRootResourceRequest request) {
-        if (rootResourceUrn.get() != null && !Objects.equals(rootResourceUrn.get(), request.getUrn())) {
-            throw new IllegalStateException(String.format(
-                    "An invalid attempt to set the root resource to '%s' while it's already set to '%s'",
-                    request.getUrn(), rootResourceUrn.get()
-            ));
-        }
-        rootResourceUrn.set(request.getUrn());
-
-
-        return CompletableFuture.completedFuture(EngineOuterClass.SetRootResourceResponse.newBuilder().build());
-    }
-
-    @Override
     public CompletableFuture<EngineOuterClass.GetRootResourceResponse> getRootResourceAsync(EngineOuterClass.GetRootResourceRequest request) {
         if (rootResourceUrn.get() == null) {
             throw new IllegalStateException("Root resource is not set");
