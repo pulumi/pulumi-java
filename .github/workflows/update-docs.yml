@@ -1,0 +1,32 @@
+name: Update Docs
+
+permissions:
+  id-token: write
+
+on:
+  release:
+    types:
+      - released
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-pulumi-java
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_BOT_TOKEN
+
+jobs:
+  update-docs:
+    name: Trigger docs update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch secrets from ESC
+        uses: pulumi/esc-action@v1
+      - name: Trigger pulumi/docs workflow
+        run: |
+          gh workflow run pulumi-java-sdk.yml \
+            --repo pulumi/docs \
+            --ref master \
+            -f version=${{ github.event.release.tag_name }}
+        env:
+          GITHUB_TOKEN: ${{ env.PULUMI_BOT_TOKEN }}
