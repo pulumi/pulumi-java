@@ -11,4 +11,3 @@ pluginManagement {
 }
 
 rootProject.name = "{{ .RootProjectName }}"
-include("lib")
