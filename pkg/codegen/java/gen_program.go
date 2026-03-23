@@ -1057,7 +1057,8 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.HideDiffs != nil ||
 		resource.Options.ReplaceWith != nil ||
 		resource.Options.ReplacementTrigger != nil ||
-		resource.Options.Aliases != nil
+		resource.Options.Aliases != nil ||
+		resource.Options.AdditionalSecretOutputs != nil
 }
 
 // genResourceOptionsImports generates imports for the `CustomResourceOptions` and `Alias` classes.
@@ -1162,6 +1163,23 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		}
 		if resource.Options.HideDiffs != nil {
 			genQuotedList("hideDiffs", resource.Options.HideDiffs)
+		}
+		if resource.Options.AdditionalSecretOutputs != nil {
+			g.genIndent(w)
+			g.Fgen(w, ".additionalSecretOutputs(")
+			switch expr := resource.Options.AdditionalSecretOutputs.(type) {
+			case *model.TupleConsExpression:
+				for index, v := range expr.Expressions {
+					g.Fgenf(w, "%v", v)
+					if index != len(expr.Expressions)-1 {
+						g.Fgen(w, ", ")
+					}
+				}
+			default:
+				g.Fgenf(w, "%v", resource.Options.AdditionalSecretOutputs)
+			}
+			g.Fgen(w, ")")
+			g.genNewline(w)
 		}
 		if resource.Options.ImportID != nil {
 			g.genIndent(w)
