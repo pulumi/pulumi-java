@@ -196,6 +196,7 @@ var expectedFailures = map[string]string{
 	"policy-stack-config":                          "test failing",
 	"policy-enforcement-config":                    "test failing",
 	"policy-remediate":                             "test failing",
+	"policy-invalid":                               "https://github.com/pulumi/pulumi-java/issues/1998",
 	"l2-invoke-scalars":                            "not implemented",
 	"l2-invoke-output-only":                        "not implemented",
 	"l2-parameterized-invoke":                      "not implemented",
