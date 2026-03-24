@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch secrets from ESC
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
       - name: Trigger pulumi/docs workflow
         run: |
           gh workflow run pulumi-java-sdk.yml \
