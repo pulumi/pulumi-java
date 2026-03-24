@@ -7,6 +7,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.plain.inputs.DataArgs;
+import com.pulumi.plain.inputs.InnerDataArgs;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,6 +23,13 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     public DataArgs data() {
         return this.data;
+    }
+
+    @Import(name="dataList")
+    private @Nullable List<InnerDataArgs> dataList;
+
+    public Optional<List<InnerDataArgs>> dataList() {
+        return Optional.ofNullable(this.dataList);
     }
 
     /**
@@ -42,6 +51,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     private ResourceArgs(ResourceArgs $) {
         this.data = $.data;
+        this.dataList = $.dataList;
         this.nonPlainData = $.nonPlainData;
     }
 
@@ -66,6 +76,15 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         public Builder data(DataArgs data) {
             $.data = data;
             return this;
+        }
+
+        public Builder dataList(@Nullable List<InnerDataArgs> dataList) {
+            $.dataList = dataList;
+            return this;
+        }
+
+        public Builder dataList(InnerDataArgs... dataList) {
+            return dataList(List.of(dataList));
         }
 
         /**
