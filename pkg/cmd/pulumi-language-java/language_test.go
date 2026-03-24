@@ -200,7 +200,6 @@ var expectedFailures = map[string]string{
 	"l2-invoke-scalars":                        "not implemented",
 	"l2-invoke-output-only":                    "not implemented",
 	"l2-parameterized-invoke":                  "not implemented",
-	"l2-resource-option-delete-before-replace": "https://github.com/pulumi/pulumi-java/issues/1990",
 	"l2-resource-option-replace-on-changes":    "https://github.com/pulumi/pulumi-java/issues/1992",
 	"l2-resource-option-custom-timeouts":       "https://github.com/pulumi/pulumi-java/issues/1994",
 	"l2-resource-option-version":               "https://github.com/pulumi/pulumi-java/issues/1995",
