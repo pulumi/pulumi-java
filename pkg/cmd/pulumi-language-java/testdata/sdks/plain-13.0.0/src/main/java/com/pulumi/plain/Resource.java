@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.plain.ResourceArgs;
 import com.pulumi.plain.Utilities;
 import com.pulumi.plain.outputs.Data;
+import com.pulumi.plain.outputs.InnerData;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -20,6 +22,12 @@ public class Resource extends com.pulumi.resources.CustomResource {
 
     public Output<Data> data() {
         return this.data;
+    }
+    @Export(name="dataList", refs={List.class,InnerData.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<InnerData>> dataList;
+
+    public Output<Optional<List<InnerData>>> dataList() {
+        return Codegen.optional(this.dataList);
     }
     /**
      * A non plain input to compare against the plain inputs, as well as testing plain/non-plain nesting.

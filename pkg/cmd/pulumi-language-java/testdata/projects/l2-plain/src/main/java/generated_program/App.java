@@ -49,5 +49,27 @@ public class App {
                 .build())
             .build());
 
+        var emptyListRes = new Resource("emptyListRes", ResourceArgs.builder()
+            .data(DataArgs.builder()
+                .innerData(InnerDataArgs.builder()
+                    .boolean_(false)
+                    .float_(0.0)
+                    .integer(0)
+                    .string("")
+                    .boolArray()
+                    .stringMap(Map.ofEntries(
+                    ))
+                    .build())
+                .boolean_(false)
+                .float_(0.0)
+                .integer(0)
+                .string("")
+                .boolArray()
+                .stringMap(Map.ofEntries(
+                ))
+                .build())
+            .dataList()
+            .build());
+
     }
 }

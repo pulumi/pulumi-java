@@ -563,7 +563,11 @@ func (g *generator) GenLiteralValueExpression(w io.Writer, expr *model.LiteralVa
 	case model.NumberType:
 		bf := expr.Value.AsBigFloat()
 		if i, acc := bf.Int64(); acc == big.Exact {
-			g.Fgenf(w, "%d", i)
+			if g.currentResourcePropertyType == schema.NumberType {
+				g.Fgenf(w, "%d.0", i)
+			} else {
+				g.Fgenf(w, "%d", i)
+			}
 		} else {
 			f, _ := bf.Float64()
 			g.Fgenf(w, "%g", f)
@@ -862,7 +866,6 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	if len(expr.Expressions) == 0 {
-		// empty list
 		closeList()
 		return
 	}
