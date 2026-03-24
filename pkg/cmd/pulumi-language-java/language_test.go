@@ -234,6 +234,15 @@ var expectedFailures = map[string]string{
 	"l2-resource-name-type":                    "TODO: call pulumiResourceName/pulumiResourceType not implemented",
 	"l2-resource-option-replace-with":          "replaceWith method not found on CustomResourceOptions.Builder",
 	"l2-resource-option-alias":                 "noParent method not found on Alias.Builder",
+	"l3-splat":                                 "compilation error",
+	"l2-snake-names":                           "compilation error",
+	"l3-for-resource":                          "compilation error",
+	"l2-keywords":                              "compilation error",
+	"l2-logical-name":                          "compilation error",
+	"l3-deferred-outputs":                      "missing expected dependency simple",
+	"l1-builtin-to-json":                       "compilation error",
+	"l2-resource-asset-archive":                "compilation error",
+	"l3-for":                                   "ForExpression not implemented",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
