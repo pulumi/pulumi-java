@@ -1051,10 +1051,12 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.DependsOn != nil ||
 		resource.Options.Parent != nil ||
 		resource.Options.Protect != nil ||
+		resource.Options.DeleteBeforeReplace != nil ||
 		resource.Options.RetainOnDelete != nil ||
 		resource.Options.ImportID != nil ||
 		resource.Options.Provider != nil ||
 		resource.Options.HideDiffs != nil ||
+		resource.Options.ReplaceOnChanges != nil ||
 		resource.Options.ReplaceWith != nil ||
 		resource.Options.ReplacementTrigger != nil ||
 		resource.Options.Aliases != nil ||
@@ -1133,6 +1135,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			g.Fgenf(w, ".retainOnDelete(%v)", resource.Options.RetainOnDelete)
 			g.genNewline(w)
 		}
+		if resource.Options.DeleteBeforeReplace != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".deleteBeforeReplace(%v)", resource.Options.DeleteBeforeReplace)
+			g.genNewline(w)
+		}
 		if resource.Options.Parent != nil {
 			g.genIndent(w)
 			g.Fgenf(w, ".parent(%v)", resource.Options.Parent)
@@ -1163,6 +1170,9 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		}
 		if resource.Options.HideDiffs != nil {
 			genQuotedList("hideDiffs", resource.Options.HideDiffs)
+		}
+		if resource.Options.ReplaceOnChanges != nil {
+			genQuotedList("replaceOnChanges", resource.Options.ReplaceOnChanges)
 		}
 		if resource.Options.AdditionalSecretOutputs != nil {
 			g.genIndent(w)
