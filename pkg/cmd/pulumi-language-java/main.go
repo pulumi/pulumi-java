@@ -295,7 +295,7 @@ type javaCommandResponse struct {
 }
 
 func (host *javaLanguageHost) runJavaCommand(
-	_ context.Context, dir, name string, args []string, quiet bool,
+	ctx context.Context, dir, name string, args []string, quiet bool,
 ) (javaCommandResponse, error) {
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -314,7 +314,7 @@ func (host *javaLanguageHost) runJavaCommand(
 	}
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
-	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
+	cmd := exec.CommandContext(ctx, name, args...) // nolint: gas // intentionally running dynamic program name.
 	if dir != "" {
 		cmd.Dir = dir
 	}
@@ -399,7 +399,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
-	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
+	cmd := exec.CommandContext(ctx, executable, args...) // nolint: gas // intentionally running dynamic program name.
 	cmd.Dir = req.Info.ProgramDirectory
 
 	var stdoutBuf bytes.Buffer
@@ -501,7 +501,7 @@ func (host *javaLanguageHost) RunPlugin(
 	commandStr := strings.Join(args, " ")
 	logging.V(5).Infof("Language host launching process: %s %s", executable, commandStr)
 
-	cmd := exec.Command(executable, args...)
+	cmd := exec.CommandContext(server.Context(), executable, args...)
 	cmd.Dir = req.Pwd
 	cmd.Env = req.Env
 	if req.GetAttachDebugger() {
@@ -731,7 +731,7 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	defer closer.Close()
 
 	// intentionally running dynamic program name.
-	cmd := exec.Command(executor.Cmd, executor.BuildArgs...) // nolint: gosec
+	cmd := exec.CommandContext(server.Context(), executor.Cmd, executor.BuildArgs...) // nolint: gosec
 	cmd.Dir = req.Info.ProgramDirectory
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
