@@ -1195,6 +1195,23 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		}
 		fprintf(w, "            ))\n")
 	}
+	replaceOnChangesProps, _ := r.ReplaceOnChanges()
+	replaceOnChangesStrings := schema.PropertyListJoinToString(replaceOnChangesProps,
+		func(x string) string { return x })
+	if len(replaceOnChangesStrings) > 0 {
+		fprintf(w, "            .replaceOnChanges(%s.of(\n", ctx.ref(names.List))
+		for i, p := range replaceOnChangesStrings {
+			fprintf(w, "                ")
+			fprintf(w, "%q", p)
+			isLastElement := i == len(replaceOnChangesStrings)-1
+			if isLastElement {
+				fprintf(w, "\n")
+			} else {
+				fprintf(w, ",\n")
+			}
+		}
+		fprintf(w, "            ))\n")
+	}
 
 	fprintf(w, "            .build();\n")
 	fprintf(w, "        return %s.merge(defaultOptions, options, id);\n", optionsType)
