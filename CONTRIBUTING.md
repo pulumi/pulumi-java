@@ -37,12 +37,10 @@ to make sure your issue is unique, to lighten the triage burden on our maintaine
 
 ### Setting up your development environment
 
-You will want to install the following on your machine:
+This repo uses [mise](https://mise.jdx.dev/) to manage tool versions (Go, JDK, Gradle, Maven, etc.). Install mise and run `mise install` to get the correct versions. See `.mise.toml` for the full list.
 
-- JDK 17
-- Gradle Build Tool 8.8
-- Apache Maven 3.8.4
-- Go 1.22
+You will also need:
+
 - Pulumi CLI 3.30.0 or higher
 
 ### Preparing a pull request
@@ -63,15 +61,9 @@ You will want to install the following on your machine:
 - `tests/examples` contain a few example programs and Go test
   automation that exercises them regularly in a CI context
 
-- `templates` define starter project templates
-
 - `pulumi` is a Git submodule reference to a copy of `pulumi/pulumi`
   with the purpose of consuming protobuf definitions that declare SDK
   and provider interfaces
-
-- `providers` contain Java SDKs built for major cloud providers using
-  the Pulumi codegen technology; the generated code is checked in to
-  assist reviewing changes through standard git diff tools
 
 ### Working with local dependencies
 
@@ -114,7 +106,7 @@ Every example is a valid Pulumi program that can be tested by manually
 doing `pulumi up` in the right folder.
 
 ```
-cd tests/exmaples/aws-java-webserver
+cd tests/examples/aws-java-webserver
 pulumi up
 ```
 
