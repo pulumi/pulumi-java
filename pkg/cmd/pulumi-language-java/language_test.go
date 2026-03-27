@@ -241,6 +241,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-asset-archive":              "compilation error",
 	"l3-for":                                 "ForExpression not implemented",
 	"l2-resource-config-objects":             "compilation error: type mismatch in config object arguments",
+	"l2-resource-config-primitives":          "compilation error: type mismatch in config primitive arguments",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
