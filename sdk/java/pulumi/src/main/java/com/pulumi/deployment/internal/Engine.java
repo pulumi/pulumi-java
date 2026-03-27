@@ -8,8 +8,6 @@ public interface Engine {
 
     CompletableFuture<Void> logAsync(LogRequest request);
 
-    CompletableFuture<SetRootResourceResponse> setRootResourceAsync(SetRootResourceRequest request);
-
     CompletableFuture<GetRootResourceResponse> getRootResourceAsync(GetRootResourceRequest request);
 
     CompletableFuture<RequirePulumiVersionResponse> requirePulumiVersionAsync(RequirePulumiVersionRequest request);
