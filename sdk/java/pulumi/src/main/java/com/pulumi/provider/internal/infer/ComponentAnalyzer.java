@@ -27,6 +27,11 @@ import java.util.List;
 import java.util.TreeSet;
 import java.util.Set;
 
+/**
+ * Analyzes Pulumi component resource classes to generate a provider schema.
+ * @see com.pulumi.provider.internal.schema.PackageSpec
+ * @see com.pulumi.resources.ComponentResource
+ */
 public final class ComponentAnalyzer {
     private final Metadata metadata;
     private final Map<String, ComplexTypeSpec> typeDefinitions = new HashMap<>();

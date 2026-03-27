@@ -19,6 +19,9 @@ public abstract class AssetOrArchive {
         this.value = requireNonNull(value);
     }
 
+    /**
+     * An AssetOrArchiveInternal is internal helper class of {@link AssetOrArchive}.
+     */
     public static final class AssetOrArchiveInternal {
 
         private final AssetOrArchive assetOrArchive;
