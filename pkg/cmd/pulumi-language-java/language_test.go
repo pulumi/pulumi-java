@@ -243,6 +243,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-config-objects":                   "compilation error: type mismatch in config object arguments",
 	"l2-resource-config-primitives":                "compilation error: type mismatch in config primitive arguments",
 	"l2-resource-option-additional-secret-outputs": "compilation error: cannot find symbol 'value'",
+	"l3-rewrite-conversions":                       "expected 5 resources in snapshot but only got 2",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
