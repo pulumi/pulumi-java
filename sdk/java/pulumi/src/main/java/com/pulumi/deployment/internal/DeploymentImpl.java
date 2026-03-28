@@ -174,6 +174,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return impl;
     }
 
+    @InternalUse
+    public void close() {
+        this.state.close();
+    }
+
     @Override
     @Nonnull
     public String getStackName() {
@@ -1396,6 +1401,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             packageRefFuture = ContextAwareCompletableFuture.wrap(packageRefFuture);
 
+            var resName = resource.pulumiResourceName();
             return packageRefFuture
                     .thenCompose(packageRef -> readOrRegisterResourceAsync(
                             resource,
@@ -1650,6 +1656,18 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         ));
                         return this.monitor.registerResourceAsync(resource, request)
                                 .thenApply(result -> {
+
+                                    // Check the result field for failures communicated via
+                                    // supportsResultReporting protocol.
+                                    if (result.getResult() == pulumirpc.Resource.Result.FAIL) {
+                                        throw new RuntimeException(String.format(
+                                                "resource registration failed: %s (%s)", name, type));
+                                    }
+                                    if (result.getResult() == pulumirpc.Resource.Result.SKIP) {
+                                        throw new RuntimeException(String.format(
+                                                "resource registration skipped: %s (%s)", name, type));
+                                    }
+
                                     log.debug(String.format(
                                             "Registering resource monitor end: t=%s, name=%s, custom=%s, remote=%s, result=%s",
                                             type, name, custom, remote, result
@@ -1702,7 +1720,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     )
                     .setRemote(remote)
                     .setRetainOnDelete(options.isRetainOnDelete())
-                    .setPackageRef(packageRef == null ? "" : packageRef);
+                    .setPackageRef(packageRef == null ? "" : packageRef)
+                    .setSupportsResultReporting(true);
 
             if (customOpts) {
                 request.addAllAdditionalSecretOutputs(((CustomResourceOptions) options).getAdditionalSecretOutputs());
@@ -1901,6 +1920,27 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         /**
+         * Shuts down gRPC channels to allow the JVM to exit cleanly.
+         * This is necessary because Maven's exec:java plugin intercepts System.exit()
+         * and waits for non-daemon threads (including gRPC transport threads) to finish.
+         */
+        @InternalUse
+        public void close() {
+            if (engine instanceof AutoCloseable) {
+                try {
+                    ((AutoCloseable) engine).close();
+                } catch (Exception ignore) {
+                }
+            }
+            if (monitor instanceof AutoCloseable) {
+                try {
+                    ((AutoCloseable) monitor).close();
+                } catch (Exception ignore) {
+                }
+            }
+        }
+
+        /**
          * @throws IllegalArgumentException if an environment variable is not found
          */
         public static DeploymentState fromEnvironment() {
@@ -2012,7 +2052,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             registerTask("DefaultRunner#runAsync", valueFuture);
             // loop starts after the callback
             return valueFuture
-                    .thenCompose(value -> whileRunningAsync().thenApply(__ -> value))
+                    .thenCompose(value -> {
+                        return whileRunningAsync().thenApply(__ -> {
+                            return value;
+                        });
+                    })
                     .handle((value, throwable) -> {
                         if (throwable != null) {
                             return handleExceptionAsync(throwable).thenApply(errorCode ->
@@ -2042,8 +2086,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Objects.requireNonNull(task);
             this.standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
 
-            // we don't need the result here, just the future itself
-            CompletableFuture<Void> key = task.thenApply(__ -> null);
+            // We don't need the result here, just the future itself.
+            CompletableFuture<Void> key = task.thenApply(__ -> (Void) null);
 
             // We may get several of the same tasks with different descriptions. That can
             // happen when the runtime reuses cached tasks that it knows are value-identical
@@ -2123,8 +2167,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             if (!inFlightTasks.isEmpty()) {
                 this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
 
-                // Grab all the tasks we currently have running.
-                for (var task : inFlightTasks.keySet()) {
+                // Grab a snapshot of the tasks we currently have running.
+                // Using a snapshot avoids ConcurrentHashMap iterator issues when
+                // handleCompletion removes entries during iteration.
+                for (var task : new java.util.ArrayList<>(inFlightTasks.keySet())) {
                     if (task.isDone()) {
                         // at this point the future is guaranteed to be solved
                         // so there won't be any blocking here
