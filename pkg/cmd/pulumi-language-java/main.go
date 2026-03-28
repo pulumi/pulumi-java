@@ -399,7 +399,9 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
-	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
+	// Use CommandContext so the process is killed when the engine cancels the Run RPC
+	// (e.g. when a resource creation fails and ContinueOnError is false).
+	cmd := exec.CommandContext(ctx, executable, args...) // nolint: gas // intentionally running dynamic program name.
 	cmd.Dir = req.Info.ProgramDirectory
 
 	var stdoutBuf bytes.Buffer
@@ -408,6 +410,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	// We need to process the output of the command to determine when the debugger is ready, but
 	// also want to tee the output to the engine so that it can be displayed to the user.
 	pr, pw := io.Pipe()
+	defer pw.Close()
 
 	cmd.Stdout = pw
 	cmd.Stderr = &stderrBuf
@@ -455,13 +458,15 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 		}
 	}()
 	if err := runCommand(cmd); err != nil {
-		// The command failed. Dump any data we collected to
-		// the actual stdout/stderr streams, so they get
-		// displayed to the user.
-		os.Stdout.Write(stdoutBuf.Bytes())
-		os.Stderr.Write(stderrBuf.Bytes())
+		if ctx.Err() == nil {
+			// The command failed for a reason other than context cancellation.
+			// Dump any data we collected to the actual stdout/stderr streams,
+			// so they get displayed to the user.
+			os.Stdout.Write(stdoutBuf.Bytes())
+			os.Stderr.Write(stderrBuf.Bytes())
 
-		errResult = err.Error()
+			errResult = err.Error()
+		}
 	}
 
 	return &pulumirpc.RunResponse{Error: errResult}, nil

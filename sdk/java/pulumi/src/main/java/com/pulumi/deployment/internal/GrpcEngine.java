@@ -2,6 +2,7 @@ package com.pulumi.deployment.internal;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.pulumi.core.internal.ContextAwareCompletableFuture;
+import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import pulumirpc.EngineGrpc;
 import pulumirpc.EngineOuterClass.GetRootResourceRequest;
@@ -13,13 +14,15 @@ import pulumirpc.EngineOuterClass.SetRootResourceRequest;
 import pulumirpc.EngineOuterClass.SetRootResourceResponse;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 import static net.javacrumbs.futureconverter.java8guava.FutureConverter.toCompletableFuture;
 import static pulumirpc.EngineGrpc.newFutureStub;
 
-public class GrpcEngine implements Engine {
+public class GrpcEngine implements Engine, AutoCloseable {
 
     private final EngineGrpc.EngineFutureStub engine;
+    private final ManagedChannel channel;
 
     public GrpcEngine(String engine) {
         // maxRpcMessageSize raises the gRPC Max Message size from `4194304` (4mb) to `419430400` (400mb)
@@ -32,7 +35,20 @@ public class GrpcEngine implements Engine {
         if (interceptor != null) {
             channelBuilder.intercept(interceptor);
         }
-        this.engine = newFutureStub(channelBuilder.build());
+        this.channel = channelBuilder.build();
+        this.engine = newFutureStub(this.channel);
+    }
+
+    @Override
+    public void close() {
+        channel.shutdown();
+        try {
+            if (!channel.awaitTermination(5, TimeUnit.SECONDS)) {
+                channel.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            channel.shutdownNow();
+        }
     }
 
     @Override

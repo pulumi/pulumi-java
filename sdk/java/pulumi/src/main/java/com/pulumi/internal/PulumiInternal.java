@@ -35,11 +35,19 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
 
     protected final Runner runner;
     protected final ContextInternal stackContext;
+    @javax.annotation.Nullable
+    protected final DeploymentImpl deployment;
 
     @InternalUse
     public PulumiInternal(Runner runner, ContextInternal stackContext) {
+        this(runner, stackContext, null);
+    }
+
+    @InternalUse
+    public PulumiInternal(Runner runner, ContextInternal stackContext, DeploymentImpl deployment) {
         this.runner = requireNonNull(runner);
         this.stackContext = requireNonNull(stackContext);
+        this.deployment = deployment;
     }
 
     @InternalUse
@@ -71,17 +79,32 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
         var ctx = new ContextInternal(
                 organizationName, projectName, stackName, logging, config, outputs, options.resourceTransformations()
         );
-        return new PulumiInternal(runner, ctx);
+        return new PulumiInternal(runner, ctx, deployment);
     }
 
     public void run(Consumer<Context> stack) {
-        System.exit(runAsync(stack).join());
+        int exitCode = 1;
+        try {
+            exitCode = runAsync(stack).join();
+        } catch (Exception e) {
+            exitCode = 1;
+        } finally {
+            if (deployment != null) {
+                deployment.close();
+            }
+        }
+        System.exit(exitCode);
     }
 
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
         return runAsyncResult(stackCallback)
                 .thenApply(r -> r.exitCode())
-                .whenComplete((result, throwable) -> Instrumentation.shutdown());
+                .whenComplete((result, throwable) -> {
+                    Instrumentation.shutdown();
+                    if (deployment != null) {
+                        deployment.close();
+                    }
+                });
     }
 
     @InternalUse
