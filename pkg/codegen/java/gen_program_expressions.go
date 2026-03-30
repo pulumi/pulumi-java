@@ -853,6 +853,8 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		}
 	}
 
+	hasNulls := tupleContainsNull(expr)
+
 	closeList := func() {
 		if g.currentResourcePropertyType == nil {
 			g.Fgen(w, ")")
@@ -860,9 +862,23 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	if g.currentResourcePropertyType == nil {
-		// we are dealing with an untyped array
-		// generate `List.of(...)`
-		g.Fgen(w, "List.of(")
+		// List.of() does not allow null elements in Java. If any element
+		// is null, use Arrays.asList() which permits nulls.
+		if hasNulls {
+			g.Fgen(w, "Arrays.asList(")
+		} else {
+			g.Fgen(w, "List.of(")
+		}
+	}
+
+	// genElement writes a list element, casting null literals to (Object) to
+	// avoid varargs ambiguity with Arrays.asList.
+	genElement := func(value model.Expression) {
+		if hasNulls && isNullLiteral(value) {
+			g.Fgen(w, "(Object) null")
+		} else {
+			g.Fgenf(w, "%.v", value)
+		}
 	}
 
 	if len(expr.Expressions) == 0 {
@@ -871,8 +887,7 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	if len(expr.Expressions) == 1 {
-		// simple case, just write the first element
-		g.Fgenf(w, "%.v", expr.Expressions[0])
+		genElement(expr.Expressions[0])
 		closeList()
 		return
 	}
@@ -882,19 +897,38 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	g.Indented(func() {
 		for index, value := range expr.Expressions {
 			if index == 0 {
-				// first expression, no need for a new line
-				g.Fgenf(w, "%s%.v,", g.Indent, value)
+				g.Fgenf(w, "%s", g.Indent)
+				genElement(value)
+				g.Fgen(w, ",")
 			} else if index == len(expr.Expressions)-1 {
-				// last element, no trailing comma
-				g.Fgenf(w, "\n%s%.v", g.Indent, value)
+				g.Fgenf(w, "\n%s", g.Indent)
+				genElement(value)
 			} else {
-				// elements in between: new line and trailing comma
-				g.Fgenf(w, "\n%s%.v,", g.Indent, value)
+				g.Fgenf(w, "\n%s", g.Indent)
+				genElement(value)
+				g.Fgen(w, ",")
 			}
 		}
 	})
 
 	closeList()
+}
+
+func isNullLiteral(e model.Expression) bool {
+	lit, ok := e.(*model.LiteralValueExpression)
+	if !ok {
+		return false
+	}
+	return lit.Type() == model.NoneType || lit.Value.IsNull()
+}
+
+func tupleContainsNull(expr *model.TupleConsExpression) bool {
+	for _, e := range expr.Expressions {
+		if isNullLiteral(e) {
+			return true
+		}
+	}
+	return false
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {
