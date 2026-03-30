@@ -915,7 +915,7 @@ func isNullLiteral(e model.Expression) bool {
 	if !ok {
 		return false
 	}
-	return lit.Type() == model.NoneType || lit.Value.IsNull()
+	return lit.Value.IsNull()
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {
