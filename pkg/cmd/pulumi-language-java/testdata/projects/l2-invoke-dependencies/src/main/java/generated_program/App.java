@@ -7,6 +7,7 @@ import com.pulumi.simple.Resource;
 import com.pulumi.simple.ResourceArgs;
 import com.pulumi.simpleinvoke.SimpleinvokeFunctions;
 import com.pulumi.simpleinvoke.inputs.SecretInvokeArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

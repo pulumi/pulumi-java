@@ -7,6 +7,7 @@ import com.pulumi.simple.Provider;
 import com.pulumi.simple.Resource;
 import com.pulumi.simple.ResourceArgs;
 import com.pulumi.resources.CustomResourceOptions;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

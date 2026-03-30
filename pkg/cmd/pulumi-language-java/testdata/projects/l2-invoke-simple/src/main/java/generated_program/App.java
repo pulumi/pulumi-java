@@ -5,6 +5,7 @@ import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.simpleinvoke.SimpleinvokeFunctions;
 import com.pulumi.simpleinvoke.inputs.MyInvokeArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

@@ -7,6 +7,7 @@ import com.pulumi.hipackage.HelloWorld;
 import com.pulumi.hipackage.HelloWorldComponent;
 import com.pulumi.byepackage.GoodbyeWorld;
 import com.pulumi.byepackage.GoodbyeWorldComponent;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

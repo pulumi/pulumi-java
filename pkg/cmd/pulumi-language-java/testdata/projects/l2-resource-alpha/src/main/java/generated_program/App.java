@@ -5,6 +5,7 @@ import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.alpha.Resource;
 import com.pulumi.alpha.ResourceArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

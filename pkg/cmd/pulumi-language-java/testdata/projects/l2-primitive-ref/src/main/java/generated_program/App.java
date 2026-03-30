@@ -6,6 +6,7 @@ import com.pulumi.core.Output;
 import com.pulumi.primitiveref.Resource;
 import com.pulumi.primitiveref.ResourceArgs;
 import com.pulumi.primitiveref.inputs.DataArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

@@ -8,6 +8,7 @@ import com.pulumi.goodbye.ProviderArgs;
 import com.pulumi.goodbye.Goodbye;
 import com.pulumi.goodbye.GoodbyeArgs;
 import com.pulumi.resources.CustomResourceOptions;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

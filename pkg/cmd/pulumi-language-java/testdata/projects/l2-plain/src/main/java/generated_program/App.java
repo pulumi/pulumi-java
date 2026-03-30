@@ -7,6 +7,7 @@ import com.pulumi.plain.Resource;
 import com.pulumi.plain.ResourceArgs;
 import com.pulumi.plain.inputs.DataArgs;
 import com.pulumi.plain.inputs.InnerDataArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
