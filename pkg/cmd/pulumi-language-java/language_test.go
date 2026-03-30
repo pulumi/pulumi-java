@@ -233,7 +233,7 @@ var expectedFailures = map[string]string{
 	"l3-splat":                                     "compilation error",
 	"l2-snake-names":                               "compilation error",
 	"l3-for-resource":                              "compilation error",
-	"l2-keywords":                                   "compilation error",
+	"l2-keywords":                                  "compilation error",
 	"l2-logical-name":                              "compilation error",
 	"l3-deferred-outputs":                          "missing expected dependency simple",
 	"l1-builtin-to-json":                           "compilation error",
