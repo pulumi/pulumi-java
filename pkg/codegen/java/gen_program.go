@@ -184,24 +184,6 @@ func hasIterableResources(nodes []pcl.Node) bool {
 	return false
 }
 
-func containsNullInTuple(nodes []pcl.Node) bool {
-	found := false
-	for _, node := range nodes {
-		diags := node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
-			tuple, ok := x.(*model.TupleConsExpression)
-			if !ok {
-				return x, nil
-			}
-			if tupleContainsNull(tuple) {
-				found = true
-			}
-			return x, nil
-		})
-		contract.Assertf(len(diags) == 0, "unexpected diagnostics: %v", diags)
-	}
-	return found
-}
-
 func containsRangeExpr(nodes []pcl.Node) bool {
 	return hasIterableResources(nodes) || containsFunctionCall("readDir", nodes)
 }
@@ -957,9 +939,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	g.genResourceOptionsImports(w, nodes)
 
-	if containsNullInTuple(nodes) {
-		g.genImport(w, "java.util.Arrays")
-	}
+	g.genImport(w, "java.util.Arrays")
 	g.genImport(w, "java.util.List")
 	g.genImport(w, "java.util.ArrayList")
 	g.genImport(w, "java.util.Map")

@@ -7,6 +7,7 @@ import com.pulumi.azure.core.CoreFunctions;
 import com.pulumi.azure.core.inputs.GetResourceGroupArgs;
 import com.pulumi.azure.storage.Account;
 import com.pulumi.azure.storage.AccountArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

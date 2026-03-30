@@ -853,8 +853,6 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		}
 	}
 
-	hasNulls := tupleContainsNull(expr)
-
 	closeList := func() {
 		if g.currentResourcePropertyType == nil {
 			g.Fgen(w, ")")
@@ -862,19 +860,14 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	if g.currentResourcePropertyType == nil {
-		// List.of() does not allow null elements in Java. If any element
-		// is null, use Arrays.asList() which permits nulls.
-		if hasNulls {
-			g.Fgen(w, "Arrays.asList(")
-		} else {
-			g.Fgen(w, "List.of(")
-		}
+		// Arrays.asList permits null elements; List.of does not.
+		g.Fgen(w, "Arrays.asList(")
 	}
 
-	// genElement writes a list element, casting null literals to (Object) to
-	// avoid varargs ambiguity with Arrays.asList.
+	// genElement writes a list element. Null literals must be cast to
+	// (Object) to avoid Arrays.asList varargs ambiguity.
 	genElement := func(value model.Expression) {
-		if hasNulls && isNullLiteral(value) {
+		if isNullLiteral(value) {
 			g.Fgen(w, "(Object) null")
 		} else {
 			g.Fgenf(w, "%.v", value)
@@ -897,13 +890,16 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	g.Indented(func() {
 		for index, value := range expr.Expressions {
 			if index == 0 {
+				// first expression, no need for a new line
 				g.Fgenf(w, "%s", g.Indent)
 				genElement(value)
 				g.Fgen(w, ",")
 			} else if index == len(expr.Expressions)-1 {
+				// last element, no trailing comma
 				g.Fgenf(w, "\n%s", g.Indent)
 				genElement(value)
 			} else {
+				// elements in between: new line and trailing comma
 				g.Fgenf(w, "\n%s", g.Indent)
 				genElement(value)
 				g.Fgen(w, ",")
@@ -920,15 +916,6 @@ func isNullLiteral(e model.Expression) bool {
 		return false
 	}
 	return lit.Type() == model.NoneType || lit.Value.IsNull()
-}
-
-func tupleContainsNull(expr *model.TupleConsExpression) bool {
-	for _, e := range expr.Expressions {
-		if isNullLiteral(e) {
-			return true
-		}
-	}
-	return false
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {

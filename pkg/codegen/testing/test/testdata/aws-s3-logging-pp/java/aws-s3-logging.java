@@ -8,6 +8,7 @@ import com.pulumi.aws.s3.BucketArgs;
 import com.pulumi.aws.s3.inputs.BucketLoggingArgs;
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

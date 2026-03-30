@@ -14,6 +14,7 @@ import com.pulumi.asset.FileAsset;
 import static com.pulumi.codegen.internal.Files.readDir;
 import static com.pulumi.codegen.internal.Serialization.*;
 import com.pulumi.codegen.internal.KeyedValue;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

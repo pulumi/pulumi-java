@@ -14,6 +14,7 @@ import com.pulumi.aws.ec2.NetworkAclArgs;
 import com.pulumi.aws.ec2.NetworkAclRule;
 import com.pulumi.aws.ec2.NetworkAclRuleArgs;
 import com.pulumi.aws.ec2.inputs.GetAmiIdsArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

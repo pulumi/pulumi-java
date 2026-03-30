@@ -6,6 +6,7 @@ import com.pulumi.core.Output;
 import com.pulumi.random.RandomPet;
 import com.pulumi.random.RandomPetArgs;
 import com.pulumi.resources.CustomResourceOptions;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

@@ -10,6 +10,7 @@ import com.pulumi.aws.AwsFunctions;
 import com.pulumi.aws.inputs.GetAmiArgs;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;

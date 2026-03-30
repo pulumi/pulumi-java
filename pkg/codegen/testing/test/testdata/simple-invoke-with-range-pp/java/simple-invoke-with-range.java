@@ -8,6 +8,7 @@ import com.pulumi.aws.inputs.GetAvailabilityZonesArgs;
 import com.pulumi.aws.ec2.Subnet;
 import com.pulumi.aws.ec2.SubnetArgs;
 import com.pulumi.codegen.internal.KeyedValue;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
