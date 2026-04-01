@@ -1,11 +1,11 @@
 on:
   push:
-    tags:
-      - v*.*.*
-    paths-ignore:
-      - "CHANGELOG.md"
-      - ".changes/**"
-      - "README.md"
+    branches: [main]
+    paths: [CHANGELOG.md]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
 
 env:
   GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
@@ -29,8 +29,24 @@ jobs:
         run: |
           echo GORELEASER_CURRENT_TAG=${{ steps.latest.outputs.output }} >> $GITHUB_ENV
           echo RELEASE_NOTES_PATH=.changes/${{ steps.latest.outputs.output }}.md >> $GITHUB_ENV
+      - name: Check if release exists
+        id: check-release
+        run: |
+          if [ -z "$(git tag -l ${{ env.GORELEASER_CURRENT_TAG }})" ]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Run GoReleaser
+        if: steps.check-release.outputs.exists == 'false'
         uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
           args: -p 3 -f .goreleaser.yml --clean --release-notes=${{ env.RELEASE_NOTES_PATH }}
+      - name: Push additional tags
+        if: steps.check-release.outputs.exists == 'false'
+        run: |
+          git tag pkg/${{ env.GORELEASER_CURRENT_TAG }}
+          git push origin pkg/${{ env.GORELEASER_CURRENT_TAG }}
+          git tag sdk/${{ env.GORELEASER_CURRENT_TAG }}
+          git push origin sdk/${{ env.GORELEASER_CURRENT_TAG }}

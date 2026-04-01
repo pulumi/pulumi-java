@@ -173,23 +173,14 @@ Here's some examples of what we're trying to avoid:
 
 ## Release Process
 
-To release a new version of `pulumi-java`, follow these steps:
+To release a new version of `pulumi-java`, use `changie` to update the
+changelog file and open a PR for that change. Once that PR merges, the
+release workflow will automatically create the GitHub release and push
+all necessary tags (`v*`, `pkg/v*`, `sdk/v*`).
 
-1. Use `changie` to update the changelog file and open a PR for that change. Once that PR merges it will trigger a release workflow.
-
-  ```shell
-  changie batch auto
-  changie merge
-  git add .
-  git commit -m "Changelog for $(changie latest)"
-  ```
-
-2. After the pull request is merged, push the release tags to the `main` branch
-  by running the [`release.sh`](./scripts/release.sh) script. Make sure you have
-  updated your local checkout of `origin/main` first.
-
-  ```shell
-  git checkout main
-  git pull origin main
-  ./scripts/release.sh "$(changie latest)"
-  ```
+```shell
+changie batch auto
+changie merge
+git add .
+git commit -m "Changelog for $(changie latest)"
+```
