@@ -42,7 +42,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
-          args: -p 3 -f .goreleaser.yml --clean --release-notes=${{ env.RELEASE_NOTES_PATH }}
+          args: -p 3 -f .goreleaser.yml --clean --skip=validate --release-notes=${{ env.RELEASE_NOTES_PATH }}
       - name: Push additional tags
         if: steps.check-release.outputs.exists == 'false'
         run: |
