@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: Emit integer numbers as floats so generated code compiles
+time: 2026-04-01T15:57:07.077884+02:00
+custom:
+    PR: "2102"

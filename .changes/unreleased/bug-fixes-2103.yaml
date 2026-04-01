@@ -1,0 +1,6 @@
+component: runtime
+kind: bug-fixes
+body: Do not leak java processes on failed resource creates
+time: 2026-04-01T15:56:17.293738+02:00
+custom:
+    PR: "2103"

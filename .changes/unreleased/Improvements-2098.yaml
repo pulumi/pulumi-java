@@ -1,0 +1,6 @@
+component: codegen
+kind: Improvements
+body: Support `additionalSecretOutputs` resource option in program generation
+time: 2026-04-01T16:00:00.000000+02:00
+custom:
+    PR: "2098"
