@@ -9,8 +9,6 @@ import pulumirpc.EngineOuterClass.GetRootResourceResponse;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.RequirePulumiVersionRequest;
 import pulumirpc.EngineOuterClass.RequirePulumiVersionResponse;
-import pulumirpc.EngineOuterClass.SetRootResourceRequest;
-import pulumirpc.EngineOuterClass.SetRootResourceResponse;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -38,11 +36,6 @@ public class GrpcEngine implements Engine {
     @Override
     public CompletableFuture<Void> logAsync(LogRequest request) {
         return toContextAwareCompletableFuture(this.engine.log(request)).thenApply(empty -> null);
-    }
-
-    @Override
-    public CompletableFuture<SetRootResourceResponse> setRootResourceAsync(SetRootResourceRequest request) {
-        return toContextAwareCompletableFuture(this.engine.setRootResource(request));
     }
 
     @Override
