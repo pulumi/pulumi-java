@@ -37,15 +37,20 @@ jobs:
           else
             echo "exists=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Create version tag
+        if: steps.check-release.outputs.exists == 'false'
+        run: |
+          git tag ${{ env.GORELEASER_CURRENT_TAG }}
       - name: Run GoReleaser
         if: steps.check-release.outputs.exists == 'false'
         uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
           args: -p 3 -f .goreleaser.yml --clean --release-notes=${{ env.RELEASE_NOTES_PATH }}
-      - name: Create and push additional tags
+      - name: Push release tags
         if: steps.check-release.outputs.exists == 'false'
         run: |
+          git push origin ${{ env.GORELEASER_CURRENT_TAG }}
           git tag pkg/${{ env.GORELEASER_CURRENT_TAG }}
           git push origin pkg/${{ env.GORELEASER_CURRENT_TAG }}
           git tag sdk/${{ env.GORELEASER_CURRENT_TAG }}
