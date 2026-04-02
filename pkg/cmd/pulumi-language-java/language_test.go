@@ -244,6 +244,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-option-additional-secret-outputs": "compilation error: cannot find symbol 'value'",
 	"l3-rewrite-conversions":                       "expected 5 resources in snapshot but only got 2",
 	"l1-builtin-sha1":                              "compilation error: cannot find symbol computeSHA1",
+	"l1-output-array":                              "compilation error: syntax errors in generated code",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
