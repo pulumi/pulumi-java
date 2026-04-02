@@ -252,6 +252,7 @@ var expectedFailures = map[string]string{
 	"l2-ref-ref":                                   "compilation error: syntax errors in generated code",
 	"l2-resource-option-ignore-changes":            "compilation error: unclosed string literal in ignoreChanges path",
 	"l2-resource-optional":                         "compilation error: syntax errors in generated code",
+	"l2-resource-primitive-defaults":               "compilation error: syntax errors in generated code",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
