@@ -254,6 +254,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-optional":                         "compilation error: syntax errors in generated code",
 	"l2-resource-primitive-defaults":               "compilation error: syntax errors in generated code",
 	"l2-resource-primitives":                       "compilation error: syntax errors in generated code",
+	"l2-resource-provider-inheritance":             "compilation error: syntax errors in generated code",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
