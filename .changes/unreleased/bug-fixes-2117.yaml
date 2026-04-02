@@ -1,0 +1,6 @@
+component: sdk
+kind: bug-fixes
+body: Fix javadoc encoding to UTF-8 so the core SDK can be packed on systems with non-UTF-8 default encoding.
+time: 2026-04-02T19:52:00.000000Z
+custom:
+    PR: "2117"
