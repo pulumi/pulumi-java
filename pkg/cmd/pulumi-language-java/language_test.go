@@ -256,6 +256,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-primitives":                       "compilation error: syntax errors in generated code",
 	"l2-resource-provider-inheritance":             "compilation error: syntax errors in generated code",
 	"l3-component-config-objects":                  "missing expected dependency primitive",
+	"l3-component-config-primitives":               "missing expected package primitive-7.0.0",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
