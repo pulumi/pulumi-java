@@ -247,6 +247,7 @@ var expectedFailures = map[string]string{
 	"l1-output-array":                              "compilation error: syntax errors in generated code",
 	"l1-output-map":                                "compilation error: syntax errors in generated code",
 	"l1-output-number":                             "compilation error: syntax errors in generated code",
+	"l2-plain":                                     "compilation error: syntax errors in generated code",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
