@@ -220,22 +220,28 @@ func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Ty
 		targetType = output.ElementType
 	}
 
-	if targetType.Equals(model.NumberType) {
+	if targetType.Equals(model.NumberType) || targetType.Equals(model.IntType) {
 		if schemaType, ok := pcl.GetSchemaForType(to); ok {
 			if inputType, ok := schemaType.(*schema.InputType); ok {
 				schemaType = inputType.ElementType
 			}
 
-			if expr, ok := from.(*model.LiteralValueExpression); ok && schemaType == schema.NumberType {
+			if expr, ok := from.(*model.LiteralValueExpression); ok {
 				bf := expr.Value.AsBigFloat()
-				if i, acc := bf.Int64(); acc == big.Exact {
-					g.Fgenf(w, "%d.0", i)
+				if schemaType == schema.NumberType {
+					if i, acc := bf.Int64(); acc == big.Exact {
+						g.Fgenf(w, "%d.0", i)
+						return
+					}
+					f, _ := bf.Float64()
+					g.Fgenf(w, "%g", f)
 					return
 				}
-
-				f, _ := bf.Float64()
-				g.Fgenf(w, "%g", f)
-				return
+				if schemaType == schema.IntType {
+					i, _ := bf.Int64()
+					g.Fgenf(w, "%d", i)
+					return
+				}
 			}
 		}
 	}
@@ -560,6 +566,14 @@ func (g *generator) GenLiteralValueExpression(w io.Writer, expr *model.LiteralVa
 		g.Fgenf(w, "%v", expr.Value.True())
 	case model.NoneType:
 		g.Fgen(w, "null")
+	case model.IntType:
+		bf := expr.Value.AsBigFloat()
+		i, _ := bf.Int64()
+		if g.currentResourcePropertyType == schema.NumberType {
+			g.Fgenf(w, "%d.0", i)
+		} else {
+			g.Fgenf(w, "%d", i)
+		}
 	case model.NumberType:
 		bf := expr.Value.AsBigFloat()
 		if i, acc := bf.Int64(); acc == big.Exact {

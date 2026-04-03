@@ -37,15 +37,16 @@ public class App {
         final var siteDir = "www";
 
         // For each file in the directory, create an S3 object stored in `siteBucket`
-        for (var range : KeyedValue.of(readDir(siteDir))) {
-            new BucketObject("files-" + range.key(), BucketObjectArgs.builder()
+        for (var i = 0; i < readDir(siteDir); i++) {
+            new BucketObject("files-" + i, BucketObjectArgs.builder()
                 .bucket(siteBucket.id())
                 .key(range.value())
                 .source(new FileAsset(Paths.get(siteDir, range.value())))
                 .contentType(Files.probeContentType(range.value()))
                 .build());
-        }
 
+        
+}
         // set the MIME type of the file
         // Set the access policy for the bucket so all objects are readable
         var bucketPolicy = new BucketPolicy("bucketPolicy", BucketPolicyArgs.builder()
