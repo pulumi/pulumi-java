@@ -176,7 +176,7 @@ Here's some examples of what we're trying to avoid:
 To release a new version of `pulumi-java`, use `changie` to update the
 changelog file and open a PR for that change. Once that PR merges, the
 release workflow will automatically create the GitHub release and push
-all necessary tags (`v*`, `pkg/v*`, `sdk/v*`).
+all necessary tags (`v*`, `sdk/v*`).
 
 ```shell
 changie batch auto
