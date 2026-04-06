@@ -46,7 +46,5 @@ jobs:
       - name: Push additional tags
         if: steps.check-release.outputs.exists == 'false'
         run: |
-          git tag pkg/${{ env.GORELEASER_CURRENT_TAG }}
-          git push origin pkg/${{ env.GORELEASER_CURRENT_TAG }}
           git tag sdk/${{ env.GORELEASER_CURRENT_TAG }}
           git push origin sdk/${{ env.GORELEASER_CURRENT_TAG }}

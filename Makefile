@@ -20,13 +20,13 @@ test_go:: build_go submodule_update
 bin/pulumi-language-java: ${PKG_FILES}
 	mkdir -p bin
 	cd pkg && go build -o ../bin \
-		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" \
+		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version)" \
 		github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-java
 
 bin/pulumi-java-gen: ${PKG_FILES}
 	mkdir -p bin
 	cd pkg && go build -o ../bin \
-		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" \
+		-ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version)" \
 		github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
 
 .PHONY: install

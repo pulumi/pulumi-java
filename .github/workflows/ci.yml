@@ -1,20 +1,10 @@
 on:
-  pull_request:
-    paths-ignore:
-      # Skip CI checks if the only things that have changed are CHANGELOG entries (which is typically the case when a PR
-      # or Push is occurring as part of a release process).
-      - 'CHANGELOG.md'
-      - '.changes/**'
+  pull_request: {}
   push:
     branches:
       - main
     tags:
       - sdk/v*.*.*
-    paths-ignore:
-      # Skip CI checks if the only things that have changed are CHANGELOG entries (which is typically the case when a PR
-      # or Push is occurring as part of a release process).
-      - 'CHANGELOG.md'
-      - '.changes/**'
   repository_dispatch:
     types:
       - run-acceptance-tests-command
@@ -35,7 +25,25 @@ env:
 
 
 jobs:
+  should-test:
+    name: Check for code changes
+    runs-on: ubuntu-latest
+    outputs:
+      run-tests: ${{ github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || steps.filter.outputs.code == 'true' }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dorny/paths-filter@v4
+        id: filter
+        with:
+          filters: |
+            code:
+              - '**'
+              - '!CHANGELOG.md'
+              - '!.changes/**'
+
   prerequisites:
+    needs: should-test
+    if: needs.should-test.outputs.run-tests == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     outputs:
@@ -261,6 +269,8 @@ jobs:
         run: make test_example.${{ matrix.example }}
 
   go-lint:
+    needs: should-test
+    if: needs.should-test.outputs.run-tests == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     name: Lint pkg
@@ -426,12 +436,21 @@ jobs:
 
   ci-ok:
     name: ci-ok
-    needs: [prerequisites, go-tests, examples, go-lint, test_integrations, test_templates]
+    needs: [should-test, prerequisites, go-tests, examples, go-lint, test_integrations, test_templates]
     if: always()
     runs-on: ubuntu-latest
     steps:
       - name: CI failed
-        if: ${{ needs.go-tests.result != 'success' || needs.examples.result != 'success' || needs.go-lint.result != 'success' || needs.test_integrations.result != 'success' || needs.test_templates.result != 'success' }}
+        if: >-
+          ${{
+            needs.should-test.result != 'success'
+            || !(contains(fromJSON('["success", "skipped"]'), needs.prerequisites.result))
+            || !(contains(fromJSON('["success", "skipped"]'), needs.go-tests.result))
+            || !(contains(fromJSON('["success", "skipped"]'), needs.examples.result))
+            || !(contains(fromJSON('["success", "skipped"]'), needs.go-lint.result))
+            || !(contains(fromJSON('["success", "skipped"]'), needs.test_integrations.result))
+            || !(contains(fromJSON('["success", "skipped"]'), needs.test_templates.result))
+          }}
         run: exit 1
       - name: CI succeeded
         run: exit 0

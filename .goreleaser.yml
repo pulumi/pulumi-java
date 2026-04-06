@@ -3,8 +3,7 @@ builds:
 
 - binary: pulumi-language-java
   id: pulumi-language-java
-  dir: pkg
-  main: ./cmd/pulumi-language-java
+  main: ./pkg/cmd/pulumi-language-java
   env:
   - CGO_ENABLED=0
   - GO111MODULE=on
@@ -23,8 +22,7 @@ builds:
 
 - binary: pulumi-java-gen
   id: pulumi-java-gen
-  dir: pkg
-  main: ./cmd/pulumi-java-gen
+  main: ./pkg/cmd/pulumi-java-gen
   env:
   - CGO_ENABLED=0
   - GO111MODULE=on
