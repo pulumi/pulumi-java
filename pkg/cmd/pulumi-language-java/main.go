@@ -314,7 +314,7 @@ func (host *javaLanguageHost) runJavaCommand(
 	}
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
-	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
+	cmd := exec.Command(name, args...) //nolint:gosec // intentionally running dynamic program name.
 	if dir != "" {
 		cmd.Dir = dir
 	}
@@ -401,7 +401,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	var errResult string
 	// Use CommandContext so the process is killed when the engine cancels the Run RPC
 	// (e.g. when a resource creation fails and ContinueOnError is false).
-	cmd := exec.CommandContext(ctx, executable, args...) // nolint: gas // intentionally running dynamic program name.
+	cmd := exec.CommandContext(ctx, executable, args...) //nolint:gosec // intentionally running dynamic program name.
 	cmd.Dir = req.Info.ProgramDirectory
 
 	var stdoutBuf bytes.Buffer

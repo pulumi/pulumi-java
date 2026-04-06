@@ -51,14 +51,14 @@ build_sdk::
 ensure_sdk::
 	cd sdk/java && make ensure
 
-.PHONY: lint_pkg
-lint:: lint_pkg
-lint_pkg: lint_pkg_dependencies
-	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m
+.PHONY: lint_go
+lint: lint_go
+lint_go: lint_pkg_dependencies
+	golangci-lint run -c .golangci.yml --timeout 5m
 
-.PHONY: lint_pkg.fix
-lint_pkg.fix: lint_pkg_dependencies
-	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m --fix
+.PHONY: lint_go.fix
+lint_go.fix: lint_pkg_dependencies
+	golangci-lint run -c .golangci.yml --timeout 5m --fix
 
 .PHONY: lint_pkg_dependencies
 lint_pkg_dependencies:
