@@ -5,7 +5,6 @@ package tests
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -53,12 +52,12 @@ func Pin(javaProjectDir string, deps map[string]string) (FileEdit, error) {
 
 	if hasPom {
 		return fixupPomVersions(pom, deps)
-	} else if buildGradle != "" {
-		return fixupGradleVersions(buildGradle, deps)
-	} else {
-		return nil, fmt.Errorf("Pin cannot find pom.xml or build.gradle in %s",
-			javaProjectDir)
 	}
+	if buildGradle != "" {
+		return fixupGradleVersions(buildGradle, deps)
+	}
+	return nil, fmt.Errorf("Pin cannot find pom.xml or build.gradle in %s",
+		javaProjectDir)
 }
 
 // Parses env vars used in CI context to find the desired pin versions.
@@ -169,11 +168,11 @@ func fileExists(path string) (bool, error) {
 }
 
 func editFile(path string, edit func([]byte) []byte) (FileEdit, error) {
-	bytes, err := ioutil.ReadFile(path)
+	bytes, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
-	err = ioutil.WriteFile(path, edit(bytes), 0o600)
+	err = os.WriteFile(path, edit(bytes), 0o600)
 	return revertFile{path, bytes}, err
 }
 
@@ -183,5 +182,5 @@ type revertFile struct {
 }
 
 func (rf revertFile) Revert() error {
-	return ioutil.WriteFile(rf.path, rf.bytes, 0o600)
+	return os.WriteFile(rf.path, rf.bytes, 0o600)
 }

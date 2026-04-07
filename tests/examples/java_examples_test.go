@@ -5,7 +5,7 @@ package examples
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os/exec"
 	"path/filepath"
@@ -93,9 +93,9 @@ func TestExamples(t *testing.T) {
 				},
 				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 					o := stackInfo.Outputs
-					publicIp := o["publicIp"].(string)
+					publicIP := o["publicIp"].(string)
 					publicHostName := o["publicHostName"].(string)
-					assert.True(t, strings.Contains(publicIp, "."))
+					assert.True(t, strings.Contains(publicIP, "."))
 					assert.True(t, strings.Contains(publicHostName, "."))
 				},
 			},
@@ -170,7 +170,7 @@ func TestExamples(t *testing.T) {
 			[]string{}, /*providers*/
 			integration.ProgramTestOptions{
 				PrepareProject: func(info *engine.Projinfo) error {
-					cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
+					cmd := exec.Command(filepath.Join(info.Root, "mvnw"), //nolint:gosec // test code
 						"--no-transfer-progress", "package")
 					cmd.Dir = info.Root
 					var buf bytes.Buffer
@@ -311,12 +311,14 @@ func TestExamples(t *testing.T) {
 	})
 }
 
-// Constructs a set of integration.ProgramTestOptions for running a Java example test. The supplied directory will be
-// resolved relative to the repository root, and is typically one of the following:
+// Constructs a set of integration.ProgramTestOptions for running a Java example test.
+// The supplied directory will be resolved relative to the repository root, and is
+// typically one of the following:
 //
-//   - tests/examples/<example> if the example being tested is vendored into this repository.
-//   - examples/<example> if the example being tested is in the Pulumi examples repository, which is cloned into this one
-//     as part of running this test suite.
+//   - tests/examples/<example> if the example being tested is vendored into this
+//     repository.
+//   - examples/<example> if the example being tested is in the Pulumi examples
+//     repository, which is cloned into this one as part of running this test suite.
 func makeJavaProgramTestOptions(
 	t *testing.T,
 	dir string,
@@ -378,13 +380,19 @@ func combinePrepareProject(f1, f2 func(info *engine.Projinfo) error) func(info *
 	}
 }
 
-// Copied from: https://github.com/pulumi/examples/blob/4fb1f146409ace4af1945f84ee9c90c643430e9d/misc/test/examples_test.go
+// Copied from:
+// https://github.com/pulumi/examples/blob/4fb1f146409ace4af1945f84ee9c90c643430e9d/misc/test/examples_test.go
 
-func assertHTTPResult(t *testing.T, output interface{}, headers map[string]string, check func(string) bool) bool {
+func assertHTTPResult(
+	t *testing.T, output interface{}, headers map[string]string, check func(string) bool,
+) bool {
 	return assertHTTPResultWithRetry(t, output, headers, 5*time.Minute, check)
 }
 
-func assertHTTPResultWithRetry(t *testing.T, output interface{}, headers map[string]string, maxWait time.Duration, check func(string) bool) bool {
+func assertHTTPResultWithRetry(
+	t *testing.T, output interface{}, headers map[string]string,
+	maxWait time.Duration, check func(string) bool,
+) bool {
 	return assertHTTPResultShapeWithRetry(t, output, headers, maxWait, func(string) bool { return true }, check)
 }
 
@@ -396,13 +404,13 @@ func assertHTTPResultShapeWithRetry(t *testing.T, output interface{}, headers ma
 		return false
 	}
 
-	if !(strings.HasPrefix(hostname, "http://") || strings.HasPrefix(hostname, "https://")) {
+	if !strings.HasPrefix(hostname, "http://") && !strings.HasPrefix(hostname, "https://") {
 		hostname = fmt.Sprintf("http://%s", hostname)
 	}
 
 	startTime := time.Now()
 	count, sleep := 0, 0
-	for true {
+	for {
 		now := time.Now()
 		req, err := http.NewRequest("GET", hostname, nil)
 		if !assert.NoError(t, err) {
@@ -428,7 +436,7 @@ func assertHTTPResultShapeWithRetry(t *testing.T, output interface{}, headers ma
 
 			// Read the body
 			defer resp.Body.Close()
-			body, err := ioutil.ReadAll(resp.Body)
+			body, err := io.ReadAll(resp.Body)
 			if !assert.NoError(t, err) {
 				return false
 			}
@@ -456,6 +464,4 @@ func assertHTTPResultShapeWithRetry(t *testing.T, output interface{}, headers ma
 		fmt.Printf("Http Error: %v\n", err)
 		fmt.Printf("  Retry: %v, elapsed wait: %v, max wait %v\n", count, now.Sub(startTime), maxWait)
 	}
-
-	return false
 }

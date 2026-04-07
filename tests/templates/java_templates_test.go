@@ -66,7 +66,7 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 	fileEdit, err := jtests.Pin(tDir, pins)
 	assert.NoError(t, err)
 	if fileEdit != nil {
-		defer fileEdit.Revert()
+		defer func() { _ = fileEdit.Revert() }()
 	}
 
 	projectName := ptesting.RandomStackName()
@@ -80,7 +80,7 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 		Config: templateCfg.config,
 		// Note: must override PrepareProject to support Java,
 		// even if the override is a no-op.
-		PrepareProject: func(info *engine.Projinfo) error {
+		PrepareProject: func(_ *engine.Projinfo) error {
 			return nil
 		},
 	}.With(previewOnlyOptions())
@@ -109,7 +109,7 @@ func previewOnlyOptions() integration.ProgramTestOptions {
 // the testcase has not failed. (Otherwise they are left to aid
 // debugging.)
 func deleteIfNotFailed(e *ptesting.Environment) {
-	if !e.T.Failed() {
+	if !e.Failed() {
 		e.DeleteEnvironment()
 	}
 }

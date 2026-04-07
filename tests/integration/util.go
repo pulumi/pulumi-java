@@ -55,7 +55,7 @@ func copyFile(src, dst string, mode os.FileMode) error {
 	return err
 }
 
-func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
+func getJavaBase(_ *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
 	opts := integration.ProgramTestOptions{
 		PrepareProject: func(*engine.Projinfo) error {
 			return nil // needed because defaultPrepareProject does not know about java

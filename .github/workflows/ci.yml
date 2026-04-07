@@ -82,14 +82,9 @@ jobs:
         uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
           gradle-version: 8.14.1
-      - name: Build and unit-test Pulumi Java SDK
+      - name: Build Pulumi Java SDK
         run: |
-          cd sdk/java && gradle build testAll
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          directory: sdk/java/pulumi/build/reports/jacoco/allTests
-          token: ${{ secrets.CODECOV_TOKEN }}
+          cd sdk/java && gradle assemble
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-java
@@ -121,6 +116,34 @@ jobs:
             echo "gotcloudcreds=${{ env.KEY != '' }}" >> "$GITHUB_OUTPUT"
     strategy:
       fail-fast: true
+
+  java-sdk-tests:
+    needs: should-test
+    if: needs.should-test.outputs.run-tests == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: 'gradle'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        with:
+          gradle-version: 8.14.1
+      - name: Build and test Pulumi Java SDK
+        run: |
+          cd sdk/java && gradle build testAll
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          directory: sdk/java/pulumi/build/reports/jacoco/allTests
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   # Run Go tests, most notably codegen tests. These are in a separate
   # job not to block other validations.
@@ -273,7 +296,7 @@ jobs:
     if: needs.should-test.outputs.run-tests == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    name: Lint pkg
+    name: Lint Go
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -288,8 +311,7 @@ jobs:
         uses: golangci/golangci-lint-action@v8
         with:
           version: ${{ env.GOLANGCI_LINT_VERSION }}
-          working-directory: pkg
-          args: --config ../.golangci.yml ./...
+          args: --config .golangci.yml ./...
       - name: Ensure no pulumi/pkg
         run: make lint_pkg_dependencies
 
@@ -436,7 +458,7 @@ jobs:
 
   ci-ok:
     name: ci-ok
-    needs: [should-test, prerequisites, go-tests, examples, go-lint, test_integrations, test_templates]
+    needs: [should-test, prerequisites, java-sdk-tests, go-tests, examples, go-lint, test_integrations, test_templates]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -445,6 +467,7 @@ jobs:
           ${{
             needs.should-test.result != 'success'
             || !(contains(fromJSON('["success", "skipped"]'), needs.prerequisites.result))
+            || !(contains(fromJSON('["success", "skipped"]'), needs.java-sdk-tests.result))
             || !(contains(fromJSON('["success", "skipped"]'), needs.go-tests.result))
             || !(contains(fromJSON('["success", "skipped"]'), needs.examples.result))
             || !(contains(fromJSON('["success", "skipped"]'), needs.go-lint.result))
