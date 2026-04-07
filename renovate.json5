@@ -1,2 +1,9 @@
 {
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    extends: ["github>pulumi/renovate-config//default.json5"],
+    // The Pulumi preset's ignorePaths has `sdk/**` in it, we don't want that
+    // https://github.com/pulumi/renovate-config/blob/main/default.json5#L62
+    ignorePaths: [
+        "**/testdata/**",
+    ],
 }
