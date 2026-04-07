@@ -813,4 +813,38 @@ public class ComponentAnalyzerTests {
 
         assertEquals(expected, schema);
     }
+
+    // --- Inherited input properties test ---
+
+    public static class BaseComponentArgs extends ResourceArgs {
+        @Import(name = "baseProp")
+        private String baseProp;
+    }
+
+    public static class DerivedComponentArgs extends BaseComponentArgs {
+        @Import(name = "childProp")
+        private String childProp;
+    }
+
+    public static class InheritedComponent extends ComponentResource {
+        @Export(name = "result")
+        private Output<String> result;
+
+        public InheritedComponent(DerivedComponentArgs args) {
+            super("my-component:index:InheritedComponent", "test");
+        }
+    }
+
+    @Test
+    void testInheritedInputProperties() {
+        var schema = ComponentAnalyzer.generateSchema(metadata, InheritedComponent.class);
+        var resource = schema.getResources().get("my-component:index:InheritedComponent");
+
+        assertNotNull(resource);
+        // Both base and derived input properties should be present
+        assertTrue(resource.getInputProperties().containsKey("baseProp"),
+            "baseProp from base class should be present");
+        assertTrue(resource.getInputProperties().containsKey("childProp"),
+            "childProp from derived class should be present");
+    }
 }
