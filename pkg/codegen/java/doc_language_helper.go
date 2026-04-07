@@ -18,7 +18,7 @@ type DocLanguageHelper struct{}
 var _ codegen.DocLanguageHelper = DocLanguageHelper{}
 
 func (DocLanguageHelper) GetModuleName(_ schema.PackageReference, modName string) string {
-	if modName == "index" {
+	if modName == "index" { //nolint:goconst
 		return ""
 	}
 	return names.Ident(modName).String()

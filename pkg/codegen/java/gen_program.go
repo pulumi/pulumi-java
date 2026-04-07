@@ -519,9 +519,18 @@ func sanitizeImport(name string) string {
 	return replacedSlash
 }
 
-// Checks if this is a builtin stack reference or stack reference args
+// Checks if this is a builtin resource type (StackReference, Stash) that lives in com.pulumi.resources.
 func isBuiltin(pkg, module, member string) bool {
-	return pkg == "pulumi" && module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs")
+	if pkg != "pulumi" {
+		return false
+	}
+	if module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs") {
+		return true
+	}
+	if module == "index" && (member == "Stash" || member == "StashArgs") {
+		return true
+	}
+	return false
 }
 
 func pulumiImport(pkg string, module string, member string, namespace string) string {

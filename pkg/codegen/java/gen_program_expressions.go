@@ -722,6 +722,10 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	default:
 		// generate map, usually for tags of type Map<String, String>
+		// Clear currentResourcePropertyType so nested expressions (e.g. tuple cons) generate
+		// their own wrappers like List.of().
+		savedType := g.currentResourcePropertyType
+		g.currentResourcePropertyType = nil
 		if len(expr.Items) == 1 {
 			firstItem := expr.Items[0]
 			// a map of one entry, generate a one-liner:
@@ -740,6 +744,7 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 			})
 			g.Fgenf(w, "%s)", g.Indent)
 		}
+		g.currentResourcePropertyType = savedType
 	}
 }
 

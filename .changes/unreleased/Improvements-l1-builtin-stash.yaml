@@ -1,0 +1,4 @@
+component: sdk
+kind: Improvements
+body: Add Stash and StashArgs builtin resource classes to the Java SDK, and fix codegen to recognize them. Also fix map literal codegen to properly wrap nested list values in List.of().
+time: 2026-04-07T00:00:00.000000Z
