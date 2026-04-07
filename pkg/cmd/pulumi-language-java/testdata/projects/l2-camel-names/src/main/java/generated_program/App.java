@@ -26,5 +26,10 @@ public class App {
             .theInput(firstResource.theOutput())
             .build());
 
+        var thirdResource = new SomeResource("thirdResource", SomeResourceArgs.builder()
+            .theInput(true)
+            .resourceName("my-cluster")
+            .build());
+
     }
 }

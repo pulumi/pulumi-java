@@ -7,12 +7,22 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final SomeResourceArgs Empty = new SomeResourceArgs();
+
+    @Import(name="resourceName")
+    private @Nullable Output<String> resourceName;
+
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
+    }
 
     @Import(name="theInput", required=true)
     private Output<Boolean> theInput;
@@ -24,6 +34,7 @@ public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
     private SomeResourceArgs() {}
 
     private SomeResourceArgs(SomeResourceArgs $) {
+        this.resourceName = $.resourceName;
         this.theInput = $.theInput;
     }
 
@@ -43,6 +54,15 @@ public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(SomeResourceArgs defaults) {
             $ = new SomeResourceArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder resourceName(@Nullable Output<String> resourceName) {
+            $.resourceName = resourceName;
+            return this;
+        }
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
 
         public Builder theInput(Output<Boolean> theInput) {

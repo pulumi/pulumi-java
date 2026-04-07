@@ -10,10 +10,18 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
+import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="camelNames:CoolModule:SomeResource")
 public class SomeResource extends com.pulumi.resources.CustomResource {
+    @Export(name="resourceName", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> resourceName;
+
+    public Output<Optional<String>> resourceName() {
+        return Codegen.optional(this.resourceName);
+    }
     @Export(name="theOutput", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> theOutput;
 

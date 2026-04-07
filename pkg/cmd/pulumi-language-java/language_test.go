@@ -186,7 +186,6 @@ var expectedFailures = map[string]string{
 	"l1-builtin-stash":                             "test failing",
 	"l1-builtin-project-root-main":                 "test failing",
 	"l2-union":                                     "test failing",
-	"l2-camel-names":                               "test failing",
 	"policy-simple":                                "test failing",
 	"policy-dryrun":                                "test failing",
 	"policy-config-schema":                         "test failing",
