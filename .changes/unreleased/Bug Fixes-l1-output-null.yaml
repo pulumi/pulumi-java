@@ -1,0 +1,4 @@
+component: codegen
+kind: Bug Fixes
+body: Use Arrays.asList() instead of List.of() for list literals containing null elements, since List.of() does not permit nulls.
+time: 2026-04-08T00:00:00.000000Z

@@ -5,8 +5,8 @@ import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.resources.Stash;
 import com.pulumi.resources.StashArgs;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.io.File;
 import java.nio.file.Files;
@@ -20,7 +20,7 @@ public class App {
     public static void stack(Context ctx) {
         var myStash = new Stash("myStash", StashArgs.builder()
             .input(Map.ofEntries(
-                Map.entry("key", List.of(                
+                Map.entry("key", Arrays.asList(                
                     "value",
                     "s")),
                 Map.entry("", false)

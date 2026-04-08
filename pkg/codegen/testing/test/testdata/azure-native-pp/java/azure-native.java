@@ -7,8 +7,8 @@ import com.pulumi.azurenative.network.FrontDoor;
 import com.pulumi.azurenative.network.FrontDoorArgs;
 import com.pulumi.azurenative.cdn.Endpoint;
 import com.pulumi.azurenative.cdn.EndpointArgs;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.io.File;
 import java.nio.file.Files;
@@ -21,15 +21,15 @@ public class App {
 
     public static void stack(Context ctx) {
         var frontDoor = new FrontDoor("frontDoor", FrontDoorArgs.builder()
-            .routingRules(List.of(Map.of("routeConfiguration", Map.ofEntries(
+            .routingRules(Arrays.asList(Map.of("routeConfiguration", Map.ofEntries(
                 Map.entry("odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration"),
                 Map.entry("backendPool", Map.of("id", "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1"))
             ))))
             .build());
 
         var endpoint = new Endpoint("endpoint", EndpointArgs.builder()
-            .deliveryPolicy(Map.of("rules", List.of(Map.ofEntries(
-                Map.entry("actions", List.of(                
+            .deliveryPolicy(Map.of("rules", Arrays.asList(Map.ofEntries(
+                Map.entry("actions", Arrays.asList(                
                     Map.ofEntries(
                         Map.entry("name", "CacheExpiration"),
                         Map.entry("parameters", Map.ofEntries(
@@ -57,10 +57,10 @@ public class App {
                             Map.entry("value", "gzip")
                         ))
                     ))),
-                Map.entry("conditions", List.of(Map.ofEntries(
+                Map.entry("conditions", Arrays.asList(Map.ofEntries(
                     Map.entry("name", "RemoteAddress"),
                     Map.entry("parameters", Map.ofEntries(
-                        Map.entry("matchValues", List.of(                        
+                        Map.entry("matchValues", Arrays.asList(                        
                             "192.168.1.0/24",
                             "10.0.0.0/24")),
                         Map.entry("negateCondition", true),

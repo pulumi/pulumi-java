@@ -879,9 +879,13 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	if g.currentResourcePropertyType == nil {
-		// we are dealing with an untyped array
-		// generate `List.of(...)`
-		g.Fgen(w, "List.of(")
+		// Arrays.asList() is used instead of List.of() because List.of() does not permit null elements.
+		// Elements may be null at runtime even if not literal nulls (e.g. variables).
+		g.Fgen(w, "Arrays.asList(")
+	}
+
+	genElement := func(w io.Writer, value model.Expression) {
+		g.genNullableTupleElement(w, value)
 	}
 
 	if len(expr.Expressions) == 0 {
@@ -890,8 +894,7 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	if len(expr.Expressions) == 1 {
-		// simple case, just write the first element
-		g.Fgenf(w, "%.v", expr.Expressions[0])
+		genElement(w, expr.Expressions[0])
 		closeList()
 		return
 	}
@@ -901,19 +904,31 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	g.Indented(func() {
 		for index, value := range expr.Expressions {
 			if index == 0 {
-				// first expression, no need for a new line
-				g.Fgenf(w, "%s%.v,", g.Indent, value)
+				g.Fgenf(w, "%s", g.Indent)
+				genElement(w, value)
+				g.Fgen(w, ",")
 			} else if index == len(expr.Expressions)-1 {
-				// last element, no trailing comma
-				g.Fgenf(w, "\n%s%.v", g.Indent, value)
+				g.Fgenf(w, "\n%s", g.Indent)
+				genElement(w, value)
 			} else {
-				// elements in between: new line and trailing comma
-				g.Fgenf(w, "\n%s%.v,", g.Indent, value)
+				g.Fgenf(w, "\n%s", g.Indent)
+				genElement(w, value)
+				g.Fgen(w, ",")
 			}
 		}
 	})
 
 	closeList()
+}
+
+// genNullableTupleElement generates a tuple element, casting null literals to Object
+// to avoid ambiguity with varargs in Arrays.asList().
+func (g *generator) genNullableTupleElement(w io.Writer, expr model.Expression) {
+	if lit, ok := expr.(*model.LiteralValueExpression); ok && lit.Value.IsNull() {
+		g.Fgen(w, "(Object) null")
+	} else {
+		g.Fgenf(w, "%.v", expr)
+	}
 }
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {

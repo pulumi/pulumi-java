@@ -3,8 +3,8 @@ package generated_program;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.io.File;
 import java.nio.file.Files;
@@ -16,31 +16,31 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        ctx.export("empty", List.of());
-        ctx.export("small", List.of(        
+        ctx.export("empty", Arrays.asList());
+        ctx.export("small", Arrays.asList(        
             "Hello",
             "World"));
-        ctx.export("numbers", List.of(        
+        ctx.export("numbers", Arrays.asList(        
             0,
             1,
             2,
             3,
             4,
             5));
-        ctx.export("nested", List.of(        
-            List.of(            
+        ctx.export("nested", Arrays.asList(        
+            Arrays.asList(            
                 1,
                 2,
                 3),
-            List.of(            
+            Arrays.asList(            
                 4,
                 5,
                 6),
-            List.of(            
+            Arrays.asList(            
                 7,
                 8,
                 9)));
-        ctx.export("large", List.of(        
+        ctx.export("large", Arrays.asList(        
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
