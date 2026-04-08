@@ -183,7 +183,6 @@ var expectedFailures = map[string]string{
 	"l2-explicit-providers":                        "should have 6 item(s), but has 7",
 	"l2-invoke-scalar":                             "exception at runtime",
 	"l3-component-simple":                          "compilation error",
-	"l1-builtin-stash":                             "test failing",
 	"l1-builtin-project-root-main":                 "test failing",
 	"l2-union":                                     "test failing",
 	"policy-simple":                                "test failing",
