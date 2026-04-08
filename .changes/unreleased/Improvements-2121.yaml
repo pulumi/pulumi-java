@@ -1,6 +1,0 @@
-component: codegen
-kind: Improvements
-body: Move the package to the top level
-time: 2026-04-03T11:34:54.049361+02:00
-custom:
-    PR: "2121"
