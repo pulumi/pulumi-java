@@ -1069,13 +1069,15 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.ReplaceWith != nil ||
 		resource.Options.ReplacementTrigger != nil ||
 		resource.Options.Aliases != nil ||
-		resource.Options.AdditionalSecretOutputs != nil
+		resource.Options.AdditionalSecretOutputs != nil ||
+		resource.Options.CustomTimeouts != nil
 }
 
 // genResourceOptionsImports generates imports for the `CustomResourceOptions` and `Alias` classes.
 func (g *generator) genResourceOptionsImports(w io.Writer, programNodes []pcl.Node) {
 	customResourceOptions := false
 	hasAliases := false
+	hasCustomTimeouts := false
 
 	for _, node := range programNodes {
 		switch node := node.(type) {
@@ -1085,7 +1087,9 @@ func (g *generator) genResourceOptionsImports(w io.Writer, programNodes []pcl.No
 				customResourceOptions = true
 				if resource.Options.Aliases != nil {
 					hasAliases = true
-					break // Both flags are true, we can stop looking
+				}
+				if resource.Options.CustomTimeouts != nil {
+					hasCustomTimeouts = true
 				}
 			}
 		}
@@ -1096,6 +1100,9 @@ func (g *generator) genResourceOptionsImports(w io.Writer, programNodes []pcl.No
 	}
 	if hasAliases {
 		g.genImport(w, "com.pulumi.core.Alias")
+	}
+	if hasCustomTimeouts {
+		g.genImport(w, "com.pulumi.resources.CustomTimeouts")
 	}
 }
 
@@ -1203,6 +1210,25 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		if resource.Options.ImportID != nil {
 			g.genIndent(w)
 			g.Fgenf(w, ".importId(%v)", resource.Options.ImportID)
+			g.genNewline(w)
+		}
+		if resource.Options.CustomTimeouts != nil {
+			g.genIndent(w)
+			g.Fgen(w, ".customTimeouts(CustomTimeouts.builder()")
+			g.Indented(func() {
+				if obj, ok := resource.Options.CustomTimeouts.(*model.ObjectConsExpression); ok {
+					for _, item := range obj.Items {
+						key, diags := item.Key.Evaluate(&hcl.EvalContext{})
+						contract.Assertf(len(diags) == 0, "Expected no diagnostics, got %d", len(diags))
+						g.genNewline(w)
+						g.genIndent(w)
+						g.Fgenf(w, ".%s(CustomTimeouts.parseTimeoutString(%v))", key.AsString(), item.Value)
+					}
+				}
+			})
+			g.genNewline(w)
+			g.genIndent(w)
+			g.Fgen(w, ".build())")
 			g.genNewline(w)
 		}
 		if resource.Options.Aliases != nil {
