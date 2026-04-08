@@ -159,7 +159,6 @@ var expectedFailures = map[string]string{
 	"l1-config-types-object":                       "https://github.com/pulumi/pulumi-java/issues/2005",
 	"l1-config-types-primitive":                    "https://github.com/pulumi/pulumi-java/issues/2004",
 	"l1-keyword-overlap":                           "#1681 Fix l1-keyword-overlap",
-	"l1-output-null":                               "unhandled error occurred",
 	"l1-output-string":                             "#1562 Large string literals are not generated correctly",
 	"l1-proxy-index":                               "compilation error",
 	"l2-component-call-simple":                     "#1680 Fix l2-component-call-simple",
