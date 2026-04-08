@@ -240,7 +240,6 @@ var expectedFailures = map[string]string{
 	"l2-resource-option-additional-secret-outputs": "compilation error: cannot find symbol 'value'",
 	"l3-rewrite-conversions":                       "expected 5 resources in snapshot but only got 2",
 	"l1-builtin-sha1":                              "compilation error: cannot find symbol computeSHA1",
-	"l2-resource-option-ignore-changes":            "compilation error: unclosed string literal in ignoreChanges path",
 	"l2-resource-optional":                         "compilation error: syntax errors in generated code",
 	"l2-resource-primitive-defaults":               "compilation error: syntax errors in generated code",
 	"l3-component-config-objects":                  "missing expected dependency primitive",
