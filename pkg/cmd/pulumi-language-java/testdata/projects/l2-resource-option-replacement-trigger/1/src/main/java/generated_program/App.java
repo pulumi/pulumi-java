@@ -4,8 +4,8 @@ import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.resources.CustomResourceOptions;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.io.File;
 import java.nio.file.Files;
@@ -40,7 +40,7 @@ public class App {
         var secretReplacementTrigger = new com.pulumi.simple.Resource("secretReplacementTrigger", com.pulumi.simple.ResourceArgs.builder()
             .value(true)
             .build(), CustomResourceOptions.builder()
-                .replacementTrigger(Output.of(Output.ofSecret(List.of(                
+                .replacementTrigger(Output.of(Output.ofSecret(Arrays.asList(                
                     3,
                     2,
                     1))))
