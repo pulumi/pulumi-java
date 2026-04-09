@@ -10,9 +10,9 @@ import java.lang.String;
 import java.util.Objects;
 
 
-public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
+public final class LambdaArgs extends com.pulumi.resources.ResourceArgs {
 
-    public static final SomeResourceArgs Empty = new SomeResourceArgs();
+    public static final LambdaArgs Empty = new LambdaArgs();
 
     @Import(name="builtins", required=true)
     private Output<String> builtins;
@@ -35,9 +35,9 @@ public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
         return this.property;
     }
 
-    private SomeResourceArgs() {}
+    private LambdaArgs() {}
 
-    private SomeResourceArgs(SomeResourceArgs $) {
+    private LambdaArgs(LambdaArgs $) {
         this.builtins = $.builtins;
         this.lambda = $.lambda;
         this.property = $.property;
@@ -46,19 +46,19 @@ public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(SomeResourceArgs defaults) {
+    public static Builder builder(LambdaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SomeResourceArgs $;
+        private LambdaArgs $;
 
         public Builder() {
-            $ = new SomeResourceArgs();
+            $ = new LambdaArgs();
         }
 
-        public Builder(SomeResourceArgs defaults) {
-            $ = new SomeResourceArgs(Objects.requireNonNull(defaults));
+        public Builder(LambdaArgs defaults) {
+            $ = new LambdaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder builtins(Output<String> builtins) {
@@ -88,15 +88,15 @@ public final class SomeResourceArgs extends com.pulumi.resources.ResourceArgs {
             return property(Output.of(property));
         }
 
-        public SomeResourceArgs build() {
+        public LambdaArgs build() {
             if ($.builtins == null) {
-                throw new MissingRequiredPropertyException("SomeResourceArgs", "builtins");
+                throw new MissingRequiredPropertyException("LambdaArgs", "builtins");
             }
             if ($.lambda == null) {
-                throw new MissingRequiredPropertyException("SomeResourceArgs", "lambda");
+                throw new MissingRequiredPropertyException("LambdaArgs", "lambda");
             }
             if ($.property == null) {
-                throw new MissingRequiredPropertyException("SomeResourceArgs", "property");
+                throw new MissingRequiredPropertyException("LambdaArgs", "property");
             }
             return $;
         }

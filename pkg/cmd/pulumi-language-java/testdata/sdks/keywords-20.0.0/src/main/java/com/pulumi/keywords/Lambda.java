@@ -7,13 +7,13 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.keywords.SomeResourceArgs;
+import com.pulumi.keywords.LambdaArgs;
 import com.pulumi.keywords.Utilities;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-@ResourceType(type="keywords:index:SomeResource")
-public class SomeResource extends com.pulumi.resources.CustomResource {
+@ResourceType(type="keywords:index:Lambda")
+public class Lambda extends com.pulumi.resources.CustomResource {
     @Export(name="builtins", refs={String.class}, tree="[0]")
     private Output<String> builtins;
 
@@ -37,15 +37,15 @@ public class SomeResource extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SomeResource(java.lang.String name) {
-        this(name, SomeResourceArgs.Empty);
+    public Lambda(java.lang.String name) {
+        this(name, LambdaArgs.Empty);
     }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SomeResource(java.lang.String name, SomeResourceArgs args) {
+    public Lambda(java.lang.String name, LambdaArgs args) {
         this(name, args, null);
     }
     /**
@@ -54,19 +54,19 @@ public class SomeResource extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SomeResource(java.lang.String name, SomeResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("keywords:index:SomeResource", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
+    public Lambda(java.lang.String name, LambdaArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("keywords:index:Lambda", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SomeResource(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("keywords:index:SomeResource", name, null, makeResourceOptions(options, id), false);
+    private Lambda(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("keywords:index:Lambda", name, null, makeResourceOptions(options, id), false);
     }
 
-    private static SomeResourceArgs makeArgs(SomeResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static LambdaArgs makeArgs(LambdaArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }
-        return args == null ? SomeResourceArgs.Empty : args;
+        return args == null ? LambdaArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
@@ -84,7 +84,7 @@ public class SomeResource extends com.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SomeResource get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        return new SomeResource(name, id, options);
+    public static Lambda get(java.lang.String name, Output<java.lang.String> id, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        return new Lambda(name, id, options);
     }
 }
