@@ -1109,26 +1109,34 @@ func (g *generator) genResourceOptionsImports(w io.Writer, programNodes []pcl.No
 func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource) {
 	g.Fgen(w, "CustomResourceOptions.builder()")
 	g.Indented(func() {
+		genPropertyPath := func(w io.Writer, expr model.Expression) {
+			// Resource property paths (ignoreChanges, replaceOnChanges, etc.) are
+			// ScopeTraversalExpressions referencing ResourceProperty objects. We need
+			// to serialize the traversal as a quoted string path, not as Java code.
+			if st, ok := expr.(*model.ScopeTraversalExpression); ok {
+				if rp, ok := st.Parts[len(st.Parts)-1].(*pcl.ResourceProperty); ok {
+					val, _ := rp.Value(nil)
+					g.genStringLiteral(w, val.AsString())
+					return
+				}
+			}
+			// Fallback: render the expression directly (e.g. if it's already a string literal).
+			g.Fgenf(w, "%v", expr)
+		}
+
 		genQuotedList := func(option string, expr model.Expression) {
 			g.genIndent(w)
 			g.Fgen(w, "."+option+"(")
 			switch expr := expr.(type) {
 			case *model.TupleConsExpression:
-				// when we have a list of expressions
-				// write each one of them between quotes
 				for index, v := range expr.Expressions {
-					g.Fgenf(w, "\"%v\"", v)
-
-					// write a comma between elements
-					// if we did not reach last expression
+					genPropertyPath(w, v)
 					if index != len(expr.Expressions)-1 {
 						g.Fgen(w, ", ")
 					}
 				}
 			default:
-				// expression was NOT a list which is not really expected
-				// here we will write the expression as-is anyway
-				g.Fgenf(w, "\"%v\"", resource.Options.IgnoreChanges)
+				genPropertyPath(w, expr)
 			}
 
 			g.Fgen(w, ")")
@@ -1191,21 +1199,7 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			genQuotedList("replaceOnChanges", resource.Options.ReplaceOnChanges)
 		}
 		if resource.Options.AdditionalSecretOutputs != nil {
-			g.genIndent(w)
-			g.Fgen(w, ".additionalSecretOutputs(")
-			switch expr := resource.Options.AdditionalSecretOutputs.(type) {
-			case *model.TupleConsExpression:
-				for index, v := range expr.Expressions {
-					g.Fgenf(w, "%v", v)
-					if index != len(expr.Expressions)-1 {
-						g.Fgen(w, ", ")
-					}
-				}
-			default:
-				g.Fgenf(w, "%v", resource.Options.AdditionalSecretOutputs)
-			}
-			g.Fgen(w, ")")
-			g.genNewline(w)
+			genQuotedList("additionalSecretOutputs", resource.Options.AdditionalSecretOutputs)
 		}
 		if resource.Options.ImportID != nil {
 			g.genIndent(w)
