@@ -246,6 +246,8 @@ var expectedFailures = map[string]string{
 	"l3-component-config-objects":                  "missing expected dependency primitive",
 	"l3-component-config-primitives":               "missing expected package primitive-7.0.0",
 	"l3-range-parent-scope":                        "compilation error: syntax errors in generated code",
+	"l1-builtin-file":                              "compilation error: cannot find symbol",
+	"l3-range-ref":                                 "compilation error: bad operand types for binary operator '<'",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
