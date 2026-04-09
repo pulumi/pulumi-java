@@ -1070,7 +1070,8 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.ReplacementTrigger != nil ||
 		resource.Options.Aliases != nil ||
 		resource.Options.AdditionalSecretOutputs != nil ||
-		resource.Options.CustomTimeouts != nil
+		resource.Options.CustomTimeouts != nil ||
+		resource.Options.Version != nil
 }
 
 // genResourceOptionsImports generates imports for the `CustomResourceOptions` and `Alias` classes.
@@ -1204,6 +1205,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		if resource.Options.ImportID != nil {
 			g.genIndent(w)
 			g.Fgenf(w, ".importId(%v)", resource.Options.ImportID)
+			g.genNewline(w)
+		}
+		if resource.Options.Version != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".version(%v)", resource.Options.Version)
 			g.genNewline(w)
 		}
 		if resource.Options.CustomTimeouts != nil {
