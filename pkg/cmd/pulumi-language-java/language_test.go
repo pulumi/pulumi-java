@@ -217,7 +217,6 @@ var expectedFailures = map[string]string{
 	"l1-builtin-object":                      "compilation error: illegal start of expression",
 	"l2-builtin-object":                      "compilation error: illegal start of expression",
 	"l3-range":                               "compilation error: KeyedValue.of() expects Iterable, got String",
-	"l2-resource-option-replacement-trigger": "replacementTrigger method not found on CustomResourceOptions.Builder",
 	"l1-builtin-list":                        "compilation error: array indexing on String",
 	"l2-resource-elide-unknowns":             "compilation error: array indexing on List and missing .x() method on Map", //nolint:lll
 	"l2-external-enum":                       "compilation error: package com.pulumi.enum_.enums does not exist",
