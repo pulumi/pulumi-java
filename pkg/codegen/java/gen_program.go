@@ -1199,21 +1199,7 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 			genQuotedList("replaceOnChanges", resource.Options.ReplaceOnChanges)
 		}
 		if resource.Options.AdditionalSecretOutputs != nil {
-			g.genIndent(w)
-			g.Fgen(w, ".additionalSecretOutputs(")
-			switch expr := resource.Options.AdditionalSecretOutputs.(type) {
-			case *model.TupleConsExpression:
-				for index, v := range expr.Expressions {
-					g.Fgenf(w, "%v", v)
-					if index != len(expr.Expressions)-1 {
-						g.Fgen(w, ", ")
-					}
-				}
-			default:
-				g.Fgenf(w, "%v", resource.Options.AdditionalSecretOutputs)
-			}
-			g.Fgen(w, ")")
-			g.genNewline(w)
+			genQuotedList("additionalSecretOutputs", resource.Options.AdditionalSecretOutputs)
 		}
 		if resource.Options.ImportID != nil {
 			g.genIndent(w)

@@ -1,4 +1,4 @@
 component: codegen
 kind: Bug Fixes
-body: Fix codegen of resource option property paths (ignoreChanges, replaceOnChanges, hideDiffs) to emit string literals instead of Java code expressions.
+body: Fix codegen of resource option property paths (ignoreChanges, replaceOnChanges, hideDiffs, additionalSecretOutputs) to emit string literals instead of Java code expressions.
 time: 2026-04-08T00:00:00.000000Z
