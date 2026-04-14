@@ -45,7 +45,11 @@ public class ComponentResource extends Resource {
      * @param type    The type of the resource
      * @param name    The unique name of the resource
      * @param options A bag of options that control this resource's behavior
-     * @param remote  True if this is a remote component resource
+     * @param remote  This parameter is intended for use by code-generated component SDKs;
+     *                end users authoring their own {@link ComponentResource} subclasses should
+     *                leave this at its default ({@code false}). When {@code true}, the component's
+     *                children are constructed by the engine rather than in this process, and the
+     *                constructor skips local child registration accordingly.
      */
     public ComponentResource(String type, String name, @Nullable ComponentResourceOptions options, boolean remote) {
         this(type, name, ResourceArgs.Empty, options, remote, null);
@@ -69,7 +73,11 @@ public class ComponentResource extends Resource {
      * @param type    The type of the resource
      * @param name    The unique name of the resource
      * @param args    The arguments to use to populate the new resource
-     * @param remote  True if this is a remote component resource
+     * @param remote  This parameter is intended for use by code-generated component SDKs;
+     *                end users authoring their own {@link ComponentResource} subclasses should
+     *                leave this at its default ({@code false}). When {@code true}, the component's
+     *                children are constructed by the engine rather than in this process, and the
+     *                constructor skips local child registration accordingly.
      * @param options A bag of options that control this resource's behavior
      */
     public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote) {
@@ -88,7 +96,11 @@ public class ComponentResource extends Resource {
      * @param name       The unique name of the resource
      * @param args       The arguments to use to populate the new resource
      * @param options    A bag of options that control this resource's behavior
-     * @param remote     True if this is a remote component resource
+     * @param remote     This parameter is intended for use by code-generated component SDKs;
+     *                   end users authoring their own {@link ComponentResource} subclasses should
+     *                   leave this at its default ({@code false}). When {@code true}, the component's
+     *                   children are constructed by the engine rather than in this process, and the
+     *                   constructor skips local child registration accordingly.
      * @param packageRef The package reference to use for this resource
      */
     public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote, CompletableFuture<String> packageRef) {
