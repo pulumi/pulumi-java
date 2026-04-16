@@ -98,7 +98,11 @@ public abstract class Resource {
      * @param custom     true to indicate that this is a custom resource, managed by a plugin
      * @param args       the arguments to use to populate the new resource
      * @param options    a bag of options that control this resource's behavior
-     * @param remote     true if this is a remote component resource
+     * @param remote     This parameter is intended for use by code-generated component SDKs;
+     *                   end users authoring their own {@link ComponentResource} subclasses should
+     *                   leave this at its default ({@code false}). When {@code true}, the component's
+     *                   children are constructed by the engine rather than in this process, and the
+     *                   constructor skips local child registration accordingly.
      * @param dependency true if this is a synthetic resource used internally for dependency tracking
      * @param packageRef the package reference to use if this resource belongs to a parameterized provider
      */
