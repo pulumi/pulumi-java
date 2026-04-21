@@ -148,7 +148,12 @@ If you want to talk with other folks in the Pulumi community
 Changelog management is done via [`changie`](https://changie.dev/).
 See the [installation](https://changie.dev/guide/installation/) guide for `changie`.
 
-Run `make changelog` (or `changie new`) in the top level directory. Here is an example of what that looks like:
+Always use `make changelog` (or `changie new`) to create entries. Do not
+hand-write the YAML files in `.changes/unreleased/`: the rendered changelog
+embeds the pull request number from `custom.PR`, and omitting it causes links
+to render as `<no value>`.
+
+Here is an example of what `make changelog` looks like:
 
 ```shell
 $ make changelog

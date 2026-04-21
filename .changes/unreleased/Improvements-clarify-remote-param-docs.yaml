@@ -1,4 +1,0 @@
-component: sdk
-kind: Improvements
-body: Clarify docs on the `remote` parameter of `ComponentResource` / `Resource` constructors.
-time: 2026-04-14T00:00:00.000000Z
