@@ -524,7 +524,7 @@ func isBuiltin(pkg, module, member string) bool {
 	if pkg != "pulumi" {
 		return false
 	}
-	if module == "pulumi" && (member == "StackReference" || member == "StackReferenceArgs") {
+	if member == "StackReference" || member == "StackReferenceArgs" {
 		return true
 	}
 	if module == "index" && (member == "Stash" || member == "StashArgs") {
