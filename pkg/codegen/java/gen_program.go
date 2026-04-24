@@ -664,7 +664,7 @@ func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
 
 func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 	imports := make([]string, 0)
-	pkg, module, name, _ := resource.DecomposeToken()
+	pkg, module, name, _ := pcl.DecomposeToken(resource.GetToken())
 	resourceImport := pulumiResourceImport(resource, pkg, module, name)
 	imports = append(imports, resourceImport)
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
@@ -981,7 +981,7 @@ func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 // resourceTypeName computes the Java resource class name for the given resource.
 func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 	// Compute the resource type from the Pulumi type token.
-	pkg, module, member, diags := resource.DecomposeToken()
+	pkg, module, member, diags := pcl.DecomposeToken(resource.GetToken())
 	contract.Assertf(len(diags) == 0, "failed to decompose resource token: %v", diags)
 	if pkg == pulumiToken && module == providersToken {
 		member = "Provider"

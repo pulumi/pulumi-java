@@ -298,7 +298,7 @@ func (host *javaLanguageHost) runJavaCommand(
 	_ context.Context, dir, name string, args []string, quiet bool,
 ) (javaCommandResponse, error) {
 	commandStr := strings.Join(args, " ")
-	if logging.V(5) {
+	if logging.V(5).Enabled() {
 		logging.V(5).Infoln("Language host launching process: ", name, commandStr)
 	}
 
@@ -324,7 +324,7 @@ func (host *javaLanguageHost) runJavaCommand(
 
 	err := runCommand(cmd)
 
-	if err == nil && logging.V(5) {
+	if err == nil && logging.V(5).Enabled() {
 		logging.V(5).Infof("'%v %v' completed successfully\n", name, commandStr)
 	}
 
@@ -384,7 +384,7 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	executable := executor.Cmd
 	args := executor.RunArgs
 
-	if logging.V(5) {
+	if logging.V(5).Enabled() {
 		commandStr := strings.Join(args, " ")
 		logging.V(5).Infoln("Language host launching process: ", executable, commandStr)
 	}
