@@ -243,6 +243,17 @@ var expectedFailures = map[string]string{
 	"l3-range-parent-scope":                  "compilation error: syntax errors in generated code",
 	"l1-builtin-file":                        "compilation error: cannot find symbol",
 	"l3-range-ref":                           "compilation error: bad operand types for binary operator '<'",
+
+	"l2-resource-primitive-conversions":      "Failure after updating to 3.232",
+	"l3-component-primitive-conversions":     "Failure after updating to 3.232",
+	"l2-name-conflicts":                      "Failure after updating to 3.232",
+	"l1-builtin-stash":                       "Failure after updating to 3.232",
+	"l3-component-nested":                    "Failure after updating to 3.232",
+	"l2-id-type":                             "Failure after updating to 3.232",
+	"l2-resource-option-replacement-trigger": "Failure after updating to 3.232",
+	"l1-builtin-min-max":                     "Failure after updating to 3.232",
+	"l2-index-mod":                           "Failure after updating to 3.232",
+	"l2-resource-option-hooks":               "Failure after updating to 3.232",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

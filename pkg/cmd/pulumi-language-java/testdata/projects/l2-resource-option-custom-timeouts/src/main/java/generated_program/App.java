@@ -20,6 +20,8 @@ public class App {
     }
 
     public static void stack(Context ctx) {
+        final var config = ctx.config();
+        final var createTimeout = config.require("createTimeout");
         var noTimeouts = new Resource("noTimeouts", ResourceArgs.builder()
             .value(true)
             .build());
@@ -55,6 +57,14 @@ public class App {
                     .create(CustomTimeouts.parseTimeoutString("2m"))
                     .update(CustomTimeouts.parseTimeoutString("4m"))
                     .delete(CustomTimeouts.parseTimeoutString("1m"))
+                .build())
+                .build());
+
+        var configTimeout = new Resource("configTimeout", ResourceArgs.builder()
+            .value(true)
+            .build(), CustomResourceOptions.builder()
+                .customTimeouts(CustomTimeouts.builder()
+                    .create(CustomTimeouts.parseTimeoutString(createTimeout))
                 .build())
                 .build());
 
