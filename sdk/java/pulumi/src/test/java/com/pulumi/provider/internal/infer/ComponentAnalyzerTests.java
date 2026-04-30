@@ -838,13 +838,23 @@ public class ComponentAnalyzerTests {
     @Test
     void testInheritedInputProperties() {
         var schema = ComponentAnalyzer.generateSchema(metadata, InheritedComponent.class);
-        var resource = schema.getResources().get("my-component:index:InheritedComponent");
 
-        assertNotNull(resource);
-        // Both base and derived input properties should be present
-        assertTrue(resource.getInputProperties().containsKey("baseProp"),
-            "baseProp from base class should be present");
-        assertTrue(resource.getInputProperties().containsKey("childProp"),
-            "childProp from derived class should be present");
+        var expected = createBasePackageSpec()
+            .setResources(Map.of(
+                "my-component:index:InheritedComponent",
+                new ResourceSpec(
+                    Map.of(
+                        "baseProp", PropertySpec.ofBuiltin("string", true),
+                        "childProp", PropertySpec.ofBuiltin("string", true)
+                    ),
+                    Set.of(),
+                    Map.of(
+                        "result", PropertySpec.ofBuiltin("string")
+                    ),
+                    Set.of()
+                )
+            ));
+
+        assertEquals(expected, schema);
     }
 }
