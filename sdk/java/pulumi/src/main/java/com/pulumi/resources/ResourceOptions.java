@@ -23,7 +23,8 @@ public abstract class ResourceOptions {
     protected Resource parent;
     @Nullable
     protected Output<List<Resource>> dependsOn;
-    protected boolean protect;
+    @Nullable
+    protected Boolean protect;
     @Nullable
     protected List<String> ignoreChanges;
     @Nullable
@@ -56,7 +57,7 @@ public abstract class ResourceOptions {
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
-            boolean protect,
+            @Nullable Boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
             @Nullable ProviderResource provider,
@@ -152,8 +153,19 @@ public abstract class ResourceOptions {
 
         /**
          * When set to true, protect ensures this resource cannot be deleted.
+         * An explicit value on a child overrides the parent's value.
          */
         public B protect(boolean protect) {
+            options.protect = protect;
+            //noinspection unchecked
+            return (B) this;
+        }
+
+        /**
+         * @see #protect(boolean)
+         * Pass {@code null} to unset and inherit from the parent.
+         */
+        public B protect(@Nullable Boolean protect) {
             options.protect = protect;
             //noinspection unchecked
             return (B) this;
@@ -370,7 +382,7 @@ public abstract class ResourceOptions {
      * @see Builder#protect(boolean)
      */
     public boolean isProtect() {
-        return protect;
+        return protect != null && protect;
     }
 
     /**
@@ -477,7 +489,7 @@ public abstract class ResourceOptions {
 
         options1.id = options2.id == null ? options1.id : options2.id;
         options1.parent = options2.parent == null ? options1.parent : options2.parent;
-        options1.protect = options1.protect || options2.protect;
+        options1.protect = options2.protect == null ? options1.protect : options2.protect;
         options1.urn = options2.urn == null ? options1.urn : options2.urn;
         options1.version = options2.version == null ? options1.version : options2.version;
         options1.provider = options2.provider == null ? options1.provider : options2.provider;

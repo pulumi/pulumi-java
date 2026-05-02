@@ -204,7 +204,10 @@ public abstract class Resource {
             // the 'childResources' is a Synchronized Collection, so this is safe operation
             parentResource.childResources.add(this);
 
-            options.protect = options.protect || parentResource.protect; // TODO: is this logic good?
+            // Inherit parent's protect only if child didn't set it explicitly.
+            if (options.protect == null) {
+                options.protect = parentResource.protect;
+            }
             thisProviders.putAll(options.parent.providers);
         }
 
@@ -237,7 +240,7 @@ public abstract class Resource {
             thisProviders.putAll(convertToProvidersMap(providerList));
         }
 
-        this.protect = options.protect;
+        this.protect = options.protect != null && options.protect;
         this.provider = custom ? options.provider : null;
         this.version = options.version;
         this.providers = Map.copyOf(thisProviders);
