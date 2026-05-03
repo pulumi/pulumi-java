@@ -41,7 +41,8 @@ public abstract class ResourceOptions {
     protected String urn;
     @Nullable
     protected List<String> replaceOnChanges;
-    protected boolean retainOnDelete;
+    @Nullable
+    protected Boolean retainOnDelete;
     @Nullable
     protected String pluginDownloadURL;
     @Nullable
@@ -66,7 +67,7 @@ public abstract class ResourceOptions {
             @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges,
-            boolean retainOnDelete,
+            @Nullable Boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
             @Nullable List<String> hideDiffs,
             @Nullable List<Resource> replaceWith,
@@ -153,7 +154,6 @@ public abstract class ResourceOptions {
 
         /**
          * When set to true, protect ensures this resource cannot be deleted.
-         * An explicit value on a child overrides the parent's value.
          */
         public B protect(boolean protect) {
             options.protect = protect;
@@ -163,7 +163,6 @@ public abstract class ResourceOptions {
 
         /**
          * @see #protect(boolean)
-         * Pass {@code null} to unset and inherit from the parent.
          */
         public B protect(@Nullable Boolean protect) {
             options.protect = protect;
@@ -297,8 +296,17 @@ public abstract class ResourceOptions {
          * If set to True, the providers Delete method will not be called for this resource.
          */
         public B retainOnDelete(boolean retainOnDelete) {
-            //noinspection unchecked
             options.retainOnDelete = retainOnDelete;
+            //noinspection unchecked
+            return (B) this;
+        }
+
+        /**
+         * @see #retainOnDelete(boolean)
+         */
+        public B retainOnDelete(@Nullable Boolean retainOnDelete) {
+            options.retainOnDelete = retainOnDelete;
+            //noinspection unchecked
             return (B) this;
         }
 
@@ -386,6 +394,13 @@ public abstract class ResourceOptions {
     }
 
     /**
+     * @see Builder#protect(Boolean)
+     */
+    public Optional<Boolean> getProtect() {
+        return Optional.ofNullable(protect);
+    }
+
+    /**
      * @see Builder#ignoreChanges(String...)
      */
     public List<String> getIgnoreChanges() {
@@ -445,7 +460,14 @@ public abstract class ResourceOptions {
      * @see Builder#retainOnDelete(boolean)
      */
     public boolean isRetainOnDelete() {
-        return this.retainOnDelete;
+        return this.retainOnDelete != null && this.retainOnDelete;
+    }
+
+    /**
+     * @see Builder#retainOnDelete(Boolean)
+     */
+    public Optional<Boolean> getRetainOnDelete() {
+        return Optional.ofNullable(this.retainOnDelete);
     }
 
     /**
@@ -499,9 +521,7 @@ public abstract class ResourceOptions {
         options1.resourceTransformations = mergeNullableList(options1.resourceTransformations, options2.resourceTransformations);
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
-        options1.retainOnDelete = options1.retainOnDelete || options2.retainOnDelete;
-        options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
-        options1.retainOnDelete = options1.retainOnDelete || options2.retainOnDelete;
+        options1.retainOnDelete = options2.retainOnDelete == null ? options1.retainOnDelete : options2.retainOnDelete;
         options1.pluginDownloadURL = options2.pluginDownloadURL == null ? options1.pluginDownloadURL : options2.pluginDownloadURL;
         options1.hideDiffs = mergeNullableList(options1.hideDiffs, options2.hideDiffs);
         options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);

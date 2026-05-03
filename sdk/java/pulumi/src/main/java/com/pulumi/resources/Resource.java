@@ -204,10 +204,6 @@ public abstract class Resource {
             // the 'childResources' is a Synchronized Collection, so this is safe operation
             parentResource.childResources.add(this);
 
-            // Inherit parent's protect only if child didn't set it explicitly.
-            if (options.protect == null) {
-                options.protect = parentResource.protect;
-            }
             thisProviders.putAll(options.parent.providers);
         }
 

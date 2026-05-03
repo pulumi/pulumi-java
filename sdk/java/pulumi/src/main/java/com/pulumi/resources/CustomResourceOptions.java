@@ -19,7 +19,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
 
     public static final CustomResourceOptions Empty = CustomResourceOptions.builder().build();
 
-    private boolean deleteBeforeReplace;
+    @Nullable
+    private Boolean deleteBeforeReplace;
     @Nullable
     private List<String> additionalSecretOutputs;
     @Nullable
@@ -31,7 +32,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
-            boolean protect,
+            @Nullable Boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
             @Nullable ProviderResource provider,
@@ -39,11 +40,11 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable List<ResourceTransformation> resourceTransformations,
             @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
-            boolean deleteBeforeReplace,
+            @Nullable Boolean deleteBeforeReplace,
             @Nullable List<String> additionalSecretOutputs,
             @Nullable String importId,
             @Nullable List<String> replaceOnChanges,
-            boolean retainOnDelete,
+            @Nullable Boolean retainOnDelete,
             @Nullable String pluginDownloadURL,
             @Nullable List<String> hideDiffs,
             @Nullable List<Resource> replaceWith,
@@ -71,6 +72,14 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
          * replacement is created when replacement is necessary.
          */
         public Builder deleteBeforeReplace(boolean deleteBeforeReplace) {
+            options.deleteBeforeReplace = deleteBeforeReplace;
+            return this;
+        }
+
+        /**
+         * @see #deleteBeforeReplace(boolean)
+         */
+        public Builder deleteBeforeReplace(@Nullable Boolean deleteBeforeReplace) {
             options.deleteBeforeReplace = deleteBeforeReplace;
             return this;
         }
@@ -114,7 +123,14 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
      * @see Builder#deleteBeforeReplace(boolean)
      */
     public boolean getDeleteBeforeReplace() {
-        return this.deleteBeforeReplace;
+        return this.deleteBeforeReplace != null && this.deleteBeforeReplace;
+    }
+
+    /**
+     * @see Builder#deleteBeforeReplace(Boolean)
+     */
+    public Optional<Boolean> getDeleteBeforeReplaceOptional() {
+        return Optional.ofNullable(this.deleteBeforeReplace);
     }
 
     /**
@@ -188,7 +204,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
         //noinspection ConstantConditions
         options1 = mergeSharedOptions(options1, options2, id);
 
-        options1.deleteBeforeReplace = options1.deleteBeforeReplace || options2.deleteBeforeReplace;
+        options1.deleteBeforeReplace = options2.deleteBeforeReplace == null ? options1.deleteBeforeReplace : options2.deleteBeforeReplace;
         options1.importId = options2.importId == null ? options1.importId : options2.importId;
 
         options1.additionalSecretOutputs = mergeNullableList(options1.additionalSecretOutputs, options2.additionalSecretOutputs);

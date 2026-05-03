@@ -175,7 +175,6 @@ var expectedFailures = map[string]string{
 	"l2-component-component-resource-ref":    "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":      "components with resources as inputs/outputs not supported",
 	"l2-resource-secret":                     "#1564 Fix l2-resource-secret",
-	"l2-resource-parent-inheritance":         "Fix l2-resource-parent-inheritance",
 	"l2-namespaced-provider":                 "components with resources as inputs/outputs not supported",
 	"l2-component-property-deps":             "compilation error",
 	"l2-parameterized-resource":              "compilation error",
