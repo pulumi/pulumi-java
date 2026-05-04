@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: Generate `unsecret(...)` as `.asPlaintext()` and emit `config.requireSecret` for secret config variables in PCL programs
+time: 2026-05-04T21:57:53.941092+02:00
+custom:
+    PR: "2155"

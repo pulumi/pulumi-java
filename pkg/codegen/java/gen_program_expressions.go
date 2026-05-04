@@ -426,9 +426,18 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Otherwise, a secret [1, 2, 3] passed to `secret` would come out as `secret(1, 2, 3)`.
 		oldType := g.currentResourcePropertyType
 		g.currentResourcePropertyType = nil
-		g.Fgen(w, "Output.ofSecret(")
-		g.Fgenf(w, "%.v", expr.Args[0])
-		g.Fgen(w, ")")
+		if _, isOutput := expr.Args[0].Type().(*model.OutputType); isOutput {
+			g.Fgenf(w, "%.v.asSecret()", expr.Args[0])
+		} else {
+			g.Fgen(w, "Output.ofSecret(")
+			g.Fgenf(w, "%.v", expr.Args[0])
+			g.Fgen(w, ")")
+		}
+		g.currentResourcePropertyType = oldType
+	case "unsecret":
+		oldType := g.currentResourcePropertyType
+		g.currentResourcePropertyType = nil
+		g.Fgenf(w, "%.v.asPlaintext()", expr.Args[0])
 		g.currentResourcePropertyType = oldType
 	case "split":
 		g.Fgenf(w, "%.20v.split(%v)", expr.Args[1], expr.Args[0])
