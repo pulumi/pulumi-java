@@ -254,6 +254,11 @@ var expectedFailures = map[string]string{
 	"l1-builtin-min-max":                     "Failure after updating to 3.232",
 	"l2-index-mod":                           "Failure after updating to 3.232",
 	"l2-resource-option-hooks":               "Failure after updating to 3.232",
+
+	"l1-stack-reference":              "unsecret not implemented (test expanded in 3.234)",
+	"l2-resource-read":                "read resource not implemented (added in 3.234)",
+	"l2-component-call-plain":         "plain provider call not implemented (added in 3.234)",
+	"provider-builtin-info-component": "language component providers not implemented (added in 3.234)",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
