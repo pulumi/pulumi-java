@@ -219,7 +219,6 @@ var expectedFailures = map[string]string{
 	"l1-builtin-list":                        "compilation error: array indexing on String",
 	"l2-resource-elide-unknowns":             "compilation error: array indexing on List and missing .x() method on Map", //nolint:lll
 	"l2-external-enum":                       "compilation error: package com.pulumi.enum_.enums does not exist",
-	"l1-builtin-secret":                      "TODO: call unsecret not implemented",
 	"l1-builtin-require-pulumi-version":      "requirePulumiVersion method not found on DeploymentInstance",
 	"l2-resource-name-type":                  "TODO: call pulumiResourceName/pulumiResourceType not implemented",
 	"l2-resource-option-replace-with":        "replaceWith method not found on CustomResourceOptions.Builder",
@@ -255,7 +254,6 @@ var expectedFailures = map[string]string{
 	"l2-index-mod":                           "Failure after updating to 3.232",
 	"l2-resource-option-hooks":               "Failure after updating to 3.232",
 
-	"l1-stack-reference":              "unsecret not implemented (test expanded in 3.234)",
 	"l2-resource-read":                "read resource not implemented (added in 3.234)",
 	"l2-component-call-plain":         "plain provider call not implemented (added in 3.234)",
 	"provider-builtin-info-component": "language component providers not implemented (added in 3.234)",

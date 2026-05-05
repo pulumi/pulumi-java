@@ -3,8 +3,6 @@ package generated_program;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.resources.StackReference;
-import com.pulumi.resources.StackReferenceArgs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -18,12 +16,13 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var ref = new StackReference("ref", StackReferenceArgs.builder()
-            .name("organization/other/dev")
-            .build());
-
-        ctx.export("plain", ref.output("plain"));
-        ctx.export("secret", ref.output("secret"));
-        ctx.export("secret_unsecret", ref.output("secret").asPlaintext());
+        final var config = ctx.config();
+        final var aSecret = config.requireSecret("aSecret");
+        final var notSecret = config.require("notSecret");
+        ctx.export("roundtripSecret", aSecret);
+        ctx.export("roundtripNotSecret", notSecret);
+        ctx.export("double", aSecret.asSecret());
+        ctx.export("open", aSecret.asPlaintext());
+        ctx.export("close", Output.ofSecret(notSecret));
     }
 }

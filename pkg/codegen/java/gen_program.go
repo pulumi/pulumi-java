@@ -1433,6 +1433,10 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 			names.MakeValidIdentifier(configVariable.Name()),
 			configVariable.Name(),
 			configVariable.DefaultValue)
+	} else if configVariable.Secret {
+		g.Fgenf(w, "final var %s = config.requireSecret(\"%s\");",
+			names.MakeValidIdentifier(configVariable.Name()),
+			configVariable.Name())
 	} else {
 		g.Fgenf(w, "final var %s = config.require(\"%s\");",
 			names.MakeValidIdentifier(configVariable.Name()),
