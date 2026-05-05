@@ -407,16 +407,6 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	var stdoutBuf bytes.Buffer
 	var stderrBuf bytes.Buffer
 
-	// We need to process the output of the command to determine when the debugger is ready, but
-	// also want to tee the output to the engine so that it can be displayed to the user.
-	pr, pw := io.Pipe()
-	defer pw.Close()
-
-	cmd.Stdout = pw
-	cmd.Stderr = &stderrBuf
-
-	tr := io.TeeReader(pr, &stdoutBuf)
-
 	env := host.constructEnv(req, config, configSecretKeys)
 
 	carrier := make(propagation.MapCarrier)
@@ -429,34 +419,51 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	}
 
 	cmd.Env = env
-	go func() {
-		err := WaitForDebuggerReady(tr)
-		if err != nil {
-			logging.Errorf("failed to wait for debugger: %v", err)
-			contract.IgnoreError(cmd.Process.Kill())
-		}
 
-		// emit a debug configuration
-		debugConfig, err := structpb.NewStruct(map[string]interface{}{
-			"name":     "Pulumi: Program (Java)",
-			"type":     "java",
-			"request":  "attach",
-			"hostName": "localhost",
-			"port":     8000,
-		})
-		if err != nil {
-			logging.Errorf("failed to serialize debug configuration: %v", err)
-			contract.IgnoreError(cmd.Process.Kill())
-		}
-		_, err = engineClient.StartDebugging(ctx, &pulumirpc.StartDebuggingRequest{
-			Config:  debugConfig,
-			Message: "on port 8000",
-		})
-		if err != nil {
-			logging.Errorf("unable to start debugging: %v", err)
-			contract.IgnoreError(cmd.Process.Kill())
-		}
-	}()
+	if req.GetAttachDebugger() {
+		// We need to process the output of the command to determine when the debugger is ready, but
+		// also want to tee the output to the engine so that it can be displayed to the user.
+		pr, pw := io.Pipe()
+		defer pw.Close()
+
+		cmd.Stdout = pw
+		cmd.Stderr = &stderrBuf
+
+		tr := io.TeeReader(pr, &stdoutBuf)
+
+		go func() {
+			err := WaitForDebuggerReady(tr)
+			if err != nil {
+				logging.Errorf("failed to wait for debugger: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+
+			// emit a debug configuration
+			debugConfig, err := structpb.NewStruct(map[string]interface{}{
+				"name":     "Pulumi: Program (Java)",
+				"type":     "java",
+				"request":  "attach",
+				"hostName": "localhost",
+				"port":     8000,
+			})
+			if err != nil {
+				logging.Errorf("failed to serialize debug configuration: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+			_, err = engineClient.StartDebugging(ctx, &pulumirpc.StartDebuggingRequest{
+				Config:  debugConfig,
+				Message: "on port 8000",
+			})
+			if err != nil {
+				logging.Errorf("unable to start debugging: %v", err)
+				contract.IgnoreError(cmd.Process.Kill())
+			}
+		}()
+	} else {
+		cmd.Stdout = &stdoutBuf
+		cmd.Stderr = &stderrBuf
+	}
+
 	if err := runCommand(cmd); err != nil {
 		// The command failed. Dump any data we collected to
 		// the actual stdout/stderr streams, so they get
