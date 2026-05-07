@@ -166,7 +166,9 @@ public final class ComponentAnalyzer {
         Map<String, PropertySpec> properties = new HashMap<>();
         Set<String> required = new TreeSet<>();
 
-        Arrays.stream(type.getDeclaredFields())
+        // Walk the class hierarchy to include inherited fields, filtering
+        // out Pulumi SDK base classes.
+        getAllFields(type).stream()
                 .forEach(field -> {
                     String schemaName = getSchemaPropertyName(field);
                     analyzeProperty(field).ifPresent(propertyDef -> {
@@ -178,6 +180,21 @@ public final class ComponentAnalyzer {
                 });
 
         return new TypeAnalysis(properties, required);
+    }
+
+    private static final Set<Class<?>> PULUMI_BASE_TYPES = Set.of(
+        ResourceArgs.class, ComponentResource.class, CustomResource.class
+    );
+
+    private static List<java.lang.reflect.Field> getAllFields(Class<?> type) {
+        var fields = new java.util.ArrayList<java.lang.reflect.Field>();
+        for (Class<?> c = type; c != null && c != Object.class; c = c.getSuperclass()) {
+            if (PULUMI_BASE_TYPES.contains(c)) {
+                break;
+            }
+            fields.addAll(Arrays.asList(c.getDeclaredFields()));
+        }
+        return fields;
     }
 
     private TypeAnalysis analyzeOutputsWithRequired(Class<?> type) {

@@ -813,4 +813,48 @@ public class ComponentAnalyzerTests {
 
         assertEquals(expected, schema);
     }
+
+    // --- Inherited input properties test ---
+
+    public static class BaseComponentArgs extends ResourceArgs {
+        @Import(name = "baseProp")
+        private String baseProp;
+    }
+
+    public static class DerivedComponentArgs extends BaseComponentArgs {
+        @Import(name = "childProp")
+        private String childProp;
+    }
+
+    public static class InheritedComponent extends ComponentResource {
+        @Export(name = "result")
+        private Output<String> result;
+
+        public InheritedComponent(DerivedComponentArgs args) {
+            super("my-component:index:InheritedComponent", "test");
+        }
+    }
+
+    @Test
+    void testInheritedInputProperties() {
+        var schema = ComponentAnalyzer.generateSchema(metadata, InheritedComponent.class);
+
+        var expected = createBasePackageSpec()
+            .setResources(Map.of(
+                "my-component:index:InheritedComponent",
+                new ResourceSpec(
+                    Map.of(
+                        "baseProp", PropertySpec.ofBuiltin("string", true),
+                        "childProp", PropertySpec.ofBuiltin("string", true)
+                    ),
+                    Set.of(),
+                    Map.of(
+                        "result", PropertySpec.ofBuiltin("string")
+                    ),
+                    Set.of()
+                )
+            ));
+
+        assertEquals(expected, schema);
+    }
 }
