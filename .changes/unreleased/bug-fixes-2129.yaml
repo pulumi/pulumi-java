@@ -1,6 +1,0 @@
-kind: bug-fixes
-body: Fix inherited input properties missing from component schema when args class inherits from a base class
-time: 2026-04-07T13:00:00Z
-custom:
-  PR: 2129
-component: sdk
