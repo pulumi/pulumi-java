@@ -1,6 +1,0 @@
-component: runtime
-kind: bug-fixes
-body: Wait for debugger attach only when it is requested
-time: 2026-05-05T12:08:45.51936073+02:00
-custom:
-    PR: "2161"
