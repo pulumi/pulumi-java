@@ -188,6 +188,21 @@ func containsRangeExpr(nodes []pcl.Node) bool {
 	return hasIterableResources(nodes) || containsFunctionCall("readDir", nodes)
 }
 
+// containsStringLengthCall reports whether the program calls PCL's length() on a string.
+// We emit Strings.length(...) (a grapheme-cluster counter) for these to match length()
+// semantics in other Pulumi languages.
+func containsStringLengthCall(nodes []pcl.Node) bool {
+	found := false
+	inspectFunctionCall(nodes, func(call *model.FunctionCallExpression) {
+		if call.Name == "length" && len(call.Args) == 1 {
+			if model.StringType.AssignableFrom(model.ResolveOutputs(call.Args[0].Type())) {
+				found = true
+			}
+		}
+	})
+	return found
+}
+
 func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, error) {
 	pcl.MapProvidersAsResources(program)
 	// Linearize the nodes into an order appropriate for procedural code generation.
@@ -944,6 +959,10 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	if containsRangeExpr(nodes) {
 		// import the KeyedValue<T> class
 		g.genImport(w, "com.pulumi.codegen.internal.KeyedValue")
+	}
+
+	if containsStringLengthCall(nodes) {
+		g.genImport(w, "com.pulumi.codegen.internal.Strings")
 	}
 
 	g.genResourceOptionsImports(w, nodes)

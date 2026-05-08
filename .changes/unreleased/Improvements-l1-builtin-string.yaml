@@ -1,0 +1,6 @@
+kind: Improvements
+body: Fix l1-builtin-string by emitting a grapheme-cluster counter for PCL length() on strings, and wrapping split() results as List<String> so they serialize correctly through ctx.export.
+time: 2026-05-08T00:00:00Z
+custom:
+  PR: 0
+component: codegen
