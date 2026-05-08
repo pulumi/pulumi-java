@@ -412,7 +412,12 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "join":
 		g.Fgenf(w, "String.join(%v, %v)", expr.Args[0], expr.Args[1])
 	case "length":
-		g.Fgenf(w, "%.20v.length()", expr.Args[0])
+		argType := model.ResolveOutputs(expr.Args[0].Type())
+		if model.StringType.AssignableFrom(argType) {
+			g.Fgenf(w, "Strings.length(%.v)", expr.Args[0])
+		} else {
+			g.Fgenf(w, "%.20v.size()", expr.Args[0])
+		}
 	case "lookup":
 		g.Fgenf(w, "%v[%v]", expr.Args[0], expr.Args[1])
 	case "range":
@@ -440,7 +445,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "%.v.asPlaintext()", expr.Args[0])
 		g.currentResourcePropertyType = oldType
 	case "split":
-		g.Fgenf(w, "%.20v.split(%v)", expr.Args[1], expr.Args[0])
+		g.Fgenf(w, "Arrays.asList(%.20v.split(%v))", expr.Args[1], expr.Args[0])
 	case "mimeType":
 		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
 	case "base64encode":
