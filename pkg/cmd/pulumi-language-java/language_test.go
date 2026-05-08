@@ -211,7 +211,6 @@ var expectedFailures = map[string]string{
 	"provider-replacement-trigger-component": "https://github.com/pulumi/pulumi-java/issues/2007",
 	"provider-depends-on-component":          "https://github.com/pulumi/pulumi-java/issues/2023",
 	"provider-ignore-changes-component":      "https://github.com/pulumi/pulumi-java/issues/2024",
-	"l1-builtin-base64":                      "TODO: call fromBase64/toBase64 not implemented",
 	"l1-config-secret":                       "compilation error: applyValue called on plain String",
 	"l1-builtin-object":                      "compilation error: illegal start of expression",
 	"l2-builtin-object":                      "compilation error: illegal start of expression",
