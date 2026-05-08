@@ -257,6 +257,8 @@ var expectedFailures = map[string]string{
 	"l2-resource-read":                "read resource not implemented (added in 3.234)",
 	"l2-component-call-plain":         "plain provider call not implemented (added in 3.234)",
 	"provider-builtin-info-component": "language component providers not implemented (added in 3.234)",
+
+	"l1-builtin-string": "string builtins emit plain Java ops; ctx.export sees no Outputs",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
