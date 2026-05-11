@@ -1,3 +1,4 @@
+permissions: write-all # Equivalent to default permissions plus id-token: write
 on:
   pull_request: {}
   push:
@@ -14,7 +15,6 @@ on:
 
 env:
   PULUMI_API: https://api.pulumi-staging.io
-  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GOOGLE_CI_SERVICE_ACCOUNT_EMAIL: pulumi-ci@pulumi-ci-gcp-provider.iam.gserviceaccount.com
@@ -22,7 +22,11 @@ env:
   GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER: pulumi-ci
   GOOGLE_PROJECT_NUMBER: 895284651812
   GOLANGCI_LINT_VERSION: v2.9.0
-
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: imports/github-secrets
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_ACCESS_TOKEN=PULUMI_ACCESS_TOKEN_STAGING
 
 jobs:
   should-test:
@@ -50,6 +54,9 @@ jobs:
     outputs:
       gotcloudcreds: ${{ steps.gotcloudcreds.outputs.gotcloudcreds }}
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -155,6 +162,9 @@ jobs:
     strategy:
       fail-fast: false
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -229,6 +239,9 @@ jobs:
       contents: read
       id-token: write
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -270,14 +283,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+          role-to-assume: ${{ steps.esc-secrets.outputs.AWS_CI_ROLE_ARN }}
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER
-            }}/locations/global/workloadIdentityPools/${{
-            env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{
-            env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
+          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
       - name: Setup gcloud auth
         uses: google-github-actions/setup-gcloud@v2
@@ -285,11 +295,11 @@ jobs:
           install_components: gke-gcloud-auth-plugin
       - name: Run ${{ matrix.example }} example
         env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN_STAGING }}
+          ARM_CLIENT_ID: ${{ steps.esc-secrets.outputs.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ steps.esc-secrets.outputs.ARM_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ steps.esc-secrets.outputs.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ steps.esc-secrets.outputs.ARM_TENANT_ID }}
         run: make test_example.${{ matrix.example }}
 
   go-lint:
@@ -299,6 +309,9 @@ jobs:
     timeout-minutes: 10
     name: Lint Go
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
@@ -323,6 +336,9 @@ jobs:
     strategy:
       fail-fast: false
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v5
         with:
           fetch-tags: true
@@ -381,7 +397,7 @@ jobs:
           cache: enable
       - name: Run integration tests
         env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN_STAGING }}
         run: make test_integrations
 
   test_templates:
@@ -393,6 +409,9 @@ jobs:
       contents: read
       id-token: write
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -436,25 +455,22 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+          role-to-assume: ${{ steps.esc-secrets.outputs.AWS_CI_ROLE_ARN }}
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER
-            }}/locations/global/workloadIdentityPools/${{
-            env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{
-            env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
+          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
       - name: Setup gcloud auth
         uses: google-github-actions/setup-gcloud@v2
         with:
           install_components: gke-gcloud-auth-plugin
       - env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN_STAGING }}
+          ARM_CLIENT_ID: ${{ steps.esc-secrets.outputs.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ steps.esc-secrets.outputs.ARM_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ steps.esc-secrets.outputs.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ steps.esc-secrets.outputs.ARM_TENANT_ID }}
         run: make test_templates
 
   ci-ok:
@@ -463,6 +479,9 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: CI failed
         if: >-
           ${{
