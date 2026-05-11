@@ -965,6 +965,22 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		g.genImport(w, "com.pulumi.codegen.internal.Strings")
 	}
 
+	if containsFunctionCall("toBase64", nodes) ||
+		containsFunctionCall("fromBase64", nodes) ||
+		containsFunctionCall("base64encode", nodes) ||
+		containsFunctionCall("base64decode", nodes) ||
+		containsFunctionCall("filebase64", nodes) {
+		g.genImport(w, "java.util.Base64")
+	}
+
+	if containsFunctionCall("toBase64", nodes) ||
+		containsFunctionCall("fromBase64", nodes) ||
+		containsFunctionCall("base64encode", nodes) ||
+		containsFunctionCall("base64decode", nodes) ||
+		containsFunctionCall("file", nodes) {
+		g.genImport(w, "java.nio.charset.StandardCharsets")
+	}
+
 	g.genResourceOptionsImports(w, nodes)
 
 	g.genImport(w, "java.util.ArrayList")

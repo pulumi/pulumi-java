@@ -448,9 +448,9 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "Arrays.asList(%.20v.split(%v))", expr.Args[1], expr.Args[0])
 	case "mimeType":
 		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
-	case "base64encode":
+	case "base64encode", "toBase64":
 		g.Fgenf(w, "Base64.getEncoder().encodeToString(%v.getBytes(StandardCharsets.UTF_8))", expr.Args[0])
-	case "base64decode":
+	case "base64decode", "fromBase64":
 		g.Fgenf(w, "new String(Base64.getDecoder().decode(%v), StandardCharsets.UTF_8)", expr.Args[0])
 	case "toJSON":
 		// Assumes SerializeJson is part of the SDK

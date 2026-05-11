@@ -1,0 +1,6 @@
+kind: Improvements
+body: Implement the PCL `fromBase64` and `toBase64` builtins in the Java program codegen
+time: 2026-05-08T00:00:00Z
+custom:
+  PR: 0
+component: codegen
