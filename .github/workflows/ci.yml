@@ -26,7 +26,7 @@ env:
   ESC_ACTION_OIDC_ORGANIZATION: pulumi
   ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
   ESC_ACTION_ENVIRONMENT: imports/github-secrets
-  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_ACCESS_TOKEN
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_ACCESS_TOKEN=PULUMI_ACCESS_TOKEN_STAGING
 
 jobs:
   should-test:
@@ -295,7 +295,7 @@ jobs:
           install_components: gke-gcloud-auth-plugin
       - name: Run ${{ matrix.example }} example
         env:
-          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN_STAGING }}
           ARM_CLIENT_ID: ${{ steps.esc-secrets.outputs.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ steps.esc-secrets.outputs.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ steps.esc-secrets.outputs.ARM_SUBSCRIPTION_ID }}
@@ -397,7 +397,7 @@ jobs:
           cache: enable
       - name: Run integration tests
         env:
-          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN_STAGING }}
         run: make test_integrations
 
   test_templates:
@@ -466,7 +466,7 @@ jobs:
         with:
           install_components: gke-gcloud-auth-plugin
       - env:
-          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN_STAGING }}
           ARM_CLIENT_ID: ${{ steps.esc-secrets.outputs.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ steps.esc-secrets.outputs.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ steps.esc-secrets.outputs.ARM_SUBSCRIPTION_ID }}
