@@ -7,6 +7,8 @@ import com.pulumi.kubernetes.core_v1.Pod;
 import com.pulumi.kubernetes.core_v1.PodArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;

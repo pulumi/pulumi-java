@@ -619,6 +619,47 @@ func literalExprText(expr model.Expression) (string, bool) {
 	return "", false
 }
 
+// collectExprImports walks expr against its schema type, descending through Array, Map,
+// Union, and Input wrappers, and returns the Java imports for every nested object
+// instantiation it finds.
+func collectExprImports(expr model.Expression, schemaType schema.Type, namespace string) []string {
+	switch t := codegen.UnwrapType(schemaType).(type) {
+	case *schema.ObjectType:
+		object, ok := expr.(*model.ObjectConsExpression)
+		if !ok {
+			return nil
+		}
+		return collectObjectImports(object, t, namespace)
+	case *schema.ArrayType:
+		tuple, ok := expr.(*model.TupleConsExpression)
+		if !ok {
+			return nil
+		}
+		imports := make([]string, 0)
+		for _, element := range tuple.Expressions {
+			imports = append(imports, collectExprImports(element, t.ElementType, namespace)...)
+		}
+		return imports
+	case *schema.MapType:
+		object, ok := expr.(*model.ObjectConsExpression)
+		if !ok {
+			return nil
+		}
+		imports := make([]string, 0)
+		for _, item := range object.Items {
+			imports = append(imports, collectExprImports(item.Value, t.ElementType, namespace)...)
+		}
+		return imports
+	case *schema.UnionType:
+		imports := make([]string, 0)
+		for _, element := range t.ElementTypes {
+			imports = append(imports, collectExprImports(expr, element, namespace)...)
+		}
+		return imports
+	}
+	return nil
+}
+
 // Recursively derives imports from object by using its property type and
 // any nested object property that it instantiates
 func collectObjectImports(
@@ -641,40 +682,21 @@ func collectObjectImports(
 		imports = append(imports, pulumiImport(pkg, module, objectTypeName, namespace))
 	}
 
-	// then check whether one of the properties of this object is an object too
-	// in which case, we call this function recursively
+	// then recurse into each property using its declared schema type. This walks
+	// through nested objects as well as arrays, maps, and unions of objects.
 	for _, property := range object.Items {
-		switch innerObject := property.Value.(type) {
-		case *model.ObjectConsExpression:
-			if innerObjectKey, ok := literalExprText(property.Key); ok {
-				objectProperty, found := objectType.Property(innerObjectKey)
-				if found {
-					objectPropertyType := codegen.UnwrapType(objectProperty.Type)
-					switch objectPropertyType := objectPropertyType.(type) {
-					case *schema.ObjectType:
-						innerObjectType := objectPropertyType
-						// recurse into nested object
-						imports = append(imports, collectObjectImports(innerObject, innerObjectType, namespace)...)
-					}
-				}
-			}
+		innerObjectKey, ok := literalExprText(property.Key)
+		if !ok {
+			continue
 		}
+		objectProperty, found := objectType.Property(innerObjectKey)
+		if !found {
+			continue
+		}
+		imports = append(imports, collectExprImports(property.Value, objectProperty.Type, namespace)...)
 	}
 
 	return imports
-}
-
-// reduces Array<Input<T>> to just Array<T>
-func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
-	elementType := arrayType.ElementType
-	switch elementType := elementType.(type) {
-	case *schema.InputType:
-		inputType := elementType
-		return &schema.ArrayType{ElementType: inputType.ElementType}
-	default:
-		// return as-is
-		return arrayType
-	}
 }
 
 func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
@@ -693,42 +715,13 @@ func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 			imports = append(imports, argsTypeName)
 		}
 		resourceProperties := typedResourceProperties(resource)
+		namespace := ""
+		if resource.Schema != nil && resource.Schema.PackageReference != nil {
+			namespace = resource.Schema.PackageReference.Namespace()
+		}
 		for _, inputProperty := range resource.Inputs {
-			inputType := resourceProperties[inputProperty.Name]
-			switch inputType.(type) {
-			case *schema.ObjectType:
-				objectType := inputType.(*schema.ObjectType)
-				switch inputProperty.Value.(type) {
-				case *model.ObjectConsExpression:
-					object := inputProperty.Value.(*model.ObjectConsExpression)
-					imports = append(imports, collectObjectImports(
-						object, objectType, resource.Schema.PackageReference.Namespace())...)
-				}
-			case *schema.ArrayType:
-				arrayType := reduceInputTypeFromArray(inputType.(*schema.ArrayType))
-				innerArrayType := arrayType.ElementType
-				switch innerArrayType.(type) {
-				case *schema.ObjectType:
-					// found an Array<ElementType> type where ElementType is Object
-					// loop through each element of the array
-					// assume each element is of ElementType
-					arrayInnerTypeAsObject := innerArrayType.(*schema.ObjectType)
-					switch inputProperty.Value.(type) {
-					case *model.TupleConsExpression:
-						objects := inputProperty.Value.(*model.TupleConsExpression)
-						for _, arrayObject := range objects.Expressions {
-							switch arrayObject := arrayObject.(type) {
-							case *model.ObjectConsExpression:
-								object := arrayObject
-								imports = append(imports, collectObjectImports(
-									object,
-									arrayInnerTypeAsObject,
-									resource.Schema.PackageReference.Namespace())...)
-							}
-						}
-					}
-				}
-			}
+			imports = append(imports, collectExprImports(
+				inputProperty.Value, resourceProperties[inputProperty.Name], namespace)...)
 		}
 	}
 
