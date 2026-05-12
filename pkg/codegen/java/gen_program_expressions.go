@@ -474,6 +474,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgen(w, "Deployment.getInstance().getOrganizationName()")
 	case "cwd":
 		g.Fgen(w, "System.getProperty(\"user.dir\")")
+	case "rootDirectory":
+		g.Fgen(w, "Deployment.getInstance().getRootDirectory()")
 	default:
 		g.genNYI(w, "call %v", expr.Name)
 	}

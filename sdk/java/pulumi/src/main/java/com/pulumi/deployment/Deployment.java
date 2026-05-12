@@ -50,6 +50,12 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
     }
 
     /**
+     * @return the root directory of the current project, where {@code Pulumi.yaml} lives
+     */
+    @Nonnull
+    String getRootDirectory();
+
+    /**
      * Checks if the engine we are connected to is compatible with the passed in version range. If the version is not
      * compatible with the specified range, an exception is raised.
      *

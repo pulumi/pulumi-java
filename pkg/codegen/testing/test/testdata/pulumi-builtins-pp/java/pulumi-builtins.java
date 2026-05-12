@@ -20,5 +20,6 @@ public class App {
         ctx.export("stackName", Deployment.getInstance().getStackName());
         ctx.export("projectName", Deployment.getInstance().getProjectName());
         ctx.export("organizationName", Deployment.getInstance().getOrganizationName());
+        ctx.export("rootDir", Deployment.getInstance().getRootDirectory());
     }
 }

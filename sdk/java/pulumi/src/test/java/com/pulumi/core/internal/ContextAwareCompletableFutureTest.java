@@ -58,6 +58,12 @@ class ContextAwareCompletableFutureTest {
             return "";
         }
 
+        @Nonnull
+        @Override
+        public String getRootDirectory() {
+            return "";
+        }
+
         @Override
         public boolean isDryRun() {
             return false;

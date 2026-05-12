@@ -3,8 +3,9 @@ package generated_program;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import java.util.List;
+import com.pulumi.deployment.Deployment;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.io.File;
 import java.nio.file.Files;
@@ -16,6 +17,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        ctx.export("rootDirectoryOutput", "TODO: call rootDirectory");
+        ctx.export("rootDirectoryOutput", Deployment.getInstance().getRootDirectory());
     }
 }

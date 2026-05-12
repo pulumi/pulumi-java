@@ -56,6 +56,12 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
         return this.state.organizationName;
     }
 
+    @Nonnull
+    @Override
+    public String getRootDirectory() {
+        return this.state.rootDirectory;
+    }
+
     @Override
     public boolean isDryRun() {
         return this.state.isDryRun;
