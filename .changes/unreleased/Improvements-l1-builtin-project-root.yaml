@@ -2,5 +2,5 @@ kind: Improvements
 body: Implement the PCL `rootDirectory` builtin and surface the project root directory on `Deployment`
 time: 2026-05-12T00:00:00Z
 custom:
-  PR: "0000"
+  PR: "2176"
 component: sdk/java
