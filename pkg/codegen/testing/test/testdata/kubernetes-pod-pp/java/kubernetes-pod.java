@@ -28,10 +28,10 @@ public class App {
                 .name("bar")
                 .build())
             .spec(PodSpecArgs.builder()
-                .containers(ContainerArgs.builder()
+                .containers(com.pulumi.kubernetes.core_v1.inputs.ContainerArgs.builder()
                     .name("nginx")
                     .image("nginx:1.14-alpine")
-                    .resources(ResourceRequirementsArgs.builder()
+                    .resources(com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs.builder()
                         .limits(Map.ofEntries(
                             Map.entry("memory", "20Mi"),
                             Map.entry("cpu", "0.2")

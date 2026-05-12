@@ -61,7 +61,7 @@ public class App {
         // invoke forms.
         final var amis = Ec2Functions.getAmiIds(GetAmiIdsArgs.builder()
             .owners(bar.id())
-            .filters(GetAmiIdsFilterArgs.builder()
+            .filters(com.pulumi.aws.ec2.inputs.GetAmiIdsFilterArgs.builder()
                 .name(bar.id())
                 .values("pulumi*")
                 .build())

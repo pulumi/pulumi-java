@@ -35,7 +35,7 @@ public class App {
 
         // Get the ID for the latest Amazon Linux AMI.
         final var ami = AwsFunctions.getAmi(GetAmiArgs.builder()
-            .filters(GetAmiFilterArgs.builder()
+            .filters(com.pulumi.aws.inputs.GetAmiFilterArgs.builder()
                 .name("name")
                 .values("amzn-ami-hvm-*-x86_64-ebs")
                 .build())
