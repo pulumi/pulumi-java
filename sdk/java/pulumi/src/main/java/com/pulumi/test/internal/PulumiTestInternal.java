@@ -368,7 +368,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                         this.options.organizationName(),
                         this.options.projectName(),
                         this.options.stackName(),
-                        "",
+                        this.options.rootDirectory(),
                         this.options.preview(),
                         this.engine,
                         this.monitor

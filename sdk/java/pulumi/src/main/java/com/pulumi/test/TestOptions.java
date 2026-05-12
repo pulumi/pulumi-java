@@ -17,6 +17,7 @@ public class TestOptions {
     private final String organizationName;
     private final String projectName;
     private final String stackName;
+    private final String rootDirectory;
     private final boolean preview;
     private final List<ResourceTransformation> resourceTransformations;
 
@@ -49,11 +50,31 @@ public class TestOptions {
             List<ResourceTransformation> resourceTransformations,
             String organizationName
     ) {
+        this(projectName, stackName, preview, resourceTransformations, organizationName, null);
+    }
+
+    /**
+     * @param projectName             the test project name to use
+     * @param stackName               the test stack name to use
+     * @param preview                 is the test a preview or a normal execution
+     * @param resourceTransformations the test stack resource transformations
+     * @param organizationName        the test organization name to use
+     * @param rootDirectory           the test project root directory to use
+     */
+    public TestOptions(
+            String projectName,
+            String stackName,
+            boolean preview,
+            List<ResourceTransformation> resourceTransformations,
+            String organizationName,
+            String rootDirectory
+    ) {
         this.projectName = requireNonNull(projectName);
         this.stackName = requireNonNull(stackName);
         this.preview = preview;
         this.resourceTransformations = requireNonNull(resourceTransformations);
         this.organizationName = requireNonNullElse(organizationName, "organization");
+        this.rootDirectory = requireNonNullElse(rootDirectory, "");
     }
 
     /**
@@ -75,6 +96,13 @@ public class TestOptions {
      */
     public String stackName() {
         return this.stackName;
+    }
+
+    /**
+     * @return the test project root directory
+     */
+    public String rootDirectory() {
+        return this.rootDirectory;
     }
 
     /**
@@ -106,6 +134,7 @@ public class TestOptions {
         private String organizationName;
         private String projectName;
         private String stackName;
+        private String rootDirectory;
         private boolean preview;
         private List<ResourceTransformation> resourceTransformations;
 
@@ -113,6 +142,7 @@ public class TestOptions {
             this.organizationName = "organization";
             this.projectName = "project";
             this.stackName = "stack";
+            this.rootDirectory = "";
             this.preview = false;
             this.resourceTransformations = List.of();
         }
@@ -151,6 +181,17 @@ public class TestOptions {
         }
 
         /**
+         * The project root directory. Defaults to <b>""</b> if not specified.
+         *
+         * @param rootDirectory the project root directory to use in the test
+         * @return this {@link Builder}
+         */
+        public Builder rootDirectory(String rootDirectory) {
+            this.rootDirectory = rootDirectory;
+            return this;
+        }
+
+        /**
          * The preview mode. Defaults to <b>false</b> if not specified.
          *
          * @param preview set true if test is a preview or false on normal execution
@@ -178,7 +219,8 @@ public class TestOptions {
          */
         public TestOptions build() {
             return new TestOptions(
-                    this.projectName, this.stackName, this.preview, this.resourceTransformations, this.organizationName
+                    this.projectName, this.stackName, this.preview, this.resourceTransformations,
+                    this.organizationName, this.rootDirectory
             );
         }
     }
