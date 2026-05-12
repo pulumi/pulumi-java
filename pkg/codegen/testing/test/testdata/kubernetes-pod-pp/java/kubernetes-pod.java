@@ -7,6 +7,8 @@ import com.pulumi.kubernetes.core_v1.Pod;
 import com.pulumi.kubernetes.core_v1.PodArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -28,10 +30,10 @@ public class App {
                 .name("bar")
                 .build())
             .spec(PodSpecArgs.builder()
-                .containers(com.pulumi.kubernetes.core_v1.inputs.ContainerArgs.builder()
+                .containers(ContainerArgs.builder()
                     .name("nginx")
                     .image("nginx:1.14-alpine")
-                    .resources(com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs.builder()
+                    .resources(ResourceRequirementsArgs.builder()
                         .limits(Map.ofEntries(
                             Map.entry("memory", "20Mi"),
                             Map.entry("cpu", "0.2")

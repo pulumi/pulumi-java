@@ -10,6 +10,11 @@ import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
+import com.pulumi.kubernetes.core_v1.inputs.EnvVarSourceArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.Role;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleArgs;
 import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.PolicyRuleArgs;
@@ -49,33 +54,33 @@ public class App {
                         .build())
                     .spec(PodSpecArgs.builder()
                         .serviceAccountName("pulumi-kubernetes-operator")
-                        .imagePullSecrets(com.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs.builder()
+                        .imagePullSecrets(LocalObjectReferenceArgs.builder()
                             .name("pulumi-kubernetes-operator")
                             .build())
-                        .containers(com.pulumi.kubernetes.core_v1.inputs.ContainerArgs.builder()
+                        .containers(ContainerArgs.builder()
                             .name("pulumi-kubernetes-operator")
                             .image("pulumi/pulumi-kubernetes-operator:v0.0.2")
                             .command("pulumi-kubernetes-operator")
                             .args("--zap-level=debug")
                             .imagePullPolicy("Always")
                             .env(                            
-                                com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs.builder()
+                                EnvVarArgs.builder()
                                     .name("WATCH_NAMESPACE")
-                                    .valueFrom(com.pulumi.kubernetes.core_v1.inputs.EnvVarSourceArgs.builder()
-                                        .fieldRef(com.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs.builder()
+                                    .valueFrom(EnvVarSourceArgs.builder()
+                                        .fieldRef(ObjectFieldSelectorArgs.builder()
                                             .fieldPath("metadata.namespace")
                                             .build())
                                         .build())
                                     .build(),
-                                com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs.builder()
+                                EnvVarArgs.builder()
                                     .name("POD_NAME")
-                                    .valueFrom(com.pulumi.kubernetes.core_v1.inputs.EnvVarSourceArgs.builder()
-                                        .fieldRef(com.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs.builder()
+                                    .valueFrom(EnvVarSourceArgs.builder()
+                                        .fieldRef(ObjectFieldSelectorArgs.builder()
                                             .fieldPath("metadata.name")
                                             .build())
                                         .build())
                                     .build(),
-                                com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs.builder()
+                                EnvVarArgs.builder()
                                     .name("OPERATOR_NAME")
                                     .value("pulumi-kubernetes-operator")
                                     .build())

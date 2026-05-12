@@ -8,6 +8,7 @@ import com.pulumi.aws.ec2.SecurityGroupArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import com.pulumi.aws.AwsFunctions;
 import com.pulumi.aws.inputs.GetAmiArgs;
+import com.pulumi.aws.inputs.GetAmiFilterArgs;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class App {
 
         // Get the ID for the latest Amazon Linux AMI.
         final var ami = AwsFunctions.getAmi(GetAmiArgs.builder()
-            .filters(com.pulumi.aws.inputs.GetAmiFilterArgs.builder()
+            .filters(GetAmiFilterArgs.builder()
                 .name("name")
                 .values("amzn-ami-hvm-*-x86_64-ebs")
                 .build())

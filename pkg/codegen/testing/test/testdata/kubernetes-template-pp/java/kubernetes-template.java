@@ -11,6 +11,9 @@ import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ProbeArgs;
+import com.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -37,9 +40,9 @@ public class App {
             .spec(DeploymentSpecArgs.builder()
                 .template(PodTemplateSpecArgs.builder()
                     .spec(PodSpecArgs.builder()
-                        .containers(com.pulumi.kubernetes.core_v1.inputs.ContainerArgs.builder()
-                            .readinessProbe(com.pulumi.kubernetes.core_v1.inputs.ProbeArgs.builder()
-                                .httpGet(com.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs.builder()
+                        .containers(ContainerArgs.builder()
+                            .readinessProbe(ProbeArgs.builder()
+                                .httpGet(HTTPGetActionArgs.builder()
                                     .port(8080)
                                     .build())
                                 .build())
