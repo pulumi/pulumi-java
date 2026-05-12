@@ -777,8 +777,8 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType, "")...)
 			}
 		}
-	case "stack", "project", "organization":
-		// stack(), project(), and organization() functions are pulumi built-ins
+	case "stack", "project", "organization", "rootDirectory":
+		// stack(), project(), organization(), and rootDirectory() functions are pulumi built-ins
 		// they require the Deployment class
 		imports = append(imports, "com.pulumi.deployment.Deployment")
 	}

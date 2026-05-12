@@ -613,6 +613,7 @@ func (host *javaLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, co
 	maybeAppendEnv("project", req.GetProject())
 	maybeAppendEnv("stack", req.GetStack())
 	maybeAppendEnv("pwd", req.GetPwd())
+	maybeAppendEnv("root_directory", req.GetInfo().GetRootDirectory())
 	maybeAppendEnv("dry_run", fmt.Sprintf("%v", req.GetDryRun()))
 	maybeAppendEnv("parallel", fmt.Sprint(req.GetParallel()))
 	maybeAppendEnv("tracing", host.tracing)

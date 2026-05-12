@@ -153,7 +153,6 @@ func TestLanguage(t *testing.T) {
 // expectedFailures maps the set of conformance tests we expect to fail to reasons they currently do so, so that we may
 // skip them with an informative message until they are fixed.
 var expectedFailures = map[string]string{
-	"l1-builtin-project-root":                "TODO: call rootDirectory",
 	"l1-builtin-try":                         "#1683 Fix l1-builtin-try/can",
 	"l1-builtin-can":                         "#1683 Fix l1-builtin-try/can",
 	"l1-config-types-object":                 "https://github.com/pulumi/pulumi-java/issues/2005",
@@ -171,7 +170,6 @@ var expectedFailures = map[string]string{
 	"l2-provider-grpc-config-secret":         "#1568 Don't generate duplicate files",
 	"l2-provider-grpc-config":                "#1568 Don't generate duplicate files",
 	"l2-proxy-index":                         "compilation error",
-	"l2-rtti":                                "TODO: call pulumiResourceName",
 	"l2-component-component-resource-ref":    "components with resources as inputs/outputs not supported",
 	"l2-component-program-resource-ref":      "components with resources as inputs/outputs not supported",
 	"l2-resource-secret":                     "#1564 Fix l2-resource-secret",

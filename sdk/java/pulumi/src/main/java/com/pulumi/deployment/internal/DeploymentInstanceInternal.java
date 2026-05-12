@@ -57,6 +57,12 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
         return deployment.getOrganizationName();
     }
 
+    @Nonnull
+    @Override
+    public String getRootDirectory() {
+        return deployment.getRootDirectory();
+    }
+
     @Override
     public boolean isDryRun() {
         return deployment.isDryRun();

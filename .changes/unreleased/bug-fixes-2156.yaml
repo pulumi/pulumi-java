@@ -1,6 +1,6 @@
 component: sdk
 kind: bug-fixes
-body: Fix child resources unable to override protect, retainOnDelete, and deleteBeforeReplace from parent.
+body: Fix child resources unable to override protect, retainOnDelete, and deleteBeforeReplace from parent
 time: 2026-05-11T14:57:14.03221-04:00
 custom:
     PR: "2156"

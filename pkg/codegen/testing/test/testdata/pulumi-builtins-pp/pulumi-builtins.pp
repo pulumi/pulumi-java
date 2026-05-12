@@ -9,3 +9,7 @@ output "projectName" {
 output "organizationName" {
     value = organization()
 }
+
+output "rootDir" {
+    value = rootDirectory()
+}
