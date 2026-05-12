@@ -2,5 +2,5 @@ kind: Improvements
 body: Fix l2-map-keys by fully qualifying generated Args types when their simple names collide across imported packages
 time: 2026-05-12T12:32:26Z
 custom:
-  PR: ""
+  PR: "2178"
 component: codegen
