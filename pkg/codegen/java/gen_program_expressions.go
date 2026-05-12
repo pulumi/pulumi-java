@@ -634,19 +634,16 @@ func typeName(schemaType schema.Type) string {
 }
 
 // fullyQualifiedInputTypeName computes the fully qualified Java import path for the given
-// object type used as an input (i.e. *Args). It returns false if the path cannot be derived
-// (e.g. the token is malformed).
-func (g *generator) fullyQualifiedInputTypeName(objectType *schema.ObjectType, typeName string) (string, bool) {
+// object type used as an input (i.e. *Args).
+func (g *generator) fullyQualifiedInputTypeName(objectType *schema.ObjectType, typeName string) string {
 	nameParts := strings.Split(objectType.Token, ":")
-	if len(nameParts) < 3 {
-		return "", false
-	}
+	contract.Assertf(len(nameParts) >= 3, "expected well-formed object type token, got %q", objectType.Token)
 	pkg, module := nameParts[0], nameParts[1]
 	namespace := ""
 	if objectType.PackageReference != nil {
 		namespace = objectType.PackageReference.Namespace()
 	}
-	return pulumiInputImport(pkg, module, typeName, namespace), true
+	return pulumiInputImport(pkg, module, typeName, namespace)
 }
 
 // Checks whether the type is an object type
@@ -726,7 +723,7 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 
 		// If the import for this type was suppressed due to a name collision with another
 		// package, fall back to using the fully qualified name at the usage site.
-		if fq, ok := g.fullyQualifiedInputTypeName(destType, destTypeName); ok && !g.emittedTypeImportSymbols.Has(fq) {
+		if fq := g.fullyQualifiedInputTypeName(destType, destTypeName); !g.emittedTypeImportSymbols.Has(fq) {
 			destTypeName = fq
 		}
 
