@@ -7,8 +7,8 @@ import com.pulumi.simple.Provider;
 import com.pulumi.simple.Resource;
 import com.pulumi.simple.ResourceArgs;
 import com.pulumi.resources.CustomResourceOptions;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.io.File;
 import java.nio.file.Files;
@@ -42,6 +42,7 @@ public class App {
             .value(true)
             .build(), CustomResourceOptions.builder()
                 .protect(true)
+                .retainOnDelete(true)
                 .build());
 
         var child2 = new Resource("child2", ResourceArgs.builder()
@@ -54,6 +55,7 @@ public class App {
             .value(true)
             .build(), CustomResourceOptions.builder()
                 .protect(false)
+                .retainOnDelete(false)
                 .parent(parent2)
                 .build());
 

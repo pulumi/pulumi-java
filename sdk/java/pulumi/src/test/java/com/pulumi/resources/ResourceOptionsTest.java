@@ -20,8 +20,8 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, Output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null, false, null, null, null, null
+                        null, null, Output.of(List.of()), null, null,
+                        null, null, null, null, null, null, null, null, null, null, null, null
                 )),
                 arguments(                        new TestResourceOptions(
                                 null,
@@ -115,7 +115,7 @@ class ResourceOptionsTest {
                 @Nullable Output<String> id,
                 @Nullable Resource parent,
                 @Nullable Output<List<Resource>> dependsOn,
-                boolean protect,
+                @Nullable Boolean protect,
                 @Nullable List<String> ignoreChanges,
                 @Nullable String version,
                 @Nullable ProviderResource provider,
@@ -124,7 +124,7 @@ class ResourceOptionsTest {
                 @Nullable List<Output<Alias>> aliases,
                 @Nullable String urn,
                 @Nullable List<String> replaceOnChanges,
-                boolean retainOnDelete,
+                @Nullable Boolean retainOnDelete,
                 @Nullable String pluginDownloadURL,
                 @Nullable List<String> hideDiffs,
                 @Nullable List<Resource> replaceWith,

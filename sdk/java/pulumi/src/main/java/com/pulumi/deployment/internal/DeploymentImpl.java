@@ -1685,14 +1685,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .setType(type)
                     .setName(name)
                     .setCustom(custom)
-                    .setProtect(options.isProtect())
                     .setVersion(options.getVersion().orElse(""))
                     .setPluginDownloadURL(options.getPluginDownloadURL().orElse(""))
                     .setImportId(customOpts ? ((CustomResourceOptions) options).getImportId().orElse("") : "")
                     .setAcceptSecrets(true)
                     .setAcceptResources(!this.disableResourceReferences)
-                    .setDeleteBeforeReplace(customOpts && ((CustomResourceOptions) options).getDeleteBeforeReplace())
-                    .setDeleteBeforeReplaceDefined(true)
                     .setCustomTimeouts(
                             RegisterResourceRequest.CustomTimeouts.newBuilder()
                                     .setCreate(customTimeoutToGolangString.apply(CustomTimeouts::getCreate))
@@ -1701,11 +1698,18 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     .build()
                     )
                     .setRemote(remote)
-                    .setRetainOnDelete(options.isRetainOnDelete())
                     .setPackageRef(packageRef == null ? "" : packageRef);
 
+            options.getProtect().ifPresent(request::setProtect);
+            options.getRetainOnDelete().ifPresent(request::setRetainOnDelete);
+
             if (customOpts) {
-                request.addAllAdditionalSecretOutputs(((CustomResourceOptions) options).getAdditionalSecretOutputs());
+                var customResourceOpts = (CustomResourceOptions) options;
+                customResourceOpts.getDeleteBeforeReplaceOptional().ifPresent(value -> {
+                    request.setDeleteBeforeReplace(value);
+                    request.setDeleteBeforeReplaceDefined(true);
+                });
+                request.addAllAdditionalSecretOutputs(customResourceOpts.getAdditionalSecretOutputs());
                 request.addAllReplaceOnChanges(options.getReplaceOnChanges());
             }
 
