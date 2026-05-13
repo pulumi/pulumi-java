@@ -56,7 +56,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -164,7 +164,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -241,7 +241,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -311,7 +311,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
@@ -338,7 +338,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - uses: actions/checkout@v5
         with:
           fetch-tags: true
@@ -411,7 +411,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -481,7 +481,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@6cf9520e68354d86f81c455e8d43eabd58f5c9f5 # v1
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
       - name: CI failed
         if: >-
           ${{
