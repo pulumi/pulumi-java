@@ -186,6 +186,6 @@ all necessary tags (`v*`, `sdk/v*`).
 ```shell
 changie batch auto
 changie merge
-git add .
+git add .changes CHANGELOG.md
 git commit -m "Changelog for $(changie latest)"
 ```
