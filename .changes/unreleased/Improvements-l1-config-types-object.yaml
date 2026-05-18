@@ -1,0 +1,6 @@
+kind: Improvements
+body: Correctly generate object types for program config
+time: 2026-05-18T00:00:00Z
+custom:
+  PR: "2189"
+component: codegen
