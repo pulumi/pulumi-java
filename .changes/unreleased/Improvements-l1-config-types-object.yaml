@@ -1,0 +1,6 @@
+kind: Improvements
+body: Fix l1-config-types-object by lowering inline object/map/dynamic config types to Map<String, Object> via TypeShape, switching map-rooted traversals to .get() style, and inserting numeric casts for arithmetic on dynamic values
+time: 2026-05-18T00:00:00Z
+custom:
+  PR: "2189"
+component: codegen
