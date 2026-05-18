@@ -253,10 +253,10 @@ var expectedFailures = map[string]string{
 	"l2-component-call-plain":         "plain provider call not implemented (added in 3.234)",
 	"provider-builtin-info-component": "language component providers not implemented (added in 3.234)",
 
-	"l1-config-types-optional":        "Failure after updating to 3.239",
-	"l2-map-keys-adversarial":         "Failure after updating to 3.239",
-	"l2-resource-hook-ignore-errors":  "Failure after updating to 3.239",
-	"l2-resource-hook-after-failure":  "Failure after updating to 3.239",
+	"l1-config-types-optional":       "Failure after updating to 3.239",
+	"l2-map-keys-adversarial":        "Failure after updating to 3.239",
+	"l2-resource-hook-ignore-errors": "Failure after updating to 3.239",
+	"l2-resource-hook-after-failure": "Failure after updating to 3.239",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
