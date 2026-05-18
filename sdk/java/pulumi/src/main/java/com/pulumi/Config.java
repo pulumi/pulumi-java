@@ -277,6 +277,22 @@ public class Config {
     }
 
     /**
+     * Loads a configuration value as a JSON string and deserializes it into an object using the
+     * given {@link TypeShape}. If it doesn't exist, an error is thrown.
+     */
+    public <T> T requireObject(String key, TypeShape<T> shapeOfT) {
+        return getObject(key, shapeOfT).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
+    }
+
+    /**
+     * Loads a configuration value as a JSON string and deserializes it into an object using the
+     * given {@link TypeShape}, marking it as a secret. If it doesn't exist, an error is thrown.
+     */
+    public <T> Output<T> requireSecretObject(String key, TypeShape<T> shapeOfT) {
+        return Output.ofSecret(requireObject(key, shapeOfT));
+    }
+
+    /**
      * Turns a simple configuration key into a fully resolved one, by prepending the bag's name.
      */
     private String fullKey(String key) {

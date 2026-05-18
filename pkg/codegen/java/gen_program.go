@@ -1459,13 +1459,23 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 
 	configType := model.ResolveOutputs(configVariable.Type())
 	typeSuffix := ""
-	switch configType {
-	case model.BoolType:
-		typeSuffix = "Boolean"
-	case model.IntType:
-		typeSuffix = "Integer"
-	case model.NumberType:
-		typeSuffix = "Double"
+	extraArg := ""
+	switch t := configType.(type) {
+	case *model.MapType, *model.ObjectType:
+		typeSuffix = "Object"
+		extraArg = ", " + javaTypeShapeExpr(t)
+	default:
+		switch configType {
+		case model.BoolType:
+			typeSuffix = "Boolean"
+		case model.IntType:
+			typeSuffix = "Integer"
+		case model.NumberType:
+			typeSuffix = "Double"
+		case model.DynamicType:
+			typeSuffix = "Object"
+			extraArg = ", " + javaTypeShapeExpr(configType)
+		}
 	}
 
 	name := names.MakeValidIdentifier(configVariable.Name())
@@ -1476,13 +1486,51 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 	}
 
 	if configVariable.DefaultValue != nil {
-		g.Fgenf(w, "final var %s = config.get%s%s(\"%s\").orElse(%v);",
-			name, secret, typeSuffix, logicalName, configVariable.DefaultValue)
+		g.Fgenf(w, "final var %s = config.get%s%s(\"%s\"%s).orElse(%v);",
+			name, secret, typeSuffix, logicalName, extraArg, configVariable.DefaultValue)
 	} else {
-		g.Fgenf(w, "final var %s = config.require%s%s(\"%s\");",
-			name, secret, typeSuffix, logicalName)
+		g.Fgenf(w, "final var %s = config.require%s%s(\"%s\"%s);",
+			name, secret, typeSuffix, logicalName, extraArg)
 	}
 	g.genNewline(w)
+}
+
+// javaTypeShapeExpr returns a Java expression that constructs a TypeShape describing
+// the given PCL model type. Used when generating typed `requireObject`/`getObject`
+// configuration calls. Object types are flattened to `Map<String, Object>` because
+// the Java codegen does not synthesize classes for inline PCL object shapes.
+func javaTypeShapeExpr(t model.Type) string {
+	switch t := t.(type) {
+	case *model.MapType:
+		return fmt.Sprintf("com.pulumi.core.TypeShape.map(String.class, %s)",
+			javaTypeClassExpr(t.ElementType))
+	case *model.ListType:
+		return fmt.Sprintf("com.pulumi.core.TypeShape.list(%s)",
+			javaTypeClassExpr(t.ElementType))
+	case *model.ObjectType:
+		return "com.pulumi.core.TypeShape.map(String.class, Object.class)"
+	}
+	if t == model.DynamicType {
+		return "com.pulumi.core.TypeShape.map(String.class, Object.class)"
+	}
+	return "com.pulumi.core.TypeShape.of(Object.class)"
+}
+
+// javaTypeClassExpr returns a Java `X.class` expression for a PCL model type,
+// using boxed wrappers for primitives. Complex element types collapse to
+// `Object.class` because Java erases generics in class literals.
+func javaTypeClassExpr(t model.Type) string {
+	switch t {
+	case model.BoolType:
+		return "Boolean.class"
+	case model.IntType:
+		return "Integer.class"
+	case model.NumberType:
+		return "Double.class"
+	case model.StringType:
+		return "String.class"
+	}
+	return "Object.class"
 }
 
 func (g *generator) isFunctionInvoke(localVariable *pcl.LocalVariable) (*schema.Function, bool) {

@@ -52,7 +52,7 @@ public class App {
             .egress(false)
             .protocol("tcp")
             .ruleAction("allow")
-            .cidrBlock(privateS3PrefixList.applyValue(_privateS3PrefixList -> _privateS3PrefixList.cidrBlocks()[0]))
+            .cidrBlock(privateS3PrefixList.applyValue(_privateS3PrefixList -> _privateS3PrefixList.cidrBlocks().get(0)))
             .fromPort(443)
             .toPort(443)
             .build());
