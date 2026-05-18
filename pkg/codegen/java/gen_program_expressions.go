@@ -966,6 +966,17 @@ func (g *generator) genNullableTupleElement(w io.Writer, expr model.Expression) 
 	}
 }
 
-func (g *generator) GenUnaryOpExpression(w io.Writer, _ *model.UnaryOpExpression) {
-	g.genNYI(w, "GenUnaryOpExpression") // TODO
+func (g *generator) GenUnaryOpExpression(w io.Writer, expr *model.UnaryOpExpression) {
+	var opstr string
+	switch expr.Operation {
+	case hclsyntax.OpLogicalNot:
+		opstr = "!"
+	case hclsyntax.OpNegate:
+		opstr = "-"
+	default:
+		g.genNYI(w, "GenUnaryOpExpression")
+		return
+	}
+	precedence := g.GetPrecedence(expr)
+	g.Fgenf(w, "%[2]v%.[1]*[3]v", precedence, opstr, expr.Operand)
 }

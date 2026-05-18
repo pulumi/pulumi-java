@@ -1,0 +1,6 @@
+kind: Improvements
+body: Implement logical-not and negation unary operators correctly
+time: 2026-05-18T00:00:00Z
+custom:
+  PR: "2188"
+component: codegen
