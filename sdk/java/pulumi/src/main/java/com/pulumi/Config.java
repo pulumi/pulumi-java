@@ -242,6 +242,22 @@ public class Config {
     }
 
     /**
+     * Loads a configuration value, as a number, by its given key. If it doesn't exist, or the
+     * configuration value is not a legal number, an error is thrown.
+     */
+    public double requireDouble(String key) {
+        return getDouble(key).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
+    }
+
+    /**
+     * Loads a configuration value, as a number, by its given key, marking it as a secret.
+     * If it doesn't exist, or the configuration value is not a legal number, an error is thrown.
+     */
+    public Output<Double> requireSecretDouble(String key) {
+        return Output.ofSecret(requireDouble(key));
+    }
+
+    /**
      * Loads a configuration value as a JSON string and deserializes it into an object.
      * If it doesn't exist, or the configuration value cannot be converted
      * using {@link Gson#fromJson(Reader, Class)}, an error is thrown.

@@ -1456,19 +1456,31 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 
 func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVariable) {
 	g.genIndent(w)
+
+	configType := model.ResolveOutputs(configVariable.Type())
+	typeSuffix := ""
+	switch configType {
+	case model.BoolType:
+		typeSuffix = "Boolean"
+	case model.IntType:
+		typeSuffix = "Integer"
+	case model.NumberType:
+		typeSuffix = "Double"
+	}
+
+	name := names.MakeValidIdentifier(configVariable.Name())
+	logicalName := configVariable.LogicalName()
+	secret := ""
+	if configVariable.Secret {
+		secret = "Secret"
+	}
+
 	if configVariable.DefaultValue != nil {
-		g.Fgenf(w, "final var %s = config.get(\"%s\").orElse(%v);",
-			names.MakeValidIdentifier(configVariable.Name()),
-			configVariable.Name(),
-			configVariable.DefaultValue)
-	} else if configVariable.Secret {
-		g.Fgenf(w, "final var %s = config.requireSecret(\"%s\");",
-			names.MakeValidIdentifier(configVariable.Name()),
-			configVariable.Name())
+		g.Fgenf(w, "final var %s = config.get%s%s(\"%s\").orElse(%v);",
+			name, secret, typeSuffix, logicalName, configVariable.DefaultValue)
 	} else {
-		g.Fgenf(w, "final var %s = config.require(\"%s\");",
-			names.MakeValidIdentifier(configVariable.Name()),
-			configVariable.Name())
+		g.Fgenf(w, "final var %s = config.require%s%s(\"%s\");",
+			name, secret, typeSuffix, logicalName)
 	}
 	g.genNewline(w)
 }
