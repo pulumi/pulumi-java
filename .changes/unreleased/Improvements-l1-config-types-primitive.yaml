@@ -1,5 +1,5 @@
 kind: Improvements
-body: Fix l1-config-types-primitive by dispatching to typed Config accessors based on the PCL config type and implementing the logical-not and negation unary operators
+body: Implement logical-not and negation unary operators correctly
 time: 2026-05-18T00:00:00Z
 custom:
   PR: "2188"
