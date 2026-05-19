@@ -22,11 +22,16 @@ public class App {
             Map.entry("a", aMap.get("a") + 1),
             Map.entry("b", aMap.get("b") + 1)
         ));
-        final var anObject = config.requireObject("anObject", com.pulumi.core.TypeShape.map(String.class, Object.class));
-        ctx.export("theObject", ((java.util.List) anObject.get("prop")).get(0));
+        final var anObject = config.requireObject("anObject", AnObjectConfig.class);
+        ctx.export("theObject", anObject.prop().get(0));
         final var anyObject = config.requireObject("anyObject", com.pulumi.core.TypeShape.map(String.class, Object.class));
         ctx.export("theThing", ((Number) anyObject.get("a")).doubleValue() + ((Number) anyObject.get("b")).doubleValue());
         final var optionalUntypedObject = config.getObject("optionalUntypedObject", com.pulumi.core.TypeShape.map(String.class, Object.class)).orElse(Map.of("key", "value"));
         ctx.export("defaultUntypedObject", optionalUntypedObject);
+    }
+
+    public static class AnObjectConfig {
+        public java.util.List<Boolean> prop;
+        public java.util.List<Boolean> prop() { return prop; }
     }
 }
