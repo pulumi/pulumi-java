@@ -12,8 +12,8 @@ require (
 	github.com/hashicorp/hcl/v2 v2.24.0
 	github.com/hexops/autogold/v2 v2.3.1
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.239.0
-	github.com/pulumi/pulumi/sdk/v3 v3.239.0
+	github.com/pulumi/pulumi/pkg/v3 v3.241.0
+	github.com/pulumi/pulumi/sdk/v3 v3.241.0
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.11.1
 	github.com/zclconf/go-cty v1.17.0
@@ -21,7 +21,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.43.0
 	golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f
 	golang.org/x/sync v0.20.0
-	google.golang.org/grpc v1.81.0
+	google.golang.org/grpc v1.81.1
 	google.golang.org/protobuf v1.36.11
 	gopkg.in/yaml.v3 v3.0.1
 )
