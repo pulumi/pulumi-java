@@ -31,7 +31,7 @@ public class App {
     }
 
     public static class AnObjectConfig {
-        public java.util.List<Boolean> prop;
+        private java.util.List<Boolean> prop;
         public java.util.List<Boolean> prop() { return prop; }
     }
 }

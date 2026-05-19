@@ -1019,9 +1019,9 @@ func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 }
 
 // genObjectConfigClasses emits a nested static class for each `object(...)`
-// config variable encountered, providing a Gson-deserializable POJO with both
-// a public field and a method accessor per property so the generated program
-// can use the existing `.attr()` traversal style.
+// config variable encountered. Each property becomes a private field (Gson
+// writes it reflectively during deserialization) exposed through a method
+// accessor that matches the `.attr()` style the traversal codegen emits.
 func (g *generator) genObjectConfigClasses(w io.Writer) {
 	for _, c := range g.objectConfigs {
 		g.Fprint(w, "\n")
@@ -1035,7 +1035,7 @@ func (g *generator) genObjectConfigClasses(w io.Writer) {
 			propType := c.objType.Properties[propName]
 			javaType := javaPropertyTypeName(model.ResolveOutputs(propType))
 			fieldName := names.MakeValidIdentifier(propName)
-			g.Fprintf(w, "        public %s %s;\n", javaType, fieldName)
+			g.Fprintf(w, "        private %s %s;\n", javaType, fieldName)
 			g.Fprintf(w, "        public %s %s() { return %s; }\n", javaType, fieldName, fieldName)
 		}
 		g.Fprint(w, "    }\n")
