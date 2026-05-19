@@ -220,9 +220,8 @@ func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Ty
 		targetType = output.ElementType
 	}
 
-	// Conversion from a dynamically-typed value (Java `Object` at the call site,
-	// e.g. the result of `Map<String, Object>.get(...)`) to a concrete numeric
-	// type requires an explicit `Number` cast so Java arithmetic compiles.
+	// Dynamic values land in Java as `Object` (e.g. from `Map<String, Object>.get`),
+	// so converting to a concrete type needs an explicit cast for arithmetic to compile.
 	fromType := unwrapOptional(model.ResolveOutputs(from.Type()))
 	if fromType == model.DynamicType {
 		switch {
@@ -814,17 +813,15 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 ) {
 	hasParts := len(parts) >= len(traversal)+1
 
-	// Inline PCL `object({...})` types share `*model.ObjectType` with synthetic
-	// objects like the `range` iteration variable, but only the former are
-	// lowered to `Map<String, Object>` in Java (via `requireObject`/`getObject`).
-	// Treat object traversals as map-like only when the chain is rooted at a
-	// config variable, where this lowering applies.
+	// `*model.ObjectType` is shared between user `object({...})` configs (which
+	// we lower to `Map<String, Object>`) and synthetic objects like the `range`
+	// iteration variable (which keep generated `.attr()` getters). Only the
+	// config-rooted case wants map-style access.
 	objectAsMap := hasParts && isConfigVariableRoot(parts[0])
 
 	chain := root
-	// staticTypeErased becomes true once the chain has crossed a
-	// `Map<String, Object>` / `Object` boundary, so subsequent typed accesses
-	// (`.get(int)` on a list) need an explicit cast to compile.
+	// Set once the chain has crossed a `Map<String, Object>` boundary; further
+	// typed access (`.get(int)` on a list) then needs an explicit cast.
 	staticTypeErased := false
 
 	for i, part := range traversal {
@@ -872,18 +869,16 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 	fmt.Fprint(w, chain)
 }
 
-// isConfigVariableRoot reports whether the traversal root is a PCL
-// `*pcl.ConfigVariable`, which is the only inline-object value the Java codegen
-// emits as `Map<String, Object>` rather than a typed Java class.
+// isConfigVariableRoot reports whether the traversal root is a `*pcl.ConfigVariable`,
+// the only inline-object value the Java codegen emits as `Map<String, Object>`.
 func isConfigVariableRoot(t model.Traversable) bool {
 	_, ok := t.(*pcl.ConfigVariable)
 	return ok
 }
 
-// mapValueErasesToObject reports whether `.get(key)` on a value of this PCL
-// type returns Java `Object` at compile time. Object types and map-of-Object
-// (the runtime shape of any inline PCL object) erase to `Object`, while
-// `map(int)` and similar narrow generics expose their element type.
+// mapValueErasesToObject reports whether `.get(key)` on this PCL type returns
+// Java `Object` at compile time. `map(int)` and similar narrow generics expose
+// their element type; inline objects and `map(object/dynamic)` collapse to `Object`.
 func mapValueErasesToObject(t model.Type) bool {
 	if _, ok := t.(*model.ObjectType); ok {
 		return true
@@ -897,10 +892,9 @@ func mapValueErasesToObject(t model.Type) bool {
 	return false
 }
 
-// isMapLikeType reports whether attribute access on a value of this PCL type
-// should be lowered to `.get("key")` rather than to a generated getter.
-// `objectAsMap` controls whether `*model.ObjectType` participates — see the
-// note in `genRelativeTraversal`.
+// isMapLikeType reports whether attribute access on this PCL type should lower
+// to `.get("key")` instead of a generated getter. `objectAsMap` opts
+// `*model.ObjectType` in — see `genRelativeTraversal` for when this is set.
 func isMapLikeType(t model.Type, objectAsMap bool) bool {
 	t = unwrapOptional(t)
 	if _, ok := t.(*model.MapType); ok {
@@ -925,9 +919,9 @@ func isListLikeType(t model.Type) bool {
 	return false
 }
 
-// unwrapOptional strips a `union(T, none)` wrapper applied by the PCL binder
-// for nullable property types, returning the underlying non-null type. If `t`
-// is not a 2-arm optional union, it is returned unchanged.
+// unwrapOptional strips a `union(T, none)` wrapper the PCL binder applies to
+// nullable property types, returning T. Non-optional unions and non-unions pass
+// through unchanged.
 func unwrapOptional(t model.Type) model.Type {
 	u, ok := t.(*model.UnionType)
 	if !ok {

@@ -1495,10 +1495,9 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 	g.genNewline(w)
 }
 
-// javaTypeShapeExpr returns a Java expression that constructs a TypeShape describing
-// the given PCL model type. Used when generating typed `requireObject`/`getObject`
-// configuration calls. Object types are flattened to `Map<String, Object>` because
-// the Java codegen does not synthesize classes for inline PCL object shapes.
+// javaTypeShapeExpr returns a Java expression that constructs a TypeShape for
+// the given PCL model type. Inline object shapes flatten to `Map<String, Object>`
+// because the Java codegen does not synthesize classes for them.
 func javaTypeShapeExpr(t model.Type) string {
 	switch t := t.(type) {
 	case *model.MapType:
@@ -1516,9 +1515,9 @@ func javaTypeShapeExpr(t model.Type) string {
 	return "com.pulumi.core.TypeShape.of(Object.class)"
 }
 
-// javaTypeClassExpr returns a Java `X.class` expression for a PCL model type,
-// using boxed wrappers for primitives. Complex element types collapse to
-// `Object.class` because Java erases generics in class literals.
+// javaTypeClassExpr returns a `X.class` expression for a PCL model type.
+// Complex element types collapse to `Object.class` because Java erases generics
+// in class literals.
 func javaTypeClassExpr(t model.Type) string {
 	switch t {
 	case model.BoolType:
