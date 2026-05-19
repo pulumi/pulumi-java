@@ -1047,6 +1047,20 @@ func (g *generator) genObjectConfigClasses(w io.Writer) {
 // `Object`, which Gson still deserializes losslessly via its generic handling.
 func javaPropertyTypeName(t model.Type) string {
 	t = unwrapOptional(t)
+	switch t := t.(type) {
+	case *model.ListType:
+		return "java.util.List<" + javaPropertyTypeName(t.ElementType) + ">"
+	case *model.MapType:
+		return "java.util.Map<String, " + javaPropertyTypeName(t.ElementType) + ">"
+	}
+	return javaErasedTypeName(t)
+}
+
+// javaErasedTypeName returns the raw Java class name for a PCL type, dropping
+// any generic parameterization. Suitable for `.class` literals and any other
+// context where Java erasure forbids generics.
+func javaErasedTypeName(t model.Type) string {
+	t = unwrapOptional(t)
 	switch t {
 	case model.BoolType:
 		return "Boolean"
@@ -1057,11 +1071,11 @@ func javaPropertyTypeName(t model.Type) string {
 	case model.StringType:
 		return "String"
 	}
-	switch t := t.(type) {
+	switch t.(type) {
 	case *model.ListType:
-		return "java.util.List<" + javaPropertyTypeName(t.ElementType) + ">"
+		return "java.util.List"
 	case *model.MapType:
-		return "java.util.Map<String, " + javaPropertyTypeName(t.ElementType) + ">"
+		return "java.util.Map"
 	}
 	return "Object"
 }
@@ -1579,20 +1593,8 @@ func javaTypeShapeExpr(t model.Type) string {
 }
 
 // javaTypeClassExpr returns a `X.class` expression for a PCL model type.
-// Complex element types collapse to `Object.class` because Java erases generics
-// in class literals.
 func javaTypeClassExpr(t model.Type) string {
-	switch t {
-	case model.BoolType:
-		return "Boolean.class"
-	case model.IntType:
-		return "Integer.class"
-	case model.NumberType:
-		return "Double.class"
-	case model.StringType:
-		return "String.class"
-	}
-	return "Object.class"
+	return javaErasedTypeName(t) + ".class"
 }
 
 func (g *generator) isFunctionInvoke(localVariable *pcl.LocalVariable) (*schema.Function, bool) {
