@@ -892,11 +892,8 @@ func isMapLikeType(t model.Type) bool {
 // isListLikeType reports whether numeric indexing on a value of this PCL type
 // should be lowered to `.get(idx)` (Java `List`) rather than `[idx]` (array).
 func isListLikeType(t model.Type) bool {
-	t = unwrapOptional(t)
-	if _, ok := t.(*model.ListType); ok {
-		return true
-	}
-	if _, ok := t.(*model.TupleType); ok {
+	switch unwrapOptional(t).(type) {
+	case *model.ListType, *model.TupleType:
 		return true
 	}
 	return false
