@@ -61,3 +61,6 @@ pulumi-analyzer-policy-python.cmd
 /go.work.sum
 **/build/
 **/target/
+
+# Claude Code user-local settings (shared settings.json is checked in).
+.claude/settings.local.json
