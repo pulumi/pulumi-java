@@ -1539,16 +1539,18 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 		secret = "Secret"
 	}
 
-	typeSuffix := ""
+	// `get`/`require` accessor suffix per typed config kind. Object/map/dynamic
+	// kinds use `getObject`/`requireObject` and need a second argument describing
+	// the shape: a `.class` literal for synthesized POJOs, a `TypeShape` builder
+	// expression for collections and dynamic values.
+	typeSuffix := "Object"
 	extraArg := ""
 	switch t := configType.(type) {
 	case *model.ObjectType:
 		className := names.Title(configVariable.Name()) + "Config"
 		g.objectConfigs = append(g.objectConfigs, objectConfigClass{className: className, objType: t})
-		typeSuffix = "Object"
 		extraArg = ", " + className + ".class"
 	case *model.MapType:
-		typeSuffix = "Object"
 		extraArg = ", " + javaTypeShapeExpr(t)
 	default:
 		switch configType {
@@ -1559,8 +1561,9 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 		case model.NumberType:
 			typeSuffix = "Double"
 		case model.DynamicType:
-			typeSuffix = "Object"
 			extraArg = ", " + javaTypeShapeExpr(configType)
+		default:
+			typeSuffix = ""
 		}
 	}
 

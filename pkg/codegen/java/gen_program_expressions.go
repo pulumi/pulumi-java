@@ -553,8 +553,7 @@ func (g *generator) genJSON(w io.Writer, expr model.Expression) {
 }
 
 func (g *generator) GenIndexExpression(w io.Writer, expr *model.IndexExpression) {
-	collType := model.ResolveOutputs(expr.Collection.Type())
-	if isMapLikeType(collType) {
+	if isMapLikeType(unwrapOptional(model.ResolveOutputs(expr.Collection.Type()))) {
 		g.Fgenf(w, "%v.get(%v)", expr.Collection, expr.Key)
 		return
 	}
@@ -812,20 +811,12 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 	parts []model.Traversable, root string,
 ) {
 	hasParts := len(parts) >= len(traversal)+1
-
-	chain := root
-	// Set once the chain has crossed a `Map<String, Object>` boundary (i.e. an
-	// access on a dynamic-rooted value); further typed access (`.get(int)` on
-	// a list) then needs an explicit cast.
-	staticTypeErased := false
-
+	fmt.Fprint(w, root)
 	for i, part := range traversal {
 		var sourceType model.Type
 		if hasParts {
 			sourceType = unwrapOptional(model.GetTraversableType(parts[i]))
 		}
-		mapLike := isMapLikeType(sourceType)
-		listLike := isListLikeType(sourceType)
 
 		var key cty.Value
 		switch part := part.(type) {
@@ -839,50 +830,29 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 
 		switch key.Type() {
 		case cty.String:
-			if mapLike {
-				chain = fmt.Sprintf("%s.get(\"%s\")", chain, key.AsString())
-				staticTypeErased = sourceType == model.DynamicType ||
-					mapValueErasesToObject(sourceType)
+			if isMapLikeType(sourceType) {
+				g.Fgenf(w, ".get(\"%s\")", key.AsString())
 			} else {
-				chain = fmt.Sprintf("%s.%s()", chain, key.AsString())
+				g.Fgenf(w, ".%s()", key.AsString())
 			}
 		case cty.Number:
 			idx, _ := key.AsBigFloat().Int64()
-			if listLike {
-				if staticTypeErased {
-					chain = fmt.Sprintf("((java.util.List) %s)", chain)
-					staticTypeErased = false
-				}
-				chain = fmt.Sprintf("%s.get(%d)", chain, idx)
+			if isListLikeType(sourceType) {
+				g.Fgenf(w, ".get(%d)", idx)
 			} else {
-				chain = fmt.Sprintf("%s[%d]", chain, idx)
+				g.Fgenf(w, "[%d]", idx)
 			}
 		default:
 			contract.Failf("unexpected traversal key of type %T (%v)", key, key.AsString())
 		}
 	}
-	fmt.Fprint(w, chain)
-}
-
-// mapValueErasesToObject reports whether `.get(key)` on this PCL type returns
-// Java `Object` at compile time. `map(int)` and similar narrow generics expose
-// their element type; `map(object/dynamic)` collapses to `Object`.
-func mapValueErasesToObject(t model.Type) bool {
-	if mt, ok := t.(*model.MapType); ok {
-		if _, objectElement := mt.ElementType.(*model.ObjectType); objectElement {
-			return true
-		}
-		return mt.ElementType == model.DynamicType
-	}
-	return false
 }
 
 // isMapLikeType reports whether attribute access on this PCL type should lower
 // to `.get("key")`. `*model.ObjectType` keeps generated `.attr()` getters —
-// `object(...)` configs now have synthesized POJOs and `range`-style synthetic
-// objects already use method accessors.
+// `object(...)` configs are synthesized as POJOs and `range`-style synthetic
+// objects already use method accessors. Callers must unwrap optionals first.
 func isMapLikeType(t model.Type) bool {
-	t = unwrapOptional(t)
 	if _, ok := t.(*model.MapType); ok {
 		return true
 	}
@@ -891,8 +861,9 @@ func isMapLikeType(t model.Type) bool {
 
 // isListLikeType reports whether numeric indexing on a value of this PCL type
 // should be lowered to `.get(idx)` (Java `List`) rather than `[idx]` (array).
+// Callers must unwrap optionals first.
 func isListLikeType(t model.Type) bool {
-	switch unwrapOptional(t).(type) {
+	switch t.(type) {
 	case *model.ListType, *model.TupleType:
 		return true
 	}
