@@ -50,6 +50,17 @@ type generator struct {
 	// we should rewrite it as resourceGroup.thenApply(getResourceGroupResult -> getResourceGroupResult.getName())
 	functionInvokes          map[string]*schema.Function
 	emittedTypeImportSymbols codegen.StringSet
+	// Nested static config classes synthesized for `object(...)` config
+	// variables, emitted after the stack method closes. Order is preserved so
+	// generated code is stable.
+	objectConfigs []objectConfigClass
+}
+
+// objectConfigClass captures everything needed to emit a synthesized nested
+// static class for a `config "<name>" "object({...})" {}` declaration.
+type objectConfigClass struct {
+	className string
+	objType   *model.ObjectType
 }
 
 // genComment generates a comment into the output.
@@ -1003,7 +1014,56 @@ func (g *generator) genPostamble(w io.Writer, _ []pcl.Node) {
 		g.genIndent(w)
 		g.Fgen(w, "}\n")
 	})
+	g.genObjectConfigClasses(w)
 	g.Fprint(w, "}\n")
+}
+
+// genObjectConfigClasses emits a nested static class for each `object(...)`
+// config variable encountered, providing a Gson-deserializable POJO with both
+// a public field and a method accessor per property so the generated program
+// can use the existing `.attr()` traversal style.
+func (g *generator) genObjectConfigClasses(w io.Writer) {
+	for _, c := range g.objectConfigs {
+		g.Fprint(w, "\n")
+		g.Fprintf(w, "    public static class %s {\n", c.className)
+		propNames := make([]string, 0, len(c.objType.Properties))
+		for n := range c.objType.Properties {
+			propNames = append(propNames, n)
+		}
+		slices.Sort(propNames)
+		for _, propName := range propNames {
+			propType := c.objType.Properties[propName]
+			javaType := javaPropertyTypeName(model.ResolveOutputs(propType))
+			fieldName := names.MakeValidIdentifier(propName)
+			g.Fprintf(w, "        public %s %s;\n", javaType, fieldName)
+			g.Fprintf(w, "        public %s %s() { return %s; }\n", javaType, fieldName, fieldName)
+		}
+		g.Fprint(w, "    }\n")
+	}
+}
+
+// javaPropertyTypeName renders a PCL property type as a Java type expression
+// suitable for a config POJO field. Unsupported / dynamic shapes fall back to
+// `Object`, which Gson still deserializes losslessly via its generic handling.
+func javaPropertyTypeName(t model.Type) string {
+	t = unwrapOptional(t)
+	switch t {
+	case model.BoolType:
+		return "Boolean"
+	case model.IntType:
+		return "Integer"
+	case model.NumberType:
+		return "Double"
+	case model.StringType:
+		return "String"
+	}
+	switch t := t.(type) {
+	case *model.ListType:
+		return "java.util.List<" + javaPropertyTypeName(t.ElementType) + ">"
+	case *model.MapType:
+		return "java.util.Map<String, " + javaPropertyTypeName(t.ElementType) + ">"
+	}
+	return "Object"
 }
 
 // resourceTypeName computes the Java resource class name for the given resource.
@@ -1458,10 +1518,22 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 	g.genIndent(w)
 
 	configType := model.ResolveOutputs(configVariable.Type())
+	name := names.MakeValidIdentifier(configVariable.Name())
+	logicalName := configVariable.LogicalName()
+	secret := ""
+	if configVariable.Secret {
+		secret = "Secret"
+	}
+
 	typeSuffix := ""
 	extraArg := ""
 	switch t := configType.(type) {
-	case *model.MapType, *model.ObjectType:
+	case *model.ObjectType:
+		className := names.Title(configVariable.Name()) + "Config"
+		g.objectConfigs = append(g.objectConfigs, objectConfigClass{className: className, objType: t})
+		typeSuffix = "Object"
+		extraArg = ", " + className + ".class"
+	case *model.MapType:
 		typeSuffix = "Object"
 		extraArg = ", " + javaTypeShapeExpr(t)
 	default:
@@ -1478,13 +1550,6 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 		}
 	}
 
-	name := names.MakeValidIdentifier(configVariable.Name())
-	logicalName := configVariable.LogicalName()
-	secret := ""
-	if configVariable.Secret {
-		secret = "Secret"
-	}
-
 	if configVariable.DefaultValue != nil {
 		g.Fgenf(w, "final var %s = config.get%s%s(\"%s\"%s).orElse(%v);",
 			name, secret, typeSuffix, logicalName, extraArg, configVariable.DefaultValue)
@@ -1496,8 +1561,8 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 }
 
 // javaTypeShapeExpr returns a Java expression that constructs a TypeShape for
-// the given PCL model type. Inline object shapes flatten to `Map<String, Object>`
-// because the Java codegen does not synthesize classes for them.
+// the given PCL model type. Used for `map(...)` and dynamic configs; inline
+// `object(...)` configs use synthesized classes instead.
 func javaTypeShapeExpr(t model.Type) string {
 	switch t := t.(type) {
 	case *model.MapType:
@@ -1506,8 +1571,6 @@ func javaTypeShapeExpr(t model.Type) string {
 	case *model.ListType:
 		return fmt.Sprintf("com.pulumi.core.TypeShape.list(%s)",
 			javaTypeClassExpr(t.ElementType))
-	case *model.ObjectType:
-		return "com.pulumi.core.TypeShape.map(String.class, Object.class)"
 	}
 	if t == model.DynamicType {
 		return "com.pulumi.core.TypeShape.map(String.class, Object.class)"

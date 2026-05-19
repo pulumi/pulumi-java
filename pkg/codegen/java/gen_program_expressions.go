@@ -554,7 +554,7 @@ func (g *generator) genJSON(w io.Writer, expr model.Expression) {
 
 func (g *generator) GenIndexExpression(w io.Writer, expr *model.IndexExpression) {
 	collType := model.ResolveOutputs(expr.Collection.Type())
-	if isMapLikeType(collType, false) {
+	if isMapLikeType(collType) {
 		g.Fgenf(w, "%v.get(%v)", expr.Collection, expr.Key)
 		return
 	}
@@ -813,15 +813,10 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 ) {
 	hasParts := len(parts) >= len(traversal)+1
 
-	// `*model.ObjectType` is shared between user `object({...})` configs (which
-	// we lower to `Map<String, Object>`) and synthetic objects like the `range`
-	// iteration variable (which keep generated `.attr()` getters). Only the
-	// config-rooted case wants map-style access.
-	objectAsMap := hasParts && isConfigVariableRoot(parts[0])
-
 	chain := root
-	// Set once the chain has crossed a `Map<String, Object>` boundary; further
-	// typed access (`.get(int)` on a list) then needs an explicit cast.
+	// Set once the chain has crossed a `Map<String, Object>` boundary (i.e. an
+	// access on a dynamic-rooted value); further typed access (`.get(int)` on
+	// a list) then needs an explicit cast.
 	staticTypeErased := false
 
 	for i, part := range traversal {
@@ -829,7 +824,7 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 		if hasParts {
 			sourceType = unwrapOptional(model.GetTraversableType(parts[i]))
 		}
-		mapLike := isMapLikeType(sourceType, objectAsMap)
+		mapLike := isMapLikeType(sourceType)
 		listLike := isListLikeType(sourceType)
 
 		var key cty.Value
@@ -869,20 +864,10 @@ func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
 	fmt.Fprint(w, chain)
 }
 
-// isConfigVariableRoot reports whether the traversal root is a `*pcl.ConfigVariable`,
-// the only inline-object value the Java codegen emits as `Map<String, Object>`.
-func isConfigVariableRoot(t model.Traversable) bool {
-	_, ok := t.(*pcl.ConfigVariable)
-	return ok
-}
-
 // mapValueErasesToObject reports whether `.get(key)` on this PCL type returns
 // Java `Object` at compile time. `map(int)` and similar narrow generics expose
-// their element type; inline objects and `map(object/dynamic)` collapse to `Object`.
+// their element type; `map(object/dynamic)` collapses to `Object`.
 func mapValueErasesToObject(t model.Type) bool {
-	if _, ok := t.(*model.ObjectType); ok {
-		return true
-	}
 	if mt, ok := t.(*model.MapType); ok {
 		if _, objectElement := mt.ElementType.(*model.ObjectType); objectElement {
 			return true
@@ -893,15 +878,13 @@ func mapValueErasesToObject(t model.Type) bool {
 }
 
 // isMapLikeType reports whether attribute access on this PCL type should lower
-// to `.get("key")` instead of a generated getter. `objectAsMap` opts
-// `*model.ObjectType` in — see `genRelativeTraversal` for when this is set.
-func isMapLikeType(t model.Type, objectAsMap bool) bool {
+// to `.get("key")`. `*model.ObjectType` keeps generated `.attr()` getters —
+// `object(...)` configs now have synthesized POJOs and `range`-style synthetic
+// objects already use method accessors.
+func isMapLikeType(t model.Type) bool {
 	t = unwrapOptional(t)
 	if _, ok := t.(*model.MapType); ok {
 		return true
-	}
-	if _, ok := t.(*model.ObjectType); ok {
-		return objectAsMap
 	}
 	return t == model.DynamicType
 }
