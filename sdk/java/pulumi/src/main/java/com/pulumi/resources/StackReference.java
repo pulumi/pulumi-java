@@ -110,7 +110,6 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
-     * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
@@ -121,7 +120,6 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
-     * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
@@ -138,7 +136,6 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value of the named stack output, or throws an error if the output was not found.
-     * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
@@ -149,7 +146,6 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value of the named stack output, or throws an error if the output was not found.
-     * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
