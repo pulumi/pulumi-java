@@ -15,6 +15,10 @@ java {
     withJavadocJar()
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.addAll(['-Xlint:all', '-Werror'])
+}
+
 repositories {
     maven { // The google mirror is less flaky than mavenCentral()
         url("https://maven-central.storage-download.googleapis.com/maven2/")
@@ -296,6 +300,9 @@ javadoc {
     options.encoding = 'UTF-8'
     options.jFlags("-Xmx8g", "-Xms512m")
 
+    options.addBooleanOption('Werror', true)
+
+    exclude("codegen")
     exclude("com/google/rpc")
     exclude("com/pulumi/bootstrap/internal")
     exclude("com/pulumi/codegen/internal")
