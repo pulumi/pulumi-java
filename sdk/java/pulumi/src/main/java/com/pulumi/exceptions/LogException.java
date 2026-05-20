@@ -6,6 +6,8 @@ package com.pulumi.exceptions;
  * whatever we can to the console instead.
  */
 public class LogException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
     public LogException(Throwable cause) {
         super("Error occurred during logging", cause);
     }

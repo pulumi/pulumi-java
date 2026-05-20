@@ -92,7 +92,7 @@ public final class PropertyValueSerializer {
                 break;
             case NUMBER:
                 // Get the raw number value first
-                Number numberValue = (Number)value.getValue(Number.class);
+                Number numberValue = value.getValue(Number.class);
                 
                 if (rawType == Integer.class || rawType == int.class) {
                     return numberValue.intValue();
@@ -420,7 +420,7 @@ public final class PropertyValueSerializer {
             .collect(Collectors.toList());
 
         // Wait for all futures to complete and combine results
-        return CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]))
+        return CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0]))
             .thenApply(v -> futures.stream()
                 .map(CompletableFuture::join)
                 .filter(entry -> entry != null)

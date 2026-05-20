@@ -300,8 +300,6 @@ javadoc {
     options.encoding = 'UTF-8'
     options.jFlags("-Xmx8g", "-Xms512m")
 
-    options.addBooleanOption('Werror', true)
-
     exclude("codegen")
     exclude("com/google/rpc")
     exclude("com/pulumi/bootstrap/internal")

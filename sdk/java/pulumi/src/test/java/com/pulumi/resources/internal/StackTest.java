@@ -51,7 +51,7 @@ class StackTest {
                 .hasSize(1)
                 .hasExactlyElementsOfTypes(Stack.class);
 
-        //noinspection unchecked
+        @SuppressWarnings("unchecked")
         ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
         ArgumentCaptor<Resource> resourceOutputCaptor = ArgumentCaptor.forClass(Resource.class);
 
@@ -64,6 +64,7 @@ class StackTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     void testStackWithNullOutputsThrows() {
         var test = PulumiTestInternal.builder()
                 .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
@@ -93,7 +94,6 @@ class StackTest {
                 .hasSize(1)
                 .hasExactlyElementsOfTypes(Stack.class);
 
-        //noinspection unchecked
         verify(test.registerResourceOutputs(), times(1))
                 .registerResourceOutputs(any(Resource.class), any(Output.class));
 
@@ -138,7 +138,7 @@ class StackTest {
                 .hasSize(2)
                 .hasExactlyElementsOfTypes(Stack.class, StackReference.class);
 
-        //noinspection unchecked
+        @SuppressWarnings("unchecked")
         ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
         ArgumentCaptor<Resource> resourceOutputCaptor = ArgumentCaptor.forClass(Resource.class);
 

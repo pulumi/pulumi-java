@@ -190,6 +190,7 @@ public class LocalPulumiCommand implements PulumiCommand {
     /**
      * Run the command with file-based event logging.
      */
+    @SuppressWarnings("try")
     private CommandResult runWithFileEventLog(List<String> args, CommandRunOptions options) throws AutomationException {
         var firstArg = args != null && !args.isEmpty() ? args.get(0) : null;
         var commandName = sanitizeCommandName(firstArg);
@@ -345,6 +346,7 @@ public class LocalPulumiCommand implements PulumiCommand {
         return alphaNumWord.matcher(firstArgument).matches() ? firstArgument : "event-log";
     }
 
+    @SuppressWarnings("try")
     private final class EventLogFile implements AutoCloseable {
         private final Path filePath;
 

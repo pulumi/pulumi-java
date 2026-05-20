@@ -92,6 +92,7 @@ public abstract class ResourceOptions {
         this.replacementTrigger = replacementTrigger;
     }
 
+    @SuppressWarnings("unchecked")
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
 
         protected final T options;
@@ -251,6 +252,7 @@ public abstract class ResourceOptions {
          * @see #aliases(Alias...)
          */
         @SafeVarargs
+        @SuppressWarnings("varargs")
         public final B aliases(Output<Alias>... aliases) {
             return this.aliases(List.of(aliases));
         }

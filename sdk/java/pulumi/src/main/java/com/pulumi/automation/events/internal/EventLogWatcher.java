@@ -22,6 +22,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
  * event.
  */
 @InternalUse
+@SuppressWarnings("try")
 public final class EventLogWatcher implements AutoCloseable {
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
     private final CompletableFuture<Void> future;

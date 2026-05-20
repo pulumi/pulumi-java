@@ -36,6 +36,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(LocalBackendExtension.class)
+@SuppressWarnings("try")
 public class LocalWorkspaceTest {
     private static String normalizeConfigKey(String key, String projectName) {
         var parts = key.split(":");

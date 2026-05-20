@@ -186,7 +186,8 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @param outputs the outputs to be combined
      * @return an {@link Output} with a list of all values of the given {@code outputs}
      */
-    @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
+    @SafeVarargs
+    @SuppressWarnings("varargs")
     static <T> Output<List<T>> all(Output<T>... outputs) {
         return all(Stream.of(outputs));
     }
@@ -237,8 +238,9 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     private static Output<Object> ensureOutput(@Nullable Object o) {
         if (o instanceof Output) {
-            //noinspection unchecked
-            return (Output<Object>) o;
+            @SuppressWarnings("unchecked")
+            Output<Object> output = (Output<Object>) o;
+            return output;
         }
         return Output.ofNullable(o);
     }
@@ -504,6 +506,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see #listBuilder()
      */
     @SafeVarargs
+    @SuppressWarnings("varargs")
     static <E> Output<List<E>> ofList(
             E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12, E... others) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, others));
@@ -551,6 +554,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
 
         @SafeVarargs
+        @SuppressWarnings("varargs")
         @CanIgnoreReturnValue
         public final Output.ListBuilder<E> add(E... elements) {
             return addAll(List.of(elements));
