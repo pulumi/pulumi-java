@@ -33,6 +33,7 @@ public class SerializationTest {
         assertThat(deserialized.containsKey("lastName")).isTrue();
         assertThat(deserialized.get("lastName")).isEqualTo("Doe");
         assertThat(deserialized.containsKey("hobbies")).isTrue();
+        @SuppressWarnings("unchecked")
         var hobbies = (ArrayList<Map<String, Object>>)deserialized.get("hobbies");
         assertThat(hobbies).hasSize(1);
         assertThat(hobbies.get(0).containsKey("name")).isTrue();

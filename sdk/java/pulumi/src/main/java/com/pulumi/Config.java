@@ -287,6 +287,8 @@ public class Config {
      * ConfigTypeException is used when a configuration value is of the wrong type.
      */
     private static class ConfigTypeException extends RunException {
+        private static final long serialVersionUID = 1L;
+
         public ConfigTypeException(String key, @Nullable Object v, String expectedType, @Nullable Exception cause) {
             super(String.format("Configuration '%s' value '%s' is not a valid %s", key, v, expectedType), cause);
         }
@@ -299,6 +301,8 @@ public class Config {
     @InternalUse
     @VisibleForTesting
     public static class ConfigMissingException extends RunException {
+        private static final long serialVersionUID = 1L;
+
         public ConfigMissingException(String key) {
             super(String.format("Missing required configuration variable '%s'\n", key) +
                     String.format("\tplease set a value using the command `pulumi config set %s <value>`", key));

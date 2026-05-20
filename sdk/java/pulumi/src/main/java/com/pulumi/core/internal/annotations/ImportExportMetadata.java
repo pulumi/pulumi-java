@@ -37,8 +37,9 @@ public abstract class ImportExportMetadata<A extends Annotation, F> {
     }
 
     public Class<F> getFieldType() {
-        //noinspection unchecked
-        return (Class<F>) this.field.getType();
+        @SuppressWarnings("unchecked")
+        Class<F> result = (Class<F>) this.field.getType();
+        return result;
     }
 
     public String generateFullName(Class<?> subtype) {
@@ -66,7 +67,7 @@ public abstract class ImportExportMetadata<A extends Annotation, F> {
 
     public Optional<F> getFieldValue(Object extractedObject) {
         try {
-            //noinspection unchecked
+            @SuppressWarnings("unchecked")
             var value = (F) this.field.get(extractedObject);
             return Optional.ofNullable(value);
         } catch (IllegalArgumentException | IllegalAccessException e) {

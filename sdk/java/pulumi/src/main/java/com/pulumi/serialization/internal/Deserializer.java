@@ -96,14 +96,16 @@ public class Deserializer {
 
         var assetOrArchive = tryDeserializeAssetOrArchive(value);
         if (assetOrArchive.isPresent()) {
-            //noinspection unchecked
-            return OutputData.ofNullable(ImmutableSet.of(), (T) assetOrArchive.get(), true, isSecret);
+            @SuppressWarnings("unchecked")
+            T typed = (T) assetOrArchive.get();
+            return OutputData.ofNullable(ImmutableSet.of(), typed, true, isSecret);
         }
 
         var resource = tryDeserializeResource(value);
         if (resource.isPresent()) {
-            //noinspection unchecked
-            return OutputData.ofNullable(ImmutableSet.of(), (T) resource.get(), true, isSecret);
+            @SuppressWarnings("unchecked")
+            T typed = (T) resource.get();
+            return OutputData.ofNullable(ImmutableSet.of(), typed, true, isSecret);
         }
 
         var innerData = func.apply(value);

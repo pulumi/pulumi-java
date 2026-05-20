@@ -43,6 +43,7 @@ import com.pulumi.automation.serialization.internal.LocalSerializer;
  * directory, then the temp directory will be cleaned up when {@link #close()}
  * is called.
  */
+@SuppressWarnings("try")
 public final class LocalWorkspace extends Workspace {
     private static final String[] SETTINGS_EXTENSIONS = { ".yaml", ".yml", ".json" };
 

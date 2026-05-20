@@ -127,7 +127,7 @@ public class Serializer {
         }
 
         if (prop instanceof Optional) {
-            //noinspection unchecked
+            @SuppressWarnings("unchecked")
             var optional = (Optional<Object>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into Optional", ctx));
 
@@ -152,7 +152,7 @@ public class Serializer {
         }
 
         if (prop instanceof Either) {
-            //noinspection unchecked
+            @SuppressWarnings("unchecked")
             var either = (Either<Object, Object>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into Either", ctx));
 
@@ -167,7 +167,7 @@ public class Serializer {
         }
 
         if (prop instanceof Output) {
-            //noinspection unchecked
+            @SuppressWarnings("unchecked")
             var output = (Output<Object>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
 
@@ -262,14 +262,14 @@ public class Serializer {
         }
 
         if (prop instanceof Map) {
-            //noinspection unchecked
+            @SuppressWarnings("unchecked")
             var map = (Map<Object, /* @Nullable */ Object>) prop;
             //noinspection RedundantCast
             return serializeMapAsync(ctx, map, keepResources).thenApply(m -> (Object) m);
         }
 
         if (prop instanceof List) {
-            //noinspection unchecked
+            @SuppressWarnings("unchecked")
             var list = (List</* @Nullable */ Object>) prop;
             //noinspection RedundantCast
             return serializeListAsync(ctx, list, keepResources).thenApply(l -> (Object) l);
@@ -447,8 +447,9 @@ public class Serializer {
             return builder.setStringValue((String) value).build();
         }
         if (value instanceof List) {
-            //noinspection unchecked
-            var list = ((List<Object>) value).stream()
+            @SuppressWarnings("unchecked")
+            var listValue = (List<Object>) value;
+            var list = listValue.stream()
                     .map(Serializer::createValue)
                     .collect(collectingAndThen(toList(),
                             l -> ListValue.newBuilder().addAllValues(l))

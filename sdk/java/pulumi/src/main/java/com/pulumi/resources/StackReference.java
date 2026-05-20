@@ -271,6 +271,8 @@ public class StackReference extends CustomResource {
     @InternalUse
     @VisibleForTesting
     public static class KeyMissingException extends RunException {
+        private static final long serialVersionUID = 1L;
+
         public KeyMissingException(String key, String stack) {
             super(String.format("Required output '%s' does not exist on stack '%s'.", key, stack));
         }

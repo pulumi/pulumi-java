@@ -6,6 +6,8 @@ package com.pulumi.provider.internal.properties;
  * target type, and original value.
  */
 public class PropertyDeserializationException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
     private final String[] path;
     private final Class<?> targetType;
     private final PropertyValue value;
