@@ -13,6 +13,8 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class Data {
@@ -21,6 +23,7 @@ public final class Data {
     private Double float_;
     private InnerData innerData;
     private Integer integer;
+    private @Nullable InnerData optionalInner;
     private String string;
     private Map<String,String> stringMap;
 
@@ -39,6 +42,9 @@ public final class Data {
     }
     public Integer integer() {
         return this.integer;
+    }
+    public Optional<InnerData> optionalInner() {
+        return Optional.ofNullable(this.optionalInner);
     }
     public String string() {
         return this.string;
@@ -61,6 +67,7 @@ public final class Data {
         private Double float_;
         private InnerData innerData;
         private Integer integer;
+        private @Nullable InnerData optionalInner;
         private String string;
         private Map<String,String> stringMap;
         public Builder() {}
@@ -71,6 +78,7 @@ public final class Data {
     	      this.float_ = defaults.float_;
     	      this.innerData = defaults.innerData;
     	      this.integer = defaults.integer;
+    	      this.optionalInner = defaults.optionalInner;
     	      this.string = defaults.string;
     	      this.stringMap = defaults.stringMap;
         }
@@ -119,6 +127,12 @@ public final class Data {
             return this;
         }
         @CustomType.Setter
+        public Builder optionalInner(@Nullable InnerData optionalInner) {
+
+            this.optionalInner = optionalInner;
+            return this;
+        }
+        @CustomType.Setter
         public Builder string(String string) {
             if (string == null) {
               throw new MissingRequiredPropertyException("Data", "string");
@@ -141,6 +155,7 @@ public final class Data {
             _resultValue.float_ = float_;
             _resultValue.innerData = innerData;
             _resultValue.integer = integer;
+            _resultValue.optionalInner = optionalInner;
             _resultValue.string = string;
             _resultValue.stringMap = stringMap;
             return _resultValue;

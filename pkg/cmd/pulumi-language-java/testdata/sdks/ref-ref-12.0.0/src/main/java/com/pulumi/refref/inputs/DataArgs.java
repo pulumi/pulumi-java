@@ -14,6 +14,8 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class DataArgs extends com.pulumi.resources.ResourceArgs {
@@ -55,6 +57,13 @@ public final class DataArgs extends com.pulumi.resources.ResourceArgs {
         return this.integer;
     }
 
+    @Import(name="optionalInner")
+    private @Nullable Output<InnerDataArgs> optionalInner;
+
+    public Optional<Output<InnerDataArgs>> optionalInner() {
+        return Optional.ofNullable(this.optionalInner);
+    }
+
     @Import(name="string", required=true)
     private Output<String> string;
 
@@ -77,6 +86,7 @@ public final class DataArgs extends com.pulumi.resources.ResourceArgs {
         this.float_ = $.float_;
         this.innerData = $.innerData;
         this.integer = $.integer;
+        this.optionalInner = $.optionalInner;
         this.string = $.string;
         this.stringMap = $.stringMap;
     }
@@ -146,6 +156,15 @@ public final class DataArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder integer(Integer integer) {
             return integer(Output.of(integer));
+        }
+
+        public Builder optionalInner(@Nullable Output<InnerDataArgs> optionalInner) {
+            $.optionalInner = optionalInner;
+            return this;
+        }
+
+        public Builder optionalInner(InnerDataArgs optionalInner) {
+            return optionalInner(Output.of(optionalInner));
         }
 
         public Builder string(Output<String> string) {
