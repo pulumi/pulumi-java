@@ -62,10 +62,11 @@ jobs:
           version: latest
           args: -p 3 -f .goreleaser.yml --clean --skip=validate --release-notes=${{ env.RELEASE_NOTES_PATH }}
       - name: Push additional tags
-        if: steps.check-release.outputs.exists == 'false'
         run: |
-          git tag sdk/${{ env.GORELEASER_CURRENT_TAG }}
-          git push origin sdk/${{ env.GORELEASER_CURRENT_TAG }}
+          if [ -z "$(git tag -l sdk/${{ env.GORELEASER_CURRENT_TAG }})" ]; then
+            git tag sdk/${{ env.GORELEASER_CURRENT_TAG }}
+            git push origin sdk/${{ env.GORELEASER_CURRENT_TAG }}
+          fi
 
   publish-maven-central:
     needs: release-provider
@@ -90,17 +91,37 @@ jobs:
         run: echo "PULUMI_JAVA_SDK_VERSION=${VERSION#v}" >> "$GITHUB_ENV"
         env:
           VERSION: ${{ needs.release-provider.outputs.version }}
+      # Skip publishing if this version is already on Maven Central, so the
+      # workflow can be safely re-run after a mid-flight failure (Maven Central
+      # rejects re-publishing an existing version).
+      #
+      # Edge case: repo1.maven.org can lag a few minutes behind a successful
+      # Sonatype release. A re-run within that propagation window won't see the
+      # artifact yet and will attempt a duplicate publish — that publish step
+      # then fails loudly rather than silently doing the wrong thing.
+      - name: Check if version is on Maven Central
+        id: check-maven
+        run: |
+          url="https://repo1.maven.org/maven2/com/pulumi/pulumi/${PULUMI_JAVA_SDK_VERSION}/pulumi-${PULUMI_JAVA_SDK_VERSION}.pom"
+          if curl --silent --fail --head --location "$url" > /dev/null; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Set up JDK 11
+        if: steps.check-maven.outputs.published == 'false'
         uses: actions/setup-java@v4
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
       - name: Setup Gradle
+        if: steps.check-maven.outputs.published == 'false'
         uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
         with:
           gradle-version: 8.14.1
       - name: Publish Pulumi Java SDK
+        if: steps.check-maven.outputs.published == 'false'
         run: |
           cd sdk/java && gradle pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
 
