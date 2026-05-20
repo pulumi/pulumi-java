@@ -107,7 +107,6 @@ public class StackReferenceOutputDetails {
 
         /**
          * Builds a StackReferenceOutputDetails instance.
-         * <p>
          *
          * @throws IllegalArgumentException if both value and secretValue are set
          */
