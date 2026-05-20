@@ -70,6 +70,10 @@ jobs:
 
   publish-maven-central:
     needs: release-provider
+    # Run as long as release-provider didn't fail. The implicit `success()`
+    # guard would skip this job if release-provider was skipped (e.g. on a
+    # re-run), and that skip would cascade to trigger-docs-update.
+    if: ${{ !failure() && !cancelled() }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -84,7 +88,7 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Set PULUMI_JAVA_SDK_VERSION
@@ -126,7 +130,11 @@ jobs:
           cd sdk/java && gradle pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
 
   trigger-docs-update:
+    # release-provider stays in `needs` because this job reads
+    # needs.release-provider.outputs.version below — the `needs` context only
+    # exposes directly-listed jobs, it is not transitive.
     needs: [release-provider, publish-maven-central]
+    if: ${{ !failure() && !cancelled() }}
     name: Trigger docs update
     runs-on: ubuntu-latest
     env:
