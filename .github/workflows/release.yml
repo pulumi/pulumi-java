@@ -1,0 +1,156 @@
+name: Release
+
+permissions: write-all # Equivalent to default permissions plus id-token: write
+
+# The release version is whatever `changie latest` reports — i.e. the newest
+# `.changes/v*.md` file in the repo. To cut a release, run `changie batch
+# <version>` locally and open a "Release v<version>" PR containing the
+# resulting `.changes/v<version>.md` + updated `CHANGELOG.md`. Merging that PR
+# fires this workflow via the CHANGELOG.md path filter. `workflow_dispatch`
+# re-runs the same version (e.g. after a mid-flight failure); it has no
+# version input.
+on:
+  push:
+    branches: [main]
+    paths: [CHANGELOG.md]
+  workflow_dispatch: {}
+
+jobs:
+  release-provider:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.latest.outputs.output }}
+    env:
+      ESC_ACTION_OIDC_AUTH: true
+      ESC_ACTION_OIDC_ORGANIZATION: pulumi
+      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      ESC_ACTION_ENVIRONMENT: imports/github-secrets
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: GITHUB_TOKEN=PULUMI_BOT_TOKEN
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Fetch Tags
+        run: |
+          git fetch --quiet --prune --unshallow --tags
+      - name: Setup mise and install tools
+        uses: jdx/mise-action@v3.4.0
+      - name: Get the latest version
+        id: latest
+        uses: miniscruff/changie-action@v2
+        with:
+          args: latest
+      - name: Add env vars
+        run: |
+          echo GORELEASER_CURRENT_TAG=${{ steps.latest.outputs.output }} >> $GITHUB_ENV
+          echo RELEASE_NOTES_PATH=.changes/${{ steps.latest.outputs.output }}.md >> $GITHUB_ENV
+      - name: Check if release exists
+        id: check-release
+        run: |
+          if [ -z "$(git tag -l ${{ env.GORELEASER_CURRENT_TAG }})" ]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Run GoReleaser
+        if: steps.check-release.outputs.exists == 'false'
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          version: latest
+          args: -p 3 -f .goreleaser.yml --clean --skip=validate --release-notes=${{ env.RELEASE_NOTES_PATH }}
+      - name: Push additional tags
+        run: |
+          if [ -z "$(git tag -l sdk/${{ env.GORELEASER_CURRENT_TAG }})" ]; then
+            git tag sdk/${{ env.GORELEASER_CURRENT_TAG }}
+            git push origin sdk/${{ env.GORELEASER_CURRENT_TAG }}
+          fi
+
+  publish-maven-central:
+    needs: release-provider
+    # Run as long as release-provider didn't fail. The implicit `success()`
+    # guard would skip this job if release-provider was skipped (e.g. on a
+    # re-run), and that skip would cascade to trigger-docs-update.
+    if: ${{ !failure() && !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OSSRH_REPO_URL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
+      ESC_ACTION_OIDC_AUTH: true
+      ESC_ACTION_OIDC_ORGANIZATION: pulumi
+      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      ESC_ACTION_ENVIRONMENT: imports/github-secrets
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: OSSRH_USERNAME,OSSRH_PASSWORD,SIGNING_KEY=JAVA_SIGNING_KEY,SIGNING_PASSWORD=JAVA_SIGNING_PASSWORD
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+      - name: Set PULUMI_JAVA_SDK_VERSION
+        run: echo "PULUMI_JAVA_SDK_VERSION=${VERSION#v}" >> "$GITHUB_ENV"
+        env:
+          VERSION: ${{ needs.release-provider.outputs.version }}
+      # Skip publishing if this version is already on Maven Central, so the
+      # workflow can be safely re-run after a mid-flight failure (Maven Central
+      # rejects re-publishing an existing version).
+      #
+      # Edge case: repo1.maven.org can lag a few minutes behind a successful
+      # Sonatype release. A re-run within that propagation window won't see the
+      # artifact yet and will attempt a duplicate publish — that publish step
+      # then fails loudly rather than silently doing the wrong thing.
+      - name: Check if version is on Maven Central
+        id: check-maven
+        run: |
+          url="https://repo1.maven.org/maven2/com/pulumi/pulumi/${PULUMI_JAVA_SDK_VERSION}/pulumi-${PULUMI_JAVA_SDK_VERSION}.pom"
+          if curl --silent --fail --head --location "$url" > /dev/null; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Set up JDK 11
+        if: steps.check-maven.outputs.published == 'false'
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: 'gradle'
+      - name: Setup Gradle
+        if: steps.check-maven.outputs.published == 'false'
+        uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
+        with:
+          gradle-version: 8.14.1
+      - name: Publish Pulumi Java SDK
+        if: steps.check-maven.outputs.published == 'false'
+        run: |
+          cd sdk/java && gradle pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
+
+  trigger-docs-update:
+    # release-provider stays in `needs` because this job reads
+    # needs.release-provider.outputs.version below — the `needs` context only
+    # exposes directly-listed jobs, it is not transitive.
+    needs: [release-provider, publish-maven-central]
+    if: ${{ !failure() && !cancelled() }}
+    name: Trigger docs update
+    runs-on: ubuntu-latest
+    env:
+      ESC_ACTION_OIDC_AUTH: true
+      ESC_ACTION_OIDC_ORGANIZATION: pulumi
+      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-pulumi-java
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_BOT_TOKEN
+    steps:
+      - name: Fetch secrets from ESC
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
+      - name: Trigger pulumi/docs workflow
+        run: |
+          gh workflow run pulumi-sdk-java-docs.yml \
+            --repo pulumi/docs \
+            --ref master \
+            -f version=${{ needs.release-provider.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ env.PULUMI_BOT_TOKEN }}
