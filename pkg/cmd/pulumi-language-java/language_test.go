@@ -256,6 +256,8 @@ var expectedFailures = map[string]string{
 	"l2-map-keys-adversarial":        "Failure after updating to 3.239",
 	"l2-resource-hook-ignore-errors": "Failure after updating to 3.239",
 	"l2-resource-hook-after-failure": "Failure after updating to 3.239",
+
+	"l1-expand-final": "not implemented",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
