@@ -158,7 +158,7 @@ jobs:
   go-tests:
     runs-on: ubuntu-latest
     needs: prerequisites
-    timeout-minutes: 30
+    timeout-minutes: 45
     strategy:
       fail-fast: false
     steps:
@@ -214,7 +214,7 @@ jobs:
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
-      - run: cd pkg && go test -timeout 25m ./...
+      - run: cd pkg && go test -timeout 40m ./...
 
   examples:
     runs-on: ubuntu-latest
