@@ -65,6 +65,7 @@ public class LocalWorkspaceTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "yaml", "yml" })
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testGetProjectSettings(String extension) throws Exception {
         Path workingDir = Paths.get(getClass().getResource("/" + extension).toURI());
         try (var workspace = LocalWorkspace.create(LocalWorkspaceOptions.builder().workDir(workingDir).build())) {
@@ -81,6 +82,7 @@ public class LocalWorkspaceTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "yaml", "yml" })
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testGetStackSettings(String extension) throws Exception {
         Path workingDir = Paths.get(getClass().getResource("/" + extension).toURI());
         try (var workspace = LocalWorkspace.create(LocalWorkspaceOptions.builder().workDir(workingDir).build())) {
@@ -139,6 +141,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testCreateSelectRemoveStack(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -226,6 +229,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     public void testManipulateConfig(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -290,6 +294,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     public void testManipulateConfigPath(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -395,6 +400,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     public void testSupportConfigFlagLike(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -432,6 +438,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     public void testListStackAndCurrentlySelected(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -466,6 +473,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     public void testCheckStackStatus(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -782,6 +790,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testPulumiVersion() throws Exception {
         try (var workspace = LocalWorkspace.create()) {
             assertThat(workspace.pulumiVersion()).matches("(\\d+\\.)(\\d+\\.)(\\d+)(-.*)?");
@@ -789,6 +798,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testDetectsProjectSettingsConflict(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -815,6 +825,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testStateDelete(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
@@ -872,6 +883,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testStateDeleteForce(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
