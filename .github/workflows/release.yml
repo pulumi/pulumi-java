@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
+        uses: pulumi/esc-action@f3cfbabf37488463817366338165b92b5f99117e # v2
       - uses: actions/checkout@v5
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -87,7 +87,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
+        uses: pulumi/esc-action@f3cfbabf37488463817366338165b92b5f99117e # v2
       - uses: actions/checkout@v5
         with:
           submodules: recursive
@@ -145,7 +145,7 @@ jobs:
       ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_BOT_TOKEN
     steps:
       - name: Fetch secrets from ESC
-        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896 # v1
+        uses: pulumi/esc-action@f3cfbabf37488463817366338165b92b5f99117e # v2
       - name: Trigger pulumi/docs workflow
         run: |
           gh workflow run pulumi-sdk-java-docs.yml \
