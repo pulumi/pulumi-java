@@ -233,6 +233,7 @@ jobs:
         - gcp-java-gke-hello-world
         - kubernetes
         - minimal
+        - minimalmill
         - minimalsbt
         - random
     permissions:
