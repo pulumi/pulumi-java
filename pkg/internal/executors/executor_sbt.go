@@ -40,8 +40,11 @@ func (sbt) isSbtProject(opts JavaExecutorOptions) (bool, error) {
 		"build.sbt",
 	}
 	for _, p := range sbtMarkers {
-		_, err := fsys.FileExists(opts.WD, p)
-		if err == nil {
+		exists, err := fsys.FileExists(opts.WD, p)
+		if err != nil {
+			return false, err
+		}
+		if exists {
 			return true, nil
 		}
 	}
