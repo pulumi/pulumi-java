@@ -107,10 +107,6 @@ func (mill) isMillProject(opts JavaExecutorOptions) (bool, error) {
 // without a module prefix (e.g. `mill compile` rather than `mill foo.compile`).
 // findModuleName returns the empty string in that case, which taskPath
 // translates into bare task selectors.
-//
-// Projects with multiple programmable modules where the Pulumi program is not
-// the first can override by setting runtime.options.use-executor to a path
-// that contains "mill" (TODO: support a dedicated option for module name).
 func (mill) findModuleName(opts JavaExecutorOptions) (string, error) {
 	re := regexp.MustCompile(`(?m)^\s*object\s+([\w$]+)\s+extends\s+[\w.$]*Module[\w$]*\b`)
 	for _, p := range millBuildFiles {
