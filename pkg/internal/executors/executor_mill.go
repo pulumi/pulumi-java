@@ -39,7 +39,7 @@ import (
 
 type mill struct{}
 
-var _ javaExecutorFactory = &mill{}
+var _ javaExecutorFactory = mill{}
 
 func (m mill) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	ok, err := m.isMillProject(opts)
