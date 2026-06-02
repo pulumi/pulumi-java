@@ -990,6 +990,7 @@ func (host *javaLanguageHost) GeneratePackage(
 	if err != nil {
 		return nil, err
 	}
+	cachedLoader := schema.NewCachedLoader(loader)
 
 	var spec schema.PackageSpec
 	err = json.Unmarshal([]byte(req.Schema), &spec)
@@ -1013,7 +1014,7 @@ func (host *javaLanguageHost) GeneratePackage(
 		}, nil
 	}
 
-	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, loader, schema.ValidationOptions{
+	pkg, bindDiags, err := schema.BindSpec(*dedupedSpec, cachedLoader, schema.ValidationOptions{
 		AllowDanglingReferences: true,
 	})
 	if err != nil {
