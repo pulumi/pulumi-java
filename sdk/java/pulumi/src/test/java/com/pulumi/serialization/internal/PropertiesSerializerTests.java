@@ -13,8 +13,12 @@ import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class PropertiesSerializerTests {
 
@@ -42,6 +46,35 @@ public class PropertiesSerializerTests {
         assertThat(showStruct(new ExampleResourceArgs().setHelperJson(
                 Output.of(HelperArgs.builder().intProp(Output.of(1)).build())
         ))).isEqualTo("{\"helperJson\":\"{\\\"intProp\\\":1.0}\"}"); // 1 should work also, not 1.0 - Int in the source
+    }
+
+    @Test
+    void attachesPropertyNameToSerializationErrors() {
+        var log = new Log(EngineLogger.ignore());
+        var s = new PropertiesSerializer(log);
+
+        Map<String, Output<?>> args = new HashMap<>();
+        args.put("badProp", Output.of(CompletableFuture.<String>failedFuture(new RuntimeException("inner boom"))));
+
+        var future = s.serializeAllPropertiesAsync("LABEL", args, true);
+        assertThatThrownBy(future::join)
+                .hasMessageContaining("serializing property \"badProp\"")
+                .hasMessageContaining("inner boom")
+                .hasRootCauseMessage("inner boom");
+    }
+
+    @Test
+    void namesTheFailingPropertyAmongOtherProperties() {
+        var log = new Log(EngineLogger.ignore());
+        var s = new PropertiesSerializer(log);
+
+        Map<String, Output<?>> args = new HashMap<>();
+        args.put("good", Output.of("fine"));
+        args.put("badProp", Output.of(CompletableFuture.<String>failedFuture(new RuntimeException("inner boom"))));
+
+        var future = s.serializeAllPropertiesAsync("LABEL", args, true);
+        assertThatThrownBy(future::join)
+                .hasMessageContaining("badProp");
     }
 
     private static String showStruct(ResourceArgs resourceArgs) {
