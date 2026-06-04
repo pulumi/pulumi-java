@@ -310,7 +310,10 @@ func TestMillExecutor(t *testing.T) {
 		fstest.MapFS{
 			"build.mill": {Data: []byte(millBuildMill)},
 		})
-	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:         fsys,
+		MillModule: "app",
+	}, false)
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/mill", exec.Cmd)
 	assert.Equal(t, []string{"app.run"}, exec.RunArgs)
@@ -329,7 +332,10 @@ func TestMillBuildMillScalaVariant(t *testing.T) {
 		fstest.MapFS{
 			"build.mill.scala": {Data: []byte(`object pulumi extends ScalaModule {}`)},
 		})
-	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:         fsys,
+		MillModule: "pulumi",
+	}, false)
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/mill", exec.Cmd)
 	assert.Equal(t, []string{"pulumi.run"}, exec.RunArgs)
@@ -372,58 +378,16 @@ func TestMillBuildScIgnored(t *testing.T) {
 	assert.Error(t, err)
 }
 
-func TestMillCustomModuleTrait(t *testing.T) {
-	// User-defined trait that extends ScalaModule but has its own name,
-	// e.g. for shared module settings across submodules.
-	src := `
-trait ScalaModuleEx extends ScalaModule { def scalaVersion = "3.8.3" }
-object pulumi extends ScalaModuleEx
-`
+func TestMillModuleRequired(t *testing.T) {
+	// A programmable build.mill with no mill-module option is an error: the
+	// executor refuses to guess which module holds the Pulumi program.
 	fsys := fsys.TestFS(".",
 		map[string]string{"mill": "/usr/bin/mill"},
 		fstest.MapFS{
-			"build.mill": {Data: []byte(src)},
-		})
-	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
-	assert.NoError(t, err)
-	assert.Equal(t, []string{"pulumi.run"}, exec.RunArgs)
-}
-
-func TestMillQualifiedModuleType(t *testing.T) {
-	// Fully qualified extends-target, as some users write it.
-	fsys := fsys.TestFS(".",
-		map[string]string{"mill": "/usr/bin/mill"},
-		fstest.MapFS{
-			"build.mill": {Data: []byte(`object pulumi extends mill.scalalib.ScalaModule {}`)},
-		})
-	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
-	assert.NoError(t, err)
-	assert.Equal(t, []string{"pulumi.run"}, exec.RunArgs)
-}
-
-func TestMillFirstModuleWins(t *testing.T) {
-	src := `
-object first extends ScalaModule {}
-object second extends ScalaModule {}
-`
-	fsys := fsys.TestFS(".",
-		map[string]string{"mill": "/usr/bin/mill"},
-		fstest.MapFS{
-			"build.mill": {Data: []byte(src)},
-		})
-	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
-	assert.NoError(t, err)
-	assert.Equal(t, []string{"first.run"}, exec.RunArgs)
-}
-
-func TestMillMissingModule(t *testing.T) {
-	fsys := fsys.TestFS(".",
-		map[string]string{"mill": "/usr/bin/mill"},
-		fstest.MapFS{
-			"build.mill": {Data: []byte("// no module here\n")},
+			"build.mill": {Data: []byte(millBuildMill)},
 		})
 	_, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
-	assert.Error(t, err)
+	assert.ErrorContains(t, err, "mill-module")
 }
 
 func TestMillUseExecutor(t *testing.T) {
@@ -438,6 +402,7 @@ func TestMillUseExecutor(t *testing.T) {
 	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		WD:          fsys,
 		UseExecutor: "/bin/custom-mill",
+		MillModule:  "app",
 	}, false)
 	assert.NoError(t, err)
 	assert.Equal(t, "/bin/custom-mill", exec.Cmd)
@@ -450,7 +415,10 @@ func TestMillMillw(t *testing.T) {
 			"build.mill": {Data: []byte(millBuildMill)},
 			"mill":       {Mode: 0o755},
 		})
-	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:         fsys,
+		MillModule: "app",
+	}, false)
 	assert.NoError(t, err)
 	assert.Equal(t, "./mill", exec.Cmd)
 }

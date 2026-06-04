@@ -18,20 +18,20 @@
 // changes — provided the user has not overridden `propagateEnv` to
 // `false` on the Pulumi module.
 //
-// Module discovery
+// Module selection
 // ----------------
-// Mill projects can have multiple top-level modules. This executor
-// picks the first `object X extends *Module` declaration in the build
-// file. Multi-module projects where the Pulumi module is not the
-// first declaration are not yet supported; a dedicated runtime option
-// would be the right fix.
+// Mill addresses tasks by module path (`mill app.compile`), and a
+// programmable build (build.mill / build.mill.scala) can declare any
+// number of top-level modules with no implicit default — unlike sbt's
+// root project. The module that holds the Pulumi program is therefore
+// taken from the required `mill-module` runtime option rather than
+// guessed from the build file. The declarative build.mill.yaml form is
+// a single root module and needs no option; its tasks run unprefixed.
 
 package executors
 
 import (
 	"fmt"
-	"io/fs"
-	"regexp"
 	"strings"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
@@ -57,7 +57,7 @@ func (m mill) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	if err != nil {
 		return nil, err
 	}
-	module, err := m.findModuleName(opts)
+	module, err := m.moduleName(opts)
 	if err != nil {
 		return nil, err
 	}
@@ -90,25 +90,18 @@ func (mill) isMillProject(opts JavaExecutorOptions) (bool, error) {
 	return false, nil
 }
 
-// findModuleName returns the name of the first top-level module declared
-// in the build file. Mill convention is:
+// moduleName returns the Mill module that contains the Pulumi program, or the
+// empty string when tasks should run without a module prefix.
 //
-//	object myModule extends ScalaModule { ... }
+// Programmable builds (build.mill / build.mill.scala) require the module to be
+// named via the `mill-module` runtime option. Inferring it by scanning the
+// build file is unreliable: a regex cannot tell a real `object X extends
+// ScalaModule` declaration from one inside a comment or a string literal, nor
+// know which of several modules is the Pulumi program.
 //
-// The match accepts any extended type whose name contains the substring
-// "Module" — this covers the built-ins (ScalaModule, JavaModule,
-// CrossScalaModule, KotlinModule, etc.) as well as user-defined traits
-// that extend them and conventionally embed "Module" in their name
-// (e.g. ScalaModuleEx, MyScalaModule). Qualified references like
-// mill.scalalib.ScalaModule are also accepted.
-//
-// For declarative build.mill.yaml projects, the file itself describes a
-// single root module with no explicit name, and Mill tasks are invoked
-// without a module prefix (e.g. `mill compile` rather than `mill foo.compile`).
-// findModuleName returns the empty string in that case, which taskPath
-// translates into bare task selectors.
-func (mill) findModuleName(opts JavaExecutorOptions) (string, error) {
-	re := regexp.MustCompile(`(?m)^\s*object\s+([\w$]+)\s+extends\s+[\w.$]*Module[\w$]*\b`)
+// The declarative build.mill.yaml form describes a single root module with no
+// name, so Mill invokes its tasks unprefixed and moduleName returns "".
+func (mill) moduleName(opts JavaExecutorOptions) (string, error) {
 	for _, p := range millBuildFiles {
 		exists, err := fsys.FileExists(opts.WD, p)
 		if err != nil {
@@ -117,24 +110,24 @@ func (mill) findModuleName(opts JavaExecutorOptions) (string, error) {
 		if !exists {
 			continue
 		}
-		// build.mill.yaml is the declarative single-root-module form;
-		// Mill invokes its tasks without a module prefix.
+		// build.mill.yaml is the declarative single-root-module form; Mill
+		// invokes its tasks without a module prefix.
 		if p == "build.mill.yaml" {
 			return "", nil
 		}
-		content, err := fs.ReadFile(opts.WD, p)
-		if err != nil {
-			continue
+		// Programmable build: the module name is required.
+		if opts.MillModule == "" {
+			return "", fmt.Errorf(
+				"the Mill executor requires the \"mill-module\" runtime option to select the "+
+					"module that contains the Pulumi program; set it in Pulumi.yaml, e.g.:\n"+
+					"  runtime:\n    name: java\n    options:\n      mill-module: app\n"+
+					"matching a top-level `object app extends ScalaModule` in %s", p)
 		}
-		if m := re.FindStringSubmatch(string(content)); m != nil {
-			return m[1], nil
-		}
+		return opts.MillModule, nil
 	}
-	return "", fmt.Errorf(
-		"could not infer a Mill module name from %s — expected a top-level "+
-			"`object X extends ScalaModule` (or similar *Module trait) declaration; "+
-			"note this executor targets Mill 1.x and does not read Mill 0.x's build.sc",
-		strings.Join(millBuildFiles, " / "))
+	// No recognized build file: the executor was forced via `use-executor`.
+	// Honor an explicit module if one was given, otherwise run unprefixed.
+	return opts.MillModule, nil
 }
 
 func (mill) newMillExecutor(cmd, module string) (*JavaExecutor, error) {

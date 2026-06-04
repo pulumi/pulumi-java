@@ -2,3 +2,6 @@ name: minimalmill
 description: A minimal Mill Pulumi program.
 runtime:
   name: java
+  options:
+    # The build.mill module holding the Pulumi program.
+    mill-module: minimalmill
