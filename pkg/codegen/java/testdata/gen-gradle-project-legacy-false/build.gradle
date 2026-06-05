@@ -95,7 +95,7 @@ publishing {
                 inceptionYear = "2022"
                 name = "pulumi-eks"
                 packaging = "jar"
-                description = "Pulumi Amazon Web Services (AWS) EKS Components."
+                description = $/Pulumi Amazon Web Services (AWS) EKS Components./$
 
                 url = "https://github.com/pulumi/pulumi-eks"
 

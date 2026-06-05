@@ -91,7 +91,7 @@ publishing {
                 inceptionYear = ""
                 name = ""
                 packaging = "jar"
-                description = "test description"
+                description = $/test description/$
 
                 url = "https://github.com/pulumi/pulumi-java"
 
