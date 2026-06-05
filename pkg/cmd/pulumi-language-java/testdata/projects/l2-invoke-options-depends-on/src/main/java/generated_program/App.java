@@ -3,7 +3,6 @@ package generated_program;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.simpleinvoke.Provider;
 import com.pulumi.simpleinvoke.StringResource;
 import com.pulumi.simpleinvoke.StringResourceArgs;
 import com.pulumi.simpleinvoke.SimpleinvokeFunctions;
@@ -22,8 +21,6 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var explicitProvider = new Provider("explicitProvider");
-
         var first = new StringResource("first", StringResourceArgs.builder()
             .text("first hello")
             .build());
