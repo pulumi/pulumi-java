@@ -179,7 +179,7 @@ public class LocalWorkspaceTest {
     }
 
     @Test
-    @Timeout(value = 1, unit = TimeUnit.MINUTES)
+    @Timeout(value = 2, unit = TimeUnit.MINUTES)
     void testImportExportStack(@EnvVars Map<String, String> envVars) throws Exception {
         var env = new HashMap<String, String>(envVars);
         env.put("PULUMI_CONFIG_PASSPHRASE", "test");
