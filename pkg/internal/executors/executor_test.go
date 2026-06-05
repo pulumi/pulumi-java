@@ -294,3 +294,131 @@ func TestSBTExecutor(t *testing.T) {
 	assert.Equal(t, "/usr/bin/sbt", exec.Cmd)
 	assert.Equal(t, []string{"-batch", "run"}, exec.RunArgs)
 }
+
+const millBuildMill = `package build
+import mill._
+import mill.scalalib._
+
+object app extends ScalaModule {
+  def scalaVersion = "3.8.3"
+}
+`
+
+func TestMillExecutor(t *testing.T) {
+	fsys := fsys.TestFS(".",
+		map[string]string{"mill": "/usr/bin/mill"},
+		fstest.MapFS{
+			"build.mill": {Data: []byte(millBuildMill)},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:         fsys,
+		MillModule: "app",
+	}, false)
+	assert.NoError(t, err)
+	assert.Equal(t, "/usr/bin/mill", exec.Cmd)
+	assert.Equal(t, []string{"app.run"}, exec.RunArgs)
+	assert.Equal(t, []string{"app.compile"}, exec.BuildArgs)
+	assert.Equal(t,
+		[]string{
+			"--ticker", "false",
+			"app.runMain", "com.pulumi.bootstrap.internal.Main", "packages",
+		},
+		exec.PluginArgs)
+}
+
+func TestMillBuildMillScalaVariant(t *testing.T) {
+	fsys := fsys.TestFS(".",
+		map[string]string{"mill": "/usr/bin/mill"},
+		fstest.MapFS{
+			"build.mill.scala": {Data: []byte(`object pulumi extends ScalaModule {}`)},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:         fsys,
+		MillModule: "pulumi",
+	}, false)
+	assert.NoError(t, err)
+	assert.Equal(t, "/usr/bin/mill", exec.Cmd)
+	assert.Equal(t, []string{"pulumi.run"}, exec.RunArgs)
+}
+
+func TestMillBuildMillYaml(t *testing.T) {
+	// Mill 1.1+'s declarative single-root-module form. The YAML file IS the
+	// module, so Mill tasks are invoked without a module prefix.
+	src := `extends: ScalaModule
+scalaVersion: 3.7.3
+mvnDeps:
+- com.pulumi:pulumi:1.28.0
+`
+	fsys := fsys.TestFS(".",
+		map[string]string{"mill": "/usr/bin/mill"},
+		fstest.MapFS{
+			"build.mill.yaml": {Data: []byte(src)},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
+	assert.NoError(t, err)
+	assert.Equal(t, "/usr/bin/mill", exec.Cmd)
+	assert.Equal(t, []string{"compile"}, exec.BuildArgs)
+	assert.Equal(t, []string{"run"}, exec.RunArgs)
+	assert.Equal(t,
+		[]string{
+			"--ticker", "false",
+			"runMain", "com.pulumi.bootstrap.internal.Main", "packages",
+		},
+		exec.PluginArgs)
+}
+
+func TestMillBuildScIgnored(t *testing.T) {
+	// Mill 0.x's build.sc is not a marker for the 1.x executor.
+	fsys := fsys.TestFS(".",
+		map[string]string{"mill": "/usr/bin/mill"},
+		fstest.MapFS{
+			"build.sc": {Data: []byte(`object pulumi extends ScalaModule {}`)},
+		})
+	_, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
+	assert.Error(t, err)
+}
+
+func TestMillModuleRequired(t *testing.T) {
+	// A programmable build.mill with no mill-module option is an error: the
+	// executor refuses to guess which module holds the Pulumi program.
+	fsys := fsys.TestFS(".",
+		map[string]string{"mill": "/usr/bin/mill"},
+		fstest.MapFS{
+			"build.mill": {Data: []byte(millBuildMill)},
+		})
+	_, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys}, false)
+	assert.ErrorContains(t, err, "mill-module")
+}
+
+func TestMillUseExecutor(t *testing.T) {
+	fsys := fsys.TestFS(".",
+		map[string]string{
+			"mill":             "/usr/bin/mill",
+			"/bin/custom-mill": "/bin/custom-mill",
+		},
+		fstest.MapFS{
+			"build.mill": {Data: []byte(millBuildMill)},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:          fsys,
+		UseExecutor: "/bin/custom-mill",
+		MillModule:  "app",
+	}, false)
+	assert.NoError(t, err)
+	assert.Equal(t, "/bin/custom-mill", exec.Cmd)
+}
+
+func TestMillMillw(t *testing.T) {
+	fsys := fsys.TestFS(".",
+		map[string]string{"mill": "/usr/bin/mill"},
+		fstest.MapFS{
+			"build.mill": {Data: []byte(millBuildMill)},
+			"mill":       {Mode: 0o755},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD:         fsys,
+		MillModule: "app",
+	}, false)
+	assert.NoError(t, err)
+	assert.Equal(t, "./mill", exec.Cmd)
+}

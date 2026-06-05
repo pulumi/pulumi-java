@@ -190,6 +190,14 @@ func (host *javaLanguageHost) parseExecOptions(info *pulumirpc.ProgramInfo) (exe
 		}
 	}
 
+	if module, ok := options["mill-module"]; ok {
+		if module, ok := module.(string); ok {
+			javaOptions.MillModule = module
+		} else {
+			return javaOptions, errors.New("mill-module option must be a string")
+		}
+	}
+
 	return javaOptions, nil
 }
 

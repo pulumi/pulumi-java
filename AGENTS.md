@@ -10,7 +10,7 @@ Pulumi Java language support: a Go-based language plugin (gRPC server), a Java c
   - `pkg/cmd/pulumi-language-java/` — gRPC language runtime server
   - `pkg/cmd/pulumi-java-gen/` — code generator CLI (deprecated, use `pulumi package gen-sdk`)
   - `pkg/codegen/java/` — schema-to-Java codegen engine
-  - `pkg/internal/executors/` — build tool abstraction (Gradle, Maven, JBang, SBT, JAR)
+  - `pkg/internal/executors/` — build tool abstraction (Gradle, Maven, JBang, SBT, Mill, JAR)
 - `sdk/java/` — Gradle project for the Java SDK runtime
 - `tests/` — integration tests, examples, templates
 - `pulumi/` — git submodule of `pulumi/pulumi` (protobuf definitions, test schemas)

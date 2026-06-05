@@ -56,6 +56,12 @@ type JavaExecutorOptions struct {
 	// `Pulumi.yaml`. Optional.
 	UseExecutor string
 
+	// The value of `runtime.options.mill-module` setting from
+	// `Pulumi.yaml`. Names the Mill module that contains the Pulumi
+	// program; required by the Mill executor for programmable
+	// build.mill / build.mill.scala projects. Ignored by other executors.
+	MillModule string
+
 	// Additional runtime arguments to pass to the program.
 	ProgramArgs []string
 }
@@ -90,12 +96,13 @@ func NewJavaExecutor(opts JavaExecutorOptions, attachDebugger bool) (*JavaExecut
 		&gradle{},
 		&jbang{},
 		&sbt{},
+		&mill{},
 	).NewJavaExecutor(opts)
 	if err != nil {
 		return nil, err
 	}
 	if e == nil {
-		return nil, fmt.Errorf("failed to configure executor, tried: jar, maven, gradle, jbang, sbt")
+		return nil, fmt.Errorf("failed to configure executor, tried: jar, maven, gradle, jbang, sbt, mill")
 	}
 	return e, err
 }

@@ -1,0 +1,25 @@
+//| mill-version: 1.1.6
+
+package build
+
+import mill.*
+import mill.scalalib.*
+import coursier.maven.MavenRepository
+
+object minimalmill extends ScalaModule {
+  def scalaVersion = "3.7.3"
+
+  def mvnDeps = Seq(
+    mvn"com.pulumi:pulumi:${sys.env.getOrElse("PULUMI_JAVA_SDK_VERSION", "0.0.1")}",
+  )
+
+  def mainClass = Some("com.pulumi.example.minimalmill.App")
+
+  // Resolve the locally-installed Pulumi Java SDK during tests, mirroring
+  // sbt's `resolvers += Resolver.mavenLocal` in tests/examples/minimalsbt.
+  def repositoriesTask = Task.Anon {
+    super.repositoriesTask() ++ Seq(
+      MavenRepository(s"file://${System.getProperty("user.home")}/.m2/repository"),
+    )
+  }
+}
