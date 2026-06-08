@@ -1,6 +1,0 @@
-component: runtime
-kind: Improvements
-body: Add Mill 1.x as a build tool executor for Java/Scala programs
-time: 2026-05-30T10:29:01.395078+09:00
-custom:
-    PR: "2209"
