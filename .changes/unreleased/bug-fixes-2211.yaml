@@ -1,6 +1,0 @@
-component: language
-kind: bug-fixes
-body: Emit package descriptions in generated Java build.gradle files as Groovy dollar-slashy string literals so multi-line and quoted schema descriptions produce valid Gradle builds without post-processing
-time: 2026-06-05T12:00:00.00000-04:00
-custom:
-    PR: "2211"
