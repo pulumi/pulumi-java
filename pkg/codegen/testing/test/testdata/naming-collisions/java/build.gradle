@@ -87,7 +87,7 @@ publishing {
                 inceptionYear = ""
                 name = ""
                 packaging = "jar"
-                description = ""
+                description = $/$/
 
                 url = ""
 

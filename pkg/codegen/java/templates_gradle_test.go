@@ -161,6 +161,72 @@ func eksExample() (*schema.Package, *PackageInfo) {
 	return pkg, info
 }
 
+func TestFormatGroovyDescriptionLiteral(t *testing.T) {
+	t.Parallel()
+
+	testCases := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			name:     "plain text",
+			input:    "Pulumi Amazon Web Services (AWS) EKS Components.",
+			expected: "$/Pulumi Amazon Web Services (AWS) EKS Components./$",
+		},
+		{
+			name:     "dollar sign is literal",
+			input:    "cost is $5",
+			expected: "$/cost is $5/$",
+		},
+		{
+			name: "multiline with quotes and backticks",
+			input: `A provider.
+Use the ` + "`Thing`" + ` resource for stuff.
+Line three with "quotes".`,
+			expected: `$/A provider.
+Use the ` + "`Thing`" + ` resource for stuff.
+Line three with "quotes"./$`,
+		},
+		{
+			name:     "slash-dollar escape",
+			input:    "ends with /$",
+			expected: "$/ends with /$//$",
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+			assert.Equal(t, tc.expected, formatGroovyDescriptionLiteral(tc.input))
+		})
+	}
+}
+
+func TestGenGradleProjectMultilineDescription(t *testing.T) {
+	version := semver.MustParse("1.0.0")
+	pkg := &schema.Package{
+		Name:        "example",
+		Homepage:    "https://pulumi.com",
+		License:     "Apache-2.0",
+		Repository:  "https://github.com/pulumi/pulumi-example",
+		Description: "A provider.\nUse the `MyResource` resource for stuff.\nLine three with \"quotes\".",
+		Version:     &version,
+	}
+	info := &PackageInfo{
+		Dependencies: map[string]string{
+			"com.pulumi:pulumi": "0.1.0",
+		},
+	}
+
+	files := fs{}
+	err := genGradleProject(pkg, info, files, false /*legacyBuildFiles*/)
+	require.NoError(t, err)
+
+	fp := filepath.Join("testdata", "gen-gradle-project-multiline-description", "build.gradle")
+	assertFileContentIs(t, fp, string(files["build.gradle"]))
+}
+
 func TestIsPublishedByPulumi(t *testing.T) {
 	type testCase struct {
 		publisher string

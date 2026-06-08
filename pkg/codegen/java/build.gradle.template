@@ -130,7 +130,7 @@ publishing {
                 inceptionYear = "{{ .ProjectInceptionYear }}"
                 name = "{{ .ProjectName }}"
                 packaging = "jar"
-                description = "{{ .ProjectDescription }}"
+                description = {{ groovyDescription .ProjectDescription }}
 
                 url = "{{ .ProjectURL }}"
 

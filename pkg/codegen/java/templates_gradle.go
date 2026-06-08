@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"slices"
 	"strings"
+	tmplt "text/template"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
@@ -33,12 +34,31 @@ func genGradleProject(
 	}
 	for fileName, template := range templates {
 		var buf bytes.Buffer
-		if err := Template(fileName, template).Execute(&buf, ctx); err != nil {
+		if err := gradleTemplate(fileName, template).Execute(&buf, ctx); err != nil {
 			return err
 		}
 		files.add(fileName, buf.Bytes())
 	}
 	return nil
+}
+
+func gradleTemplate(name string, text string) *tmplt.Template {
+	funcs := tmplt.FuncMap{
+		"groovyDescription": formatGroovyDescriptionLiteral,
+	}
+	for k, v := range predefinedFunctions {
+		funcs[k] = v
+	}
+	return tmplt.Must(tmplt.New(name).Funcs(funcs).Option(MissingKeyErrorOption).Parse(text))
+}
+
+// formatGroovyDescriptionLiteral renders s as a Groovy dollar-slashy string
+// literal ($/.../$) suitable for assignment in generated build.gradle files.
+// Dollar-slashy strings are non-interpolating and preserve newlines and quotes
+// without escaping. The only special sequence is "/$", which must be written
+// as "/$/".
+func formatGroovyDescriptionLiteral(s string) string {
+	return "$/" + strings.ReplaceAll(s, "/$", "/$/") + "/$"
 }
 
 func gradleValidatePackage(pkg *schema.Package) error {
