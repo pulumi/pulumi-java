@@ -1,0 +1,6 @@
+component: sdk
+kind: Improvements
+body: Add a `read` timeout to `CustomTimeouts` so resource read operations can be given a custom timeout
+time: 2026-06-12T12:00:00.00000-04:00
+custom:
+    PR: "2224"
