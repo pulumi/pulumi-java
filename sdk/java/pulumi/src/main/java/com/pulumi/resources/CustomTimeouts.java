@@ -18,6 +18,8 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
     private final Duration update;
     @Nullable
     private final Duration delete;
+    @Nullable
+    private final Duration read;
 
     /**
      * @param create the optional create timeout
@@ -25,9 +27,21 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
      * @param delete the optional delete timeout
      */
     public CustomTimeouts(@Nullable Duration create, @Nullable Duration update, @Nullable Duration delete) {
+        this(create, update, delete, null);
+    }
+
+    /**
+     * @param create the optional create timeout
+     * @param update the optional update timeout
+     * @param delete the optional delete timeout
+     * @param read   the optional read timeout
+     */
+    public CustomTimeouts(
+            @Nullable Duration create, @Nullable Duration update, @Nullable Duration delete, @Nullable Duration read) {
         this.create = create;
         this.update = update;
         this.delete = delete;
+        this.read = read;
     }
 
     /**
@@ -52,11 +66,18 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
     }
 
     /**
+     * @return the optional read timeout
+     */
+    public Optional<Duration> getRead() {
+        return Optional.ofNullable(read);
+    }
+
+    /**
      * @return a copy of {@code this} {@link CustomTimeouts} instance
      */
     @Override
     public CustomTimeouts copy() {
-        return new CustomTimeouts(this.create, this.update, this.delete);
+        return new CustomTimeouts(this.create, this.update, this.delete, this.read);
     }
 
     @Override
@@ -66,12 +87,13 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
         CustomTimeouts that = (CustomTimeouts) o;
         return Objects.equals(create, that.create)
                 && Objects.equals(update, that.update)
-                && Objects.equals(delete, that.delete);
+                && Objects.equals(delete, that.delete)
+                && Objects.equals(read, that.read);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(create, update, delete);
+        return Objects.hash(create, update, delete, read);
     }
 
     @InternalUse
@@ -181,6 +203,8 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
         private Duration update;
         @Nullable
         private Duration delete;
+        @Nullable
+        private Duration read;
 
         public Builder() {
             // Empty
@@ -217,10 +241,20 @@ public final class CustomTimeouts implements Copyable<CustomTimeouts> {
         }
 
         /**
+         * @param read the optional read timeout
+         * @return the {@link CustomTimeouts} builder
+         * @see CustomTimeouts#read
+         */
+        public Builder read(Duration read) {
+            this.read = read;
+            return this;
+        }
+
+        /**
          * @return a {@link CustomTimeouts} instance initialized using the {@link Builder}
          */
         public CustomTimeouts build() {
-            return new CustomTimeouts(this.create, this.update, this.delete);
+            return new CustomTimeouts(this.create, this.update, this.delete, this.read);
         }
     }
 }

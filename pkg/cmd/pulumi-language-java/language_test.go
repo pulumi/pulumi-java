@@ -215,6 +215,11 @@ var expectedFailures = map[string]string{
 	"l2-external-enum":                       "compilation error: package com.pulumi.enum_.enums does not exist",
 	"l1-builtin-require-pulumi-version":      "requirePulumiVersion method not found on DeploymentInstance",
 	"l2-resource-name-type":                  "TODO: call pulumiResourceName/pulumiResourceType not implemented",
+	"l2-resource-any":                        "compilation error: any-typed property generates a multi-argument .value() call",                       //nolint:lll
+	"l2-config-default-from-invoke":          "compilation error: .result() called on Output<MyInvokeResult> without applyValue",                     //nolint:lll
+	"l2-primitive-ref-optional":              "compilation error: illegal start of expression in generated program",                                  //nolint:lll
+	"l2-provider-config-enum":                "compilation error: plain String passed to enum-typed provider config builder",                         //nolint:lll
+	"l2-resource-schema-secret":              "stack outputs from schema-secret properties are not marked secret (topLevelElided/topLevelNotElided)", //nolint:lll
 	"l2-resource-option-replace-with":        "replaceWith method not found on CustomResourceOptions.Builder",
 	"l2-resource-option-alias":               "noParent method not found on Alias.Builder",
 	"l3-splat":                               "compilation error",

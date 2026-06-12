@@ -279,6 +279,7 @@ public class ResourceProviderService {
                 .create(CustomTimeouts.parseTimeoutString(customTimeouts.getCreate()))
                 .update(CustomTimeouts.parseTimeoutString(customTimeouts.getUpdate()))
                 .delete(CustomTimeouts.parseTimeoutString(customTimeouts.getDelete()))
+                .read(CustomTimeouts.parseTimeoutString(customTimeouts.getRead()))
                 .build();
         }
 

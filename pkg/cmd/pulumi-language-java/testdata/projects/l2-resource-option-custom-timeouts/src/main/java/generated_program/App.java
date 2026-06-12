@@ -50,6 +50,14 @@ public class App {
                 .build())
                 .build());
 
+        var readOnly = new Resource("readOnly", ResourceArgs.builder()
+            .value(true)
+            .build(), CustomResourceOptions.builder()
+                .customTimeouts(CustomTimeouts.builder()
+                    .read(CustomTimeouts.parseTimeoutString("9m"))
+                .build())
+                .build());
+
         var allTimeouts = new Resource("allTimeouts", ResourceArgs.builder()
             .value(true)
             .build(), CustomResourceOptions.builder()
@@ -57,6 +65,7 @@ public class App {
                     .create(CustomTimeouts.parseTimeoutString("2m"))
                     .update(CustomTimeouts.parseTimeoutString("4m"))
                     .delete(CustomTimeouts.parseTimeoutString("1m"))
+                    .read(CustomTimeouts.parseTimeoutString("5m"))
                 .build())
                 .build());
 

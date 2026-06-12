@@ -1701,6 +1701,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     .setCreate(customTimeoutToGolangString.apply(CustomTimeouts::getCreate))
                                     .setDelete(customTimeoutToGolangString.apply(CustomTimeouts::getDelete))
                                     .setUpdate(customTimeoutToGolangString.apply(CustomTimeouts::getUpdate))
+                                    .setRead(customTimeoutToGolangString.apply(CustomTimeouts::getRead))
                                     .build()
                     )
                     .setRemote(remote)
