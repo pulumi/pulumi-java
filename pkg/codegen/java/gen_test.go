@@ -108,16 +108,6 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 	hasExtras := false
 	pkgInfo := PackageInfo{}
 	switch t.Directory {
-	case "simple-plain-schema":
-		hasExtras = true
-		pkgInfo = PackageInfo{
-			Dependencies: makeDeps(keyDeps,
-				"com.google.guava:guava",
-				"org.assertj:assertj-core",
-				"org.junit.jupiter:junit-jupiter-api",
-				"org.mockito:mockito-core",
-			),
-		}
 	case "simple-enum-schema":
 		hasExtras = true
 		pkgInfo = PackageInfo{
@@ -132,8 +122,6 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		// TODO[pulumi/pulumi-java#13]
 		t.Skip = codegen.NewStringSet("java/any")
 		hasExtras = true
-	case "plain-schema-gh6957":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "simple-methods-schema":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "provider-type-schema":
@@ -170,12 +158,10 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // go-only
 	case "go-plain-ref-repro":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
-	case "enum-reference", "enum-reference-python", "embedded-crd-types":
+	case "embedded-crd-types":
 		t.Skip = codegen.NewStringSet("java/any") // python only
 	case "go-nested-collections":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
-	case "external-enum":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "naming-collisions":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "assets-and-archives-go-generics-only":
