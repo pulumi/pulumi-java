@@ -1371,6 +1371,48 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// Emit datasource inputs method
 		invokeOptions := ctx.ref(names.InvokeOptions)
 
+		// When a function uses multiArgumentInputs, its public methods take the inputs as
+		// positional parameters in schema order rather than a single argument bag. The
+		// parameters are packed back into the named property bag before being sent on the wire.
+		//
+		// outputArgsDecl/plainArgsDecl are the parameter lists used in the method signatures.
+		// outputArgsRef forwards the received value(s) to a delegating overload, and
+		// outputArgsEmpty supplies the value(s) for the zero-argument overloads.
+		// outputArgsExpr/plainArgsExpr are the InvokeArgs value passed to the runtime invoke.
+		outputArgsDecl, plainArgsDecl := argsType+" args", plainArgsType+" args"
+		outputArgsRef, plainArgsRef := "args", "args"
+		outputArgsEmpty := argsType + ".Empty"
+		plainArgsEmpty := plainArgsType + ".Empty"
+		outputArgsExpr, plainArgsExpr := "args", "args"
+		if fun.MultiArgumentInputs && fun.Inputs != nil {
+			var paramDecls, paramNames, nullNames, outputSetters, plainSetters []string
+			for _, prop := range fun.Inputs.Properties {
+				paramType := mod.typeString(ctx, prop.Type, inputsQualifier, false, true, false, false)
+				paramName := names.Ident(mod.propertyName(prop)).AsProperty().Field()
+				setter := names.Ident(prop.Name).AsProperty().Setter()
+				paramDecls = append(paramDecls, paramType.ToCode(ctx.imports)+" "+paramName)
+				paramNames = append(paramNames, paramName)
+				nullNames = append(nullNames, "null")
+				plainSetters = append(plainSetters, fmt.Sprintf(".%s(%s)", setter, paramName))
+				if prop.IsRequired() {
+					outputSetters = append(outputSetters, fmt.Sprintf(".%s(%s)", setter, paramName))
+				} else {
+					// The input-shape builder wraps a plain value in Output.of, which would fail
+					// on a null optional, so only wrap when the argument is present.
+					outputSetters = append(outputSetters, fmt.Sprintf(".%s(%s == null ? null : %s.of(%s))",
+						setter, paramName, ctx.ref(names.Output), paramName))
+				}
+			}
+			decl := strings.Join(paramDecls, ", ")
+			outputArgsDecl, plainArgsDecl = decl, decl
+			outputArgsRef = strings.Join(paramNames, ", ")
+			plainArgsRef = outputArgsRef
+			outputArgsEmpty = strings.Join(nullNames, ", ")
+			plainArgsEmpty = outputArgsEmpty
+			outputArgsExpr = argsType + ".builder()" + strings.Join(outputSetters, "") + ".build()"
+			plainArgsExpr = plainArgsType + ".builder()" + strings.Join(plainSetters, "") + ".build()"
+		}
+
 		if hasAllOptionalInputs(fun) {
 			// Generate invoke that return Output<T>
 			printCommentFunction(ctx, fun, indent)
@@ -1378,8 +1420,8 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			fprintf(w, "    public static %s<%s> %s() {\n",
 				ctx.ref(names.Output), returnType, methodName)
 			fprintf(w,
-				"        return %s(%s.Empty, %s.Empty);\n",
-				methodName, argsType, invokeOptions)
+				"        return %s(%s, %s.Empty);\n",
+				methodName, outputArgsEmpty, invokeOptions)
 			fprintf(w, "    }\n")
 
 			// Generate invoke that return CompletableFuture<T>
@@ -1387,36 +1429,36 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			fprintf(w, "    public static %s<%s> %s() {\n",
 				ctx.ref(names.CompletableFuture), returnType, plainMethodName)
 			fprintf(w,
-				"        return %s(%s.Empty, %s.Empty);\n",
-				plainMethodName, plainArgsType, invokeOptions)
+				"        return %s(%s, %s.Empty);\n",
+				plainMethodName, plainArgsEmpty, invokeOptions)
 			fprintf(w, "    }\n")
 		}
 
 		// Output version: add args only invoke
 		printCommentFunction(ctx, fun, indent)
-		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
-			ctx.ref(names.Output), returnType, methodName, argsType)
+		fprintf(w, "    public static %s<%s> %s(%s) {\n",
+			ctx.ref(names.Output), returnType, methodName, outputArgsDecl)
 		fprintf(w,
-			"        return %s(args, %s.Empty);\n",
-			methodName, invokeOptions)
+			"        return %s(%s, %s.Empty);\n",
+			methodName, outputArgsRef, invokeOptions)
 		fprintf(w, "    }\n")
 
 		// CompletableFuture version: add args only invoke
 		printCommentFunction(ctx, fun, indent)
-		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
-			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType)
+		fprintf(w, "    public static %s<%s> %s(%s) {\n",
+			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsDecl)
 		fprintf(w,
-			"        return %s(args, %s.Empty);\n",
-			plainMethodName, invokeOptions)
+			"        return %s(%s, %s.Empty);\n",
+			plainMethodName, plainArgsRef, invokeOptions)
 		fprintf(w, "    }\n")
 
 		// Output version: add full invoke with InvokeOptions
 		printCommentFunction(ctx, fun, indent)
-		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
+		fprintf(w, "    public static %s<%s> %s(%s, %s options) {\n",
+			ctx.ref(names.Output), returnType, methodName, outputArgsDecl, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
-			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), %s, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, outputArgsExpr, mod.utilitiesRef(ctx))
 
 		pkg, err := mod.pkg.Definition()
 		if err != nil {
@@ -1433,11 +1475,11 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// Output version: add full invoke with InvokeOutputOptions
 		invokeOutputOptions := ctx.ref(names.InvokeOutputOptions)
 		printCommentFunction(ctx, fun, indent)
-		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.Output), returnType, methodName, argsType, invokeOutputOptions)
+		fprintf(w, "    public static %s<%s> %s(%s, %s options) {\n",
+			ctx.ref(names.Output), returnType, methodName, outputArgsDecl, invokeOutputOptions)
 		fprintf(w,
-			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
-			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), %s, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, outputArgsExpr, mod.utilitiesRef(ctx))
 
 		if pkg.Parameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
@@ -1449,11 +1491,11 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// CompletableFuture version: add full invoke
 		// notice how the implementation now uses `invokeAsync` instead of `invoke`
 		printCommentFunction(ctx, fun, indent)
-		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType, invokeOptions)
+		fprintf(w, "    public static %s<%s> %s(%s, %s options) {\n",
+			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsDecl, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options)",
-			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options)",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, plainArgsExpr, mod.utilitiesRef(ctx))
 
 		if pkg.Parameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))

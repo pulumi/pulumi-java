@@ -3,7 +3,6 @@
 package java
 
 import (
-	"fmt"
 	"io"
 	"math/big"
 	"strings"
@@ -249,6 +248,40 @@ func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Ty
 	g.Fgenf(w, "%.v", from)
 }
 
+// genMultiArgumentInvokeArgs emits the inputs of a multiArgumentInputs invoke as positional
+// arguments in schema order. The wire format is still a named property bag, so the generated SDK
+// method packs these positional arguments back into that bag. Optional inputs that are omitted are
+// emitted as `null`; every position is supplied so the call resolves to the single positional
+// overload generated for the function.
+func (g *generator) genMultiArgumentInvokeArgs(w io.Writer, expr *model.FunctionCallExpression) {
+	var argsObject *model.ObjectConsExpression
+	if ok, obj, _ := pcl.RecognizeTypedObjectCons(expr.Args[1]); ok {
+		argsObject = obj
+	} else if obj, ok := expr.Args[1].(*model.ObjectConsExpression); ok {
+		argsObject = obj
+	}
+
+	values := map[string]model.Expression{}
+	if argsObject != nil {
+		for _, item := range argsObject.Items {
+			if lit, ok := item.Key.(*model.LiteralValueExpression); ok {
+				values[lit.Value.AsString()] = item.Value
+			}
+		}
+	}
+
+	for i, param := range pcl.SortedFunctionParameters(expr) {
+		if i > 0 {
+			g.Fgen(w, ", ")
+		}
+		if value, ok := values[param.Name]; ok {
+			g.Fgenf(w, "%.v", value)
+		} else {
+			g.Fgen(w, "null")
+		}
+	}
+}
+
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
@@ -329,12 +362,6 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method
 		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
-		if expr.Signature.MultiArgumentInputs {
-			err := fmt.Errorf("Java program-gen does not implement MultiArgumentInputs for function '%v'",
-				expr.Args[0])
-			panic(err)
-		}
-
 		fullyQualifiedType, funcName := g.functionImportDef(expr.Args[0])
 		if !g.emittedTypeImportSymbols.Has(fullyQualifiedType) {
 			// the fully qualified name isn't emitted
@@ -379,15 +406,19 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		functionSchema, foundFunction := g.findFunctionSchema(expr.Args[0])
 		if foundFunction {
 			g.Fprintf(w, "%s(", funcName)
-			invokeArgumentsExpr := expr.Args[1]
-			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
-			case *model.ObjectConsExpression:
-				argumentsExpr := invokeArgumentsExpr
-				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
-			case *model.FunctionCallExpression:
-				convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression)
-				if ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
-					g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
+			if expr.Signature.MultiArgumentInputs {
+				g.genMultiArgumentInvokeArgs(w, expr)
+			} else {
+				invokeArgumentsExpr := expr.Args[1]
+				switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
+				case *model.ObjectConsExpression:
+					argumentsExpr := invokeArgumentsExpr
+					g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
+				case *model.FunctionCallExpression:
+					convertArgs, ok := invokeArgumentsExpr.Args[0].(*model.ObjectConsExpression)
+					if ok && invokeArgumentsExpr.Name == pcl.IntrinsicConvert {
+						g.genObjectConsExpressionWithTypeName(w, convertArgs, functionSchema.Inputs)
+					}
 				}
 			}
 			generateInvokeOptions()

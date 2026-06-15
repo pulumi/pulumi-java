@@ -14,7 +14,7 @@ PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 build_go: bin/pulumi-language-java bin/pulumi-java-gen
 
 .PHONY: test_go
-test_go:: build_go submodule_update
+test_go:: build_go
 	cd pkg && go test ./...
 
 bin/pulumi-language-java: ${PKG_FILES}

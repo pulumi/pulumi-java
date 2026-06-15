@@ -1,13 +1,18 @@
 package java
 
 import (
+	"context"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
 
+	"github.com/blang/semver"
+
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
+	"github.com/pulumi/pulumi/pkg/v3/resource/deploy/deploytest"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -17,6 +22,25 @@ type PclTestFile struct {
 }
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")
+
+// kubernetesPluginHost returns a schema-only plugin host that serves the committed kubernetes
+// 3.7.0 schema. The shared test host (utils.NewHost) stopped registering a kubernetes provider, so
+// the kubernetes-template program test supplies its own host to keep resolving kubernetes types.
+func kubernetesPluginHost() plugin.Host {
+	loader := deploytest.NewProviderLoader("kubernetes", semver.MustParse("3.7.0"),
+		func() (plugin.Provider, error) {
+			return &deploytest.Provider{
+				GetSchemaF: func(_ context.Context, _ plugin.GetSchemaRequest) (plugin.GetSchemaResponse, error) {
+					data, err := os.ReadFile(filepath.Join(testdataPath, "kubernetes-3.7.0.json"))
+					if err != nil {
+						return plugin.GetSchemaResponse{}, err
+					}
+					return plugin.GetSchemaResponse{Schema: data}, nil
+				},
+			}, nil
+		})
+	return deploytest.NewPluginHost(nil, nil, nil, loader)
+}
 
 func TestGenerateJavaProgram(t *testing.T) {
 	t.Parallel()
@@ -29,13 +53,17 @@ func TestGenerateJavaProgram(t *testing.T) {
 		if !strings.HasSuffix(name, "-pp") {
 			continue
 		}
-		tests = append(tests, test.ProgramTest{
+		programTest := test.ProgramTest{
 			Directory: strings.TrimSuffix(name, "-pp"),
 			BindOptions: []pcl.BindOption{
 				pcl.SkipResourceTypechecking,
 				pcl.PreferOutputVersionedInvokes,
 			},
-		})
+		}
+		if strings.HasPrefix(programTest.Directory, "kubernetes-") {
+			programTest.PluginHost = kubernetesPluginHost()
+		}
+		tests = append(tests, programTest)
 	}
 	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
 		Language:   "java",
