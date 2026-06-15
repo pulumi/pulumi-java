@@ -1,0 +1,6 @@
+component: runtime
+kind: Improvements
+body: Improve error logs when serialization fails
+time: 2026-06-03T14:46:00.450543+02:00
+custom:
+    PR: "2216"

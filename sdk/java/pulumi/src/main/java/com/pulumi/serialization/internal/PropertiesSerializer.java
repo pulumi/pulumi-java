@@ -17,6 +17,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.StringJoiner;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Predicate;
 
@@ -66,7 +67,14 @@ public final class PropertiesSerializer {
             var value = arg.getValue();
             if (acceptKey.test(key)) {
                 var serializer = new Serializer(this.log); // serializer is mutable, that's why it's inside the loop
-                var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources);
+                var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources)
+                        // Attach the failing property name to the error
+                        .<Object>handle((result, throwable) -> {
+                            if (throwable != null) {
+                                throw wrapWithPropertyName(key, throwable);
+                            }
+                            return result;
+                        });
                 resultFutures.put(key, v);
                 temporaryResources.put(key, serializer.dependentResources);
             }
@@ -87,6 +95,27 @@ public final class PropertiesSerializer {
                                 results.t2
                         )
                 );
+    }
+
+    private static RuntimeException wrapWithPropertyName(String key, Throwable throwable) {
+        // Unwrap the CompletionException that CompletableFuture wraps failures in, so the reported cause is the
+        // original exception rather than an opaque wrapper.
+        var cause = throwable;
+        while (cause instanceof CompletionException && cause.getCause() != null) {
+            cause = cause.getCause();
+        }
+        return new SerializationException(
+                String.format("serializing property \"%s\": %s", key, cause.getMessage()), cause);
+    }
+
+    /**
+     * Thrown when serializing a property fails. The message identifies the offending property so that
+     * the failure is actionable.
+     */
+    public static final class SerializationException extends RuntimeException {
+        public SerializationException(String message, Throwable cause) {
+            super(message, cause);
+        }
     }
 
     @ParametersAreNonnullByDefault
