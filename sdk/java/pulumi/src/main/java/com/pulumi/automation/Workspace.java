@@ -561,4 +561,66 @@ public abstract class Workspace implements AutoCloseable {
         options = options.withWorkingDir(workDir());
         return cmd.run(args, options);
     }
+
+    /**
+     * Returns the value associated with the specified stack name and key, scoped to the Workspace, using the provided options.
+     *
+     * @param stackName the name of the stack to read config from
+     * @param key       the key to use for the config lookup
+     * @param options   the options for the config operation
+     * @return the value associated with the key
+     * @throws AutomationException if there was an issue reading the config
+     */
+    public abstract ConfigValue getConfigWithOptions(String stackName, String key, ConfigOptions options) throws AutomationException;
+
+    /**
+     * Sets the specified key-value pair in the provided stack's config, using the provided options.
+     *
+     * @param stackName the name of the stack to operate on
+     * @param key       the config key to set
+     * @param value     the config value to set
+     * @param options   the options for the config operation
+     * @throws AutomationException if there was an issue setting the config
+     */
+    public abstract void setConfigWithOptions(String stackName, String key, ConfigValue value, ConfigOptions options) throws AutomationException;
+
+    /**
+     * Removes the specified key-value pair from the provided stack's config, using the provided options.
+     *
+     * @param stackName the name of the stack to operate on
+     * @param key       the config key to remove
+     * @param options   the options for the config operation
+     * @throws AutomationException if there was an issue removing the config
+     */
+    public abstract void removeConfigWithOptions(String stackName, String key, ConfigOptions options) throws AutomationException;
+
+    /**
+     * Returns the config map for the specified stack name, scoped to the current Workspace, using the provided options.
+     *
+     * @param stackName the name of the stack to read config from
+     * @param options   the options for retrieving all config
+     * @return the config map for the specified stack name
+     * @throws AutomationException if there was an issue listing the config
+     */
+    public abstract Map<String, ConfigValue> getAllConfigWithOptions(String stackName, GetAllConfigOptions options) throws AutomationException;
+
+    /**
+     * Sets all values in the provided config map for the specified stack name, using the provided options.
+     *
+     * @param stackName the name of the stack to operate on
+     * @param configMap the config map to upsert against the existing config
+     * @param options   the options for the config operation
+     * @throws AutomationException if there was an issue setting the config
+     */
+    public abstract void setAllConfigWithOptions(String stackName, Map<String, ConfigValue> configMap, ConfigOptions options) throws AutomationException;
+
+    /**
+     * Removes all values in the provided key collection from the config map for the specified stack name, using the provided options.
+     *
+     * @param stackName the name of the stack to operate on
+     * @param keys      the collection of keys to remove from the underlying config map
+     * @param options   the options for the config operation
+     * @throws AutomationException if there was an issue removing the config
+     */
+    public abstract void removeAllConfigWithOptions(String stackName, Collection<String> keys, ConfigOptions options) throws AutomationException;
 }
