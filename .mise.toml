@@ -1,5 +1,5 @@
 [tools]
-changie = "latest"
+changie = "1.24.2"
 go = "1.25"
 golangci-lint = "2.9.0"
 gradle = "8.14.1"
