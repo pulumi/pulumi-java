@@ -47,6 +47,14 @@ public class App {
                     Map.entry("y", "200")
                 ))
                 .build())
+            .dataList(InnerDataArgs.builder()
+                .boolean_(true)
+                .float_(3.14)
+                .integer(42)
+                .string("Plain")
+                .boolArray(true)
+                .stringMap(Map.of("one", "partridge"))
+                .build())
             .build());
 
         var emptyListRes = new Resource("emptyListRes", ResourceArgs.builder()

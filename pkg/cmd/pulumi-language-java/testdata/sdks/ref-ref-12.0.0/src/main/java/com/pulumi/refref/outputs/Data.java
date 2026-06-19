@@ -22,6 +22,7 @@ public final class Data {
     private Boolean boolean_;
     private Double float_;
     private InnerData innerData;
+    private @Nullable List<InnerData> innerDataList;
     private Integer integer;
     private @Nullable InnerData optionalInner;
     private String string;
@@ -39,6 +40,9 @@ public final class Data {
     }
     public InnerData innerData() {
         return this.innerData;
+    }
+    public List<InnerData> innerDataList() {
+        return this.innerDataList == null ? List.of() : this.innerDataList;
     }
     public Integer integer() {
         return this.integer;
@@ -66,6 +70,7 @@ public final class Data {
         private Boolean boolean_;
         private Double float_;
         private InnerData innerData;
+        private @Nullable List<InnerData> innerDataList;
         private Integer integer;
         private @Nullable InnerData optionalInner;
         private String string;
@@ -77,6 +82,7 @@ public final class Data {
     	      this.boolean_ = defaults.boolean_;
     	      this.float_ = defaults.float_;
     	      this.innerData = defaults.innerData;
+    	      this.innerDataList = defaults.innerDataList;
     	      this.integer = defaults.integer;
     	      this.optionalInner = defaults.optionalInner;
     	      this.string = defaults.string;
@@ -119,6 +125,15 @@ public final class Data {
             return this;
         }
         @CustomType.Setter
+        public Builder innerDataList(@Nullable List<InnerData> innerDataList) {
+
+            this.innerDataList = innerDataList;
+            return this;
+        }
+        public Builder innerDataList(InnerData... innerDataList) {
+            return innerDataList(List.of(innerDataList));
+        }
+        @CustomType.Setter
         public Builder integer(Integer integer) {
             if (integer == null) {
               throw new MissingRequiredPropertyException("Data", "integer");
@@ -154,6 +169,7 @@ public final class Data {
             _resultValue.boolean_ = boolean_;
             _resultValue.float_ = float_;
             _resultValue.innerData = innerData;
+            _resultValue.innerDataList = innerDataList;
             _resultValue.integer = integer;
             _resultValue.optionalInner = optionalInner;
             _resultValue.string = string;

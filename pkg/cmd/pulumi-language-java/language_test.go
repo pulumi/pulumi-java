@@ -263,6 +263,10 @@ var expectedFailures = map[string]string{
 	"l2-resource-hook-after-failure": "Failure after updating to 3.239",
 
 	"l1-expand-final": "not implemented",
+
+	"l2-docs":                     "generated docs SDK fails to compile (added in 3.247)",
+	"l2-invoke-multi-argument":    "multiArgumentInputs not implemented in programgen (added in 3.247)",
+	"l3-resource-keyword-overlap": "compilation error: keyword overlap generates undefined symbol (added in 3.247)",
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
