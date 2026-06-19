@@ -146,8 +146,8 @@ func newGradleTemplateContext(
 			Value:   base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
 		}
 
-		ctx.Name = pkg.Parameterization.BaseProvider.Name
-		ctx.Version = pkg.Parameterization.BaseProvider.Version.String()
+		ctx.Name = pkg.Parameterization.BasePlugin.Name
+		ctx.Version = pkg.Parameterization.BasePlugin.Version.String()
 	}
 
 	/*

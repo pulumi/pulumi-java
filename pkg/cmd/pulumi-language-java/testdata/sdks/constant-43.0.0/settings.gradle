@@ -10,4 +10,4 @@ pluginManagement {
   }
 }
 
-rootProject.name = "com.pulumi.aws-native"
+rootProject.name = "com.pulumi.constant"

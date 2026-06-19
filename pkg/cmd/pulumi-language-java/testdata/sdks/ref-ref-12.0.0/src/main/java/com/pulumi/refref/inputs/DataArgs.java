@@ -50,6 +50,13 @@ public final class DataArgs extends com.pulumi.resources.ResourceArgs {
         return this.innerData;
     }
 
+    @Import(name="innerDataList")
+    private @Nullable Output<List<InnerDataArgs>> innerDataList;
+
+    public Optional<Output<List<InnerDataArgs>>> innerDataList() {
+        return Optional.ofNullable(this.innerDataList);
+    }
+
     @Import(name="integer", required=true)
     private Output<Integer> integer;
 
@@ -85,6 +92,7 @@ public final class DataArgs extends com.pulumi.resources.ResourceArgs {
         this.boolean_ = $.boolean_;
         this.float_ = $.float_;
         this.innerData = $.innerData;
+        this.innerDataList = $.innerDataList;
         this.integer = $.integer;
         this.optionalInner = $.optionalInner;
         this.string = $.string;
@@ -147,6 +155,19 @@ public final class DataArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder innerData(InnerDataArgs innerData) {
             return innerData(Output.of(innerData));
+        }
+
+        public Builder innerDataList(@Nullable Output<List<InnerDataArgs>> innerDataList) {
+            $.innerDataList = innerDataList;
+            return this;
+        }
+
+        public Builder innerDataList(List<InnerDataArgs> innerDataList) {
+            return innerDataList(Output.of(innerDataList));
+        }
+
+        public Builder innerDataList(InnerDataArgs... innerDataList) {
+            return innerDataList(List.of(innerDataList));
         }
 
         public Builder integer(Output<Integer> integer) {

@@ -29,10 +29,6 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 			Directory:   "mini-azurenative",
 			Description: "Regression tests extracted from trying to codegen azure-natuve",
 		}),
-		newGeneratePackageTestConfig(&test.SDKTest{
-			Directory:   "mini-awsnative",
-			Description: "Regression tests extracted from trying to codegen aws-native",
-		}),
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "mini-awsclassic",
 			Description: "Regression tests extracted from trying to codegen aws",

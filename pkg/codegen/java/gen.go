@@ -1885,8 +1885,8 @@ import com.pulumi.deployment.Deployment;
 		);
 	}
 `,
-					pkg.Parameterization.BaseProvider.Name,
-					pkg.Parameterization.BaseProvider.Version,
+					pkg.Parameterization.BasePlugin.Name,
+					pkg.Parameterization.BasePlugin.Version,
 					pkg.PluginDownloadURL,
 					pkg.Name,
 					base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
