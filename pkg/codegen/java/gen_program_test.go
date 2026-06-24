@@ -23,10 +23,10 @@ type PclTestFile struct {
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 
-// kubernetesPluginHost returns a schema-only plugin host that serves the committed kubernetes
-// 3.7.0 schema. The shared test host (utils.NewHost) stopped registering a kubernetes provider, so
-// the kubernetes-template program test supplies its own host to keep resolving kubernetes types.
-func kubernetesPluginHost() plugin.Host {
+// kubernetesPluginContext returns a schema-only plugin context that serves the committed kubernetes
+// 3.7.0 schema. The shared test host (utils.NewContext) stopped registering a kubernetes provider, so
+// the kubernetes-template program test supplies its own context to keep resolving kubernetes types.
+func kubernetesPluginContext() *plugin.Context {
 	loader := deploytest.NewProviderLoader("kubernetes", semver.MustParse("3.7.0"),
 		func() (plugin.Provider, error) {
 			return &deploytest.Provider{
@@ -39,7 +39,8 @@ func kubernetesPluginHost() plugin.Host {
 				},
 			}, nil
 		})
-	return deploytest.NewPluginHost(nil, nil, nil, loader)
+	host := deploytest.NewPluginHost(nil, nil, nil, loader)
+	return plugin.NewContextWithHost(context.Background(), nil, nil, host, "", "", nil)
 }
 
 func TestGenerateJavaProgram(t *testing.T) {
@@ -61,7 +62,7 @@ func TestGenerateJavaProgram(t *testing.T) {
 			},
 		}
 		if strings.HasPrefix(programTest.Directory, "kubernetes-") {
-			programTest.PluginHost = kubernetesPluginHost()
+			programTest.PluginContext = kubernetesPluginContext()
 		}
 		tests = append(tests, programTest)
 	}

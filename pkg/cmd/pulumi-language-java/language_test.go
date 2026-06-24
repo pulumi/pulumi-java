@@ -213,7 +213,6 @@ var expectedFailures = map[string]string{
 	"l1-builtin-list":                        "compilation error: array indexing on String",
 	"l2-resource-elide-unknowns":             "compilation error: array indexing on List and missing .x() method on Map", //nolint:lll
 	"l2-external-enum":                       "compilation error: package com.pulumi.enum_.enums does not exist",
-	"l2-docs":                                "compilation error: package com.pulumi.enum_.enums does not exist",
 	"l1-builtin-require-pulumi-version":      "requirePulumiVersion method not found on DeploymentInstance",
 	"l2-resource-name-type":                  "TODO: call pulumiResourceName/pulumiResourceType not implemented",
 	"l2-resource-any":                        "compilation error: any-typed property generates a multi-argument .value() call",                       //nolint:lll
