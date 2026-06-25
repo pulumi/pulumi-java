@@ -63,7 +63,7 @@ func generateJava(cfg generateJavaOptions) error {
 	}
 	printDiagnostics(diags)
 
-	pkg, err := pschema.ImportSpec(*pkgSpec, nil, pschema.ValidationOptions{
+	pkg, err := pschema.ImportSpec(*pkgSpec, nil, pschema.NewNullLoader(), pschema.ValidationOptions{
 		AllowDanglingReferences: true,
 	})
 	if err != nil {
