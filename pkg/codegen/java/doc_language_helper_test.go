@@ -53,7 +53,7 @@ func TestGetResourceName(t *testing.T) {
 				IsComponent: true,
 			},
 		},
-	}, nil, schema.ValidationOptions{})
+	}, schema.NewNullLoader(), schema.ValidationOptions{})
 	require.NoError(t, err)
 
 	must := func(r *schema.Resource, ok bool) *schema.Resource {
@@ -79,7 +79,7 @@ func readPackage(schemaJSON string) (*schema.Package, error) {
 		return nil, err
 	}
 
-	pkg, diag, err := schema.BindSpec(spec, nil, schema.ValidationOptions{
+	pkg, diag, err := schema.BindSpec(spec, schema.NewNullLoader(), schema.ValidationOptions{
 		AllowDanglingReferences: true,
 	})
 	if err != nil {

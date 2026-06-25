@@ -14,6 +14,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/resource/deploy/deploytest"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 type PclTestFile struct {
@@ -26,7 +27,7 @@ var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 // kubernetesPluginContext returns a schema-only plugin context that serves the committed kubernetes
 // 3.7.0 schema. The shared test host (utils.NewContext) stopped registering a kubernetes provider, so
 // the kubernetes-template program test supplies its own context to keep resolving kubernetes types.
-func kubernetesPluginContext() *plugin.Context {
+func kubernetesPluginContext(t *testing.T) *plugin.Context {
 	loader := deploytest.NewProviderLoader("kubernetes", semver.MustParse("3.7.0"),
 		func() (plugin.Provider, error) {
 			return &deploytest.Provider{
@@ -40,7 +41,9 @@ func kubernetesPluginContext() *plugin.Context {
 			}, nil
 		})
 	host := deploytest.NewPluginHost(nil, nil, nil, loader)
-	return plugin.NewContextWithHost(context.Background(), nil, nil, host, "", "", nil)
+	ctx, err := plugin.NewContextWithHost(context.Background(), nil, nil, host, "", "", nil)
+	require.NoError(t, err)
+	return ctx
 }
 
 func TestGenerateJavaProgram(t *testing.T) {
@@ -62,7 +65,7 @@ func TestGenerateJavaProgram(t *testing.T) {
 			},
 		}
 		if strings.HasPrefix(programTest.Directory, "kubernetes-") {
-			programTest.PluginContext = kubernetesPluginContext()
+			programTest.PluginContext = kubernetesPluginContext(t)
 		}
 		tests = append(tests, programTest)
 	}
