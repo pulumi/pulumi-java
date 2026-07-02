@@ -148,8 +148,10 @@ public class PropertyValueTests {
         var marshaledAssetArchive = assetArchive.marshal();
         var unmarshaledAssetArchive = PropertyValue.unmarshal(marshaledAssetArchive);
         
+        @SuppressWarnings("unchecked")
         var originalMap = (Map<String, AssetOrArchive>)AssetOrArchive.AssetOrArchiveInternal
             .from(assetArchive.getArchiveValue()).getValue();
+        @SuppressWarnings("unchecked")
         var unmarshaledMap = (Map<String, AssetOrArchive>)AssetOrArchive.AssetOrArchiveInternal
             .from(unmarshaledAssetArchive.getArchiveValue()).getValue();
         

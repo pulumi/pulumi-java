@@ -4,6 +4,8 @@ package com.pulumi.provider.internal.properties;
  * Exception thrown when a property value cannot be serialized.
  */
 public class PropertySerializationException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
     private final String[] path;
     private final Class<?> targetType;
 

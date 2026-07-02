@@ -150,7 +150,7 @@ public class PropertyValueSerializerTest {
         var tagsData = PulumiTestInternal.extractOutputData(secretArgs.tags());
         assertThat(tagsData.isSecret()).isTrue();
         assertThat(tagsData.isKnown()).isTrue();
-        var tagsList = (List<String>)tagsData.getValueNullable();
+        var tagsList = tagsData.getValueNullable();
         assertThat(tagsList).containsExactly("secret", "sensitive", "confidential");
     }
 
@@ -370,7 +370,7 @@ public class PropertyValueSerializerTest {
 
         // Verify children
         var childrenData = PulumiTestInternal.extractOutputData(args.children());
-        var children = (List<NestedArgs>)childrenData.getValueNullable();
+        var children = childrenData.getValueNullable();
         assertThat(children).hasSize(1);
         var childNameData = PulumiTestInternal.extractOutputData(children.get(0).name());
         assertThat(childNameData.getValueNullable()).isEqualTo("child");

@@ -1,0 +1,6 @@
+kind: Improvements
+body: Treat Java SDK compile and javadoc warnings as build errors, and fix all pre-existing warnings in the SDK sources
+time: 2026-05-20T00:00:00Z
+custom:
+  PR: "2200"
+component: sdk

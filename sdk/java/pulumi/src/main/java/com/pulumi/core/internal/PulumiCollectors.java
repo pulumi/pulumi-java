@@ -44,8 +44,9 @@ public class PulumiCollectors {
                     if (acc.get() == null) {
                         throw exceptionSupplier.apply("empty or null");
                     }
-                    //noinspection unchecked
-                    return (T) acc.get();
+                    @SuppressWarnings("unchecked")
+                    T result = (T) acc.get();
+                    return result;
                 },
                 Collector.Characteristics.UNORDERED
         );

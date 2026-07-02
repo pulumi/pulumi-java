@@ -23,6 +23,7 @@ import com.pulumi.Context;
  * utilities such as plugin installation, environment configuration
  * ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
  */
+@SuppressWarnings("try")
 public abstract class Workspace implements AutoCloseable {
     final PulumiCommand cmd;
 

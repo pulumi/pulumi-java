@@ -41,8 +41,9 @@ final class Left<L, R> extends Either<L, R> {
     @Override
     public Either<L, R> or(Either<? extends L, ? extends R> secondChoice) {
         Objects.requireNonNull(secondChoice, "Expected non-null secondChoice");
-        //noinspection unchecked
-        return (Either<L, R>) secondChoice;
+        @SuppressWarnings("unchecked")
+        Either<L, R> result = (Either<L, R>) secondChoice;
+        return result;
     }
 
     @Override
@@ -83,8 +84,9 @@ final class Left<L, R> extends Either<L, R> {
     @Override
     public <R1> Either<L, R1> flatMap(Function<? super R, ? extends Either<? extends L, ? extends R1>> mapper) {
         Objects.requireNonNull(mapper, "Expected non-null mapper");
-        //noinspection unchecked
-        return (Either<L, R1>) this;
+        @SuppressWarnings("unchecked")
+        Either<L, R1> result = (Either<L, R1>) this;
+        return result;
     }
 
     @Override

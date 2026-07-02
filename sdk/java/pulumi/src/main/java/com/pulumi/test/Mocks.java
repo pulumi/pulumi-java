@@ -16,7 +16,6 @@ public interface Mocks {
 
     /**
      * Invoked when a new resource is created by the program.
-     * <p>
      *
      * @param args arguments containing resource information
      * @return A resource identifier and resource state. State can be either a POJO

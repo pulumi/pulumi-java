@@ -60,9 +60,13 @@ public class LocalSerializer {
 
     public <T> T deserializeYaml(String content, Class<T> clazz) {
         if (ProjectSettings.class.equals(clazz)) {
-            return (T) ProjectSettingsYamlSerializer.deserialize(content);
+            @SuppressWarnings("unchecked")
+            T result = (T) ProjectSettingsYamlSerializer.deserialize(content);
+            return result;
         } else if (StackSettings.class.equals(clazz)) {
-            return (T) StackSettingsYamlSerializer.deserialize(content);
+            @SuppressWarnings("unchecked")
+            T result = (T) StackSettingsYamlSerializer.deserialize(content);
+            return result;
         }
 
         throw new UnsupportedOperationException(

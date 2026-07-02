@@ -98,8 +98,9 @@ public class ResourcePackages {
                 })
                 .filter(c -> !Reflection.isNestedClass(c))
                 .map(c -> {
-                    //noinspection unchecked
-                    return (Class<Resource>) c; // checked in filters above
+                    @SuppressWarnings("unchecked")
+                    Class<Resource> resourceClass = (Class<Resource>) c; // checked in filters above
+                    return resourceClass;
                 })
                 .map(c -> new ResourceTypeAndClass(c.getAnnotation(ResourceType.class), c))
                 .collect(

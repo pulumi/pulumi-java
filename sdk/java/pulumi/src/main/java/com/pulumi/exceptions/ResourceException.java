@@ -13,6 +13,8 @@ import java.util.Optional;
  */
 @SuppressWarnings("RedundantCast")
 public class ResourceException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
     @Nullable
     private final Resource resource;
     private final boolean hideStack;

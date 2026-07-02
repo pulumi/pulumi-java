@@ -88,6 +88,7 @@ public final class Instrumentation {
             var otelInterceptor = grpcTelemetry.newClientInterceptor();
             clientInterceptor = new ClientInterceptor() {
                 @Override
+                @SuppressWarnings("try")
                 public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(
                         MethodDescriptor<ReqT, RespT> method,
                         CallOptions callOptions,

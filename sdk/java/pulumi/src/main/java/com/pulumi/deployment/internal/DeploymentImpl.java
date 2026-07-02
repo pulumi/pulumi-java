@@ -762,6 +762,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     private static class InvokeException extends RuntimeException {
+        private static final long serialVersionUID = 1L;
+
         public InvokeException(String message) {
             super(message);
         }
@@ -954,6 +956,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     private static class CallException extends RuntimeException {
+        private static final long serialVersionUID = 1L;
+
         public CallException(String message) {
             super(message);
         }
@@ -1421,14 +1425,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 resource.pulumiResourceType(), resource.pulumiResourceName(), urn, id, remote, data
                         );
 
-                        lazy.urn().completeOrThrow(new OutputInternal(
+                        lazy.urn().completeOrThrow(new OutputInternal<>(
                                 OutputData.of(urn).withDependency(resource)));
 
                         if (resource instanceof CustomResource) {
                             var isKnown = isNonEmptyOrNull(id);
                             lazy.id().orElseThrow().completeOrThrow(isKnown
-                                    ? new OutputInternal(OutputData.of(id).withDependency(resource))
-                                    : new OutputInternal(OutputData.<String>unknown().withDependency(resource)));
+                                    ? new OutputInternal<>(OutputData.of(id).withDependency(resource))
+                                    : new OutputInternal<>(OutputData.<String>unknown().withDependency(resource)));
                         }
 
                         // Go through all our output fields and lookup a corresponding value in the response

@@ -49,11 +49,13 @@ public final class ImportMetadata<F, T, O extends Output<T>> extends ImportExpor
         return getFieldObject(extractedObject)
                 .map(value -> {
                     if (Output.class.isAssignableFrom(value.getClass())) {
-                        //noinspection unchecked
-                        return (O) value;
+                        @SuppressWarnings("unchecked")
+                        O asOutput = (O) value;
+                        return asOutput;
                     }
-                    //noinspection unchecked
-                    return (O) Output.of(value);
+                    @SuppressWarnings("unchecked")
+                    O wrapped = (O) Output.of(value);
+                    return wrapped;
                 });
     }
 
@@ -83,8 +85,9 @@ public final class ImportMetadata<F, T, O extends Output<T>> extends ImportExpor
                     final var import_ = f.getAnnotation(Import.class);
                     if (fieldType.isAssignableFrom(Output.class)) {
                         // O = F extends Output<Object>
-                        //noinspection unchecked
-                        return unwrappedMetadata(f, import_, (Class<? extends Output<Object>>) fieldType);
+                        @SuppressWarnings("unchecked")
+                        Class<? extends Output<Object>> outputType = (Class<? extends Output<Object>>) fieldType;
+                        return unwrappedMetadata(f, import_, outputType);
                     } else {
                         // O = Output<F>
                         return wrappedMetadata(f, import_, fieldType);
