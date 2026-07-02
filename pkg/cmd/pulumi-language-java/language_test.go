@@ -241,9 +241,10 @@ var expectedFailures = map[string]string{
 	"l3-range-parent-scope":                  "compilation error: syntax errors in generated code",
 	"l1-builtin-file":                        "compilation error: cannot find symbol",
 	"l3-range-ref":                           "compilation error: bad operand types for binary operator '<'",
-	"l3-range-bool-ref":                      "compilation error: bad operand types for binary operator '<' (added in 3.248)",        //nolint:lll
-	"l3-range-list-ref":                      "compilation error: cannot find symbol on ranged resource references (added in 3.248)", //nolint:lll
-	"l3-range-map-ref":                       "compilation error: cannot find symbol on ranged resource references (added in 3.248)", //nolint:lll
+	"l3-range-bool-ref":                      "compilation error: bad operand types for binary operator '<' (added in 3.248)",            //nolint:lll
+	"l3-range-list-ref":                      "compilation error: cannot find symbol on ranged resource references (added in 3.248)",     //nolint:lll
+	"l3-range-map-ref":                       "compilation error: cannot find symbol on ranged resource references (added in 3.248)",     //nolint:lll
+	"l3-range-invoke-output-traversal":       "compilation error: cannot find symbol on ranged invoke output traversal (added in 3.250)", //nolint:lll
 
 	"l2-resource-primitive-conversions":      "Failure after updating to 3.232",
 	"l3-component-primitive-conversions":     "Failure after updating to 3.232",

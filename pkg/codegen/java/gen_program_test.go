@@ -1,20 +1,14 @@
 package java
 
 import (
-	"context"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
 
-	"github.com/blang/semver"
-
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
-	"github.com/pulumi/pulumi/pkg/v3/resource/deploy/deploytest"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 type PclTestFile struct {
@@ -23,28 +17,6 @@ type PclTestFile struct {
 }
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")
-
-// kubernetesPluginContext returns a schema-only plugin context that serves the committed kubernetes
-// 3.7.0 schema. The shared test host (utils.NewContext) stopped registering a kubernetes provider, so
-// the kubernetes-template program test supplies its own context to keep resolving kubernetes types.
-func kubernetesPluginContext(t *testing.T) *plugin.Context {
-	loader := deploytest.NewProviderLoader("kubernetes", semver.MustParse("3.7.0"),
-		func() (plugin.Provider, error) {
-			return &deploytest.Provider{
-				GetSchemaF: func(_ context.Context, _ plugin.GetSchemaRequest) (plugin.GetSchemaResponse, error) {
-					data, err := os.ReadFile(filepath.Join(testdataPath, "kubernetes-3.7.0.json"))
-					if err != nil {
-						return plugin.GetSchemaResponse{}, err
-					}
-					return plugin.GetSchemaResponse{Schema: data}, nil
-				},
-			}, nil
-		})
-	host := deploytest.NewPluginHost(nil, nil, nil, loader)
-	ctx, err := plugin.NewContextWithHost(context.Background(), nil, nil, host, "", "", nil)
-	require.NoError(t, err)
-	return ctx
-}
 
 func TestGenerateJavaProgram(t *testing.T) {
 	t.Parallel()
@@ -57,17 +29,13 @@ func TestGenerateJavaProgram(t *testing.T) {
 		if !strings.HasSuffix(name, "-pp") {
 			continue
 		}
-		programTest := test.ProgramTest{
+		tests = append(tests, test.ProgramTest{
 			Directory: strings.TrimSuffix(name, "-pp"),
 			BindOptions: []pcl.BindOption{
 				pcl.SkipResourceTypechecking,
 				pcl.PreferOutputVersionedInvokes,
 			},
-		}
-		if strings.HasPrefix(programTest.Directory, "kubernetes-") {
-			programTest.PluginContext = kubernetesPluginContext(t)
-		}
-		tests = append(tests, programTest)
+		})
 	}
 	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
 		Language:   "java",
