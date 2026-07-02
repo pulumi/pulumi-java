@@ -230,7 +230,6 @@ func newGradleTemplateContext(
 	}
 
 	if isPublishedByPulumi(pkg) {
-		ctx.GroupID = "com.pulumi"
 		ctx.DeveloperID = "pulumi" //nolint:goconst
 		ctx.DeveloperName = "Pulumi"
 		ctx.DeveloperEmail = "support@pulumi.com"
@@ -261,9 +260,8 @@ func isPublishedByPulumi(pkg *schema.Package) bool {
 }
 
 func formatGitURL(url string) string {
-	if strings.HasPrefix(url, "https://github.com/") {
-		return fmt.Sprintf("git@github.com/%s.git",
-			strings.TrimPrefix(url, "https://github.com/"))
+	if after, ok := strings.CutPrefix(url, "https://github.com/"); ok {
+		return fmt.Sprintf("git@github.com/%s.git", after)
 	}
 	return url
 }
