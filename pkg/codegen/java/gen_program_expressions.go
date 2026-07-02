@@ -219,6 +219,26 @@ func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Ty
 		targetType = output.ElementType
 	}
 
+	// Dynamic values land in Java as `Object` (e.g. from `Map<String, Object>.get`),
+	// so converting to a concrete type needs an explicit cast for arithmetic to compile.
+	fromType := unwrapOptional(model.ResolveOutputs(from.Type()))
+	if fromType == model.DynamicType {
+		switch {
+		case targetType.Equals(model.NumberType):
+			g.Fgenf(w, "((Number) %.v).doubleValue()", from)
+			return
+		case targetType.Equals(model.IntType):
+			g.Fgenf(w, "((Number) %.v).intValue()", from)
+			return
+		case targetType.Equals(model.BoolType):
+			g.Fgenf(w, "((Boolean) %.v)", from)
+			return
+		case targetType.Equals(model.StringType):
+			g.Fgenf(w, "((String) %.v)", from)
+			return
+		}
+	}
+
 	if targetType.Equals(model.NumberType) || targetType.Equals(model.IntType) {
 		if schemaType, ok := pcl.GetSchemaForType(to); ok {
 			if inputType, ok := schemaType.(*schema.InputType); ok {
@@ -564,6 +584,10 @@ func (g *generator) genJSON(w io.Writer, expr model.Expression) {
 }
 
 func (g *generator) GenIndexExpression(w io.Writer, expr *model.IndexExpression) {
+	if isMapLikeType(unwrapOptional(model.ResolveOutputs(expr.Collection.Type()))) {
+		g.Fgenf(w, "%v.get(%v)", expr.Collection, expr.Key)
+		return
+	}
 	g.Fgenf(w, "%v[%v]", expr.Collection, expr.Key)
 }
 
@@ -814,10 +838,17 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 	}
 }
 
-func (g *generator) genRelativeTraversal(w io.Writer,
-	traversal hcl.Traversal, _ []model.Traversable, _ *schema.ObjectType,
+func (g *generator) genRelativeTraversal(w io.Writer, traversal hcl.Traversal,
+	parts []model.Traversable, root string,
 ) {
-	for _, part := range traversal {
+	hasParts := len(parts) >= len(traversal)+1
+	fmt.Fprint(w, root)
+	for i, part := range traversal {
+		var sourceType model.Type
+		if hasParts {
+			sourceType = unwrapOptional(model.GetTraversableType(parts[i]))
+		}
+
 		var key cty.Value
 		switch part := part.(type) {
 		case hcl.TraverseAttr:
@@ -828,38 +859,81 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 			contract.Failf("unexpected traversal part of type %T (%v)", part, part.SourceRange())
 		}
 
-		// TODO: what do we do with optionals in Java
-		// if model.IsOptionalType(model.GetTraversableType(parts[i])) {
-		// 	g.Fgen(w, "?")
-		// }
-
 		switch key.Type() {
 		case cty.String:
-			g.Fgenf(w, ".%s()", key.AsString())
+			if isMapLikeType(sourceType) {
+				g.Fgenf(w, ".get(\"%s\")", key.AsString())
+			} else {
+				g.Fgenf(w, ".%s()", key.AsString())
+			}
 		case cty.Number:
 			idx, _ := key.AsBigFloat().Int64()
-			g.Fgenf(w, "[%d]", idx)
+			if isListLikeType(sourceType) {
+				g.Fgenf(w, ".get(%d)", idx)
+			} else {
+				g.Fgenf(w, "[%d]", idx)
+			}
 		default:
 			contract.Failf("unexpected traversal key of type %T (%v)", key, key.AsString())
 		}
 	}
 }
 
+// isMapLikeType reports whether attribute access on this PCL type should lower
+// to `.get("key")`. `*model.ObjectType` keeps generated `.attr()` getters —
+// `object(...)` configs are synthesized as POJOs and `range`-style synthetic
+// objects already use method accessors. Callers must unwrap optionals first.
+func isMapLikeType(t model.Type) bool {
+	if _, ok := t.(*model.MapType); ok {
+		return true
+	}
+	return t == model.DynamicType
+}
+
+// isListLikeType reports whether numeric indexing on a value of this PCL type
+// should be lowered to `.get(idx)` (Java `List`) rather than `[idx]` (array).
+// Callers must unwrap optionals first.
+func isListLikeType(t model.Type) bool {
+	switch t.(type) {
+	case *model.ListType, *model.TupleType:
+		return true
+	}
+	return false
+}
+
+// unwrapOptional strips a `union(T, none)` wrapper the PCL binder applies to
+// nullable property types, returning T. Non-optional unions and non-unions pass
+// through unchanged.
+func unwrapOptional(t model.Type) model.Type {
+	u, ok := t.(*model.UnionType)
+	if !ok {
+		return t
+	}
+	var inner model.Type
+	for _, arm := range u.ElementTypes {
+		if arm == model.NoneType {
+			continue
+		}
+		if inner != nil {
+			return t
+		}
+		inner = arm
+	}
+	if inner == nil {
+		return t
+	}
+	return inner
+}
+
 func (g *generator) GenRelativeTraversalExpression(w io.Writer, expr *model.RelativeTraversalExpression) {
-	g.Fgenf(w, "%.20v", expr.Source)
-	g.genRelativeTraversal(w, expr.Traversal, expr.Parts, nil)
+	var buf strings.Builder
+	g.Fgenf(&buf, "%.20v", expr.Source)
+	g.genRelativeTraversal(w, expr.Traversal, expr.Parts, buf.String())
 }
 
 func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTraversalExpression) {
 	rootName := names.MakeValidIdentifier(expr.RootName)
-	g.Fgen(w, rootName)
-	var objType *schema.ObjectType
-	if resource, ok := expr.Parts[0].(*pcl.Resource); ok {
-		if schemaType, ok := pcl.GetSchemaForType(resource.InputType); ok {
-			objType, _ = schemaType.(*schema.ObjectType)
-		}
-	}
-	g.genRelativeTraversal(w, expr.Traversal.SimpleSplit().Rel, expr.Parts, objType)
+	g.genRelativeTraversal(w, expr.Traversal.SimpleSplit().Rel, expr.Parts, rootName)
 }
 
 func (g *generator) GenSplatExpression(w io.Writer, expr *model.SplatExpression) {
