@@ -1,0 +1,18 @@
+{
+  "emittedFiles": [
+    ".gitattributes",
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/myext/Greeting.java",
+    "src/main/java/com/pulumi/myext/GreetingArgs.java",
+    "src/main/java/com/pulumi/myext/GreetingComponent.java",
+    "src/main/java/com/pulumi/myext/GreetingComponentArgs.java",
+    "src/main/java/com/pulumi/myext/MyextFunctions.java",
+    "src/main/java/com/pulumi/myext/Utilities.java",
+    "src/main/java/com/pulumi/myext/inputs/GreetArgs.java",
+    "src/main/java/com/pulumi/myext/inputs/GreetPlainArgs.java",
+    "src/main/java/com/pulumi/myext/inputs/GreetingSettingsArgs.java",
+    "src/main/java/com/pulumi/myext/outputs/GreetResult.java"
+  ]
+}

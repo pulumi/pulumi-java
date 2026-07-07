@@ -51,6 +51,8 @@ type modContext struct {
 	packages               map[string]string
 	configClassPackageName string
 	classQueue             *classQueue
+
+	extensionParameterization *schema.ExtensionParameterization
 }
 
 func (mod *modContext) propertyName(p *schema.Property) string {
@@ -101,7 +103,12 @@ func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
 
-	pkg := mod.basePackageName + packageName(mod.packages, components[0])
+	rootName := components[0]
+	if ep := mod.extensionParameterization; ep != nil && rootName == ep.BaseProvider.Name {
+		rootName = mod.pkg.Name()
+	}
+
+	pkg := mod.basePackageName + packageName(mod.packages, rootName)
 	pkgName := mod.pkg.TokenToModule(tok)
 
 	if pkgName != "" {
@@ -1093,7 +1100,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	}
 
 	param := ""
-	if pkg.Parameterization != nil {
+	if pkg.Parameterization != nil || pkg.ExtensionParameterization != nil {
 		param = fmt.Sprintf(", %s.getPackageRef()", mod.utilitiesRef(ctx))
 	}
 	fprintf(w, "    /**\n")
@@ -1465,7 +1472,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			return err
 		}
 
-		if pkg.Parameterization != nil {
+		if pkg.Parameterization != nil || pkg.ExtensionParameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
 		}
 
@@ -1481,7 +1488,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), %s, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, outputArgsExpr, mod.utilitiesRef(ctx))
 
-		if pkg.Parameterization != nil {
+		if pkg.Parameterization != nil || pkg.ExtensionParameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
 		}
 
@@ -1497,7 +1504,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options)",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, plainArgsExpr, mod.utilitiesRef(ctx))
 
-		if pkg.Parameterization != nil {
+		if pkg.Parameterization != nil || pkg.ExtensionParameterization != nil {
 			fprintf(w, ", %s.getPackageRef()", mod.utilitiesRef(ctx))
 		}
 
@@ -1901,13 +1908,13 @@ func (mod *modContext) gen(fs fs) error {
 			}
 
 			var additionalImports, packageReferenceUtilities string
-			if pkg.Parameterization != nil {
+			switch {
+			case pkg.Parameterization != nil:
 				additionalImports = `
 import java.util.concurrent.CompletableFuture;
 import com.pulumi.deployment.Deployment;
 
 `
-
 				packageReferenceUtilities = fmt.Sprintf(`
 
 	public static CompletableFuture<java.lang.String> getPackageRef() {
@@ -1932,6 +1939,39 @@ import com.pulumi.deployment.Deployment;
 					pkg.PluginDownloadURL,
 					pkg.Name,
 					base64.StdEncoding.EncodeToString(pkg.Parameterization.Parameter),
+				)
+			case pkg.ExtensionParameterization != nil:
+				additionalImports = `
+import java.util.concurrent.CompletableFuture;
+import com.pulumi.deployment.Deployment;
+
+`
+				packageReferenceUtilities = fmt.Sprintf(`
+
+	public static CompletableFuture<java.lang.String> getPackageRef() {
+		return Deployment.getInstance().registerPackage(
+			// Base provider name
+			"%s",
+			// Base provider version
+			"%s",
+			// Base provider download URL
+			"%s",
+			// Package name
+			"%s",
+			// Package version
+			getVersion(),
+			// Parameter
+			"%s",
+			// Extension parameterization
+			true
+		);
+	}
+`,
+					pkg.ExtensionParameterization.BaseProvider.Name,
+					pkg.ExtensionParameterization.BaseProvider.Version,
+					pkg.PluginDownloadURL,
+					pkg.Name,
+					base64.StdEncoding.EncodeToString(pkg.ExtensionParameterization.Parameter),
 				)
 			}
 
@@ -2162,15 +2202,16 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				pkgName += "." + packageName(info.Packages, modName)
 			}
 			mod = &modContext{
-				pkg:             p,
-				mod:             modName,
-				tool:            tool,
-				packageName:     pkgName,
-				rootPackageName: rootPackage,
-				basePackageName: basePackage,
-				packages:        info.Packages,
-				propertyNames:   propertyNames,
-				classQueue:      newClassQueue(),
+				pkg:                       p,
+				mod:                       modName,
+				tool:                      tool,
+				packageName:               pkgName,
+				rootPackageName:           rootPackage,
+				basePackageName:           basePackage,
+				packages:                  info.Packages,
+				propertyNames:             propertyNames,
+				classQueue:                newClassQueue(),
+				extensionParameterization: pkg.ExtensionParameterization,
 			}
 
 			if modName != "" {

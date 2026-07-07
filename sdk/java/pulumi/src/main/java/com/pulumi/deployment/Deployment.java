@@ -199,4 +199,38 @@ public interface Deployment extends ReadOrRegisterResource, RegisterResourceOutp
         String packageVersion,
         String base64Parameter
     );
+
+    /**
+     * Registers a parameterization of a given provider, returning a package reference that can be used to instantiate
+     * resources and call functions against it.
+     *
+     * @param baseProviderName        The name of the base provider being parameterized
+     * @param baseProviderVersion     The version of the base provider being parameterized
+     * @param baseProviderDownloadUrl The download URL of the base provider being parameterized
+     * @param packageName             The name of the package being registered
+     * @param packageVersion          The version of the package being registered
+     * @param base64Parameter         The base64-encoded parameterization of the base provider
+     * @param extension               Whether this is an extension parameterization (resources layered onto the base
+     *                                provider) rather than a replacement parameterization
+     *
+     * @return A future that resolves to the package reference
+     */
+    default CompletableFuture<String> registerPackage(
+        String baseProviderName,
+        String baseProviderVersion,
+        String baseProviderDownloadUrl,
+        String packageName,
+        String packageVersion,
+        String base64Parameter,
+        boolean extension
+    ) {
+        return registerPackage(
+            baseProviderName,
+            baseProviderVersion,
+            baseProviderDownloadUrl,
+            packageName,
+            packageVersion,
+            base64Parameter
+        );
+    }
 }
