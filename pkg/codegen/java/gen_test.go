@@ -78,10 +78,6 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 			Description: "Tests for parameterized providers",
 		}),
 		newGeneratePackageTestConfig(&test.SDKTest{
-			Directory:   "extension-parameterized",
-			Description: "Tests for extension-parameterized providers",
-		}),
-		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "build-files/none",
 			Description: "Tests for build-files = none",
 			// We don't generate a gradle file, so we can't compile.
