@@ -2,9 +2,9 @@
 
 package com.pulumi.automation;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Objects;
+
+import javax.annotation.Nullable;
 
 /**
  * {@link CancellationToken} propagates notification that an operation should
@@ -12,14 +12,13 @@ import java.util.Objects;
  * {@link CancellationTokenSource}.
  */
 public final class CancellationToken {
-    private static final CancellationToken NONE = new CancellationToken(false);
+    private static final CancellationToken NONE = new CancellationToken(null);
 
-    private final Object lock = new Object();
-    private final Map<CancellationTokenRegistration, Runnable> registrations = new LinkedHashMap<>();
-    private boolean cancellationRequested;
+    @Nullable
+    private final CancellationTokenSource source;
 
-    CancellationToken(boolean canceled) {
-        this.cancellationRequested = canceled;
+    CancellationToken(@Nullable CancellationTokenSource source) {
+        this.source = source;
     }
 
     /**
@@ -37,9 +36,7 @@ public final class CancellationToken {
      * @return true if cancellation has been requested
      */
     public boolean isCancellationRequested() {
-        synchronized (lock) {
-            return cancellationRequested;
-        }
+        return source != null && source.isCancellationRequested();
     }
 
     /**
@@ -52,44 +49,9 @@ public final class CancellationToken {
      */
     public CancellationTokenRegistration register(Runnable callback) {
         Objects.requireNonNull(callback);
-        var registration = new CancellationTokenRegistration(this);
-        boolean invokeNow;
-        synchronized (lock) {
-            invokeNow = cancellationRequested;
-            if (!invokeNow) {
-                registrations.put(registration, callback);
-            }
+        if (source == null) {
+            return new CancellationTokenRegistration(null);
         }
-        if (invokeNow) {
-            callback.run();
-        }
-        return registration;
-    }
-
-    void requestCancellation() {
-        Map<CancellationTokenRegistration, Runnable> toInvoke;
-        synchronized (lock) {
-            if (cancellationRequested) {
-                return;
-            }
-            cancellationRequested = true;
-            toInvoke = new LinkedHashMap<>(registrations);
-            registrations.clear();
-        }
-        for (var callback : toInvoke.values()) {
-            callback.run();
-        }
-    }
-
-    void unregister(CancellationTokenRegistration registration) {
-        synchronized (lock) {
-            registrations.remove(registration);
-        }
-    }
-
-    void clearRegistrations() {
-        synchronized (lock) {
-            registrations.clear();
-        }
+        return source.register(callback);
     }
 }

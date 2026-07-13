@@ -2,20 +2,25 @@
 
 package com.pulumi.automation;
 
+import javax.annotation.Nullable;
+
 /**
  * {@link CancellationTokenRegistration} represents a callback registered with
  * a {@link CancellationToken}. Closing the registration unregisters the
  * callback.
  */
 public final class CancellationTokenRegistration implements AutoCloseable {
-    private final CancellationToken token;
+    @Nullable
+    private final CancellationTokenSource source;
 
-    CancellationTokenRegistration(CancellationToken token) {
-        this.token = token;
+    CancellationTokenRegistration(@Nullable CancellationTokenSource source) {
+        this.source = source;
     }
 
     @Override
     public void close() {
-        token.unregister(this);
+        if (source != null) {
+            source.unregister(this);
+        }
     }
 }
