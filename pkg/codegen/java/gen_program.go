@@ -548,6 +548,22 @@ func isBuiltin(pkg, module, member string) bool {
 	return false
 }
 
+// extensionPackageName remaps a token's package segment to the owning package's
+// name for an extension parameterization.
+func extensionPackageName(pkg string, ref schema.PackageReference) string {
+	if ref == nil {
+		return pkg
+	}
+	def, err := ref.Definition()
+	if err != nil || def.ExtensionParameterization == nil {
+		return pkg
+	}
+	if pkg == def.ExtensionParameterization.BaseProvider.Name {
+		return def.Name
+	}
+	return pkg
+}
+
 func pulumiImport(pkg string, module string, member string, namespace string) string {
 	if namespace == "" {
 		namespace = "pulumi"
@@ -573,6 +589,7 @@ func pulumiResourceImport(r *pcl.Resource, pkg string, module string, member str
 	}
 	importName := "com.pulumi."
 	if r.Schema != nil && r.Schema.PackageReference != nil {
+		pkg = extensionPackageName(pkg, r.Schema.PackageReference)
 		def, err := r.Schema.PackageReference.Definition()
 		contract.AssertNoErrorf(err, "failed to get package definition for %s", r.Schema.Token)
 		if info, ok := def.Language["java"].(PackageInfo); ok {
@@ -671,6 +688,7 @@ func collectObjectImports(
 	nameParts := strings.Split(fullyQualifiedTypeName, ":")
 	objectTypeName := names.Title(nameParts[len(nameParts)-1])
 	pkg, module := nameParts[0], nameParts[1]
+	pkg = extensionPackageName(pkg, objectType.PackageReference)
 
 	if objectType.IsInputShape() {
 		if !strings.HasSuffix(objectTypeName, "Args") {
@@ -737,6 +755,9 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
+	if fn, found := g.findFunctionSchema(tokenArg); found {
+		pkg = extensionPackageName(pkg, fn.PackageReference)
+	}
 	pkg = sanitizeImport(pkg)
 	module = sanitizeImport(module)
 	member = sanitizeImport(member)
