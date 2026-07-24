@@ -28,6 +28,18 @@ public final class PulumiPlugin {
     public final String server;
     @Nullable
     public final PulumiPluginParameterization parameterization;
+    @Nullable
+    public final PulumiPluginParameterization extensionParameterization;
+
+    public PulumiPlugin(
+        boolean resource,
+        @Nullable String name,
+        @Nullable String version,
+        @Nullable String server,
+        @Nullable PulumiPluginParameterization parameterization
+    ) {
+        this(resource, name, version, server, parameterization, null);
+    }
 
     /**
      * Represents additional information about a package's associated Pulumi plugin.
@@ -41,20 +53,24 @@ public final class PulumiPlugin {
      * @param server
      *  Optional plugin server. If not set, the default server is used when installing the plugin.
      * @param parameterization
-     *  Optional parameterization information for the plugin.
+     *  Optional replacement parameterization information for the plugin.
+     * @param extensionParameterization
+     *  Optional extension parameterization information for the plugin.
      */
     public PulumiPlugin(
         boolean resource,
         @Nullable String name,
         @Nullable String version,
         @Nullable String server,
-        @Nullable PulumiPluginParameterization parameterization
+        @Nullable PulumiPluginParameterization parameterization,
+        @Nullable PulumiPluginParameterization extensionParameterization
     ) {
         this.resource = resource;
         this.name = name;
         this.version = version;
         this.server = server;
         this.parameterization = parameterization;
+        this.extensionParameterization = extensionParameterization;
     }
 
     public static PulumiPlugin resolve(@Nullable PulumiPlugins.RawResource plugin, @Nullable PulumiPlugins.RawResource rawVersion) {
@@ -90,7 +106,11 @@ public final class PulumiPlugin {
                 .flatMap(Map.Entry::getValue)
                 .map(pulumiPlugin -> pulumiPlugin.parameterization)
                 .orElse(null);
-        return new PulumiPlugin(resource, name, version, server, parameterization);
+        var extensionParameterization = maybePlugin
+                .flatMap(Map.Entry::getValue)
+                .map(pulumiPlugin -> pulumiPlugin.extensionParameterization)
+                .orElse(null);
+        return new PulumiPlugin(resource, name, version, server, parameterization, extensionParameterization);
     }
 
     @Override
@@ -102,12 +122,13 @@ public final class PulumiPlugin {
                 && Objects.equals(name, that.name)
                 && Objects.equals(version, that.version)
                 && Objects.equals(server, that.server)
-                && Objects.equals(parameterization, that.parameterization);
+                && Objects.equals(parameterization, that.parameterization)
+                && Objects.equals(extensionParameterization, that.extensionParameterization);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(resource, name, version, server, parameterization);
+        return Objects.hash(resource, name, version, server, parameterization, extensionParameterization);
     }
 
     @Override
@@ -118,6 +139,7 @@ public final class PulumiPlugin {
                 .add("version='" + version + "'")
                 .add("server='" + server + "'")
                 .add("parameterization=" + parameterization)
+                .add("extensionParameterization=" + extensionParameterization)
                 .toString();
     }
 
@@ -135,8 +157,12 @@ public final class PulumiPlugin {
         var parameterization = raw.has("parameterization")
                 ? gson.fromJson(raw.get("parameterization"), PulumiPluginParameterization.class)
                 : null;
+        var extensionParameterization = raw.has("extensionParameterization")
+                ? gson.fromJson(raw.get("extensionParameterization"), PulumiPluginParameterization.class)
+                : null;
 
-        plugin = new PulumiPlugin(plugin.resource, plugin.name, plugin.version, plugin.server, parameterization);
+        plugin = new PulumiPlugin(plugin.resource, plugin.name, plugin.version, plugin.server,
+                parameterization, extensionParameterization);
         return plugin;
     }
 }

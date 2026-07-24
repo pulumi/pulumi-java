@@ -238,6 +238,13 @@ func (host *javaLanguageHost) GetRequiredPackages(
 				Value:   pulumiPackage.Parameterization.Value,
 			}
 		}
+		if pulumiPackage.ExtensionParameterization != nil {
+			pkg.Extension = &pulumirpc.PackageParameterization{
+				Name:    pulumiPackage.ExtensionParameterization.Name,
+				Version: pulumiPackage.ExtensionParameterization.Version,
+				Value:   pulumiPackage.ExtensionParameterization.Value,
+			}
+		}
 
 		pkgs = append(pkgs, pkg)
 	}

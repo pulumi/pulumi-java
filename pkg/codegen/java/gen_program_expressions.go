@@ -670,6 +670,7 @@ func (g *generator) fullyQualifiedInputTypeName(objectType *schema.ObjectType, t
 	nameParts := strings.Split(objectType.Token, ":")
 	contract.Assertf(len(nameParts) >= 3, "expected well-formed object type token, got %q", objectType.Token)
 	pkg, module := nameParts[0], nameParts[1]
+	pkg = extensionPackageName(pkg, objectType.PackageReference)
 	namespace := ""
 	if objectType.PackageReference != nil {
 		namespace = objectType.PackageReference.Namespace()

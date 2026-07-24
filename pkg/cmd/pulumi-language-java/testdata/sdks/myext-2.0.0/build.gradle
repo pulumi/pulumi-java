@@ -5,36 +5,20 @@ plugins {
     id("signing")
     id("java-library")
     id("maven-publish")
-    {{- if .GradleNexusPublishPluginEnabled }}
-    id("io.github.gradle-nexus.publish-plugin") version "{{.GradleNexusPublishPluginVersion}}"
-    {{- end }}
+    id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
 }
 
-{{- if .GroupID }}
-
-group = "{{ .GroupID }}"
-{{- end }}
+group = "com.pulumi"
 
 def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
-         {{- if .Parameterization }}
-         ? "{{ .Parameterization.Version }}"
-         {{- else if .ExtensionParameterization }}
-         ? "{{ .ExtensionParameterization.Version }}"
-         {{- else }}
-         ? "{{ .Version }}"
-         {{- end }}
+         ? "2.0.0"
          : project.version)
 
 def signingKey = System.getenv("SIGNING_KEY")
 def signingPassword = System.getenv("SIGNING_PASSWORD")
-{{- if .GradleNexusPublishPluginEnabled }}
 def publishRepoURL = System.getenv("PUBLISH_REPO_URL") ?: "https://central.sonatype.com/repository/maven-snapshots/"
 def publishStagingURL = System.getenv("PUBLISH_STAGING_URL") ?: "https://ossrh-staging-api.central.sonatype.com/service/local/"
-{{- else }}
-def publishRepoURL = System.getenv("PUBLISH_REPO_URL")
-def publishStagingURL = System.getenv("PUBLISH_STAGING_URL")
-{{- end}}
 def publishRepoUsername = System.getenv("PUBLISH_REPO_USERNAME")
 def publishRepoPassword = System.getenv("PUBLISH_REPO_PASSWORD")
 
@@ -51,11 +35,9 @@ compileJava {
 }
 
 repositories {
-    {{- range $url := .Repositories }}
     maven {
-        url("{{ $url }}")
+        url("REPOSITORY")
     }
-    {{- end }}
     mavenLocal()
     maven { // The google mirror is less flaky than mavenCentral()
         url("https://maven-central.storage-download.googleapis.com/maven2/")
@@ -64,9 +46,9 @@ repositories {
 }
 
 dependencies {
-    {{- range $k, $v := .Dependencies }}
-    implementation("{{ $k }}:{{ $v }}")
-    {{- end }}
+    implementation("com.google.code.findbugs:jsr305:3.0.2")
+    implementation("com.google.code.gson:gson:2.8.9")
+    implementation("com.pulumi:pulumi:CORE.VERSION")
 }
 
 task sourcesJar(type: Jar) {
@@ -90,27 +72,13 @@ def genPulumiResources = tasks.register('genPulumiResources') {
         def builder = new groovy.json.JsonBuilder()
         builder {
             resource true
-            name "{{ .Name }}"
-            {{- if .PluginDownloadURL }}
-            server "{{ .PluginDownloadURL }}"
-            {{- end }}
-            {{- if .Parameterization }}
-            version "{{ .Version }}"
-            parameterization {
-                name "{{ .Parameterization.Name }}"
-                version resolvedVersion
-                value "{{ .Parameterization.Value }}"
-            }
-            {{- else if .ExtensionParameterization }}
-            version "{{ .Version }}"
+            name "extbase"
+            version "45.0.0"
             extensionParameterization {
-                name "{{ .ExtensionParameterization.Name }}"
+                name "myext"
                 version resolvedVersion
-                value "{{ .ExtensionParameterization.Value }}"
+                value "SGVsbG8="
             }
-            {{- else }}
-            version resolvedVersion
-            {{- end }}
         }
         def infoJson = builder.toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
@@ -124,65 +92,44 @@ jar.configure {
 publishing {
     publications {
         mainPublication(MavenPublication) {
-            groupId = "{{ .GroupID }}"
-            {{- if .Parameterization }}
-            artifactId = "{{ .Parameterization.Name }}"
-            {{- else if .ExtensionParameterization }}
-            artifactId = "{{ .ExtensionParameterization.Name }}"
-            {{- else }}
-            artifactId = "{{ .Name }}"
-            {{- end }}
+            groupId = "com.pulumi"
+            artifactId = "myext"
             version = resolvedVersion
             from components.java
             artifact sourcesJar
             artifact javadocJar
 
             pom {
-                inceptionYear = "{{ .ProjectInceptionYear }}"
-                name = "{{ .ProjectName }}"
+                inceptionYear = ""
+                name = ""
                 packaging = "jar"
-                description = {{ groovyDescription .ProjectDescription }}
+                description = $/ /$
 
-                url = "{{ .ProjectURL }}"
+                url = "https://example.com"
 
                 scm {
-                    connection = "{{ .ProjectGitURL }}"
-                    developerConnection = "{{ .ProjectGitURL }}"
-                    url = "{{ .ProjectURL }}"
+                    connection = "https://example.com"
+                    developerConnection = "https://example.com"
+                    url = "https://example.com"
                 }
 
                 licenses {
                     license {
-                        name = "{{ .LicenceName }}"
-                        url = "{{ .LicenceURL }}"
+                        name = ""
+                        url = ""
                     }
                 }
 
                 developers {
                     developer {
-                        id = "{{ .DeveloperID }}"
-                        name = "{{ .DeveloperName }}"
-                        email = "{{ .DeveloperEmail }}"
+                        id = ""
+                        name = ""
+                        email = ""
                     }
                 }
             }
         }
     }
-    {{- if .GradleNexusPublishPluginEnabled -}}{{- else }}
-
-    if (publishRepoURL) {
-        repositories {
-            maven {
-                name = "PublishRepo"
-                url = publishRepoURL
-                credentials {
-                    username = publishRepoUsername
-                    password = publishRepoPassword
-                }
-            }
-        }
-    }
-    {{- end}}
 }
 
 javadoc {
@@ -196,23 +143,6 @@ jar {
     zip64 = true
 }
 
-{{- if .GradleTestJUnitPlatformEnabled }}
-
-test {
-    useJUnitPlatform()
-    testLogging {
-            showStandardStreams = true
-            exceptionFormat = 'full'
-    }
-}
-
-test.configure {
-    dependsOn genPulumiResources
-}
-
-{{- end}}
-{{- if .GradleNexusPublishPluginEnabled }}
-
 if (publishRepoUsername) {
     nexusPublishing {
         repositories {
@@ -225,7 +155,6 @@ if (publishRepoUsername) {
         }
     }
 }
-{{- end}}
 
 if (signingKey) {
     signing {

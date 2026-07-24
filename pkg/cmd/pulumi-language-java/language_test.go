@@ -273,9 +273,6 @@ var expectedFailures = map[string]string{
 	"l2-invoke-multi-argument":    "multiArgumentInputs not implemented in programgen (added in 3.247)",
 	"l3-resource-keyword-overlap": "compilation error: keyword overlap generates undefined symbol (added in 3.247)",
 
-	"l2-extension-parameterized-resource": "extension-parameterized packages not implemented (added in 3.251)",
-	"l2-extension-and-base-resource":      "extension-parameterized packages not implemented (added in 3.251)",
-
 	"l2-failed-create-recover-continue-on-error": "recover intrinsic not implemented in programgen (added in 3.252)",
 
 	"l2-resource-hook-on-error": "resource hooks not implemented in programgen, the hook is dropped from the generated program (added in 3.254)", //nolint:lll

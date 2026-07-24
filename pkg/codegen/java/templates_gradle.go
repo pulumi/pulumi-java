@@ -111,6 +111,7 @@ type gradleTemplateContext struct {
 	GradleTestJUnitPlatformEnabled  bool
 	PluginDownloadURL               string
 	Parameterization                *gradleTemplateParameterization
+	ExtensionParameterization       *gradleTemplateParameterization
 }
 
 type gradleTemplateParameterization struct {
@@ -148,6 +149,18 @@ func newGradleTemplateContext(
 
 		ctx.Name = pkg.Parameterization.BasePlugin.Name
 		ctx.Version = pkg.Parameterization.BasePlugin.Version.String()
+	}
+
+	if pkg.ExtensionParameterization != nil {
+		base := pkg.ExtensionParameterization.BaseProvider
+		ctx.ExtensionParameterization = &gradleTemplateParameterization{
+			Name:    ctx.Name,
+			Version: ctx.Version,
+			Value:   base64.StdEncoding.EncodeToString(pkg.ExtensionParameterization.Parameter),
+		}
+
+		ctx.Name = base.Name
+		ctx.Version = base.Version.String()
 	}
 
 	/*
@@ -217,6 +230,19 @@ func newGradleTemplateContext(
 		ctx.Dependencies = packageInfo.Dependencies
 	} else {
 		ctx.Dependencies = map[string]string{}
+	}
+
+	if pkg.ExtensionParameterization != nil && len(pkg.Dependencies) > 0 {
+		dependencies := make(map[string]string, len(ctx.Dependencies)+len(pkg.Dependencies))
+		for k, v := range ctx.Dependencies {
+			dependencies[k] = v
+		}
+		for _, dep := range pkg.Dependencies {
+			if dep.Version != nil {
+				dependencies["com.pulumi:"+dep.Name] = dep.Version.String()
+			}
+		}
+		ctx.Dependencies = dependencies
 	}
 
 	if pkg.License == "Apache-2.0" {

@@ -968,28 +968,46 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             String packageVersion,
             String base64Parameter
     ) {
+        return registerPackage(baseProviderName, baseProviderVersion, baseProviderDownloadUrl,
+                packageName, packageVersion, base64Parameter, false);
+    }
+
+    @Override
+    public CompletableFuture<String> registerPackage(
+            String baseProviderName,
+            String baseProviderVersion,
+            String baseProviderDownloadUrl,
+            String packageName,
+            String packageVersion,
+            String base64Parameter,
+            boolean extension
+    ) {
         var cacheKey = String.join("\0", baseProviderName, baseProviderVersion,
-                baseProviderDownloadUrl, packageName, packageVersion, base64Parameter);
+                baseProviderDownloadUrl, packageName, packageVersion, base64Parameter,
+                Boolean.toString(extension));
         return this.state.packageRefCache.computeIfAbsent(cacheKey, __ ->
                 this.featureSupport.monitorSupportsParameterization().thenCompose(supportsParameterization -> {
                     if (!supportsParameterization) {
                         throw new UnsupportedOperationException("The Pulumi CLI does not support parameterization. Please update the Pulumi CLI.");
                     }
 
-                    var request = RegisterPackageRequest.newBuilder()
-                            .setName(baseProviderName)
-                            .setVersion(baseProviderVersion)
-                            .setDownloadUrl(baseProviderDownloadUrl)
-                            .setParameterization(
-                                    Parameterization.newBuilder()
-                                            .setName(packageName)
-                                            .setVersion(packageVersion)
-                                            .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
-                                            .build()
-                            )
+                    var parameterization = Parameterization.newBuilder()
+                            .setName(packageName)
+                            .setVersion(packageVersion)
+                            .setValue(ByteString.copyFrom(Base64.getDecoder().decode(base64Parameter)))
                             .build();
 
-                    return this.state.monitor.registerPackageAsync(request)
+                    var builder = RegisterPackageRequest.newBuilder()
+                            .setName(baseProviderName)
+                            .setVersion(baseProviderVersion)
+                            .setDownloadUrl(baseProviderDownloadUrl);
+                    if (extension) {
+                        builder.setExtension(parameterization);
+                    } else {
+                        builder.setParameterization(parameterization);
+                    }
+
+                    return this.state.monitor.registerPackageAsync(builder.build())
                             .thenApply(response -> response.getRef());
                 })
         );

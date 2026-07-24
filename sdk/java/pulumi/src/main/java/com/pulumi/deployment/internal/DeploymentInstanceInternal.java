@@ -198,6 +198,27 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
         );
     }
 
+    @Override
+    public CompletableFuture<String> registerPackage(
+        String baseProviderName,
+        String baseProviderVersion,
+        String baseProviderDownloadUrl,
+        String packageName,
+        String packageVersion,
+        String base64Parameter,
+        boolean extension
+    ) {
+        return this.deployment.registerPackage(
+            baseProviderName,
+            baseProviderVersion,
+            baseProviderDownloadUrl,
+            packageName,
+            packageVersion,
+            base64Parameter,
+            extension
+        );
+    }
+
     @InternalUse
     public static DeploymentInstanceInternal cast(DeploymentInstance instance) {
         Objects.requireNonNull(instance);
