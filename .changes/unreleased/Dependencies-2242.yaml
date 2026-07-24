@@ -1,6 +1,0 @@
-component: sdk
-kind: Dependencies
-body: Update pulumi/pulumi to v3.253.0
-time: 2026-07-22T16:50:00.000000-07:00
-custom:
-    PR: "2242"
