@@ -76,6 +76,12 @@ func (DocLanguageHelper) GetMethodResultName(
 	return tokenToFunctionResultClassName(nil, m.Function.Token).String()
 }
 
+// ResolveDocRef always reports the ref as unresolved so callers fall back to
+// their default rendering; Java-specific resolution is not implemented.
+func (DocLanguageHelper) ResolveDocRef(_ schema.PackageReference, _, _ schema.DocRef) (string, bool, error) {
+	return "", false, nil
+}
+
 func (DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string, error) {
 	name := e.Name
 	if name == "" {

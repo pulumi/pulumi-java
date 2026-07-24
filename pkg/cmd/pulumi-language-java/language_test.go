@@ -277,6 +277,8 @@ var expectedFailures = map[string]string{
 	"l2-extension-and-base-resource":      "extension-parameterized packages not implemented (added in 3.251)",
 
 	"l2-failed-create-recover-continue-on-error": "recover intrinsic not implemented in programgen (added in 3.252)",
+
+	"l2-resource-hook-on-error": "resource hooks not implemented in programgen, the hook is dropped from the generated program (added in 3.254)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
