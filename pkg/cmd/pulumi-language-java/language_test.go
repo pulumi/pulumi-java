@@ -228,6 +228,8 @@ var expectedFailures = map[string]string{
 	"l2-logical-name":                        "compilation error",
 	"l3-deferred-outputs":                    "missing expected dependency simple",
 	"l1-builtin-to-json":                     "compilation error",
+	"l2-raw-string-bytes":                    "SDK does not implement accepts_byte_string/ByteString sig for non-UTF8 strings (added in v3.255.0)",        //nolint:lll
+	"l3-component-invoke":                    "local PCL components not generated; missing expected dependency multi-argument-invoke (added in v3.255.0)", //nolint:lll
 	"l2-resource-asset-archive":              "compilation error",
 	"l3-for":                                 "ForExpression not implemented",
 	"l2-resource-config-objects":             "compilation error: type mismatch in config object arguments",
