@@ -22,6 +22,7 @@ public class Serialization {
      * The entries are usually created using the jsonProperty(String key, Object value) function.
      */
     @SafeVarargs
+    @SuppressWarnings("varargs")
     public static Map<String, Object> jsonObject(Map.Entry<String, Object> ...entries) {
         return Map.ofEntries(entries);
     }

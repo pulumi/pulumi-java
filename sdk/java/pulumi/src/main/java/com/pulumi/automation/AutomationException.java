@@ -7,6 +7,8 @@ package com.pulumi.automation;
  * Automation API.
  */
 public class AutomationException extends Exception {
+    private static final long serialVersionUID = 1L;
+
     public AutomationException(String message) {
         super(message);
     }

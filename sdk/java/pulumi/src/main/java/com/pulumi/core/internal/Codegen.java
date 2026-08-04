@@ -255,6 +255,8 @@ public final class Codegen {
      * InvalidDefaultValueException is used when a provider schema specifies a malformed default value.
      */
     private static class InvalidDefaultValueException extends RunException {
+        private static final long serialVersionUID = 1L;
+
         public InvalidDefaultValueException(String key,
                                             @Nullable Object v,
                                             String expectedType,

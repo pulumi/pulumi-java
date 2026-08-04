@@ -113,11 +113,15 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         // construct instances to take advantage of this optimization.
         if (resources.isEmpty() && value == null) {
             if (isKnown && !isSecret) {
-                return (OutputData<T>) Empty;
+                @SuppressWarnings("unchecked")
+                OutputData<T> empty = (OutputData<T>) Empty;
+                return empty;
             }
             //noinspection ConstantConditions
             if (isKnown && isSecret) {
-                return (OutputData<T>) EmptySecret;
+                @SuppressWarnings("unchecked")
+                OutputData<T> emptySecret = (OutputData<T>) EmptySecret;
+                return emptySecret;
             }
             //noinspection ConstantConditions
             if (!isKnown && !isSecret) {
@@ -132,13 +136,15 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
     }
 
     public static <T> OutputData<T> unknown() {
-        //noinspection unchecked
-        return (OutputData<T>) Unknown;
+        @SuppressWarnings("unchecked")
+        OutputData<T> unknown = (OutputData<T>) Unknown;
+        return unknown;
     }
 
     public static <T> OutputData<T> unknownSecret() {
-        //noinspection unchecked
-        return (OutputData<T>) UnknownSecret;
+        @SuppressWarnings("unchecked")
+        OutputData<T> unknownSecret = (OutputData<T>) UnknownSecret;
+        return unknownSecret;
     }
 
     public OutputData<T> copy() {

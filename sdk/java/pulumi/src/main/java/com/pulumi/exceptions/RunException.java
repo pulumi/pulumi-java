@@ -12,6 +12,8 @@ import javax.annotation.Nullable;
  * as many errors as possible can be associated with a @see {@link com.pulumi.resources.Resource}.
  */
 public class RunException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
     public RunException(String message) {
         super(message);
     }

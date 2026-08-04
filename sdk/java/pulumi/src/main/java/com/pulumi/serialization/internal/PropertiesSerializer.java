@@ -113,6 +113,8 @@ public final class PropertiesSerializer {
      * the failure is actionable.
      */
     public static final class SerializationException extends RuntimeException {
+        private static final long serialVersionUID = 1L;
+
         public SerializationException(String message, Throwable cause) {
             super(message, cause);
         }

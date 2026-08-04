@@ -133,6 +133,7 @@ public class ResourceProviderService {
         }
 
         @Override
+        @SuppressWarnings("deprecation") // The engine still populates the deprecated variables field.
         public void configure(pulumirpc.Provider.ConfigureRequest request,
                             StreamObserver<pulumirpc.Provider.ConfigureResponse> responseObserver) {
             var domRequest = new com.pulumi.provider.internal.models.ConfigureRequest(

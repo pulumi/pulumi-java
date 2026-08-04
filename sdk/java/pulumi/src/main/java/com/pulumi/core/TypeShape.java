@@ -40,8 +40,9 @@ public final class TypeShape<T> {
     }
 
     public Class<T> getType() {
-        //noinspection unchecked
-        return (Class<T>) this.type;
+        @SuppressWarnings("unchecked")
+        Class<T> typed = (Class<T>) this.type;
+        return typed;
     }
 
     public String getTypeName() {

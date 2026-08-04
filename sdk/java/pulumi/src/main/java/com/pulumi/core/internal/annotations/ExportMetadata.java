@@ -109,8 +109,9 @@ public final class ExportMetadata<T> extends ImportExportMetadata<Export, Output
             Class<?> fieldType,
             TypeShape<T> dataType
     ) {
-        //noinspection unchecked
-        return new ExportMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType, dataType);
+        @SuppressWarnings("unchecked")
+        Class<Output<T>> outputType = (Class<Output<T>>) fieldType;
+        return new ExportMetadata<>(field, exportAnnotation, outputType, dataType);
     }
 
     private static <T> ExportMetadata<T> of(
@@ -119,8 +120,9 @@ public final class ExportMetadata<T> extends ImportExportMetadata<Export, Output
             Class<?> fieldType,
             Class<T> dataType, Class<?>[] dataTypeParameters
     ) {
-        //noinspection unchecked
-        return new ExportMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType,
+        @SuppressWarnings("unchecked")
+        Class<Output<T>> outputType = (Class<Output<T>>) fieldType;
+        return new ExportMetadata<>(field, exportAnnotation, outputType,
                 TypeShape.builder(dataType).addParameters(dataTypeParameters).build()
         );
     }

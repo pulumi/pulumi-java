@@ -376,7 +376,9 @@ class ProjectSettingsYamlSerializer {
                 Class<?> type = node.getType();
                 if (type != null && type.isEnum()) {
                     var value = scalarNode.getValue().toUpperCase();
-                    return Enum.valueOf((Class<? extends Enum>) type, value);
+                    @SuppressWarnings({"unchecked", "rawtypes"})
+                    Enum<?> enumValue = Enum.valueOf((Class<? extends Enum>) type, value);
+                    return enumValue;
                 }
             }
 

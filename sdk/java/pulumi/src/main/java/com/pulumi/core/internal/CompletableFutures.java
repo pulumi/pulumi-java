@@ -29,7 +29,7 @@ public class CompletableFutures {
      */
     public static <T> CompletableFuture<List<T>> allOf(Collection<CompletableFuture<T>> futures) {
         return CompletableFuture
-                .allOf(futures.toArray(new CompletableFuture[futures.size()]))
+                .allOf(futures.toArray(new CompletableFuture<?>[0]))
                 .thenApply(unused -> futures.stream()
                         .filter(ignoreNullValues())
                         .map(CompletableFuture::join) // join() is not blocking here, by the time this function is called, the future is guaranteed to be complete
@@ -45,7 +45,7 @@ public class CompletableFutures {
      */
     public static <T> CompletableFuture<Collection<CompletableFuture<T>>> flatAllOf(Collection<CompletableFuture<T>> futures) {
         return CompletableFuture
-                .allOf(futures.toArray(new CompletableFuture[futures.size()]))
+                .allOf(futures.toArray(new CompletableFuture<?>[0]))
                 .thenApply(unused -> futures);
     }
 
@@ -57,7 +57,7 @@ public class CompletableFutures {
      */
     public static <K, V> CompletableFuture<Map<K, V>> allOf(Map<K, CompletableFuture<V>> futuresMap) {
         return CompletableFuture
-                .allOf(futuresMap.values().toArray(new CompletableFuture[futuresMap.size()]))
+                .allOf(futuresMap.values().toArray(new CompletableFuture<?>[0]))
                 .thenApply(unused -> futuresMap.entrySet().stream()
                         .filter(ignoreNullMapValues()) // join() is not blocking here, by the time this function is called, the future is guaranteed to be complete
                         .map(joinMapValues()) // join() is not blocking here, by the time this function is called, the future is guaranteed to be complete
@@ -75,7 +75,7 @@ public class CompletableFutures {
             Map<K, CompletableFuture<V>> futuresMap
     ) {
         return CompletableFuture
-                .allOf(futuresMap.values().toArray(new CompletableFuture[futuresMap.size()]))
+                .allOf(futuresMap.values().toArray(new CompletableFuture<?>[0]))
                 .thenApply(unused -> futuresMap);
     }
 

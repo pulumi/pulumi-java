@@ -85,7 +85,6 @@ public class StackOptions {
      * with the respective properties of "options2" merged over the same properties in "options1".
      * <p>
      * The original options objects will be unchanged. A new instance will always be returned.
-     * <p>
      *
      * @param options1 first options to merge
      * @param options2 second options to merge

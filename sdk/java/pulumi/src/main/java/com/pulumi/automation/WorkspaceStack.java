@@ -38,6 +38,7 @@ import com.pulumi.automation.serialization.internal.LocalSerializer;
  * <p>
  * Will close the {@link Workspace} on {@link #close()}.
  */
+@SuppressWarnings("try")
 public final class WorkspaceStack implements AutoCloseable {
     private final String name;
     private final Workspace workspace;

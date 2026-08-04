@@ -101,8 +101,9 @@ public class Converter {
                 .addAll(data.getResources())
                 .build();
 
-        //noinspection unchecked
-        return OutputData.ofNullable(mergedResources, (T) converted, data.isKnown(), data.isSecret());
+        @SuppressWarnings("unchecked")
+        T typed = (T) converted;
+        return OutputData.ofNullable(mergedResources, typed, data.isKnown(), data.isSecret());
     }
 
     @Nullable
@@ -127,6 +128,7 @@ public class Converter {
     }
 
     @Nullable
+    @SuppressWarnings({"unchecked", "rawtypes"})
     private Object tryConvertObjectInner(
             String context, @Nullable Object value, TypeShape<?> targetType
     ) {
@@ -388,8 +390,12 @@ public class Converter {
     @Nullable
     private <T> T defaultValue(TypeShape<?> targetType, @Nullable T default_) {
         var raw = defaultValueRaw(targetType);
-        //noinspection unchecked
-        return raw == null ? default_ : (T) raw;
+        if (raw == null) {
+            return default_;
+        }
+        @SuppressWarnings("unchecked")
+        T typed = (T) raw;
+        return typed;
     }
 
     @Nullable
@@ -430,6 +436,7 @@ public class Converter {
         return gson.fromJson(stringWriter.toString(), JsonElement.class);
     }
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
     private void tryWriteJson(String context, JsonWriter jsonWriter, @Nullable Object value) throws IOException {
         if (value == null) {
             jsonWriter.nullValue();
@@ -489,8 +496,9 @@ public class Converter {
     @Nullable
     private <T> T tryEnsureType(String context, Object value, TypeShape<T> targetType, T default_) {
         if (canBeCast(value, targetType)) {
-            //noinspection unchecked
-            return (T) value;
+            @SuppressWarnings("unchecked")
+            T typed = (T) value;
+            return typed;
         } else {
             this.log.warn(String.format(
                     "%s; Expected '%s' but got '%s' while deserializing.",
@@ -551,7 +559,7 @@ public class Converter {
         var builder = ImmutableList.builder();
         var elementType = targetType.getParameter(0)
                 .orElseThrow(() -> new IllegalArgumentException("Expected a parameter type for the List, got none"));
-        //noinspection unchecked
+        @SuppressWarnings("unchecked")
         var objects = (List<Object>) value;
         for (int i = 0, objectsSize = objects.size(); i < objectsSize; i++) {
             builder.add(tryConvertObjectInner(
@@ -574,7 +582,7 @@ public class Converter {
         var valueType = targetType.getParameter(1)
                 .orElseThrow(() -> new IllegalArgumentException("Expected a key parameter type for the Map, got none"));
 
-        //noinspection unchecked
+        @SuppressWarnings("unchecked")
         var objects = (Map<String, Object>) value;
         for (var entry : objects.entrySet()) {
             builder.put(entry.getKey(), tryConvertObjectInner(

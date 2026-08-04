@@ -6,6 +6,8 @@ package com.pulumi.automation;
  * An exception thrown when an expected event is missing.
  */
 public class MissingExpectedEventException extends AutomationException {
+    private static final long serialVersionUID = 1L;
+
     private final String name;
 
     public MissingExpectedEventException(String name, String message) {

@@ -75,8 +75,9 @@ class ConverterTests {
     @CheckReturnValue
     public static <T> T deserializeFromValue(Value value, Class<T> ignored) {
         var deserializer = new Deserializer(log);
-        //noinspection unchecked
-        return (T) deserializer.deserialize(value).getValueNullable();
+        @SuppressWarnings("unchecked")
+        T result = (T) deserializer.deserialize(value).getValueNullable();
+        return result;
     }
 
     @Nested
@@ -508,13 +509,12 @@ class ConverterTests {
                     .build();
             var data = converter.convertValue("InternalPropertyTests", value, shape);
             assertThat(data.isKnown()).isTrue();
-            //noinspection unchecked
-            assertThat(data.getValueNullable()).isNotNull();
-            //noinspection unchecked
-            assertThat(data.getValueNullable()).containsKey("a");
-            assertThat(data.getValueNullable().get("a")).isEqualTo("b");
-            //noinspection unchecked
-            assertThat(data.getValueNullable()).doesNotContainKey("__defaults");
+            @SuppressWarnings("unchecked")
+            ImmutableMap<String, String> map = (ImmutableMap<String, String>) data.getValueNullable();
+            assertThat(map).isNotNull();
+            assertThat(map).containsKey("a");
+            assertThat(map.get("a")).isEqualTo("b");
+            assertThat(map).doesNotContainKey("__defaults");
         }
     }
 

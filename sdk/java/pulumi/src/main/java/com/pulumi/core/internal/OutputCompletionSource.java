@@ -71,10 +71,11 @@ public class OutputCompletionSource<T> {
                     valueShape.asString(), dataTypeShape.asString())
             );
         }
-        //noinspection unchecked
+        @SuppressWarnings("unchecked")
+        T typed = (T) value;
         mutableData.complete(OutputData.ofNullable(
                 this.resources,
-                (T) value,
+                typed,
                 isKnown,
                 false
         ));

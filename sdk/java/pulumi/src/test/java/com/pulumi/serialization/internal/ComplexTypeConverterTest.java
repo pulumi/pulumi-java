@@ -363,8 +363,9 @@ class ComplexTypeConverterTest {
         assertThat(value.list).hasSameElementsAs(List.of(true, false));
         assertThat(value.map).containsAllEntriesOf(Map.of("k", 3));
         assertThat(value.$private).isInstanceOf(Map.class);
-        //noinspection unchecked
-        assertThat((Map<String, Object>) value.$private).containsAllEntriesOf(Map.of("o", 5.5));
+        @SuppressWarnings("unchecked")
+        var privateMap = (Map<String, Object>) value.$private;
+        assertThat(privateMap).containsAllEntriesOf(Map.of("o", 5.5));
         assertThat(value.size).isEqualTo(ContainerSize.SixInch);
         assertThat(value.color).isEqualTo(ContainerColor.Blue);
     }
@@ -492,8 +493,8 @@ class ComplexTypeConverterTest {
         assertThat(data.getValueNullable().b).isEqualTo(false);
         assertThat(data.getValueNullable().i).isEqualTo(0);
         assertThat(data.getValueNullable().d).isEqualTo(0.0);
-        assertThat(((ImmutableList) data.getValueNullable().list)).hasSameElementsAs(ImmutableList.of(false, false, true, false));
-        assertThat(((ImmutableMap) data.getValueNullable().map)).containsAllEntriesOf(ImmutableMap.of("k", 10, "v", 0));
+        assertThat(data.getValueNullable().list).hasSameElementsAs(ImmutableList.of(false, false, true, false));
+        assertThat(data.getValueNullable().map).containsAllEntriesOf(ImmutableMap.of("k", 10, "v", 0));
         assertThat(data.getValueNullable().$private).isEqualTo("test");
         assertThat(data.getValueNullable().size).isNull();
         assertThat(data.getValueNullable().color).isNull();

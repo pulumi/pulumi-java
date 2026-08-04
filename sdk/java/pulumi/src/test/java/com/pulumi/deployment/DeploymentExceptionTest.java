@@ -42,6 +42,8 @@ public class DeploymentExceptionTest {
     }
 
     static class DeliberateException extends IllegalStateException {
+        private static final long serialVersionUID = 1L;
+
         public DeliberateException() {
             super("deliberate exception");
         }

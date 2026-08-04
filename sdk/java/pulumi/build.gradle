@@ -15,6 +15,10 @@ java {
     withJavadocJar()
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.addAll(['-Xlint:all', '-Werror'])
+}
+
 repositories {
     maven { // The google mirror is less flaky than mavenCentral()
         url("https://maven-central.storage-download.googleapis.com/maven2/")
@@ -290,12 +294,26 @@ publishing {
 }
 
 javadoc {
+    // Run javadoc with JDK 17+ so we can use its -Werror flag. JDK 11's
+    // javadoc has no equivalent. The compiled classes still target JDK 11
+    // via the `java { toolchain { ... } }` block above.
+    javadocTool = javaToolchains.javadocToolFor {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
     options.encoding = 'UTF-8'
     options.jFlags("-Xmx8g", "-Xms512m")
 
+    options.addBooleanOption('Werror', true)
+    // Enforce all doclint checks except 'missing', i.e. fail the build on broken
+    // HTML, bad @link references, syntax errors, etc., but tolerate pre-existing
+    // methods that lack @param/@return tags. Fixing those is tracked separately.
+    options.addStringOption('Xdoclint:all,-missing', '-quiet')
+
+    exclude("codegen")
     exclude("com/google/rpc")
     exclude("com/pulumi/bootstrap/internal")
     exclude("com/pulumi/codegen/internal")

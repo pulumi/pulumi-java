@@ -214,16 +214,22 @@ public class MockMonitor implements Monitor {
 
     private CompletableFuture<ImmutableMap<String, Object>> serializeToMap(Object o) {
         if (o instanceof Map) {
-            o = ImmutableMap.copyOf((Map<String, Object>) o); // defensive copy
+            @SuppressWarnings("unchecked")
+            Map<String, Object> m = (Map<String, Object>) o;
+            o = ImmutableMap.copyOf(m); // defensive copy
         }
         if (o instanceof List) {
-            o = ImmutableList.copyOf((List<Object>) o);
+            @SuppressWarnings("unchecked")
+            List<Object> l = (List<Object>) o;
+            o = ImmutableList.copyOf(l);
         }
         var objectType = o == null ? Void.class : o.getClass();
         return serializer.serializeAsync("MockMonitor", o, true)
                 .thenApply(result -> {
                             if (result instanceof Map) {
-                                return ImmutableMap.copyOf((Map<String, Object>) result);
+                                @SuppressWarnings("unchecked")
+                                Map<String, Object> rm = (Map<String, Object>) result;
+                                return ImmutableMap.copyOf(rm);
                             } else {
                                 throw new UnsupportedOperationException(String.format(
                                         "'%s' is not a supported result type, with argument '%s'",

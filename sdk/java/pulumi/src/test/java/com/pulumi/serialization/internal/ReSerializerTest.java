@@ -99,9 +99,12 @@ class ReSerializerTest {
                                 .flatMap(o -> Stream.of(
                                         dynamicTest("not null", () -> assertThat(o).isNotNull()),
                                         dynamicTest("is Map", () -> assertThat(o).isInstanceOf(Map.class)),
-                                        dynamicTest("contains", () -> assertThat((Map<Object, Object>) o).containsAllEntriesOf(
-                                                Map.of("test", List.of("test1", "1")))
-                                        )
+                                        dynamicTest("contains", () -> {
+                                            @SuppressWarnings("unchecked")
+                                            Map<Object, Object> m = (Map<Object, Object>) o;
+                                            assertThat(m).containsAllEntriesOf(
+                                                    Map.of("test", List.of("test1", "1")));
+                                        })
                                 ))
                 )
         );

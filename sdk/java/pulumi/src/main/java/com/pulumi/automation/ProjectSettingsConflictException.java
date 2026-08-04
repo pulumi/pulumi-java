@@ -16,6 +16,8 @@ package com.pulumi.automation;
  *     customizing the ProjectSettings
  */
 public class ProjectSettingsConflictException extends AutomationException {
+    private static final long serialVersionUID = 1L;
+
     private final String settingsFileLocation;
 
     public ProjectSettingsConflictException(String settingsFileLocation) {
