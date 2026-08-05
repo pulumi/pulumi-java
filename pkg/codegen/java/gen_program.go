@@ -1552,7 +1552,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVariable) {
 	g.genIndent(w)
 
-	configType := model.ResolveOutputs(configVariable.Type())
+	configType := unwrapOptional(model.ResolveOutputs(configVariable.Type()))
 	name := names.MakeValidIdentifier(configVariable.Name())
 	logicalName := configVariable.LogicalName()
 	secret := ""
@@ -1571,7 +1571,7 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 		className := names.Title(configVariable.Name()) + "Config"
 		g.objectConfigs = append(g.objectConfigs, objectConfigClass{className: className, objType: t})
 		extraArg = ", " + className + ".class"
-	case *model.MapType:
+	case *model.MapType, *model.ListType:
 		extraArg = ", " + javaTypeShapeExpr(t)
 	default:
 		switch configType {
