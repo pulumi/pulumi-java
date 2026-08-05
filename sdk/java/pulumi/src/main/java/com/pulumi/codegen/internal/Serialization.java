@@ -18,6 +18,15 @@ public class Serialization {
     }
 
     /**
+     * Converts any value (list, string, POJO, ...) into a JSON string.
+     * This function maps to the toJSON(...) function from PCL for non-map arguments.
+     */
+    public static String serializeJson(Object object) {
+        var gson = new Gson();
+        return gson.toJson(object);
+    }
+
+    /**
      * Accepts an array of Entry(String, Object) values to build up a Map(String, Object).
      * The entries are usually created using the jsonProperty(String key, Object value) function.
      */
