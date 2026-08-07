@@ -3,11 +3,12 @@
 
 package com.pulumi.azurenative.alertsmanagement.outputs;
 
+import com.pulumi.azurenative.alertsmanagement.outputs.IGetActionRuleByNameProperties;
 import com.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
 @CustomType
-public final class DiagnosticsResponse {
+public final class DiagnosticsResponse implements IGetActionRuleByNameProperties {
     private DiagnosticsResponse() {}
 
     public static Builder builder() {
