@@ -3,11 +3,12 @@
 
 package com.pulumi.azurenative.alertsmanagement.outputs;
 
+import com.pulumi.azurenative.alertsmanagement.outputs.IGetActionRuleByNameProperties;
 import com.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
 @CustomType
-public final class SuppressionResponse {
+public final class SuppressionResponse implements IGetActionRuleByNameProperties {
     private SuppressionResponse() {}
 
     public static Builder builder() {

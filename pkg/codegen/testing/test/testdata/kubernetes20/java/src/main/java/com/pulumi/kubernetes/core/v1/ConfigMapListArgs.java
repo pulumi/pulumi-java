@@ -202,11 +202,11 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ConfigMapListArgs build() {
-            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).def("v1").getNullable();
             if ($.items == null) {
                 throw new MissingRequiredPropertyException("ConfigMapListArgs", "items");
             }
-            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).def("ConfigMapList").getNullable();
             return $;
         }
     }

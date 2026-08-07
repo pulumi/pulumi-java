@@ -60,6 +60,8 @@ var Export = PulumiAnnotations.Dot("Export")
 
 var EnumType = PulumiAnnotations.Dot("EnumType")
 
+var DiscriminatedUnion = PulumiAnnotations.Dot("DiscriminatedUnion")
+
 var Alias = PulumiCore.Dot("Alias")
 
 var PulumiDeployment = Pulumi.Dot("deployment")

@@ -3,12 +3,9 @@
 
 package com.pulumi.azurenative.alertsmanagement.outputs;
 
-import com.pulumi.azurenative.alertsmanagement.outputs.ActionGroupResponse;
-import com.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
-import com.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;
+import com.pulumi.azurenative.alertsmanagement.outputs.IGetActionRuleByNameProperties;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +32,7 @@ public final class GetActionRuleByNameResult {
      * @return action rule properties
      * 
      */
-    private Object properties;
+    private IGetActionRuleByNameProperties properties;
     /**
      * @return Resource tags
      * 
@@ -73,7 +70,7 @@ public final class GetActionRuleByNameResult {
      * @return action rule properties
      * 
      */
-    public Object properties() {
+    public IGetActionRuleByNameProperties properties() {
         return this.properties;
     }
     /**
@@ -103,7 +100,7 @@ public final class GetActionRuleByNameResult {
         private String id;
         private String location;
         private String name;
-        private Object properties;
+        private IGetActionRuleByNameProperties properties;
         private @Nullable Map<String,String> tags;
         private String type;
         public Builder() {}
@@ -142,7 +139,7 @@ public final class GetActionRuleByNameResult {
             return this;
         }
         @CustomType.Setter
-        public Builder properties(Object properties) {
+        public Builder properties(IGetActionRuleByNameProperties properties) {
             if (properties == null) {
               throw new MissingRequiredPropertyException("GetActionRuleByNameResult", "properties");
             }

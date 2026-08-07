@@ -265,8 +265,8 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ConfigMapArgs build() {
-            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
-            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).def("v1").getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).def("ConfigMap").getNullable();
             return $;
         }
     }

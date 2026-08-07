@@ -302,16 +302,16 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
 
         public ModuleResourceArgs build() {
             $.optionalBool = Codegen.booleanProp("optionalBool").output().arg($.optionalBool).def(true).getNullable();
-            $.optionalConst = Codegen.stringProp("optionalConst").output().arg($.optionalConst).def("another").getNullable();
+            $.optionalConst = Codegen.stringProp("optionalConst").output().arg($.optionalConst).def("val").getNullable();
             $.optionalEnum = Codegen.objectProp("optionalEnum", EnumThing.class).output().arg($.optionalEnum).def(EnumThing.Eight).getNullable();
             $.optionalNumber = Codegen.doubleProp("optionalNumber").output().arg($.optionalNumber).def(4.2e+01).getNullable();
             $.optionalString = Codegen.stringProp("optionalString").output().arg($.optionalString).def("buzzer").getNullable();
             $.plainOptionalBool = Codegen.booleanProp("plainOptionalBool").arg($.plainOptionalBool).def(true).getNullable();
-            $.plainOptionalConst = Codegen.stringProp("plainOptionalConst").arg($.plainOptionalConst).def("another").getNullable();
+            $.plainOptionalConst = Codegen.stringProp("plainOptionalConst").arg($.plainOptionalConst).def("val").getNullable();
             $.plainOptionalNumber = Codegen.doubleProp("plainOptionalNumber").arg($.plainOptionalNumber).def(4.2e+01).getNullable();
             $.plainOptionalString = Codegen.stringProp("plainOptionalString").arg($.plainOptionalString).def("buzzer").getNullable();
             $.plainRequiredBool = Codegen.booleanProp("plainRequiredBool").arg($.plainRequiredBool).def(true).require();
-            $.plainRequiredConst = Codegen.stringProp("plainRequiredConst").arg($.plainRequiredConst).def("another").require();
+            $.plainRequiredConst = Codegen.stringProp("plainRequiredConst").arg($.plainRequiredConst).def("val").require();
             $.plainRequiredNumber = Codegen.doubleProp("plainRequiredNumber").arg($.plainRequiredNumber).def(4.2e+01).require();
             $.plainRequiredString = Codegen.stringProp("plainRequiredString").arg($.plainRequiredString).def("buzzer").require();
             $.requiredBool = Codegen.booleanProp("requiredBool").output().arg($.requiredBool).def(true).require();

@@ -17,9 +17,11 @@ import java.util.List;
 import com.pulumi.asset.Asset;
 import com.pulumi.asset.Archive;
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.DiscriminatedUnion;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.annotations.DiscriminatedUnions;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.resources.DependencyResource;
@@ -260,7 +262,27 @@ public final class PropertyValueSerializer {
         return map;
     }
 
+    // A generated union interface cannot be instantiated, so the discriminator tag in the raw value
+    // selects the member class to deserialize into.
+    private static Class<?> resolveUnionCase(
+        Map<String, PropertyValue> objectValue, Class<?> unionType, DiscriminatedUnion union, String[] path
+    ) {
+        PropertyValue tagValue = objectValue.get(union.value());
+        String tag = tagValue != null && tagValue.getType() == PropertyValue.ValueType.STRING
+            ? tagValue.getStringValue()
+            : null;
+
+        return DiscriminatedUnions.resolveTag(unionType, union, tag).orThrow(
+            message -> new PropertyDeserializationException(message, path, unionType, null, null));
+    }
+
     private static Object deserializeComplexObject(Map<String, PropertyValue> objectValue, Class<?> targetType, String[] path) {
+        var union = DiscriminatedUnions.of(targetType);
+        if (union.isPresent()) {
+            return deserializeComplexObject(
+                objectValue, resolveUnionCase(objectValue, targetType, union.get(), path), path);
+        }
+
         // Create instance using no-args constructor
         Object instance;
         try {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.alertsmanagement.outputs;
 
+import com.pulumi.azurenative.alertsmanagement.outputs.IGetActionRuleByNameProperties;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class ActionGroupResponse {
+public final class ActionGroupResponse implements IGetActionRuleByNameProperties {
     /**
      * @return Action group to trigger if action rule matches
      * 

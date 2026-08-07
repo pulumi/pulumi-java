@@ -8,6 +8,7 @@ import com.pulumi.asset.FileAsset;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.annotations.DiscriminatedUnion;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
@@ -612,6 +613,93 @@ public class PropertyValueSerializerTest {
         // Only non-null value should be included
         var expected = Map.of("unknownValue", PropertyValue.COMPUTED);
         assertThat(data).isEqualTo(expected);
+    }
+
+    // PasswordCredential and TokenCredential deliberately have an identical property shape, so only
+    // dispatch on the discriminator tag can tell them apart.
+    @DiscriminatedUnion("kind")
+    @DiscriminatedUnion.Case(tag = "password", type = PasswordCredential.class)
+    @DiscriminatedUnion.Case(tag = "token", type = TokenCredential.class)
+    @DiscriminatedUnion.Case(tag = "certificate", type = CertificateCredential.class)
+    interface Credential {
+    }
+
+    static class PasswordCredential implements Credential {
+        @Import(name = "kind")
+        private String kind;
+
+        @Import(name = "data")
+        private String data;
+
+        public String data() {
+            return this.data;
+        }
+
+        private PasswordCredential() {}
+    }
+
+    static class TokenCredential implements Credential {
+        @Import(name = "kind")
+        private String kind;
+
+        @Import(name = "data")
+        private String data;
+
+        public String data() {
+            return this.data;
+        }
+
+        private TokenCredential() {}
+    }
+
+    static class CertificateCredential implements Credential {
+        @Import(name = "kind")
+        private String kind;
+
+        @Import(name = "data")
+        private String data;
+
+        @Import(name = "thumbprint")
+        private String thumbprint;
+
+        public String thumbprint() {
+            return this.thumbprint;
+        }
+
+        private CertificateCredential() {}
+    }
+
+    @Test
+    void testDeserializingDiscriminatedUnionDispatchesOnTag() {
+        var data = object(
+            pair("kind", PropertyValue.of("token")),
+            pair("data", PropertyValue.of("abc"))
+        );
+
+        var credential = PropertyValueSerializer.deserialize(data, Credential.class);
+
+        assertThat(credential).isInstanceOf(TokenCredential.class);
+        assertThat(((TokenCredential) credential).data()).isEqualTo("abc");
+    }
+
+    @Test
+    void testDeserializingDiscriminatedUnionWithUnknownTagThrows() {
+        var data = object(
+            pair("kind", PropertyValue.of("oauth")),
+            pair("data", PropertyValue.of("abc"))
+        );
+
+        assertThatThrownBy(() -> PropertyValueSerializer.deserialize(data, Credential.class))
+            .hasMessageContaining("Unknown 'kind' value 'oauth'")
+            .hasMessageContaining("expected one of: certificate, password, token");
+    }
+
+    @Test
+    void testDeserializingDiscriminatedUnionWithoutTagThrows() {
+        var data = object(pair("data", PropertyValue.of("abc")));
+
+        assertThatThrownBy(() -> PropertyValueSerializer.deserialize(data, Credential.class))
+            .hasMessageContaining("Missing discriminator property 'kind'");
     }
 
     @SafeVarargs

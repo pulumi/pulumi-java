@@ -1,0 +1,6 @@
+kind: Improvements
+body: Generate a typed interface for each discriminated union with three or more members instead of collapsing the union to Object, and fill in const-valued properties in generated builders so the discriminator tag never has to be written by hand
+time: 2026-08-06T00:00:00Z
+custom:
+  PR: "2266"
+component: codegen

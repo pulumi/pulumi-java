@@ -52,7 +52,7 @@ public final class FuncWithConstInputPlainArgs extends com.pulumi.resources.Invo
         }
 
         public FuncWithConstInputPlainArgs build() {
-            $.plainInput = Codegen.stringProp("plainInput").arg($.plainInput).getNullable();
+            $.plainInput = Codegen.stringProp("plainInput").arg($.plainInput).def("fixed").getNullable();
             return $;
         }
     }

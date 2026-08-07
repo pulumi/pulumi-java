@@ -16,8 +16,10 @@ import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Either;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.core.annotations.DiscriminatedUnion;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.annotations.DiscriminatedUnions;
 import com.pulumi.core.internal.Optionals;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.resources.Resource;
@@ -283,6 +285,11 @@ public class Converter {
             return tryConvertMap(context, value, targetType);
         }
 
+        var union = targetType.getAnnotation(DiscriminatedUnion.class);
+        if (union.isPresent()) {
+            return tryConvertDiscriminatedUnion(context, value, targetType, union.get());
+        }
+
         var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
         if (hasAnnotatedBuilder) {
             var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
@@ -509,6 +516,18 @@ public class Converter {
     }
 
     @Nullable
+    private Object tryConvertDiscriminatedUnion(
+            String context, Object value, TypeShape<?> targetType, DiscriminatedUnion union
+    ) {
+        var member = DiscriminatedUnions.resolve(targetType.getType(), union, value);
+        if (member.isLeft()) {
+            this.log.warn(String.format("%s; %s", context, member.left()));
+            return null;
+        }
+        return tryConvertObjectInner(context, value, TypeShape.of(member.right()));
+    }
+
+    @Nullable
     private Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<?> targetType) {
         var leftType = targetType.getParameter(0)
                 .orElseThrow(() -> new IllegalStateException("Expected a left parameter type for the Either, got none"));
@@ -711,6 +730,33 @@ public class Converter {
             // A Map value is the 2nd out of 2 places that `Object` could appear as a legal value.
             // This type is what is generated for things like azure/aws tags. It's an untyped
             // map in our original schema.
+            return;
+        }
+
+        var unionAnnotation = targetType.getAnnotation(DiscriminatedUnion.class);
+        if (unionAnnotation.isPresent()) {
+            var cases = DiscriminatedUnions.casesOf(targetType.getType());
+            if (cases.isEmpty()) {
+                throw new IllegalArgumentException(String.format(
+                        "%s; Expected union type '%s' annotated with @%s to also carry at least one @%s, found none.",
+                        context, targetType.getTypeName(),
+                        DiscriminatedUnion.class.getSimpleName(),
+                        DiscriminatedUnion.Case.class.getSimpleName()
+                ));
+            }
+            cases.forEach((tag, member) -> {
+                if (!targetType.getType().isAssignableFrom(member)) {
+                    throw new IllegalArgumentException(String.format(
+                            "%s; Expected union type '%s' case '%s' of type '%s' to implement '%s', it does not.",
+                            context, targetType.getTypeName(), tag, member.getTypeName(), targetType.getTypeName()
+                    ));
+                }
+                checkTargetType(
+                        String.format("%s(%s)", targetType.getTypeName(), tag),
+                        TypeShape.of(member),
+                        seenTypes
+                );
+            });
             return;
         }
 
