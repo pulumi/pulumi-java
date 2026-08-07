@@ -56,7 +56,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ResourceArgs build() {
-            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).def("Constant").require();
             return $;
         }
     }
