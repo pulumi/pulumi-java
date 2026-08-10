@@ -16,7 +16,6 @@ import com.pulumi.serialization.internal.Serializer;
 import com.pulumi.test.Mocks;
 import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Provider.CallResponse;
-import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.ReadResourceResponse;
 import pulumirpc.Resource.RegisterPackageRequest;
@@ -24,6 +23,7 @@ import pulumirpc.Resource.RegisterPackageResponse;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.RegisterResourceResponse;
+import pulumirpc.Resource.ResourceInvokeResponse;
 import pulumirpc.Resource.SupportsFeatureRequest;
 import pulumirpc.Resource.SupportsFeatureResponse;
 
@@ -65,7 +65,7 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<InvokeResponse> invokeAsync(pulumirpc.Resource.ResourceInvokeRequest request) {
+    public CompletableFuture<ResourceInvokeResponse> invokeAsync(pulumirpc.Resource.ResourceInvokeRequest request) {
         var args = deserializeToMap(request.getArgs());
 
         CompletableFuture<Map<String, Object>> toBeSerialized;
@@ -82,7 +82,7 @@ public class MockMonitor implements Monitor {
 
         return toBeSerialized
                 .thenCompose(this::serializeToStruct)
-                .thenApply(struct -> InvokeResponse.newBuilder().setReturn(struct).build());
+                .thenApply(struct -> ResourceInvokeResponse.newBuilder().setReturn(struct).build());
     }
 
     @Override

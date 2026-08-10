@@ -227,6 +227,10 @@ var expectedFailures = map[string]string{
 	"l2-logical-name":                        "compilation error",
 	"l3-deferred-outputs":                    "missing expected dependency simple",
 	"l1-builtin-to-json":                     "compilation error",
+	"l2-invoke-dependencies":                 "invokes with arguments depending on resources pending creation are not deferred", //nolint:lll
+	"l2-invoke-depends-on-component":         "invokes depending on remote components pending creation are not deferred",        //nolint:lll
+	"l2-target-up-skipped-create-output":     "NullPointerException applying the output of a resource skipped via --target",     //nolint:lll
+	"l3-component-provider-inheritance":      "compilation error: reference to undefined withProviders variable",
 	"l2-raw-string-bytes":                    "SDK does not implement accepts_byte_string/ByteString sig for non-UTF8 strings (added in v3.255.0)",        //nolint:lll
 	"l3-component-invoke":                    "local PCL components not generated; missing expected dependency multi-argument-invoke (added in v3.255.0)", //nolint:lll
 	"l2-resource-asset-archive":              "compilation error",

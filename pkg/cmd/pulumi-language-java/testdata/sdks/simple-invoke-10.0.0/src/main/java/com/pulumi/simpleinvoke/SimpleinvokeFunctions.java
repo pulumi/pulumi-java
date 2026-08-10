@@ -9,18 +9,36 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.simpleinvoke.Utilities;
+import com.pulumi.simpleinvoke.inputs.GetTextArgs;
+import com.pulumi.simpleinvoke.inputs.GetTextPlainArgs;
 import com.pulumi.simpleinvoke.inputs.MyInvokeArgs;
 import com.pulumi.simpleinvoke.inputs.MyInvokePlainArgs;
 import com.pulumi.simpleinvoke.inputs.SecretInvokeArgs;
 import com.pulumi.simpleinvoke.inputs.SecretInvokePlainArgs;
 import com.pulumi.simpleinvoke.inputs.UnitArgs;
 import com.pulumi.simpleinvoke.inputs.UnitPlainArgs;
+import com.pulumi.simpleinvoke.outputs.GetTextResult;
 import com.pulumi.simpleinvoke.outputs.MyInvokeResult;
 import com.pulumi.simpleinvoke.outputs.SecretInvokeResult;
 import com.pulumi.simpleinvoke.outputs.UnitResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class SimpleinvokeFunctions {
+    public static Output<GetTextResult> getText(GetTextArgs args) {
+        return getText(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetTextResult> getTextPlain(GetTextPlainArgs args) {
+        return getTextPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetTextResult> getText(GetTextArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("simple-invoke:index:getText", TypeShape.of(GetTextResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<GetTextResult> getText(GetTextArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("simple-invoke:index:getText", TypeShape.of(GetTextResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetTextResult> getTextPlain(GetTextPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("simple-invoke:index:getText", TypeShape.of(GetTextResult.class), args, Utilities.withVersion(options));
+    }
     public static Output<MyInvokeResult> myInvoke(MyInvokeArgs args) {
         return myInvoke(args, InvokeOptions.Empty);
     }
