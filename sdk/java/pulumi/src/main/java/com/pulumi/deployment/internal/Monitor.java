@@ -3,7 +3,6 @@ package com.pulumi.deployment.internal;
 import com.pulumi.resources.Resource;
 import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Provider.CallResponse;
-import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.*;
 
 import java.util.concurrent.CompletableFuture;
@@ -11,7 +10,7 @@ import java.util.concurrent.CompletableFuture;
 public interface Monitor {
     CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request);
 
-    CompletableFuture<InvokeResponse> invokeAsync(ResourceInvokeRequest request);
+    CompletableFuture<ResourceInvokeResponse> invokeAsync(ResourceInvokeRequest request);
 
     CompletableFuture<CallResponse> callAsync(ResourceCallRequest request);
 

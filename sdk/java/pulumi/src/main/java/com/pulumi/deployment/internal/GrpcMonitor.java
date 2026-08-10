@@ -5,7 +5,6 @@ import com.pulumi.core.internal.ContextAwareCompletableFuture;
 import com.pulumi.resources.Resource;
 import io.grpc.ManagedChannelBuilder;
 import pulumirpc.Provider.CallResponse;
-import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.ReadResourceResponse;
 import pulumirpc.Resource.RegisterPackageRequest;
@@ -15,6 +14,7 @@ import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.RegisterResourceResponse;
 import pulumirpc.Resource.ResourceCallRequest;
 import pulumirpc.Resource.ResourceInvokeRequest;
+import pulumirpc.Resource.ResourceInvokeResponse;
 import pulumirpc.Resource.SupportsFeatureRequest;
 import pulumirpc.Resource.SupportsFeatureResponse;
 import pulumirpc.ResourceMonitorGrpc;
@@ -47,7 +47,7 @@ public class GrpcMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<InvokeResponse> invokeAsync(ResourceInvokeRequest request) {
+    public CompletableFuture<ResourceInvokeResponse> invokeAsync(ResourceInvokeRequest request) {
         return toContextAwareCompletableFuture(this.monitor.invoke(request));
     }
 
