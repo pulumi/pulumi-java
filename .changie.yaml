@@ -11,6 +11,11 @@ kinds:
 - label: Bug Fixes
   auto: patch
   key: bug-fixes
+- label: Dependencies
+  auto: patch
+  key: dependencies
+  changeFormat: '- [{{.Component}}] {{.Body}}'
+  skipGlobalChoices: true
 # Custom fragment file format because we use / in the component name.
 fragmentFileFormat: '{{.Kind}}-{{.Custom.PR}}'
 components:
