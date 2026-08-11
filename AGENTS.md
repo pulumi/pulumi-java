@@ -57,7 +57,7 @@ All commands assume you're at the repo root.
 - Java toolchain targets JDK 11 (not 17) — see `sdk/java/pulumi/build.gradle`.
 - SDK version comes from `PULUMI_JAVA_SDK_VERSION` env var (defaults to `0.0.1` locally).
 - Golden file tests in `pkg/codegen/testing/test/testdata/` verify codegen output stability. Update with `PULUMI_ACCEPT=true`.
-- Changelog entries are required for most PRs. Run `mise exec -- make changelog` to create one.
+- Changelog entries are required for most PRs. Run `mise exec -- make changelog` to create one. The `Dependencies` kind is reserved for automated Renovate updates: a `postUpgradeTasks` hook runs `make renovate` (see `scripts/renovate-changelog.sh`), so those fragments carry no PR number.
 - Two things named "codegen": `pkg/codegen/java/` is the Go generator; `sdk/java/.../com/pulumi/codegen/` is Java runtime helpers used by generated code.
 
 ## Forbidden actions

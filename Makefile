@@ -120,3 +120,7 @@ clone_examples::
 .PHONY: changelog
 changelog:
 	changie new
+
+.PHONY: renovate
+renovate:
+	./scripts/renovate-changelog.sh "$(DEP)" "$(VERSION)" "$(FILE)"

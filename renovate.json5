@@ -6,4 +6,16 @@
     ignorePaths: [
         "**/testdata/**",
     ],
+    packageRules: [
+        {
+            description: "Write a changie fragment for each dependency bump",
+            matchPackageNames: ["*"],
+            postUpgradeTasks: {
+                commands: [
+                    "make renovate DEP='{{{depName}}}' VERSION='{{{newVersion}}}' FILE='{{{packageFile}}}'",
+                ],
+                executionMode: "update",
+            },
+        },
+    ],
 }
