@@ -273,3 +273,33 @@ func TestGenerateIncompleteMappingIsUnchanged(t *testing.T) {
 	assert.Contains(t, requireFile(t, files, "Example.java"),
 		"private Output</* @Nullable */ Object> unionOf;")
 }
+
+func TestGenerateDiscriminatedUnionRejectsUncoveredMember(t *testing.T) {
+	t.Parallel()
+
+	// Two tags naming the same member leaves another member uncovered while keeping the tag and
+	// member counts equal. Such a union must not generate an interface, because tag dispatch
+	// could never reach the uncovered member.
+	spec := unionTestSpec(3, 0, "discriminantKind")
+	union := spec.Resources["union:index:Example"].InputProperties["unionOf"]
+	union.Discriminator.Mapping["variant2"] = "#/types/union:index:Variant1"
+	spec.Resources["union:index:Example"].InputProperties["unionOf"] = union
+
+	files := generateUnionTestPackage(t, spec)
+
+	_, ok := files[javaSrcRoot+"outputs/IExampleUnionOf.java"]
+	assert.False(t, ok, "a union whose mapping leaves a member uncovered must not generate an interface")
+}
+
+func TestGenerateDiscriminatedUnionEscapesTags(t *testing.T) {
+	t.Parallel()
+
+	// Discriminator names and tags come from the schema and land inside Java string literals.
+	spec := unionTestSpec(3, 0, `kind"x`)
+	files := generateUnionTestPackage(t, spec)
+
+	outputs := requireFile(t, files, "outputs/IExampleUnionOf.java")
+	assert.Contains(t, outputs, `@DiscriminatedUnion("kind\"x")`,
+		"the discriminator name must be escaped, not terminate the literal")
+	assert.NotContains(t, outputs, `@DiscriminatedUnion("kind"x")`)
+}

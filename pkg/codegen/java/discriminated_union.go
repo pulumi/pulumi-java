@@ -137,11 +137,42 @@ func discriminatedUnionMembers(t *schema.UnionType) (map[string]*schema.ObjectTy
 	}
 
 	// Every element must be reachable through the mapping, otherwise the tag dispatch the generated
-	// annotations describe would be incomplete.
-	if len(members) != len(byToken) {
+	// annotations describe would be incomplete. Compare the set of covered tokens rather than the
+	// counts: two tags may name the same member, which keeps the counts equal while leaving
+	// another member uncovered.
+	covered := map[string]bool{}
+	for _, obj := range members {
+		covered[obj.Token] = true
+	}
+	if len(covered) != len(byToken) {
 		return nil, false
 	}
 	return members, true
+}
+
+// javaStringLiteral renders s as a Java string literal. Discriminator names and tags come from
+// the schema, so they may contain characters that would otherwise terminate or escape the literal.
+func javaStringLiteral(s string) string {
+	var b strings.Builder
+	b.WriteByte('"')
+	for _, r := range s {
+		switch r {
+		case '\\':
+			b.WriteString(`\\`)
+		case '"':
+			b.WriteString(`\"`)
+		case '\n':
+			b.WriteString(`\n`)
+		case '\r':
+			b.WriteString(`\r`)
+		case '\t':
+			b.WriteString(`\t`)
+		default:
+			b.WriteRune(r)
+		}
+	}
+	b.WriteByte('"')
+	return b.String()
 }
 
 // discriminatedUnionKey identifies a union by its discriminator and tag-to-member mapping, so that
@@ -286,12 +317,12 @@ func (mod *modContext) genDiscriminatedUnionInterface(ctx *classFileContext, ent
 	du := entry.union
 
 	fprintf(w, "\n")
-	fprintf(w, "@%s(\"%s\")\n", ctx.ref(names.DiscriminatedUnion), du.propertyName)
+	fprintf(w, "@%s(%s)\n", ctx.ref(names.DiscriminatedUnion), javaStringLiteral(du.propertyName))
 	for _, tag := range du.tags {
 		member := entry.shapeOf(du.members[tag])
 		memberType := mod.typeStringForObjectType(member, entry.qualifier, entry.input)
-		fprintf(w, "@%s.Case(tag = \"%s\", type = %s.class)\n",
-			ctx.ref(names.DiscriminatedUnion), tag, memberType.ToCode(ctx.imports))
+		fprintf(w, "@%s.Case(tag = %s, type = %s.class)\n",
+			ctx.ref(names.DiscriminatedUnion), javaStringLiteral(tag), memberType.ToCode(ctx.imports))
 	}
 
 	var extends string
@@ -476,7 +507,7 @@ func registerDiscriminatedUnions(pkg *schema.Package) *unionRegistry {
 
 		candidate := "I" + pos.owner + pos.property
 		name := candidate
-		for i := 2; !reserve(mod, name); i++ {
+		for i := 2; !reserve(mod, names.Ident(name).String()); i++ {
 			name = fmt.Sprintf("%s%d", candidate, i)
 		}
 
