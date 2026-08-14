@@ -251,6 +251,9 @@ var expectedFailures = map[string]string{
 	"l3-range-map-ref":                       "compilation error: cannot find symbol on ranged resource references (added in 3.248)",                           //nolint:lll
 	"l3-range-invoke-output-traversal":       "compilation error: cannot find symbol on ranged invoke output traversal (added in 3.250)",                       //nolint:lll
 	"l3-component-provider":                  "compilation error: cannot find symbol myComponent, the component declaration is not generated (added in 3.253)", //nolint:lll
+	"l1-for-expression":                      "ForExpression not implemented, outputs are literal \"TODO: ForExpression\" strings (added in 3.257)",            //nolint:lll
+	"l2-reserved-names":                      "compilation error: cannot find symbol variable ElementTypeArgs (added in 3.257)",                                //nolint:lll
+	"l2-resource-hook-panic":                 "update succeeds instead of bailing when an after hook panics (added in 3.257)",                                  //nolint:lll
 
 	"l2-resource-primitive-conversions":      "Failure after updating to 3.232",
 	"l3-component-primitive-conversions":     "Failure after updating to 3.232",
