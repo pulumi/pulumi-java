@@ -12,7 +12,7 @@ import com.pulumi.myext.Utilities;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-@ResourceType(type="extbase:index:GreetingComponent")
+@ResourceType(type="myext:index:GreetingComponent")
 public class GreetingComponent extends com.pulumi.resources.ComponentResource {
     @Export(name="parameterValue", refs={String.class}, tree="[0]")
     private Output<String> parameterValue;
@@ -43,7 +43,7 @@ public class GreetingComponent extends com.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GreetingComponent(java.lang.String name, @Nullable GreetingComponentArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {
-        super("extbase:index:GreetingComponent", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true, Utilities.getPackageRef());
+        super("myext:index:GreetingComponent", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), true, Utilities.getPackageRef());
     }
 
     private static GreetingComponentArgs makeArgs(@Nullable GreetingComponentArgs args, @Nullable com.pulumi.resources.ComponentResourceOptions options) {

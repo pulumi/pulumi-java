@@ -22,12 +22,12 @@ public final class MyextFunctions {
         return greetPlain(args, InvokeOptions.Empty);
     }
     public static Output<GreetResult> greet(GreetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("extbase:index:greet", TypeShape.of(GreetResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        return Deployment.getInstance().invoke("myext:index:greet", TypeShape.of(GreetResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
     }
     public static Output<GreetResult> greet(GreetArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("extbase:index:greet", TypeShape.of(GreetResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        return Deployment.getInstance().invoke("myext:index:greet", TypeShape.of(GreetResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
     }
     public static CompletableFuture<GreetResult> greetPlain(GreetPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("extbase:index:greet", TypeShape.of(GreetResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
+        return Deployment.getInstance().invokeAsync("myext:index:greet", TypeShape.of(GreetResult.class), args, Utilities.withVersion(options), Utilities.getPackageRef());
     }
 }
