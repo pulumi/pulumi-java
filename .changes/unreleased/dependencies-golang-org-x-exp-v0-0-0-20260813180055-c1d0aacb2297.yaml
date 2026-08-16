@@ -1,0 +1,4 @@
+component: runtime
+kind: dependencies
+body: Update golang.org/x/exp to v0.0.0-20260813180055-c1d0aacb2297
+time: 2026-08-16T20:31:30.036738963Z
