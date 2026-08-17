@@ -5,7 +5,6 @@ package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.mypkg.outputs.IGetIntegrationRuntimeObjectMetadatumValue;
 import com.pulumi.mypkg.outputs.SsisParameterResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -15,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class SsisPackageResponse implements IGetIntegrationRuntimeObjectMetadatumValue {
+public final class SsisPackageResponse {
     /**
      * @return Metadata description.
      * 

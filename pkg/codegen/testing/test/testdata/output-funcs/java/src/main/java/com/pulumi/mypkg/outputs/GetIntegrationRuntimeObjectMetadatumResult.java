@@ -4,7 +4,11 @@
 package com.pulumi.mypkg.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.mypkg.outputs.IGetIntegrationRuntimeObjectMetadatumValue;
+import com.pulumi.mypkg.outputs.SsisEnvironmentResponse;
+import com.pulumi.mypkg.outputs.SsisFolderResponse;
+import com.pulumi.mypkg.outputs.SsisPackageResponse;
+import com.pulumi.mypkg.outputs.SsisProjectResponse;
+import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +26,7 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
      * @return List of SSIS object metadata.
      * 
      */
-    private @Nullable List<IGetIntegrationRuntimeObjectMetadatumValue> value;
+    private @Nullable List<Object> value;
 
     private GetIntegrationRuntimeObjectMetadatumResult() {}
     /**
@@ -36,7 +40,7 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
      * @return List of SSIS object metadata.
      * 
      */
-    public List<IGetIntegrationRuntimeObjectMetadatumValue> value() {
+    public List<Object> value() {
         return this.value == null ? List.of() : this.value;
     }
 
@@ -50,7 +54,7 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String nextLink;
-        private @Nullable List<IGetIntegrationRuntimeObjectMetadatumValue> value;
+        private @Nullable List<Object> value;
         public Builder() {}
         public Builder(GetIntegrationRuntimeObjectMetadatumResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,12 +69,12 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             return this;
         }
         @CustomType.Setter
-        public Builder value(@Nullable List<IGetIntegrationRuntimeObjectMetadatumValue> value) {
+        public Builder value(@Nullable List<Object> value) {
 
             this.value = value;
             return this;
         }
-        public Builder value(IGetIntegrationRuntimeObjectMetadatumValue... value) {
+        public Builder value(Object... value) {
             return value(List.of(value));
         }
         public GetIntegrationRuntimeObjectMetadatumResult build() {

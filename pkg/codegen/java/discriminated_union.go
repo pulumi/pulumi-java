@@ -15,15 +15,12 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
-// minDiscriminatedUnionMembers is the number of members a discriminated union needs before it gets
-// a generated interface. Two-member unions keep using Either<L, R>.
-const minDiscriminatedUnionMembers = 3
-
 const typeRefPrefix = "#/types/"
 
-// discriminatedUnion is a schema union that carries a discriminator with a non-empty mapping and at
-// least minDiscriminatedUnionMembers members. Such a union is generated as a Java interface that
-// each member class implements, rather than degrading to java.lang.Object.
+// discriminatedUnion is a schema union that carries a discriminator with a non-empty mapping. Such
+// a union is generated as a Java interface that each member class implements, rather than degrading
+// to java.lang.Object or to Either<L, R>. Member count never takes part in the decision, so adding
+// a member to a union does not change the shape of the code generated for it.
 type discriminatedUnion struct {
 	// name is the interface name without the shape suffix that typeName applies to member classes.
 	name string
@@ -180,7 +177,7 @@ func javaStringLiteral(s string) string {
 // resolves to one generated interface.
 func discriminatedUnionKey(t *schema.UnionType) (string, bool) {
 	members, ok := discriminatedUnionMembers(t)
-	if !ok || len(members) < minDiscriminatedUnionMembers {
+	if !ok {
 		return "", false
 	}
 
@@ -380,10 +377,16 @@ type unionPosition struct {
 // property name - which keeps the name stable when members are added to the union, and unique
 // because positions are unique. Positions are visited in a fixed order so regenerating a package
 // produces the same names.
-func registerDiscriminatedUnions(pkg *schema.Package) *unionRegistry {
+//
+// The registry stays empty unless the package sets the fullyTypedUnions option, because typing a
+// union that used to be java.lang.Object or Either<L, R> breaks the callers of the generated SDK.
+func registerDiscriminatedUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 	reg := &unionRegistry{
 		byKey:    map[string]*discriminatedUnion{},
 		byMember: map[string][]*discriminatedUnion{},
+	}
+	if !fullyTypedUnions {
+		return reg
 	}
 
 	// Reserve the names of the types the package already generates so an interface can never shadow

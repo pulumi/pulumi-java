@@ -35,7 +35,6 @@
     "src/main/java/com/pulumi/mypkg/outputs/GetBastionShareableLinkResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/GetClientConfigResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/GetIntegrationRuntimeObjectMetadatumResult.java",
-    "src/main/java/com/pulumi/mypkg/outputs/IGetIntegrationRuntimeObjectMetadatumValue.java",
     "src/main/java/com/pulumi/mypkg/outputs/ListStorageAccountKeysResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/SsisEnvironmentReferenceResponse.java",
     "src/main/java/com/pulumi/mypkg/outputs/SsisEnvironmentResponse.java",

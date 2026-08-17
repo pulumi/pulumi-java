@@ -289,9 +289,9 @@ func (mod *modContext) typeStringRecHelper(
 		tokenType := pkg.Dot(names.Ident(tokenToName(t.Token)))
 		return TypeShape{Type: tokenType}
 	case *schema.UnionType:
-		// A discriminated union of three or more members is generated as an interface the members
-		// implement. Checked before the elements are rendered so that referring to the union does
-		// not also import every member.
+		// Under the fullyTypedUnions option a discriminated union is generated as an interface the
+		// members implement. Checked before the elements are rendered so that referring to the
+		// union does not also import every member.
 		if shape, ok := mod.discriminatedUnionTypeString(t, qualifier, input); ok {
 			return shape
 		}
@@ -323,8 +323,8 @@ func (mod *modContext) typeStringRecHelper(
 				Parameters: elementTypes,
 			}
 		default:
-			// Either<L, R> only has two arms, so a union of three or more members that is not a
-			// discriminated union still degrades to java.lang.Object.
+			// Either<L, R> only has two arms, so a union of three or more members that did not
+			// generate an interface still degrades to java.lang.Object.
 			return TypeShape{Type: names.Object}
 		}
 	default:
@@ -2229,7 +2229,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 
 	// Name the discriminated unions once for the whole package, so that a union reached through
 	// several properties or modules resolves to a single generated interface.
-	unions := registerDiscriminatedUnions(pkg)
+	unions := registerDiscriminatedUnions(pkg, infos[pkg].FullyTypedUnions)
 
 	var getMod func(modName string, p schema.PackageReference) *modContext
 	getMod = func(modName string, p schema.PackageReference) *modContext {
