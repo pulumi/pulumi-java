@@ -138,10 +138,18 @@ func unionTestSpec(variantCount, subsetCount int, discriminator string) schema.P
 	}
 }
 
+// withFullyTypedUnions opts the package in to generated union interfaces.
+func withFullyTypedUnions(spec schema.PackageSpec) schema.PackageSpec {
+	spec.Language = map[string]schema.RawMessage{
+		"java": schema.RawMessage(`{"fullyTypedUnions": true}`),
+	}
+	return spec
+}
+
 func TestGenerateDiscriminatedUnionInterface(t *testing.T) {
 	t.Parallel()
 
-	files := generateUnionTestPackage(t, unionTestSpec(4, 0, "discriminantKind"))
+	files := generateUnionTestPackage(t, withFullyTypedUnions(unionTestSpec(4, 0, "discriminantKind")))
 
 	outputs := requireFile(t, files, "outputs/IExampleUnionOf.java")
 	assert.Contains(t, outputs, `import com.pulumi.core.annotations.DiscriminatedUnion;`)
@@ -175,6 +183,7 @@ func TestGenerateDiscriminatedUnionInterface(t *testing.T) {
 func TestGenerateConstValuedProperty(t *testing.T) {
 	t.Parallel()
 
+	// Const initialization does not depend on the union opt-in.
 	files := generateUnionTestPackage(t, unionTestSpec(4, 0, "discriminantKind"))
 
 	// The discriminator tag is a constant, so the generated builder fills it in and the caller never
@@ -192,7 +201,7 @@ func TestGenerateConstValuedProperty(t *testing.T) {
 func TestGenerateDiscriminatedUnionSubsetInterface(t *testing.T) {
 	t.Parallel()
 
-	files := generateUnionTestPackage(t, unionTestSpec(4, 3, "discriminantKind"))
+	files := generateUnionTestPackage(t, withFullyTypedUnions(unionTestSpec(4, 3, "discriminantKind")))
 
 	// A value of the narrower union must assign into a slot typed as the wider one.
 	assert.Contains(t, requireFile(t, files, "outputs/ISubsetExampleUnionOf.java"),
@@ -212,6 +221,41 @@ func TestGenerateDiscriminatedUnionSubsetInterface(t *testing.T) {
 		"private @Nullable Output<ISubsetExampleUnionOfArgs> unionOf;")
 }
 
+// Without the opt-in every union keeps the shape it has today, however many members it has.
+func TestGenerateDiscriminatedUnionRequiresOptIn(t *testing.T) {
+	t.Parallel()
+
+	files := generateUnionTestPackage(t, unionTestSpec(4, 0, "discriminantKind"))
+
+	for name := range files {
+		assert.NotContains(t, name, "IExample", "no interface should be generated without the opt-in")
+	}
+	assert.Contains(t, requireFile(t, files, "Example.java"),
+		"private Output</* @Nullable */ Object> unionOf;")
+	assert.Contains(t, requireFile(t, files, "ExampleArgs.java"),
+		"private @Nullable Output<Object> unionOf;")
+}
+
+// Member count never decides the shape: the opt-in covers a two-member union as well, so adding a
+// third member to one is not a breaking change.
+func TestGenerateTwoMemberDiscriminatedUnionInterface(t *testing.T) {
+	t.Parallel()
+
+	files := generateUnionTestPackage(t, withFullyTypedUnions(unionTestSpec(2, 0, "discriminantKind")))
+
+	outputs := requireFile(t, files, "outputs/IExampleUnionOf.java")
+	assert.Contains(t, outputs, `@DiscriminatedUnion("discriminantKind")`)
+	assert.Contains(t, outputs, `@DiscriminatedUnion.Case(tag = "variant1", type = Variant1.class)`)
+	assert.Contains(t, outputs, `@DiscriminatedUnion.Case(tag = "variant2", type = Variant2.class)`)
+
+	example := requireFile(t, files, "Example.java")
+	assert.Contains(t, example, "private Output</* @Nullable */ IExampleUnionOf> unionOf;")
+	assert.NotContains(t, example, "Either")
+	assert.Contains(t, requireFile(t, files, "ExampleArgs.java"),
+		"private @Nullable Output<IExampleUnionOfArgs> unionOf;")
+}
+
+// Without the opt-in a two-member union keeps Either<L, R>.
 func TestGenerateTwoMemberDiscriminatedUnionIsUnchanged(t *testing.T) {
 	t.Parallel()
 
@@ -231,7 +275,7 @@ func TestGenerateTwoMemberDiscriminatedUnionIsUnchanged(t *testing.T) {
 func TestGenerateUndiscriminatedUnionIsUnchanged(t *testing.T) {
 	t.Parallel()
 
-	files := generateUnionTestPackage(t, unionTestSpec(4, 0, ""))
+	files := generateUnionTestPackage(t, withFullyTypedUnions(unionTestSpec(4, 0, "")))
 
 	for name := range files {
 		assert.NotContains(t, name, "IExample", "no interface should be generated without a discriminator")
@@ -248,7 +292,7 @@ func TestGenerateUndiscriminatedUnionIsUnchanged(t *testing.T) {
 func TestGenerateTrailingUnderscoreDiscriminator(t *testing.T) {
 	t.Parallel()
 
-	files := generateUnionTestPackage(t, unionTestSpec(3, 0, "type__"))
+	files := generateUnionTestPackage(t, withFullyTypedUnions(unionTestSpec(3, 0, "type__")))
 
 	outputs := requireFile(t, files, "outputs/IExampleUnionOf.java")
 	assert.Contains(t, outputs, `@DiscriminatedUnion("type__")`)
@@ -261,7 +305,7 @@ func TestGenerateTrailingUnderscoreDiscriminator(t *testing.T) {
 func TestGenerateIncompleteMappingIsUnchanged(t *testing.T) {
 	t.Parallel()
 
-	spec := unionTestSpec(4, 0, "discriminantKind")
+	spec := withFullyTypedUnions(unionTestSpec(4, 0, "discriminantKind"))
 	union := spec.Resources["union:index:Example"].InputProperties["unionOf"]
 	delete(union.Discriminator.Mapping, "variant4")
 
@@ -280,7 +324,7 @@ func TestGenerateDiscriminatedUnionRejectsUncoveredMember(t *testing.T) {
 	// Two tags naming the same member leaves another member uncovered while keeping the tag and
 	// member counts equal. Such a union must not generate an interface, because tag dispatch
 	// could never reach the uncovered member.
-	spec := unionTestSpec(3, 0, "discriminantKind")
+	spec := withFullyTypedUnions(unionTestSpec(3, 0, "discriminantKind"))
 	union := spec.Resources["union:index:Example"].InputProperties["unionOf"]
 	union.Discriminator.Mapping["variant2"] = "#/types/union:index:Variant1"
 	spec.Resources["union:index:Example"].InputProperties["unionOf"] = union
@@ -295,7 +339,7 @@ func TestGenerateDiscriminatedUnionEscapesTags(t *testing.T) {
 	t.Parallel()
 
 	// Discriminator names and tags come from the schema and land inside Java string literals.
-	spec := unionTestSpec(3, 0, `kind"x`)
+	spec := withFullyTypedUnions(unionTestSpec(3, 0, `kind"x`))
 	files := generateUnionTestPackage(t, spec)
 
 	outputs := requireFile(t, files, "outputs/IExampleUnionOf.java")
