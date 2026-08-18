@@ -17,10 +17,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class GrpcRecursionLimitTest {
 
-    // Protobuf stops at 100 levels of nesting by default, and one level of a Struct costs three of
-    // them (Struct, map entry, Value), so this is comfortably past the limit a default marshaller
-    // would enforce. See https://github.com/pulumi/pulumi-java/issues/2277.
-    private static final int NESTING_DEPTH = 64;
+    // Matches the depth of the l2-large-map conformance test (pulumi/pulumi#24361). Protobuf stops
+    // at 100 levels by default and one level of a Struct costs three of them (Struct, map entry,
+    // Value), so a default marshaller gives up around 33. See pulumi/pulumi-java#2277.
+    private static final int NESTING_DEPTH = 300;
 
     private static final String SERVICE_NAME = "pulumirpc.ResourceMonitor";
 

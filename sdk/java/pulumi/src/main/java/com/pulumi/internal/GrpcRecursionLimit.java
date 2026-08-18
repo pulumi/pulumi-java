@@ -32,7 +32,9 @@ public final class GrpcRecursionLimit {
 
     /**
      * Matches the limit the Go engine parses with, so that the Java SDK is not the narrower end
-     * of the connection.
+     * of the connection. Well above what the JVM can reach in practice: protobuf parses
+     * recursively, so the thread's stack runs out first, somewhere past 300 levels of property
+     * nesting. That makes this a ceiling on the artificial limit rather than on the payload.
      */
     public static final int RECURSION_LIMIT = 10_000;
 
