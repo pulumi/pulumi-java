@@ -200,6 +200,7 @@ var expectedFailures = map[string]string{
 	"l2-resource-names":                      "https://github.com/pulumi/pulumi-java/issues/2020",
 	"l2-discriminated-union":                 "https://github.com/pulumi/pulumi-java/issues/2021",
 	"policy-stack-tags":                      "https://github.com/pulumi/pulumi-java/issues/2022",
+	"policy-analyze-stack":                   "no policy pack support (added in v3.258.0)",
 	"provider-resource-component":            "not implemented",
 	"provider-alias-component":               "not implemented",
 	"provider-replacement-trigger-component": "https://github.com/pulumi/pulumi-java/issues/2007",
