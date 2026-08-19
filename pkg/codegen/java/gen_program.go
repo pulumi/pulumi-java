@@ -731,7 +731,7 @@ func collectObjectImports(
 func (g *generator) collectResourceImports(resource *pcl.Resource) []string {
 	imports := make([]string, 0)
 	pkg, module, name, _ := pcl.DecomposeToken(resource.GetToken())
-	resourceImport := pulumiResourceImport(resource, pkg, module, name)
+	resourceImport := pulumiResourceImport(resource, pkg, module, names.Title(name))
 	imports = append(imports, resourceImport)
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
 		// import args type name
@@ -1109,6 +1109,7 @@ func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 	if pkg == pulumiToken && module == providersToken {
 		member = "Provider"
 	}
+	member = names.Title(member)
 
 	if !g.emittedTypeImportSymbols.Has(pulumiResourceImport(resource, pkg, module, member)) {
 		// if we didn't emit an import statement for this symbol
@@ -1117,7 +1118,7 @@ func (g *generator) resourceTypeName(resource *pcl.Resource) string {
 		return pulumiResourceImport(resource, pkg, module, member)
 	}
 
-	return names.Title(member)
+	return member
 }
 
 // resourceArgsTypeName computes the Java arguments class name for the given resource.
