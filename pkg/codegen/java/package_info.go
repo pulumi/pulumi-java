@@ -186,11 +186,21 @@ func (i PackageInfo) WithJavaSdkDependencyDefault(ver semver.Version) PackageInf
 
 // Makes sure dependencies are added for libraries that the generated
 // code may link against.
+//
+// These versions are kept in sync with the versions declared in
+// sdk/java/pulumi/build.gradle so that a generated provider SDK does
+// not pull in a different version of a shared library than the core
+// Pulumi Java SDK it depends on. Maven's dependency mediation picks a
+// version based on the *declaration order* of dependencies when there
+// is a tie in depth, so a mismatch here can cause the resolved version
+// (and therefore the runtime behavior) of a program to depend on the
+// order in which dependencies are listed in its pom.xml. See
+// https://github.com/pulumi/pulumi-java/issues/812.
 func (i PackageInfo) WithDefaultDependencies() PackageInfo {
 	return i.
 		// Generated code may reference JsonElemeent class.
 		WithDependencyDefault("com.google.code.gson:gson",
-			semver.MustParse("2.8.9")).
+			semver.MustParse("2.10.1")).
 		// TODO consider removing this; this is needed when
 		// the generated code depends on the Nullable class
 		WithDependencyDefault("com.google.code.findbugs:jsr305",
