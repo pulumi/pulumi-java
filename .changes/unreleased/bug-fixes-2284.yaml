@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: 'Align the default `gson` dependency version generated for provider SDKs with the version pinned by the core Pulumi Java SDK, so Maven consumers resolve the same version regardless of the order dependencies are declared in their `pom.xml`.'
+time: 2026-08-20T00:31:31.000000000Z
+custom:
+    PR: "2284"
