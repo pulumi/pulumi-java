@@ -201,6 +201,9 @@ var expectedFailures = map[string]string{
 	"l2-discriminated-union":                 "https://github.com/pulumi/pulumi-java/issues/2021",
 	"policy-stack-tags":                      "https://github.com/pulumi/pulumi-java/issues/2022",
 	"policy-analyze-stack":                   "no policy pack support (added in v3.258.0)",
+	"policy-resource-metadata":               "no policy pack support (added in v3.259.0)",
+	"l1-component-sourceless":                "local PCL components not generated; sourceless component is dropped from the program (added in v3.259.0)",    //nolint:lll
+	"l3-map-keys":                            "compilation error: cannot find symbol: variable cmp; local PCL components not generated (added in v3.259.0)", //nolint:lll
 	"provider-resource-component":            "not implemented",
 	"provider-alias-component":               "not implemented",
 	"provider-replacement-trigger-component": "https://github.com/pulumi/pulumi-java/issues/2007",

@@ -1,0 +1,6 @@
+component: sdk
+kind: Improvements
+body: Allow transforms to be mocked
+time: 2026-08-24T11:36:46.419650946+02:00
+custom:
+    PR: "1139"
