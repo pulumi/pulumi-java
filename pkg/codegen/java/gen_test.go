@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pulumi/pulumi/pkg/v3/codegen"
+	mapset "github.com/deckarep/golang-set/v2"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 )
@@ -81,7 +81,7 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 			Directory:   "build-files/none",
 			Description: "Tests for build-files = none",
 			// We don't generate a gradle file, so we can't compile.
-			SkipCompileCheck: codegen.NewStringSet("java"),
+			SkipCompileCheck: mapset.NewSet("java"),
 		}),
 		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "build-files/gradle",
@@ -116,84 +116,84 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		}
 	case "external-resource-schema":
 		// TODO[pulumi/pulumi-java#13]
-		t.Skip = codegen.NewStringSet("java/any")
+		t.Skip = mapset.NewSet("java/any")
 		hasExtras = true
 	case "simple-methods-schema":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "provider-type-schema":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "provider-config-schema":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "simple-methods-schema-single-value-returns":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "simplified-invokes":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "hyphen-url":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "plain-object-defaults":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "regress-8403":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "plain-object-disable-defaults":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "regress-node-8110":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "different-package-name-conflict":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "different-enum":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "regress-go-8664":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "external-node-compatibility":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "external-go-import-aliases":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "external-python-same-module-name":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "internal-dependencies-go":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "go-plain-ref-repro":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "embedded-crd-types":
-		t.Skip = codegen.NewStringSet("java/any") // python only
+		t.Skip = mapset.NewSet("java/any") // python only
 	case "go-nested-collections":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "naming-collisions":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "assets-and-archives-go-generics-only":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "simple-plain-schema-go-generics-only":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "simple-enum-schema-go-generics-only":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "secrets-go-generics-only":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "plain-and-default-go-generics-only":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "output-funcs-go-generics-only":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "regress-py-14539":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	case "regress-py-14012":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	case "methods-return-plain-resource":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
+		t.Skip = mapset.NewSet("java/any") // TODO
 	case "go-overridden-internal-module-name":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "regress-py-12546":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	case "array-of-enum-map":
-		t.Skip = codegen.NewStringSet("java/any") // go-only
+		t.Skip = mapset.NewSet("java/any") // go-only
 	case "python-typed-dict-setuppy":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	case "python-typed-dict-pyproject":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	case "overlay-supported-languages":
-		t.Skip = codegen.NewStringSet("java/any") // docs-only
+		t.Skip = mapset.NewSet("java/any") // docs-only
 	case "python-typed-dict-disabled-setuppy":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	case "regress-py-17219":
-		t.Skip = codegen.NewStringSet("java/any") // python-only
+		t.Skip = mapset.NewSet("java/any") // python-only
 	}
 
 	if hasExtras {
