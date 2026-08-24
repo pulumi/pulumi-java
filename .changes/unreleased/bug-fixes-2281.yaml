@@ -1,6 +1,0 @@
-component: codegen
-kind: bug-fixes
-body: 'Fix program generation for resources whose type token member is not title-cased: the import now matches the generated SDK class name.'
-time: 2026-08-19T10:36:59.328402-07:00
-custom:
-    PR: "2281"
