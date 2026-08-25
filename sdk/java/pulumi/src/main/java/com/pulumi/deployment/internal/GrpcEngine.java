@@ -2,6 +2,7 @@ package com.pulumi.deployment.internal;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.pulumi.core.internal.ContextAwareCompletableFuture;
+import com.pulumi.internal.GrpcRecursionLimit;
 import io.grpc.ManagedChannelBuilder;
 import pulumirpc.EngineGrpc;
 import pulumirpc.EngineOuterClass.GetRootResourceRequest;
@@ -25,7 +26,8 @@ public class GrpcEngine implements Engine {
         var channelBuilder = ManagedChannelBuilder
                 .forTarget(engine)
                 .usePlaintext() // disable TLS
-                .maxInboundMessageSize(maxRpcMessageSizeInBytes);
+                .maxInboundMessageSize(maxRpcMessageSizeInBytes)
+                .intercept(GrpcRecursionLimit.clientInterceptor());
         var interceptor = Instrumentation.getClientInterceptor();
         if (interceptor != null) {
             channelBuilder.intercept(interceptor);

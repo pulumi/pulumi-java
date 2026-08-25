@@ -19,6 +19,7 @@ import io.grpc.stub.StreamObserver;
 
 import com.pulumi.core.Alias;
 import com.pulumi.deployment.internal.InlineDeploymentSettings;
+import com.pulumi.internal.GrpcRecursionLimit;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.provider.internal.properties.PropertyValue;
 import com.pulumi.resources.ComponentResourceOptions;
@@ -47,7 +48,8 @@ public class ResourceProviderService {
 
     void start() throws IOException {
         server = createServerBuilder()
-            .addService(new ResourceProviderImpl(this.engineAddress, this.implementation))
+            .addService(GrpcRecursionLimit.intercept(
+                new ResourceProviderImpl(this.engineAddress, this.implementation).bindService()))
             .intercept(new ErrorHandlingInterceptor())
             .build()
             .start();

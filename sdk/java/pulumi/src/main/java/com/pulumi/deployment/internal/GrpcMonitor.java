@@ -2,6 +2,7 @@ package com.pulumi.deployment.internal;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.pulumi.core.internal.ContextAwareCompletableFuture;
+import com.pulumi.internal.GrpcRecursionLimit;
 import com.pulumi.resources.Resource;
 import io.grpc.ManagedChannelBuilder;
 import pulumirpc.Provider.CallResponse;
@@ -33,7 +34,8 @@ public class GrpcMonitor implements Monitor {
         var channelBuilder = ManagedChannelBuilder
                 .forTarget(monitor)
                 .usePlaintext() // disable TLS
-                .maxInboundMessageSize(maxRpcMessageSizeInBytes);
+                .maxInboundMessageSize(maxRpcMessageSizeInBytes)
+                .intercept(GrpcRecursionLimit.clientInterceptor());
         var interceptor = Instrumentation.getClientInterceptor();
         if (interceptor != null) {
             channelBuilder.intercept(interceptor);
