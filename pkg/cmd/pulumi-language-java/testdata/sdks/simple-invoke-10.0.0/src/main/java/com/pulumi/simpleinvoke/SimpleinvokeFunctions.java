@@ -9,21 +9,42 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.simpleinvoke.Utilities;
+import com.pulumi.simpleinvoke.inputs.EchoMapArgs;
+import com.pulumi.simpleinvoke.inputs.EchoMapPlainArgs;
 import com.pulumi.simpleinvoke.inputs.GetTextArgs;
 import com.pulumi.simpleinvoke.inputs.GetTextPlainArgs;
+import com.pulumi.simpleinvoke.inputs.InvokeWithDefaultArgs;
+import com.pulumi.simpleinvoke.inputs.InvokeWithDefaultPlainArgs;
 import com.pulumi.simpleinvoke.inputs.MyInvokeArgs;
 import com.pulumi.simpleinvoke.inputs.MyInvokePlainArgs;
 import com.pulumi.simpleinvoke.inputs.SecretInvokeArgs;
 import com.pulumi.simpleinvoke.inputs.SecretInvokePlainArgs;
 import com.pulumi.simpleinvoke.inputs.UnitArgs;
 import com.pulumi.simpleinvoke.inputs.UnitPlainArgs;
+import com.pulumi.simpleinvoke.outputs.EchoMapResult;
 import com.pulumi.simpleinvoke.outputs.GetTextResult;
+import com.pulumi.simpleinvoke.outputs.InvokeWithDefaultResult;
 import com.pulumi.simpleinvoke.outputs.MyInvokeResult;
 import com.pulumi.simpleinvoke.outputs.SecretInvokeResult;
 import com.pulumi.simpleinvoke.outputs.UnitResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class SimpleinvokeFunctions {
+    public static Output<EchoMapResult> echoMap(EchoMapArgs args) {
+        return echoMap(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<EchoMapResult> echoMapPlain(EchoMapPlainArgs args) {
+        return echoMapPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<EchoMapResult> echoMap(EchoMapArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("simple-invoke:index:echoMap", TypeShape.of(EchoMapResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<EchoMapResult> echoMap(EchoMapArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("simple-invoke:index:echoMap", TypeShape.of(EchoMapResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<EchoMapResult> echoMapPlain(EchoMapPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("simple-invoke:index:echoMap", TypeShape.of(EchoMapResult.class), args, Utilities.withVersion(options));
+    }
     public static Output<GetTextResult> getText(GetTextArgs args) {
         return getText(args, InvokeOptions.Empty);
     }
@@ -38,6 +59,27 @@ public final class SimpleinvokeFunctions {
     }
     public static CompletableFuture<GetTextResult> getTextPlain(GetTextPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("simple-invoke:index:getText", TypeShape.of(GetTextResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<InvokeWithDefaultResult> invokeWithDefault() {
+        return invokeWithDefault(InvokeWithDefaultArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<InvokeWithDefaultResult> invokeWithDefaultPlain() {
+        return invokeWithDefaultPlain(InvokeWithDefaultPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    public static Output<InvokeWithDefaultResult> invokeWithDefault(InvokeWithDefaultArgs args) {
+        return invokeWithDefault(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<InvokeWithDefaultResult> invokeWithDefaultPlain(InvokeWithDefaultPlainArgs args) {
+        return invokeWithDefaultPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<InvokeWithDefaultResult> invokeWithDefault(InvokeWithDefaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("simple-invoke:index:invokeWithDefault", TypeShape.of(InvokeWithDefaultResult.class), args, Utilities.withVersion(options));
+    }
+    public static Output<InvokeWithDefaultResult> invokeWithDefault(InvokeWithDefaultArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("simple-invoke:index:invokeWithDefault", TypeShape.of(InvokeWithDefaultResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<InvokeWithDefaultResult> invokeWithDefaultPlain(InvokeWithDefaultPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("simple-invoke:index:invokeWithDefault", TypeShape.of(InvokeWithDefaultResult.class), args, Utilities.withVersion(options));
     }
     public static Output<MyInvokeResult> myInvoke(MyInvokeArgs args) {
         return myInvoke(args, InvokeOptions.Empty);

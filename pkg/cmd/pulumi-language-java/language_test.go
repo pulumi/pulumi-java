@@ -288,6 +288,12 @@ var expectedFailures = map[string]string{
 	"l2-failed-create-recover-continue-on-error": "recover intrinsic not implemented in programgen (added in 3.252)",
 
 	"l2-resource-hook-on-error": "resource hooks not implemented in programgen, the hook is dropped from the generated program (added in 3.254)", //nolint:lll
+
+	"l2-kebab-names":                    "compilation error: kebab-case resource/type/function names generate identifiers containing hyphens (extended in 3.260)",  //nolint:lll
+	"l2-large-map":                      "compilation error: import of the Map resource is ambiguous with java.util.Map in the generated program (added in 3.260)", //nolint:lll
+	"l2-map-keys-invoke-call":           "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.260)",        //nolint:lll
+	"l2-discriminated-union-marked-key": "compilation error: programgen passes output union types where input Args types are expected (added in 3.260)",            //nolint:lll
+	"l2-resource-read-unknown":          "read resource not implemented, the res declaration is dropped from the generated program (added in 3.260)",               //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
