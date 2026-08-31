@@ -1,6 +1,0 @@
-component: sdk
-kind: bug-fixes
-body: Parse gRPC messages with a raised protobuf recursion limit, so resources with deeply nested properties no longer abort the whole program with "Protocol message had too many levels of nesting"
-time: 2026-08-18T12:00:00.000000000Z
-custom:
-    PR: "2282"
