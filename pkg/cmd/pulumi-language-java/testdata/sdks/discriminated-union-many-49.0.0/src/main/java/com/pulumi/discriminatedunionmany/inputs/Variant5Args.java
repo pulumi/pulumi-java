@@ -64,11 +64,27 @@ public final class Variant5Args extends com.pulumi.resources.ResourceArgs {
             $ = new Variant5Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
         public Builder discriminantKind(Output<String> discriminantKind) {
             $.discriminantKind = discriminantKind;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
         public Builder discriminantKind(String discriminantKind) {
             return discriminantKind(Output.of(discriminantKind));
         }
@@ -92,7 +108,7 @@ public final class Variant5Args extends com.pulumi.resources.ResourceArgs {
         }
 
         public Variant5Args build() {
-            $.discriminantKind = Codegen.stringProp("discriminantKind").output().arg($.discriminantKind).require();
+            $.discriminantKind = Codegen.stringProp("discriminantKind").output().arg($.discriminantKind).def("variant5").require();
             return $;
         }
     }

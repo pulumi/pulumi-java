@@ -135,6 +135,7 @@ public class ConfigMap extends com.pulumi.resources.CustomResource {
         super("kubernetes:core/v1:ConfigMap", name, null, makeResourceOptions(options, id), false);
     }
 
+    @SuppressWarnings("deprecation")
     private static ConfigMapArgs makeArgs(@Nullable ConfigMapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;

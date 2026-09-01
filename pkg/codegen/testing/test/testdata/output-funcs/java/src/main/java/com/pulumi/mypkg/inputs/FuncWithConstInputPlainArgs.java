@@ -46,13 +46,21 @@ public final class FuncWithConstInputPlainArgs extends com.pulumi.resources.Invo
             $ = new FuncWithConstInputPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
         public Builder plainInput(@Nullable String plainInput) {
             $.plainInput = plainInput;
             return this;
         }
 
         public FuncWithConstInputPlainArgs build() {
-            $.plainInput = Codegen.stringProp("plainInput").arg($.plainInput).getNullable();
+            $.plainInput = Codegen.stringProp("plainInput").arg($.plainInput).def("fixed").getNullable();
             return $;
         }
     }

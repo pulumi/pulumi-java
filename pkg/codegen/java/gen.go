@@ -411,7 +411,13 @@ type propJavadocOptions struct {
 func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJavadocOptions) {
 	w := ctx.writer
 
-	if prop.Comment == "" && prop.DeprecationMessage == "" {
+	deprecationMessage := prop.DeprecationMessage
+	if options.isBuilder && prop.ConstValue != nil && deprecationMessage == "" {
+		// The generated type supplies the constant itself, so the setter is redundant.
+		deprecationMessage = "This property has a constant value, which is set automatically."
+	}
+
+	if prop.Comment == "" && deprecationMessage == "" {
 		return
 	}
 	fprintf(w, "%s/**\n", options.indent)
@@ -434,12 +440,12 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 		fprintf(w, "%s\n", formatBlockComment("@return builder", options.indent))
 	}
 
-	if prop.DeprecationMessage != "" {
+	if deprecationMessage != "" {
 		fprintf(w, "%s * @deprecated\n", options.indent)
-		fprintf(w, "%s\n", formatForeignBlockComment(prop.DeprecationMessage, options.indent))
+		fprintf(w, "%s\n", formatForeignBlockComment(deprecationMessage, options.indent))
 	}
 	fprintf(w, "%s */\n", options.indent)
-	printObsoleteAttribute(ctx, prop.DeprecationMessage, options.indent)
+	printObsoleteAttribute(ctx, deprecationMessage, options.indent)
 }
 
 func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, targetType TypeShape) error {
@@ -1134,6 +1140,10 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	// Write the method that will calculate the resource arguments.
 	fprintf(w, "\n")
+	if hasConstInputs {
+		// Const setters are deprecated for callers, but this is how the constant gets forced.
+		fprintf(w, "    @SuppressWarnings(\"deprecation\")\n")
+	}
 	fprintf(w, "    private static %s makeArgs(%s args, @%s %s options) {\n",
 		ctx.ref(argsFQN), argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w,

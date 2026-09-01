@@ -51,6 +51,7 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
         super("foobar::ModuleResource", name, null, makeResourceOptions(options, id), false);
     }
 
+    @SuppressWarnings("deprecation")
     private static ModuleResourceArgs makeArgs(ModuleResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;

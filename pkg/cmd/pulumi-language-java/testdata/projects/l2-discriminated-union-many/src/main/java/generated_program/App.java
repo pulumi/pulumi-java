@@ -32,7 +32,6 @@ public class App {
     public static void stack(Context ctx) {
         var example1 = new Example("example1", ExampleArgs.builder()
             .unionOf(Variant1Args.builder()
-                .discriminantKind("variant1")
                 .payload("p1")
                 .extra("e1")
                 .build())
@@ -40,7 +39,6 @@ public class App {
 
         var example2 = new Example("example2", ExampleArgs.builder()
             .unionOf(Variant2Args.builder()
-                .discriminantKind("variant2")
                 .payload("p2")
                 .extra("e2")
                 .build())
@@ -48,7 +46,6 @@ public class App {
 
         var example3 = new Example("example3", ExampleArgs.builder()
             .unionOf(Variant3Args.builder()
-                .discriminantKind("variant3")
                 .payload("p3")
                 .count(3)
                 .build())
@@ -56,7 +53,6 @@ public class App {
 
         var example4 = new Example("example4", ExampleArgs.builder()
             .unionOf(Variant4Args.builder()
-                .discriminantKind("variant4")
                 .payload("p4")
                 .enabled(true)
                 .build())
@@ -64,7 +60,6 @@ public class App {
 
         var example5 = new Example("example5", ExampleArgs.builder()
             .unionOf(Variant5Args.builder()
-                .discriminantKind("variant5")
                 .payload("p5")
                 .label("l5")
                 .build())
@@ -72,7 +67,6 @@ public class App {
 
         var example6 = new Example("example6", ExampleArgs.builder()
             .unionOf(Variant6Args.builder()
-                .discriminantKind("variant6")
                 .payload("p6")
                 .code(6)
                 .build())
@@ -80,7 +74,6 @@ public class App {
 
         var example7 = new Example("example7", ExampleArgs.builder()
             .unionOf(Variant7Args.builder()
-                .discriminantKind("variant7")
                 .payload("p7")
                 .message("m7")
                 .build())
@@ -88,7 +81,6 @@ public class App {
 
         var example8 = new Example("example8", ExampleArgs.builder()
             .unionOf(Variant8Args.builder()
-                .discriminantKind("variant8")
                 .payload("p8")
                 .size(8)
                 .build())
@@ -96,7 +88,6 @@ public class App {
 
         var example9 = new Example("example9", ExampleArgs.builder()
             .unionOf(Variant9Args.builder()
-                .discriminantKind("variant9")
                 .payload("p9")
                 .flag(false)
                 .build())
@@ -104,7 +95,6 @@ public class App {
 
         var example10 = new Example("example10", ExampleArgs.builder()
             .unionOf(Variant10Args.builder()
-                .discriminantKind("variant10")
                 .payload("p10")
                 .note("n10")
                 .build())
@@ -115,7 +105,6 @@ public class App {
         // full 10-variant union.
         var subset1 = new SubsetExample("subset1", SubsetExampleArgs.builder()
             .unionOf(Variant3Args.builder()
-                .discriminantKind("variant3")
                 .payload("sp")
                 .count(33)
                 .build())

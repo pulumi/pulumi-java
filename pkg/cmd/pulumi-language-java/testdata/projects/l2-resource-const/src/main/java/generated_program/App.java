@@ -18,9 +18,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var first = new Resource("first", ResourceArgs.builder()
-            .kind("Constant")
-            .build());
+        var first = new Resource("first");
 
         ctx.export("kind", first.kind());
     }

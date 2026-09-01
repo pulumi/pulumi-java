@@ -51,6 +51,7 @@ public class Resource extends com.pulumi.resources.CustomResource {
         super("constant:index:Resource", name, null, makeResourceOptions(options, id), false);
     }
 
+    @SuppressWarnings("deprecation")
     private static ResourceArgs makeArgs(ResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;

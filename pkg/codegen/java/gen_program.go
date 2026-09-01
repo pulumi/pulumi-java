@@ -1415,6 +1415,19 @@ func typedResourceProperties(resource *pcl.Resource) map[string]schema.Type {
 	return resourceProperties
 }
 
+// Returns the set of property names that the schema pins to a constant value. Generated args types
+// supply these values themselves, and their setters are deprecated, so programs must not set them.
+func constPropertyNames(properties []*schema.Property) map[string]bool {
+	constProperties := map[string]bool{}
+	for _, property := range properties {
+		if property.ConstValue != nil {
+			constProperties[property.Name] = true
+		}
+	}
+
+	return constProperties
+}
+
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := g.resourceTypeName(resource)
 	resourceArgs := g.resourceArgsTypeName(resource)
@@ -1439,11 +1452,22 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 		}
 	}
 
+	inputs := make([]*model.Attribute, 0, len(resource.Inputs))
+	constProperties := map[string]bool{}
+	if resource.Schema != nil {
+		constProperties = constPropertyNames(resource.Schema.InputProperties)
+	}
+	for _, input := range resource.Inputs {
+		if !constProperties[input.Name] {
+			inputs = append(inputs, input)
+		}
+	}
+
 	instantiate := func(resName string) {
 		resourceProperties := typedResourceProperties(resource)
-		if len(resource.Inputs) == 0 && !hasCustomResourceOptions(resource) {
+		if len(inputs) == 0 && !hasCustomResourceOptions(resource) {
 			g.Fgenf(w, "new %s(%s)", resourceTypeName, resName)
-		} else if len(resource.Inputs) == 0 && hasCustomResourceOptions(resource) {
+		} else if len(inputs) == 0 && hasCustomResourceOptions(resource) {
 			// generate empty resource args in this case
 			emptyArgs := resourceArgs + ".Empty"
 			g.Fgenf(w, "new %s(%s, %s, ", resourceTypeName, resName, emptyArgs)
@@ -1453,7 +1477,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			g.Fgenf(w, "new %s(%s, %s.builder()", resourceTypeName, resName, resourceArgs)
 			g.Fgen(w, "\n")
 			g.Indented(func() {
-				for _, attr := range resource.Inputs {
+				for _, attr := range inputs {
 					attributeIdent := names.MakeValidIdentifier(attr.Name)
 					attributeSchemaType := resourceProperties[attr.Name]
 					g.currentResourcePropertyType = attributeSchemaType
