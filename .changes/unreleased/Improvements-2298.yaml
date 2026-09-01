@@ -1,0 +1,6 @@
+component: codegen
+kind: Improvements
+body: 'Generate constant property values into the args type itself, rather than requiring callers to repeat them. Builder setters for constant properties are deprecated, and generated programs no longer set them.'
+time: 2026-09-01T00:00:00.000000000Z
+custom:
+    PR: "2298"
