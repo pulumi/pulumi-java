@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Consumer;
@@ -553,6 +554,77 @@ public class LocalWorkspaceTest {
                     assertThat(destroyResult.summary().kind()).isEqualTo(UpdateKind.DESTROY);
                     assertThat(destroyResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
 
+                } finally {
+                    stack.workspace().removeStack(stackName);
+                }
+            }
+        });
+    }
+
+    @Test
+    @Timeout(value = 4, unit = TimeUnit.MINUTES)
+    void testCancelStackOperation(@EnvVars Map<String, String> envVars) {
+        assertDoesNotThrow(() -> {
+            var env = new HashMap<String, String>(envVars);
+            env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+            var programRunning = new CountDownLatch(1);
+            var releaseProgram = new CountDownLatch(1);
+            Consumer<Context> program = ctx -> {
+                programRunning.countDown();
+                try {
+                    releaseProgram.await(60, TimeUnit.SECONDS);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            };
+
+            var stackName = randomStackName();
+            var projectName = "inline_java";
+            try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
+                    LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
+                try (var source = new CancellationTokenSource()) {
+                    var canceler = new Thread(() -> {
+                        try {
+                            programRunning.await(60, TimeUnit.SECONDS);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                        source.cancel();
+                        releaseProgram.countDown();
+                    });
+                    canceler.start();
+
+                    assertThrows(CommandCanceledException.class, () -> stack.up(null, source.token()));
+                    canceler.join();
+                } finally {
+                    releaseProgram.countDown();
+                    // a canceled update leaves the stack lock behind; clear it
+                    // before removing the stack
+                    stack.cancel();
+                    stack.workspace().removeStack(stackName);
+                }
+            }
+        });
+    }
+
+    @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
+    void testCanceledTokenPreventsOperation(@EnvVars Map<String, String> envVars) {
+        assertDoesNotThrow(() -> {
+            var env = new HashMap<String, String>(envVars);
+            env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+            Consumer<Context> program = ctx -> {
+            };
+
+            var stackName = randomStackName();
+            var projectName = "inline_java";
+            try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
+                    LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
+                try (var source = new CancellationTokenSource()) {
+                    source.cancel();
+                    assertThrows(CommandCanceledException.class, () -> stack.up(null, source.token()));
                 } finally {
                     stack.workspace().removeStack(stackName);
                 }
