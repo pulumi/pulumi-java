@@ -134,3 +134,23 @@ func (g *generator) genUnionElement(w io.Writer, elementType schema.Type, value 
 	g.Fgenf(w, "%s(%.v)", factory, value)
 	return true
 }
+
+// genUnionArgument generates the value of a property. An output whose element is a wrapped member
+// of the property's union interface is lifted into the interface with the interface factory.
+func (g *generator) genUnionArgument(w io.Writer, propertyType schema.Type, value model.Expression) {
+	factory := g.unionFactory(propertyType)
+	source := value
+	for {
+		call, ok := source.(*model.FunctionCallExpression)
+		if !ok || call.Name != pcl.IntrinsicConvert {
+			break
+		}
+		source = call.Args[0]
+	}
+	_, isObject := unwrapOptional(model.ResolveOutputs(source.Type())).(*model.ObjectType)
+	if factory == "" || !model.ContainsOutputs(source.Type()) || isObject {
+		g.Fgenf(w, "%.v", value)
+		return
+	}
+	g.Fgenf(w, "%.v.applyValue(%s)", value, strings.TrimSuffix(factory, ".of")+"::of")
+}
