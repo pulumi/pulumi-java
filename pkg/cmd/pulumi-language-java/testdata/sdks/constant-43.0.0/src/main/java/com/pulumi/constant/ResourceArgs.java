@@ -4,9 +4,13 @@
 package com.pulumi.constant;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,17 +19,45 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ResourceArgs Empty = new ResourceArgs();
 
+    @Import(name="count", required=true)
+    @ConstValue("3")
+    private Output<Integer> count;
+
+    public Output<Integer> count() {
+        return this.count;
+    }
+
+    @Import(name="flag", required=true)
+    @ConstValue("true")
+    private Output<Boolean> flag;
+
+    public Output<Boolean> flag() {
+        return this.flag;
+    }
+
     @Import(name="kind", required=true)
+    @ConstValue("Constant")
     private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
+    @Import(name="ratio", required=true)
+    @ConstValue("1.5")
+    private Output<Double> ratio;
+
+    public Output<Double> ratio() {
+        return this.ratio;
+    }
+
     private ResourceArgs() {}
 
     private ResourceArgs(ResourceArgs $) {
+        this.count = $.count;
+        this.flag = $.flag;
         this.kind = $.kind;
+        this.ratio = $.ratio;
     }
 
     public static Builder builder() {
@@ -54,6 +86,56 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
          * 
          */
         @Deprecated /* This property has a constant value, which is set automatically. */
+        public Builder count(Output<Integer> count) {
+            $.count = count;
+            return this;
+        }
+
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
+        public Builder count(Integer count) {
+            return count(Output.of(count));
+        }
+
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
+        public Builder flag(Output<Boolean> flag) {
+            $.flag = flag;
+            return this;
+        }
+
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
+        public Builder flag(Boolean flag) {
+            return flag(Output.of(flag));
+        }
+
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
@@ -71,8 +153,36 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
+        public Builder ratio(Output<Double> ratio) {
+            $.ratio = ratio;
+            return this;
+        }
+
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
+        public Builder ratio(Double ratio) {
+            return ratio(Output.of(ratio));
+        }
+
         public ResourceArgs build() {
+            $.count = Codegen.integerProp("count").output().arg($.count).def(3).require();
+            $.flag = Codegen.booleanProp("flag").output().arg($.flag).def(true).require();
             $.kind = Codegen.stringProp("kind").output().arg($.kind).def("Constant").require();
+            $.ratio = Codegen.doubleProp("ratio").output().arg($.ratio).def(1.5e+00).require();
             return $;
         }
     }

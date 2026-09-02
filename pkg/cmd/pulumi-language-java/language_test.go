@@ -297,6 +297,7 @@ var expectedFailures = map[string]string{
 	"l2-union":                          "programgen passes strings where Either<String, Enum> is expected; a string and a string enum are not wire discriminatable, so the union keeps Either", //nolint:lll
 	"l2-discriminated-union-marked-key": "compilation error: programgen passes the output union interface where the input Args interface is expected",                                           //nolint:lll
 	"l2-discriminated-union-many":       "compilation error: programgen passes the output union interface where the input Args interface is expected",                                           //nolint:lll
+	"l2-secret-unknown":                 "wrapping an unknown output with secret() drops the secret marker (test added in pulumi/pulumi#24496, after v3.260.0)",                                 //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

@@ -11,6 +11,7 @@ import com.pulumi.output.ResourceArgs;
 import com.pulumi.output.Utilities;
 import java.lang.Double;
 import java.lang.String;
+import java.util.List;
 import javax.annotation.Nullable;
 
 @ResourceType(type="output:index:Resource")
@@ -20,6 +21,12 @@ public class Resource extends com.pulumi.resources.CustomResource {
 
     public Output<String> output() {
         return this.output;
+    }
+    @Export(name="secretOutput", refs={String.class}, tree="[0]")
+    private Output<String> secretOutput;
+
+    public Output<String> secretOutput() {
+        return this.secretOutput;
     }
     @Export(name="value", refs={Double.class}, tree="[0]")
     private Output<Double> value;
@@ -67,6 +74,9 @@ public class Resource extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "secretOutput"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

@@ -3,8 +3,8 @@ package generated_program;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.constant.Resource;
-import com.pulumi.constant.ResourceArgs;
+import com.pulumi.output.Resource;
+import com.pulumi.output.ResourceArgs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -18,11 +18,10 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var first = new Resource("first");
+        var r = new Resource("r", ResourceArgs.builder()
+            .value(1.0)
+            .build());
 
-        ctx.export("kind", first.kind());
-        ctx.export("flag", first.flag());
-        ctx.export("count", first.count());
-        ctx.export("ratio", first.ratio());
+        ctx.export("wrapped", r.output().asSecret());
     }
 }
