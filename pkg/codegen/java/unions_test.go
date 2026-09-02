@@ -9,6 +9,8 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/stretchr/testify/require"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
 // unionTestPackage binds a package with three object variants and one resource per entry of
@@ -109,4 +111,27 @@ func TestRegisterUnionsKeepsNamesWhenAMemberIsAdded(t *testing.T) {
 	require.Empty(t, byName["AUnionOf"].equals)
 	require.Equal(t, []string{"BUnionOf", "CUnionOf"}, specNames(byName["AUnionOf"].supersets))
 	require.Equal(t, []string{"CUnionOf"}, specNames(byName["BUnionOf"].equals))
+}
+
+func TestTypedInputAndCollapsedOutput(t *testing.T) {
+	t.Parallel()
+
+	union := func(members ...schema.Type) *schema.UnionType {
+		return &schema.UnionType{ElementTypes: members}
+	}
+	list := func(element schema.Type) schema.Type { return &schema.ArrayType{ElementType: element} }
+	color := &schema.EnumType{Token: "test:index:Color", ElementType: schema.StringType}
+
+	require.True(t, typedInput(union(schema.StringType, color)))
+	require.True(t, typedInput(union(schema.IntType, schema.NumberType)))
+	require.True(t, typedInput(union(list(schema.StringType), schema.StringType)))
+	require.False(t, typedInput(union(list(schema.StringType), list(schema.IntType))))
+	require.False(t, typedInput(union(schema.StringType, schema.AnyType)))
+	require.False(t, typedInput(union(schema.StringType, &schema.TokenType{Token: "test:index:Opaque"})))
+
+	require.Equal(t, TypeShape{Type: names.String}, collapsedOutputType(union(schema.StringType, color)))
+	require.Equal(t, TypeShape{Type: names.Double}, collapsedOutputType(union(schema.IntType, schema.NumberType)))
+	require.Equal(t, TypeShape{Type: names.Object}, collapsedOutputType(union(schema.StringType, schema.BoolType)))
+	require.Equal(t, TypeShape{Type: names.Object},
+		collapsedOutputType(union(list(schema.StringType), list(schema.IntType))))
 }

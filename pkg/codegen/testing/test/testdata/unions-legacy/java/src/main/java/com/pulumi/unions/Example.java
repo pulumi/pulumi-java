@@ -39,6 +39,12 @@ public class Example extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> enumOrObject() {
         return Codegen.optional(this.enumOrObject);
     }
+    @Export(name="listCollision", refs={Either.class,List.class,String.class,Integer.class}, tree="[0,[1,2],[1,3]]")
+    private Output</* @Nullable */ Either<List<String>,List<Integer>>> listCollision;
+
+    public Output<Optional<Either<List<String>,List<Integer>>>> listCollision() {
+        return Codegen.optional(this.listCollision);
+    }
     @Export(name="listOfUnion", refs={List.class,Either.class,Variant1.class,Variant2.class}, tree="[0,[1,2,3]]")
     private Output</* @Nullable */ List<Either<Variant1,Variant2>>> listOfUnion;
 

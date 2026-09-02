@@ -61,6 +61,7 @@ func (u *unionSpec) bound(key formKey) bool {
 // unionRegistry names the union interfaces of a package. It is shared by every module of that
 // package.
 type unionRegistry struct {
+	enabled bool
 	// The schema binder shares one union value between every location with the same members, and
 	// type rendering rebuilds union values as it strips input wrappers, so a union is resolved by
 	// the property that holds it and its member key.
@@ -197,6 +198,69 @@ func caseBaseName(t schema.Type) string {
 	return "OfValue"
 }
 
+// erasure is the erased Java type of a wrapped member. Two factories with the same erasure cannot
+// overload one another.
+func erasure(t schema.Type) string {
+	switch t := codegen.UnwrapType(t).(type) {
+	case *schema.ArrayType:
+		return "List"
+	case *schema.MapType:
+		return "Map"
+	case *schema.ObjectType, *schema.EnumType, *schema.ResourceType:
+		return memberKey(t)
+	case *schema.TokenType:
+		return erasure(t.UnderlyingType)
+	}
+	return caseBaseName(t)
+}
+
+// typedInput reports whether the input form of t gets an interface: every member has a Java type
+// of its own, and no two wrapped members share an erasure.
+func typedInput(t *schema.UnionType) bool {
+	erasures := codegen.StringSet{}
+	for _, m := range flattenUnion(t) {
+		if m == schema.AnyType || m == schema.JSONType {
+			return false
+		}
+		if token, ok := m.(*schema.TokenType); ok && token.UnderlyingType == nil {
+			return false
+		}
+		e := erasure(m)
+		if erasures.Has(e) {
+			return false
+		}
+		erasures.Add(e)
+	}
+	return true
+}
+
+// collapsedOutputType is the type of an output union that gets no interface: the primitive every
+// member shares, or Object.
+func collapsedOutputType(t *schema.UnionType) TypeShape {
+	var shared names.FQN
+	for _, m := range flattenUnion(t) {
+		if e, ok := m.(*schema.EnumType); ok {
+			m = e.ElementType
+		}
+		var primitive names.FQN
+		switch m {
+		case schema.StringType:
+			primitive = names.String
+		case schema.IntType, schema.NumberType:
+			primitive = names.Double
+		case schema.BoolType:
+			primitive = names.Boolean
+		default:
+			return TypeShape{Type: names.Object}
+		}
+		if shared.String() != "" && !shared.Equal(primitive) {
+			return TypeShape{Type: names.Object}
+		}
+		shared = primitive
+	}
+	return TypeShape{Type: shared}
+}
+
 // unionMembers resolves the members of t. An object of pkg becomes an implementing member; every
 // other type becomes a wrapped member with a case class.
 func unionMembers(t *schema.UnionType, pkg *schema.Package) []unionMember {
@@ -267,11 +331,13 @@ var (
 	plainObjectForms = []formKey{{inputsQualifier, false}, {outputsQualifier, false}}
 )
 
-// registerUnions names every union in pkg that IsWireDiscriminatableUnionType accepts. Each schema
-// location gets its own interface, named after the owner and the property. The forms of one
-// location share a spec.
+// registerUnions names every union in pkg that gets an interface: every input form that typedInput
+// accepts, and every output form that IsWireDiscriminatableUnionType accepts. Each schema location
+// gets its own interface, named after the owner and the property. The forms of one location share
+// a spec.
 func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 	reg := &unionRegistry{
+		enabled:    fullyTypedUnions,
 		byLocation: map[*schema.Property]map[string]unionForm{},
 		byMember:   map[string][]*unionSpec{},
 	}
@@ -313,7 +379,17 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 		for _, p := range props {
 			propertyName := names.Title(p.Name)
 			visitUnionTypes(p.Type, 0, func(union *schema.UnionType, depth int) {
-				if !codegen.IsWireDiscriminatableUnionType(union) {
+				var typed []formKey
+				for _, key := range forms {
+					if key.qualifier == outputsQualifier {
+						if codegen.IsWireDiscriminatableUnionType(union) {
+							typed = append(typed, key)
+						}
+					} else if typedInput(union) {
+						typed = append(typed, key)
+					}
+				}
+				if len(typed) == 0 {
 					return
 				}
 				positions = append(positions, unionPosition{
@@ -322,7 +398,7 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 					propertyName: propertyName,
 					union:        union,
 					property:     p,
-					forms:        forms,
+					forms:        typed,
 					depth:        depth,
 				})
 			})
@@ -506,13 +582,17 @@ func (mod *modContext) unionInterfaceFQN(spec *unionSpec, key formKey, input boo
 	return packageName.Dot(className)
 }
 
-// unionTypeString renders the interface generated for t, if t has one.
+// unionTypeString renders the interface generated for t, or the collapsed type of an output union
+// that gets none. It reports false when the fullyTypedUnions option leaves t alone.
 func (mod *modContext) unionTypeString(t *schema.UnionType, qualifier qualifier, input bool) (TypeShape, bool) {
 	form, ok := mod.unions.lookup(mod.unionLocation, t)
-	if !ok {
-		return TypeShape{}, false
+	if ok {
+		return TypeShape{Type: mod.unionInterfaceFQN(form.spec, formKey{qualifier, form.inputShape}, input)}, true
 	}
-	return TypeShape{Type: mod.unionInterfaceFQN(form.spec, formKey{qualifier, form.inputShape}, input)}, true
+	if mod.unions != nil && mod.unions.enabled && qualifier == outputsQualifier {
+		return collapsedOutputType(t), true
+	}
+	return TypeShape{}, false
 }
 
 // unionInterfaces returns the union interfaces obj implements in the form being generated.

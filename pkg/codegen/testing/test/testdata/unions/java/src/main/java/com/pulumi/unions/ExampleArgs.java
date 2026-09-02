@@ -14,7 +14,9 @@ import com.pulumi.unions.inputs.ExampleAssetOrArchiveArgs;
 import com.pulumi.unions.inputs.ExampleEnumOrObjectArgs;
 import com.pulumi.unions.inputs.ExampleListOfUnionArgs;
 import com.pulumi.unions.inputs.ExampleMapOfUnionArgs;
+import com.pulumi.unions.inputs.ExampleNumberOrIntegerArgs;
 import com.pulumi.unions.inputs.ExampleResourceOrStringArgs;
+import com.pulumi.unions.inputs.ExampleStringOrEnumArgs;
 import com.pulumi.unions.inputs.ExampleStringOrIntegerArgs;
 import com.pulumi.unions.inputs.ExampleUnionOfArgs;
 import com.pulumi.unions.inputs.NestedArgs;
@@ -47,6 +49,13 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.enumOrObject);
     }
 
+    @Import(name="listCollision")
+    private @Nullable Output<Either<List<String>,List<Integer>>> listCollision;
+
+    public Optional<Output<Either<List<String>,List<Integer>>>> listCollision() {
+        return Optional.ofNullable(this.listCollision);
+    }
+
     @Import(name="listOfUnion")
     private @Nullable Output<List<ExampleListOfUnionArgs>> listOfUnion;
 
@@ -69,9 +78,9 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="numberOrInteger")
-    private @Nullable Output<Either<Double,Integer>> numberOrInteger;
+    private @Nullable Output<ExampleNumberOrIntegerArgs> numberOrInteger;
 
-    public Optional<Output<Either<Double,Integer>>> numberOrInteger() {
+    public Optional<Output<ExampleNumberOrIntegerArgs>> numberOrInteger() {
         return Optional.ofNullable(this.numberOrInteger);
     }
 
@@ -90,9 +99,9 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="stringOrEnum")
-    private @Nullable Output<Either<String,Color>> stringOrEnum;
+    private @Nullable Output<ExampleStringOrEnumArgs> stringOrEnum;
 
-    public Optional<Output<Either<String,Color>>> stringOrEnum() {
+    public Optional<Output<ExampleStringOrEnumArgs>> stringOrEnum() {
         return Optional.ofNullable(this.stringOrEnum);
     }
 
@@ -115,6 +124,7 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     private ExampleArgs(ExampleArgs $) {
         this.assetOrArchive = $.assetOrArchive;
         this.enumOrObject = $.enumOrObject;
+        this.listCollision = $.listCollision;
         this.listOfUnion = $.listOfUnion;
         this.mapOfUnion = $.mapOfUnion;
         this.nested = $.nested;
@@ -174,6 +184,15 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return enumOrObject(ExampleEnumOrObjectArgs.of(enumOrObject));
         }
 
+        public Builder listCollision(@Nullable Output<Either<List<String>,List<Integer>>> listCollision) {
+            $.listCollision = listCollision;
+            return this;
+        }
+
+        public Builder listCollision(Either<List<String>,List<Integer>> listCollision) {
+            return listCollision(Output.of(listCollision));
+        }
+
         public Builder listOfUnion(@Nullable Output<List<ExampleListOfUnionArgs>> listOfUnion) {
             $.listOfUnion = listOfUnion;
             return this;
@@ -205,21 +224,21 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return nested(Output.of(nested));
         }
 
-        public Builder numberOrInteger(@Nullable Output<Either<Double,Integer>> numberOrInteger) {
+        public Builder numberOrInteger(@Nullable Output<ExampleNumberOrIntegerArgs> numberOrInteger) {
             $.numberOrInteger = numberOrInteger;
             return this;
         }
 
-        public Builder numberOrInteger(Either<Double,Integer> numberOrInteger) {
+        public Builder numberOrInteger(ExampleNumberOrIntegerArgs numberOrInteger) {
             return numberOrInteger(Output.of(numberOrInteger));
         }
 
         public Builder numberOrInteger(Double numberOrInteger) {
-            return numberOrInteger(Either.ofLeft(numberOrInteger));
+            return numberOrInteger(ExampleNumberOrIntegerArgs.of(numberOrInteger));
         }
 
         public Builder numberOrInteger(Integer numberOrInteger) {
-            return numberOrInteger(Either.ofRight(numberOrInteger));
+            return numberOrInteger(ExampleNumberOrIntegerArgs.of(numberOrInteger));
         }
 
         public Builder resourceOrString(@Nullable Output<ExampleResourceOrStringArgs> resourceOrString) {
@@ -256,21 +275,21 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return stringOrAny(Either.ofRight(stringOrAny));
         }
 
-        public Builder stringOrEnum(@Nullable Output<Either<String,Color>> stringOrEnum) {
+        public Builder stringOrEnum(@Nullable Output<ExampleStringOrEnumArgs> stringOrEnum) {
             $.stringOrEnum = stringOrEnum;
             return this;
         }
 
-        public Builder stringOrEnum(Either<String,Color> stringOrEnum) {
+        public Builder stringOrEnum(ExampleStringOrEnumArgs stringOrEnum) {
             return stringOrEnum(Output.of(stringOrEnum));
         }
 
         public Builder stringOrEnum(String stringOrEnum) {
-            return stringOrEnum(Either.ofLeft(stringOrEnum));
+            return stringOrEnum(ExampleStringOrEnumArgs.of(stringOrEnum));
         }
 
         public Builder stringOrEnum(Color stringOrEnum) {
-            return stringOrEnum(Either.ofRight(stringOrEnum));
+            return stringOrEnum(ExampleStringOrEnumArgs.of(stringOrEnum));
         }
 
         public Builder stringOrInteger(@Nullable Output<ExampleStringOrIntegerArgs> stringOrInteger) {

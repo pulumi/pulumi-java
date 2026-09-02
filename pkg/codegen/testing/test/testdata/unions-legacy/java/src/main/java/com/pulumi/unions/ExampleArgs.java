@@ -43,6 +43,13 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.enumOrObject);
     }
 
+    @Import(name="listCollision")
+    private @Nullable Output<Either<List<String>,List<Integer>>> listCollision;
+
+    public Optional<Output<Either<List<String>,List<Integer>>>> listCollision() {
+        return Optional.ofNullable(this.listCollision);
+    }
+
     @Import(name="listOfUnion")
     private @Nullable Output<List<Either<Variant1Args,Variant2Args>>> listOfUnion;
 
@@ -111,6 +118,7 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     private ExampleArgs(ExampleArgs $) {
         this.assetOrArchive = $.assetOrArchive;
         this.enumOrObject = $.enumOrObject;
+        this.listCollision = $.listCollision;
         this.listOfUnion = $.listOfUnion;
         this.mapOfUnion = $.mapOfUnion;
         this.nested = $.nested;
@@ -172,6 +180,15 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder enumOrObject(Variant1Args enumOrObject) {
             return enumOrObject(Either.ofRight(enumOrObject));
+        }
+
+        public Builder listCollision(@Nullable Output<Either<List<String>,List<Integer>>> listCollision) {
+            $.listCollision = listCollision;
+            return this;
+        }
+
+        public Builder listCollision(Either<List<String>,List<Integer>> listCollision) {
+            return listCollision(Output.of(listCollision));
         }
 
         public Builder listOfUnion(@Nullable Output<List<Either<Variant1Args,Variant2Args>>> listOfUnion) {

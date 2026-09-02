@@ -200,6 +200,22 @@
               "type": "integer"
             }
           ]
+        },
+        "listCollision": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          ]
         }
       },
       "inputProperties": {
@@ -315,6 +331,22 @@
             },
             {
               "type": "integer"
+            }
+          ]
+        },
+        "listCollision": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
             }
           ]
         }

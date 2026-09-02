@@ -3,7 +3,6 @@
 
 package com.pulumi.unions;
 
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -19,7 +18,6 @@ import com.pulumi.unions.outputs.ExampleStringOrInteger;
 import com.pulumi.unions.outputs.ExampleUnionOf;
 import com.pulumi.unions.outputs.Nested;
 import java.lang.Double;
-import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -41,6 +39,12 @@ public class Example extends com.pulumi.resources.CustomResource {
     public Output<Optional<ExampleEnumOrObject>> enumOrObject() {
         return Codegen.optional(this.enumOrObject);
     }
+    @Export(name="listCollision", refs={Object.class}, tree="[0]")
+    private Output</* @Nullable */ Object> listCollision;
+
+    public Output<Optional<Object>> listCollision() {
+        return Codegen.optional(this.listCollision);
+    }
     @Export(name="listOfUnion", refs={List.class,ExampleListOfUnion.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ExampleListOfUnion>> listOfUnion;
 
@@ -59,10 +63,10 @@ public class Example extends com.pulumi.resources.CustomResource {
     public Output<Optional<Nested>> nested() {
         return Codegen.optional(this.nested);
     }
-    @Export(name="numberOrInteger", refs={Either.class,Double.class,Integer.class}, tree="[0,1,2]")
-    private Output</* @Nullable */ Either<Double,Integer>> numberOrInteger;
+    @Export(name="numberOrInteger", refs={Double.class}, tree="[0]")
+    private Output</* @Nullable */ Double> numberOrInteger;
 
-    public Output<Optional<Either<Double,Integer>>> numberOrInteger() {
+    public Output<Optional<Double>> numberOrInteger() {
         return Codegen.optional(this.numberOrInteger);
     }
     @Export(name="resourceOrString", refs={ExampleResourceOrString.class}, tree="[0]")
@@ -71,10 +75,10 @@ public class Example extends com.pulumi.resources.CustomResource {
     public Output<Optional<ExampleResourceOrString>> resourceOrString() {
         return Codegen.optional(this.resourceOrString);
     }
-    @Export(name="stringOrAny", refs={Either.class,String.class,Object.class}, tree="[0,1,2]")
-    private Output</* @Nullable */ Either<String,Object>> stringOrAny;
+    @Export(name="stringOrAny", refs={Object.class}, tree="[0]")
+    private Output</* @Nullable */ Object> stringOrAny;
 
-    public Output<Optional<Either<String,Object>>> stringOrAny() {
+    public Output<Optional<Object>> stringOrAny() {
         return Codegen.optional(this.stringOrAny);
     }
     @Export(name="stringOrEnum", refs={String.class}, tree="[0]")
