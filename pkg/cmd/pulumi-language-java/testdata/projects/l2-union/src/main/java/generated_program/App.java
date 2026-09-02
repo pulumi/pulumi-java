@@ -36,9 +36,9 @@ public class App {
         // List<Union<String, Enum>> pattern
         var stringEnumUnionListExample = new Example("stringEnumUnionListExample", ExampleArgs.builder()
             .stringEnumUnionListProperty(            
-                "Listen",
-                "Send",
-                "NotAnEnumValue")
+                com.pulumi.union.inputs.ExampleStringEnumUnionListPropertyArgs.of("Listen"),
+                com.pulumi.union.inputs.ExampleStringEnumUnionListPropertyArgs.of("Send"),
+                com.pulumi.union.inputs.ExampleStringEnumUnionListPropertyArgs.of("NotAnEnumValue"))
             .build());
 
         // Safe enum: literal string matching an enum value
@@ -52,7 +52,7 @@ public class App {
             .build());
 
         var outputEnumExample = new Example("outputEnumExample", ExampleArgs.builder()
-            .typedEnumProperty(enumOutputExample.type())
+            .typedEnumProperty(enumOutputExample.type().applyValue(com.pulumi.union.inputs.ExampleTypedEnumPropertyArgs::of))
             .build());
 
     }

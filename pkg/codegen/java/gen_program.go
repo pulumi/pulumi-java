@@ -1506,7 +1506,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 					attributeSchemaType := resourceProperties[attr.Name]
 					g.currentResourcePropertyType = attributeSchemaType
 					restore := g.withUnionLocation(resourceInputProperty(resource, attr.Name))
-					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, attr.Value)
+					g.Fgenf(w, "%s.%s(", g.Indent, attributeIdent)
+					g.genUnionArgument(w, attributeSchemaType, attr.Value)
+					g.Fgen(w, ")\n")
 					restore()
 				}
 

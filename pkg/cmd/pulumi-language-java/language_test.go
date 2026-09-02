@@ -290,14 +290,13 @@ var expectedFailures = map[string]string{
 
 	"l2-resource-hook-on-error": "resource hooks not implemented in programgen, the hook is dropped from the generated program (added in 3.254)", //nolint:lll
 
-	"l2-kebab-names":                    "compilation error: kebab-case resource/type/function names generate identifiers containing hyphens (extended in 3.260)",                               //nolint:lll
-	"l2-large-map":                      "compilation error: import of the Map resource is ambiguous with java.util.Map in the generated program (added in 3.260)",                              //nolint:lll
-	"l2-map-keys-invoke-call":           "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.260)",                                     //nolint:lll
-	"l2-resource-read-unknown":          "read resource not implemented, the res declaration is dropped from the generated program (added in 3.260)",                                            //nolint:lll
-	"l2-union":                          "programgen passes strings where Either<String, Enum> is expected; a string and a string enum are not wire discriminatable, so the union keeps Either", //nolint:lll
-	"l2-discriminated-union-marked-key": "compilation error: programgen passes the output union interface where the input Args interface is expected",                                           //nolint:lll
-	"l2-discriminated-union-many":       "compilation error: programgen passes the output union interface where the input Args interface is expected",                                           //nolint:lll
-	"l2-secret-unknown":                 "wrapping an unknown output with secret() drops the secret marker (test added in pulumi/pulumi#24496, after v3.260.0)",                                 //nolint:lll
+	"l2-kebab-names":                    "compilation error: kebab-case resource/type/function names generate identifiers containing hyphens (extended in 3.260)",  //nolint:lll
+	"l2-large-map":                      "compilation error: import of the Map resource is ambiguous with java.util.Map in the generated program (added in 3.260)", //nolint:lll
+	"l2-map-keys-invoke-call":           "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.260)",        //nolint:lll
+	"l2-resource-read-unknown":          "read resource not implemented, the res declaration is dropped from the generated program (added in 3.260)",               //nolint:lll
+	"l2-discriminated-union-marked-key": "compilation error: programgen passes the output union interface where the input Args interface is expected",              //nolint:lll
+	"l2-discriminated-union-many":       "compilation error: programgen passes the output union interface where the input Args interface is expected",              //nolint:lll
+	"l2-secret-unknown":                 "wrapping an unknown output with secret() drops the secret marker (test added in pulumi/pulumi#24496, after v3.260.0)",    //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

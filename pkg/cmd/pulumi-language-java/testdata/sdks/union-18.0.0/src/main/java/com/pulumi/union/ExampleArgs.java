@@ -3,13 +3,13 @@
 
 package com.pulumi.union;
 
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.union.enums.AccessRights;
 import com.pulumi.union.enums.BlobType;
 import com.pulumi.union.inputs.ExampleMapMapUnionPropertyArgs;
+import com.pulumi.union.inputs.ExampleStringEnumUnionListPropertyArgs;
 import com.pulumi.union.inputs.ExampleStringOrIntegerPropertyArgs;
+import com.pulumi.union.inputs.ExampleTypedEnumPropertyArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,9 +31,9 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="stringEnumUnionListProperty")
-    private @Nullable Output<List<Either<String,AccessRights>>> stringEnumUnionListProperty;
+    private @Nullable Output<List<ExampleStringEnumUnionListPropertyArgs>> stringEnumUnionListProperty;
 
-    public Optional<Output<List<Either<String,AccessRights>>>> stringEnumUnionListProperty() {
+    public Optional<Output<List<ExampleStringEnumUnionListPropertyArgs>>> stringEnumUnionListProperty() {
         return Optional.ofNullable(this.stringEnumUnionListProperty);
     }
 
@@ -45,9 +45,9 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="typedEnumProperty")
-    private @Nullable Output<Either<String,BlobType>> typedEnumProperty;
+    private @Nullable Output<ExampleTypedEnumPropertyArgs> typedEnumProperty;
 
-    public Optional<Output<Either<String,BlobType>>> typedEnumProperty() {
+    public Optional<Output<ExampleTypedEnumPropertyArgs>> typedEnumProperty() {
         return Optional.ofNullable(this.typedEnumProperty);
     }
 
@@ -87,16 +87,16 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return mapMapUnionProperty(Output.of(mapMapUnionProperty));
         }
 
-        public Builder stringEnumUnionListProperty(@Nullable Output<List<Either<String,AccessRights>>> stringEnumUnionListProperty) {
+        public Builder stringEnumUnionListProperty(@Nullable Output<List<ExampleStringEnumUnionListPropertyArgs>> stringEnumUnionListProperty) {
             $.stringEnumUnionListProperty = stringEnumUnionListProperty;
             return this;
         }
 
-        public Builder stringEnumUnionListProperty(List<Either<String,AccessRights>> stringEnumUnionListProperty) {
+        public Builder stringEnumUnionListProperty(List<ExampleStringEnumUnionListPropertyArgs> stringEnumUnionListProperty) {
             return stringEnumUnionListProperty(Output.of(stringEnumUnionListProperty));
         }
 
-        public Builder stringEnumUnionListProperty(Either<String,AccessRights>... stringEnumUnionListProperty) {
+        public Builder stringEnumUnionListProperty(ExampleStringEnumUnionListPropertyArgs... stringEnumUnionListProperty) {
             return stringEnumUnionListProperty(List.of(stringEnumUnionListProperty));
         }
 
@@ -117,21 +117,21 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return stringOrIntegerProperty(ExampleStringOrIntegerPropertyArgs.of(stringOrIntegerProperty));
         }
 
-        public Builder typedEnumProperty(@Nullable Output<Either<String,BlobType>> typedEnumProperty) {
+        public Builder typedEnumProperty(@Nullable Output<ExampleTypedEnumPropertyArgs> typedEnumProperty) {
             $.typedEnumProperty = typedEnumProperty;
             return this;
         }
 
-        public Builder typedEnumProperty(Either<String,BlobType> typedEnumProperty) {
+        public Builder typedEnumProperty(ExampleTypedEnumPropertyArgs typedEnumProperty) {
             return typedEnumProperty(Output.of(typedEnumProperty));
         }
 
         public Builder typedEnumProperty(String typedEnumProperty) {
-            return typedEnumProperty(Either.ofLeft(typedEnumProperty));
+            return typedEnumProperty(ExampleTypedEnumPropertyArgs.of(typedEnumProperty));
         }
 
         public Builder typedEnumProperty(BlobType typedEnumProperty) {
-            return typedEnumProperty(Either.ofRight(typedEnumProperty));
+            return typedEnumProperty(ExampleTypedEnumPropertyArgs.of(typedEnumProperty));
         }
 
         public ExampleArgs build() {

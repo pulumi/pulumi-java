@@ -1,0 +1,6 @@
+component: codegen
+kind: Improvements
+body: 'Generated programs apply the union interface factory to an output passed to a union-typed property, so a program can feed one resource''s output into another resource''s union input.'
+time: 2026-09-02T00:00:00.000000000Z
+custom:
+    PR: "2304"

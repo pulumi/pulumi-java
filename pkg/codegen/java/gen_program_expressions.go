@@ -800,7 +800,9 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 				property, _ := destType.Property(lit.Value.AsString())
 				restore := g.withUnionLocation(destType.PackageReference, property)
 				g.typedObjectExprScope(attributeType, func() {
-					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
+					g.Fgenf(w, ".%s(", key)
+					g.genUnionArgument(w, attributeType, g.lowerExpression(item.Value, item.Value.Type()))
+					g.Fgen(w, ")")
 				})
 				restore()
 				g.genNewline(w)
