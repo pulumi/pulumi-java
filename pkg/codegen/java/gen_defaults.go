@@ -204,6 +204,21 @@ func (dg *defaultsGen) builderExprWithSimpleType(
 		fmt.Fprintf(&buf, ".arg(%s)", arg)
 	}
 
+	// A constant property only ever holds one value, so fill it in rather than making the caller
+	// repeat it. The value the caller passed still wins, through .arg above. A constant overrides a
+	// default because the engine is sent the constant regardless of what the default says.
+	if prop.ConstValue != nil {
+		primCode, primType, err := primitiveValue(prop.ConstValue)
+		if err != nil {
+			return "", err
+		}
+		if !primType.WithoutAnnotations().Equal(targetType.WithoutAnnotations()) {
+			return "", fmt.Errorf("Const value type mismatch: %v vs %v", primType, targetType)
+		}
+		fmt.Fprintf(&buf, ".def(%s)", primCode)
+		return buf.String(), nil
+	}
+
 	if prop.DefaultValue == nil {
 		return buf.String(), nil
 	}

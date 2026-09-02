@@ -52,6 +52,9 @@ type modContext struct {
 	configClassPackageName string
 	classQueue             *classQueue
 
+	// The discriminated unions of the whole package, shared by every module.
+	unions *unionRegistry
+
 	extensionParameterization *schema.ExtensionParameterization
 }
 
@@ -286,6 +289,13 @@ func (mod *modContext) typeStringRecHelper(
 		tokenType := pkg.Dot(names.Ident(tokenToName(t.Token)))
 		return TypeShape{Type: tokenType}
 	case *schema.UnionType:
+		// Under the fullyTypedUnions option a discriminated union is generated as an interface the
+		// members implement. Checked before the elements are rendered so that referring to the
+		// union does not also import every member.
+		if shape, ok := mod.discriminatedUnionTypeString(t, qualifier, input); ok {
+			return shape
+		}
+
 		elementTypeSet := codegen.NewStringSet()
 		var elementTypes []TypeShape
 		for _, e := range t.ElementTypes {
@@ -313,6 +323,8 @@ func (mod *modContext) typeStringRecHelper(
 				Parameters: elementTypes,
 			}
 		default:
+			// Either<L, R> only has two arms, so a union of three or more members that did not
+			// generate an interface still degrades to java.lang.Object.
 			return TypeShape{Type: names.Object}
 		}
 	default:
@@ -398,6 +410,20 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
+	// interfaces are the discriminated union interfaces this type implements.
+	interfaces []names.FQN
+}
+
+// implementsClause renders the interface list of the generated class, if any.
+func (pt *plainType) implementsClause(ctx *classFileContext) string {
+	if len(pt.interfaces) == 0 {
+		return ""
+	}
+	refs := make([]string, 0, len(pt.interfaces))
+	for _, fqn := range pt.interfaces {
+		refs = append(refs, ctx.ref(fqn))
+	}
+	return " implements " + strings.Join(refs, ", ")
 }
 
 type propJavadocOptions struct {
@@ -541,7 +567,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		fprintf(w, " */\n")
 	}
 
-	fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
+	fprintf(w, "public final class %s extends %s%s {\n", pt.name, pt.baseClass, pt.implementsClause(ctx))
 	fprintf(w, "\n")
 	fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
 	fprintf(w, "\n")
@@ -737,7 +763,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Open the class and annotate it appropriately.
 	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
-	fprintf(w, "public final class %s {\n", pt.name)
+	fprintf(w, "public final class %s%s {\n", pt.name, pt.implementsClause(ctx))
 
 	anyPropertyRequired := false
 	// Generate each output field.
@@ -1734,6 +1760,7 @@ func (mod *modContext) genType(
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
 		args:                  obj.IsInputShape(),
+		interfaces:            mod.unionInterfaces(obj, propertyTypeQualifier, input),
 	}
 
 	if input {
@@ -2095,6 +2122,16 @@ import com.pulumi.deployment.Deployment;
 	}
 
 	for !mod.classQueue.isEmpty() {
+		if unionEntry, ok := mod.classQueue.dequeueInterface(); ok {
+			if err := addClass(unionEntry.packageName, unionEntry.className,
+				func(ctx *classFileContext) error {
+					return mod.genDiscriminatedUnionInterface(ctx, unionEntry)
+				}); err != nil {
+				return err
+			}
+			continue
+		}
+
 		entry := mod.classQueue.dequeue()
 		if err := addClass(entry.packageName, entry.className, func(ctx *classFileContext) error {
 			return mod.genType(ctx, entry.schemaType, entry.input)
@@ -2190,6 +2227,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	// group resources, types, and functions into Java packages
 	modules := map[string]*modContext{}
 
+	// Name the discriminated unions once for the whole package, so that a union reached through
+	// several properties or modules resolves to a single generated interface.
+	unions := registerDiscriminatedUnions(pkg, infos[pkg].FullyTypedUnions)
+
 	var getMod func(modName string, p schema.PackageReference) *modContext
 	getMod = func(modName string, p schema.PackageReference) *modContext {
 		mod, ok := modules[modName]
@@ -2211,6 +2252,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				packages:                  info.Packages,
 				propertyNames:             propertyNames,
 				classQueue:                newClassQueue(),
+				unions:                    unions,
 				extensionParameterization: pkg.ExtensionParameterization,
 			}
 
@@ -2484,6 +2526,8 @@ type classQueue struct {
 	outputTypes     map[*schema.ObjectType]classQueueEntry
 	seenInputTypes  map[*schema.ObjectType]bool
 	seenOutputTypes map[*schema.ObjectType]bool
+	interfaces      map[string]unionQueueEntry
+	seenInterfaces  map[string]bool
 }
 
 type classQueueEntry struct {
@@ -2493,17 +2537,55 @@ type classQueueEntry struct {
 	input       bool
 }
 
+// unionQueueEntry is one generated form of a discriminated union interface, matching the form its
+// member classes are generated in.
+type unionQueueEntry struct {
+	packageName names.FQN
+	className   names.Ident
+	union       *discriminatedUnion
+	qualifier   qualifier
+	input       bool
+	// inputShape reports whether the members are referred to in their Args shape.
+	inputShape bool
+}
+
+// shapeOf returns the shape of member that this form of the interface refers to.
+func (e unionQueueEntry) shapeOf(member *schema.ObjectType) *schema.ObjectType {
+	if e.inputShape && member.InputShape != nil {
+		return member.InputShape
+	}
+	return plainShape(member)
+}
+
 func newClassQueue() *classQueue {
 	return &classQueue{
 		inputTypes:      map[*schema.ObjectType]classQueueEntry{},
 		outputTypes:     map[*schema.ObjectType]classQueueEntry{},
 		seenInputTypes:  map[*schema.ObjectType]bool{},
 		seenOutputTypes: map[*schema.ObjectType]bool{},
+		interfaces:      map[string]unionQueueEntry{},
+		seenInterfaces:  map[string]bool{},
 	}
 }
 
 func (q *classQueue) isEmpty() bool {
-	return len(q.inputTypes) == 0 && len(q.outputTypes) == 0
+	return len(q.inputTypes) == 0 && len(q.outputTypes) == 0 && len(q.interfaces) == 0
+}
+
+func (q *classQueue) ensureInterfaceGenerated(entry unionQueueEntry) {
+	key := entry.packageName.Dot(entry.className).String()
+	if _, seen := q.seenInterfaces[key]; !seen {
+		q.seenInterfaces[key] = true
+		q.interfaces[key] = entry
+	}
+}
+
+func (q *classQueue) dequeueInterface() (unionQueueEntry, bool) {
+	for key, entry := range q.interfaces {
+		delete(q.interfaces, key)
+		return entry, true
+	}
+	return unionQueueEntry{}, false
 }
 
 func (q *classQueue) ensureGenerated(entry classQueueEntry) {

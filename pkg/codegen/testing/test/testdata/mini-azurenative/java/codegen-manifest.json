@@ -14,6 +14,7 @@
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/ActionGroupResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/DiagnosticsResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/GetActionRuleByNameResult.java",
+    "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/IGetActionRuleByNameProperties.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/SuppressionResponse.java",
     "src/main/java/com/pulumi/azurenative/insights/WebTest.java",
     "src/main/java/com/pulumi/azurenative/insights/WebTestArgs.java",

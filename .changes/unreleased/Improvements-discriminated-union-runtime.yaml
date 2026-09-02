@@ -1,0 +1,6 @@
+kind: Improvements
+body: Deserialize discriminated union values by dispatching on the schema discriminator property via the new DiscriminatedUnion annotation, instead of matching on the value shape
+time: 2026-08-06T00:00:00Z
+custom:
+  PR: "2267"
+component: sdk

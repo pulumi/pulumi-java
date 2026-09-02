@@ -57,7 +57,7 @@ public final class FuncWithConstInputArgs extends com.pulumi.resources.InvokeArg
         }
 
         public FuncWithConstInputArgs build() {
-            $.plainInput = Codegen.stringProp("plainInput").output().arg($.plainInput).getNullable();
+            $.plainInput = Codegen.stringProp("plainInput").output().arg($.plainInput).def("fixed").getNullable();
             return $;
         }
     }

@@ -1,0 +1,6 @@
+kind: Improvements
+body: 'Add the `fullyTypedUnions` Java package option, which generates a typed interface for each discriminated union that its members implement, instead of collapsing the union to Object or to Either. Member count does not affect the decision, so adding a member to a union does not change the generated shape. Const-valued properties are now filled in by generated builders regardless of the option, so a discriminator tag never has to be written by hand'
+time: 2026-08-06T00:00:00Z
+custom:
+  PR: "2267"
+component: codegen
