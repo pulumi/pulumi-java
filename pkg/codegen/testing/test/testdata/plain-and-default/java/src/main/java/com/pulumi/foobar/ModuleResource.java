@@ -51,17 +51,12 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
         super("foobar::ModuleResource", name, null, makeResourceOptions(options, id), false);
     }
 
-    @SuppressWarnings("deprecation")
     private static ModuleResourceArgs makeArgs(ModuleResourceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }
         var builder = args == null ? ModuleResourceArgs.builder() : ModuleResourceArgs.builder(args);
-        return builder
-            .optionalConst("val")
-            .plainOptionalConst("val")
-            .plainRequiredConst("val")
-            .build();
+        return builder.build();
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {

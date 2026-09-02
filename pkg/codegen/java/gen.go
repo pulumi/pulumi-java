@@ -412,9 +412,10 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 	w := ctx.writer
 
 	deprecationMessage := prop.DeprecationMessage
-	if options.isBuilder && prop.ConstValue != nil && deprecationMessage == "" {
+	if options.isBuilder && prop.ConstValue != nil {
 		// The generated type supplies the constant itself, so the setter is redundant.
-		deprecationMessage = "This property has a constant value, which is set automatically."
+		deprecationMessage = strings.TrimSpace(deprecationMessage +
+			" This property has a constant value, which is set automatically.")
 	}
 
 	if prop.Comment == "" && deprecationMessage == "" {
@@ -1140,10 +1141,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	// Write the method that will calculate the resource arguments.
 	fprintf(w, "\n")
-	if hasConstInputs {
-		// Const setters are deprecated for callers, but this is how the constant gets forced.
-		fprintf(w, "    @SuppressWarnings(\"deprecation\")\n")
-	}
 	fprintf(w, "    private static %s makeArgs(%s args, @%s %s options) {\n",
 		ctx.ref(argsFQN), argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w,
@@ -1153,20 +1150,10 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w,
 		"        }\n")
 	if hasConstInputs {
+		// build() fills in the constant values, which Empty does not carry.
 		fprintf(w,
 			"        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
-		fprintf(w, "        return builder\n")
-		for _, prop := range r.InputProperties {
-			if prop.ConstValue != nil {
-				v, _, err := primitiveValue(prop.ConstValue)
-				if err != nil {
-					return err
-				}
-				setterName := names.Ident(mod.propertyName(prop)).AsProperty().Setter()
-				fprintf(w, "            .%s(%s)\n", setterName, v)
-			}
-		}
-		fprintf(w, "            .build();\n")
+		fprintf(w, "        return builder.build();\n")
 	} else {
 		fprintf(w,
 			"        return args == null ? %s.Empty : args;\n", ctx.ref(argsFQN))
