@@ -3,6 +3,7 @@
 
 package com.pulumi.myedgeorder.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Double;
@@ -87,6 +88,7 @@ public final class Pav2MeterDetailsResponse {
         }
 
         @CustomType.Setter
+        @ConstValue("Pav2")
         public Builder billingType(String billingType) {
             if (billingType == null) {
               throw new MissingRequiredPropertyException("Pav2MeterDetailsResponse", "billingType");

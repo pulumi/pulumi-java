@@ -3,7 +3,9 @@
 
 package com.pulumi.discriminatedunionmany.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.discriminatedunionmany.outputs.ExampleUnionOf;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +14,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class Variant6 {
+public final class Variant6 implements ExampleUnionOf {
     private @Nullable Integer code;
     private String discriminantKind;
     private @Nullable String payload;
@@ -55,6 +57,7 @@ public final class Variant6 {
             return this;
         }
         @CustomType.Setter
+        @ConstValue("variant6")
         public Builder discriminantKind(String discriminantKind) {
             if (discriminantKind == null) {
               throw new MissingRequiredPropertyException("Variant6", "discriminantKind");

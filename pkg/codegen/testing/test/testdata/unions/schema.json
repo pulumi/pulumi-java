@@ -1,0 +1,456 @@
+{
+  "name": "unions",
+  "version": "0.0.1",
+  "types": {
+    "unions:index:Variant1": {
+      "type": "object",
+      "properties": {
+        "discriminantKind": {
+          "type": "string",
+          "const": "variant1"
+        },
+        "payload": {
+          "type": "string"
+        },
+        "extra": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "discriminantKind"
+      ]
+    },
+    "unions:index:Variant2": {
+      "type": "object",
+      "properties": {
+        "discriminantKind": {
+          "type": "string",
+          "const": "variant2"
+        },
+        "payload": {
+          "type": "string"
+        },
+        "extra": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "discriminantKind"
+      ]
+    },
+    "unions:index:Variant3": {
+      "type": "object",
+      "properties": {
+        "discriminantKind": {
+          "type": "string",
+          "const": "variant3"
+        },
+        "payload": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "discriminantKind"
+      ]
+    },
+    "unions:index:Color": {
+      "type": "string",
+      "enum": [
+        {
+          "value": "red"
+        },
+        {
+          "value": "blue"
+        }
+      ]
+    },
+    "unions:index:Nested": {
+      "type": "object",
+      "properties": {
+        "choice": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant3"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "resources": {
+    "unions:index:Example": {
+      "properties": {
+        "unionOf": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant2"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant3"
+            }
+          ]
+        },
+        "stringOrInteger": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "mapOfUnion": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        },
+        "listOfUnion": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/types/unions:index:Variant1"
+              },
+              {
+                "$ref": "#/types/unions:index:Variant2"
+              }
+            ]
+          }
+        },
+        "enumOrObject": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Color"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            }
+          ]
+        },
+        "nested": {
+          "$ref": "#/types/unions:index:Nested"
+        },
+        "assetOrArchive": {
+          "oneOf": [
+            {
+              "$ref": "pulumi.json#/Asset"
+            },
+            {
+              "$ref": "pulumi.json#/Archive"
+            }
+          ]
+        },
+        "resourceOrString": {
+          "oneOf": [
+            {
+              "$ref": "#/resources/unions:index:Example"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "stringOrEnum": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/types/unions:index:Color"
+            }
+          ]
+        },
+        "stringOrAny": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "pulumi.json#/Any"
+            }
+          ]
+        },
+        "numberOrInteger": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "listCollision": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          ]
+        }
+      },
+      "inputProperties": {
+        "unionOf": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant2"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant3"
+            }
+          ]
+        },
+        "stringOrInteger": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "mapOfUnion": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        },
+        "listOfUnion": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/types/unions:index:Variant1"
+              },
+              {
+                "$ref": "#/types/unions:index:Variant2"
+              }
+            ]
+          }
+        },
+        "enumOrObject": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Color"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            }
+          ]
+        },
+        "nested": {
+          "$ref": "#/types/unions:index:Nested"
+        },
+        "assetOrArchive": {
+          "oneOf": [
+            {
+              "$ref": "pulumi.json#/Asset"
+            },
+            {
+              "$ref": "pulumi.json#/Archive"
+            }
+          ]
+        },
+        "resourceOrString": {
+          "oneOf": [
+            {
+              "$ref": "#/resources/unions:index:Example"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "stringOrEnum": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/types/unions:index:Color"
+            }
+          ]
+        },
+        "stringOrAny": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "pulumi.json#/Any"
+            }
+          ]
+        },
+        "numberOrInteger": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "listCollision": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "unions:index:SubsetExample": {
+      "properties": {
+        "unionOf": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant2"
+            }
+          ]
+        }
+      },
+      "inputProperties": {
+        "unionOf": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant2"
+            }
+          ]
+        }
+      }
+    },
+    "unions:index:TwinExample": {
+      "properties": {
+        "unionOf": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant2"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant3"
+            }
+          ]
+        }
+      },
+      "inputProperties": {
+        "unionOf": {
+          "oneOf": [
+            {
+              "$ref": "#/types/unions:index:Variant1"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant2"
+            },
+            {
+              "$ref": "#/types/unions:index:Variant3"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "functions": {
+    "unions:index:getThing": {
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "shape": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          }
+        }
+      },
+      "outputs": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "oneOf": [
+              {
+                "$ref": "#/types/unions:index:Variant1"
+              },
+              {
+                "$ref": "#/types/unions:index:Variant2"
+              }
+            ]
+          }
+        },
+        "required": [
+          "result"
+        ]
+      }
+    }
+  },
+  "language": {
+    "java": {
+      "fullyTypedUnions": true
+    }
+  }
+}

@@ -21,5 +21,8 @@ public class App {
         var first = new Resource("first");
 
         ctx.export("kind", first.kind());
+        ctx.export("flag", first.flag());
+        ctx.export("count", first.count());
+        ctx.export("ratio", first.ratio());
     }
 }

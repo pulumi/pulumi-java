@@ -9,26 +9,16 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.discriminatedunionmany.ExampleArgs;
 import com.pulumi.discriminatedunionmany.Utilities;
-import com.pulumi.discriminatedunionmany.outputs.Variant10;
-import com.pulumi.discriminatedunionmany.outputs.Variant1;
-import com.pulumi.discriminatedunionmany.outputs.Variant2;
-import com.pulumi.discriminatedunionmany.outputs.Variant3;
-import com.pulumi.discriminatedunionmany.outputs.Variant4;
-import com.pulumi.discriminatedunionmany.outputs.Variant5;
-import com.pulumi.discriminatedunionmany.outputs.Variant6;
-import com.pulumi.discriminatedunionmany.outputs.Variant7;
-import com.pulumi.discriminatedunionmany.outputs.Variant8;
-import com.pulumi.discriminatedunionmany.outputs.Variant9;
-import java.lang.Object;
+import com.pulumi.discriminatedunionmany.outputs.ExampleUnionOf;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="discriminated-union-many:index:Example")
 public class Example extends com.pulumi.resources.CustomResource {
-    @Export(name="unionOf", refs={Object.class}, tree="[0]")
-    private Output</* @Nullable */ Object> unionOf;
+    @Export(name="unionOf", refs={ExampleUnionOf.class}, tree="[0]")
+    private Output</* @Nullable */ ExampleUnionOf> unionOf;
 
-    public Output<Optional<Object>> unionOf() {
+    public Output<Optional<ExampleUnionOf>> unionOf() {
         return Codegen.optional(this.unionOf);
     }
 

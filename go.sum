@@ -398,10 +398,10 @@ github.com/pulumi/appdash v0.0.0-20231130102222-75f619a67231 h1:vkHw5I/plNdTr435
 github.com/pulumi/appdash v0.0.0-20231130102222-75f619a67231/go.mod h1:murToZ2N9hNJzewjHBgfFdXhZKjY3z5cYC1VXk+lbFE=
 github.com/pulumi/inflector v0.2.1 h1:bqyiish3tq//vLeLiEstSFE5K7RNjy/ce47ed4QATu8=
 github.com/pulumi/inflector v0.2.1/go.mod h1:HUFCjcPTz96YtTuUlwG3i3EZG4WlniBvR9bd+iJxCUY=
-github.com/pulumi/pulumi/pkg/v3 v3.260.0 h1:ZX83V+7CpqH/OP3Ah47qxPFv74CkGUP409FxkRu82d0=
-github.com/pulumi/pulumi/pkg/v3 v3.260.0/go.mod h1:WcSKTjki8HV49yGh+g48kmFN/voAZ5O6CK8l4EvZs9s=
-github.com/pulumi/pulumi/sdk/v3 v3.260.0 h1:Bc848YiSK8oZqYn+xOnuuGb0oMK/w17DV6X5G0OIWvM=
-github.com/pulumi/pulumi/sdk/v3 v3.260.0/go.mod h1:xlOo55i2hj5tDyMY8diTS5LfFAn2sFew+50d67sVNdg=
+github.com/pulumi/pulumi/pkg/v3 v3.260.1-0.20260902103453-de0633d6c611 h1:8z/KX6jrVskU0Sn5+jw1Tntbyhg9ujnkaQ9uDmsDQNo=
+github.com/pulumi/pulumi/pkg/v3 v3.260.1-0.20260902103453-de0633d6c611/go.mod h1:uCVAJ+wRG1uqS1F/7LCIsB6tx2mzXu1wPY2Yp97mawU=
+github.com/pulumi/pulumi/sdk/v3 v3.260.1-0.20260902103453-de0633d6c611 h1:wPmQai5zFfSapJMnOg3G1b6apz+3eEkC0Gep4mbwdBM=
+github.com/pulumi/pulumi/sdk/v3 v3.260.1-0.20260902103453-de0633d6c611/go.mod h1:xlOo55i2hj5tDyMY8diTS5LfFAn2sFew+50d67sVNdg=
 github.com/rivo/uniseg v0.4.7 h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ=
 github.com/rivo/uniseg v0.4.7/go.mod h1:FN3SvrM+Zdj16jyLfmOkMNblXMcoc8DfTHruCPUcx88=
 github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0tI/otEQ=

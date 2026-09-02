@@ -60,6 +60,12 @@ var Export = PulumiAnnotations.Dot("Export")
 
 var EnumType = PulumiAnnotations.Dot("EnumType")
 
+var UnionType = PulumiAnnotations.Dot("UnionType")
+
+var ConstValue = PulumiAnnotations.Dot("ConstValue")
+
+var UnionCase = PulumiInternal.Dot("UnionCase")
+
 var Alias = PulumiCore.Dot("Alias")
 
 var PulumiDeployment = Pulumi.Dot("deployment")

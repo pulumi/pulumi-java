@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.alertsmanagement.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
@@ -196,6 +197,7 @@ public final class ActionGroupResponse {
             return this;
         }
         @CustomType.Setter
+        @ConstValue("ActionGroup")
         public Builder type(String type) {
             if (type == null) {
               throw new MissingRequiredPropertyException("ActionGroupResponse", "type");

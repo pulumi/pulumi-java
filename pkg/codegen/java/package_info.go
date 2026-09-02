@@ -110,6 +110,15 @@ type PackageInfo struct {
 	// section to enable `gradle test` command to run unit tests
 	// over the generated code. Supported values: "JUnitPlatform".
 	GradleTest string `json:"gradleTest"`
+
+	// Generates a Java interface for every union that the runtime can
+	// discriminate by wire shape, one per schema location. Object
+	// members implement every interface they belong to, every other
+	// member is constructed through a static factory, and union-valued
+	// properties are typed as the interface.
+	//
+	// Turning this on changes the type of every union-valued property.
+	FullyTypedUnions bool `json:"fullyTypedUnions,omitempty"`
 }
 
 func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
@@ -152,6 +161,9 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 	}
 	if overrides.GradleTest != "" {
 		result.GradleTest = overrides.GradleTest
+	}
+	if overrides.FullyTypedUnions {
+		result.FullyTypedUnions = true
 	}
 	return result
 }

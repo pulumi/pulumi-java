@@ -4,6 +4,7 @@
 package com.pulumi.kubernetes.core.v1.inputs;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
@@ -28,6 +29,7 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
+    @ConstValue("v1")
     private @Nullable Output<String> apiVersion;
 
     /**
@@ -88,6 +90,7 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
+    @ConstValue("ConfigMap")
     private @Nullable Output<String> kind;
 
     /**

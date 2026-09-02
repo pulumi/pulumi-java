@@ -3,6 +3,7 @@
 
 package com.pulumi.myedgeorder.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Double;
@@ -115,6 +116,7 @@ public final class PurchaseMeterDetailsResponse {
         }
 
         @CustomType.Setter
+        @ConstValue("Purchase")
         public Builder billingType(String billingType) {
             if (billingType == null) {
               throw new MissingRequiredPropertyException("PurchaseMeterDetailsResponse", "billingType");

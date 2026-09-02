@@ -4,6 +4,7 @@
 package com.pulumi.foobar;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
@@ -28,6 +29,7 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     @Import(name="optionalConst")
+    @ConstValue("val")
     private @Nullable Output<String> optionalConst;
 
     public Optional<Output<String>> optionalConst() {
@@ -63,6 +65,7 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     @Import(name="plainOptionalConst")
+    @ConstValue("val")
     private @Nullable String plainOptionalConst;
 
     public Optional<String> plainOptionalConst() {
@@ -91,6 +94,7 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     @Import(name="plainRequiredConst", required=true)
+    @ConstValue("val")
     private String plainRequiredConst;
 
     public String plainRequiredConst() {

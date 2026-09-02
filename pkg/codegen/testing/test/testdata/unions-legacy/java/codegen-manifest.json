@@ -1,0 +1,30 @@
+{
+  "emittedFiles": [
+    ".gitattributes",
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/unions/Example.java",
+    "src/main/java/com/pulumi/unions/ExampleArgs.java",
+    "src/main/java/com/pulumi/unions/Provider.java",
+    "src/main/java/com/pulumi/unions/ProviderArgs.java",
+    "src/main/java/com/pulumi/unions/SubsetExample.java",
+    "src/main/java/com/pulumi/unions/SubsetExampleArgs.java",
+    "src/main/java/com/pulumi/unions/TwinExample.java",
+    "src/main/java/com/pulumi/unions/TwinExampleArgs.java",
+    "src/main/java/com/pulumi/unions/UnionsFunctions.java",
+    "src/main/java/com/pulumi/unions/Utilities.java",
+    "src/main/java/com/pulumi/unions/enums/Color.java",
+    "src/main/java/com/pulumi/unions/inputs/GetThingArgs.java",
+    "src/main/java/com/pulumi/unions/inputs/GetThingPlainArgs.java",
+    "src/main/java/com/pulumi/unions/inputs/NestedArgs.java",
+    "src/main/java/com/pulumi/unions/inputs/Variant1Args.java",
+    "src/main/java/com/pulumi/unions/inputs/Variant2Args.java",
+    "src/main/java/com/pulumi/unions/inputs/Variant3Args.java",
+    "src/main/java/com/pulumi/unions/outputs/GetThingResult.java",
+    "src/main/java/com/pulumi/unions/outputs/Nested.java",
+    "src/main/java/com/pulumi/unions/outputs/Variant1.java",
+    "src/main/java/com/pulumi/unions/outputs/Variant2.java",
+    "src/main/java/com/pulumi/unions/outputs/Variant3.java"
+  ]
+}

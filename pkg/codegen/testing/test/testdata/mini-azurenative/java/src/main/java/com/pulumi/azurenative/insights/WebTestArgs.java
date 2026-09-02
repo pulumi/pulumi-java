@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.azurenative.insights.enums.WebTestKind;
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
@@ -210,6 +211,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* webTestType is no longer used. */
     @Import(name="webTestType")
+    @ConstValue("standard")
     private @Nullable Output<String> webTestType;
 
     /**

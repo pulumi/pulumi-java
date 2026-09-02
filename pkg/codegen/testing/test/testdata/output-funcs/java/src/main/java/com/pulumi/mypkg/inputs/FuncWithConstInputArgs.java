@@ -4,6 +4,7 @@
 package com.pulumi.mypkg.inputs;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
@@ -17,6 +18,7 @@ public final class FuncWithConstInputArgs extends com.pulumi.resources.InvokeArg
     public static final FuncWithConstInputArgs Empty = new FuncWithConstInputArgs();
 
     @Import(name="plainInput")
+    @ConstValue("fixed")
     private @Nullable Output<String> plainInput;
 
     public Optional<Output<String>> plainInput() {

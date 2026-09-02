@@ -6,6 +6,10 @@ package com.pulumi.union;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.union.enums.AccessRights;
+import com.pulumi.union.enums.BlobType;
+import com.pulumi.union.inputs.ExampleMapMapUnionPropertyArgs;
+import com.pulumi.union.inputs.ExampleStringOrIntegerPropertyArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,24 +24,40 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     public static final ExampleArgs Empty = new ExampleArgs();
 
     @Import(name="mapMapUnionProperty")
-    private @Nullable Output<Map<String,Map<String,Either<String,List<String>>>>> mapMapUnionProperty;
+    private @Nullable Output<Map<String,Map<String,ExampleMapMapUnionPropertyArgs>>> mapMapUnionProperty;
 
-    public Optional<Output<Map<String,Map<String,Either<String,List<String>>>>>> mapMapUnionProperty() {
+    public Optional<Output<Map<String,Map<String,ExampleMapMapUnionPropertyArgs>>>> mapMapUnionProperty() {
         return Optional.ofNullable(this.mapMapUnionProperty);
     }
 
-    @Import(name="stringOrIntegerProperty")
-    private @Nullable Output<Either<String,Integer>> stringOrIntegerProperty;
+    @Import(name="stringEnumUnionListProperty")
+    private @Nullable Output<List<Either<String,AccessRights>>> stringEnumUnionListProperty;
 
-    public Optional<Output<Either<String,Integer>>> stringOrIntegerProperty() {
+    public Optional<Output<List<Either<String,AccessRights>>>> stringEnumUnionListProperty() {
+        return Optional.ofNullable(this.stringEnumUnionListProperty);
+    }
+
+    @Import(name="stringOrIntegerProperty")
+    private @Nullable Output<ExampleStringOrIntegerPropertyArgs> stringOrIntegerProperty;
+
+    public Optional<Output<ExampleStringOrIntegerPropertyArgs>> stringOrIntegerProperty() {
         return Optional.ofNullable(this.stringOrIntegerProperty);
+    }
+
+    @Import(name="typedEnumProperty")
+    private @Nullable Output<Either<String,BlobType>> typedEnumProperty;
+
+    public Optional<Output<Either<String,BlobType>>> typedEnumProperty() {
+        return Optional.ofNullable(this.typedEnumProperty);
     }
 
     private ExampleArgs() {}
 
     private ExampleArgs(ExampleArgs $) {
         this.mapMapUnionProperty = $.mapMapUnionProperty;
+        this.stringEnumUnionListProperty = $.stringEnumUnionListProperty;
         this.stringOrIntegerProperty = $.stringOrIntegerProperty;
+        this.typedEnumProperty = $.typedEnumProperty;
     }
 
     public static Builder builder() {
@@ -58,30 +78,60 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExampleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder mapMapUnionProperty(@Nullable Output<Map<String,Map<String,Either<String,List<String>>>>> mapMapUnionProperty) {
+        public Builder mapMapUnionProperty(@Nullable Output<Map<String,Map<String,ExampleMapMapUnionPropertyArgs>>> mapMapUnionProperty) {
             $.mapMapUnionProperty = mapMapUnionProperty;
             return this;
         }
 
-        public Builder mapMapUnionProperty(Map<String,Map<String,Either<String,List<String>>>> mapMapUnionProperty) {
+        public Builder mapMapUnionProperty(Map<String,Map<String,ExampleMapMapUnionPropertyArgs>> mapMapUnionProperty) {
             return mapMapUnionProperty(Output.of(mapMapUnionProperty));
         }
 
-        public Builder stringOrIntegerProperty(@Nullable Output<Either<String,Integer>> stringOrIntegerProperty) {
+        public Builder stringEnumUnionListProperty(@Nullable Output<List<Either<String,AccessRights>>> stringEnumUnionListProperty) {
+            $.stringEnumUnionListProperty = stringEnumUnionListProperty;
+            return this;
+        }
+
+        public Builder stringEnumUnionListProperty(List<Either<String,AccessRights>> stringEnumUnionListProperty) {
+            return stringEnumUnionListProperty(Output.of(stringEnumUnionListProperty));
+        }
+
+        public Builder stringEnumUnionListProperty(Either<String,AccessRights>... stringEnumUnionListProperty) {
+            return stringEnumUnionListProperty(List.of(stringEnumUnionListProperty));
+        }
+
+        public Builder stringOrIntegerProperty(@Nullable Output<ExampleStringOrIntegerPropertyArgs> stringOrIntegerProperty) {
             $.stringOrIntegerProperty = stringOrIntegerProperty;
             return this;
         }
 
-        public Builder stringOrIntegerProperty(Either<String,Integer> stringOrIntegerProperty) {
+        public Builder stringOrIntegerProperty(ExampleStringOrIntegerPropertyArgs stringOrIntegerProperty) {
             return stringOrIntegerProperty(Output.of(stringOrIntegerProperty));
         }
 
         public Builder stringOrIntegerProperty(String stringOrIntegerProperty) {
-            return stringOrIntegerProperty(Either.ofLeft(stringOrIntegerProperty));
+            return stringOrIntegerProperty(ExampleStringOrIntegerPropertyArgs.of(stringOrIntegerProperty));
         }
 
         public Builder stringOrIntegerProperty(Integer stringOrIntegerProperty) {
-            return stringOrIntegerProperty(Either.ofRight(stringOrIntegerProperty));
+            return stringOrIntegerProperty(ExampleStringOrIntegerPropertyArgs.of(stringOrIntegerProperty));
+        }
+
+        public Builder typedEnumProperty(@Nullable Output<Either<String,BlobType>> typedEnumProperty) {
+            $.typedEnumProperty = typedEnumProperty;
+            return this;
+        }
+
+        public Builder typedEnumProperty(Either<String,BlobType> typedEnumProperty) {
+            return typedEnumProperty(Output.of(typedEnumProperty));
+        }
+
+        public Builder typedEnumProperty(String typedEnumProperty) {
+            return typedEnumProperty(Either.ofLeft(typedEnumProperty));
+        }
+
+        public Builder typedEnumProperty(BlobType typedEnumProperty) {
+            return typedEnumProperty(Either.ofRight(typedEnumProperty));
         }
 
         public ExampleArgs build() {

@@ -1,0 +1,6 @@
+component: codegen
+kind: Improvements
+body: 'Add the `fullyTypedUnions` Java package option. When it is set, every union that the runtime can discriminate by wire shape is generated as a Java interface named after the schema location that holds it. Object members implement the interface, every other member is constructed through a static factory on it, and union-valued properties are typed as the interface instead of `Either` or `Object`.'
+time: 2026-09-02T00:00:00.000000000Z
+custom:
+    PR: "2303"

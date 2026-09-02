@@ -3,6 +3,7 @@
 
 package com.pulumi.mypkg.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Double;
@@ -107,6 +108,7 @@ public final class SsisFolderResponse {
             return this;
         }
         @CustomType.Setter
+        @ConstValue("Folder")
         public Builder type(String type) {
             if (type == null) {
               throw new MissingRequiredPropertyException("SsisFolderResponse", "type");

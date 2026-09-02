@@ -5,10 +5,7 @@ package com.pulumi.discriminatedunionmany;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.discriminatedunionmany.inputs.Variant1Args;
-import com.pulumi.discriminatedunionmany.inputs.Variant2Args;
-import com.pulumi.discriminatedunionmany.inputs.Variant3Args;
-import java.lang.Object;
+import com.pulumi.discriminatedunionmany.inputs.SubsetExampleUnionOfArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,9 +16,9 @@ public final class SubsetExampleArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubsetExampleArgs Empty = new SubsetExampleArgs();
 
     @Import(name="unionOf")
-    private @Nullable Output<Object> unionOf;
+    private @Nullable Output<SubsetExampleUnionOfArgs> unionOf;
 
-    public Optional<Output<Object>> unionOf() {
+    public Optional<Output<SubsetExampleUnionOfArgs>> unionOf() {
         return Optional.ofNullable(this.unionOf);
     }
 
@@ -49,12 +46,12 @@ public final class SubsetExampleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubsetExampleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder unionOf(@Nullable Output<Object> unionOf) {
+        public Builder unionOf(@Nullable Output<SubsetExampleUnionOfArgs> unionOf) {
             $.unionOf = unionOf;
             return this;
         }
 
-        public Builder unionOf(Object unionOf) {
+        public Builder unionOf(SubsetExampleUnionOfArgs unionOf) {
             return unionOf(Output.of(unionOf));
         }
 

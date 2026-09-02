@@ -4,6 +4,7 @@
 package com.pulumi.kubernetes.core.v1;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
@@ -25,6 +26,7 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
+    @ConstValue("v1")
     private @Nullable Output<String> apiVersion;
 
     /**
@@ -55,6 +57,7 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
+    @ConstValue("ConfigMapList")
     private @Nullable Output<String> kind;
 
     /**

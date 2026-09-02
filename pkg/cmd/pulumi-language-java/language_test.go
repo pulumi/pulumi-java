@@ -37,7 +37,9 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-// TestLanguage runs the language conformance test suite against the Java language host.
+// TestLanguage runs the language conformance test suite against the Java language host. The host
+// turns on the fullyTypedUnions option for every package, so the suite exercises the typed union
+// interfaces. The codegen golden test unions-legacy locks in the shape generated without the option.
 func TestLanguage(t *testing.T) {
 	t.Parallel()
 
@@ -57,7 +59,8 @@ func TestLanguage(t *testing.T) {
 				engineAddress,
 				"", /*tracing*/
 				"", /*otel*/
-			)
+			).(*javaLanguageHost)
+			host.fullyTypedUnions = true
 
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
 			return nil
@@ -177,7 +180,6 @@ var expectedFailures = map[string]string{
 	"l2-invoke-scalar":                       "exception at runtime",
 	"l3-component-simple":                    "compilation error",
 	"l1-builtin-project-root-main":           "test failing",
-	"l2-union":                               "test failing",
 	"policy-simple":                          "test failing",
 	"policy-dryrun":                          "test failing",
 	"policy-config-schema":                   "test failing",
@@ -198,7 +200,6 @@ var expectedFailures = map[string]string{
 	"l2-enum":                                "https://github.com/pulumi/pulumi-java/issues/2018",
 	"l2-module-format":                       "https://github.com/pulumi/pulumi-java/issues/2019",
 	"l2-resource-names":                      "https://github.com/pulumi/pulumi-java/issues/2020",
-	"l2-discriminated-union":                 "https://github.com/pulumi/pulumi-java/issues/2021",
 	"policy-stack-tags":                      "https://github.com/pulumi/pulumi-java/issues/2022",
 	"policy-analyze-stack":                   "no policy pack support (added in v3.258.0)",
 	"policy-resource-metadata":               "no policy pack support (added in v3.259.0)",
@@ -289,11 +290,14 @@ var expectedFailures = map[string]string{
 
 	"l2-resource-hook-on-error": "resource hooks not implemented in programgen, the hook is dropped from the generated program (added in 3.254)", //nolint:lll
 
-	"l2-kebab-names":                    "compilation error: kebab-case resource/type/function names generate identifiers containing hyphens (extended in 3.260)",  //nolint:lll
-	"l2-large-map":                      "compilation error: import of the Map resource is ambiguous with java.util.Map in the generated program (added in 3.260)", //nolint:lll
-	"l2-map-keys-invoke-call":           "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.260)",        //nolint:lll
-	"l2-discriminated-union-marked-key": "compilation error: programgen passes output union types where input Args types are expected (added in 3.260)",            //nolint:lll
-	"l2-resource-read-unknown":          "read resource not implemented, the res declaration is dropped from the generated program (added in 3.260)",               //nolint:lll
+	"l2-kebab-names":                    "compilation error: kebab-case resource/type/function names generate identifiers containing hyphens (extended in 3.260)",                               //nolint:lll
+	"l2-large-map":                      "compilation error: import of the Map resource is ambiguous with java.util.Map in the generated program (added in 3.260)",                              //nolint:lll
+	"l2-map-keys-invoke-call":           "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.260)",                                     //nolint:lll
+	"l2-resource-read-unknown":          "read resource not implemented, the res declaration is dropped from the generated program (added in 3.260)",                                            //nolint:lll
+	"l2-union":                          "programgen passes strings where Either<String, Enum> is expected; a string and a string enum are not wire discriminatable, so the union keeps Either", //nolint:lll
+	"l2-discriminated-union-marked-key": "compilation error: programgen passes the output union interface where the input Args interface is expected",                                           //nolint:lll
+	"l2-discriminated-union-many":       "compilation error: programgen passes the output union interface where the input Args interface is expected",                                           //nolint:lll
+	"l2-secret-unknown":                 "wrapping an unknown output with secret() drops the secret marker (test added in pulumi/pulumi#24496, after v3.260.0)",                                 //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a

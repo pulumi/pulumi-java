@@ -4,8 +4,10 @@
 package com.pulumi.discriminatedunionmany.inputs;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
+import com.pulumi.discriminatedunionmany.inputs.ExampleUnionOfArgs;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Variant6Args extends com.pulumi.resources.ResourceArgs {
+public final class Variant6Args extends com.pulumi.resources.ResourceArgs implements ExampleUnionOfArgs {
 
     public static final Variant6Args Empty = new Variant6Args();
 
@@ -26,6 +28,7 @@ public final class Variant6Args extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="discriminantKind", required=true)
+    @ConstValue("variant6")
     private Output<String> discriminantKind;
 
     public Output<String> discriminantKind() {

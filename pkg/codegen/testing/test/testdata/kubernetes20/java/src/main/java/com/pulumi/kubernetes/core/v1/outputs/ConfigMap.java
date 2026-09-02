@@ -3,6 +3,7 @@
 
 package com.pulumi.kubernetes.core.v1.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.kubernetes.meta.v1.outputs.ObjectMeta;
 import java.lang.Boolean;
@@ -116,6 +117,7 @@ public final class ConfigMap {
         }
 
         @CustomType.Setter
+        @ConstValue("v1")
         public Builder apiVersion(@Nullable String apiVersion) {
 
             this.apiVersion = apiVersion;
@@ -140,6 +142,7 @@ public final class ConfigMap {
             return this;
         }
         @CustomType.Setter
+        @ConstValue("ConfigMap")
         public Builder kind(@Nullable String kind) {
 
             this.kind = kind;
