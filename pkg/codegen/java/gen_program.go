@@ -42,6 +42,11 @@ type generator struct {
 	// TODO
 	diagnostics                 hcl.Diagnostics
 	currentResourcePropertyType schema.Type
+	// unionLocation is the property whose value is being generated, and unionPackage the
+	// package that declares it. Together they locate the interface a nested union resolves to.
+	unionLocation *schema.Property
+	unionPackage  *schema.Package
+	unions        map[*schema.Package]*unionRegistry
 	// keep track of variable identifiers which are the result of an invoke
 	// for example "var resourceGroup = GetResourceGroup.invokeAsync(...)"
 	// we will keep track of "resourceGroup" -> schema(GetResourceGroup)
@@ -233,6 +238,7 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 
 	g := &generator{
 		program:                  program,
+		unions:                   map[*schema.Package]*unionRegistry{},
 		functionInvokes:          map[string]*schema.Function{},
 		emittedTypeImportSymbols: codegen.NewStringSet(),
 	}
@@ -1415,6 +1421,19 @@ func typedResourceProperties(resource *pcl.Resource) map[string]schema.Type {
 	return resourceProperties
 }
 
+// resourceInputProperty returns the package and the schema property behind an input of resource.
+func resourceInputProperty(resource *pcl.Resource, name string) (schema.PackageReference, *schema.Property) {
+	if resource.Schema == nil {
+		return nil, nil
+	}
+	for _, p := range resource.Schema.InputProperties {
+		if p.Name == name {
+			return resource.Schema.PackageReference, p
+		}
+	}
+	return resource.Schema.PackageReference, nil
+}
+
 // Returns the set of property names that the schema pins to a constant value. Generated args types
 // supply these values themselves, and their setters are deprecated, so programs must not set them.
 func constPropertyNames(properties []*schema.Property) map[string]bool {
@@ -1481,7 +1500,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 					attributeIdent := names.MakeValidIdentifier(attr.Name)
 					attributeSchemaType := resourceProperties[attr.Name]
 					g.currentResourcePropertyType = attributeSchemaType
+					restore := g.withUnionLocation(resourceInputProperty(resource, attr.Name))
 					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, attr.Value)
+					restore()
 				}
 
 				if !hasCustomResourceOptions(resource) {

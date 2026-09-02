@@ -797,9 +797,12 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
 				attributeType := objectProperties[lit.Value.AsString()]
 				g.genIndent(w)
+				property, _ := destType.Property(lit.Value.AsString())
+				restore := g.withUnionLocation(destType.PackageReference, property)
 				g.typedObjectExprScope(attributeType, func() {
 					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
 				})
+				restore()
 				g.genNewline(w)
 			}
 			g.genIndent(w)
@@ -823,19 +826,32 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		// their own wrappers like List.of().
 		savedType := g.currentResourcePropertyType
 		g.currentResourcePropertyType = nil
+		var elementType schema.Type
+		factory := ""
+		if mapType, ok := codegen.UnwrapType(destType).(*schema.MapType); ok {
+			elementType = mapType.ElementType
+			factory = g.unionFactory(elementType)
+		}
+		genValue := func(value model.Expression) {
+			g.genUnionElement(w, factory, elementType, value)
+		}
 		if len(expr.Items) == 1 {
 			firstItem := expr.Items[0]
 			// a map of one entry, generate a one-liner:
-			g.Fgenf(w, "Map.of(%.v, %.v)", firstItem.Key, firstItem.Value)
+			g.Fgenf(w, "Map.of(%.v, ", firstItem.Key)
+			genValue(firstItem.Value)
+			g.Fgen(w, ")")
 		} else {
 			g.Fgen(w, "Map.ofEntries(\n")
 			g.Indented(func() {
 				for index, item := range expr.Items {
+					g.Fgenf(w, "%sMap.entry(%.v, ", g.Indent, item.Key)
+					genValue(item.Value)
 					if index == len(expr.Items)-1 {
 						// Last item, no trailing comma
-						g.Fgenf(w, "%sMap.entry(%.v, %.v)\n", g.Indent, item.Key, item.Value)
+						g.Fgen(w, ")\n")
 					} else {
-						g.Fgenf(w, "%sMap.entry(%.v, %.v),\n", g.Indent, item.Key, item.Value)
+						g.Fgen(w, "),\n")
 					}
 				}
 			})
@@ -1031,7 +1047,17 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		g.Fgen(w, "Arrays.asList(")
 	}
 
+	var elementType schema.Type
+	factory := ""
+	if arrayType, ok := codegen.UnwrapType(g.currentResourcePropertyType).(*schema.ArrayType); ok {
+		elementType = arrayType.ElementType
+		factory = g.unionFactory(elementType)
+	}
 	genElement := func(w io.Writer, value model.Expression) {
+		if factory != "" {
+			g.genUnionElement(w, factory, elementType, value)
+			return
+		}
 		g.genNullableTupleElement(w, value)
 	}
 
