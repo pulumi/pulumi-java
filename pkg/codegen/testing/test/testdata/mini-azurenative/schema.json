@@ -267,6 +267,12 @@
         "webTestName": {
           "type": "string",
           "description": "User defined name if this WebTest."
+        },
+        "webTestType": {
+          "type": "string",
+          "description": "The type of this WebTest.",
+          "const": "standard",
+          "deprecationMessage": "webTestType is no longer used."
         }
       },
       "requiredInputs": [

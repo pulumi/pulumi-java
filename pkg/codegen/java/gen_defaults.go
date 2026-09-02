@@ -17,9 +17,6 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
-// TODO would this file be a convenient place to handle
-// DefaultValue.ConstValue also?
-
 // Helper type for config getter and default value generation. Use
 // configExpr and defaultValueExpr, the rest are helper methods.
 type defaultsGen struct {
@@ -202,6 +199,20 @@ func (dg *defaultsGen) builderExprWithSimpleType(
 
 	if arg != "" {
 		fmt.Fprintf(&buf, ".arg(%s)", arg)
+	}
+
+	// A constant property only ever holds one value, so fill it in rather than making the caller
+	// repeat it. A value the caller passed still wins, through .arg above.
+	if prop.ConstValue != nil {
+		primCode, primType, err := primitiveValue(prop.ConstValue)
+		if err != nil {
+			return "", err
+		}
+		if !primType.WithoutAnnotations().Equal(targetType.WithoutAnnotations()) {
+			return "", fmt.Errorf("Const value type mismatch: %v vs %v", primType, targetType)
+		}
+		fmt.Fprintf(&buf, ".def(%s)", primCode)
+		return buf.String(), nil
 	}
 
 	if prop.DefaultValue == nil {

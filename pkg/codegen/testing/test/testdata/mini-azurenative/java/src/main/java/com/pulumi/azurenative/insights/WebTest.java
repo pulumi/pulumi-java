@@ -250,7 +250,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }
-        return args == null ? WebTestArgs.Empty : args;
+        var builder = args == null ? WebTestArgs.builder() : WebTestArgs.builder(args);
+        return builder.build();
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {

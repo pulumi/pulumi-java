@@ -201,6 +201,29 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.webTestName);
     }
 
+    /**
+     * The type of this WebTest.
+     * 
+     * @deprecated
+     * webTestType is no longer used.
+     * 
+     */
+    @Deprecated /* webTestType is no longer used. */
+    @Import(name="webTestType")
+    private @Nullable Output<String> webTestType;
+
+    /**
+     * @return The type of this WebTest.
+     * 
+     * @deprecated
+     * webTestType is no longer used.
+     * 
+     */
+    @Deprecated /* webTestType is no longer used. */
+    public Optional<Output<String>> webTestType() {
+        return Optional.ofNullable(this.webTestType);
+    }
+
     private WebTestArgs() {}
 
     private WebTestArgs(WebTestArgs $) {
@@ -216,6 +239,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
         this.timeout = $.timeout;
         this.webTestKind = $.webTestKind;
         this.webTestName = $.webTestName;
+        this.webTestType = $.webTestType;
     }
 
     public static Builder builder() {
@@ -488,6 +512,35 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
             return webTestName(Output.of(webTestName));
         }
 
+        /**
+         * @param webTestType The type of this WebTest.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * webTestType is no longer used. This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* webTestType is no longer used. This property has a constant value, which is set automatically. */
+        public Builder webTestType(@Nullable Output<String> webTestType) {
+            $.webTestType = webTestType;
+            return this;
+        }
+
+        /**
+         * @param webTestType The type of this WebTest.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * webTestType is no longer used. This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* webTestType is no longer used. This property has a constant value, which is set automatically. */
+        public Builder webTestType(String webTestType) {
+            return webTestType(Output.of(webTestType));
+        }
+
         public WebTestArgs build() {
             $.frequency = Codegen.integerProp("frequency").output().arg($.frequency).def(300).getNullable();
             $.kind = Codegen.objectProp("kind", WebTestKind.class).output().arg($.kind).def(WebTestKind.Ping).getNullable();
@@ -499,6 +552,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
             }
             $.timeout = Codegen.integerProp("timeout").output().arg($.timeout).def(30).getNullable();
             $.webTestKind = Codegen.objectProp("webTestKind", WebTestKind.class).output().arg($.webTestKind).def(WebTestKind.Ping).require();
+            $.webTestType = Codegen.stringProp("webTestType").output().arg($.webTestType).def("standard").getNullable();
             return $;
         }
     }

@@ -411,7 +411,14 @@ type propJavadocOptions struct {
 func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJavadocOptions) {
 	w := ctx.writer
 
-	if prop.Comment == "" && prop.DeprecationMessage == "" {
+	deprecationMessage := prop.DeprecationMessage
+	if options.isBuilder && prop.ConstValue != nil {
+		// The generated type supplies the constant itself, so the setter is redundant.
+		deprecationMessage = strings.TrimSpace(deprecationMessage +
+			" This property has a constant value, which is set automatically.")
+	}
+
+	if prop.Comment == "" && deprecationMessage == "" {
 		return
 	}
 	fprintf(w, "%s/**\n", options.indent)
@@ -434,12 +441,12 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 		fprintf(w, "%s\n", formatBlockComment("@return builder", options.indent))
 	}
 
-	if prop.DeprecationMessage != "" {
+	if deprecationMessage != "" {
 		fprintf(w, "%s * @deprecated\n", options.indent)
-		fprintf(w, "%s\n", formatForeignBlockComment(prop.DeprecationMessage, options.indent))
+		fprintf(w, "%s\n", formatForeignBlockComment(deprecationMessage, options.indent))
 	}
 	fprintf(w, "%s */\n", options.indent)
-	printObsoleteAttribute(ctx, prop.DeprecationMessage, options.indent)
+	printObsoleteAttribute(ctx, deprecationMessage, options.indent)
 }
 
 func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, targetType TypeShape) error {
@@ -1143,20 +1150,10 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w,
 		"        }\n")
 	if hasConstInputs {
+		// build() fills in the constant values, which Empty does not carry.
 		fprintf(w,
 			"        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
-		fprintf(w, "        return builder\n")
-		for _, prop := range r.InputProperties {
-			if prop.ConstValue != nil {
-				v, _, err := primitiveValue(prop.ConstValue)
-				if err != nil {
-					return err
-				}
-				setterName := names.Ident(mod.propertyName(prop)).AsProperty().Setter()
-				fprintf(w, "            .%s(%s)\n", setterName, v)
-			}
-		}
-		fprintf(w, "            .build();\n")
+		fprintf(w, "        return builder.build();\n")
 	} else {
 		fprintf(w,
 			"        return args == null ? %s.Empty : args;\n", ctx.ref(argsFQN))

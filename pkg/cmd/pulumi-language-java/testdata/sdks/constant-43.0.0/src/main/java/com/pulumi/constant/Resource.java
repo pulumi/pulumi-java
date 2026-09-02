@@ -56,9 +56,7 @@ public class Resource extends com.pulumi.resources.CustomResource {
             return null;
         }
         var builder = args == null ? ResourceArgs.builder() : ResourceArgs.builder(args);
-        return builder
-            .kind("Constant")
-            .build();
+        return builder.build();
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {

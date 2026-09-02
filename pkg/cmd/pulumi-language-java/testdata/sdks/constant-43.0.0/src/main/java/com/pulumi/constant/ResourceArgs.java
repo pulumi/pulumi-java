@@ -46,17 +46,33 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * This property has a constant value, which is set automatically.
+         * 
+         */
+        @Deprecated /* This property has a constant value, which is set automatically. */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
         public ResourceArgs build() {
-            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).def("Constant").require();
             return $;
         }
     }

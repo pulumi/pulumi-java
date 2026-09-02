@@ -56,11 +56,7 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
             return null;
         }
         var builder = args == null ? ModuleResourceArgs.builder() : ModuleResourceArgs.builder(args);
-        return builder
-            .optionalConst("val")
-            .plainOptionalConst("val")
-            .plainRequiredConst("val")
-            .build();
+        return builder.build();
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {

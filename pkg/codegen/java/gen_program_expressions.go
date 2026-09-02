@@ -784,11 +784,16 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 			destTypeName = fq
 		}
 
+		constProperties := constPropertyNames(destType.Properties)
+
 		g.Fgenf(w, "%s.builder()", destTypeName)
 		g.genNewline(w)
 		g.Indented(func() {
 			for _, item := range expr.Items {
 				lit := item.Key.(*model.LiteralValueExpression)
+				if constProperties[lit.Value.AsString()] {
+					continue
+				}
 				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
 				attributeType := objectProperties[lit.Value.AsString()]
 				g.genIndent(w)
