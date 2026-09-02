@@ -78,6 +78,14 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 			Description: "Tests for parameterized providers",
 		}),
 		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "unions",
+			Description: "Union interfaces generated under the fullyTypedUnions option",
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "unions-legacy",
+			Description: "The same unions without the option, as Either and Object",
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "build-files/none",
 			Description: "Tests for build-files = none",
 			// We don't generate a gradle file, so we can't compile.

@@ -3,6 +3,7 @@
 
 package com.pulumi.mypkg.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.mypkg.outputs.SsisVariableResponse;
@@ -143,6 +144,7 @@ public final class SsisEnvironmentResponse {
             return this;
         }
         @CustomType.Setter
+        @ConstValue("Environment")
         public Builder type(String type) {
             if (type == null) {
               throw new MissingRequiredPropertyException("SsisEnvironmentResponse", "type");

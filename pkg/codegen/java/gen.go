@@ -52,6 +52,12 @@ type modContext struct {
 	configClassPackageName string
 	classQueue             *classQueue
 
+	// The union interfaces of the whole package, shared by every module.
+	unions *unionRegistry
+	// The property whose type is being rendered, which locates the union interface a union
+	// resolves to.
+	unionLocation *schema.Property
+
 	extensionParameterization *schema.ExtensionParameterization
 }
 
@@ -286,6 +292,13 @@ func (mod *modContext) typeStringRecHelper(
 		tokenType := pkg.Dot(names.Ident(tokenToName(t.Token)))
 		return TypeShape{Type: tokenType}
 	case *schema.UnionType:
+		// Under the fullyTypedUnions option a discriminatable union is generated as an interface.
+		// Checked before the elements are rendered so that referring to the union does not also
+		// import every member.
+		if shape, ok := mod.unionTypeString(t, qualifier, input); ok {
+			return shape
+		}
+
 		elementTypeSet := codegen.NewStringSet()
 		var elementTypes []TypeShape
 		for _, e := range t.ElementTypes {
@@ -398,6 +411,20 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
+	// interfaces are the union interfaces this type implements.
+	interfaces []names.FQN
+}
+
+// implementsClause renders the interface list of the generated class, if any.
+func (pt *plainType) implementsClause(ctx *classFileContext) string {
+	if len(pt.interfaces) == 0 {
+		return ""
+	}
+	refs := make([]string, 0, len(pt.interfaces))
+	for _, fqn := range pt.interfaces {
+		refs = append(refs, ctx.ref(fqn))
+	}
+	return " implements " + strings.Join(refs, ", ")
 }
 
 type propJavadocOptions struct {
@@ -481,6 +508,9 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	propertyModifiers = append(propertyModifiers, "private")
 	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.Import), wireName, attributeArgs)
+	if prop.ConstValue != nil {
+		fprintf(w, "    @%s(%s)\n", ctx.ref(names.ConstValue), constValueLiteral(prop.ConstValue))
+	}
 	fprintf(w, "    %s %s %s;\n\n", strings.Join(propertyModifiers, " "),
 		targetType.ToCode(ctx.imports), propertyName)
 
@@ -519,6 +549,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	for i, prop := range pt.properties {
 		requireInitializers := !pt.args || isInputType(prop.Type)
 
+		pt.mod.unionLocation = prop
 		propTypes[i] = pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -533,6 +564,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			anyPropertyRequired = true
 		}
 	}
+	pt.mod.unionLocation = nil
 
 	if anyPropertyRequired {
 		ctx.imports.Ref(names.PulumiMissingRequiredPropertyException)
@@ -548,7 +580,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		fprintf(w, " */\n")
 	}
 
-	fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
+	fprintf(w, "public final class %s extends %s%s {\n", pt.name, pt.baseClass, pt.implementsClause(ctx))
 	fprintf(w, "\n")
 	fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
 	fprintf(w, "\n")
@@ -701,6 +733,23 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 		fprintf(w, "        }\n\n")
 	}
 
+	// Further helpers for when a union interface is needed but one of its wrapped members is
+	// provided. Object members already implement the interface, so they need no helper.
+	if entry, ok := pt.mod.unions.entryFor(t1.Type); ok {
+		for _, m := range pt.mod.wrappedMembers(ctx, entry) {
+			genPropJavadoc(ctx, prop, propJavadocOptions{
+				indent:    indent,
+				isBuilder: true,
+				fieldName: fieldName,
+			})
+			fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
+				setterName, fieldName, m.shape.ToCode(ctx.imports))
+			fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
+				setterName, fieldName, ctx.ref(t1.Type))
+			fprintf(w, "        }\n\n")
+		}
+	}
+
 	// Further helpers for when Output<Either<L, R>> is needed but L or R provided.
 	isEither, t1, t2 := t1.UnEither()
 	// We compare fully qualified raw types (with erased generics)
@@ -744,12 +793,13 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Open the class and annotate it appropriately.
 	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
-	fprintf(w, "public final class %s {\n", pt.name)
+	fprintf(w, "public final class %s%s {\n", pt.name, pt.implementsClause(ctx))
 
 	anyPropertyRequired := false
 	// Generate each output field.
 	for _, prop := range props {
 		fieldName := names.Ident(pt.mod.propertyName(prop))
+		pt.mod.unionLocation = prop
 		fieldType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -768,6 +818,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			anyPropertyRequired = true
 		}
 	}
+	pt.mod.unionLocation = nil
 
 	if anyPropertyRequired {
 		ctx.imports.Ref(names.PulumiMissingRequiredPropertyException)
@@ -784,6 +835,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	for _, prop := range props {
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
+		pt.mod.unionLocation = prop
 		getterType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -838,12 +890,14 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 		fprintf(w, "\n")
 	}
+	pt.mod.unionLocation = nil
 
 	// Generate Builder
 	var builderFields []builderFieldTemplateContext
 	var builderSetters []builderSetterTemplateContext
 	for _, prop := range props {
 		propertyName := names.Ident(pt.mod.propertyName(prop))
+		pt.mod.unionLocation = prop
 		propertyType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -869,6 +923,11 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		} else {
 			setterAnnotation = fmt.Sprintf("@%s.Setter", ctx.ref(names.CustomType))
 		}
+		annotations := []string{setterAnnotation}
+		if prop.ConstValue != nil {
+			annotations = append(annotations,
+				fmt.Sprintf("@%s(%s)", ctx.ref(names.ConstValue), constValueLiteral(prop.ConstValue)))
+		}
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
 			SetterName:   setterName,
 			PropertyType: propertyType.ToCode(ctx.imports),
@@ -876,9 +935,10 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			Assignment:   fmt.Sprintf("this.%s = %s", propertyName, propertyName),
 			IsRequired:   prop.IsRequired(),
 			ListType:     propertyType.ListType(ctx),
-			Annotations:  []string{setterAnnotation},
+			Annotations:  annotations,
 		})
 	}
+	pt.mod.unionLocation = nil
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
@@ -981,6 +1041,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		// Write the property attribute
 		wireName := prop.Name
 		propertyName := names.Ident(mod.propertyName(prop))
+		mod.unionLocation = prop
 		propertyType := mod.typeString(
 			ctx,
 			prop.Type,
@@ -1042,6 +1103,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "        return %s;\n", getterExpr)
 		fprintf(w, "    }\n")
 	}
+	mod.unionLocation = nil
 
 	if len(r.Properties) > 0 {
 		fprintf(w, "\n")
@@ -1391,7 +1453,9 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		if fun.MultiArgumentInputs && fun.Inputs != nil {
 			var paramDecls, paramNames, nullNames, outputSetters, plainSetters []string
 			for _, prop := range fun.Inputs.Properties {
+				restore := mod.withUnionLocation(prop)
 				paramType := mod.typeString(ctx, prop.Type, inputsQualifier, false, true, false, false)
+				restore()
 				paramName := names.Ident(mod.propertyName(prop)).AsProperty().Field()
 				setter := names.Ident(prop.Name).AsProperty().Setter()
 				paramDecls = append(paramDecls, paramType.ToCode(ctx.imports)+" "+paramName)
@@ -1731,6 +1795,7 @@ func (mod *modContext) genType(
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
 		args:                  obj.IsInputShape(),
+		interfaces:            mod.unionInterfaces(obj, propertyTypeQualifier, input),
 	}
 
 	if input {
@@ -2092,6 +2157,16 @@ import com.pulumi.deployment.Deployment;
 	}
 
 	for !mod.classQueue.isEmpty() {
+		if unionEntry, ok := mod.classQueue.dequeueInterface(); ok {
+			if err := addClass(unionEntry.packageName, unionEntry.className,
+				func(ctx *classFileContext) error {
+					return mod.genUnionInterface(ctx, unionEntry)
+				}); err != nil {
+				return err
+			}
+			continue
+		}
+
 		entry := mod.classQueue.dequeue()
 		if err := addClass(entry.packageName, entry.className, func(ctx *classFileContext) error {
 			return mod.genType(ctx, entry.schemaType, entry.input)
@@ -2184,6 +2259,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		}
 	}
 
+	// Name the union interfaces once for the whole package, so that a union reached through several
+	// modules resolves to the same interfaces.
+	unions := registerUnions(pkg, getPackageInfo(pkg.Reference()).FullyTypedUnions)
+
 	// group resources, types, and functions into Java packages
 	modules := map[string]*modContext{}
 
@@ -2208,6 +2287,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				packages:                  info.Packages,
 				propertyNames:             propertyNames,
 				classQueue:                newClassQueue(),
+				unions:                    unions,
 				extensionParameterization: pkg.ExtensionParameterization,
 			}
 
@@ -2481,6 +2561,8 @@ type classQueue struct {
 	outputTypes     map[*schema.ObjectType]classQueueEntry
 	seenInputTypes  map[*schema.ObjectType]bool
 	seenOutputTypes map[*schema.ObjectType]bool
+	interfaces      map[string]unionQueueEntry
+	seenInterfaces  map[string]bool
 }
 
 type classQueueEntry struct {
@@ -2496,11 +2578,36 @@ func newClassQueue() *classQueue {
 		outputTypes:     map[*schema.ObjectType]classQueueEntry{},
 		seenInputTypes:  map[*schema.ObjectType]bool{},
 		seenOutputTypes: map[*schema.ObjectType]bool{},
+		interfaces:      map[string]unionQueueEntry{},
+		seenInterfaces:  map[string]bool{},
 	}
 }
 
 func (q *classQueue) isEmpty() bool {
-	return len(q.inputTypes) == 0 && len(q.outputTypes) == 0
+	return len(q.inputTypes) == 0 && len(q.outputTypes) == 0 && len(q.interfaces) == 0
+}
+
+func (q *classQueue) ensureInterfaceGenerated(entry unionQueueEntry) {
+	key := entry.packageName.Dot(entry.className).String()
+	if _, seen := q.seenInterfaces[key]; !seen {
+		q.seenInterfaces[key] = true
+		q.interfaces[key] = entry
+	}
+}
+
+// dequeueInterface takes the interface whose name sorts first, so generation order is stable.
+func (q *classQueue) dequeueInterface() (unionQueueEntry, bool) {
+	if len(q.interfaces) == 0 {
+		return unionQueueEntry{}, false
+	}
+	keys := make([]string, 0, len(q.interfaces))
+	for key := range q.interfaces {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	entry := q.interfaces[keys[0]]
+	delete(q.interfaces, keys[0])
+	return entry, true
 }
 
 func (q *classQueue) ensureGenerated(entry classQueueEntry) {
