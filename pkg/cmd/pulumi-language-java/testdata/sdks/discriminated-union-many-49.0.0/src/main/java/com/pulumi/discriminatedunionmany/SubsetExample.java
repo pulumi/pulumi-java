@@ -9,19 +9,16 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.discriminatedunionmany.SubsetExampleArgs;
 import com.pulumi.discriminatedunionmany.Utilities;
-import com.pulumi.discriminatedunionmany.outputs.Variant1;
-import com.pulumi.discriminatedunionmany.outputs.Variant2;
-import com.pulumi.discriminatedunionmany.outputs.Variant3;
-import java.lang.Object;
+import com.pulumi.discriminatedunionmany.outputs.SubsetExampleUnionOf;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="discriminated-union-many:index:SubsetExample")
 public class SubsetExample extends com.pulumi.resources.CustomResource {
-    @Export(name="unionOf", refs={Object.class}, tree="[0]")
-    private Output</* @Nullable */ Object> unionOf;
+    @Export(name="unionOf", refs={SubsetExampleUnionOf.class}, tree="[0]")
+    private Output</* @Nullable */ SubsetExampleUnionOf> unionOf;
 
-    public Output<Optional<Object>> unionOf() {
+    public Output<Optional<SubsetExampleUnionOf>> unionOf() {
         return Codegen.optional(this.unionOf);
     }
 

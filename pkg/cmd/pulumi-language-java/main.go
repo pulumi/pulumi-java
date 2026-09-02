@@ -145,6 +145,18 @@ type javaLanguageHost struct {
 	engineAddress string
 	tracing       string
 	otelEndpoint  string
+
+	// fullyTypedUnions turns on the fullyTypedUnions Java option for every package the host
+	// generates code for. The conformance tests set it; providers set the option in their schema.
+	fullyTypedUnions bool
+}
+
+// packageLoader wraps loader so that generated code honours the host's fullyTypedUnions setting.
+func (host *javaLanguageHost) packageLoader(loader schema.ReferenceLoader) schema.ReferenceLoader {
+	if host.fullyTypedUnions {
+		return fullyTypedUnionsLoader{loader}
+	}
+	return loader
 }
 
 func newLanguageHost(
@@ -907,7 +919,7 @@ func (host *javaLanguageHost) GenerateProject(
 
 	extraOptions = append(extraOptions, pcl.PreferOutputVersionedInvokes)
 
-	program, diags, err := pcl.BindDirectory(req.SourceDirectory, loader, extraOptions...)
+	program, diags, err := pcl.BindDirectory(req.SourceDirectory, host.packageLoader(loader), extraOptions...)
 	if err != nil {
 		return nil, err
 	}
@@ -968,7 +980,7 @@ func (host *javaLanguageHost) GenerateProgram(
 		}
 	}
 
-	program, diags, err := pcl.BindProgram(parser.Files, loader, pcl.PreferOutputVersionedInvokes)
+	program, diags, err := pcl.BindProgram(parser.Files, host.packageLoader(loader), pcl.PreferOutputVersionedInvokes)
 	if err != nil {
 		return nil, err
 	}
@@ -1011,6 +1023,16 @@ func (host *javaLanguageHost) GeneratePackage(
 	err = json.Unmarshal([]byte(req.Schema), &spec)
 	if err != nil {
 		return nil, err
+	}
+	if host.fullyTypedUnions {
+		raw, err := withFullyTypedUnions(spec.Language["java"])
+		if err != nil {
+			return nil, err
+		}
+		if spec.Language == nil {
+			spec.Language = map[string]schema.RawMessage{}
+		}
+		spec.Language["java"] = raw
 	}
 
 	diags := hcl.Diagnostics{}

@@ -3,14 +3,14 @@
 
 package com.pulumi.union;
 
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.union.ExampleArgs;
 import com.pulumi.union.Utilities;
-import java.lang.Integer;
+import com.pulumi.union.outputs.ExampleMapMapUnionProperty;
+import com.pulumi.union.outputs.ExampleStringOrIntegerProperty;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,17 +19,29 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="union:index:Example")
 public class Example extends com.pulumi.resources.CustomResource {
-    @Export(name="mapMapUnionProperty", refs={Map.class,String.class,Either.class,List.class}, tree="[0,1,[0,1,[2,1,[3,1]]]]")
-    private Output</* @Nullable */ Map<String,Map<String,Either<String,List<String>>>>> mapMapUnionProperty;
+    @Export(name="mapMapUnionProperty", refs={Map.class,String.class,ExampleMapMapUnionProperty.class}, tree="[0,1,[0,1,2]]")
+    private Output</* @Nullable */ Map<String,Map<String,ExampleMapMapUnionProperty>>> mapMapUnionProperty;
 
-    public Output<Optional<Map<String,Map<String,Either<String,List<String>>>>>> mapMapUnionProperty() {
+    public Output<Optional<Map<String,Map<String,ExampleMapMapUnionProperty>>>> mapMapUnionProperty() {
         return Codegen.optional(this.mapMapUnionProperty);
     }
-    @Export(name="stringOrIntegerProperty", refs={Either.class,String.class,Integer.class}, tree="[0,1,2]")
-    private Output</* @Nullable */ Either<String,Integer>> stringOrIntegerProperty;
+    @Export(name="stringEnumUnionListProperty", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> stringEnumUnionListProperty;
 
-    public Output<Optional<Either<String,Integer>>> stringOrIntegerProperty() {
+    public Output<Optional<List<String>>> stringEnumUnionListProperty() {
+        return Codegen.optional(this.stringEnumUnionListProperty);
+    }
+    @Export(name="stringOrIntegerProperty", refs={ExampleStringOrIntegerProperty.class}, tree="[0]")
+    private Output</* @Nullable */ ExampleStringOrIntegerProperty> stringOrIntegerProperty;
+
+    public Output<Optional<ExampleStringOrIntegerProperty>> stringOrIntegerProperty() {
         return Codegen.optional(this.stringOrIntegerProperty);
+    }
+    @Export(name="typedEnumProperty", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> typedEnumProperty;
+
+    public Output<Optional<String>> typedEnumProperty() {
+        return Codegen.optional(this.typedEnumProperty);
     }
 
     /**

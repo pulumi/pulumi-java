@@ -3,7 +3,9 @@
 
 package com.pulumi.discriminatedunionmany.outputs;
 
+import com.pulumi.core.annotations.ConstValue;
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.discriminatedunionmany.outputs.SubsetExampleUnionOf;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
@@ -11,7 +13,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class Variant1 {
+public final class Variant1 implements SubsetExampleUnionOf {
     private String discriminantKind;
     private @Nullable String extra;
     private @Nullable String payload;
@@ -48,6 +50,7 @@ public final class Variant1 {
         }
 
         @CustomType.Setter
+        @ConstValue("variant1")
         public Builder discriminantKind(String discriminantKind) {
             if (discriminantKind == null) {
               throw new MissingRequiredPropertyException("Variant1", "discriminantKind");
