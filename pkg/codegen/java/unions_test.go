@@ -125,13 +125,22 @@ func TestTypedInputAndCollapsedOutput(t *testing.T) {
 	require.True(t, typedInput(union(schema.StringType, color)))
 	require.True(t, typedInput(union(schema.IntType, schema.NumberType)))
 	require.True(t, typedInput(union(list(schema.StringType), schema.StringType)))
-	require.False(t, typedInput(union(list(schema.StringType), list(schema.IntType))))
+	require.True(t, typedInput(union(list(schema.StringType), list(schema.IntType))))
 	require.False(t, typedInput(union(schema.StringType, schema.AnyType)))
 	require.False(t, typedInput(union(schema.StringType, &schema.TokenType{Token: "test:index:Opaque"})))
 
-	require.Equal(t, TypeShape{Type: names.String}, collapsedOutputType(union(schema.StringType, color)))
-	require.Equal(t, TypeShape{Type: names.Double}, collapsedOutputType(union(schema.IntType, schema.NumberType)))
-	require.Equal(t, TypeShape{Type: names.Object}, collapsedOutputType(union(schema.StringType, schema.BoolType)))
+	require.Equal(t, TypeShape{Type: names.String}, collapsedUnionType(union(schema.StringType, color)))
+	require.Equal(t, TypeShape{Type: names.Double}, collapsedUnionType(union(schema.IntType, schema.NumberType)))
+	require.Equal(t, TypeShape{Type: names.Object}, collapsedUnionType(union(schema.StringType, schema.BoolType)))
 	require.Equal(t, TypeShape{Type: names.Object},
-		collapsedOutputType(union(list(schema.StringType), list(schema.IntType))))
+		collapsedUnionType(union(list(schema.StringType), list(schema.IntType))))
+
+	// Members that share an erased Java type get factories named after their case classes.
+	pkg := unionTestPackage(t, map[string][]int{"A": {1, 2}})
+	members := unionMembers(union(list(schema.StringType), list(schema.IntType), schema.StringType), pkg)
+	require.Equal(t, []unionMember{
+		{key: "list<string>", caseName: "OfList", factory: "ofList"},
+		{key: "list<integer>", caseName: "OfList2", factory: "ofList2"},
+		{key: "string", caseName: "OfString", factory: "of"},
+	}, members)
 }

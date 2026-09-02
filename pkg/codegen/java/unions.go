@@ -23,6 +23,9 @@ type unionMember struct {
 	object *schema.ObjectType
 	// caseName is the nested case class of a wrapped member, such as OfString.
 	caseName string
+	// factory is the static factory of a wrapped member: of, or the case name in lower camel case
+	// when another wrapped member has the same erased Java type.
+	factory string
 }
 
 // formKey identifies one generated form of a union interface: the Java package qualifier it is
@@ -215,9 +218,8 @@ func erasure(t schema.Type) string {
 }
 
 // typedInput reports whether the input form of t gets an interface: every member has a Java type
-// of its own, and no two wrapped members share an erasure.
+// of its own.
 func typedInput(t *schema.UnionType) bool {
-	erasures := codegen.StringSet{}
 	for _, m := range flattenUnion(t) {
 		if m == schema.AnyType || m == schema.JSONType {
 			return false
@@ -225,18 +227,13 @@ func typedInput(t *schema.UnionType) bool {
 		if token, ok := m.(*schema.TokenType); ok && token.UnderlyingType == nil {
 			return false
 		}
-		e := erasure(m)
-		if erasures.Has(e) {
-			return false
-		}
-		erasures.Add(e)
 	}
 	return true
 }
 
-// collapsedOutputType is the type of an output union that gets no interface: the primitive every
-// member shares, or Object.
-func collapsedOutputType(t *schema.UnionType) TypeShape {
+// collapsedUnionType is the type of a union that gets no interface: the primitive every member
+// shares, or Object.
+func collapsedUnionType(t *schema.UnionType) TypeShape {
 	var shared names.FQN
 	for _, m := range flattenUnion(t) {
 		if e, ok := m.(*schema.EnumType); ok {
@@ -285,9 +282,30 @@ func unionMembers(t *schema.UnionType, pkg *schema.Package) []unionMember {
 			caseName = fmt.Sprintf("%s%d", base, i)
 		}
 		caseNames.Add(caseName)
-		members = append(members, unionMember{key: key, caseName: caseName})
+		members = append(members, unionMember{key: key, caseName: caseName, factory: "of"})
+	}
+
+	erasures := map[string]int{}
+	for _, e := range flattenUnion(t) {
+		erasures[erasure(e)]++
+	}
+	for i, m := range members {
+		if m.object == nil && erasures[erasure(flattenUnion(t)[memberIndex(t, m.key)])] > 1 {
+			members[i].factory = names.LowerCamelCase(m.caseName)
+		}
 	}
 	return members
+}
+
+// memberIndex returns the position of the member with the given key among the flattened members
+// of t.
+func memberIndex(t *schema.UnionType, key string) int {
+	for i, e := range flattenUnion(t) {
+		if memberKey(e) == key {
+			return i
+		}
+	}
+	panic(fmt.Sprintf("union has no member %s", key))
 }
 
 // visitUnionTypes calls visitor for every union held by t, along with the number of collections the
@@ -582,15 +600,15 @@ func (mod *modContext) unionInterfaceFQN(spec *unionSpec, key formKey, input boo
 	return packageName.Dot(className)
 }
 
-// unionTypeString renders the interface generated for t, or the collapsed type of an output union
-// that gets none. It reports false when the fullyTypedUnions option leaves t alone.
+// unionTypeString renders the interface generated for t, or the collapsed type of a union that
+// gets none. It reports false when the fullyTypedUnions option is off.
 func (mod *modContext) unionTypeString(t *schema.UnionType, qualifier qualifier, input bool) (TypeShape, bool) {
 	form, ok := mod.unions.lookup(mod.unionLocation, t)
 	if ok {
 		return TypeShape{Type: mod.unionInterfaceFQN(form.spec, formKey{qualifier, form.inputShape}, input)}, true
 	}
-	if mod.unions != nil && mod.unions.enabled && qualifier == outputsQualifier {
-		return collapsedOutputType(t), true
+	if mod.unions != nil && mod.unions.enabled {
+		return collapsedUnionType(t), true
 	}
 	return TypeShape{}, false
 }
@@ -630,9 +648,10 @@ func (mod *modContext) wrappedMembers(ctx *classFileContext, entry unionQueueEnt
 		}
 		wireType := entry.memberType(m)
 		wrapped = append(wrapped, wrappedMember{
-			caseName: m.caseName,
-			shape:    mod.typeStringRecHelper(ctx, wireType, entry.key.qualifier, entry.input, false, false),
-			factory:  factoryParameterType(wireType),
+			caseName:  m.caseName,
+			factory:   m.factory,
+			shape:     mod.typeStringRecHelper(ctx, wireType, entry.key.qualifier, entry.input, false, false),
+			parameter: factoryParameterType(wireType),
 		})
 	}
 	return wrapped
@@ -640,10 +659,11 @@ func (mod *modContext) wrappedMembers(ctx *classFileContext, entry unionQueueEnt
 
 type wrappedMember struct {
 	caseName string
+	factory  string
 	// shape is the boxed Java type the case class holds.
 	shape TypeShape
-	// factory is the parameter type of the static factory: a primitive for a scalar member.
-	factory string
+	// parameter is the parameter type of the static factory: a primitive for a scalar member.
+	parameter string
 }
 
 // factoryParameterType is the parameter type of the of(...) factory for a wrapped member.
@@ -706,11 +726,11 @@ func (mod *modContext) genUnionInterface(ctx *classFileContext, entry unionQueue
 	fprintf(w, "public interface %s%s {\n", self, extends)
 
 	for _, m := range wrapped {
-		parameterType := m.factory
+		parameterType := m.parameter
 		if parameterType == "" {
 			parameterType = m.shape.ToCode(ctx.imports)
 		}
-		fprintf(w, "    static %s of(%s value) {\n", self, parameterType)
+		fprintf(w, "    static %s %s(%s value) {\n", self, m.factory, parameterType)
 		fprintf(w, "        return new %s.%s(value);\n", self, m.caseName)
 		fprintf(w, "    }\n\n")
 	}

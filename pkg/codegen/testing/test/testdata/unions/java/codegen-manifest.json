@@ -17,6 +17,7 @@
     "src/main/java/com/pulumi/unions/enums/Color.java",
     "src/main/java/com/pulumi/unions/inputs/ExampleAssetOrArchiveArgs.java",
     "src/main/java/com/pulumi/unions/inputs/ExampleEnumOrObjectArgs.java",
+    "src/main/java/com/pulumi/unions/inputs/ExampleListCollisionArgs.java",
     "src/main/java/com/pulumi/unions/inputs/ExampleListOfUnionArgs.java",
     "src/main/java/com/pulumi/unions/inputs/ExampleMapOfUnionArgs.java",
     "src/main/java/com/pulumi/unions/inputs/ExampleNumberOrIntegerArgs.java",

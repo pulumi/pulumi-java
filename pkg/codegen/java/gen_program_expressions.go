@@ -827,13 +827,13 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		savedType := g.currentResourcePropertyType
 		g.currentResourcePropertyType = nil
 		var elementType schema.Type
-		factory := ""
 		if mapType, ok := codegen.UnwrapType(destType).(*schema.MapType); ok {
 			elementType = mapType.ElementType
-			factory = g.unionFactory(elementType)
 		}
 		genValue := func(value model.Expression) {
-			g.genUnionElement(w, factory, elementType, value)
+			if elementType == nil || !g.genUnionElement(w, elementType, value) {
+				g.Fgenf(w, "%.v", value)
+			}
 		}
 		if len(expr.Items) == 1 {
 			firstItem := expr.Items[0]
@@ -1048,17 +1048,13 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	}
 
 	var elementType schema.Type
-	factory := ""
 	if arrayType, ok := codegen.UnwrapType(g.currentResourcePropertyType).(*schema.ArrayType); ok {
 		elementType = arrayType.ElementType
-		factory = g.unionFactory(elementType)
 	}
 	genElement := func(w io.Writer, value model.Expression) {
-		if factory != "" {
-			g.genUnionElement(w, factory, elementType, value)
-			return
+		if elementType == nil || !g.genUnionElement(w, elementType, value) {
+			g.genNullableTupleElement(w, value)
 		}
-		g.genNullableTupleElement(w, value)
 	}
 
 	if len(expr.Expressions) == 0 {

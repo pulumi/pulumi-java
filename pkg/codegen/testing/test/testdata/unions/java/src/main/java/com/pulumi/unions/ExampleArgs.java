@@ -5,13 +5,13 @@ package com.pulumi.unions;
 
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.AssetOrArchive;
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.unions.Example;
 import com.pulumi.unions.enums.Color;
 import com.pulumi.unions.inputs.ExampleAssetOrArchiveArgs;
 import com.pulumi.unions.inputs.ExampleEnumOrObjectArgs;
+import com.pulumi.unions.inputs.ExampleListCollisionArgs;
 import com.pulumi.unions.inputs.ExampleListOfUnionArgs;
 import com.pulumi.unions.inputs.ExampleMapOfUnionArgs;
 import com.pulumi.unions.inputs.ExampleNumberOrIntegerArgs;
@@ -50,9 +50,9 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="listCollision")
-    private @Nullable Output<Either<List<String>,List<Integer>>> listCollision;
+    private @Nullable Output<ExampleListCollisionArgs> listCollision;
 
-    public Optional<Output<Either<List<String>,List<Integer>>>> listCollision() {
+    public Optional<Output<ExampleListCollisionArgs>> listCollision() {
         return Optional.ofNullable(this.listCollision);
     }
 
@@ -92,9 +92,9 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="stringOrAny")
-    private @Nullable Output<Either<String,Object>> stringOrAny;
+    private @Nullable Output<Object> stringOrAny;
 
-    public Optional<Output<Either<String,Object>>> stringOrAny() {
+    public Optional<Output<Object>> stringOrAny() {
         return Optional.ofNullable(this.stringOrAny);
     }
 
@@ -184,12 +184,12 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return enumOrObject(ExampleEnumOrObjectArgs.of(enumOrObject));
         }
 
-        public Builder listCollision(@Nullable Output<Either<List<String>,List<Integer>>> listCollision) {
+        public Builder listCollision(@Nullable Output<ExampleListCollisionArgs> listCollision) {
             $.listCollision = listCollision;
             return this;
         }
 
-        public Builder listCollision(Either<List<String>,List<Integer>> listCollision) {
+        public Builder listCollision(ExampleListCollisionArgs listCollision) {
             return listCollision(Output.of(listCollision));
         }
 
@@ -258,21 +258,13 @@ public final class ExampleArgs extends com.pulumi.resources.ResourceArgs {
             return resourceOrString(ExampleResourceOrStringArgs.of(resourceOrString));
         }
 
-        public Builder stringOrAny(@Nullable Output<Either<String,Object>> stringOrAny) {
+        public Builder stringOrAny(@Nullable Output<Object> stringOrAny) {
             $.stringOrAny = stringOrAny;
             return this;
         }
 
-        public Builder stringOrAny(Either<String,Object> stringOrAny) {
-            return stringOrAny(Output.of(stringOrAny));
-        }
-
-        public Builder stringOrAny(String stringOrAny) {
-            return stringOrAny(Either.ofLeft(stringOrAny));
-        }
-
         public Builder stringOrAny(Object stringOrAny) {
-            return stringOrAny(Either.ofRight(stringOrAny));
+            return stringOrAny(Output.of(stringOrAny));
         }
 
         public Builder stringOrEnum(@Nullable Output<ExampleStringOrEnumArgs> stringOrEnum) {

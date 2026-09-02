@@ -741,6 +741,10 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 		wrapped := pt.mod.wrappedMembers(ctx, entry)
 		restore()
 		for _, m := range wrapped {
+			if m.factory != "of" {
+				// Members that share an erasure cannot overload the setter either.
+				continue
+			}
 			genPropJavadoc(ctx, prop, propJavadocOptions{
 				indent:    indent,
 				isBuilder: true,
