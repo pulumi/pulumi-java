@@ -346,6 +346,11 @@ func GenerateProject(
 	// in the dependency tree. See https://maven.apache.org/pom.html#Dependency_Version_Requirement_Specification for
 	// more information.
 	coreSDKVersion := DefaultSdkVersion.String()
+	for _, p := range packages {
+		if info, ok := p.Language["java"].(PackageInfo); ok && info.FullyTypedUnions {
+			coreSDKVersion = FullyTypedUnionsSdkVersion.String()
+		}
+	}
 	for name, dep := range localDependencies {
 		parts := strings.Split(dep, ":")
 		if len(parts) < 3 {

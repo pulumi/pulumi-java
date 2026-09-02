@@ -147,7 +147,7 @@ type javaLanguageHost struct {
 	otelEndpoint  string
 
 	// fullyTypedUnions turns on the fullyTypedUnions Java option for every package the host
-	// generates code for. The conformance tests set it; providers set the option in their schema.
+	// generates code for.
 	fullyTypedUnions bool
 }
 

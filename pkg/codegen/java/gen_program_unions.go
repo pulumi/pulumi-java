@@ -8,11 +8,14 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
-// unionRegistry returns the union interfaces of pkg, computed once per program.
-func (g *generator) unionRegistry(pkg *schema.Package) *unionRegistry {
+// registryFor returns the union interfaces of pkg, computed once per program.
+func (g *generator) registryFor(pkg *schema.Package) *unionRegistry {
 	if reg, ok := g.unions[pkg]; ok {
 		return reg
 	}
@@ -36,28 +39,33 @@ func (g *generator) withUnionLocation(pkg schema.PackageReference, property *sch
 }
 
 // unionFactory returns the fully qualified static factory of the input interface generated for the
-// union elementType at the current location, or "" when the union has no interface. A value placed
-// in a list or a map of such a union must be wrapped with the factory, because the collection
-// element type is the interface rather than the member type.
+// union elementType at the current location, or "" when the union has no interface.
 func (g *generator) unionFactory(elementType schema.Type) string {
 	union, ok := codegen.UnwrapType(elementType).(*schema.UnionType)
 	if !ok || g.unionPackage == nil {
 		return ""
 	}
-	form, ok := g.unionRegistry(g.unionPackage).lookup(g.unionLocation, union)
+	form, ok := g.registryFor(g.unionPackage).lookup(g.unionLocation, union)
 	if !ok {
 		return ""
 	}
 	parts := strings.Split(form.spec.ownerToken, ":")
 	ref := g.unionPackage.Reference()
 	pkg := extensionPackageName(parts[0], ref)
-	return pulumiInputImport(pkg, parts[1], form.spec.name+"Args", ref.Namespace()) + ".of"
+	className := names.Ident(form.spec.name + "Args").String()
+	return pulumiInputImport(pkg, parts[1], className, ref.Namespace()) + ".of"
 }
 
 // genUnionElement generates a list or map element of a union, wrapping a non-object value with the
-// factory of the union's interface. An object value is built as the member it selects, which
-// implements the interface itself.
+// factory of the union's interface.
 func (g *generator) genUnionElement(w io.Writer, factory string, elementType schema.Type, value model.Expression) {
+	if call, ok := value.(*model.FunctionCallExpression); ok && call.Name == pcl.IntrinsicConvert {
+		if _, isObject := call.Args[0].(*model.ObjectConsExpression); isObject {
+			// The binder has resolved the object to its member, and the conversion lowers it as such.
+			g.Fgenf(w, "%.v", value)
+			return
+		}
+	}
 	if object, ok := value.(*model.ObjectConsExpression); ok {
 		if union, isUnion := codegen.UnwrapType(elementType).(*schema.UnionType); isUnion {
 			g.genObjectConsExpression(w, object, pickTypeFromUnion(union, object))

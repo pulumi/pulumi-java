@@ -4,7 +4,6 @@
 package com.pulumi.discriminatedunion.outputs;
 
 import com.pulumi.core.annotations.UnionType;
-import com.pulumi.core.internal.UnionCase;
 import com.pulumi.discriminatedunion.outputs.ExampleArrayOfUnionOf;
 import com.pulumi.discriminatedunion.outputs.VariantOne;
 import com.pulumi.discriminatedunion.outputs.VariantTwo;

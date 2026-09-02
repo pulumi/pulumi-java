@@ -10,14 +10,16 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.unions.inputs.ExampleEnumOrObjectArgs;
 import com.pulumi.unions.inputs.ExampleListOfUnionArgs;
+import com.pulumi.unions.inputs.ExampleUnionOfArgs;
 import com.pulumi.unions.inputs.SubsetExampleUnionOfArgs;
+import com.pulumi.unions.inputs.TwinExampleUnionOfArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Variant1Args extends com.pulumi.resources.ResourceArgs implements ExampleEnumOrObjectArgs, ExampleListOfUnionArgs, SubsetExampleUnionOfArgs {
+public final class Variant1Args extends com.pulumi.resources.ResourceArgs implements ExampleEnumOrObjectArgs, ExampleListOfUnionArgs, ExampleUnionOfArgs, SubsetExampleUnionOfArgs, TwinExampleUnionOfArgs {
 
     public static final Variant1Args Empty = new Variant1Args();
 

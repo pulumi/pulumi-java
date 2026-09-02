@@ -4,10 +4,10 @@ package java
 
 import (
 	"fmt"
-	"slices"
 	"sort"
 	"strings"
 
+	mapset "github.com/deckarep/golang-set/v2"
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 
@@ -25,50 +25,37 @@ type unionMember struct {
 	caseName string
 }
 
-// unionSpec is the interface generated for one schema location that holds a union. Its members
-// are the same in every shape; the shapes differ only in how the member types are referred to.
+// formKey identifies one generated form of a union interface: the Java package qualifier it is
+// generated under, and whether its members are referred to in their Args shape.
+type formKey struct {
+	qualifier  qualifier
+	inputShape bool
+}
+
+// unionBinding is the union value and the property that bind a location in one form.
+type unionBinding struct {
+	union    *schema.UnionType
+	property *schema.Property
+}
+
+// unionSpec is the interface generated for one schema location that holds a union.
 type unionSpec struct {
 	name string
 	// ownerToken places the interface in the module of the resource, function, or type that
 	// declares the property.
 	ownerToken string
 	members    []unionMember
-	// forms holds the union type at this location in each shape it is bound in, keyed by whether
-	// the shape is an input shape.
-	forms map[bool]*schema.UnionType
-	// locations holds the property that binds this location in each shape.
-	locations map[bool]*schema.Property
+	keys       mapset.Set[string]
+	forms      map[formKey]unionBinding
 	// supersets are the specs whose member sets strictly contain this one's.
 	supersets []*unionSpec
 	// equals are the specs with exactly this member set.
 	equals []*unionSpec
 }
 
-func (u *unionSpec) keys() []string {
-	keys := make([]string, 0, len(u.members))
-	for _, m := range u.members {
-		keys = append(keys, m.key)
-	}
-	return keys
-}
-
-// directSupersets returns the supersets that are not themselves supersets of another superset, so
-// the generated interface declaration lists each parent once.
-func (u *unionSpec) directSupersets() []*unionSpec {
-	var direct []*unionSpec
-	for _, candidate := range u.supersets {
-		redundant := false
-		for _, other := range u.supersets {
-			if other != candidate && isStrictSubset(other.keys(), candidate.keys()) {
-				redundant = true
-				break
-			}
-		}
-		if !redundant {
-			direct = append(direct, candidate)
-		}
-	}
-	return direct
+func (u *unionSpec) bound(key formKey) bool {
+	_, ok := u.forms[key]
+	return ok
 }
 
 // unionRegistry names the union interfaces of a package. It is shared by every module of that
@@ -76,14 +63,10 @@ func (u *unionSpec) directSupersets() []*unionSpec {
 type unionRegistry struct {
 	// The schema binder shares one union value between every location with the same members, and
 	// type rendering rebuilds union values as it strips input wrappers, so a union is resolved by
-	// the property that holds it and its member key. byKey keeps the first location of each member
-	// set for the callers that render a type without a property.
+	// the property that holds it and its member key.
 	byLocation map[*schema.Property]map[string]unionForm
-	byKey      map[string]unionForm
 	byMember   map[string][]*unionSpec
-	// byFQN records the generated interface behind each Java type the registry has handed out,
-	// so builder helpers can recognise a union-typed property from its TypeShape.
-	byFQN map[string]unionQueueEntry
+	specs      []*unionSpec
 }
 
 // unionForm is a union type bound at one location in one shape.
@@ -93,16 +76,10 @@ type unionForm struct {
 }
 
 func (r *unionRegistry) lookup(location *schema.Property, t *schema.UnionType) (unionForm, bool) {
-	if r == nil {
+	if r == nil || location == nil {
 		return unionForm{}, false
 	}
-	key := memberKey(t)
-	if location != nil {
-		if form, ok := r.byLocation[location][key]; ok {
-			return form, true
-		}
-	}
-	form, ok := r.byKey[key]
+	form, ok := r.byLocation[location][memberKey(t)]
 	return form, ok
 }
 
@@ -111,14 +88,6 @@ func (r *unionRegistry) containing(token string) []*unionSpec {
 		return nil
 	}
 	return r.byMember[token]
-}
-
-func (r *unionRegistry) entryFor(fqn names.FQN) (unionQueueEntry, bool) {
-	if r == nil {
-		return unionQueueEntry{}, false
-	}
-	entry, ok := r.byFQN[fqn.String()]
-	return entry, ok
 }
 
 // flattenUnion resolves the concrete members of t through optional, input, token, and nested
@@ -194,11 +163,7 @@ func memberKey(t schema.Type) string {
 
 // caseBaseName is the name of the case class that wraps a member, before collisions are resolved.
 func caseBaseName(t schema.Type) string {
-	switch t := t.(type) {
-	case *schema.OptionalType:
-		return caseBaseName(t.ElementType)
-	case *schema.InputType:
-		return caseBaseName(t.ElementType)
+	switch t := codegen.UnwrapType(t).(type) {
 	case *schema.ArrayType:
 		return "OfList"
 	case *schema.MapType:
@@ -213,12 +178,9 @@ func caseBaseName(t schema.Type) string {
 		}
 		return "Of" + tokenToName(t.Token)
 	case *schema.TokenType:
-		if t.UnderlyingType != nil {
-			return caseBaseName(t.UnderlyingType)
-		}
-		return "Of" + tokenToName(t.Token)
+		return caseBaseName(t.UnderlyingType)
 	}
-	switch t {
+	switch codegen.UnwrapType(t) {
 	case schema.StringType:
 		return "OfString"
 	case schema.IntType:
@@ -264,35 +226,8 @@ func unionMembers(t *schema.UnionType, pkg *schema.Package) []unionMember {
 	return members
 }
 
-// isStrictSubset reports whether every key of sub is in super, and super has more keys.
-func isStrictSubset(sub, super []string) bool {
-	if len(sub) >= len(super) {
-		return false
-	}
-	for _, key := range sub {
-		if !slices.Contains(super, key) {
-			return false
-		}
-	}
-	return true
-}
-
-func sameKeys(a, b []string) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for _, key := range a {
-		if !slices.Contains(b, key) {
-			return false
-		}
-	}
-	return true
-}
-
 // visitUnionTypes calls visitor for every union held by t, along with the number of collections the
-// union is nested in. It does not descend into object types: a union nested in an object belongs to
-// that object's own property, and object types are visited in their own right. Unions nested in a
-// union are flattened into it, so they are not visited separately.
+// union is nested in. It does not descend into object types.
 func visitUnionTypes(t schema.Type, depth int, visitor func(*schema.UnionType, int)) {
 	switch t := t.(type) {
 	case *schema.OptionalType:
@@ -321,30 +256,30 @@ type unionPosition struct {
 	propertyName string
 	union        *schema.UnionType
 	property     *schema.Property
-	inputShape   bool
+	forms        []formKey
 	depth        int
-	seq          int
 }
 
+var (
+	inputArgsForm    = []formKey{{inputsQualifier, true}}
+	inputPlainForm   = []formKey{{inputsQualifier, false}}
+	outputForm       = []formKey{{outputsQualifier, false}}
+	plainObjectForms = []formKey{{inputsQualifier, false}, {outputsQualifier, false}}
+)
+
 // registerUnions names every union in pkg that IsWireDiscriminatableUnionType accepts. Each schema
-// location gets its own interface, named after the owner and the property, so a name never
-// depends on what other locations hold. The input and output shapes of one location share a spec.
-//
-// The registry stays empty unless the package sets the fullyTypedUnions option, because typing a
-// union that used to be java.lang.Object or Either<L, R> breaks the callers of the generated SDK.
+// location gets its own interface, named after the owner and the property. The forms of one
+// location share a spec.
 func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 	reg := &unionRegistry{
 		byLocation: map[*schema.Property]map[string]unionForm{},
-		byKey:      map[string]unionForm{},
 		byMember:   map[string][]*unionSpec{},
-		byFQN:      map[string]unionQueueEntry{},
 	}
 	if !fullyTypedUnions {
 		return reg
 	}
 
-	// Reserve the names of the types the package already generates so an interface can never shadow
-	// one of them. The Args suffix follows the base name, so reserving the base name is enough.
+	// Reserve the names the package already generates.
 	taken := codegen.StringSet{}
 	reserve := func(mod, name string) bool {
 		key := mod + "/" + name
@@ -374,7 +309,7 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 	}
 
 	var positions []unionPosition
-	collect := func(ownerName, ownerToken string, props []*schema.Property, inputShape bool) {
+	collect := func(ownerName, ownerToken string, props []*schema.Property, forms []formKey) {
 		for _, p := range props {
 			propertyName := names.Title(p.Name)
 			visitUnionTypes(p.Type, 0, func(union *schema.UnionType, depth int) {
@@ -387,41 +322,40 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 					propertyName: propertyName,
 					union:        union,
 					property:     p,
-					inputShape:   inputShape,
+					forms:        forms,
 					depth:        depth,
-					seq:          len(positions),
 				})
 			})
 		}
 	}
 
 	if pkg.Provider != nil {
-		collect(resourceName(pkg.Provider), pkg.Provider.Token, pkg.Provider.InputProperties, true)
-		collect(resourceName(pkg.Provider), pkg.Provider.Token, pkg.Provider.Properties, false)
+		collect(resourceName(pkg.Provider), pkg.Provider.Token, pkg.Provider.InputProperties, inputArgsForm)
+		collect(resourceName(pkg.Provider), pkg.Provider.Token, pkg.Provider.Properties, outputForm)
 	}
 
-	resources := slices.Clone(pkg.Resources)
+	resources := append([]*schema.Resource{}, pkg.Resources...)
 	sort.Slice(resources, func(i, j int) bool { return resources[i].Token < resources[j].Token })
 	for _, r := range resources {
-		collect(resourceName(r), r.Token, r.InputProperties, true)
-		collect(resourceName(r), r.Token, r.Properties, false)
+		collect(resourceName(r), r.Token, r.InputProperties, inputArgsForm)
+		collect(resourceName(r), r.Token, r.Properties, outputForm)
 		if r.StateInputs != nil {
-			collect(resourceName(r), r.Token, r.StateInputs.Properties, true)
+			collect(resourceName(r), r.Token, r.StateInputs.Properties, inputArgsForm)
 		}
 	}
 
-	functions := slices.Clone(pkg.Functions)
+	functions := append([]*schema.Function{}, pkg.Functions...)
 	sort.Slice(functions, func(i, j int) bool { return functions[i].Token < functions[j].Token })
 	for _, f := range functions {
 		name := tokenToName(f.Token)
 		if f.Inputs != nil {
-			collect(name, f.Token, f.Inputs.Properties, false)
+			collect(name, f.Token, f.Inputs.Properties, inputPlainForm)
 			if f.Inputs.InputShape != nil {
-				collect(name, f.Token, f.Inputs.InputShape.Properties, true)
+				collect(name, f.Token, f.Inputs.InputShape.Properties, inputArgsForm)
 			}
 		}
 		if f.Outputs != nil {
-			collect(name, f.Token, f.Outputs.Properties, false)
+			collect(name, f.Token, f.Outputs.Properties, outputForm)
 		}
 	}
 
@@ -439,33 +373,30 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 		return !objects[i].IsInputShape() && objects[j].IsInputShape()
 	})
 	for _, obj := range objects {
-		collect(tokenToName(obj.Token), obj.Token, obj.Properties, obj.IsInputShape())
+		forms := plainObjectForms
+		if obj.IsInputShape() {
+			forms = inputArgsForm
+		}
+		collect(tokenToName(obj.Token), obj.Token, obj.Properties, forms)
 	}
 
 	// A union held directly by a property names the interface before one buried in a list or a
-	// map, so shallower positions take the plain name.
-	sort.SliceStable(positions, func(i, j int) bool {
-		if positions[i].depth != positions[j].depth {
-			return positions[i].depth < positions[j].depth
-		}
-		return positions[i].seq < positions[j].seq
-	})
+	// map.
+	sort.SliceStable(positions, func(i, j int) bool { return positions[i].depth < positions[j].depth })
 
-	// The input and output shapes of one location hold different union values with the same
-	// members. They share one spec, found by location and member set.
 	type location struct {
 		owner, property, members string
 	}
 	specs := map[location]*unionSpec{}
-	var all []*unionSpec
 	for _, pos := range positions {
 		members := unionMembers(pos.union, pkg)
-		keys := make([]string, 0, len(members))
+		keys := mapset.NewSet[string]()
 		for _, m := range members {
-			keys = append(keys, m.key)
+			keys.Add(m.key)
 		}
-		sort.Strings(keys)
-		loc := location{pos.ownerName, pos.propertyName, strings.Join(keys, "|")}
+		sorted := keys.ToSlice()
+		sort.Strings(sorted)
+		loc := location{pos.ownerToken, pos.propertyName, strings.Join(sorted, "|")}
 
 		spec, ok := specs[loc]
 		if !ok {
@@ -479,42 +410,38 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 				name:       name,
 				ownerToken: pos.ownerToken,
 				members:    members,
-				forms:      map[bool]*schema.UnionType{},
-				locations:  map[bool]*schema.Property{},
+				keys:       keys,
+				forms:      map[formKey]unionBinding{},
 			}
 			specs[loc] = spec
-			all = append(all, spec)
+			reg.specs = append(reg.specs, spec)
 			for _, m := range members {
 				if m.object != nil {
 					reg.byMember[m.object.Token] = append(reg.byMember[m.object.Token], spec)
 				}
 			}
 		}
-		form := unionForm{spec: spec, inputShape: pos.inputShape}
-		if _, has := spec.forms[pos.inputShape]; !has {
-			spec.forms[pos.inputShape] = pos.union
-			spec.locations[pos.inputShape] = pos.property
+		for _, key := range pos.forms {
+			if !spec.bound(key) {
+				spec.forms[key] = unionBinding{union: pos.union, property: pos.property}
+			}
 		}
-		key := memberKey(pos.union)
 		if _, has := reg.byLocation[pos.property]; !has {
 			reg.byLocation[pos.property] = map[string]unionForm{}
 		}
-		reg.byLocation[pos.property][key] = form
-		if _, has := reg.byKey[key]; !has {
-			reg.byKey[key] = form
+		reg.byLocation[pos.property][memberKey(pos.union)] = unionForm{
+			spec: spec, inputShape: pos.forms[0].inputShape,
 		}
 	}
 
-	sort.Slice(all, func(i, j int) bool { return all[i].name < all[j].name })
-	for _, spec := range all {
-		for _, other := range all {
-			if spec == other {
-				continue
-			}
+	sort.Slice(reg.specs, func(i, j int) bool { return reg.specs[i].name < reg.specs[j].name })
+	for _, spec := range reg.specs {
+		for _, other := range reg.specs {
 			switch {
-			case isStrictSubset(spec.keys(), other.keys()):
+			case spec == other:
+			case spec.keys.IsProperSubset(other.keys):
 				spec.supersets = append(spec.supersets, other)
-			case sameKeys(spec.keys(), other.keys()):
+			case spec.keys.Equal(other.keys):
 				spec.equals = append(spec.equals, other)
 			}
 		}
@@ -525,28 +452,18 @@ func registerUnions(pkg *schema.Package, fullyTypedUnions bool) *unionRegistry {
 	return reg
 }
 
-// unionQueueEntry is one generated form of a union interface, matching the form its member classes
-// are generated in.
+// unionQueueEntry is one generated form of a union interface.
 type unionQueueEntry struct {
 	packageName names.FQN
 	className   names.Ident
 	spec        *unionSpec
-	qualifier   qualifier
+	key         formKey
 	input       bool
-	// inputShape reports whether the members are referred to in their Args shape.
-	inputShape bool
 }
 
 // memberType returns the type of member m in the shape this entry generates.
 func (e unionQueueEntry) memberType(m unionMember) schema.Type {
-	form, ok := e.spec.forms[e.inputShape]
-	if !ok {
-		// The location is not bound in this shape; fall back to the other one.
-		for _, form = range e.spec.forms {
-			break
-		}
-	}
-	for _, t := range flattenUnion(form) {
+	for _, t := range flattenUnion(e.spec.forms[e.key].union) {
 		if memberKey(t) == m.key {
 			return t
 		}
@@ -554,9 +471,8 @@ func (e unionQueueEntry) memberType(m unionMember) schema.Type {
 	panic(fmt.Sprintf("union %s has no member %s", e.spec.name, m.key))
 }
 
-// withUnionLocation sets the property whose type is being rendered, so that a union shared between
-// locations resolves to the interface of this one. It returns the function that restores the
-// previous location.
+// withUnionLocation sets the property whose type is being rendered. It returns the function that
+// restores the previous location.
 func (mod *modContext) withUnionLocation(p *schema.Property) func() {
 	previous := mod.unionLocation
 	mod.unionLocation = p
@@ -571,29 +487,23 @@ func unionShapeSuffix(inputShape bool) string {
 }
 
 // unionInterfaceFQN is the fully qualified name of the interface generated for spec in the given
-// shape and package qualifier, and queues that interface for generation.
-func (mod *modContext) unionInterfaceFQN(
-	spec *unionSpec, qualifier qualifier, input bool, inputShape bool,
-) names.FQN {
-	packageName, err := parsePackageName(mod.tokenToPackage(spec.ownerToken, qualifier))
+// form, and queues that interface for generation.
+func (mod *modContext) unionInterfaceFQN(spec *unionSpec, key formKey, input bool) names.FQN {
+	packageName, err := parsePackageName(mod.tokenToPackage(spec.ownerToken, key.qualifier))
 	if err != nil {
 		panic(err)
 	}
-	className := names.Ident(spec.name + unionShapeSuffix(inputShape))
-	entry := unionQueueEntry{
-		packageName: packageName,
-		className:   className,
-		spec:        spec,
-		qualifier:   qualifier,
-		input:       input,
-		inputShape:  inputShape,
-	}
-	fqn := packageName.Dot(className)
-	mod.unions.byFQN[fqn.String()] = entry
+	className := names.Ident(spec.name + unionShapeSuffix(key.inputShape))
 	if mod.classQueue != nil {
-		mod.classQueue.ensureInterfaceGenerated(entry)
+		mod.classQueue.ensureInterfaceGenerated(unionQueueEntry{
+			packageName: packageName,
+			className:   className,
+			spec:        spec,
+			key:         key,
+			input:       input,
+		})
 	}
-	return fqn
+	return packageName.Dot(className)
 }
 
 // unionTypeString renders the interface generated for t, if t has one.
@@ -602,38 +512,36 @@ func (mod *modContext) unionTypeString(t *schema.UnionType, qualifier qualifier,
 	if !ok {
 		return TypeShape{}, false
 	}
-	fqn := mod.unionInterfaceFQN(form.spec, qualifier, input, form.inputShape)
-	return TypeShape{Type: fqn}, true
+	return TypeShape{Type: mod.unionInterfaceFQN(form.spec, formKey{qualifier, form.inputShape}, input)}, true
 }
 
-// unionInterfaces returns the union interfaces obj implements in the shape being generated. Only
-// the narrowest applicable interfaces are listed, because the wider ones are reachable through them.
+// unionInterfaces returns the union interfaces obj implements in the form being generated.
 func (mod *modContext) unionInterfaces(obj *schema.ObjectType, qualifier qualifier, input bool) []names.FQN {
-	matches := mod.unions.containing(plainShape(obj).Token)
-	inputShape := obj.IsInputShape()
-
+	key := formKey{qualifier, obj.IsInputShape()}
 	var interfaces []names.FQN
-	for _, spec := range matches {
-		if _, bound := spec.forms[inputShape]; !bound {
-			continue
+	for _, spec := range mod.unions.containing(plainShape(obj).Token) {
+		if spec.bound(key) {
+			interfaces = append(interfaces, mod.unionInterfaceFQN(spec, key, input))
 		}
-		redundant := false
-		for _, other := range matches {
-			if other != spec && slices.Contains(other.supersets, spec) {
-				redundant = true
-				break
-			}
-		}
-		if redundant {
-			continue
-		}
-		interfaces = append(interfaces, mod.unionInterfaceFQN(spec, qualifier, input, inputShape))
 	}
 	return interfaces
 }
 
+// unionProperty returns the interface entry behind a property typed as a union, if any.
+func (mod *modContext) unionProperty(prop *schema.Property, qualifier qualifier, input bool) (unionQueueEntry, bool) {
+	union, ok := codegen.UnwrapType(prop.Type).(*schema.UnionType)
+	if !ok {
+		return unionQueueEntry{}, false
+	}
+	form, ok := mod.unions.lookup(prop, union)
+	if !ok {
+		return unionQueueEntry{}, false
+	}
+	return unionQueueEntry{spec: form.spec, key: formKey{qualifier, form.inputShape}, input: input}, true
+}
+
 // wrappedMembers returns the members of the interface that are held by case classes, with the Java
-// type each one wraps in the shape being generated.
+// type each one wraps in the form being generated.
 func (mod *modContext) wrappedMembers(ctx *classFileContext, entry unionQueueEntry) []wrappedMember {
 	var wrapped []wrappedMember
 	for _, m := range entry.spec.members {
@@ -641,10 +549,9 @@ func (mod *modContext) wrappedMembers(ctx *classFileContext, entry unionQueueEnt
 			continue
 		}
 		wireType := entry.memberType(m)
-		shape := mod.typeStringRecHelper(ctx, wireType, entry.qualifier, entry.input, false, false)
 		wrapped = append(wrapped, wrappedMember{
 			caseName: m.caseName,
-			shape:    shape,
+			shape:    mod.typeStringRecHelper(ctx, wireType, entry.key.qualifier, entry.input, false, false),
 			factory:  factoryParameterType(wireType),
 		})
 	}
@@ -659,8 +566,7 @@ type wrappedMember struct {
 	factory string
 }
 
-// factoryParameterType is the parameter type of the of(...) factory for a wrapped member. Scalars
-// take primitives so that of(1) resolves against a number member through widening.
+// factoryParameterType is the parameter type of the of(...) factory for a wrapped member.
 func factoryParameterType(wireType schema.Type) string {
 	switch codegen.UnwrapType(wireType) {
 	case schema.IntType:
@@ -680,23 +586,14 @@ func (mod *modContext) genUnionInterface(ctx *classFileContext, entry unionQueue
 	w := ctx.writer
 	spec := entry.spec
 	self := entry.className.String()
-
-	// Members that hold a nested union resolve it through the property that binds this location.
-	location, ok := spec.locations[entry.inputShape]
-	if !ok {
-		for _, location = range spec.locations {
-			break
-		}
-	}
-	defer mod.withUnionLocation(location)()
+	defer mod.withUnionLocation(spec.forms[entry.key].property)()
 
 	wrapped := mod.wrappedMembers(ctx, entry)
 
-	// Only the interfaces bound in this shape take part in the relations of this form.
 	var equals []string
 	for _, equal := range spec.equals {
-		if _, bound := equal.forms[entry.inputShape]; bound {
-			equals = append(equals, ctx.ref(mod.unionInterfaceFQN(equal, entry.qualifier, entry.input, entry.inputShape)))
+		if equal.bound(entry.key) {
+			equals = append(equals, ctx.ref(mod.unionInterfaceFQN(equal, entry.key, entry.input)))
 		}
 	}
 
@@ -705,7 +602,7 @@ func (mod *modContext) genUnionInterface(ctx *classFileContext, entry unionQueue
 	for _, m := range spec.members {
 		if m.object != nil {
 			memberType := mod.typeStringForObjectType(
-				objectShape(m.object, entry.inputShape), entry.qualifier, entry.input)
+				objectShape(m.object, entry.key.inputShape), entry.key.qualifier, entry.input)
 			fprintf(w, "@%s.Case(type = %s.class)\n", ctx.ref(names.UnionType), memberType.ToCode(ctx.imports))
 		}
 	}
@@ -715,14 +612,13 @@ func (mod *modContext) genUnionInterface(ctx *classFileContext, entry unionQueue
 			ctx.ref(names.UnionType), self, m.caseName, refs, javaStringLiteral(tree))
 	}
 
-	var extends string
 	var parents []string
-	for _, superset := range spec.directSupersets() {
-		if _, bound := superset.forms[entry.inputShape]; bound {
-			parents = append(parents, ctx.ref(mod.unionInterfaceFQN(
-				superset, entry.qualifier, entry.input, entry.inputShape)))
+	for _, superset := range spec.supersets {
+		if superset.bound(entry.key) {
+			parents = append(parents, ctx.ref(mod.unionInterfaceFQN(superset, entry.key, entry.input)))
 		}
 	}
+	extends := ""
 	if len(parents) > 0 {
 		extends = " extends " + strings.Join(parents, ", ")
 	}
@@ -744,9 +640,8 @@ func (mod *modContext) genUnionInterface(ctx *classFileContext, entry unionQueue
 		fprintf(w, "    }\n\n")
 	}
 
-	implements := append([]string{self}, equals...)
-	implements = append(implements, ctx.ref(names.UnionCase))
 	for _, m := range wrapped {
+		implements := append(append([]string{self}, equals...), ctx.ref(names.UnionCase))
 		valueType := m.shape.ToCode(ctx.imports)
 		fprintf(w, "    final class %s implements %s {\n", m.caseName, strings.Join(implements, ", "))
 		fprintf(w, "        private final %s value;\n\n", valueType)
@@ -810,7 +705,7 @@ func javaStringLiteral(s string) string {
 }
 
 // constValueLiteral renders a schema constant as the string literal the ConstValue annotation
-// carries. The runtime parses it according to the type of the annotated property.
+// carries.
 func constValueLiteral(v interface{}) string {
 	if s, ok := v.(string); ok {
 		return javaStringLiteral(s)

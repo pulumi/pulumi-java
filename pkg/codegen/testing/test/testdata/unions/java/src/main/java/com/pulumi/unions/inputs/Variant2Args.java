@@ -9,14 +9,16 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.unions.inputs.ExampleListOfUnionArgs;
+import com.pulumi.unions.inputs.ExampleUnionOfArgs;
 import com.pulumi.unions.inputs.SubsetExampleUnionOfArgs;
+import com.pulumi.unions.inputs.TwinExampleUnionOfArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class Variant2Args extends com.pulumi.resources.ResourceArgs implements ExampleListOfUnionArgs, SubsetExampleUnionOfArgs {
+public final class Variant2Args extends com.pulumi.resources.ResourceArgs implements ExampleListOfUnionArgs, ExampleUnionOfArgs, SubsetExampleUnionOfArgs, TwinExampleUnionOfArgs {
 
     public static final Variant2Args Empty = new Variant2Args();
 

@@ -4,7 +4,6 @@
 package com.pulumi.discriminatedunion.inputs;
 
 import com.pulumi.core.annotations.UnionType;
-import com.pulumi.core.internal.UnionCase;
 import com.pulumi.discriminatedunion.inputs.ExampleUnionOfArgs;
 import com.pulumi.discriminatedunion.inputs.VariantOneArgs;
 import com.pulumi.discriminatedunion.inputs.VariantTwoArgs;

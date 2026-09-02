@@ -26,6 +26,9 @@ import (
 // This should be bumped as required at the point of release.
 var DefaultSdkVersion = semver.Version{Major: 1, Minor: 0, Patch: 0}
 
+// FullyTypedUnionsSdkVersion is the first SDK that ships the UnionType and ConstValue annotations.
+var FullyTypedUnionsSdkVersion = semver.Version{Major: 1, Minor: 37, Patch: 0}
+
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
 		return pkg
@@ -293,8 +296,6 @@ func (mod *modContext) typeStringRecHelper(
 		return TypeShape{Type: tokenType}
 	case *schema.UnionType:
 		// Under the fullyTypedUnions option a discriminatable union is generated as an interface.
-		// Checked before the elements are rendered so that referring to the union does not also
-		// import every member.
 		if shape, ok := mod.unionTypeString(t, qualifier, input); ok {
 			return shape
 		}
@@ -734,9 +735,12 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 	}
 
 	// Further helpers for when a union interface is needed but one of its wrapped members is
-	// provided. Object members already implement the interface, so they need no helper.
-	if entry, ok := pt.mod.unions.entryFor(t1.Type); ok {
-		for _, m := range pt.mod.wrappedMembers(ctx, entry) {
+	// provided.
+	if entry, ok := pt.mod.unionProperty(prop, pt.propertyTypeQualifier, true); ok {
+		restore := pt.mod.withUnionLocation(prop)
+		wrapped := pt.mod.wrappedMembers(ctx, entry)
+		restore()
+		for _, m := range wrapped {
 			genPropJavadoc(ctx, prop, propJavadocOptions{
 				indent:    indent,
 				isBuilder: true,
@@ -2208,9 +2212,13 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				}
 			}
 
+			sdkVersion := DefaultSdkVersion
+			if javaInfo.FullyTypedUnions {
+				sdkVersion = FullyTypedUnionsSdkVersion
+			}
 			javaInfo = javaInfo.
 				WithDefaultDependencies().
-				WithJavaSdkDependencyDefault(DefaultSdkVersion)
+				WithJavaSdkDependencyDefault(sdkVersion)
 
 			info = &javaInfo
 			infos[def] = info
@@ -2259,8 +2267,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		}
 	}
 
-	// Name the union interfaces once for the whole package, so that a union reached through several
-	// modules resolves to the same interfaces.
+	// Name the union interfaces once for the whole package.
 	unions := registerUnions(pkg, getPackageInfo(pkg.Reference()).FullyTypedUnions)
 
 	// group resources, types, and functions into Java packages
@@ -2595,19 +2602,15 @@ func (q *classQueue) ensureInterfaceGenerated(entry unionQueueEntry) {
 	}
 }
 
-// dequeueInterface takes the interface whose name sorts first, so generation order is stable.
 func (q *classQueue) dequeueInterface() (unionQueueEntry, bool) {
 	if len(q.interfaces) == 0 {
 		return unionQueueEntry{}, false
 	}
-	keys := make([]string, 0, len(q.interfaces))
-	for key := range q.interfaces {
-		keys = append(keys, key)
+	for key, entry := range q.interfaces {
+		delete(q.interfaces, key)
+		return entry, true
 	}
-	sort.Strings(keys)
-	entry := q.interfaces[keys[0]]
-	delete(q.interfaces, keys[0])
-	return entry, true
+	return unionQueueEntry{}, false
 }
 
 func (q *classQueue) ensureGenerated(entry classQueueEntry) {

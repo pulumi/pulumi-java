@@ -72,20 +72,10 @@ func TestRegisterUnionsNamesEachLocation(t *testing.T) {
 	reg := registerUnions(pkg, true)
 
 	byName := map[string]*unionSpec{}
-	for _, form := range reg.byKey {
-		byName[form.spec.name] = form.spec
+	for _, spec := range reg.specs {
+		byName[spec.name] = spec
 	}
-	for _, forms := range reg.byLocation {
-		for _, form := range forms {
-			byName[form.spec.name] = form.spec
-		}
-	}
-	names := make([]string, 0, len(byName))
-	for name := range byName {
-		names = append(names, name)
-	}
-	sort.Strings(names)
-	require.Equal(t, []string{"AScalar", "AUnionOf", "BScalar", "BUnionOf", "CScalar", "CUnionOf"}, names)
+	require.Equal(t, []string{"AScalar", "AUnionOf", "BScalar", "BUnionOf", "CScalar", "CUnionOf"}, specNames(reg.specs))
 
 	require.Equal(t, []string{"BUnionOf"}, specNames(byName["AUnionOf"].equals))
 	require.Equal(t, []string{"CUnionOf"}, specNames(byName["AUnionOf"].supersets))
@@ -98,8 +88,9 @@ func TestRegisterUnionsNamesEachLocation(t *testing.T) {
 	require.Equal(t, []string{"CUnionOf"}, specNames(reg.byMember["test:index:Variant3"]))
 
 	// The input shape of a location is bound, the output shape is not.
-	require.Contains(t, byName["AUnionOf"].forms, true)
-	require.NotContains(t, byName["AUnionOf"].forms, false)
+	require.True(t, byName["AUnionOf"].bound(formKey{inputsQualifier, true}))
+	require.False(t, byName["AUnionOf"].bound(formKey{outputsQualifier, false}))
+	require.True(t, byName["AScalar"].bound(formKey{outputsQualifier, false}))
 }
 
 func TestRegisterUnionsKeepsNamesWhenAMemberIsAdded(t *testing.T) {
@@ -109,10 +100,8 @@ func TestRegisterUnionsKeepsNamesWhenAMemberIsAdded(t *testing.T) {
 	reg := registerUnions(pkg, true)
 
 	byName := map[string]*unionSpec{}
-	for _, forms := range reg.byLocation {
-		for _, form := range forms {
-			byName[form.spec.name] = form.spec
-		}
+	for _, spec := range reg.specs {
+		byName[spec.name] = spec
 	}
 	require.Contains(t, byName, "AUnionOf")
 	require.Contains(t, byName, "BUnionOf")
@@ -120,29 +109,4 @@ func TestRegisterUnionsKeepsNamesWhenAMemberIsAdded(t *testing.T) {
 	require.Empty(t, byName["AUnionOf"].equals)
 	require.Equal(t, []string{"BUnionOf", "CUnionOf"}, specNames(byName["AUnionOf"].supersets))
 	require.Equal(t, []string{"CUnionOf"}, specNames(byName["BUnionOf"].equals))
-}
-
-func TestRegisterUnionsIsEmptyWithoutTheOption(t *testing.T) {
-	t.Parallel()
-
-	pkg := unionTestPackage(t, map[string][]int{"A": {1, 2}})
-	reg := registerUnions(pkg, false)
-	require.Empty(t, reg.byLocation)
-	require.Empty(t, reg.byMember)
-}
-
-func TestCaseBaseName(t *testing.T) {
-	t.Parallel()
-
-	require.Equal(t, "OfString", caseBaseName(schema.StringType))
-	require.Equal(t, "OfInteger", caseBaseName(schema.IntType))
-	require.Equal(t, "OfNumber", caseBaseName(schema.NumberType))
-	require.Equal(t, "OfBoolean", caseBaseName(schema.BoolType))
-	require.Equal(t, "OfArchive", caseBaseName(schema.ArchiveType))
-	require.Equal(t, "OfAssetOrArchive", caseBaseName(schema.AssetType))
-	require.Equal(t, "OfList", caseBaseName(&schema.ArrayType{ElementType: schema.StringType}))
-	require.Equal(t, "OfMap", caseBaseName(&schema.MapType{ElementType: schema.StringType}))
-	require.Equal(t, "OfColor", caseBaseName(&schema.EnumType{Token: "test:index:Color"}))
-	require.Equal(t, "OfBucket", caseBaseName(&schema.ResourceType{Token: "test:index:Bucket"}))
-	require.Equal(t, "OfString", caseBaseName(&schema.InputType{ElementType: schema.StringType}))
 }

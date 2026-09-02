@@ -4,7 +4,6 @@
 package com.pulumi.unions.inputs;
 
 import com.pulumi.core.annotations.UnionType;
-import com.pulumi.core.internal.UnionCase;
 import com.pulumi.unions.inputs.TwinExampleUnionOfArgs;
 import com.pulumi.unions.inputs.Variant1Args;
 import com.pulumi.unions.inputs.Variant2Args;

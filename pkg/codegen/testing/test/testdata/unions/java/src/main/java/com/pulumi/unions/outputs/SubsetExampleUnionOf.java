@@ -4,7 +4,6 @@
 package com.pulumi.unions.outputs;
 
 import com.pulumi.core.annotations.UnionType;
-import com.pulumi.core.internal.UnionCase;
 import com.pulumi.unions.outputs.ExampleListOfUnion;
 import com.pulumi.unions.outputs.ExampleUnionOf;
 import com.pulumi.unions.outputs.GetThingResult2;

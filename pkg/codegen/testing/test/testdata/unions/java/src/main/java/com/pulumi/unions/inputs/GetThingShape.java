@@ -5,7 +5,6 @@ package com.pulumi.unions.inputs;
 
 import com.pulumi.core.annotations.UnionType;
 import com.pulumi.core.internal.UnionCase;
-import com.pulumi.unions.inputs.ExampleStringOrInteger;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -24,11 +23,7 @@ public interface GetThingShape {
         return new GetThingShape.OfInteger(value);
     }
 
-    static GetThingShape of(ExampleStringOrInteger value) {
-        return (GetThingShape) value;
-    }
-
-    final class OfString implements GetThingShape, ExampleStringOrInteger, UnionCase {
+    final class OfString implements GetThingShape, UnionCase {
         private final String value;
 
         private OfString(String value) {
@@ -56,7 +51,7 @@ public interface GetThingShape {
         }
     }
 
-    final class OfInteger implements GetThingShape, ExampleStringOrInteger, UnionCase {
+    final class OfInteger implements GetThingShape, UnionCase {
         private final Integer value;
 
         private OfInteger(Integer value) {

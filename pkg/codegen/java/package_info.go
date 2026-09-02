@@ -112,16 +112,12 @@ type PackageInfo struct {
 	GradleTest string `json:"gradleTest"`
 
 	// Generates a Java interface for every union that the runtime can
-	// discriminate by wire shape. Object members implement the
-	// interface, every other member is constructed through a static
-	// factory, and union-valued properties are typed as the interface.
+	// discriminate by wire shape, one per schema location. Object
+	// members implement every interface they belong to, every other
+	// member is constructed through a static factory, and union-valued
+	// properties are typed as the interface.
 	//
-	// Without this, a union of two members is generated as Either<L, R>
-	// and one of three or more members degrades to java.lang.Object.
-	//
-	// Turning this on changes the type of every union-valued property,
-	// so it is a breaking change to the generated SDK. Providers opt in
-	// as part of a major version.
+	// Turning this on changes the type of every union-valued property.
 	FullyTypedUnions bool `json:"fullyTypedUnions,omitempty"`
 }
 

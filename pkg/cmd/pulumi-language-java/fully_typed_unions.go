@@ -14,40 +14,28 @@ import (
 )
 
 // fullyTypedUnionsLoader turns on the fullyTypedUnions Java option for every package it loads.
-// The conformance tests run the language host with it, so the SDKs and programs they generate
-// exercise typed union interfaces.
 type fullyTypedUnionsLoader struct {
 	schema.ReferenceLoader
 }
 
 func (l fullyTypedUnionsLoader) LoadPackage(pkg string, version *semver.Version) (*schema.Package, error) {
-	//nolint:staticcheck // the interface still requires it
-	p, err := l.ReferenceLoader.LoadPackage(pkg, version)
-	if err != nil {
-		return nil, err
-	}
-	return p, enableFullyTypedUnions(p)
+	return l.LoadPackageV2(context.Background(), &schema.PackageDescriptor{Name: pkg, Version: version})
 }
 
 func (l fullyTypedUnionsLoader) LoadPackageV2(
 	ctx context.Context, descriptor *schema.PackageDescriptor,
 ) (*schema.Package, error) {
-	p, err := l.ReferenceLoader.LoadPackageV2(ctx, descriptor)
+	ref, err := l.LoadPackageReferenceV2(ctx, descriptor)
 	if err != nil {
 		return nil, err
 	}
-	return p, enableFullyTypedUnions(p)
+	return ref.Definition()
 }
 
 func (l fullyTypedUnionsLoader) LoadPackageReference(
 	pkg string, version *semver.Version,
 ) (schema.PackageReference, error) {
-	//nolint:staticcheck // the interface still requires it
-	ref, err := l.ReferenceLoader.LoadPackageReference(pkg, version)
-	if err != nil {
-		return nil, err
-	}
-	return ref, enableFullyTypedUnionsRef(ref)
+	return l.LoadPackageReferenceV2(context.Background(), &schema.PackageDescriptor{Name: pkg, Version: version})
 }
 
 func (l fullyTypedUnionsLoader) LoadPackageReferenceV2(
@@ -57,15 +45,11 @@ func (l fullyTypedUnionsLoader) LoadPackageReferenceV2(
 	if err != nil {
 		return nil, err
 	}
-	return ref, enableFullyTypedUnionsRef(ref)
-}
-
-func enableFullyTypedUnionsRef(ref schema.PackageReference) error {
 	def, err := ref.Definition()
 	if err != nil {
-		return err
+		return nil, err
 	}
-	return enableFullyTypedUnions(def)
+	return ref, enableFullyTypedUnions(def)
 }
 
 // enableFullyTypedUnions sets the option on a bound package, whether or not its Java language
@@ -78,19 +62,13 @@ func enableFullyTypedUnions(pkg *schema.Package) error {
 	case codegen.PackageInfo:
 		pkg.Language["java"] = info.With(codegen.PackageInfo{FullyTypedUnions: true})
 		return nil
-	case json.RawMessage:
-		raw, err := withFullyTypedUnions(info)
+	case nil, json.RawMessage:
+		raw, _ := info.(json.RawMessage)
+		out, err := withFullyTypedUnions(raw)
 		if err != nil {
 			return err
 		}
-		pkg.Language["java"] = json.RawMessage(raw)
-		return nil
-	case nil:
-		raw, err := withFullyTypedUnions(nil)
-		if err != nil {
-			return err
-		}
-		pkg.Language["java"] = json.RawMessage(raw)
+		pkg.Language["java"] = json.RawMessage(out)
 		return nil
 	default:
 		return fmt.Errorf("unexpected java language section of type %T", info)

@@ -24,9 +24,9 @@ public class App {
             .unionOf(VariantOneArgs.builder()
                 .field1("v1 union")
                 .build())
-            .arrayOfUnionOf(com.pulumi.discriminatedunion.inputs.ExampleArrayOfUnionOfArgs.of(VariantOneArgs.builder()
+            .arrayOfUnionOf(VariantOneArgs.builder()
                 .field1("v1 array(union)")
-                .build()))
+                .build())
             .build());
 
         var example2 = new Example("example2", ExampleArgs.builder()
@@ -34,12 +34,12 @@ public class App {
                 .field2("v2 union")
                 .build())
             .arrayOfUnionOf(            
-                com.pulumi.discriminatedunion.inputs.ExampleArrayOfUnionOfArgs.of(VariantTwoArgs.builder()
+                VariantTwoArgs.builder()
                     .field2("v2 array(union)")
-                    .build()),
-                com.pulumi.discriminatedunion.inputs.ExampleArrayOfUnionOfArgs.of(VariantOneArgs.builder()
+                    .build(),
+                VariantOneArgs.builder()
                     .field1("v1 array(union)")
-                    .build()))
+                    .build())
             .build());
 
     }

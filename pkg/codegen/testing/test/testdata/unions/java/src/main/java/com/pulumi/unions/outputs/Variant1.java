@@ -8,15 +8,17 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.unions.outputs.ExampleEnumOrObject;
 import com.pulumi.unions.outputs.ExampleListOfUnion;
+import com.pulumi.unions.outputs.ExampleUnionOf;
 import com.pulumi.unions.outputs.GetThingResult2;
 import com.pulumi.unions.outputs.SubsetExampleUnionOf;
+import com.pulumi.unions.outputs.TwinExampleUnionOf;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class Variant1 implements ExampleEnumOrObject, ExampleListOfUnion, GetThingResult2, SubsetExampleUnionOf {
+public final class Variant1 implements ExampleEnumOrObject, ExampleListOfUnion, ExampleUnionOf, GetThingResult2, SubsetExampleUnionOf, TwinExampleUnionOf {
     private String discriminantKind;
     private @Nullable String extra;
     private @Nullable String payload;
