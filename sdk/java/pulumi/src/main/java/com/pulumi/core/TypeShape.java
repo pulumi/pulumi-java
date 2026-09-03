@@ -10,6 +10,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import javax.annotation.CheckReturnValue;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.lang.reflect.Type;
@@ -163,6 +164,11 @@ public final class TypeShape<T> {
         var parameterClass = parameter.getType();
         var token = TypeToken.of(parameter.getParameterizedType());
         return extract(parameterClass, token);
+    }
+
+    @InternalUse
+    public static TypeShape<?> extract(Field field) {
+        return extract(field.getType(), TypeToken.of(field.getGenericType()));
     }
 
     @InternalUse
