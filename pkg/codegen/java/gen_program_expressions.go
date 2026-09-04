@@ -938,19 +938,39 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		}
 	}
 
+	// Builder setters for a list property accept List<T>, T... or Output<List<T>>, so a list with
+	// any Output element has no matching overload. Combine the elements with Output.all() instead,
+	// which yields the Output<List<T>> the setter expects.
+	outputList := false
+	if _, isArray := g.currentResourcePropertyType.(*schema.ArrayType); isArray {
+		for _, element := range expr.Expressions {
+			if isOutputExpression(element) {
+				outputList = true
+				break
+			}
+		}
+	}
+
 	closeList := func() {
-		if g.currentResourcePropertyType == nil {
+		if outputList || g.currentResourcePropertyType == nil {
 			g.Fgen(w, ")")
 		}
 	}
 
-	if g.currentResourcePropertyType == nil {
+	switch {
+	case outputList:
+		g.Fgen(w, "Output.all(")
+	case g.currentResourcePropertyType == nil:
 		// Arrays.asList() is used instead of List.of() because List.of() does not permit null elements.
 		// Elements may be null at runtime even if not literal nulls (e.g. variables).
 		g.Fgen(w, "Arrays.asList(")
 	}
 
 	genElement := func(w io.Writer, value model.Expression) {
+		if outputList {
+			g.genOutputTupleElement(w, value)
+			return
+		}
 		g.genNullableTupleElement(w, value)
 	}
 
@@ -985,6 +1005,31 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 	})
 
 	closeList()
+}
+
+// isOutputExpression reports whether an expression itself generates an Output, as opposed to
+// merely containing one: an object literal holding an Output property still generates a builder
+// call, not an Output. Conversion intrinsics are unwrapped first, since they widen the type of
+// every element to a union with the property's own type.
+func isOutputExpression(expr model.Expression) bool {
+	for {
+		call, ok := expr.(*model.FunctionCallExpression)
+		if !ok || call.Name != pcl.IntrinsicConvert || len(call.Args) != 1 {
+			_, isOutput := expr.Type().(*model.OutputType)
+			return isOutput
+		}
+		expr = call.Args[0]
+	}
+}
+
+// genOutputTupleElement generates a tuple element for an Output.all() call, lifting plain values
+// into Outputs so that every argument matches the Output<T>... parameter.
+func (g *generator) genOutputTupleElement(w io.Writer, expr model.Expression) {
+	if isOutputExpression(expr) {
+		g.Fgenf(w, "%.v", expr)
+		return
+	}
+	g.Fgenf(w, "Output.of(%.v)", expr)
 }
 
 // genNullableTupleElement generates a tuple element, casting null literals to Object
