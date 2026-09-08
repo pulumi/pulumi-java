@@ -85,6 +85,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Executor;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -2037,6 +2039,19 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
         private final Queue<Exception> swallowedExceptions = new ConcurrentLinkedQueue<>();
 
+        /**
+         * The polling loop in {@link #loopUntilDone} must not re-submit itself to the
+         * default executor immediately: since Java 25 that executor is always the common
+         * {@link java.util.concurrent.ForkJoinPool} (JDK-8319447), and with a common-pool
+         * parallelism of 1 a tight resubmission loop keeps the sole worker busy forever,
+         * so the async continuations of the in-flight tasks never run and the program
+         * livelocks. Rescheduling each iteration with a small delay lets the worker go
+         * idle in between, and also stops the loop from burning a full CPU core.
+         * See https://github.com/pulumi/pulumi-java/issues/2270
+         */
+        private static final Executor pollingExecutor =
+                CompletableFuture.delayedExecutor(10, TimeUnit.MILLISECONDS);
+
         public DefaultRunner(Logger standardLogger, EngineLogger engineLogger) {
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.engineLogger = Objects.requireNonNull(engineLogger);
@@ -2148,8 +2163,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 if (checkForTasks(handleCompletion)) {
                     drainTasks.complete(null);
                 } else {
-                    // We need to reschedule the loop, to avoid hogging the async thread pool.
-                    ContextAwareCompletableFuture.runAsync(() -> loopUntilDone(drainTasks, handleCompletion));
+                    ContextAwareCompletableFuture.runAsync(
+                            () -> loopUntilDone(drainTasks, handleCompletion), pollingExecutor);
                 }
             } catch (Exception e) {
                 drainTasks.completeExceptionally(e);
