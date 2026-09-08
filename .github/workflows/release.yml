@@ -59,7 +59,7 @@ jobs:
         if: steps.check-release.outputs.exists == 'false'
         uses: goreleaser/goreleaser-action@v6
         with:
-          version: latest
+          version: 2.18.0
           args: -p 3 -f .goreleaser.yml --clean --skip=validate --release-notes=${{ env.RELEASE_NOTES_PATH }}
       - name: Push additional tags
         run: |
