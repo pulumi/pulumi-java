@@ -182,21 +182,22 @@ public class Serializer {
                         var isKnown = data.isKnown();
                         var isSecret = data.isSecret();
 
-                        if (!isKnown) {
-                            return CompletableFuture.completedFuture(Constants.UnknownValue);
+                        // The secret marker must survive an unknown value: stack outputs and
+                        // schema-secret outputs rely on it during preview.
+                        var value = isKnown
+                                ? serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources)
+                                : CompletableFuture.completedFuture((Object) Constants.UnknownValue);
+                        if (!isSecret) {
+                            return value;
                         }
-
-                        if (isSecret) {
-                            return serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources).thenApply(
-                                    /* @Nullable */ value -> {
-                                        var result = new HashMap<String, /* @Nullable */ Object>();
-                                        result.put(Constants.SpecialSigKey, Constants.SpecialSecretSig);
-                                        result.put(Constants.SecretValueName, value);
-                                        return result;
-                                    }
-                            );
-                        }
-                        return serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources);
+                        return value.thenApply(
+                                /* @Nullable */ v -> {
+                                    var result = new HashMap<String, /* @Nullable */ Object>();
+                                    result.put(Constants.SpecialSigKey, Constants.SpecialSecretSig);
+                                    result.put(Constants.SecretValueName, v);
+                                    return result;
+                                }
+                        );
                     }
             );
         }

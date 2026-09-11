@@ -8,6 +8,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.deployment.internal.EngineLogger;
 import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.Test;
@@ -75,6 +77,20 @@ public class PropertiesSerializerTests {
         var future = s.serializeAllPropertiesAsync("LABEL", args, true);
         assertThatThrownBy(future::join)
                 .hasMessageContaining("badProp");
+    }
+
+    @Test
+    void secretUnknownKeepsSecretMarker() {
+        var log = new Log(EngineLogger.ignore());
+        var s = new PropertiesSerializer(log);
+
+        Map<String, Output<?>> args = new HashMap<>();
+        args.put("wrapped", new OutputInternal<>(OutputData.unknownSecret()));
+
+        var struct = s.serializeAllPropertiesAsync("LABEL", args, true).join();
+        assertThat(showStruct(struct)).isEqualTo(
+                "{\"wrapped\":{\"4dabf18193072939515e22adb298388d\":\"1b47061264138c4ac30d75fd1eb44270\","
+                        + "\"value\":\"04da6b54-80e4-46f7-96ec-b56ff0331ba9\"}}");
     }
 
     private static String showStruct(ResourceArgs resourceArgs) {

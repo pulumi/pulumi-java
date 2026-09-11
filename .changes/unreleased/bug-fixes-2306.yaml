@@ -1,0 +1,6 @@
+component: sdk
+kind: bug-fixes
+body: Keep the secret marker when an unknown output is serialized, so a secret stack output stays secret during preview
+time: 2026-09-11T14:30:00.000000000+02:00
+custom:
+    PR: "2306"
