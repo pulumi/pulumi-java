@@ -9,17 +9,38 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Boolean;
+import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="constant:index:Resource")
 public class Resource extends com.pulumi.resources.CustomResource {
+    @Export(name="count", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> count;
+
+    public Output<Optional<Integer>> count() {
+        return Codegen.optional(this.count);
+    }
+    @Export(name="flag", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> flag;
+
+    public Output<Optional<Boolean>> flag() {
+        return Codegen.optional(this.flag);
+    }
     @Export(name="kind", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> kind;
 
     public Output<Optional<String>> kind() {
         return Codegen.optional(this.kind);
+    }
+    @Export(name="ratio", refs={Double.class}, tree="[0]")
+    private Output</* @Nullable */ Double> ratio;
+
+    public Output<Optional<Double>> ratio() {
+        return Codegen.optional(this.ratio);
     }
 
     /**
