@@ -1,0 +1,4 @@
+component: runtime
+kind: dependencies
+body: Update github.com/pulumi/pulumi/pkg/v3 to v3.263.0
+time: 2026-09-16T13:52:28.983824168Z
