@@ -296,6 +296,9 @@ var expectedFailures = map[string]string{
 	"l2-resource-read-unknown":          "read resource not implemented, the res declaration is dropped from the generated program (added in 3.260)",               //nolint:lll
 
 	"l2-resource-read-depends-on": "read resource not implemented, the res declaration is dropped from the generated program (added in 3.264)", //nolint:lll
+
+	"l1-builtin-range":                        "range intrinsic not implemented in programgen, outputs are unclosed \"TODO: Range\" string literals (added in 3.265)",         //nolint:lll
+	"l2-failed-create-continue-on-error-read": "read resource not implemented, the res and res_prop_dep declarations are dropped from the generated program (added in 3.265)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
