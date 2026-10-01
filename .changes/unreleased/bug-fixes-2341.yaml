@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: Cast a dynamic value to the type an arithmetic operator needs, so a program that adds untyped config values compiles
+time: 2026-10-01T11:02:12.529717+02:00
+custom:
+    PR: "2341"
