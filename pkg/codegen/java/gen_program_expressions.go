@@ -222,19 +222,22 @@ func (g *generator) genIntrinsic(w io.Writer, from model.Expression, to model.Ty
 
 	// Dynamic values land in Java as `Object` (e.g. from `Map<String, Object>.get`),
 	// so converting to a concrete type needs an explicit cast for arithmetic to compile.
+	// LowerConversion leaves a dynamic value's target as it is, so the target may still be
+	// the union of a plain type and its eventual forms, such as `union(number, output(number))`.
+	// Resolving the eventuals collapses that union to the plain type the cast needs.
 	fromType := unwrapOptional(model.ResolveOutputs(from.Type()))
 	if fromType == model.DynamicType {
-		switch {
-		case targetType.Equals(model.NumberType):
+		switch castType := model.ResolveOutputs(targetType); {
+		case castType.Equals(model.NumberType):
 			g.Fgenf(w, "((Number) %.v).doubleValue()", from)
 			return
-		case targetType.Equals(model.IntType):
+		case castType.Equals(model.IntType):
 			g.Fgenf(w, "((Number) %.v).intValue()", from)
 			return
-		case targetType.Equals(model.BoolType):
+		case castType.Equals(model.BoolType):
 			g.Fgenf(w, "((Boolean) %.v)", from)
 			return
-		case targetType.Equals(model.StringType):
+		case castType.Equals(model.StringType):
 			g.Fgenf(w, "((String) %.v)", from)
 			return
 		}
