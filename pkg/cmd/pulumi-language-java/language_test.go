@@ -299,6 +299,8 @@ var expectedFailures = map[string]string{
 
 	"l1-builtin-range":                        "range intrinsic not implemented in programgen, outputs are unclosed \"TODO: Range\" string literals (added in 3.265)",         //nolint:lll
 	"l2-failed-create-continue-on-error-read": "read resource not implemented, the res and res_prop_dep declarations are dropped from the generated program (added in 3.265)", //nolint:lll
+
+	"l2-invoke-per-value-deps": "SDK does not negotiate OutputValues on invoke, so invoke results depend on every argument instead of per value (added in 3.268)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
