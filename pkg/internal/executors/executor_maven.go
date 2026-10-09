@@ -65,6 +65,7 @@ func (maven) newMavenExecutor(cmd string, args []string, pomXMLPath string) (*Ja
 		},
 		PluginArgs: []string{
 			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
+			"-q",
 			"-Dorg.slf4j.simpleLogger.logFile=System.err",
 			"--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
@@ -72,6 +73,7 @@ func (maven) newMavenExecutor(cmd string, args []string, pomXMLPath string) (*Ja
 		},
 		RunPluginArgs: []string{
 			/* move normal output to STDERR, because we need STDOUT for port printed back */
+			"-q",
 			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
 			"-Dorg.slf4j.simpleLogger.logFile=System.err",
 			"--no-transfer-progress", "compile", "exec:java",
