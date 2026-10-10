@@ -1,0 +1,6 @@
+component: sdk
+kind: Improvements
+body: Support canceling in-flight stack operations in the Automation API via CancellationToken
+time: 2026-07-10T11:55:00.000000-04:00
+custom:
+    PR: "2246"

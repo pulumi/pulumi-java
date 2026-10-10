@@ -32,6 +32,8 @@ public final class CommandRunOptions {
     private final Consumer<String> onStandardError;
     @Nullable
     private final Consumer<EngineEvent> onEngineEvent;
+    @Nullable
+    private final CancellationToken cancellationToken;
 
     private CommandRunOptions(Builder builder) {
         this.workingDir = builder.workingDir;
@@ -42,6 +44,7 @@ public final class CommandRunOptions {
         this.onStandardOutput = builder.onStandardOutput;
         this.onStandardError = builder.onStandardError;
         this.onEngineEvent = builder.onEngineEvent;
+        this.cancellationToken = builder.cancellationToken;
     }
 
     /**
@@ -116,6 +119,16 @@ public final class CommandRunOptions {
     }
 
     /**
+     * Returns the cancellation token that can be used to cancel the command.
+     *
+     * @return the cancellation token
+     */
+    @Nullable
+    public CancellationToken cancellationToken() {
+        return cancellationToken;
+    }
+
+    /**
      * Returns a new {@link CommandRunOptions} with the given additional environment
      * variables.
      *
@@ -150,7 +163,8 @@ public final class CommandRunOptions {
                 .standardInput(standardInput)
                 .onStandardOutput(onStandardOutput)
                 .onStandardError(onStandardError)
-                .onEngineEvent(onEngineEvent);
+                .onEngineEvent(onEngineEvent)
+                .cancellationToken(cancellationToken);
     }
 
     /**
@@ -169,6 +183,8 @@ public final class CommandRunOptions {
         private Consumer<String> onStandardError;
         @Nullable
         private Consumer<EngineEvent> onEngineEvent;
+        @Nullable
+        private CancellationToken cancellationToken;
 
         private Builder() {
         }
@@ -238,6 +254,17 @@ public final class CommandRunOptions {
          */
         public Builder onEngineEvent(Consumer<EngineEvent> onEngineEvent) {
             this.onEngineEvent = onEngineEvent;
+            return this;
+        }
+
+        /**
+         * Sets a cancellation token that can be used to cancel the command.
+         *
+         * @param cancellationToken the cancellation token
+         * @return the builder
+         */
+        public Builder cancellationToken(CancellationToken cancellationToken) {
+            this.cancellationToken = cancellationToken;
             return this;
         }
 

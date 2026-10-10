@@ -386,6 +386,21 @@ public final class WorkspaceStack implements AutoCloseable {
      * @throws AutomationException if an error occurs
      */
     public UpResult up(UpOptions options) throws AutomationException {
+        return up(options, CancellationToken.none());
+    }
+
+    /**
+     * Creates or updates the resources in a stack by executing the program in the
+     * Workspace.
+     * <p>
+     * https://www.pulumi.com/docs/reference/cli/pulumi_up/
+     *
+     * @param options           options to customize the behavior of the update
+     * @param cancellationToken a cancellation token to cancel the operation
+     * @return the result of the update
+     * @throws AutomationException if an error occurs
+     */
+    public UpResult up(UpOptions options, CancellationToken cancellationToken) throws AutomationException {
         var execKind = ExecKind.Local;
         var program = this.workspace.program();
         var logger = this.workspace.logger();
@@ -461,6 +476,7 @@ public final class WorkspaceStack implements AutoCloseable {
                         .onStandardOutput(onStandardOutput)
                         .onStandardError(onStandardError)
                         .onEngineEvent(onEvent)
+                        .cancellationToken(cancellationToken)
                         .build());
             } catch (Exception e) {
                 // TODO handle inline host exception
@@ -511,6 +527,19 @@ public final class WorkspaceStack implements AutoCloseable {
      * @throws AutomationException if an error occurs
      */
     public PreviewResult preview(PreviewOptions options) throws AutomationException {
+        return preview(options, CancellationToken.none());
+    }
+
+    /**
+     * Performs a dry-run update to a stack, returning pending changes.
+     *
+     * @param options           options to customize the behavior of the update
+     * @param cancellationToken a cancellation token to cancel the operation
+     * @return the result of the preview
+     * @throws AutomationException if an error occurs
+     */
+    public PreviewResult preview(PreviewOptions options, CancellationToken cancellationToken)
+            throws AutomationException {
         var execKind = ExecKind.Local;
         var program = this.workspace.program();
         var logger = this.workspace.logger();
@@ -595,6 +624,7 @@ public final class WorkspaceStack implements AutoCloseable {
                         .onStandardOutput(onStandardOutput)
                         .onStandardError(onStandardError)
                         .onEngineEvent(onPreviewEvent)
+                        .cancellationToken(cancellationToken)
                         .build());
             } catch (Exception e) {
                 // TODO handle inline host exception
@@ -649,6 +679,21 @@ public final class WorkspaceStack implements AutoCloseable {
      * @throws AutomationException if an error occurs
      */
     public UpdateResult refresh(RefreshOptions options) throws AutomationException {
+        return refresh(options, CancellationToken.none());
+    }
+
+    /**
+     * Compares the current stack's resource state with the state known to exist in
+     * the actual cloud provider. Any such changes are adopted into the current
+     * stack.
+     *
+     * @param options           options to customize the behavior of the refresh
+     * @param cancellationToken a cancellation token to cancel the operation
+     * @return the result of the refresh
+     * @throws AutomationException if an error occurs
+     */
+    public UpdateResult refresh(RefreshOptions options, CancellationToken cancellationToken)
+            throws AutomationException {
         var args = new ArrayList<String>();
         args.add("refresh");
         args.add("--yes");
@@ -698,6 +743,7 @@ public final class WorkspaceStack implements AutoCloseable {
                 .onStandardOutput(onStandardOutput)
                 .onStandardError(onStandardError)
                 .onEngineEvent(onEvent)
+                .cancellationToken(cancellationToken)
                 .build());
 
         var showSecrets = options != null && options.showSecrets();
@@ -728,6 +774,20 @@ public final class WorkspaceStack implements AutoCloseable {
      * @throws AutomationException if an error occurs
      */
     public UpdateResult destroy(DestroyOptions options) throws AutomationException {
+        return destroy(options, CancellationToken.none());
+    }
+
+    /**
+     * Destroy deletes all resources in a stack, leaving all history and
+     * configuration intact.
+     *
+     * @param options           options to customize the behavior of the destroy
+     * @param cancellationToken a cancellation token to cancel the operation
+     * @return the result of the destroy
+     * @throws AutomationException if an error occurs
+     */
+    public UpdateResult destroy(DestroyOptions options, CancellationToken cancellationToken)
+            throws AutomationException {
         var args = new ArrayList<String>();
         args.add("destroy");
 
@@ -766,6 +826,7 @@ public final class WorkspaceStack implements AutoCloseable {
                 .onStandardOutput(onStandardOutput)
                 .onStandardError(onStandardError)
                 .onEngineEvent(onEvent)
+                .cancellationToken(cancellationToken)
                 .build());
 
         var showSecrets = options != null && options.isShowSecrets();
@@ -895,6 +956,10 @@ public final class WorkspaceStack implements AutoCloseable {
      * stack in an inconsistent state if a resource operation was
      * pending when the update was canceled. This command is not
      * supported for local backends.
+     * <p>
+     * To cancel an operation started by this process, pass a
+     * {@link CancellationToken} to the operation instead, e.g.
+     * {@link #up(UpOptions, CancellationToken)}.
      *
      * @throws AutomationException if an error occurs
      */
