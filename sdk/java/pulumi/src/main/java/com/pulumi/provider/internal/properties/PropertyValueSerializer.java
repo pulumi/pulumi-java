@@ -22,8 +22,10 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.internal.UnionCase;
 import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.Resource;
+import com.pulumi.serialization.internal.UnionTypes;
 
 import com.google.common.collect.ImmutableSet;
 
@@ -84,6 +86,10 @@ public final class PropertyValueSerializer {
             return null;
         }
 
+        if (UnionTypes.of(rawType).isPresent()) {
+            return deserializeUnion(value, rawType, path);
+        }
+
         switch (value.getType()) {
             case STRING:
                 if (rawType == String.class) {
@@ -141,6 +147,54 @@ public final class PropertyValueSerializer {
         throw new IllegalArgumentException(
             String.format("Unsupported type for deserialization: %s to %s, path: %s", 
                 value.getType().name(), rawType.getName(), path));
+    }
+
+    private static Object deserializeUnion(PropertyValue value, Class<?> unionType, String[] path) {
+        var member = UnionTypes.select(unionType, wireValue(value)).orThrow(
+            message -> new PropertyDeserializationException(message, path, unionType, value, null));
+        var converted = deserializeValue(value, member.wire().toGSON().getType(), path);
+        return UnionTypes.wrap(member, converted);
+    }
+
+    // The plain form of a value that UnionTypes matches against members: secrets and outputs are
+    // unwrapped, and a computed value becomes the unknown sentinel.
+    private static Object wireValue(PropertyValue value) {
+        switch (value.getType()) {
+            case NULL:
+                return null;
+            case BOOL:
+                return value.getBooleanValue();
+            case NUMBER:
+                return value.getNumberValue();
+            case STRING:
+                return value.getStringValue();
+            case ARRAY: {
+                var list = new ArrayList<>();
+                for (var element : value.getArrayValue()) {
+                    list.add(wireValue(element));
+                }
+                return list;
+            }
+            case OBJECT: {
+                var map = new HashMap<String, Object>();
+                value.getObjectValue().forEach((k, v) -> map.put(k, wireValue(v)));
+                return map;
+            }
+            case ASSET:
+                return value.getAssetValue();
+            case ARCHIVE:
+                return value.getArchiveValue();
+            case SECRET:
+                return wireValue(value.getSecretValue());
+            case OUTPUT: {
+                var inner = value.getOutputValue().getValue();
+                return inner == null ? UnionTypes.UNKNOWN : wireValue(inner);
+            }
+            case RESOURCE:
+                return value.getResourceValue();
+            default:
+                return UnionTypes.UNKNOWN;
+        }
     }
 
     private static Object deserializeOutput(PropertyValue value, java.lang.reflect.Type targetType, String[] path) {
@@ -517,6 +571,10 @@ public final class PropertyValueSerializer {
 
         if (value instanceof PropertyValue) {
             return (PropertyValue) value;
+        }
+
+        if (value instanceof UnionCase) {
+            return serializeValue(((UnionCase) value).value(), path);
         }
 
         // Handle collections

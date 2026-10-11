@@ -19,6 +19,7 @@ import com.pulumi.core.internal.CompletableFutures;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.UnionCase;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.CustomResource;
@@ -132,6 +133,11 @@ public class Serializer {
             log.excessive(String.format("Serialize property[%s]: Recursion into Optional", ctx));
 
             return serializeAsync(ctx, optional.orElse(null), keepResources);
+        }
+
+        if (prop instanceof UnionCase) {
+            log.excessive(String.format("Serialize property[%s]: Recursion into UnionCase", ctx));
+            return serializeAsync(ctx, ((UnionCase) prop).value(), keepResources);
         }
 
         if (prop instanceof InputArgs) {

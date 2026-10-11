@@ -283,6 +283,10 @@ public class Converter {
             return tryConvertMap(context, value, targetType);
         }
 
+        if (UnionTypes.of(targetType.getType()).isPresent()) {
+            return tryConvertUnion(context, value, targetType);
+        }
+
         var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
         if (hasAnnotatedBuilder) {
             var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
@@ -508,6 +512,14 @@ public class Converter {
         }
     }
 
+    private Object tryConvertUnion(String context, Object value, TypeShape<?> targetType) {
+        var member = UnionTypes.select(targetType.getType(), value).orThrow(
+                message -> new IllegalArgumentException(String.format("%s; %s", context, message)));
+        var converted = tryConvertObjectInner(
+                String.format("%s(%s)", context, member.type().getSimpleName()), value, member.wire());
+        return UnionTypes.wrap(member, converted);
+    }
+
     @Nullable
     private Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<?> targetType) {
         var leftType = targetType.getParameter(0)
@@ -714,6 +726,13 @@ public class Converter {
             return;
         }
 
+        if (UnionTypes.of(targetType.getType()).isPresent()) {
+            for (var member : UnionTypes.membersOf(targetType.getType())) {
+                checkTargetType(context, member.wire(), seenTypes);
+            }
+            return;
+        }
+
         var propertyTypeAnnotation = targetType.getAnnotation(CustomType.class);
         if (propertyTypeAnnotation.isPresent()) {
             var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
@@ -747,14 +766,14 @@ public class Converter {
         return processSetters(builder, m -> extractSetterParameter(m));
     }
 
-    private static <T> Map<String, T> processSetters(Class<?> builder, Function<Method, T> processor) {
+    static <T> Map<String, T> processSetters(Class<?> builder, Function<Method, T> processor) {
         return Arrays.stream(builder.getDeclaredMethods())
                 .filter(s -> s.isAnnotationPresent(CustomType.Setter.class))
                 .peek(s -> s.setAccessible(true))
                 .collect(toMap(s -> extractSetterName(s), processor));
     }
 
-    private static Parameter extractSetterParameter(Method method) {
+    static Parameter extractSetterParameter(Method method) {
         return Arrays.stream(method.getParameters()).collect(toSingleton(
                 cause -> new IllegalArgumentException(String.format(
                         "Expected setter named '%s' annotated with @%s to have exactly one parameter",
@@ -763,7 +782,7 @@ public class Converter {
         ));
     }
 
-    private static String extractSetterName(Method method) {
+    static String extractSetterName(Method method) {
         // we cannot just use parameter.getName(),
         // because it will be different at runtime e.g. 'arg0', 'arg1', etc.
         // also codegen must escape the names in edge cases, e.g. 'default_'
