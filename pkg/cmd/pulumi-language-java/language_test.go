@@ -285,7 +285,7 @@ var expectedFailures = map[string]string{
 	"l2-invoke-multi-argument":    "multiArgumentInputs not implemented in programgen (added in 3.247)",
 	"l3-resource-keyword-overlap": "compilation error: keyword overlap generates undefined symbol (added in 3.247)",
 
-	"l2-failed-create-recover-continue-on-error": "recover intrinsic not implemented in programgen (added in 3.252)",
+	"l2-recover-invoke": "recover intrinsic not implemented in programgen (added in 3.252, renamed in 3.269)",
 
 	"l2-resource-hook-on-error": "resource hooks not implemented in programgen, the hook is dropped from the generated program (added in 3.254)", //nolint:lll
 
@@ -301,6 +301,8 @@ var expectedFailures = map[string]string{
 	"l2-failed-create-continue-on-error-read": "read resource not implemented, the res and res_prop_dep declarations are dropped from the generated program (added in 3.265)", //nolint:lll
 
 	"l2-invoke-per-value-deps": "SDK does not negotiate OutputValues on invoke, so invoke results depend on every argument instead of per value (added in 3.268)", //nolint:lll
+
+	"l2-call-per-value-deps": "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.269)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
