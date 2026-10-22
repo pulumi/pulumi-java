@@ -29,6 +29,83 @@ env:
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_ACCESS_TOKEN=PULUMI_ACCESS_TOKEN_STAGING
 
 jobs:
+  # Temporary: remove after validating signing on PR #2375.
+  windows-signing-smoke-test:
+    name: Windows signing smoke test (temporary)
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.head_ref == 'julienp/sign-exe'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      PULUMI_API: https://api.pulumi.com
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: 'false'
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@32dda43ffe7a2ab21e6bce11c781b44a3e5623cf # v3
+      - uses: actions/checkout@v5
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache: false
+      - name: Prepare Windows signing
+        env:
+          AZURE_SIGNING_CLIENT_ID: ${{ steps.esc-secrets.outputs.AZURE_SIGNING_CLIENT_ID }}
+          AZURE_SIGNING_CLIENT_SECRET: ${{ steps.esc-secrets.outputs.AZURE_SIGNING_CLIENT_SECRET }}
+          AZURE_SIGNING_TENANT_ID: ${{ steps.esc-secrets.outputs.AZURE_SIGNING_TENANT_ID }}
+        run: |
+          set -euo pipefail
+          : "${AZURE_SIGNING_CLIENT_ID:?AZURE_SIGNING_CLIENT_ID must be set}"
+          : "${AZURE_SIGNING_CLIENT_SECRET:?AZURE_SIGNING_CLIENT_SECRET must be set}"
+          : "${AZURE_SIGNING_TENANT_ID:?AZURE_SIGNING_TENANT_ID must be set}"
+          curl -sSfL -o "${RUNNER_TEMP}/jsign.jar" https://github.com/ebourg/jsign/releases/download/7.4/jsign-7.4.jar
+          echo "2abf2ade9ea322acc2d60c24794eadc465ff9380938fca4c932d09e0b25f1c28  ${RUNNER_TEMP}/jsign.jar" | sha256sum --check
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq osslsigncode
+          AZURE_CONFIG_DIR="$(mktemp -d)"
+          export AZURE_CONFIG_DIR
+          az login --service-principal \
+            --username "${AZURE_SIGNING_CLIENT_ID}" \
+            --password "${AZURE_SIGNING_CLIENT_SECRET}" \
+            --tenant "${AZURE_SIGNING_TENANT_ID}" \
+            --output none
+          AZURE_SIGNING_ACCESS_TOKEN="$(az account get-access-token --resource https://codesigning.azure.net --query accessToken --output tsv)"
+          echo "::add-mask::${AZURE_SIGNING_ACCESS_TOKEN}"
+          echo "AZURE_SIGNING_ACCESS_TOKEN=${AZURE_SIGNING_ACCESS_TOKEN}" >> "$GITHUB_ENV"
+      - name: Sign and verify Windows test binaries
+        env:
+          SIGN_WINDOWS_BINARIES: 'true'
+          JSIGN_JAR: ${{ runner.temp }}/jsign.jar
+          AZURE_SIGNING_ACCOUNT_ENDPOINT: https://wus2.codesigning.azure.net/
+          AZURE_SIGNING_ACCOUNT_NAME: pulumi-code-signing
+          AZURE_SIGNING_CERT_PROFILE_NAME: pulumi-code-signing
+        run: |
+          set -euo pipefail
+          mkdir -p "${RUNNER_TEMP}/signing-smoke-test"
+          printf 'package main\nfunc main() {}\n' > "${RUNNER_TEMP}/signing-smoke-test/main.go"
+          for arch in amd64 arm64; do
+            binary="${RUNNER_TEMP}/signing-smoke-test/smoke-${arch}.exe"
+            GOOS=windows GOARCH="$arch" CGO_ENABLED=0 go build -o "$binary" "${RUNNER_TEMP}/signing-smoke-test/main.go"
+            if scripts/check-windows-signatures.sh "$binary"; then
+              echo "Verification unexpectedly accepted an unsigned binary" >&2
+              exit 1
+            fi
+            scripts/sign-windows-binary.sh "$binary"
+          done
+      - name: Upload signed test binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-signing-smoke-test
+          path: ${{ runner.temp }}/signing-smoke-test/*.exe
+          if-no-files-found: error
+          retention-days: 3
+
   should-test:
     name: Check for code changes
     runs-on: ubuntu-latest
