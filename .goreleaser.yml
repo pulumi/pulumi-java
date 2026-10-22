@@ -19,6 +19,9 @@ builds:
     - -trimpath
   ldflags:
   - -w -s -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
+  hooks:
+    post:
+    - scripts/sign-windows-binary.sh {{ .Path }}
 
 - binary: pulumi-java-gen
   id: pulumi-java-gen
@@ -38,6 +41,9 @@ builds:
     - -trimpath
   ldflags:
   - -w -s -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
+  hooks:
+    post:
+    - scripts/sign-windows-binary.sh {{ .Path }}
 
 archives:
 - name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
