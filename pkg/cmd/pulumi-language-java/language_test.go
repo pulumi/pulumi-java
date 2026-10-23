@@ -303,6 +303,13 @@ var expectedFailures = map[string]string{
 	"l2-invoke-per-value-deps": "SDK does not negotiate OutputValues on invoke, so invoke results depend on every argument instead of per value (added in 3.268)", //nolint:lll
 
 	"l2-call-per-value-deps": "call expressions not implemented in programgen, outputs are literal \"TODO: call call\" strings (added in 3.269)", //nolint:lll
+
+	"l2-failed-create-downstream-continue-on-error": "SDK halts the program when a dependency fails to create, so stack output failingValue is never registered (added in 3.271)", //nolint:lll
+	"l2-failed-read-continue-on-error":              "read resource not implemented, the failing declaration is dropped from the generated program (added in 3.271)",              //nolint:lll
+	"l2-resource-read-id-rewrite":                   "read resource not implemented, the res and unknownRes declarations are dropped from the generated program (added in 3.271)", //nolint:lll
+
+	"l2-failed-create-component-continue-on-error": "SDK registers dependent although the remote component it depends on failed to create, expected dependent to be skipped (added in 3.272)", //nolint:lll
+	"policy-unknowns": "no policy pack support: policy packs specified but no policy pack directory given (added in 3.272)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
