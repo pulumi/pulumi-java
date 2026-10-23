@@ -1,0 +1,4 @@
+component: codegen
+kind: improvements
+body: Resolve `{{% ref %}}` doc shortcodes in generated Javadoc comments so SDKs contain real Java type and property names
+time: 2026-10-22T00:00:00Z
