@@ -175,8 +175,13 @@ public class MocksTest {
         assertThat(error).contains("io.grpc.StatusRuntimeException: UNKNOWN: error code 404");
 
         assertThat(exceptions).hasSize(2);
-        assertThat(exceptions.get(0)).isInstanceOf(CompletionException.class);
-        assertThat(exceptions.get(1)).isInstanceOf(StatusRuntimeException.class);
+        // The output future and stack-output serialization run asynchronously and both propagate the
+        // invoke failure. Depending on which failed task the runner observes first, the exception may
+        // be wrapped by serialization with the property name. Check the shared root cause.
+        assertThat(exceptions.get(0)).isInstanceOf(CompletionException.class)
+                .hasRootCauseInstanceOf(StatusRuntimeException.class)
+                .hasRootCauseMessage("UNKNOWN: error code 404");
+        assertThat(exceptions.get(1)).isSameAs(exceptions.get(0).getCause());
     }
 
     @Test
