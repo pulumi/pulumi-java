@@ -178,14 +178,17 @@ Here's some examples of what we're trying to avoid:
 
 ## Release Process
 
-To release a new version of `pulumi-java`, use `changie` to update the
-changelog file and open a PR for that change. Once that PR merges, the
-release workflow will automatically create the GitHub release and push
-all necessary tags (`v*`, `sdk/v*`).
+Releases are prepared automatically every Monday at 09:00 UTC. If there are
+unreleased changelog entries, the automation:
 
-```shell
-changie batch auto
-changie merge
-git add .changes CHANGELOG.md
-git commit -m "Changelog for $(changie latest)"
-```
+1. Runs `changie batch auto` to choose the next version from the change kinds,
+   then `changie merge` to update `CHANGELOG.md`.
+2. Opens or updates a `Changelog for v<version>` PR from `automation/next-release`
+   containing the versioned changelog and updated `CHANGELOG.md`.
+3. Approves the PR and enables squash auto-merge, so it merges once the required
+   checks pass.
+
+Merging the release PR triggers this repository's
+[release workflow](.github/workflows/release.yml), which creates the GitHub
+release, publishes the Java SDK to Maven Central, pushes the `v*` and `sdk/v*`
+tags, and triggers the SDK documentation update.
