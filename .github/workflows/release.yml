@@ -21,15 +21,21 @@ jobs:
     outputs:
       version: ${{ steps.latest.outputs.output }}
     env:
-      ESC_ACTION_OIDC_AUTH: true
-      ESC_ACTION_OIDC_ORGANIZATION: pulumi
-      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
-      ESC_ACTION_ENVIRONMENT: imports/github-secrets
+      ESC_ACTION_ENVIRONMENT: pulumi/imports/github-secrets
       ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: GITHUB_TOKEN=PULUMI_BOT_TOKEN
     steps:
+      - name: Authenticate with Pulumi Cloud
+        id: pulumi-auth
+        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        with:
+          organization: pulumi
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+          export-environment-variables: false
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@b061167a29bad21ea5ff1fca900addb89227c49b # v3
+        uses: pulumi/esc-action@eec71a90d9989af7ff14bd700b83fc72fae36119 # v4
+        with:
+          pulumi-access-token: ${{ steps.pulumi-auth.outputs.pulumi-access-token }}
       - uses: actions/checkout@v5
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -110,15 +116,21 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       OSSRH_REPO_URL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
-      ESC_ACTION_OIDC_AUTH: true
-      ESC_ACTION_OIDC_ORGANIZATION: pulumi
-      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
-      ESC_ACTION_ENVIRONMENT: imports/github-secrets
+      ESC_ACTION_ENVIRONMENT: pulumi/imports/github-secrets
       ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: OSSRH_USERNAME,OSSRH_PASSWORD,SIGNING_KEY=JAVA_SIGNING_KEY,SIGNING_PASSWORD=JAVA_SIGNING_PASSWORD
     steps:
+      - name: Authenticate with Pulumi Cloud
+        id: pulumi-auth
+        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        with:
+          organization: pulumi
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+          export-environment-variables: false
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@b061167a29bad21ea5ff1fca900addb89227c49b # v3
+        uses: pulumi/esc-action@eec71a90d9989af7ff14bd700b83fc72fae36119 # v4
+        with:
+          pulumi-access-token: ${{ steps.pulumi-auth.outputs.pulumi-access-token }}
       - uses: actions/checkout@v5
         with:
           submodules: recursive
@@ -169,14 +181,20 @@ jobs:
     name: Trigger docs update
     runs-on: ubuntu-latest
     env:
-      ESC_ACTION_OIDC_AUTH: true
-      ESC_ACTION_OIDC_ORGANIZATION: pulumi
-      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
-      ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-pulumi-java
+      ESC_ACTION_ENVIRONMENT: pulumi/github-secrets/pulumi-pulumi-java
       ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_BOT_TOKEN
     steps:
+      - name: Authenticate with Pulumi Cloud
+        id: pulumi-auth
+        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        with:
+          organization: pulumi
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+          export-environment-variables: false
       - name: Fetch secrets from ESC
-        uses: pulumi/esc-action@b061167a29bad21ea5ff1fca900addb89227c49b # v3
+        uses: pulumi/esc-action@eec71a90d9989af7ff14bd700b83fc72fae36119 # v4
+        with:
+          pulumi-access-token: ${{ steps.pulumi-auth.outputs.pulumi-access-token }}
       - name: Trigger pulumi/docs workflow
         run: |
           gh workflow run pulumi-sdk-java-docs.yml \
