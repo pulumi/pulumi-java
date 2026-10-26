@@ -1,6 +1,6 @@
 module github.com/pulumi/pulumi-java
 
-go 1.26.6
+go 1.26.9
 
 replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.8.3
 
