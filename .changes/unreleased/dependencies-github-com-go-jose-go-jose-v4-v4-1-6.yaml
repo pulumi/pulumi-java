@@ -1,0 +1,4 @@
+component: runtime
+kind: dependencies
+body: Update github.com/go-jose/go-jose/v4 to v4.1.6
+time: 2026-10-27T22:34:04.90913679Z
