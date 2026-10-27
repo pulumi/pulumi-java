@@ -85,6 +85,17 @@ func (g *generator) genTrivia(w io.Writer, token syntax.Token) {
 }
 
 func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpression) {
+	// If the destination resource property is an enum and this template is a single
+	// string literal, emit the matching enum member reference instead of the raw string.
+	if enumType := enumForType(g.currentResourcePropertyType); enumType != nil && len(expr.Parts) == 1 {
+		if lit, ok := expr.Parts[0].(*model.LiteralValueExpression); ok &&
+			model.StringType.AssignableFrom(lit.Type()) {
+			if ref, ok := enumMemberRef(enumType, lit.Value); ok {
+				g.Fgen(w, ref)
+				return
+			}
+		}
+	}
 	multiLine := false
 	expressions := false
 	for _, expr := range expr.Parts {
@@ -542,7 +553,13 @@ func sanitizeImport(name string) string {
 	withoutDash := strings.ReplaceAll(name, "-", "")
 	// e.g. kubernetes.core/v1 becomes kubernetes.core_v1
 	replacedSlash := strings.ReplaceAll(withoutDash, "/", "_")
-	return replacedSlash
+	// Escape per-segment identifiers (e.g. a package named "enum" becomes "enum_")
+	// so the resulting dotted import matches the SDK's generated package layout.
+	parts := strings.Split(replacedSlash, ".")
+	for i, p := range parts {
+		parts[i] = names.Ident(p).String()
+	}
+	return strings.Join(parts, ".")
 }
 
 // Checks if this is a builtin resource type (StackReference, Stash) that lives in com.pulumi.resources.

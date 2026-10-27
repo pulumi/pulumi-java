@@ -283,6 +283,8 @@ public class Serializer {
                 var value = converter.invoke(prop);
                 if (value instanceof Double || value instanceof String) {
                     return CompletableFuture.completedFuture(value);
+                } else if (value instanceof Integer) {
+                    return CompletableFuture.completedFuture((double) ((Integer) value).intValue());
                 } else {
                     throw new UnsupportedOperationException(
                             String.format(

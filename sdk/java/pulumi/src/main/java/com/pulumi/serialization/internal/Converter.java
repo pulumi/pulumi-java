@@ -635,7 +635,9 @@ public class Converter {
             Function<Class<?>, Boolean> isAllowedGenericArgumentType = type ->
                     String.class.isAssignableFrom(type)
                             || double.class.isAssignableFrom(type)
-                            || Double.class.isAssignableFrom(type);
+                            || Double.class.isAssignableFrom(type)
+                            || int.class.isAssignableFrom(type)
+                            || Integer.class.isAssignableFrom(type);
 
             var converter = targetType.getAnnotatedMethod(EnumType.Converter.class);
 
