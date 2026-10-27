@@ -20,101 +20,91 @@ import java.util.concurrent.CompletableFuture;
 public final class EdgednsFunctions {
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
+     * @deprecated akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
+    @Deprecated
     public static Output<GetAuthoritiesSetResult> getAuthoritiesSet(GetAuthoritiesSetArgs args) {
         return getAuthoritiesSet(args, InvokeOptions.Empty);
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
+     * @deprecated akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
+    @Deprecated
     public static CompletableFuture<GetAuthoritiesSetResult> getAuthoritiesSetPlain(GetAuthoritiesSetPlainArgs args) {
         return getAuthoritiesSetPlain(args, InvokeOptions.Empty);
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
+     * @deprecated akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
+    @Deprecated
     public static Output<GetAuthoritiesSetResult> getAuthoritiesSet(GetAuthoritiesSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
+     * @deprecated akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
+    @Deprecated
     public static Output<GetAuthoritiesSetResult> getAuthoritiesSet(GetAuthoritiesSetArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
+     * @deprecated akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getauthoritiesset.getAuthoritiesSet has been deprecated in favor of akamai.index/getauthoritiesset.getAuthoritiesSet */
+    @Deprecated
     public static CompletableFuture<GetAuthoritiesSetResult> getAuthoritiesSetPlain(GetAuthoritiesSetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("akamai:edgedns/getAuthoritiesSet:getAuthoritiesSet", TypeShape.of(GetAuthoritiesSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
+     * @deprecated akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
+    @Deprecated
     public static Output<GetDnsRecordSetResult> getDnsRecordSet(GetDnsRecordSetArgs args) {
         return getDnsRecordSet(args, InvokeOptions.Empty);
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
+     * @deprecated akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
+    @Deprecated
     public static CompletableFuture<GetDnsRecordSetResult> getDnsRecordSetPlain(GetDnsRecordSetPlainArgs args) {
         return getDnsRecordSetPlain(args, InvokeOptions.Empty);
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
+     * @deprecated akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
+    @Deprecated
     public static Output<GetDnsRecordSetResult> getDnsRecordSet(GetDnsRecordSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
+     * @deprecated akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
+    @Deprecated
     public static Output<GetDnsRecordSetResult> getDnsRecordSet(GetDnsRecordSetArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * 
-     * @deprecated
-     * akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
+     * @deprecated akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet
      * 
      */
-    @Deprecated /* akamai.edgedns/getdnsrecordset.getDnsRecordSet has been deprecated in favor of akamai.index/getdnsrecordset.getDnsRecordSet */
+    @Deprecated
     public static CompletableFuture<GetDnsRecordSetResult> getDnsRecordSetPlain(GetDnsRecordSetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("akamai:edgedns/getDnsRecordSet:getDnsRecordSet", TypeShape.of(GetDnsRecordSetResult.class), args, Utilities.withVersion(options));
     }

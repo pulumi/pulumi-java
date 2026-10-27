@@ -50,11 +50,10 @@ public final class FuncWithConstInputArgs extends com.pulumi.resources.InvokeArg
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder plainInput(@Nullable Output<String> plainInput) {
             $.plainInput = plainInput;
             return this;
@@ -63,11 +62,10 @@ public final class FuncWithConstInputArgs extends com.pulumi.resources.InvokeArg
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder plainInput(String plainInput) {
             return plainInput(Output.of(plainInput));
         }

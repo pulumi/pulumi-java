@@ -17,11 +17,10 @@ import javax.annotation.Nullable;
 public final class GetCloudwrapperPropertiesResult {
     private @Nullable List<String> contractIds;
     /**
-     * @deprecated
-     * Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_properties`
+     * @deprecated Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_properties`
      * 
      */
-    @Deprecated /* Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_properties` */
+    @Deprecated
     private String id;
     private @Nullable List<GetCloudwrapperPropertiesProperty> properties;
     private @Nullable Boolean unused;
@@ -31,11 +30,10 @@ public final class GetCloudwrapperPropertiesResult {
         return this.contractIds == null ? List.of() : this.contractIds;
     }
     /**
-     * @deprecated
-     * Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_properties`
+     * @deprecated Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_properties`
      * 
      */
-    @Deprecated /* Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_properties` */
+    @Deprecated
     public String id() {
         return this.id;
     }

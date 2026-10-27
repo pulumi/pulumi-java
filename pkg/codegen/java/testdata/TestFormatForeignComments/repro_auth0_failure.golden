@@ -1,13 +1,13 @@
  * With Auth0, you can define sources of users, otherwise known as connections, which may include identity providers (such as Google or LinkedIn), databases, or passwordless authentication methods. This resource allows you to configure and manage connections to be used with your clients and users.
  * 
- * \u003e The Auth0 dashboard displays only one connection per social provider. Although the Auth0 Management API allows the
+ * &#92;u003e The Auth0 dashboard displays only one connection per social provider. Although the Auth0 Management API allows the
  * creation of multiple connections per strategy, the additional connections may not be visible in the Auth0 dashboard.
  * 
  * ## Example Usage
  * 
  * ### Auth0 Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -103,13 +103,13 @@
  * }
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Google OAuth2 Connection
  * 
- * \u003e Your Auth0 account may be pre-configured with a `google-oauth2` connection.
+ * &#92;u003e Your Auth0 account may be pre-configured with a `google-oauth2` connection.
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -127,19 +127,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of a Google OAuth2 connection.
  *         var googleOauth2 = new Connection("googleOauth2", ConnectionArgs.builder()        
  *             .name("Google-OAuth2-Connection")
  *             .strategy("google-oauth2")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .allowedAudiences(                
  *                     "example.com",
  *                     "api.example.com")
@@ -155,15 +155,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Google Apps
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -223,11 +223,11 @@
  * }
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Facebook Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -245,19 +245,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of a Facebook connection.
  *         var facebook = new Connection("facebook", ConnectionArgs.builder()        
  *             .name("Facebook-Connection")
  *             .strategy("facebook")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .scopes(                
  *                     "public_profile",
  *                     "email",
@@ -270,15 +270,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Apple Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -296,24 +296,24 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of an Apple connection.
  *         var apple = new Connection("apple", ConnectionArgs.builder()        
  *             .name("Apple-Connection")
  *             .strategy("apple")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
  *                 .clientSecret("""
  * -----BEGIN PRIVATE KEY-----
  * MIHBAgEAMA0GCSqGSIb3DQEBAQUABIGsMIGpAgEAA
  * -----END PRIVATE KEY-----                """)
- *                 .teamId("\u003cteam-id\u003e")
- *                 .keyId("\u003ckey-id\u003e")
+ *                 .teamId("}&#92;{@code u003cteam-id}&#92;{@code u003e")
+ *                 .keyId("}&#92;{@code u003ckey-id}&#92;{@code u003e")
  *                 .scopes(                
  *                     "email",
  *                     "name")
@@ -324,15 +324,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### LinkedIn Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -350,19 +350,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of an LinkedIn connection.
  *         var linkedin = new Connection("linkedin", ConnectionArgs.builder()        
  *             .name("Linkedin-Connection")
  *             .strategy("linkedin")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .strategyVersion(2)
  *                 .scopes(                
  *                     "basic_profile",
@@ -375,15 +375,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### GitHub Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -401,19 +401,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of an GitHub connection.
  *         var github = new Connection("github", ConnectionArgs.builder()        
  *             .name("GitHub-Connection")
  *             .strategy("github")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .scopes(                
  *                     "email",
  *                     "profile",
@@ -426,15 +426,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### SalesForce Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -452,19 +452,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of an SalesForce connection.
  *         var salesforce = new Connection("salesforce", ConnectionArgs.builder()        
  *             .name("Salesforce-Connection")
  *             .strategy("salesforce")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .communityBaseUrl("https://salesforce.example.com")
  *                 .scopes(                
  *                     "openid",
@@ -476,17 +476,17 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### OAuth2 Connection
  * 
  * Also applies to following connection strategies: `dropbox`, `bitbucket`, `paypal`, `twitter`, `amazon`, `yahoo`, `box`, `wordpress`, `shopify`, `custom`
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -504,19 +504,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of an OAuth2 connection.
  *         var oauth2 = new Connection("oauth2", ConnectionArgs.builder()        
  *             .name("OAuth2-Connection")
  *             .strategy("oauth2")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .scopes(                
  *                     "basic_profile",
  *                     "profile",
@@ -526,9 +526,9 @@
  *                 .pkceEnabled(true)
  *                 .iconUrl("https://auth.example.com/assets/logo.png")
  *                 .scripts(Map.of("fetchUserProfile", """
- *         function fetchUserProfile(accessToken, context, callback) {
+ *         function fetchUserProfile(accessToken, context, callback) }{{@code
  *           return callback(new Error("Whoops!"));
- *         }
+ *         }}{@code
  *                 """))
  *                 .setUserRootAttributes("on_each_login")
  *                 .nonPersistentAttrs(                
@@ -537,15 +537,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Active Directory (AD)
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -606,11 +606,11 @@
  * }
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Azure AD Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -677,13 +677,13 @@
  * }
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Email Connection
  * 
- * \u003e To be able to see this in the management dashboard as well, the name of the connection must be set to &#34;email&#34;.
+ * &#92;u003e To be able to see this in the management dashboard as well, the name of the connection must be set to &#34;email&#34;.
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -714,10 +714,10 @@
  *             .name("email")
  *             .options(ConnectionOptionsArgs.builder()
  *                 .name("email")
- *                 .from("}{{{@code  application.name }}}{@code  \u003croot}{@literal @}{@code auth0.com\u003e")
+ *                 .from("}{{{@code  application.name }}}{@code  }&#92;{@code u003croot}{@literal @}{@code auth0.com}&#92;{@code u003e")
  *                 .subject("Welcome to }{{{@code  application.name }}}{@code ")
  *                 .syntax("liquid")
- *                 .template("\u003chtml\u003eThis is the body of the email\u003c/html\u003e")
+ *                 .template("}&#92;{@code u003chtml}&#92;{@code u003eThis is the body of the email}&#92;{@code u003c/html}&#92;{@code u003e")
  *                 .disableSignup(false)
  *                 .bruteForceProtection(true)
  *                 .setUserRootAttributes("on_each_login")
@@ -737,11 +737,11 @@
  * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### SAML Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -775,7 +775,7 @@
  *             .strategy("samlp")
  *             .options(ConnectionOptionsArgs.builder()
  *                 .debug(false)
- *                 .signingCert("\u003csigning-certificate\u003e")
+ *                 .signingCert("}&#92;{@code u003csigning-certificate}&#92;{@code u003e")
  *                 .signInEndpoint("https://saml.provider/sign_in")
  *                 .signOutEndpoint("https://saml.provider/sign_out")
  *                 .disableSignOut(true)
@@ -785,26 +785,26 @@
  *                     "alias.example.com")
  *                 .protocolBinding("urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST")
  *                 .requestTemplate("""
- * \u003csamlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+ * }&#92;{@code u003csamlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
  * }{@literal @@}{@code AssertServiceURLAndDestination}{@literal @@}{@code
  *     ID="}{@literal @@}{@code ID}{@literal @@}{@code "
  *     IssueInstant="}{@literal @@}{@code IssueInstant}{@literal @@}{@code "
- *     ProtocolBinding="}{@literal @@}{@code ProtocolBinding}{@literal @@}{@code " Version="2.0"\u003e
- *     \u003csaml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\u003e}{@literal @@}{@code Issuer}{@literal @@}{@code \u003c/saml:Issuer\u003e
- * \u003c/samlp:AuthnRequest\u003e                """)
+ *     ProtocolBinding="}{@literal @@}{@code ProtocolBinding}{@literal @@}{@code " Version="2.0"}&#92;{@code u003e
+ *     }&#92;{@code u003csaml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"}&#92;{@code u003e}{@literal @@}{@code Issuer}{@literal @@}&#92;{@code u003c/saml:Issuer}&#92;{@code u003e
+ * }&#92;{@code u003c/samlp:AuthnRequest}&#92;{@code u003e                """)
  *                 .userIdAttribute("https://saml.provider/imi/ns/identity-200810")
  *                 .signatureAlgorithm("rsa-sha256")
  *                 .digestAlgorithm("sha256")
  *                 .iconUrl("https://saml.provider/assets/logo.png")
- *                 .entityId("\u003centity_id\u003e")
+ *                 .entityId("}&#92;{@code u003centity_id}&#92;{@code u003e")
  *                 .metadataXml("""
- *     \u003c?xml version="1.0"?\u003e
- *     \u003cmd:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://example.com"\u003e
- *       \u003cmd:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"\u003e
- *         \u003cmd:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml.provider/sign_out"/\u003e
- *         \u003cmd:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml.provider/sign_in"/\u003e
- *       \u003c/md:IDPSSODescriptor\u003e
- *     \u003c/md:EntityDescriptor\u003e
+ *     }&#92;{@code u003c?xml version="1.0"?}&#92;{@code u003e
+ *     }&#92;{@code u003cmd:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://example.com"}&#92;{@code u003e
+ *       }&#92;{@code u003cmd:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"}&#92;{@code u003e
+ *         }&#92;{@code u003cmd:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml.provider/sign_out"/}&#92;{@code u003e
+ *         }&#92;{@code u003cmd:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml.provider/sign_in"/}&#92;{@code u003e
+ *       }&#92;{@code u003c/md:IDPSSODescriptor}&#92;{@code u003e
+ *     }&#92;{@code u003c/md:EntityDescriptor}&#92;{@code u003e
  *                 """)
  *                 .metadataUrl("https://saml.provider/imi/ns/FederationMetadata.xml")
  *                 .fieldsMap(serializeJson(
@@ -842,7 +842,7 @@
  *                 .idpInitiated(ConnectionOptionsIdpInitiatedArgs.builder()
  *                     .clientId("client_id")
  *                     .clientProtocol("samlp")
- *                     .clientAuthorizeQuery("type=code\u0026timeout=30")
+ *                     .clientAuthorizeQuery("type=code}&#92;{@code u0026timeout=30")
  *                     .build())
  *                 .build())
  *             .build());
@@ -851,11 +851,11 @@
  * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### WindowsLive Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -873,19 +873,19 @@
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This is an example of a WindowsLive connection.
  *         var windowslive = new Connection("windowslive", ConnectionArgs.builder()        
  *             .name("Windowslive-Connection")
  *             .strategy("windowslive")
  *             .options(ConnectionOptionsArgs.builder()
- *                 .clientId("\u003cclient-id\u003e")
- *                 .clientSecret("\u003cclient-secret\u003e")
+ *                 .clientId("}&#92;{@code u003cclient-id}&#92;{@code u003e")
+ *                 .clientSecret("}&#92;{@code u003cclient-secret}&#92;{@code u003e")
  *                 .strategyVersion(2)
  *                 .scopes(                
  *                     "signin",
@@ -897,15 +897,15 @@
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### OIDC Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -982,11 +982,11 @@
  * }
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ### Okta Connection
  * 
- * \u003c!--Start PulumiCodeChooser --\u003e
+ * &#92;u003c!--Start PulumiCodeChooser --&#92;u003e
  * <pre>
  * {@code
  * package generated_program;
@@ -1066,7 +1066,7 @@
  * }
  * }
  * </pre>
- * \u003c!--End PulumiCodeChooser --\u003e
+ * &#92;u003c!--End PulumiCodeChooser --&#92;u003e
  * 
  * ## Import
  * 

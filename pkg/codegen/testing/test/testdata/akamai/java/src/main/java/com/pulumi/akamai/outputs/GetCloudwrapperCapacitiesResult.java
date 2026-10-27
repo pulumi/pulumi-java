@@ -16,11 +16,10 @@ public final class GetCloudwrapperCapacitiesResult {
     private @Nullable List<GetCloudwrapperCapacitiesCapacity> capacities;
     private @Nullable List<String> contractIds;
     /**
-     * @deprecated
-     * Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_capacities`.
+     * @deprecated Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_capacities`.
      * 
      */
-    @Deprecated /* Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_capacities`. */
+    @Deprecated
     private String id;
 
     private GetCloudwrapperCapacitiesResult() {}
@@ -31,11 +30,10 @@ public final class GetCloudwrapperCapacitiesResult {
         return this.contractIds == null ? List.of() : this.contractIds;
     }
     /**
-     * @deprecated
-     * Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_capacities`.
+     * @deprecated Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_capacities`.
      * 
      */
-    @Deprecated /* Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_capacities`. */
+    @Deprecated
     public String id() {
         return this.id;
     }

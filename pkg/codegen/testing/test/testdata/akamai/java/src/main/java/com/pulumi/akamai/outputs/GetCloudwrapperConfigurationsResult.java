@@ -15,11 +15,10 @@ import javax.annotation.Nullable;
 public final class GetCloudwrapperConfigurationsResult {
     private @Nullable List<GetCloudwrapperConfigurationsConfiguration> configurations;
     /**
-     * @deprecated
-     * Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_configurations`.
+     * @deprecated Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_configurations`.
      * 
      */
-    @Deprecated /* Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_configurations`. */
+    @Deprecated
     private String id;
 
     private GetCloudwrapperConfigurationsResult() {}
@@ -27,11 +26,10 @@ public final class GetCloudwrapperConfigurationsResult {
         return this.configurations == null ? List.of() : this.configurations;
     }
     /**
-     * @deprecated
-     * Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_configurations`.
+     * @deprecated Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_configurations`.
      * 
      */
-    @Deprecated /* Required by the terraform plugin testing framework, always set to `akamai_cloudwrapper_configurations`. */
+    @Deprecated
     public String id() {
         return this.id;
     }

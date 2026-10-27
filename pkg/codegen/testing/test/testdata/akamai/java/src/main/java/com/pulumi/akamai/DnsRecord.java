@@ -21,11 +21,10 @@ import javax.annotation.Nullable;
 @ResourceType(type="akamai:index/dnsRecord:DnsRecord")
 public class DnsRecord extends com.pulumi.resources.CustomResource {
     /**
-     * @deprecated
-     * Field &#39;active&#39; has been deprecated. Setting it has no effect
+     * @deprecated Field &#39;active&#39; has been deprecated. Setting it has no effect
      * 
      */
-    @Deprecated /* Field 'active' has been deprecated. Setting it has no effect */
+    @Deprecated
     @Export(name="active", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> active;
 
