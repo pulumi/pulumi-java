@@ -77,11 +77,10 @@ public final class Variant3Args extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder discriminantKind(Output<String> discriminantKind) {
             $.discriminantKind = discriminantKind;
             return this;
@@ -90,11 +89,10 @@ public final class Variant3Args extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder discriminantKind(String discriminantKind) {
             return discriminantKind(Output.of(discriminantKind));
         }

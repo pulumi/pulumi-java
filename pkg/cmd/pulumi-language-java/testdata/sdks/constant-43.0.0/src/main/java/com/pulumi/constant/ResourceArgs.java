@@ -76,11 +76,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
@@ -89,11 +88,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
@@ -101,11 +99,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder flag(Output<Boolean> flag) {
             $.flag = flag;
             return this;
@@ -114,11 +111,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder flag(Boolean flag) {
             return flag(Output.of(flag));
         }
@@ -126,11 +122,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
@@ -139,11 +134,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -151,11 +145,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder ratio(Output<Double> ratio) {
             $.ratio = ratio;
             return this;
@@ -164,11 +157,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder ratio(Double ratio) {
             return ratio(Output.of(ratio));
         }
