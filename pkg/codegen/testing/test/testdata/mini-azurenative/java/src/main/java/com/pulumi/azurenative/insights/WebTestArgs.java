@@ -204,22 +204,20 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The type of this WebTest.
      * 
-     * @deprecated
-     * webTestType is no longer used.
+     * @deprecated webTestType is no longer used.
      * 
      */
-    @Deprecated /* webTestType is no longer used. */
+    @Deprecated
     @Import(name="webTestType")
     private @Nullable Output<String> webTestType;
 
     /**
      * @return The type of this WebTest.
      * 
-     * @deprecated
-     * webTestType is no longer used.
+     * @deprecated webTestType is no longer used.
      * 
      */
-    @Deprecated /* webTestType is no longer used. */
+    @Deprecated
     public Optional<Output<String>> webTestType() {
         return Optional.ofNullable(this.webTestType);
     }
@@ -517,11 +515,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * webTestType is no longer used. This property has a constant value, which is set automatically.
+         * @deprecated webTestType is no longer used. This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* webTestType is no longer used. This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder webTestType(@Nullable Output<String> webTestType) {
             $.webTestType = webTestType;
             return this;
@@ -532,11 +529,10 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * webTestType is no longer used. This property has a constant value, which is set automatically.
+         * @deprecated webTestType is no longer used. This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* webTestType is no longer used. This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder webTestType(String webTestType) {
             return webTestType(Output.of(webTestType));
         }

@@ -202,6 +202,24 @@ This is some code with */ in it, as well as {@code stuff}
  * `),
 		},
 		{
+			name:  "backslashes text",
+			input: `DOMAIN\user and @\u`,
+			expected: autogold.Expect(` * DOMAIN&#92;user and {@literal @}&#92;u
+ * `),
+		},
+		{
+			name: "backslashes code",
+			input: "```java" + `
+x = "\u"; @\ {\
+` + "```",
+			expected: autogold.Expect(` * <pre>
+ * {@code
+ * x = "}&#92;{@code u"; }{@literal @}&#92;{@code  }{&#92;{@code
+ * }
+ * </pre>
+ * `),
+		},
+		{
 			name: "messy code and text",
 			input: `
 Foo {} @@bar */

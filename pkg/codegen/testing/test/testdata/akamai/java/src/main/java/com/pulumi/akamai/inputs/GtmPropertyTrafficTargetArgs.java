@@ -41,20 +41,18 @@ public final class GtmPropertyTrafficTargetArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * @deprecated
-     * The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
+     * @deprecated The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
      * 
      */
-    @Deprecated /* The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored */
+    @Deprecated
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @deprecated
-     * The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
+     * @deprecated The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
      * 
      */
-    @Deprecated /* The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored */
+    @Deprecated
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -132,11 +130,10 @@ public final class GtmPropertyTrafficTargetArgs extends com.pulumi.resources.Res
         /**
          * @return builder
          * 
-         * @deprecated
-         * The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
+         * @deprecated The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
          * 
          */
-        @Deprecated /* The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored */
+        @Deprecated
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -145,11 +142,10 @@ public final class GtmPropertyTrafficTargetArgs extends com.pulumi.resources.Res
         /**
          * @return builder
          * 
-         * @deprecated
-         * The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
+         * @deprecated The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
          * 
          */
-        @Deprecated /* The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored */
+        @Deprecated
         public Builder name(String name) {
             return name(Output.of(name));
         }

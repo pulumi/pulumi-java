@@ -39,6 +39,12 @@ func formatForeignBlockCommentFrom(comment string, idx int, indent string) strin
 	return formatBlockComment(comment, indent)
 }
 
+// formatDeprecatedComment formats message as the text of a javadoc @deprecated tag.
+func formatDeprecatedComment(message, indent string) string {
+	const tag = "@deprecated "
+	return formatForeignBlockCommentFrom(tag+message, len(tag), indent)
+}
+
 // Minimally escapes a piece of Java code for use within a Javadoc comment.
 //
 // Returned code is wrapped in a Javadoc `{@code ...}` block inside an HTML `<pre>` tag. This provides the best
@@ -66,6 +72,7 @@ func escapeCode(code string) string {
 //
 // - It contains an '@' character.
 // - It contains a '*/' sequence.
+// - It contains a '\' character.
 // - It contains unbalanced braces.
 //
 // All other code should be acceptable as-is within a Javadoc `{@code ...}` block.
@@ -73,7 +80,7 @@ func codeNeedsEscaping(code string) bool {
 	openBraces := 0
 	lastSawAsterisk := false
 	for _, rune := range code {
-		if rune == '@' || (rune == '/' && lastSawAsterisk) {
+		if rune == '@' || rune == '\\' || (rune == '/' && lastSawAsterisk) {
 			return true
 		} else if rune == '{' {
 			openBraces++
@@ -106,6 +113,7 @@ func escapeNonCode(nonCode string) string {
 //
 // * '@' characters are escaped as '{@literal @}'.
 // * The pair '*/' is escaped as '*&#47;' (the slash being HTML-encoded).
+// * '\' characters are escaped as '&#92;', since javac reads '\u' as a unicode escape even inside comments.
 // * All other characters are HTML-encoded as-is.
 type plainJavadocWriter struct {
 	// The underlying string builder used to build the escaped string.
@@ -138,6 +146,8 @@ func (w *plainJavadocWriter) WriteRune(r rune) {
 			w.state = plainJavadocLiteral
 		} else if r == '/' && w.lastWroteAsterisk {
 			w.b.WriteString("&#47;")
+		} else if r == '\\' {
+			w.b.WriteString("&#92;")
 		} else {
 			w.b.WriteString(html.EscapeString(string(r)))
 		}
@@ -148,8 +158,9 @@ func (w *plainJavadocWriter) WriteRune(r rune) {
 			w.b.WriteRune('@')
 		} else {
 			w.b.WriteRune('}')
-			w.b.WriteString(html.EscapeString(string(r)))
 			w.state = plainJavadocText
+			w.WriteRune(r)
+			return
 		}
 	}
 
@@ -162,8 +173,9 @@ func (w *plainJavadocWriter) String() string {
 }
 
 // A codeJavadocWriter can be used to build a string safe for embedding in a Javadoc comment as code. It assumes that
-// its content will be wrapped in a `<pre>{@code ...}</pre>` block and escapes '@', '{', '}', and '*/' sequences. In
-// general, the only safe way to handle these characters is to exit the `@code` block temporarily, print them out (in
+// its content will be wrapped in a `<pre>{@code ...}</pre>` block and escapes '@', '{', '}', '\' and '*/' sequences.
+// javac reads '\u' as a unicode escape even inside comments, so a '\' is written as '&#92;' outside the `@code` block.
+// In general, the only safe way to handle these characters is to exit the `@code` block temporarily, print them out (in
 // some cases still requiring escapes) and then re-enter the code block. This generally harms the readability of the
 // generated comment at the expense of it being renderable by Javadoc and the majority of IDEs that support e.g. docs on
 // hover.
@@ -209,6 +221,9 @@ func (w *codeJavadocWriter) WriteRune(r rune) {
 		} else if r == '/' && w.lastWroteAsterisk {
 			w.b.WriteString("}&#47;")
 			w.state = codeJavadocText
+		} else if r == '\\' {
+			w.b.WriteString("}&#92;")
+			w.state = codeJavadocText
 		} else {
 			w.b.WriteRune(r)
 		}
@@ -222,6 +237,8 @@ func (w *codeJavadocWriter) WriteRune(r rune) {
 			w.state = codeJavadocLiteral
 		case '{', '}':
 			w.b.WriteRune(r)
+		case '\\':
+			w.b.WriteString("&#92;")
 		default:
 			w.b.WriteString("{@code")
 			if r != '\n' {
@@ -237,10 +254,11 @@ func (w *codeJavadocWriter) WriteRune(r rune) {
 		switch r {
 		case '@':
 			w.b.WriteRune('@')
-		case '{', '}':
+		case '{', '}', '\\':
 			w.b.WriteRune('}')
-			w.b.WriteRune(r)
 			w.state = codeJavadocText
+			w.WriteRune(r)
+			return
 		default:
 			w.b.WriteString("}{@code")
 			if r != '\n' {

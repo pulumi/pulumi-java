@@ -112,11 +112,10 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
@@ -127,11 +126,10 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
@@ -172,11 +170,10 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
@@ -187,11 +184,10 @@ public final class ConfigMapListArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

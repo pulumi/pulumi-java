@@ -19,11 +19,10 @@ public final class GtmPropertyTrafficTarget {
     private @Nullable Boolean enabled;
     private @Nullable String handoutCname;
     /**
-     * @deprecated
-     * The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
+     * @deprecated The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
      * 
      */
-    @Deprecated /* The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored */
+    @Deprecated
     private @Nullable String name;
     private @Nullable List<String> servers;
     private @Nullable Double weight;
@@ -39,11 +38,10 @@ public final class GtmPropertyTrafficTarget {
         return Optional.ofNullable(this.handoutCname);
     }
     /**
-     * @deprecated
-     * The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
+     * @deprecated The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored
      * 
      */
-    @Deprecated /* The attribute `name` has been deprecated. Any reads or writes on this attribute are ignored */
+    @Deprecated
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

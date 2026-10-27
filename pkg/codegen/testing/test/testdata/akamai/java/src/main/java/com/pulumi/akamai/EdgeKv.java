@@ -50,11 +50,10 @@ public class EdgeKv extends com.pulumi.resources.CustomResource {
     /**
      * List of pairs to initialize the namespace. Just meaningful for creation, updates will be ignored.
      * 
-     * @deprecated
-     * The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
+     * @deprecated The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
      * 
      */
-    @Deprecated /* The attribute 'initial_data' has been deprecated. To manage edgeKV items use 'akamai_edgekv_group_items' resource instead. */
+    @Deprecated
     @Export(name="initialDatas", refs={List.class,EdgeKvInitialData.class}, tree="[0,1]")
     private Output</* @Nullable */ List<EdgeKvInitialData>> initialDatas;
 

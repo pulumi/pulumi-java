@@ -21,55 +21,50 @@ public final class MypkgFunctions {
     /**
      * Taken from pulumi-AWS to regress an issue
      * 
-     * @deprecated
-     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * @deprecated aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */
-    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
+    @Deprecated
     public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
         return getAmiIds(args, InvokeOptions.Empty);
     }
     /**
      * Taken from pulumi-AWS to regress an issue
      * 
-     * @deprecated
-     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * @deprecated aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */
-    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
+    @Deprecated
     public static CompletableFuture<GetAmiIdsResult> getAmiIdsPlain(GetAmiIdsPlainArgs args) {
         return getAmiIdsPlain(args, InvokeOptions.Empty);
     }
     /**
      * Taken from pulumi-AWS to regress an issue
      * 
-     * @deprecated
-     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * @deprecated aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */
-    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
+    @Deprecated
     public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Taken from pulumi-AWS to regress an issue
      * 
-     * @deprecated
-     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * @deprecated aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */
-    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
+    @Deprecated
     public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Taken from pulumi-AWS to regress an issue
      * 
-     * @deprecated
-     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * @deprecated aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */
-    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
+    @Deprecated
     public static CompletableFuture<GetAmiIdsResult> getAmiIdsPlain(GetAmiIdsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }

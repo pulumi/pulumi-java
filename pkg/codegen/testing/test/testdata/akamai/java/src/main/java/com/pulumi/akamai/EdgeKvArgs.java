@@ -52,22 +52,20 @@ public final class EdgeKvArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * List of pairs to initialize the namespace. Just meaningful for creation, updates will be ignored.
      * 
-     * @deprecated
-     * The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
+     * @deprecated The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
      * 
      */
-    @Deprecated /* The attribute 'initial_data' has been deprecated. To manage edgeKV items use 'akamai_edgekv_group_items' resource instead. */
+    @Deprecated
     @Import(name="initialDatas")
     private @Nullable Output<List<EdgeKvInitialDataArgs>> initialDatas;
 
     /**
      * @return List of pairs to initialize the namespace. Just meaningful for creation, updates will be ignored.
      * 
-     * @deprecated
-     * The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
+     * @deprecated The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
      * 
      */
-    @Deprecated /* The attribute 'initial_data' has been deprecated. To manage edgeKV items use 'akamai_edgekv_group_items' resource instead. */
+    @Deprecated
     public Optional<Output<List<EdgeKvInitialDataArgs>>> initialDatas() {
         return Optional.ofNullable(this.initialDatas);
     }
@@ -193,11 +191,10 @@ public final class EdgeKvArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
+         * @deprecated The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
          * 
          */
-        @Deprecated /* The attribute 'initial_data' has been deprecated. To manage edgeKV items use 'akamai_edgekv_group_items' resource instead. */
+        @Deprecated
         public Builder initialDatas(@Nullable Output<List<EdgeKvInitialDataArgs>> initialDatas) {
             $.initialDatas = initialDatas;
             return this;
@@ -208,11 +205,10 @@ public final class EdgeKvArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
+         * @deprecated The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
          * 
          */
-        @Deprecated /* The attribute 'initial_data' has been deprecated. To manage edgeKV items use 'akamai_edgekv_group_items' resource instead. */
+        @Deprecated
         public Builder initialDatas(List<EdgeKvInitialDataArgs> initialDatas) {
             return initialDatas(Output.of(initialDatas));
         }
@@ -222,11 +218,10 @@ public final class EdgeKvArgs extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
-         * @deprecated
-         * The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
+         * @deprecated The attribute &#39;initial_data&#39; has been deprecated. To manage edgeKV items use &#39;akamai_edgekv_group_items&#39; resource instead.
          * 
          */
-        @Deprecated /* The attribute 'initial_data' has been deprecated. To manage edgeKV items use 'akamai_edgekv_group_items' resource instead. */
+        @Deprecated
         public Builder initialDatas(EdgeKvInitialDataArgs... initialDatas) {
             return initialDatas(List.of(initialDatas));
         }

@@ -49,11 +49,10 @@ public final class FuncWithConstInputPlainArgs extends com.pulumi.resources.Invo
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder plainInput(@Nullable String plainInput) {
             $.plainInput = plainInput;
             return this;

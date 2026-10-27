@@ -191,11 +191,10 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder optionalConst(@Nullable Output<String> optionalConst) {
             $.optionalConst = optionalConst;
             return this;
@@ -204,11 +203,10 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder optionalConst(String optionalConst) {
             return optionalConst(Output.of(optionalConst));
         }
@@ -248,11 +246,10 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder plainOptionalConst(@Nullable String plainOptionalConst) {
             $.plainOptionalConst = plainOptionalConst;
             return this;
@@ -276,11 +273,10 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
         /**
          * @return builder
          * 
-         * @deprecated
-         * This property has a constant value, which is set automatically.
+         * @deprecated This property has a constant value, which is set automatically.
          * 
          */
-        @Deprecated /* This property has a constant value, which is set automatically. */
+        @Deprecated
         public Builder plainRequiredConst(String plainRequiredConst) {
             $.plainRequiredConst = plainRequiredConst;
             return this;

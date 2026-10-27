@@ -20,20 +20,18 @@ public final class DnsRecordArgs extends com.pulumi.resources.ResourceArgs {
     public static final DnsRecordArgs Empty = new DnsRecordArgs();
 
     /**
-     * @deprecated
-     * Field &#39;active&#39; has been deprecated. Setting it has no effect
+     * @deprecated Field &#39;active&#39; has been deprecated. Setting it has no effect
      * 
      */
-    @Deprecated /* Field 'active' has been deprecated. Setting it has no effect */
+    @Deprecated
     @Import(name="active")
     private @Nullable Output<Boolean> active;
 
     /**
-     * @deprecated
-     * Field &#39;active&#39; has been deprecated. Setting it has no effect
+     * @deprecated Field &#39;active&#39; has been deprecated. Setting it has no effect
      * 
      */
-    @Deprecated /* Field 'active' has been deprecated. Setting it has no effect */
+    @Deprecated
     public Optional<Output<Boolean>> active() {
         return Optional.ofNullable(this.active);
     }
@@ -505,11 +503,10 @@ public final class DnsRecordArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * Field &#39;active&#39; has been deprecated. Setting it has no effect
+         * @deprecated Field &#39;active&#39; has been deprecated. Setting it has no effect
          * 
          */
-        @Deprecated /* Field 'active' has been deprecated. Setting it has no effect */
+        @Deprecated
         public Builder active(@Nullable Output<Boolean> active) {
             $.active = active;
             return this;
@@ -518,11 +515,10 @@ public final class DnsRecordArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @return builder
          * 
-         * @deprecated
-         * Field &#39;active&#39; has been deprecated. Setting it has no effect
+         * @deprecated Field &#39;active&#39; has been deprecated. Setting it has no effect
          * 
          */
-        @Deprecated /* Field 'active' has been deprecated. Setting it has no effect */
+        @Deprecated
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
