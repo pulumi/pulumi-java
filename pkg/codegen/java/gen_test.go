@@ -73,6 +73,16 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 				"org.mockito:mockito-core",
 			),
 		}),
+		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
+			Directory:   "multi-argument-inputs",
+			Description: "Functions with multiArgumentInputs that take object arguments",
+		}, &PackageInfo{
+			Dependencies: makeDeps(keyDeps,
+				"com.google.guava:guava",
+				"org.assertj:assertj-core",
+				"org.junit.jupiter:junit-jupiter-api",
+			),
+		}),
 		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "parameterized",
 			Description: "Tests for parameterized providers",

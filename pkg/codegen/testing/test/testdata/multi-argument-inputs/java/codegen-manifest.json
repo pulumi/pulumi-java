@@ -1,0 +1,17 @@
+{
+  "emittedFiles": [
+    ".gitattributes",
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/multiarg/MultiargFunctions.java",
+    "src/main/java/com/pulumi/multiarg/Provider.java",
+    "src/main/java/com/pulumi/multiarg/ProviderArgs.java",
+    "src/main/java/com/pulumi/multiarg/Utilities.java",
+    "src/main/java/com/pulumi/multiarg/inputs/LookupArgs.java",
+    "src/main/java/com/pulumi/multiarg/inputs/LookupPlainArgs.java",
+    "src/main/java/com/pulumi/multiarg/inputs/LookupValue.java",
+    "src/main/java/com/pulumi/multiarg/inputs/LookupValueArgs.java",
+    "src/main/java/com/pulumi/multiarg/outputs/LookupResult.java"
+  ]
+}
