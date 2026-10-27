@@ -630,10 +630,120 @@ func (g *generator) genStringLiteral(w io.Writer, v string) {
 	}
 }
 
+// enumForType returns the underlying *schema.EnumType if t is an enum (possibly wrapped in
+// Optional / Input / Union-with-primitive). Returns nil otherwise.
+func enumForType(t schema.Type) *schema.EnumType {
+	if t == nil {
+		return nil
+	}
+	switch t := codegen.UnwrapType(t).(type) {
+	case *schema.EnumType:
+		return t
+	case *schema.UnionType:
+		for _, e := range t.ElementTypes {
+			if enum := enumForType(e); enum != nil {
+				return enum
+			}
+		}
+	}
+	return nil
+}
+
+// enumMemberRef renders a reference to the enum member whose value matches v, as a
+// fully-qualified Java expression like "com.pulumi.enum_.enums.StringEnum.StringOne".
+// Returns ("", false) if no element matches.
+func enumMemberRef(enumType *schema.EnumType, v cty.Value) (string, bool) {
+	var want interface{}
+	switch v.Type() {
+	case cty.String:
+		want = v.AsString()
+	case cty.Number:
+		if i, acc := v.AsBigFloat().Int64(); acc == big.Exact {
+			want = i
+		} else {
+			f, _ := v.AsBigFloat().Float64()
+			want = f
+		}
+	default:
+		return "", false
+	}
+	for _, el := range enumType.Elements {
+		if enumValuesEqual(el.Value, want) {
+			nameParts := strings.Split(enumType.Token, ":")
+			if len(nameParts) != 3 {
+				return "", false
+			}
+			pkg, module, typeName := nameParts[0], nameParts[1], names.Title(nameParts[2])
+			namespace := ""
+			if enumType.PackageReference != nil {
+				namespace = enumType.PackageReference.Namespace()
+			}
+			importPath := pulumiEnumImport(pkg, module, typeName, namespace)
+			memberName, err := names.MakeSafeEnumName(el.Name, typeName)
+			if err != nil {
+				return "", false
+			}
+			return importPath + "." + memberName, true
+		}
+	}
+	return "", false
+}
+
+func enumValuesEqual(a, b interface{}) bool {
+	af, aOk := toFloat64(a)
+	bf, bOk := toFloat64(b)
+	if aOk && bOk {
+		return af == bf
+	}
+	if as, ok := a.(string); ok {
+		if bs, ok := b.(string); ok {
+			return as == bs
+		}
+	}
+	return false
+}
+
+func toFloat64(v interface{}) (float64, bool) {
+	switch n := v.(type) {
+	case int:
+		return float64(n), true
+	case int32:
+		return float64(n), true
+	case int64:
+		return float64(n), true
+	case float32:
+		return float64(n), true
+	case float64:
+		return n, true
+	}
+	return 0, false
+}
+
+// pulumiEnumImport returns the fully-qualified Java name of an enum type.
+func pulumiEnumImport(pkg, module, typeName, namespace string) string {
+	if namespace == "" {
+		namespace = "pulumi"
+	}
+	if module == "" || module == "index" {
+		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + ".enums." + typeName
+	}
+	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." +
+		sanitizeImport(module) + ".enums." + typeName
+}
+
 func (g *generator) GenLiteralValueExpression(w io.Writer, expr *model.LiteralValueExpression) {
 	typ := expr.Type()
 	if cns, ok := typ.(*model.ConstType); ok {
 		typ = cns.Type
+	}
+
+	// If the destination resource property is an enum, emit the enum member
+	// reference (e.g. StringEnum.StringOne) rather than the raw literal.
+	if enumType := enumForType(g.currentResourcePropertyType); enumType != nil {
+		if ref, ok := enumMemberRef(enumType, expr.Value); ok {
+			g.Fgen(w, ref)
+			return
+		}
 	}
 
 	switch typ {

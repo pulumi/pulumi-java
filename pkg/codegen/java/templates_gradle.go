@@ -232,7 +232,7 @@ func newGradleTemplateContext(
 		ctx.Dependencies = map[string]string{}
 	}
 
-	if pkg.ExtensionParameterization != nil && len(pkg.Dependencies) > 0 {
+	if len(pkg.Dependencies) > 0 {
 		dependencies := make(map[string]string, len(ctx.Dependencies)+len(pkg.Dependencies))
 		for k, v := range ctx.Dependencies {
 			dependencies[k] = v
