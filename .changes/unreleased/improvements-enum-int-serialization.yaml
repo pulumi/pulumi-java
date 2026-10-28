@@ -1,4 +1,0 @@
-component: sdk
-kind: improvements
-body: Support integer-valued enum types in resource property serialization and deserialization
-time: 2026-10-23T00:00:00Z

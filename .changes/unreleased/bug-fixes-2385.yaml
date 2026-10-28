@@ -1,6 +1,0 @@
-component: language
-kind: bug-fixes
-body: Build release binaries with Go 1.26.9 to pick up standard library security fixes
-time: 2026-10-26T12:00:00.000000+00:00
-custom:
-  PR: "2385"

@@ -1,6 +1,0 @@
-component: codegen
-kind: bug-fixes
-body: Escape backslashes in generated Javadoc and move deprecation messages onto the `@deprecated` tag
-time: 2026-10-27T10:42:44.000000+00:00
-custom:
-  PR: "2392"
