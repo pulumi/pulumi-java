@@ -1,6 +1,0 @@
-component: runtime
-kind: bug-fixes
-body: Reject TLS certificates issued by compromised eMudhra certificate authorities
-time: 2026-10-28T09:47:32.690740+00:00
-custom:
-  PR: "2398"

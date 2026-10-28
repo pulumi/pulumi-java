@@ -1,4 +1,0 @@
-component: codegen
-kind: improvements
-body: Generate Java enum member references in PCL programs, propagate `pkg.Dependencies` to generated SDK build.gradle files, and escape reserved package names in programgen imports so external-enum references compile
-time: 2026-10-23T00:00:00Z
