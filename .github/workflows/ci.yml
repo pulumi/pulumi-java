@@ -96,6 +96,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: stable
+          check-latest: true
           cache-dependency-path: "**/go.sum"
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@ac638b010cf58a27ee6c972d7336334ccaf61c96 # v4.4.1
@@ -212,6 +213,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
+          check-latest: true
           cache-dependency-path: "**/go.sum"
       - name: Download go-binaries
         uses: actions/download-artifact@v5
@@ -310,6 +312,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
+          check-latest: true
           cache-dependency-path: "**/go.sum"
       - name: Install Pulumi CLI
         uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
@@ -379,6 +382,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v6
         with:
+          # Match the module's Go version because the pinned golangci-lint
+          # may not support the latest stable Go release
           go-version-file: go.mod
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v8
@@ -445,6 +450,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
+          check-latest: true
       - name: Configure Go cache
         id: go-cache-paths
         run: |
@@ -531,6 +537,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: stable
+          check-latest: true
           cache-dependency-path: "**/go.sum"
       - name: Download versions.txt
         uses: actions/download-artifact@v5

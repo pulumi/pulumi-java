@@ -44,6 +44,11 @@ jobs:
           git fetch --quiet --prune --unshallow --tags
       - name: Setup mise and install tools
         uses: jdx/mise-action@v3.4.0
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: stable
+          check-latest: true
       - name: Get the latest version
         id: latest
         uses: miniscruff/changie-action@v2
