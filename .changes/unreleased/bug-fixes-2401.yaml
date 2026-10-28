@@ -1,0 +1,6 @@
+component: language
+kind: bug-fixes
+body: Fix Java language host release builds to use the latest stable Go toolchain
+time: 2026-10-28T12:26:37.789049+01:00
+custom:
+    PR: "2401"
