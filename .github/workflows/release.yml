@@ -23,6 +23,9 @@ jobs:
     env:
       ESC_ACTION_ENVIRONMENT: pulumi/imports/github-secrets
       ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: GITHUB_TOKEN=PULUMI_BOT_TOKEN
+      # Use actions/setup-go for the latest stable Go release and security fixes,
+      # rather than the possibly older Go version pinned in mise
+      MISE_DISABLE_TOOLS: go
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
