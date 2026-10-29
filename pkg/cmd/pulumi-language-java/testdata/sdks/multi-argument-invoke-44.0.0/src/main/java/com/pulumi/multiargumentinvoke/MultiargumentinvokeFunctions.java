@@ -24,10 +24,10 @@ public final class MultiargumentinvokeFunctions {
         return multiArgumentInvokePlain(first, second, InvokeOptions.Empty);
     }
     public static Output<MultiArgumentInvokeResult> multiArgumentInvoke(String first, @Nullable String second, InvokeOptions options) {
-        return Deployment.getInstance().invoke("multi-argument-invoke:index:multiArgumentInvoke", TypeShape.of(MultiArgumentInvokeResult.class), MultiArgumentInvokeArgs.builder().first(first).second(second == null ? null : Output.of(second)).build(), Utilities.withVersion(options));
+        return Deployment.getInstance().invoke("multi-argument-invoke:index:multiArgumentInvoke", TypeShape.of(MultiArgumentInvokeResult.class), MultiArgumentInvokePlainArgs.builder().first(first).second(second).build(), Utilities.withVersion(options));
     }
     public static Output<MultiArgumentInvokeResult> multiArgumentInvoke(String first, @Nullable String second, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("multi-argument-invoke:index:multiArgumentInvoke", TypeShape.of(MultiArgumentInvokeResult.class), MultiArgumentInvokeArgs.builder().first(first).second(second == null ? null : Output.of(second)).build(), Utilities.withVersion(options));
+        return Deployment.getInstance().invoke("multi-argument-invoke:index:multiArgumentInvoke", TypeShape.of(MultiArgumentInvokeResult.class), MultiArgumentInvokePlainArgs.builder().first(first).second(second).build(), Utilities.withVersion(options));
     }
     public static CompletableFuture<MultiArgumentInvokeResult> multiArgumentInvokePlain(String first, @Nullable String second, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("multi-argument-invoke:index:multiArgumentInvoke", TypeShape.of(MultiArgumentInvokeResult.class), MultiArgumentInvokePlainArgs.builder().first(first).second(second).build(), Utilities.withVersion(options));

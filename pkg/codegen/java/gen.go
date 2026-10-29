@@ -1486,6 +1486,8 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// When a function uses multiArgumentInputs, its public methods take the inputs as
 		// positional parameters in schema order rather than a single argument bag. The
 		// parameters are packed back into the named property bag before being sent on the wire.
+		// The parameters are plain values, so every overload packs them into the plain args
+		// class: the input-shape args class takes input-shape object types, not plain ones.
 		//
 		// outputArgsDecl/plainArgsDecl are the parameter lists used in the method signatures.
 		// outputArgsRef forwards the received value(s) to a delegating overload, and
@@ -1497,23 +1499,17 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		plainArgsEmpty := plainArgsType + ".Empty"
 		outputArgsExpr, plainArgsExpr := "args", "args"
 		if fun.MultiArgumentInputs && fun.Inputs != nil {
-			var paramDecls, paramNames, nullNames, outputSetters, plainSetters []string
+			var paramDecls, paramNames, nullNames, setters []string
 			for _, prop := range fun.Inputs.Properties {
-				paramType := mod.typeString(ctx, prop.Type, inputsQualifier, false, true, false, false)
+				// input=true matches the plain args class, so object types resolve to the
+				// same input-package classes that its builder takes.
+				paramType := mod.typeString(ctx, prop.Type, inputsQualifier, true, true, false, false)
 				paramName := names.Ident(mod.propertyName(prop)).AsProperty().Field()
 				setter := names.Ident(prop.Name).AsProperty().Setter()
 				paramDecls = append(paramDecls, paramType.ToCode(ctx.imports)+" "+paramName)
 				paramNames = append(paramNames, paramName)
 				nullNames = append(nullNames, "null")
-				plainSetters = append(plainSetters, fmt.Sprintf(".%s(%s)", setter, paramName))
-				if prop.IsRequired() {
-					outputSetters = append(outputSetters, fmt.Sprintf(".%s(%s)", setter, paramName))
-				} else {
-					// The input-shape builder wraps a plain value in Output.of, which would fail
-					// on a null optional, so only wrap when the argument is present.
-					outputSetters = append(outputSetters, fmt.Sprintf(".%s(%s == null ? null : %s.of(%s))",
-						setter, paramName, ctx.ref(names.Output), paramName))
-				}
+				setters = append(setters, fmt.Sprintf(".%s(%s)", setter, paramName))
 			}
 			decl := strings.Join(paramDecls, ", ")
 			outputArgsDecl, plainArgsDecl = decl, decl
@@ -1521,8 +1517,8 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			plainArgsRef = outputArgsRef
 			outputArgsEmpty = strings.Join(nullNames, ", ")
 			plainArgsEmpty = outputArgsEmpty
-			outputArgsExpr = argsType + ".builder()" + strings.Join(outputSetters, "") + ".build()"
-			plainArgsExpr = plainArgsType + ".builder()" + strings.Join(plainSetters, "") + ".build()"
+			plainArgsExpr = plainArgsType + ".builder()" + strings.Join(setters, "") + ".build()"
+			outputArgsExpr = plainArgsExpr
 		}
 
 		if hasAllOptionalInputs(fun) {

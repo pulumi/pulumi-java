@@ -1,0 +1,60 @@
+{
+  "name": "multiarg",
+  "version": "1.0.0",
+  "types": {
+    "multiarg:index:LookupValue": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  "functions": {
+    "multiarg:index:lookup": {
+      "inputs": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/types/multiarg:index:LookupValue"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/types/multiarg:index:LookupValue"
+            }
+          },
+          "map": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/types/multiarg:index:LookupValue"
+            }
+          }
+        },
+        "required": [
+          "value"
+        ]
+      },
+      "multiArgumentInputs": [
+        "value",
+        "list",
+        "map"
+      ],
+      "outputs": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ]
+      }
+    }
+  }
+}
