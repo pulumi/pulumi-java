@@ -1,0 +1,6 @@
+component: sdk
+kind: bug-fixes
+body: Fix a race in the serializer that could drop dependent resources or throw ArrayIndexOutOfBoundsException when several outputs in one property resolved concurrently
+time: 2026-10-29T15:27:05.000000+00:00
+custom:
+  PR: "2409"
