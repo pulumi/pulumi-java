@@ -651,17 +651,17 @@ public final class WorkspaceStack implements AutoCloseable {
     public UpdateResult refresh(RefreshOptions options) throws AutomationException {
         var args = new ArrayList<String>();
         args.add("refresh");
-        args.add("--yes");
+
+        if (options != null && options.previewOnly()) {
+            args.add("--preview-only");
+        } else {
+            args.add("--yes");
+            args.add("--skip-preview");
+        }
 
         if (options != null) {
             if (options.expectNoChanges()) {
                 args.add("--expect-no-changes");
-            }
-
-            if (options.previewOnly()) {
-                args.add("--preview-only");
-            } else {
-                args.add("--skip-preview");
             }
 
             if (options.skipPendingCreates()) {
@@ -682,8 +682,6 @@ public final class WorkspaceStack implements AutoCloseable {
             }
 
             applyUpdateOptions(options, args);
-        } else {
-          args.add("--skip-preview");
         }
 
         var execKind = workspace.program() == null ? ExecKind.Local : ExecKind.Inline;
