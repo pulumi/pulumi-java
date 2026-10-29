@@ -307,6 +307,9 @@ var expectedFailures = map[string]string{
 
 	"l2-failed-create-component-continue-on-error": "SDK registers dependent although the remote component it depends on failed to create, expected dependent to be skipped (added in 3.272)", //nolint:lll
 	"policy-unknowns": "no policy pack support: policy packs specified but no policy pack directory given (added in 3.272)", //nolint:lll
+
+	"l1-operator-precedence": "programgen drops the parentheses around a conditional used as a conditional's condition, so conditionalCondition is false instead of \"no\" (added in 3.273)", //nolint:lll
+	"l2-resource-exists":     "resourceExists intrinsic not implemented in programgen, outputs are literal \"TODO: call resourceExists\" strings (added in 3.273)",                           //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
