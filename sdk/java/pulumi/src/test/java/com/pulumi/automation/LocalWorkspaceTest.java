@@ -623,6 +623,38 @@ public class LocalWorkspaceTest {
 
     @Test
     @Timeout(value = 1, unit = TimeUnit.MINUTES)
+    void testPreviewRefresh(@EnvVars Map<String, String> envVars) {
+        assertDoesNotThrow(() -> {
+            var env = new HashMap<String, String>(envVars);
+            env.put("PULUMI_CONFIG_PASSPHRASE", "test");
+
+            Consumer<Context> program = ctx -> {
+            };
+
+            var stackName = randomStackName();
+            var projectName = "inline_java";
+            try (var stack = LocalWorkspace.createStack(projectName, stackName, program,
+                    LocalWorkspaceOptions.builder().environmentVariables(env).build())) {
+                try {
+                    // pulumi up
+                    var upResult = stack.up();
+                    assertThat(upResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(upResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+
+                    // pulumi refresh --preview-only must not be combined with --yes,
+                    // and must not record a refresh in the stack history.
+                    var refreshResult = stack.refresh(RefreshOptions.builder().previewOnly(true).build());
+                    assertThat(refreshResult.summary().kind()).isEqualTo(UpdateKind.UPDATE);
+                    assertThat(refreshResult.summary().result()).isEqualTo(UpdateState.SUCCEEDED);
+                } finally {
+                    stack.workspace().removeStack(stackName);
+                }
+            }
+        });
+    }
+
+    @Test
+    @Timeout(value = 1, unit = TimeUnit.MINUTES)
     void testStackLifecycleLocalProgram(@EnvVars Map<String, String> envVars) {
         assertDoesNotThrow(() -> {
             var env = new HashMap<String, String>(envVars);

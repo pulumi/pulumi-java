@@ -1,0 +1,6 @@
+component: sdk
+kind: bug-fixes
+body: Stop passing `--yes` with `--preview-only` in `WorkspaceStack.refresh` so `RefreshOptions.previewOnly(true)` works
+time: 2026-10-29T14:51:56.027686692+05:30
+custom:
+    PR: "2406"
