@@ -30,13 +30,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 import static com.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
@@ -55,7 +55,9 @@ public class Serializer {
 
     public Serializer(Log log) {
         this.log = requireNonNull(log);
-        this.dependentResources = new HashSet<>();
+        // Outputs nested in a single value may resolve on different threads, and each one
+        // records its resources here, so the set must be safe for concurrent writes.
+        this.dependentResources = ConcurrentHashMap.newKeySet();
     }
 
     /**
