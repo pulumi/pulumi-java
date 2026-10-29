@@ -117,6 +117,120 @@ func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	return qualifier.append(pkg)
 }
 
+// docRefResolver returns a resolver for `{{% ref %}}` shortcodes that produces Java
+// names. If selfRef is set, property refs within the same entity are returned unqualified.
+func (mod *modContext) docRefResolver(selfRef schema.DocRef) schema.PulumiRefResolver {
+	// qualify prepends the external package name when refPkg belongs to a different
+	// package than mod.pkg, so cross-package refs render as `enum.Provider` rather than a
+	// bare `Provider` that could collide with the local one. The Java module path for the
+	// external type isn't needed here — the goal is a readable Javadoc token, not a link.
+	qualify := func(refPkg schema.PackageReference, name string) string {
+		if refPkg == nil || codegen.PkgEquals(refPkg, mod.pkg) {
+			return name
+		}
+		return packageName(mod.packages, refPkg.Name()) + "." + name
+	}
+	return func(ref schema.DocRef) (string, bool) {
+		var base string
+		switch ref.Kind {
+		case schema.DocRefKindResource, schema.DocRefKindResourceProperty:
+			if rt, ok := ref.Type.(*schema.ResourceType); ok && rt.Resource != nil {
+				base = qualify(rt.Resource.PackageReference, resourceName(rt.Resource))
+			} else {
+				base = tokenToName(ref.ResourceToken())
+			}
+		case schema.DocRefKindResourceInputProperty:
+			if rt, ok := ref.Type.(*schema.ResourceType); ok && rt.Resource != nil {
+				base = qualify(rt.Resource.PackageReference, resourceName(rt.Resource)+"Args")
+			} else {
+				base = tokenToName(ref.ResourceToken()) + "Args"
+			}
+		case schema.DocRefKindProvider, schema.DocRefKindProviderProperty:
+			if rt, ok := ref.Type.(*schema.ResourceType); ok && rt.Resource != nil {
+				base = qualify(rt.Resource.PackageReference, "Provider")
+			} else {
+				base = "Provider"
+			}
+		case schema.DocRefKindProviderInputProperty:
+			if rt, ok := ref.Type.(*schema.ResourceType); ok && rt.Resource != nil {
+				base = qualify(rt.Resource.PackageReference, "ProviderArgs")
+			} else {
+				base = "ProviderArgs"
+			}
+		case schema.DocRefKindFunction:
+			if ref.Function != nil {
+				base = qualify(ref.Function.PackageReference, tokenToFunctionName(ref.Function.Token))
+			}
+		case schema.DocRefKindFunctionInputProperty:
+			if ref.Function != nil {
+				base = qualify(ref.Function.PackageReference, tokenToName(ref.Function.Token)+"Args")
+			}
+		case schema.DocRefKindFunctionOutputProperty:
+			if ref.Function != nil {
+				base = qualify(ref.Function.PackageReference, tokenToFunctionResultClassName(nil, ref.Function.Token).String())
+			}
+		case schema.DocRefKindType, schema.DocRefKindTypeProperty:
+			switch t := ref.Type.(type) {
+			case *schema.ObjectType:
+				base = qualify(t.PackageReference, tokenToName(t.Token))
+			case *schema.EnumType:
+				base = qualify(t.PackageReference, tokenToName(t.Token))
+			default:
+				return "", false
+			}
+		case schema.DocRefKindUnknown:
+			return "", false
+		}
+		if base == "" {
+			return "", false
+		}
+		switch ref.Kind { //nolint:exhaustive
+		case schema.DocRefKindResource, schema.DocRefKindFunction,
+			schema.DocRefKindType, schema.DocRefKindProvider:
+			return base, true
+		}
+		if ref.Property == "" {
+			return "", false
+		}
+		propName := names.Ident(ref.Property).AsProperty().Getter()
+		if ref.IsWithin(selfRef) {
+			return propName, true
+		}
+		return base + "." + propName, true
+	}
+}
+
+// interpretRefs resolves {{% ref %}} shortcodes in a doc comment, returning the original
+// comment unchanged if resolution fails.
+func (mod *modContext) interpretRefs(comment string) string {
+	if comment == "" {
+		return comment
+	}
+	resolved, err := mod.pkg.InterpretPulumiRefs(comment, mod.docRefResolver(schema.DocRef{}))
+	if err != nil {
+		return comment
+	}
+	return resolved
+}
+
+// formatForeignBlockComment is a convenience wrapper around the package-level
+// formatForeignBlockComment that first resolves any Pulumi doc refs.
+func (mod *modContext) formatForeignBlockComment(comment, indent string) string {
+	return formatForeignBlockComment(mod.interpretRefs(comment), indent)
+}
+
+// formatForeignBlockCommentFrom is like [modContext.formatForeignBlockComment] but
+// unconditionally accepts the first idx bytes of comment.
+func (mod *modContext) formatForeignBlockCommentFrom(comment string, idx int, indent string) string {
+	return formatForeignBlockCommentFrom(mod.interpretRefs(comment), idx, indent)
+}
+
+// formatDeprecatedComment is like [formatDeprecatedComment] but first resolves
+// Pulumi doc refs in the message.
+func (mod *modContext) formatDeprecatedComment(message, indent string) string {
+	return formatDeprecatedComment(mod.interpretRefs(message), indent)
+}
+
 func (mod *modContext) typeName(t *schema.ObjectType) string {
 	name := tokenToName(t.Token)
 	if t.IsInputShape() {
@@ -408,7 +522,7 @@ type propJavadocOptions struct {
 	fieldName string
 }
 
-func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJavadocOptions) {
+func genPropJavadoc(ctx *classFileContext, mod *modContext, prop *schema.Property, options propJavadocOptions) {
 	w := ctx.writer
 
 	deprecationMessage := prop.DeprecationMessage
@@ -435,14 +549,14 @@ func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJa
 	}
 
 	if prop.Comment != "" {
-		fprintf(w, "%s\n", formatForeignBlockCommentFrom(preamble+prop.Comment, len(preamble), options.indent))
+		fprintf(w, "%s\n", mod.formatForeignBlockCommentFrom(preamble+prop.Comment, len(preamble), options.indent))
 	}
 	if options.isBuilder {
 		fprintf(w, "%s\n", formatBlockComment("@return builder", options.indent))
 	}
 
 	if deprecationMessage != "" {
-		fprintf(w, "%s\n", formatDeprecatedComment(deprecationMessage, options.indent))
+		fprintf(w, "%s\n", mod.formatDeprecatedComment(deprecationMessage, options.indent))
 	}
 	fprintf(w, "%s */\n", options.indent)
 	printObsoleteAttribute(ctx, deprecationMessage, options.indent)
@@ -471,7 +585,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	}
 
 	const indent = "    "
-	genPropJavadoc(ctx, prop, propJavadocOptions{
+	genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 		indent: indent,
 	})
 
@@ -493,7 +607,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 			returnStatement)
 	}
 
-	genPropJavadoc(ctx, prop, propJavadocOptions{
+	genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 		indent:   indent,
 		isGetter: true,
 	})
@@ -543,7 +657,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	// Open the class.
 	if pt.comment != "" {
 		fprintf(w, "/**\n")
-		fprintf(w, "%s\n", formatForeignBlockComment(pt.comment, ""))
+		fprintf(w, "%s\n", pt.mod.formatForeignBlockComment(pt.comment, ""))
 		fprintf(w, " */\n")
 	}
 
@@ -610,7 +724,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 
 		const indent = "        "
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:    indent,
 			isBuilder: true,
 			fieldName: fieldName,
@@ -674,7 +788,7 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 	// Helper for when Output<T> is needed but T is provided.
 	isOutput, t1 := t.UnOutput()
 	if isOutput {
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:    indent,
 			isBuilder: true,
 			fieldName: fieldName,
@@ -688,7 +802,7 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 
 	// Further helper for when List<T> is needed but varargs are provided.
 	if isList, t2 := t1.UnList(); isList {
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:    indent,
 			isBuilder: true,
 			fieldName: fieldName,
@@ -710,7 +824,7 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 			t1.Type, t2.Type)
 	}
 	if isEither && !areAmbiguousTypes {
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:    indent,
 			isBuilder: true,
 			fieldName: fieldName,
@@ -721,7 +835,7 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
 			setterName, fieldName, ctx.ref(names.Either),
 		)
 		fprintf(w, "        }\n\n")
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:    indent,
 			isBuilder: true,
 			fieldName: fieldName,
@@ -758,7 +872,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:   indent,
 			isGetter: true,
 		})
@@ -822,7 +936,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			}
 		}
 
-		genPropJavadoc(ctx, prop, propJavadocOptions{
+		genPropJavadoc(ctx, pt.mod, prop, propJavadocOptions{
 			indent:   indent,
 			isGetter: true,
 		})
@@ -943,11 +1057,11 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if r.Comment != "" || r.DeprecationMessage != "" {
 		fprintf(w, "/**\n")
 		if r.Comment != "" {
-			fprintf(w, "%s\n", formatForeignBlockComment(r.Comment, ""))
+			fprintf(w, "%s\n", mod.formatForeignBlockComment(r.Comment, ""))
 		}
 
 		if r.DeprecationMessage != "" {
-			fprintf(w, "%s\n", formatDeprecatedComment(r.DeprecationMessage, ""))
+			fprintf(w, "%s\n", mod.formatDeprecatedComment(r.DeprecationMessage, ""))
 		}
 		fprintf(w, " */\n")
 	}
@@ -996,11 +1110,11 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
 			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatForeignBlockComment(prop.Comment, "    "))
+				fprintf(w, "%s\n", mod.formatForeignBlockComment(prop.Comment, "    "))
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "%s\n", formatDeprecatedComment(prop.DeprecationMessage, "    "))
+				fprintf(w, "%s\n", mod.formatDeprecatedComment(prop.DeprecationMessage, "    "))
 			}
 			fprintf(w, "     */\n")
 		}
@@ -1017,7 +1131,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		if prop.Comment != "" {
 			fprintf(w, "    /**\n")
-			fprintf(w, "%s\n", formatForeignBlockCommentFrom("@return "+prop.Comment, 2, "    "))
+			fprintf(w, "%s\n", mod.formatForeignBlockCommentFrom("@return "+prop.Comment, 2, "    "))
 			fprintf(w, "     */\n")
 		}
 
@@ -1259,13 +1373,13 @@ func (mod *modContext) functionsClassName() (names.Ident, error) {
 	return "", fmt.Errorf("package name empty")
 }
 
-func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent string) {
+func printCommentFunction(ctx *classFileContext, mod *modContext, fun *schema.Function, indent string) {
 	w := ctx.writer
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
-		fprintf(w, "%s\n", formatForeignBlockComment(fun.Comment, indent))
+		fprintf(w, "%s\n", mod.formatForeignBlockComment(fun.Comment, indent))
 		if fun.DeprecationMessage != "" {
-			fprintf(w, "%s\n", formatDeprecatedComment(fun.DeprecationMessage, indent))
+			fprintf(w, "%s\n", mod.formatDeprecatedComment(fun.DeprecationMessage, indent))
 		}
 		fprintf(w, "     */\n")
 	}
@@ -1413,7 +1527,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		if hasAllOptionalInputs(fun) {
 			// Generate invoke that return Output<T>
-			printCommentFunction(ctx, fun, indent)
+			printCommentFunction(ctx, mod, fun, indent)
 			// Add no args invoke (returns Output<T>)
 			fprintf(w, "    public static %s<%s> %s() {\n",
 				ctx.ref(names.Output), returnType, methodName)
@@ -1423,7 +1537,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			fprintf(w, "    }\n")
 
 			// Generate invoke that return CompletableFuture<T>
-			printCommentFunction(ctx, fun, indent)
+			printCommentFunction(ctx, mod, fun, indent)
 			fprintf(w, "    public static %s<%s> %s() {\n",
 				ctx.ref(names.CompletableFuture), returnType, plainMethodName)
 			fprintf(w,
@@ -1433,7 +1547,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		}
 
 		// Output version: add args only invoke
-		printCommentFunction(ctx, fun, indent)
+		printCommentFunction(ctx, mod, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s) {\n",
 			ctx.ref(names.Output), returnType, methodName, outputArgsDecl)
 		fprintf(w,
@@ -1442,7 +1556,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    }\n")
 
 		// CompletableFuture version: add args only invoke
-		printCommentFunction(ctx, fun, indent)
+		printCommentFunction(ctx, mod, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s) {\n",
 			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsDecl)
 		fprintf(w,
@@ -1451,7 +1565,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    }\n")
 
 		// Output version: add full invoke with InvokeOptions
-		printCommentFunction(ctx, fun, indent)
+		printCommentFunction(ctx, mod, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, outputArgsDecl, invokeOptions)
 		fprintf(w,
@@ -1472,7 +1586,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		// Output version: add full invoke with InvokeOutputOptions
 		invokeOutputOptions := ctx.ref(names.InvokeOutputOptions)
-		printCommentFunction(ctx, fun, indent)
+		printCommentFunction(ctx, mod, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s, %s options) {\n",
 			ctx.ref(names.Output), returnType, methodName, outputArgsDecl, invokeOutputOptions)
 		fprintf(w,
@@ -1488,7 +1602,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		// CompletableFuture version: add full invoke
 		// notice how the implementation now uses `invokeAsync` instead of `invoke`
-		printCommentFunction(ctx, fun, indent)
+		printCommentFunction(ctx, mod, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s, %s options) {\n",
 			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsDecl, invokeOptions)
 		fprintf(w,
@@ -1584,7 +1698,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 
 	if enum.Comment != "" {
 		fprintf(w, "%s/**\n", indent)
-		fprintf(w, "%s\n", formatForeignBlockComment(enum.Comment, indent))
+		fprintf(w, "%s\n", mod.formatForeignBlockComment(enum.Comment, indent))
 		fprintf(w, "%s */\n", indent)
 	}
 
@@ -1609,7 +1723,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 			if e.Comment != "" || e.DeprecationMessage != "" {
 				fprintf(w, "%s/**\n", indent)
 				if e.Comment != "" {
-					fprintf(w, "%s\n", formatForeignBlockComment(e.Comment, indent))
+					fprintf(w, "%s\n", mod.formatForeignBlockComment(e.Comment, indent))
 				}
 
 				if e.DeprecationMessage != "" {
@@ -1800,7 +1914,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 
 		if p.Comment != "" {
 			fprintf(w, "/**\n")
-			fprintf(w, "%s\n", formatForeignBlockComment(p.Comment, ""))
+			fprintf(w, "%s\n", mod.formatForeignBlockComment(p.Comment, ""))
 			fprintf(w, " */\n")
 		}
 		if err := getterTemplate.Execute(w, getterTemplateContext{

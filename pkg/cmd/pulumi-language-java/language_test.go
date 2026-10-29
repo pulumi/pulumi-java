@@ -280,7 +280,6 @@ var expectedFailures = map[string]string{
 
 	"l1-expand-final": "not implemented",
 
-	"l2-docs":                     "generated docs SDK fails to compile (added in 3.247)",
 	"l2-invoke-multi-argument":    "multiArgumentInputs not implemented in programgen (added in 3.247)",
 	"l3-resource-keyword-overlap": "compilation error: keyword overlap generates undefined symbol (added in 3.247)",
 
