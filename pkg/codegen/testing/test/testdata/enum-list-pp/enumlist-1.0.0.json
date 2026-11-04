@@ -1,0 +1,78 @@
+{
+  "name": "enumlist",
+  "version": "1.0.0",
+  "resources": {
+    "enumlist:index:Palette": {
+      "inputProperties": {
+        "primary": {
+          "$ref": "#/types/enumlist:index:Color"
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/enumlist:index:Color"
+          }
+        },
+        "swatches": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/enumlist:index:Swatch"
+          }
+        }
+      },
+      "type": "object"
+    }
+  },
+  "functions": {
+    "enumlist:index:mix": {
+      "inputs": {
+        "properties": {
+          "colors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/types/enumlist:index:Color"
+            }
+          }
+        },
+        "type": "object"
+      },
+      "outputs": {
+        "properties": {
+          "result": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "types": {
+    "enumlist:index:Color": {
+      "type": "string",
+      "enum": [
+        {
+          "name": "Red",
+          "value": "red"
+        },
+        {
+          "name": "Green",
+          "value": "green"
+        }
+      ]
+    },
+    "enumlist:index:Swatch": {
+      "properties": {
+        "colors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/enumlist:index:Color"
+          }
+        }
+      },
+      "type": "object"
+    }
+  }
+}
