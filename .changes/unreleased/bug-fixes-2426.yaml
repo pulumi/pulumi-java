@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: Fix programgen panic on quoted object keys
+time: 2026-11-05T11:00:00.000000000Z
+custom:
+    PR: "2426"
