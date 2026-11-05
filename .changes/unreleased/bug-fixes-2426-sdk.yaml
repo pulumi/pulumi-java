@@ -1,0 +1,6 @@
+component: sdk
+kind: bug-fixes
+body: Fix race that corrupts the dependencies of resource properties
+time: 2026-11-05T11:00:01.000000000Z
+custom:
+    PR: "2426"

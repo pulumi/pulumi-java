@@ -1,6 +1,7 @@
 package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.pulumi.Log;
@@ -10,6 +11,7 @@ import com.pulumi.core.internal.Constants;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.Resource;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +21,7 @@ import java.util.StringJoiner;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 import static com.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
@@ -40,8 +43,19 @@ public final class PropertiesSerializer {
     public CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
             String label, Map<String, Output<?>> args, boolean keepResources
     ) {
+        return serializeResourcePropertiesAsync(label, args, keepResources, null);
+    }
+
+    /**
+     * Like {@link #serializeResourcePropertiesAsync(String, Map, boolean)}, but keeps outputs as output values
+     * when {@code outputValueDependencyUrns} is not null. See {@link Serializer#Serializer(Log, Function)}.
+     */
+    public CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
+            String label, Map<String, Output<?>> args, boolean keepResources,
+            @Nullable Function<ImmutableSet<Resource>, CompletableFuture<ImmutableSet<String>>> outputValueDependencyUrns
+    ) {
         Predicate<String> filter = key -> !Constants.IdPropertyName.equals(key) && !Constants.UrnPropertyName.equals(key);
-        return serializeFilteredPropertiesAsync(label, args, filter, keepResources);
+        return serializeFilteredPropertiesAsync(label, args, filter, keepResources, outputValueDependencyUrns);
     }
 
     public CompletableFuture<Struct> serializeAllPropertiesAsync(
@@ -58,6 +72,12 @@ public final class PropertiesSerializer {
      */
     public CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
             String label, Map<String, Output<?>> args, Predicate<String> acceptKey, boolean keepResources) {
+        return serializeFilteredPropertiesAsync(label, args, acceptKey, keepResources, null);
+    }
+
+    private CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
+            String label, Map<String, Output<?>> args, Predicate<String> acceptKey, boolean keepResources,
+            @Nullable Function<ImmutableSet<Resource>, CompletableFuture<ImmutableSet<String>>> outputValueDependencyUrns) {
         var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
         var temporaryResources = new HashMap<String, Set<Resource>>();
 
@@ -66,7 +86,7 @@ public final class PropertiesSerializer {
             var key = arg.getKey();
             var value = arg.getValue();
             if (acceptKey.test(key)) {
-                var serializer = new Serializer(this.log); // serializer is mutable, that's why it's inside the loop
+                var serializer = new Serializer(this.log, outputValueDependencyUrns); // serializer is mutable, that's why it's inside the loop
                 var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources)
                         // Attach the failing property name to the error
                         .<Object>handle((result, throwable) -> {

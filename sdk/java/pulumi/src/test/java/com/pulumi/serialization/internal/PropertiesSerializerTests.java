@@ -1,5 +1,6 @@
 package com.pulumi.serialization.internal;
 
+import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
@@ -11,16 +12,20 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.deployment.internal.EngineLogger;
+import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.mock;
 
 public class PropertiesSerializerTests {
 
@@ -91,6 +96,44 @@ public class PropertiesSerializerTests {
         assertThat(showStruct(struct)).isEqualTo(
                 "{\"wrapped\":{\"4dabf18193072939515e22adb298388d\":\"1b47061264138c4ac30d75fd1eb44270\","
                         + "\"value\":\"04da6b54-80e4-46f7-96ec-b56ff0331ba9\"}}");
+    }
+
+    @Test
+    void keepsNestedOutputWithDependenciesAsOutputValue() {
+        var log = new Log(EngineLogger.ignore());
+        var s = new PropertiesSerializer(log);
+        var dependency = mock(Resource.class);
+        Function<ImmutableSet<Resource>, CompletableFuture<ImmutableSet<String>>> urns = resources ->
+                CompletableFuture.completedFuture(resources.equals(ImmutableSet.of(dependency))
+                        ? ImmutableSet.of("urn:b", "urn:a")
+                        : ImmutableSet.of());
+
+        Map<String, Output<?>> args = new HashMap<>();
+        args.put("refs", Output.of(Map.of(
+                "x", new OutputInternal<>(OutputData.of(ImmutableSet.of(dependency), "a")),
+                "y", Output.of("b")
+        )));
+
+        var result = s.serializeResourcePropertiesAsync("LABEL", args, true, urns).join();
+        assertThat(showStruct(result.serialized)).isEqualTo(
+                "{\"refs\":{\"x\":{\"4dabf18193072939515e22adb298388d\":\"d0e6a833031e9bbcd3f4e8bde6ca49a4\","
+                        + "\"dependencies\":[\"urn:a\",\"urn:b\"],\"value\":\"a\"},\"y\":\"b\"}}");
+        assertThat(result.propertyToDependentResources).isEqualTo(Map.of("refs", Set.of(dependency)));
+    }
+
+    @Test
+    void keepsUnknownSecretAsOutputValue() {
+        var log = new Log(EngineLogger.ignore());
+        var s = new PropertiesSerializer(log);
+
+        Map<String, Output<?>> args = new HashMap<>();
+        args.put("wrapped", new OutputInternal<>(OutputData.unknownSecret()));
+
+        var result = s.serializeResourcePropertiesAsync("LABEL", args, true,
+                resources -> CompletableFuture.completedFuture(ImmutableSet.of())).join();
+        assertThat(showStruct(result.serialized)).isEqualTo(
+                "{\"wrapped\":{\"4dabf18193072939515e22adb298388d\":\"d0e6a833031e9bbcd3f4e8bde6ca49a4\","
+                        + "\"secret\":true}}");
     }
 
     private static String showStruct(ResourceArgs resourceArgs) {
