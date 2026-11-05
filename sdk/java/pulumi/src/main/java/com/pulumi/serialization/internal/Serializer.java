@@ -1,5 +1,6 @@
 package com.pulumi.serialization.internal;
 
+import com.google.common.collect.ImmutableSet;
 import com.google.gson.JsonElement;
 import com.google.protobuf.ListValue;
 import com.google.protobuf.NullValue;
@@ -53,10 +54,26 @@ public class Serializer {
 
     private final Log log;
 
+    @Nullable
+    private final Function<ImmutableSet<Resource>, CompletableFuture<ImmutableSet<String>>> outputValueDependencyUrns;
+
     public Serializer(Log log) {
+        this(log, null);
+    }
+
+    /**
+     * @param outputValueDependencyUrns if not null, the serializer keeps an {@link Output} that is unknown,
+     *                                  secret or has dependencies as an output value. The function resolves
+     *                                  the resources of the output to the URNs of its dependencies.
+     */
+    public Serializer(
+            Log log,
+            @Nullable Function<ImmutableSet<Resource>, CompletableFuture<ImmutableSet<String>>> outputValueDependencyUrns
+    ) {
         this.log = requireNonNull(log);
         // Outputs nested in one property can resolve on different threads, and each one adds its resources.
         this.dependentResources = ConcurrentHashMap.newKeySet();
+        this.outputValueDependencyUrns = outputValueDependencyUrns;
     }
 
     /**
@@ -188,6 +205,15 @@ public class Serializer {
                         var value = isKnown
                                 ? serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources)
                                 : CompletableFuture.completedFuture((Object) Constants.UnknownValue);
+                        // A known, non-secret output without dependencies is equivalent to its plain value.
+                        var resources = data.getResources();
+                        if (this.outputValueDependencyUrns != null && (!isKnown || isSecret || !resources.isEmpty())) {
+                            return value.thenCompose(
+                                    /* @Nullable */ v -> this.outputValueDependencyUrns.apply(resources).thenApply(
+                                            urns -> createOutputValue(isKnown, v, isSecret, urns)
+                                    )
+                            );
+                        }
                         if (!isSecret) {
                             return value;
                         }
@@ -414,6 +440,23 @@ public class Serializer {
                         .map(joinMapValues())
                         .collect(toMap(Map.Entry::getKey, Map.Entry::getValue))
         );
+    }
+
+    private static Map<String, /* @Nullable */ Object> createOutputValue(
+            boolean isKnown, @Nullable Object value, boolean isSecret, ImmutableSet<String> dependencyUrns
+    ) {
+        var result = new HashMap<String, /* @Nullable */ Object>();
+        result.put(Constants.SpecialSigKey, Constants.SpecialOutputSig);
+        if (isKnown) {
+            result.put(Constants.SecretValueName, value);
+        }
+        if (isSecret) {
+            result.put(Constants.SecretName, true);
+        }
+        if (!dependencyUrns.isEmpty()) {
+            result.put(Constants.DependenciesName, dependencyUrns.stream().sorted().collect(toList()));
+        }
+        return result;
     }
 
     /**
