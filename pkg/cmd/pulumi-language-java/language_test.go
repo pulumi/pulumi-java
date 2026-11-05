@@ -310,6 +310,8 @@ var expectedFailures = map[string]string{
 
 	"l1-operator-precedence": "programgen drops the parentheses around a conditional used as a conditional's condition, so conditionalCondition is false instead of \"no\" (added in 3.273)", //nolint:lll
 	"l2-resource-exists":     "resourceExists intrinsic not implemented in programgen, outputs are literal \"TODO: call resourceExists\" strings (added in 3.273)",                           //nolint:lll
+
+	"l2-component-output-value-input-deps": "programgen panics on the quoted object key \"x\" (TemplateExpression, not LiteralValueExpression), and the SDK does not send nested remote component inputs as OutputValues: refs.x is not an OutputValue (added in 3.274)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
