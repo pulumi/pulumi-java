@@ -3,7 +3,8 @@
 set -euo pipefail
 
 ROOT_CA="$(dirname "$0")/microsoft-identity-verification-root-ca-2020.pem"
-EXPECTED_SIGNER="/O=PULUMI CORPORATION/CN=PULUMI CORPORATION"
+EXPECTED_SIGNER_CN="CN=PULUMI CORPORATION"
+EXPECTED_SIGNER_O="O=PULUMI CORPORATION"
 
 if [[ $# -eq 0 ]]; then
     echo "no binaries to check" >&2
@@ -16,12 +17,15 @@ for binary in "$@"; do
         echo "invalid signature: ${binary}"
         echo "${output}" | tail -5
         failed=1
-    elif ! echo "${output}" | grep -m1 -A1 'Signer #0:' | grep -q "${EXPECTED_SIGNER}$"; then
-        echo "unexpected signer: ${binary}"
-        echo "${output}" | grep -m1 -A1 'Signer #0:' | head -2
-        failed=1
     else
-        echo "signed: ${binary}"
+        subject="$(echo "${output}" | grep -m1 -A1 'Signer #0:' | grep -m1 'Subject:' || true)"
+        if ! echo "${subject}" | grep -q "${EXPECTED_SIGNER_CN}" || ! echo "${subject}" | grep -q "${EXPECTED_SIGNER_O}"; then
+            echo "unexpected signer: ${binary}"
+            echo "${output}" | grep -m1 -A1 'Signer #0:' | head -2
+            failed=1
+        else
+            echo "signed: ${binary}"
+        fi
     fi
 done
 
