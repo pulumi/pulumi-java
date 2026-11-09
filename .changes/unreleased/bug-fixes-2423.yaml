@@ -1,6 +1,0 @@
-component: codegen
-kind: bug-fixes
-body: Generate enum constants for enum values inside lists in Java programs
-time: 2026-11-04T14:45:57.000000+00:00
-custom:
-  PR: "2423"
