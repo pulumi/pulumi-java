@@ -1,6 +1,0 @@
-component: sdk
-kind: improvements
-body: Send the inputs of remote components as output values
-time: 2026-11-05T11:00:02.000000000Z
-custom:
-    PR: "2426"
