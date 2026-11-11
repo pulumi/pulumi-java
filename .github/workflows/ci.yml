@@ -53,7 +53,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -69,7 +69,7 @@ jobs:
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install Pulumi CLI
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
         with:
           pulumi-version: dev
       - name: Install pulumictl
@@ -146,6 +146,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: recursive
+      - name: Install Pulumi CLI with mise
+        uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db # v3.6.3
+        with:
+          install_args: github:pulumi/pulumi
       - name: Set up JDK 11 and 17
         uses: actions/setup-java@v4
         with:
@@ -181,7 +185,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -195,7 +199,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
         with:
           pulumi-version: latest
       - name: Set up JDK 11 and 17
@@ -284,7 +288,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -298,7 +302,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
         with:
           pulumi-version: latest
       - run: make clone_examples
@@ -315,7 +319,7 @@ jobs:
           check-latest: true
           cache-dependency-path: "**/go.sum"
       - name: Install Pulumi CLI
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
       - name: Download versions.txt
         uses: actions/download-artifact@v5
         with:
@@ -364,7 +368,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -402,7 +406,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -418,7 +422,7 @@ jobs:
           fetch-depth: 0
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
         with:
           pulumi-version: latest
       - name: Set up JDK 11 and 17
@@ -500,7 +504,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -514,7 +518,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
         with:
           pulumi-version: latest
       - run: make clone_templates
@@ -585,7 +589,7 @@ jobs:
     steps:
       - name: Authenticate with Pulumi Cloud
         id: pulumi-auth
-        uses: pulumi/auth-actions@159c3e431aab767d4519b96f3f784d7d3d725622 # v2
+        uses: pulumi/auth-actions@273044cc19e63ea565285da8edd4e059126a0bdb # v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization

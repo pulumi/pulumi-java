@@ -409,8 +409,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 					g.genNewline(w)
 					g.Indented(func() {
 						for _, item := range options.Items {
-							lit := item.Key.(*model.LiteralValueExpression)
-							key := lit.Value.AsString()
+							key := pcl.LiteralValueString(item.Key)
 							if key == "pluginDownloadUrl" {
 								key = "pluginDownloadURL"
 							}
@@ -839,7 +838,7 @@ func (g *generator) typedObjectExprScope(innerType schema.Type, exec func()) {
 // then readStringAttribute("name", expr) would return (true, "john")
 func readStringAttribute(key string, expr *model.ObjectConsExpression) (bool, string) {
 	for _, item := range expr.Items {
-		if key == item.Key.(*model.LiteralValueExpression).Value.AsString() {
+		if key == pcl.LiteralValueString(item.Key) {
 			switch item.Value.(type) {
 			case *model.LiteralValueExpression:
 				return true, item.Value.(*model.LiteralValueExpression).Value.AsString()
@@ -903,12 +902,12 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		g.genNewline(w)
 		g.Indented(func() {
 			for _, item := range expr.Items {
-				lit := item.Key.(*model.LiteralValueExpression)
-				if constProperties[lit.Value.AsString()] {
+				propName := pcl.LiteralValueString(item.Key)
+				if constProperties[propName] {
 					continue
 				}
-				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
-				attributeType := objectProperties[lit.Value.AsString()]
+				key := names.MakeValidIdentifier(names.LowerCamelCase(propName))
+				attributeType := objectProperties[propName]
 				g.genIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
 					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
@@ -1144,8 +1143,18 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 		g.Fgen(w, "Arrays.asList(")
 	}
 
+	// Generate each element against the array's element type, so that an
+	// element is typed the same way a scalar property would be (for example,
+	// a string literal in a list of enums becomes the enum member).
 	genElement := func(w io.Writer, value model.Expression) {
 		g.genNullableTupleElement(w, value)
+	}
+	if arrayType, ok := codegen.UnwrapType(g.currentResourcePropertyType).(*schema.ArrayType); ok {
+		genElement = func(w io.Writer, value model.Expression) {
+			g.typedObjectExprScope(codegen.UnwrapType(arrayType.ElementType), func() {
+				g.genNullableTupleElement(w, value)
+			})
+		}
 	}
 
 	if len(expr.Expressions) == 0 {

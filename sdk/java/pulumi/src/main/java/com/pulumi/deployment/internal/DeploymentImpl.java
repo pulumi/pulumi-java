@@ -308,6 +308,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         CompletableFuture<Boolean> monitorSupportsParameterization() {
             return monitorSupportsFeature("parameterization");
         }
+
+        @InternalUse
+        CompletableFuture<Boolean> monitorSupportsOutputValues() {
+            return monitorSupportsFeature("outputValues");
+        }
     }
 
     @ParametersAreNonnullByDefault
@@ -1060,7 +1065,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         log.excessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                         return Internal.from(args).toMapAsync(this.log).thenCompose(
                                 props -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
-                                        supportsResourceReferences -> serialization.serializeResourcePropertiesAsync(label, props, supportsResourceReferences).thenCompose(
+                                        supportsResourceReferences -> serializeResourcePropertiesAsync(label, props, remote, supportsResourceReferences).thenCompose(
                                                 serializationResult -> {
                                                     var serializedProps = serializationResult.serialized;
                                                     var propertyToDirectDependencies = serializationResult.propertyToDependentResources;
@@ -1205,6 +1210,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 )
                         );
                     });
+        }
+
+        private CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
+                String label, Map<String, Output<?>> props, boolean remote, boolean keepResources) {
+            // Like the Go and Node.js SDKs, keep output values only for remote components. The component
+            // provider then receives the dependencies of each nested input.
+            var keepOutputValues = remote
+                    ? this.featureSupport.monitorSupportsOutputValues()
+                    : CompletableFuture.completedFuture(false);
+            return keepOutputValues.thenCompose(keep -> serialization.serializeResourcePropertiesAsync(
+                    label, props, keepResources, keep ? this::getAllTransitivelyReferencedResourceUrnsAsync : null));
         }
 
         private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Output<List<Resource>> resources) {
