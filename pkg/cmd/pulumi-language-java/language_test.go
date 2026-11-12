@@ -310,6 +310,8 @@ var expectedFailures = map[string]string{
 
 	"l1-operator-precedence": "programgen drops the parentheses around a conditional used as a conditional's condition, so conditionalCondition is false instead of \"no\" (added in 3.273)", //nolint:lll
 	"l2-resource-exists":     "resourceExists intrinsic not implemented in programgen, outputs are literal \"TODO: call resourceExists\" strings (added in 3.273)",                           //nolint:lll
+
+	"l2-resource-ref-in-object-type": "missing objectref SDK snapshot under testdata/sdks/objectref-62.0.0, codegen for the new objectref schema has not been generated yet (added in 3.275)", //nolint:lll
 }
 
 // runTestingHost boots up a new instance of the language conformance test runner, `pulumi-test-language`, as well as a
