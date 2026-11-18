@@ -1,0 +1,6 @@
+component: codegen
+kind: bug-fixes
+body: Combine list literals containing Outputs with Output.all() so that generated programs compile
+time: 2026-09-04T17:44:18.617882+02:00
+custom:
+    PR: "2308"
