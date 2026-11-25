@@ -723,7 +723,8 @@ func pulumiEnumImport(pkg, module, typeName, namespace string) string {
 	if namespace == "" {
 		namespace = "pulumi"
 	}
-	if module == "" || module == "index" {
+	module = cleanModule(module)
+	if ignoreModule(module) {
 		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + ".enums." + typeName
 	}
 	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." +

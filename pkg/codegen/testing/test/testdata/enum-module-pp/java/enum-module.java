@@ -19,7 +19,7 @@ public class App {
 
     public static void stack(Context ctx) {
         var bucket = new Bucket("bucket", BucketArgs.builder()
-            .tier(com.pulumi.enummodule.storage_Tier.enums.Tier.Hot)
+            .tier(com.pulumi.enummodule.storage.enums.Tier.Hot)
             .build());
 
     }
