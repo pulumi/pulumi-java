@@ -1,0 +1,32 @@
+{
+  "name": "enummodule",
+  "version": "1.0.0",
+  "meta": {
+    "moduleFormat": "(.*)(?:/[^/]*)"
+  },
+  "resources": {
+    "enummodule:storage/bucket:Bucket": {
+      "inputProperties": {
+        "tier": {
+          "$ref": "#/types/enummodule:storage/Tier:Tier"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "types": {
+    "enummodule:storage/Tier:Tier": {
+      "type": "string",
+      "enum": [
+        {
+          "name": "Hot",
+          "value": "hot"
+        },
+        {
+          "name": "Cold",
+          "value": "cold"
+        }
+      ]
+    }
+  }
+}

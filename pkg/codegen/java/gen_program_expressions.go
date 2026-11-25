@@ -672,10 +672,13 @@ func enumMemberRef(enumType *schema.EnumType, v cty.Value) (string, bool) {
 			if len(nameParts) != 3 {
 				return "", false
 			}
-			pkg, module, typeName := nameParts[0], nameParts[1], names.Title(nameParts[2])
+			pkg, module, typeName := nameParts[0], cleanModule(nameParts[1]), names.Title(nameParts[2])
 			namespace := ""
 			if enumType.PackageReference != nil {
 				namespace = enumType.PackageReference.Namespace()
+				// Resolve the module with the schema's moduleFormat, as SDK generation does, so the
+				// reference matches the package the SDK puts the enum in.
+				module = enumType.PackageReference.TokenToModule(enumType.Token)
 			}
 			importPath := pulumiEnumImport(pkg, module, typeName, namespace)
 			memberName, err := names.MakeSafeEnumName(el.Name, typeName)
@@ -723,7 +726,7 @@ func pulumiEnumImport(pkg, module, typeName, namespace string) string {
 	if namespace == "" {
 		namespace = "pulumi"
 	}
-	if module == "" || module == "index" {
+	if ignoreModule(module) {
 		return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + ".enums." + typeName
 	}
 	return "com." + sanitizeImport(namespace) + "." + sanitizeImport(pkg) + "." +
