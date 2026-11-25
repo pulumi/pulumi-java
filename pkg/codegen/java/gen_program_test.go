@@ -24,6 +24,7 @@ var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 // schemas. Each one is loaded from the test's own directory as "<name>-<version>.json".
 var localSchemaTests = map[string]utils.SchemaProvider{
 	"enum-list": utils.NewSchemaProvider("enumlist", "1.0.0"),
+	"enum-module": utils.NewSchemaProvider("enummodule", "1.0.0"),
 }
 
 func TestGenerateJavaProgram(t *testing.T) {
