@@ -1,6 +1,6 @@
 component: codegen
 kind: bug-fixes
-body: Reference enums in a mod/Name module from the right package in Java programs
+body: Resolve the package of enum references in Java programs with the schema's moduleFormat
 time: 2026-11-25T15:49:37.000000+00:00
 custom:
   PR: "2465"

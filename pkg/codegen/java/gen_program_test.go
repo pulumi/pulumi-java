@@ -23,8 +23,9 @@ var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 // localSchemaTests lists program tests whose schema isn't in pulumi/pulumi's shared test
 // schemas. Each one is loaded from the test's own directory as "<name>-<version>.json".
 var localSchemaTests = map[string]utils.SchemaProvider{
-	"enum-list":   utils.NewSchemaProvider("enumlist", "1.0.0"),
-	"enum-module": utils.NewSchemaProvider("enummodule", "1.0.0"),
+	"enum-list":          utils.NewSchemaProvider("enumlist", "1.0.0"),
+	"enum-module":        utils.NewSchemaProvider("enummodule", "1.0.0"),
+	"enum-module-format": utils.NewSchemaProvider("enummoduleformat", "1.0.0"),
 }
 
 func TestGenerateJavaProgram(t *testing.T) {
