@@ -19,10 +19,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -41,6 +44,9 @@ public class LocalPulumiCommand implements PulumiCommand {
 
     private static final Version MINIMUM_VERSION = Version.of(3, 95);
     private static final Version GRPC_EVENT_LOG_VERSION = Version.of(3, 205, 0);
+
+    private static final int UNKNOWN_ERROR_CODE = -2;
+    private static final long CANCEL_GRACE_PERIOD_SECONDS = 10;
 
     private static final Pattern NOT_FOUND_REGEX_PATTERN = Pattern.compile("no stack named.*found");
     private static final Pattern ALREADY_EXISTS_REGEX_PATTERN = Pattern.compile("stack.*already exists");
@@ -209,6 +215,12 @@ public class LocalPulumiCommand implements PulumiCommand {
             List<String> args,
             CommandRunOptions options,
             @Nullable String eventLogLocation) throws AutomationException {
+        var cancellationToken = options.cancellationToken();
+        if (cancellationToken != null && cancellationToken.isCancellationRequested()) {
+            throw new CommandCanceledException(
+                    new CommandResult(UNKNOWN_ERROR_CODE, "", "The command was canceled before it started."));
+        }
+
         var processBuilder = new ProcessBuilder(command);
         processBuilder.command().addAll(pulumiArgs(args, eventLogLocation));
         var workingDir = options.workingDir();
@@ -228,21 +240,46 @@ public class LocalPulumiCommand implements PulumiCommand {
             var stdoutFuture = readStreamAsync(process.getInputStream(), executor, options.onStandardOutput());
             var stderrFuture = readStreamAsync(process.getErrorStream(), executor, options.onStandardError());
 
-            var stdIn = options.standardInput();
-            if (stdIn != null && !stdIn.isBlank()) {
-                try (var writer = new OutputStreamWriter(process.getOutputStream())) {
-                    writer.write(stdIn);
-                    writer.flush();
+            int exitCode;
+            var cancelRegistration = cancellationToken != null
+                    ? cancellationToken.register(() -> terminateProcess(process))
+                    : null;
+            try {
+                var stdIn = options.standardInput();
+                if (stdIn != null && !stdIn.isBlank()) {
+                    try (var writer = new OutputStreamWriter(process.getOutputStream())) {
+                        writer.write(stdIn);
+                        writer.flush();
+                    }
+                }
+
+                exitCode = process.waitFor();
+            } finally {
+                if (cancelRegistration != null) {
+                    cancelRegistration.close();
                 }
             }
 
-            int exitCode = process.waitFor();
-            String stdout = stdoutFuture.join();
-            String stderr = stderrFuture.join();
+            String stdout;
+            String stderr;
+            try {
+                stdout = stdoutFuture.join();
+                stderr = stderrFuture.join();
+            } catch (CompletionException e) {
+                // reading the output streams can fail when the process is
+                // killed on cancellation
+                if (cancellationToken != null && cancellationToken.isCancellationRequested()) {
+                    throw new CommandCanceledException(new CommandResult(exitCode, "", ""));
+                }
+                throw e;
+            }
 
             var result = new CommandResult(exitCode, stdout, stderr);
 
             if (exitCode != 0) {
+                if (cancellationToken != null && cancellationToken.isCancellationRequested()) {
+                    throw new CommandCanceledException(result);
+                }
                 throw createExceptionFromResult(result);
             }
 
@@ -257,6 +294,28 @@ public class LocalPulumiCommand implements PulumiCommand {
         } finally {
             executor.shutdown();
         }
+    }
+
+    /**
+     * Gracefully terminate the process, forcibly killing it and any remaining
+     * descendants if it has not exited after a grace period.
+     */
+    private static void terminateProcess(Process process) {
+        // snapshot descendants before termination, they cannot be enumerated
+        // once the process has exited
+        var descendants = process.descendants().collect(Collectors.toList());
+        process.destroy();
+        process.onExit()
+                .orTimeout(CANCEL_GRACE_PERIOD_SECONDS, TimeUnit.SECONDS)
+                .whenComplete((p, e) -> {
+                    if (e != null) {
+                        process.descendants().forEach(ProcessHandle::destroyForcibly);
+                        process.destroyForcibly();
+                    }
+                    descendants.stream()
+                            .filter(ProcessHandle::isAlive)
+                            .forEach(ProcessHandle::destroyForcibly);
+                });
     }
 
     private CompletableFuture<String> readStreamAsync(
