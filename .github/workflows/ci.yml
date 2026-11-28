@@ -69,7 +69,7 @@ jobs:
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install Pulumi CLI
-        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
+        uses: pulumi/actions@0ce33695f880624d4f27bd6db25e680c7df4d551 # v7
         with:
           pulumi-version: dev
       - name: Install pulumictl
@@ -199,7 +199,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
+        uses: pulumi/actions@0ce33695f880624d4f27bd6db25e680c7df4d551 # v7
         with:
           pulumi-version: latest
       - name: Set up JDK 11 and 17
@@ -302,7 +302,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
+        uses: pulumi/actions@0ce33695f880624d4f27bd6db25e680c7df4d551 # v7
         with:
           pulumi-version: latest
       - run: make clone_examples
@@ -319,7 +319,7 @@ jobs:
           check-latest: true
           cache-dependency-path: "**/go.sum"
       - name: Install Pulumi CLI
-        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
+        uses: pulumi/actions@0ce33695f880624d4f27bd6db25e680c7df4d551 # v7
       - name: Download versions.txt
         uses: actions/download-artifact@v5
         with:
@@ -422,7 +422,7 @@ jobs:
           fetch-depth: 0
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
+        uses: pulumi/actions@0ce33695f880624d4f27bd6db25e680c7df4d551 # v7
         with:
           pulumi-version: latest
       - name: Set up JDK 11 and 17
@@ -518,7 +518,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install Pulumi CLI
-        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7
+        uses: pulumi/actions@0ce33695f880624d4f27bd6db25e680c7df4d551 # v7
         with:
           pulumi-version: latest
       - run: make clone_templates
